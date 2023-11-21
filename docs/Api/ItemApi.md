@@ -1,4 +1,4 @@
-# ck/plenty-client\ItemApi
+# ck\ItemApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -295,7 +295,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restAvailabilitiesGet()`
 
 ```php
-restAvailabilitiesGet(): \ck/plenty-client\Model\Availability[]
+restAvailabilitiesGet(): \ck\Model\Availability[]
 ```
 
 List item availabilities
@@ -310,10 +310,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -334,7 +334,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Availability[]**](../Model/Availability.md)
+[**\ck\Model\Availability[]**](../Model/Availability.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ This endpoint does not need any parameter.
 ## `restAvailabilitiesIdGet()`
 
 ```php
-restAvailabilitiesIdGet($id): \ck/plenty-client\Model\Availability
+restAvailabilitiesIdGet($id): \ck\Model\Availability
 ```
 
 Get an item availability
@@ -367,10 +367,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -394,7 +394,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Availability**](../Model/Availability.md)
+[**\ck\Model\Availability**](../Model/Availability.md)
 
 ### Authorization
 
@@ -412,7 +412,7 @@ try {
 ## `restAvailabilitiesIdPut()`
 
 ```php
-restAvailabilitiesIdPut($id, $_rest_availabilities_id): \ck/plenty-client\Model\Availability
+restAvailabilitiesIdPut($id, $_rest_availabilities_id): \ck\Model\Availability
 ```
 
 Update an item availability
@@ -427,17 +427,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_availabilities_id = new \ck/plenty-client\Model\RestAvailabilitiesIdPutRequest(); // \ck/plenty-client\Model\RestAvailabilitiesIdPutRequest
+$_rest_availabilities_id = new \ck\Model\RestAvailabilitiesIdPutRequest(); // \ck\Model\RestAvailabilitiesIdPutRequest
 
 try {
     $result = $apiInstance->restAvailabilitiesIdPut($id, $_rest_availabilities_id);
@@ -452,11 +452,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_availabilities_id** | [**\ck/plenty-client\Model\RestAvailabilitiesIdPutRequest**](../Model/RestAvailabilitiesIdPutRequest.md)|  | [optional] |
+| **_rest_availabilities_id** | [**\ck\Model\RestAvailabilitiesIdPutRequest**](../Model/RestAvailabilitiesIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Availability**](../Model/Availability.md)
+[**\ck\Model\Availability**](../Model/Availability.md)
 
 ### Authorization
 
@@ -474,7 +474,7 @@ try {
 ## `restItemSetsDelete()`
 
 ```php
-restItemSetsDelete(): \ck/plenty-client\Model\ItemSet[]
+restItemSetsDelete(): \ck\Model\ItemSet[]
 ```
 
 Delete item sets
@@ -487,10 +487,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -511,7 +511,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSet[]**](../Model/ItemSet.md)
+[**\ck\Model\ItemSet[]**](../Model/ItemSet.md)
 
 ### Authorization
 
@@ -529,7 +529,7 @@ This endpoint does not need any parameter.
 ## `restItemSetsGet()`
 
 ```php
-restItemSetsGet(): \ck/plenty-client\Model\ItemSet[]
+restItemSetsGet(): \ck\Model\ItemSet[]
 ```
 
 List item sets
@@ -544,10 +544,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -568,7 +568,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSet[]**](../Model/ItemSet.md)
+[**\ck\Model\ItemSet[]**](../Model/ItemSet.md)
 
 ### Authorization
 
@@ -601,10 +601,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -646,7 +646,7 @@ try {
 ## `restItemSetsIdGet()`
 
 ```php
-restItemSetsIdGet($id): \ck/plenty-client\Model\ItemSet
+restItemSetsIdGet($id): \ck\Model\ItemSet
 ```
 
 Get an item set
@@ -661,10 +661,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -688,7 +688,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSet**](../Model/ItemSet.md)
+[**\ck\Model\ItemSet**](../Model/ItemSet.md)
 
 ### Authorization
 
@@ -706,7 +706,7 @@ try {
 ## `restItemSetsIdPut()`
 
 ```php
-restItemSetsIdPut($id): \ck/plenty-client\Model\ItemSet
+restItemSetsIdPut($id): \ck\Model\ItemSet
 ```
 
 Update an item set
@@ -721,10 +721,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -748,7 +748,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSet**](../Model/ItemSet.md)
+[**\ck\Model\ItemSet**](../Model/ItemSet.md)
 
 ### Authorization
 
@@ -766,7 +766,7 @@ try {
 ## `restItemSetsPost()`
 
 ```php
-restItemSetsPost($params): \ck/plenty-client\Model\ItemSet
+restItemSetsPost($params): \ck\Model\ItemSet
 ```
 
 Create item sets
@@ -781,10 +781,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -808,7 +808,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSet**](../Model/ItemSet.md)
+[**\ck\Model\ItemSet**](../Model/ItemSet.md)
 
 ### Authorization
 
@@ -826,7 +826,7 @@ try {
 ## `restItemSetsPut()`
 
 ```php
-restItemSetsPut(): \ck/plenty-client\Model\ItemSet[]
+restItemSetsPut(): \ck\Model\ItemSet[]
 ```
 
 Update item sets
@@ -841,10 +841,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -865,7 +865,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSet[]**](../Model/ItemSet.md)
+[**\ck\Model\ItemSet[]**](../Model/ItemSet.md)
 
 ### Authorization
 
@@ -883,7 +883,7 @@ This endpoint does not need any parameter.
 ## `restItemSetsSetIdComponentsDelete()`
 
 ```php
-restItemSetsSetIdComponentsDelete($set_id): \ck/plenty-client\Model\ItemSetComponent
+restItemSetsSetIdComponentsDelete($set_id): \ck\Model\ItemSetComponent
 ```
 
 Delete item set components
@@ -898,10 +898,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -925,7 +925,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
+[**\ck\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
 
 ### Authorization
 
@@ -943,7 +943,7 @@ try {
 ## `restItemSetsSetIdComponentsGet()`
 
 ```php
-restItemSetsSetIdComponentsGet($set_id): \ck/plenty-client\Model\ItemSetComponent[]
+restItemSetsSetIdComponentsGet($set_id): \ck\Model\ItemSetComponent[]
 ```
 
 List item set components of an item set
@@ -958,10 +958,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -985,7 +985,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSetComponent[]**](../Model/ItemSetComponent.md)
+[**\ck\Model\ItemSetComponent[]**](../Model/ItemSetComponent.md)
 
 ### Authorization
 
@@ -1018,10 +1018,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1065,7 +1065,7 @@ try {
 ## `restItemSetsSetIdComponentsIdGet()`
 
 ```php
-restItemSetsSetIdComponentsIdGet($set_id, $id): \ck/plenty-client\Model\ItemSetComponent
+restItemSetsSetIdComponentsIdGet($set_id, $id): \ck\Model\ItemSetComponent
 ```
 
 Get an item set component
@@ -1080,10 +1080,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1109,7 +1109,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
+[**\ck\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
 
 ### Authorization
 
@@ -1127,7 +1127,7 @@ try {
 ## `restItemSetsSetIdComponentsIdPut()`
 
 ```php
-restItemSetsSetIdComponentsIdPut($set_id, $id): \ck/plenty-client\Model\ItemSetComponent
+restItemSetsSetIdComponentsIdPut($set_id, $id): \ck\Model\ItemSetComponent
 ```
 
 Update an item set component
@@ -1142,10 +1142,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1171,7 +1171,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
+[**\ck\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
 
 ### Authorization
 
@@ -1189,7 +1189,7 @@ try {
 ## `restItemSetsSetIdComponentsPost()`
 
 ```php
-restItemSetsSetIdComponentsPost($set_id): \ck/plenty-client\Model\ItemSetComponent
+restItemSetsSetIdComponentsPost($set_id): \ck\Model\ItemSetComponent
 ```
 
 Create item set components
@@ -1204,10 +1204,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1231,7 +1231,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
+[**\ck\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
 
 ### Authorization
 
@@ -1249,7 +1249,7 @@ try {
 ## `restItemSetsSetIdComponentsPut()`
 
 ```php
-restItemSetsSetIdComponentsPut($set_id): \ck/plenty-client\Model\ItemSetComponent
+restItemSetsSetIdComponentsPut($set_id): \ck\Model\ItemSetComponent
 ```
 
 Update item set components
@@ -1264,10 +1264,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1291,7 +1291,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
+[**\ck\Model\ItemSetComponent**](../Model/ItemSetComponent.md)
 
 ### Authorization
 
@@ -1309,7 +1309,7 @@ try {
 ## `restItemSetsSetIdConfigGet()`
 
 ```php
-restItemSetsSetIdConfigGet($set_id): \ck/plenty-client\Model\ItemSetConfig
+restItemSetsSetIdConfigGet($set_id): \ck\Model\ItemSetConfig
 ```
 
 Get the item set configuration of an item set
@@ -1324,10 +1324,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1351,7 +1351,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSetConfig**](../Model/ItemSetConfig.md)
+[**\ck\Model\ItemSetConfig**](../Model/ItemSetConfig.md)
 
 ### Authorization
 
@@ -1369,7 +1369,7 @@ try {
 ## `restItemSetsSetIdConfigPut()`
 
 ```php
-restItemSetsSetIdConfigPut($set_id): \ck/plenty-client\Model\ItemSetConfig
+restItemSetsSetIdConfigPut($set_id): \ck\Model\ItemSetConfig
 ```
 
 Update an item set configuration
@@ -1384,10 +1384,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1411,7 +1411,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSetConfig**](../Model/ItemSetConfig.md)
+[**\ck\Model\ItemSetConfig**](../Model/ItemSetConfig.md)
 
 ### Authorization
 
@@ -1429,7 +1429,7 @@ try {
 ## `restItemsAttributeValuesValueIdNamesGet()`
 
 ```php
-restItemsAttributeValuesValueIdNamesGet($value_id): \ck/plenty-client\Model\AttributeValueName[]
+restItemsAttributeValuesValueIdNamesGet($value_id): \ck\Model\AttributeValueName[]
 ```
 
 Get name and language for an attribute value ID
@@ -1444,10 +1444,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1471,7 +1471,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueName[]**](../Model/AttributeValueName.md)
+[**\ck\Model\AttributeValueName[]**](../Model/AttributeValueName.md)
 
 ### Authorization
 
@@ -1504,10 +1504,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1551,7 +1551,7 @@ try {
 ## `restItemsAttributeValuesValueIdNamesLangGet()`
 
 ```php
-restItemsAttributeValuesValueIdNamesLangGet($value_id, $lang): \ck/plenty-client\Model\AttributeValueName
+restItemsAttributeValuesValueIdNamesLangGet($value_id, $lang): \ck\Model\AttributeValueName
 ```
 
 Get an attribute value name
@@ -1566,10 +1566,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1595,7 +1595,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueName**](../Model/AttributeValueName.md)
+[**\ck\Model\AttributeValueName**](../Model/AttributeValueName.md)
 
 ### Authorization
 
@@ -1613,7 +1613,7 @@ try {
 ## `restItemsAttributeValuesValueIdNamesLangPut()`
 
 ```php
-restItemsAttributeValuesValueIdNamesLangPut($value_id, $lang, $_rest_items_attribute_values_value_id_names_lang): \ck/plenty-client\Model\AttributeValueName
+restItemsAttributeValuesValueIdNamesLangPut($value_id, $lang, $_rest_items_attribute_values_value_id_names_lang): \ck\Model\AttributeValueName
 ```
 
 Update an attribute value name
@@ -1628,10 +1628,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1639,7 +1639,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $value_id = 56; // int
 $lang = 56; // int
-$_rest_items_attribute_values_value_id_names_lang = new \ck/plenty-client\Model\RestItemsAttributeValuesValueIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributeValuesValueIdNamesPostRequest
+$_rest_items_attribute_values_value_id_names_lang = new \ck\Model\RestItemsAttributeValuesValueIdNamesPostRequest(); // \ck\Model\RestItemsAttributeValuesValueIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributeValuesValueIdNamesLangPut($value_id, $lang, $_rest_items_attribute_values_value_id_names_lang);
@@ -1655,11 +1655,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **value_id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_attribute_values_value_id_names_lang** | [**\ck/plenty-client\Model\RestItemsAttributeValuesValueIdNamesPostRequest**](../Model/RestItemsAttributeValuesValueIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_attribute_values_value_id_names_lang** | [**\ck\Model\RestItemsAttributeValuesValueIdNamesPostRequest**](../Model/RestItemsAttributeValuesValueIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueName**](../Model/AttributeValueName.md)
+[**\ck\Model\AttributeValueName**](../Model/AttributeValueName.md)
 
 ### Authorization
 
@@ -1677,7 +1677,7 @@ try {
 ## `restItemsAttributeValuesValueIdNamesPost()`
 
 ```php
-restItemsAttributeValuesValueIdNamesPost($value_id, $_rest_items_attribute_values_value_id_names): \ck/plenty-client\Model\AttributeValueName
+restItemsAttributeValuesValueIdNamesPost($value_id, $_rest_items_attribute_values_value_id_names): \ck\Model\AttributeValueName
 ```
 
 Create an attribute value name
@@ -1692,17 +1692,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $value_id = 56; // int
-$_rest_items_attribute_values_value_id_names = new \ck/plenty-client\Model\RestItemsAttributeValuesValueIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributeValuesValueIdNamesPostRequest
+$_rest_items_attribute_values_value_id_names = new \ck\Model\RestItemsAttributeValuesValueIdNamesPostRequest(); // \ck\Model\RestItemsAttributeValuesValueIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributeValuesValueIdNamesPost($value_id, $_rest_items_attribute_values_value_id_names);
@@ -1717,11 +1717,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **value_id** | **int**|  | |
-| **_rest_items_attribute_values_value_id_names** | [**\ck/plenty-client\Model\RestItemsAttributeValuesValueIdNamesPostRequest**](../Model/RestItemsAttributeValuesValueIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_attribute_values_value_id_names** | [**\ck\Model\RestItemsAttributeValuesValueIdNamesPostRequest**](../Model/RestItemsAttributeValuesValueIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueName**](../Model/AttributeValueName.md)
+[**\ck\Model\AttributeValueName**](../Model/AttributeValueName.md)
 
 ### Authorization
 
@@ -1754,10 +1754,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1801,7 +1801,7 @@ try {
 ## `restItemsAttributesAttributeIdMarketsMarketIdMapsGet()`
 
 ```php
-restItemsAttributesAttributeIdMarketsMarketIdMapsGet($attribute_id, $market_id): \ck/plenty-client\Model\AttributeMap
+restItemsAttributesAttributeIdMarketsMarketIdMapsGet($attribute_id, $market_id): \ck\Model\AttributeMap
 ```
 
 Gets an attribute map.
@@ -1816,10 +1816,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1845,7 +1845,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeMap**](../Model/AttributeMap.md)
+[**\ck\Model\AttributeMap**](../Model/AttributeMap.md)
 
 ### Authorization
 
@@ -1863,7 +1863,7 @@ try {
 ## `restItemsAttributesAttributeIdMarketsMarketIdMapsPut()`
 
 ```php
-restItemsAttributesAttributeIdMarketsMarketIdMapsPut($attribute_id, $market_id): \ck/plenty-client\Model\AttributeMap
+restItemsAttributesAttributeIdMarketsMarketIdMapsPut($attribute_id, $market_id): \ck\Model\AttributeMap
 ```
 
 Updates an attribute map.
@@ -1878,10 +1878,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1907,7 +1907,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeMap**](../Model/AttributeMap.md)
+[**\ck\Model\AttributeMap**](../Model/AttributeMap.md)
 
 ### Authorization
 
@@ -1925,7 +1925,7 @@ try {
 ## `restItemsAttributesAttributeIdNamesGet()`
 
 ```php
-restItemsAttributesAttributeIdNamesGet($attribute_id): \ck/plenty-client\Model\AttributeName[]
+restItemsAttributesAttributeIdNamesGet($attribute_id): \ck\Model\AttributeName[]
 ```
 
 Get an attribute name
@@ -1940,10 +1940,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1967,7 +1967,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeName[]**](../Model/AttributeName.md)
+[**\ck\Model\AttributeName[]**](../Model/AttributeName.md)
 
 ### Authorization
 
@@ -2000,10 +2000,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2047,7 +2047,7 @@ try {
 ## `restItemsAttributesAttributeIdNamesLangGet()`
 
 ```php
-restItemsAttributesAttributeIdNamesLangGet($attribute_id, $lang): \ck/plenty-client\Model\AttributeName
+restItemsAttributesAttributeIdNamesLangGet($attribute_id, $lang): \ck\Model\AttributeName
 ```
 
 List attribute names
@@ -2062,10 +2062,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2091,7 +2091,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeName**](../Model/AttributeName.md)
+[**\ck\Model\AttributeName**](../Model/AttributeName.md)
 
 ### Authorization
 
@@ -2109,7 +2109,7 @@ try {
 ## `restItemsAttributesAttributeIdNamesLangPut()`
 
 ```php
-restItemsAttributesAttributeIdNamesLangPut($attribute_id, $lang, $_rest_items_attributes_attribute_id_names_lang): \ck/plenty-client\Model\AttributeName
+restItemsAttributesAttributeIdNamesLangPut($attribute_id, $lang, $_rest_items_attributes_attribute_id_names_lang): \ck\Model\AttributeName
 ```
 
 Update an attribute name
@@ -2124,10 +2124,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2135,7 +2135,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $attribute_id = 56; // int
 $lang = 56; // int
-$_rest_items_attributes_attribute_id_names_lang = new \ck/plenty-client\Model\RestItemsAttributesAttributeIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesAttributeIdNamesPostRequest
+$_rest_items_attributes_attribute_id_names_lang = new \ck\Model\RestItemsAttributesAttributeIdNamesPostRequest(); // \ck\Model\RestItemsAttributesAttributeIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesAttributeIdNamesLangPut($attribute_id, $lang, $_rest_items_attributes_attribute_id_names_lang);
@@ -2151,11 +2151,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **attribute_id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_attributes_attribute_id_names_lang** | [**\ck/plenty-client\Model\RestItemsAttributesAttributeIdNamesPostRequest**](../Model/RestItemsAttributesAttributeIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_attribute_id_names_lang** | [**\ck\Model\RestItemsAttributesAttributeIdNamesPostRequest**](../Model/RestItemsAttributesAttributeIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeName**](../Model/AttributeName.md)
+[**\ck\Model\AttributeName**](../Model/AttributeName.md)
 
 ### Authorization
 
@@ -2173,7 +2173,7 @@ try {
 ## `restItemsAttributesAttributeIdNamesPost()`
 
 ```php
-restItemsAttributesAttributeIdNamesPost($attribute_id, $_rest_items_attributes_attribute_id_names): \ck/plenty-client\Model\AttributeName
+restItemsAttributesAttributeIdNamesPost($attribute_id, $_rest_items_attributes_attribute_id_names): \ck\Model\AttributeName
 ```
 
 Create an attribute name
@@ -2188,17 +2188,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $attribute_id = 56; // int
-$_rest_items_attributes_attribute_id_names = new \ck/plenty-client\Model\RestItemsAttributesAttributeIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesAttributeIdNamesPostRequest
+$_rest_items_attributes_attribute_id_names = new \ck\Model\RestItemsAttributesAttributeIdNamesPostRequest(); // \ck\Model\RestItemsAttributesAttributeIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesAttributeIdNamesPost($attribute_id, $_rest_items_attributes_attribute_id_names);
@@ -2213,11 +2213,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **attribute_id** | **int**|  | |
-| **_rest_items_attributes_attribute_id_names** | [**\ck/plenty-client\Model\RestItemsAttributesAttributeIdNamesPostRequest**](../Model/RestItemsAttributesAttributeIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_attribute_id_names** | [**\ck\Model\RestItemsAttributesAttributeIdNamesPostRequest**](../Model/RestItemsAttributesAttributeIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeName**](../Model/AttributeName.md)
+[**\ck\Model\AttributeName**](../Model/AttributeName.md)
 
 ### Authorization
 
@@ -2235,7 +2235,7 @@ try {
 ## `restItemsAttributesAttributeIdValueMarketNamesGet()`
 
 ```php
-restItemsAttributesAttributeIdValueMarketNamesGet($attribute_id, $reference_type, $lang, $page, $items_per_page): \ck/plenty-client\Model\RestItemsAttributesAttributeIdValueMarketNamesGet200Response
+restItemsAttributesAttributeIdValueMarketNamesGet($attribute_id, $reference_type, $lang, $page, $items_per_page): \ck\Model\RestItemsAttributesAttributeIdValueMarketNamesGet200Response
 ```
 
 Search attribute value market names
@@ -2250,10 +2250,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2285,7 +2285,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsAttributesAttributeIdValueMarketNamesGet200Response**](../Model/RestItemsAttributesAttributeIdValueMarketNamesGet200Response.md)
+[**\ck\Model\RestItemsAttributesAttributeIdValueMarketNamesGet200Response**](../Model/RestItemsAttributesAttributeIdValueMarketNamesGet200Response.md)
 
 ### Authorization
 
@@ -2303,7 +2303,7 @@ try {
 ## `restItemsAttributesAttributeIdValueMarketNamesPost()`
 
 ```php
-restItemsAttributesAttributeIdValueMarketNamesPost($attribute_id, $_rest_items_attributes_attribute_id_value_market_names): \ck/plenty-client\Model\AttributeValueMarketName
+restItemsAttributesAttributeIdValueMarketNamesPost($attribute_id, $_rest_items_attributes_attribute_id_value_market_names): \ck\Model\AttributeValueMarketName
 ```
 
 Create an attribute value market name
@@ -2318,17 +2318,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $attribute_id = 56; // int
-$_rest_items_attributes_attribute_id_value_market_names = new \ck/plenty-client\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest
+$_rest_items_attributes_attribute_id_value_market_names = new \ck\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest(); // \ck\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesAttributeIdValueMarketNamesPost($attribute_id, $_rest_items_attributes_attribute_id_value_market_names);
@@ -2343,11 +2343,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **attribute_id** | **int**|  | |
-| **_rest_items_attributes_attribute_id_value_market_names** | [**\ck/plenty-client\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest**](../Model/RestItemsAttributesAttributeIdValueMarketNamesPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_attribute_id_value_market_names** | [**\ck\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest**](../Model/RestItemsAttributesAttributeIdValueMarketNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueMarketName**](../Model/AttributeValueMarketName.md)
+[**\ck\Model\AttributeValueMarketName**](../Model/AttributeValueMarketName.md)
 
 ### Authorization
 
@@ -2380,10 +2380,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2431,7 +2431,7 @@ try {
 ## `restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePut()`
 
 ```php
-restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePut($attribute_id, $value_id, $lang, $reference_type, $_rest_items_attributes_attribute_id_value_market_names_value_id_lang_reference_type): \ck/plenty-client\Model\AttributeValueMarketName
+restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePut($attribute_id, $value_id, $lang, $reference_type, $_rest_items_attributes_attribute_id_value_market_names_value_id_lang_reference_type): \ck\Model\AttributeValueMarketName
 ```
 
 Update an attribute value market name
@@ -2446,10 +2446,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2459,7 +2459,7 @@ $attribute_id = 56; // int
 $value_id = 56; // int
 $lang = 56; // int
 $reference_type = 56; // int
-$_rest_items_attributes_attribute_id_value_market_names_value_id_lang_reference_type = new \ck/plenty-client\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest
+$_rest_items_attributes_attribute_id_value_market_names_value_id_lang_reference_type = new \ck\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest(); // \ck\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesAttributeIdValueMarketNamesValueIdLangReferenceTypePut($attribute_id, $value_id, $lang, $reference_type, $_rest_items_attributes_attribute_id_value_market_names_value_id_lang_reference_type);
@@ -2477,11 +2477,11 @@ try {
 | **value_id** | **int**|  | |
 | **lang** | **int**|  | |
 | **reference_type** | **int**|  | |
-| **_rest_items_attributes_attribute_id_value_market_names_value_id_lang_reference_type** | [**\ck/plenty-client\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest**](../Model/RestItemsAttributesAttributeIdValueMarketNamesPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_attribute_id_value_market_names_value_id_lang_reference_type** | [**\ck\Model\RestItemsAttributesAttributeIdValueMarketNamesPostRequest**](../Model/RestItemsAttributesAttributeIdValueMarketNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueMarketName**](../Model/AttributeValueMarketName.md)
+[**\ck\Model\AttributeValueMarketName**](../Model/AttributeValueMarketName.md)
 
 ### Authorization
 
@@ -2514,10 +2514,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2563,7 +2563,7 @@ try {
 ## `restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsGet()`
 
 ```php
-restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsGet($attribute_id, $attribute_value_id, $market_id): \ck/plenty-client\Model\AttributeValueMap
+restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsGet($attribute_id, $attribute_value_id, $market_id): \ck\Model\AttributeValueMap
 ```
 
 Gets an attribute value map.
@@ -2578,10 +2578,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2609,7 +2609,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueMap**](../Model/AttributeValueMap.md)
+[**\ck\Model\AttributeValueMap**](../Model/AttributeValueMap.md)
 
 ### Authorization
 
@@ -2627,7 +2627,7 @@ try {
 ## `restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsPut()`
 
 ```php
-restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsPut($attribute_id, $attribute_value_id, $market_id): \ck/plenty-client\Model\AttributeValueMap
+restItemsAttributesAttributeIdValuesAttributeValueIdMarketsMarketIdMapsPut($attribute_id, $attribute_value_id, $market_id): \ck\Model\AttributeValueMap
 ```
 
 Updates an attribute value map.
@@ -2642,10 +2642,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2673,7 +2673,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueMap**](../Model/AttributeValueMap.md)
+[**\ck\Model\AttributeValueMap**](../Model/AttributeValueMap.md)
 
 ### Authorization
 
@@ -2691,7 +2691,7 @@ try {
 ## `restItemsAttributesAttributeIdValuesGet()`
 
 ```php
-restItemsAttributesAttributeIdValuesGet($attribute_id, $with, $updated_at): \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response
+restItemsAttributesAttributeIdValuesGet($attribute_id, $with, $updated_at): \ck\Model\RestItemsAttributesAttributeIdValuesGet200Response
 ```
 
 List attribute values
@@ -2706,10 +2706,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2737,7 +2737,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response**](../Model/RestItemsAttributesAttributeIdValuesGet200Response.md)
+[**\ck\Model\RestItemsAttributesAttributeIdValuesGet200Response**](../Model/RestItemsAttributesAttributeIdValuesGet200Response.md)
 
 ### Authorization
 
@@ -2770,10 +2770,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2817,7 +2817,7 @@ try {
 ## `restItemsAttributesAttributeIdValuesIdGet()`
 
 ```php
-restItemsAttributesAttributeIdValuesIdGet($attribute_id, $id, $with): \ck/plenty-client\Model\AttributeValue
+restItemsAttributesAttributeIdValuesIdGet($attribute_id, $id, $with): \ck\Model\AttributeValue
 ```
 
 Get an attribute value
@@ -2832,10 +2832,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2863,7 +2863,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValue**](../Model/AttributeValue.md)
+[**\ck\Model\AttributeValue**](../Model/AttributeValue.md)
 
 ### Authorization
 
@@ -2881,7 +2881,7 @@ try {
 ## `restItemsAttributesAttributeIdValuesIdPut()`
 
 ```php
-restItemsAttributesAttributeIdValuesIdPut($attribute_id, $id, $_rest_items_attributes_attribute_id_values_id): \ck/plenty-client\Model\AttributeValue
+restItemsAttributesAttributeIdValuesIdPut($attribute_id, $id, $_rest_items_attributes_attribute_id_values_id): \ck\Model\AttributeValue
 ```
 
 Update an attribute value
@@ -2896,10 +2896,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2907,7 +2907,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $attribute_id = 56; // int
 $id = 56; // int
-$_rest_items_attributes_attribute_id_values_id = new \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesPostRequest
+$_rest_items_attributes_attribute_id_values_id = new \ck\Model\RestItemsAttributesAttributeIdValuesPostRequest(); // \ck\Model\RestItemsAttributesAttributeIdValuesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesAttributeIdValuesIdPut($attribute_id, $id, $_rest_items_attributes_attribute_id_values_id);
@@ -2923,11 +2923,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **attribute_id** | **int**|  | |
 | **id** | **int**|  | |
-| **_rest_items_attributes_attribute_id_values_id** | [**\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesPostRequest**](../Model/RestItemsAttributesAttributeIdValuesPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_attribute_id_values_id** | [**\ck\Model\RestItemsAttributesAttributeIdValuesPostRequest**](../Model/RestItemsAttributesAttributeIdValuesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValue**](../Model/AttributeValue.md)
+[**\ck\Model\AttributeValue**](../Model/AttributeValue.md)
 
 ### Authorization
 
@@ -2945,7 +2945,7 @@ try {
 ## `restItemsAttributesAttributeIdValuesPost()`
 
 ```php
-restItemsAttributesAttributeIdValuesPost($attribute_id, $_rest_items_attributes_attribute_id_values): \ck/plenty-client\Model\AttributeValue
+restItemsAttributesAttributeIdValuesPost($attribute_id, $_rest_items_attributes_attribute_id_values): \ck\Model\AttributeValue
 ```
 
 Create an attribute value
@@ -2960,17 +2960,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $attribute_id = 56; // int
-$_rest_items_attributes_attribute_id_values = new \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesPostRequest
+$_rest_items_attributes_attribute_id_values = new \ck\Model\RestItemsAttributesAttributeIdValuesPostRequest(); // \ck\Model\RestItemsAttributesAttributeIdValuesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesAttributeIdValuesPost($attribute_id, $_rest_items_attributes_attribute_id_values);
@@ -2985,11 +2985,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **attribute_id** | **int**|  | |
-| **_rest_items_attributes_attribute_id_values** | [**\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesPostRequest**](../Model/RestItemsAttributesAttributeIdValuesPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_attribute_id_values** | [**\ck\Model\RestItemsAttributesAttributeIdValuesPostRequest**](../Model/RestItemsAttributesAttributeIdValuesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValue**](../Model/AttributeValue.md)
+[**\ck\Model\AttributeValue**](../Model/AttributeValue.md)
 
 ### Authorization
 
@@ -3007,7 +3007,7 @@ try {
 ## `restItemsAttributesGet()`
 
 ```php
-restItemsAttributesGet($with, $updated_at): \ck/plenty-client\Model\RestItemsAttributesGet200Response
+restItemsAttributesGet($with, $updated_at): \ck\Model\RestItemsAttributesGet200Response
 ```
 
 List attributes
@@ -3022,10 +3022,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3051,7 +3051,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsAttributesGet200Response**](../Model/RestItemsAttributesGet200Response.md)
+[**\ck\Model\RestItemsAttributesGet200Response**](../Model/RestItemsAttributesGet200Response.md)
 
 ### Authorization
 
@@ -3084,10 +3084,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3129,7 +3129,7 @@ try {
 ## `restItemsAttributesIdGet()`
 
 ```php
-restItemsAttributesIdGet($id, $with): \ck/plenty-client\Model\Attribute
+restItemsAttributesIdGet($id, $with): \ck\Model\Attribute
 ```
 
 Get an attribute
@@ -3144,10 +3144,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3173,7 +3173,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Attribute**](../Model/Attribute.md)
+[**\ck\Model\Attribute**](../Model/Attribute.md)
 
 ### Authorization
 
@@ -3191,7 +3191,7 @@ try {
 ## `restItemsAttributesIdPut()`
 
 ```php
-restItemsAttributesIdPut($id, $_rest_items_attributes_id): \ck/plenty-client\Model\Attribute
+restItemsAttributesIdPut($id, $_rest_items_attributes_id): \ck\Model\Attribute
 ```
 
 Update an attribute
@@ -3206,17 +3206,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_attributes_id = new \ck/plenty-client\Model\RestItemsAttributesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesPostRequest
+$_rest_items_attributes_id = new \ck\Model\RestItemsAttributesPostRequest(); // \ck\Model\RestItemsAttributesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesIdPut($id, $_rest_items_attributes_id);
@@ -3231,11 +3231,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_attributes_id** | [**\ck/plenty-client\Model\RestItemsAttributesPostRequest**](../Model/RestItemsAttributesPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_id** | [**\ck\Model\RestItemsAttributesPostRequest**](../Model/RestItemsAttributesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Attribute**](../Model/Attribute.md)
+[**\ck\Model\Attribute**](../Model/Attribute.md)
 
 ### Authorization
 
@@ -3253,7 +3253,7 @@ try {
 ## `restItemsAttributesMapsGet()`
 
 ```php
-restItemsAttributesMapsGet(): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restItemsAttributesMapsGet(): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 Lists all attribute maps.
@@ -3268,10 +3268,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3292,7 +3292,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 
@@ -3310,7 +3310,7 @@ This endpoint does not need any parameter.
 ## `restItemsAttributesMarketsMapsPost()`
 
 ```php
-restItemsAttributesMarketsMapsPost($_rest_items_attributes_markets_maps): \ck/plenty-client\Model\AttributeMap
+restItemsAttributesMarketsMapsPost($_rest_items_attributes_markets_maps): \ck\Model\AttributeMap
 ```
 
 Creates a new attribute map.
@@ -3325,16 +3325,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_attributes_markets_maps = new \ck/plenty-client\Model\RestItemsAttributesMarketsMapsPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesMarketsMapsPostRequest
+$_rest_items_attributes_markets_maps = new \ck\Model\RestItemsAttributesMarketsMapsPostRequest(); // \ck\Model\RestItemsAttributesMarketsMapsPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesMarketsMapsPost($_rest_items_attributes_markets_maps);
@@ -3348,11 +3348,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_attributes_markets_maps** | [**\ck/plenty-client\Model\RestItemsAttributesMarketsMapsPostRequest**](../Model/RestItemsAttributesMarketsMapsPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_markets_maps** | [**\ck\Model\RestItemsAttributesMarketsMapsPostRequest**](../Model/RestItemsAttributesMarketsMapsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeMap**](../Model/AttributeMap.md)
+[**\ck\Model\AttributeMap**](../Model/AttributeMap.md)
 
 ### Authorization
 
@@ -3370,7 +3370,7 @@ try {
 ## `restItemsAttributesPost()`
 
 ```php
-restItemsAttributesPost($_rest_items_attributes): \ck/plenty-client\Model\Attribute
+restItemsAttributesPost($_rest_items_attributes): \ck\Model\Attribute
 ```
 
 Create an attribute
@@ -3385,16 +3385,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_attributes = new \ck/plenty-client\Model\RestItemsAttributesPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesPostRequest
+$_rest_items_attributes = new \ck\Model\RestItemsAttributesPostRequest(); // \ck\Model\RestItemsAttributesPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesPost($_rest_items_attributes);
@@ -3408,11 +3408,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_attributes** | [**\ck/plenty-client\Model\RestItemsAttributesPostRequest**](../Model/RestItemsAttributesPostRequest.md)|  | [optional] |
+| **_rest_items_attributes** | [**\ck\Model\RestItemsAttributesPostRequest**](../Model/RestItemsAttributesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Attribute**](../Model/Attribute.md)
+[**\ck\Model\Attribute**](../Model/Attribute.md)
 
 ### Authorization
 
@@ -3430,7 +3430,7 @@ try {
 ## `restItemsAttributesValuesMapsGet()`
 
 ```php
-restItemsAttributesValuesMapsGet(): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restItemsAttributesValuesMapsGet(): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 Lists all attribute value maps.
@@ -3445,10 +3445,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3469,7 +3469,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 
@@ -3487,7 +3487,7 @@ This endpoint does not need any parameter.
 ## `restItemsAttributesValuesMarketsMapsPost()`
 
 ```php
-restItemsAttributesValuesMarketsMapsPost($_rest_items_attributes_values_markets_maps): \ck/plenty-client\Model\AttributeValueMap
+restItemsAttributesValuesMarketsMapsPost($_rest_items_attributes_values_markets_maps): \ck\Model\AttributeValueMap
 ```
 
 Creates a new attribute value map.
@@ -3502,16 +3502,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_attributes_values_markets_maps = new \ck/plenty-client\Model\RestItemsAttributesValuesMarketsMapsPostRequest(); // \ck/plenty-client\Model\RestItemsAttributesValuesMarketsMapsPostRequest
+$_rest_items_attributes_values_markets_maps = new \ck\Model\RestItemsAttributesValuesMarketsMapsPostRequest(); // \ck\Model\RestItemsAttributesValuesMarketsMapsPostRequest
 
 try {
     $result = $apiInstance->restItemsAttributesValuesMarketsMapsPost($_rest_items_attributes_values_markets_maps);
@@ -3525,11 +3525,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_attributes_values_markets_maps** | [**\ck/plenty-client\Model\RestItemsAttributesValuesMarketsMapsPostRequest**](../Model/RestItemsAttributesValuesMarketsMapsPostRequest.md)|  | [optional] |
+| **_rest_items_attributes_values_markets_maps** | [**\ck\Model\RestItemsAttributesValuesMarketsMapsPostRequest**](../Model/RestItemsAttributesValuesMarketsMapsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueMap**](../Model/AttributeValueMap.md)
+[**\ck\Model\AttributeValueMap**](../Model/AttributeValueMap.md)
 
 ### Authorization
 
@@ -3562,10 +3562,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3607,7 +3607,7 @@ try {
 ## `restItemsBarcodesBarcodeIdGet()`
 
 ```php
-restItemsBarcodesBarcodeIdGet($barcode_id): \ck/plenty-client\Model\Barcode
+restItemsBarcodesBarcodeIdGet($barcode_id): \ck\Model\Barcode
 ```
 
 Get a barcode
@@ -3622,10 +3622,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3649,7 +3649,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Barcode**](../Model/Barcode.md)
+[**\ck\Model\Barcode**](../Model/Barcode.md)
 
 ### Authorization
 
@@ -3667,7 +3667,7 @@ try {
 ## `restItemsBarcodesBarcodeIdPut()`
 
 ```php
-restItemsBarcodesBarcodeIdPut($barcode_id, $_rest_items_barcodes_barcode_id): \ck/plenty-client\Model\Barcode
+restItemsBarcodesBarcodeIdPut($barcode_id, $_rest_items_barcodes_barcode_id): \ck\Model\Barcode
 ```
 
 Update a barcode
@@ -3682,17 +3682,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $barcode_id = 56; // int
-$_rest_items_barcodes_barcode_id = new \ck/plenty-client\Model\RestItemsBarcodesPostRequest(); // \ck/plenty-client\Model\RestItemsBarcodesPostRequest
+$_rest_items_barcodes_barcode_id = new \ck\Model\RestItemsBarcodesPostRequest(); // \ck\Model\RestItemsBarcodesPostRequest
 
 try {
     $result = $apiInstance->restItemsBarcodesBarcodeIdPut($barcode_id, $_rest_items_barcodes_barcode_id);
@@ -3707,11 +3707,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **barcode_id** | **int**|  | |
-| **_rest_items_barcodes_barcode_id** | [**\ck/plenty-client\Model\RestItemsBarcodesPostRequest**](../Model/RestItemsBarcodesPostRequest.md)|  | [optional] |
+| **_rest_items_barcodes_barcode_id** | [**\ck\Model\RestItemsBarcodesPostRequest**](../Model/RestItemsBarcodesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Barcode**](../Model/Barcode.md)
+[**\ck\Model\Barcode**](../Model/Barcode.md)
 
 ### Authorization
 
@@ -3729,7 +3729,7 @@ try {
 ## `restItemsBarcodesBarcodeIdReferrerPost()`
 
 ```php
-restItemsBarcodesBarcodeIdReferrerPost($barcode_id): \ck/plenty-client\Model\BarcodeLinkReferrer
+restItemsBarcodesBarcodeIdReferrerPost($barcode_id): \ck\Model\BarcodeLinkReferrer
 ```
 
 Activate a referrer
@@ -3744,10 +3744,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3771,7 +3771,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BarcodeLinkReferrer**](../Model/BarcodeLinkReferrer.md)
+[**\ck\Model\BarcodeLinkReferrer**](../Model/BarcodeLinkReferrer.md)
 
 ### Authorization
 
@@ -3804,10 +3804,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3851,7 +3851,7 @@ try {
 ## `restItemsBarcodesGet()`
 
 ```php
-restItemsBarcodesGet($updated_at): \ck/plenty-client\Model\RestItemsBarcodesGet200Response
+restItemsBarcodesGet($updated_at): \ck\Model\RestItemsBarcodesGet200Response
 ```
 
 List barcodes
@@ -3866,10 +3866,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3893,7 +3893,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsBarcodesGet200Response**](../Model/RestItemsBarcodesGet200Response.md)
+[**\ck\Model\RestItemsBarcodesGet200Response**](../Model/RestItemsBarcodesGet200Response.md)
 
 ### Authorization
 
@@ -3911,7 +3911,7 @@ try {
 ## `restItemsBarcodesPost()`
 
 ```php
-restItemsBarcodesPost($_rest_items_barcodes): \ck/plenty-client\Model\Barcode
+restItemsBarcodesPost($_rest_items_barcodes): \ck\Model\Barcode
 ```
 
 Create a barcode
@@ -3926,16 +3926,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_barcodes = new \ck/plenty-client\Model\RestItemsBarcodesPostRequest(); // \ck/plenty-client\Model\RestItemsBarcodesPostRequest
+$_rest_items_barcodes = new \ck\Model\RestItemsBarcodesPostRequest(); // \ck\Model\RestItemsBarcodesPostRequest
 
 try {
     $result = $apiInstance->restItemsBarcodesPost($_rest_items_barcodes);
@@ -3949,11 +3949,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_barcodes** | [**\ck/plenty-client\Model\RestItemsBarcodesPostRequest**](../Model/RestItemsBarcodesPostRequest.md)|  | [optional] |
+| **_rest_items_barcodes** | [**\ck\Model\RestItemsBarcodesPostRequest**](../Model/RestItemsBarcodesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Barcode**](../Model/Barcode.md)
+[**\ck\Model\Barcode**](../Model/Barcode.md)
 
 ### Authorization
 
@@ -3971,7 +3971,7 @@ try {
 ## `restItemsBarcodesReferrerReferrerIdGet()`
 
 ```php
-restItemsBarcodesReferrerReferrerIdGet($referrer_id): \ck/plenty-client\Model\Barcode[]
+restItemsBarcodesReferrerReferrerIdGet($referrer_id): \ck\Model\Barcode[]
 ```
 
 List barcodes by referrer
@@ -3986,10 +3986,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4013,7 +4013,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Barcode[]**](../Model/Barcode.md)
+[**\ck\Model\Barcode[]**](../Model/Barcode.md)
 
 ### Authorization
 
@@ -4031,7 +4031,7 @@ try {
 ## `restItemsBarcodesTypeTypeGet()`
 
 ```php
-restItemsBarcodesTypeTypeGet($type): \ck/plenty-client\Model\Barcode[]
+restItemsBarcodesTypeTypeGet($type): \ck\Model\Barcode[]
 ```
 
 List barcodes by type
@@ -4046,10 +4046,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4073,7 +4073,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Barcode[]**](../Model/Barcode.md)
+[**\ck\Model\Barcode[]**](../Model/Barcode.md)
 
 ### Authorization
 
@@ -4091,7 +4091,7 @@ try {
 ## `restItemsGet()`
 
 ```php
-restItemsGet($with, $lang, $page, $items_per_page, $name, $manufacturer_id, $id, $flag_one, $flag_two, $updated_between, $variation_updated_between, $variation_related_updated_between, $or): \ck/plenty-client\Model\RestItemsGet200Response
+restItemsGet($with, $lang, $page, $items_per_page, $name, $manufacturer_id, $id, $flag_one, $flag_two, $updated_between, $variation_updated_between, $variation_related_updated_between, $or): \ck\Model\RestItemsGet200Response
 ```
 
 Search item
@@ -4106,10 +4106,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4157,7 +4157,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsGet200Response**](../Model/RestItemsGet200Response.md)
+[**\ck\Model\RestItemsGet200Response**](../Model/RestItemsGet200Response.md)
 
 ### Authorization
 
@@ -4190,10 +4190,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4243,7 +4243,7 @@ try {
 ## `restItemsIdImagesGet()`
 
 ```php
-restItemsIdImagesGet($id, $updated_at): \ck/plenty-client\Model\ItemImage[]
+restItemsIdImagesGet($id, $updated_at): \ck\Model\ItemImage[]
 ```
 
 List images of an item
@@ -4258,10 +4258,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4287,7 +4287,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImage[]**](../Model/ItemImage.md)
+[**\ck\Model\ItemImage[]**](../Model/ItemImage.md)
 
 ### Authorization
 
@@ -4305,7 +4305,7 @@ try {
 ## `restItemsIdImagesImageIdAttributeValueMarketsPost()`
 
 ```php
-restItemsIdImagesImageIdAttributeValueMarketsPost($id, $image_id, $_rest_items_id_images_image_id_attribute_value_markets): \ck/plenty-client\Model\AttributeValueImage
+restItemsIdImagesImageIdAttributeValueMarketsPost($id, $image_id, $_rest_items_id_images_image_id_attribute_value_markets): \ck\Model\AttributeValueImage
 ```
 
 Create an attribute value image link
@@ -4320,10 +4320,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4331,7 +4331,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $image_id = 56; // int
-$_rest_items_id_images_image_id_attribute_value_markets = new \ck/plenty-client\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest(); // \ck/plenty-client\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest
+$_rest_items_id_images_image_id_attribute_value_markets = new \ck\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest(); // \ck\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest
 
 try {
     $result = $apiInstance->restItemsIdImagesImageIdAttributeValueMarketsPost($id, $image_id, $_rest_items_id_images_image_id_attribute_value_markets);
@@ -4347,11 +4347,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **image_id** | **int**|  | |
-| **_rest_items_id_images_image_id_attribute_value_markets** | [**\ck/plenty-client\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest**](../Model/RestItemsIdImagesImageIdAttributeValueMarketsPostRequest.md)|  | [optional] |
+| **_rest_items_id_images_image_id_attribute_value_markets** | [**\ck\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest**](../Model/RestItemsIdImagesImageIdAttributeValueMarketsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueImage**](../Model/AttributeValueImage.md)
+[**\ck\Model\AttributeValueImage**](../Model/AttributeValueImage.md)
 
 ### Authorization
 
@@ -4384,10 +4384,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4434,7 +4434,7 @@ void (empty response body)
 ## `restItemsIdImagesImageIdAttributeValueMarketsValueIdGet()`
 
 ```php
-restItemsIdImagesImageIdAttributeValueMarketsValueIdGet($image_id, $item_id, $value_id, $id): \ck/plenty-client\Model\AttributeValueImage
+restItemsIdImagesImageIdAttributeValueMarketsValueIdGet($image_id, $item_id, $value_id, $id): \ck\Model\AttributeValueImage
 ```
 
 Get an attribute value image link
@@ -4449,10 +4449,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4482,7 +4482,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueImage**](../Model/AttributeValueImage.md)
+[**\ck\Model\AttributeValueImage**](../Model/AttributeValueImage.md)
 
 ### Authorization
 
@@ -4500,7 +4500,7 @@ try {
 ## `restItemsIdImagesImageIdAttributeValueMarketsValueIdPut()`
 
 ```php
-restItemsIdImagesImageIdAttributeValueMarketsValueIdPut($image_id, $item_id, $value_id, $attribute_id, $id, $_rest_items_id_images_image_id_attribute_value_markets_value_id): \ck/plenty-client\Model\AttributeValueImage
+restItemsIdImagesImageIdAttributeValueMarketsValueIdPut($image_id, $item_id, $value_id, $attribute_id, $id, $_rest_items_id_images_image_id_attribute_value_markets_value_id): \ck\Model\AttributeValueImage
 ```
 
 Update an attribute value image link
@@ -4515,10 +4515,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4529,7 +4529,7 @@ $item_id = 56; // int | The unique ID of the item
 $value_id = 56; // int | The unique ID of the attribute value
 $attribute_id = 56; // int | The unique ID of the attribute
 $id = 56; // int
-$_rest_items_id_images_image_id_attribute_value_markets_value_id = new \ck/plenty-client\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest(); // \ck/plenty-client\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest
+$_rest_items_id_images_image_id_attribute_value_markets_value_id = new \ck\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest(); // \ck\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest
 
 try {
     $result = $apiInstance->restItemsIdImagesImageIdAttributeValueMarketsValueIdPut($image_id, $item_id, $value_id, $attribute_id, $id, $_rest_items_id_images_image_id_attribute_value_markets_value_id);
@@ -4548,11 +4548,11 @@ try {
 | **value_id** | **int**| The unique ID of the attribute value | |
 | **attribute_id** | **int**| The unique ID of the attribute | |
 | **id** | **int**|  | |
-| **_rest_items_id_images_image_id_attribute_value_markets_value_id** | [**\ck/plenty-client\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest**](../Model/RestItemsIdImagesImageIdAttributeValueMarketsPostRequest.md)|  | [optional] |
+| **_rest_items_id_images_image_id_attribute_value_markets_value_id** | [**\ck\Model\RestItemsIdImagesImageIdAttributeValueMarketsPostRequest**](../Model/RestItemsIdImagesImageIdAttributeValueMarketsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValueImage**](../Model/AttributeValueImage.md)
+[**\ck\Model\AttributeValueImage**](../Model/AttributeValueImage.md)
 
 ### Authorization
 
@@ -4585,10 +4585,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4596,7 +4596,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $image_id = 56; // int
-$_rest_items_id_images_image_id_availabilities = new \ck/plenty-client\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest(); // \ck/plenty-client\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest
+$_rest_items_id_images_image_id_availabilities = new \ck\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest(); // \ck\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdImagesImageIdAvailabilitiesDelete($id, $image_id, $_rest_items_id_images_image_id_availabilities);
@@ -4612,7 +4612,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **image_id** | **int**|  | |
-| **_rest_items_id_images_image_id_availabilities** | [**\ck/plenty-client\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest**](../Model/RestItemsIdImagesImageIdAvailabilitiesPostRequest.md)|  | [optional] |
+| **_rest_items_id_images_image_id_availabilities** | [**\ck\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest**](../Model/RestItemsIdImagesImageIdAvailabilitiesPostRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -4634,7 +4634,7 @@ try {
 ## `restItemsIdImagesImageIdAvailabilitiesGet()`
 
 ```php
-restItemsIdImagesImageIdAvailabilitiesGet($id, $image_id): \ck/plenty-client\Model\ItemImageAvailability
+restItemsIdImagesImageIdAvailabilitiesGet($id, $image_id): \ck\Model\ItemImageAvailability
 ```
 
 List availabilities
@@ -4649,10 +4649,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4678,7 +4678,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImageAvailability**](../Model/ItemImageAvailability.md)
+[**\ck\Model\ItemImageAvailability**](../Model/ItemImageAvailability.md)
 
 ### Authorization
 
@@ -4696,7 +4696,7 @@ try {
 ## `restItemsIdImagesImageIdAvailabilitiesPost()`
 
 ```php
-restItemsIdImagesImageIdAvailabilitiesPost($id, $image_id, $_rest_items_id_images_image_id_availabilities): \ck/plenty-client\Model\ItemImageAvailability
+restItemsIdImagesImageIdAvailabilitiesPost($id, $image_id, $_rest_items_id_images_image_id_availabilities): \ck\Model\ItemImageAvailability
 ```
 
 Create an availability
@@ -4711,10 +4711,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4722,7 +4722,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $image_id = 56; // int
-$_rest_items_id_images_image_id_availabilities = new \ck/plenty-client\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest(); // \ck/plenty-client\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest
+$_rest_items_id_images_image_id_availabilities = new \ck\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest(); // \ck\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdImagesImageIdAvailabilitiesPost($id, $image_id, $_rest_items_id_images_image_id_availabilities);
@@ -4738,11 +4738,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **image_id** | **int**|  | |
-| **_rest_items_id_images_image_id_availabilities** | [**\ck/plenty-client\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest**](../Model/RestItemsIdImagesImageIdAvailabilitiesPostRequest.md)|  | [optional] |
+| **_rest_items_id_images_image_id_availabilities** | [**\ck\Model\RestItemsIdImagesImageIdAvailabilitiesPostRequest**](../Model/RestItemsIdImagesImageIdAvailabilitiesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImageAvailability**](../Model/ItemImageAvailability.md)
+[**\ck\Model\ItemImageAvailability**](../Model/ItemImageAvailability.md)
 
 ### Authorization
 
@@ -4775,10 +4775,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4822,7 +4822,7 @@ try {
 ## `restItemsIdImagesImageIdGet()`
 
 ```php
-restItemsIdImagesImageIdGet($id, $image_id): \ck/plenty-client\Model\ItemImage
+restItemsIdImagesImageIdGet($id, $image_id): \ck\Model\ItemImage
 ```
 
 Get an image
@@ -4837,10 +4837,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4866,7 +4866,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImage**](../Model/ItemImage.md)
+[**\ck\Model\ItemImage**](../Model/ItemImage.md)
 
 ### Authorization
 
@@ -4884,7 +4884,7 @@ try {
 ## `restItemsIdImagesImageIdNamesGet()`
 
 ```php
-restItemsIdImagesImageIdNamesGet($id, $image_id): \ck/plenty-client\Model\ItemImageName[]
+restItemsIdImagesImageIdNamesGet($id, $image_id): \ck\Model\ItemImageName[]
 ```
 
 List names of an image
@@ -4899,10 +4899,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4928,7 +4928,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImageName[]**](../Model/ItemImageName.md)
+[**\ck\Model\ItemImageName[]**](../Model/ItemImageName.md)
 
 ### Authorization
 
@@ -4961,10 +4961,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5010,7 +5010,7 @@ try {
 ## `restItemsIdImagesImageIdNamesLangGet()`
 
 ```php
-restItemsIdImagesImageIdNamesLangGet($id, $image_id, $lang): \ck/plenty-client\Model\ItemImageName
+restItemsIdImagesImageIdNamesLangGet($id, $image_id, $lang): \ck\Model\ItemImageName
 ```
 
 Get an image name
@@ -5025,10 +5025,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5056,7 +5056,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImageName**](../Model/ItemImageName.md)
+[**\ck\Model\ItemImageName**](../Model/ItemImageName.md)
 
 ### Authorization
 
@@ -5074,7 +5074,7 @@ try {
 ## `restItemsIdImagesImageIdNamesLangPut()`
 
 ```php
-restItemsIdImagesImageIdNamesLangPut($id, $image_id, $lang, $_rest_items_id_images_image_id_names_lang): \ck/plenty-client\Model\ItemImageName
+restItemsIdImagesImageIdNamesLangPut($id, $image_id, $lang, $_rest_items_id_images_image_id_names_lang): \ck\Model\ItemImageName
 ```
 
 Update an image name
@@ -5089,10 +5089,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5101,7 +5101,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $image_id = 56; // int
 $lang = 56; // int
-$_rest_items_id_images_image_id_names_lang = new \ck/plenty-client\Model\RestItemsIdImagesImageIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsIdImagesImageIdNamesPostRequest
+$_rest_items_id_images_image_id_names_lang = new \ck\Model\RestItemsIdImagesImageIdNamesPostRequest(); // \ck\Model\RestItemsIdImagesImageIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdImagesImageIdNamesLangPut($id, $image_id, $lang, $_rest_items_id_images_image_id_names_lang);
@@ -5118,11 +5118,11 @@ try {
 | **id** | **int**|  | |
 | **image_id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_id_images_image_id_names_lang** | [**\ck/plenty-client\Model\RestItemsIdImagesImageIdNamesPostRequest**](../Model/RestItemsIdImagesImageIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_id_images_image_id_names_lang** | [**\ck\Model\RestItemsIdImagesImageIdNamesPostRequest**](../Model/RestItemsIdImagesImageIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImageName**](../Model/ItemImageName.md)
+[**\ck\Model\ItemImageName**](../Model/ItemImageName.md)
 
 ### Authorization
 
@@ -5140,7 +5140,7 @@ try {
 ## `restItemsIdImagesImageIdNamesPost()`
 
 ```php
-restItemsIdImagesImageIdNamesPost($id, $image_id, $_rest_items_id_images_image_id_names): \ck/plenty-client\Model\ItemImageName
+restItemsIdImagesImageIdNamesPost($id, $image_id, $_rest_items_id_images_image_id_names): \ck\Model\ItemImageName
 ```
 
 Create an image name
@@ -5155,10 +5155,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5166,7 +5166,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $image_id = 56; // int
-$_rest_items_id_images_image_id_names = new \ck/plenty-client\Model\RestItemsIdImagesImageIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsIdImagesImageIdNamesPostRequest
+$_rest_items_id_images_image_id_names = new \ck\Model\RestItemsIdImagesImageIdNamesPostRequest(); // \ck\Model\RestItemsIdImagesImageIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdImagesImageIdNamesPost($id, $image_id, $_rest_items_id_images_image_id_names);
@@ -5182,11 +5182,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **image_id** | **int**|  | |
-| **_rest_items_id_images_image_id_names** | [**\ck/plenty-client\Model\RestItemsIdImagesImageIdNamesPostRequest**](../Model/RestItemsIdImagesImageIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_id_images_image_id_names** | [**\ck\Model\RestItemsIdImagesImageIdNamesPostRequest**](../Model/RestItemsIdImagesImageIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImageName**](../Model/ItemImageName.md)
+[**\ck\Model\ItemImageName**](../Model/ItemImageName.md)
 
 ### Authorization
 
@@ -5204,7 +5204,7 @@ try {
 ## `restItemsIdImagesImageIdPut()`
 
 ```php
-restItemsIdImagesImageIdPut($id, $image_id, $_rest_items_id_images_image_id): \ck/plenty-client\Model\ItemImage
+restItemsIdImagesImageIdPut($id, $image_id, $_rest_items_id_images_image_id): \ck\Model\ItemImage
 ```
 
 Update an image
@@ -5219,10 +5219,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5230,7 +5230,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $image_id = 56; // int
-$_rest_items_id_images_image_id = new \ck/plenty-client\Model\RestItemsIdImagesImageIdPutRequest(); // \ck/plenty-client\Model\RestItemsIdImagesImageIdPutRequest
+$_rest_items_id_images_image_id = new \ck\Model\RestItemsIdImagesImageIdPutRequest(); // \ck\Model\RestItemsIdImagesImageIdPutRequest
 
 try {
     $result = $apiInstance->restItemsIdImagesImageIdPut($id, $image_id, $_rest_items_id_images_image_id);
@@ -5246,11 +5246,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **image_id** | **int**|  | |
-| **_rest_items_id_images_image_id** | [**\ck/plenty-client\Model\RestItemsIdImagesImageIdPutRequest**](../Model/RestItemsIdImagesImageIdPutRequest.md)|  | [optional] |
+| **_rest_items_id_images_image_id** | [**\ck\Model\RestItemsIdImagesImageIdPutRequest**](../Model/RestItemsIdImagesImageIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImage**](../Model/ItemImage.md)
+[**\ck\Model\ItemImage**](../Model/ItemImage.md)
 
 ### Authorization
 
@@ -5268,7 +5268,7 @@ try {
 ## `restItemsIdImagesImageIdVariationImagesGet()`
 
 ```php
-restItemsIdImagesImageIdVariationImagesGet($id, $image_id): \ck/plenty-client\Model\VariationImage
+restItemsIdImagesImageIdVariationImagesGet($id, $image_id): \ck\Model\VariationImage
 ```
 
 List image links of an image
@@ -5283,10 +5283,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5312,7 +5312,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationImage**](../Model/VariationImage.md)
+[**\ck\Model\VariationImage**](../Model/VariationImage.md)
 
 ### Authorization
 
@@ -5330,7 +5330,7 @@ try {
 ## `restItemsIdImagesUploadPost()`
 
 ```php
-restItemsIdImagesUploadPost($id, $_rest_items_id_images_upload): \ck/plenty-client\Model\ItemImage
+restItemsIdImagesUploadPost($id, $_rest_items_id_images_upload): \ck\Model\ItemImage
 ```
 
 Upload a new image
@@ -5345,17 +5345,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_id_images_upload = new \ck/plenty-client\Model\RestItemsIdImagesUploadPostRequest(); // \ck/plenty-client\Model\RestItemsIdImagesUploadPostRequest
+$_rest_items_id_images_upload = new \ck\Model\RestItemsIdImagesUploadPostRequest(); // \ck\Model\RestItemsIdImagesUploadPostRequest
 
 try {
     $result = $apiInstance->restItemsIdImagesUploadPost($id, $_rest_items_id_images_upload);
@@ -5370,11 +5370,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_id_images_upload** | [**\ck/plenty-client\Model\RestItemsIdImagesUploadPostRequest**](../Model/RestItemsIdImagesUploadPostRequest.md)|  | [optional] |
+| **_rest_items_id_images_upload** | [**\ck\Model\RestItemsIdImagesUploadPostRequest**](../Model/RestItemsIdImagesUploadPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImage**](../Model/ItemImage.md)
+[**\ck\Model\ItemImage**](../Model/ItemImage.md)
 
 ### Authorization
 
@@ -5407,10 +5407,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5454,7 +5454,7 @@ try {
 ## `restItemsIdItemCrossSellingGet()`
 
 ```php
-restItemsIdItemCrossSellingGet($id): \ck/plenty-client\Model\ItemCrossSelling
+restItemsIdItemCrossSellingGet($id): \ck\Model\ItemCrossSelling
 ```
 
 List cross-selling links
@@ -5469,10 +5469,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5496,7 +5496,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemCrossSelling**](../Model/ItemCrossSelling.md)
+[**\ck\Model\ItemCrossSelling**](../Model/ItemCrossSelling.md)
 
 ### Authorization
 
@@ -5514,7 +5514,7 @@ try {
 ## `restItemsIdItemCrossSellingPost()`
 
 ```php
-restItemsIdItemCrossSellingPost($id, $_rest_items_id_item_cross_selling): \ck/plenty-client\Model\ItemCrossSelling
+restItemsIdItemCrossSellingPost($id, $_rest_items_id_item_cross_selling): \ck\Model\ItemCrossSelling
 ```
 
 Create a cross-selling link
@@ -5529,17 +5529,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_id_item_cross_selling = new \ck/plenty-client\Model\RestItemsIdItemCrossSellingPostRequest(); // \ck/plenty-client\Model\RestItemsIdItemCrossSellingPostRequest
+$_rest_items_id_item_cross_selling = new \ck\Model\RestItemsIdItemCrossSellingPostRequest(); // \ck\Model\RestItemsIdItemCrossSellingPostRequest
 
 try {
     $result = $apiInstance->restItemsIdItemCrossSellingPost($id, $_rest_items_id_item_cross_selling);
@@ -5554,11 +5554,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_id_item_cross_selling** | [**\ck/plenty-client\Model\RestItemsIdItemCrossSellingPostRequest**](../Model/RestItemsIdItemCrossSellingPostRequest.md)|  | [optional] |
+| **_rest_items_id_item_cross_selling** | [**\ck\Model\RestItemsIdItemCrossSellingPostRequest**](../Model/RestItemsIdItemCrossSellingPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemCrossSelling**](../Model/ItemCrossSelling.md)
+[**\ck\Model\ItemCrossSelling**](../Model/ItemCrossSelling.md)
 
 ### Authorization
 
@@ -5576,7 +5576,7 @@ try {
 ## `restItemsIdVariationImagesGet()`
 
 ```php
-restItemsIdVariationImagesGet($id): \ck/plenty-client\Model\VariationImage
+restItemsIdVariationImagesGet($id): \ck\Model\VariationImage
 ```
 
 List image links of an item
@@ -5591,10 +5591,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5618,7 +5618,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationImage**](../Model/VariationImage.md)
+[**\ck\Model\VariationImage**](../Model/VariationImage.md)
 
 ### Authorization
 
@@ -5636,7 +5636,7 @@ try {
 ## `restItemsIdVariationsVariationIdDescriptionsGet()`
 
 ```php
-restItemsIdVariationsVariationIdDescriptionsGet($id, $variation_id): \ck/plenty-client\Model\VariationDescription[]
+restItemsIdVariationsVariationIdDescriptionsGet($id, $variation_id): \ck\Model\VariationDescription[]
 ```
 
 List texts
@@ -5651,10 +5651,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5680,7 +5680,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationDescription[]**](../Model/VariationDescription.md)
+[**\ck\Model\VariationDescription[]**](../Model/VariationDescription.md)
 
 ### Authorization
 
@@ -5713,10 +5713,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5762,7 +5762,7 @@ try {
 ## `restItemsIdVariationsVariationIdDescriptionsLangGet()`
 
 ```php
-restItemsIdVariationsVariationIdDescriptionsLangGet($id, $variation_id, $lang): \ck/plenty-client\Model\VariationDescription
+restItemsIdVariationsVariationIdDescriptionsLangGet($id, $variation_id, $lang): \ck\Model\VariationDescription
 ```
 
 Get texts
@@ -5777,10 +5777,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5808,7 +5808,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationDescription**](../Model/VariationDescription.md)
+[**\ck\Model\VariationDescription**](../Model/VariationDescription.md)
 
 ### Authorization
 
@@ -5826,7 +5826,7 @@ try {
 ## `restItemsIdVariationsVariationIdDescriptionsLangPut()`
 
 ```php
-restItemsIdVariationsVariationIdDescriptionsLangPut($id, $variation_id, $lang, $_rest_items_id_variations_variation_id_descriptions_lang): \ck/plenty-client\Model\VariationDescription
+restItemsIdVariationsVariationIdDescriptionsLangPut($id, $variation_id, $lang, $_rest_items_id_variations_variation_id_descriptions_lang): \ck\Model\VariationDescription
 ```
 
 Update texts
@@ -5841,10 +5841,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5853,7 +5853,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $lang = 56; // int
-$_rest_items_id_variations_variation_id_descriptions_lang = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest
+$_rest_items_id_variations_variation_id_descriptions_lang = new \ck\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdDescriptionsLangPut($id, $variation_id, $lang, $_rest_items_id_variations_variation_id_descriptions_lang);
@@ -5870,11 +5870,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_id_variations_variation_id_descriptions_lang** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest**](../Model/RestItemsIdVariationsVariationIdDescriptionsPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_descriptions_lang** | [**\ck\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest**](../Model/RestItemsIdVariationsVariationIdDescriptionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationDescription**](../Model/VariationDescription.md)
+[**\ck\Model\VariationDescription**](../Model/VariationDescription.md)
 
 ### Authorization
 
@@ -5892,7 +5892,7 @@ try {
 ## `restItemsIdVariationsVariationIdDescriptionsPost()`
 
 ```php
-restItemsIdVariationsVariationIdDescriptionsPost($id, $variation_id, $_rest_items_id_variations_variation_id_descriptions): \ck/plenty-client\Model\VariationDescription
+restItemsIdVariationsVariationIdDescriptionsPost($id, $variation_id, $_rest_items_id_variations_variation_id_descriptions): \ck\Model\VariationDescription
 ```
 
 Create texts
@@ -5907,10 +5907,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5918,7 +5918,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_descriptions = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest
+$_rest_items_id_variations_variation_id_descriptions = new \ck\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdDescriptionsPost($id, $variation_id, $_rest_items_id_variations_variation_id_descriptions);
@@ -5934,11 +5934,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_descriptions** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest**](../Model/RestItemsIdVariationsVariationIdDescriptionsPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_descriptions** | [**\ck\Model\RestItemsIdVariationsVariationIdDescriptionsPostRequest**](../Model/RestItemsIdVariationsVariationIdDescriptionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationDescription**](../Model/VariationDescription.md)
+[**\ck\Model\VariationDescription**](../Model/VariationDescription.md)
 
 ### Authorization
 
@@ -5956,7 +5956,7 @@ try {
 ## `restItemsIdVariationsVariationIdImagesGet()`
 
 ```php
-restItemsIdVariationsVariationIdImagesGet($id, $variation_id): \ck/plenty-client\Model\ItemImage[]
+restItemsIdVariationsVariationIdImagesGet($id, $variation_id): \ck\Model\ItemImage[]
 ```
 
 List images of a variation
@@ -5971,10 +5971,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6000,7 +6000,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemImage[]**](../Model/ItemImage.md)
+[**\ck\Model\ItemImage[]**](../Model/ItemImage.md)
 
 ### Authorization
 
@@ -6033,10 +6033,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6080,7 +6080,7 @@ try {
 ## `restItemsIdVariationsVariationIdMarketIdentNumbersGet()`
 
 ```php
-restItemsIdVariationsVariationIdMarketIdentNumbersGet($id, $variation_id): \ck/plenty-client\Model\VariationMarketIdentNumber[]
+restItemsIdVariationsVariationIdMarketIdentNumbersGet($id, $variation_id): \ck\Model\VariationMarketIdentNumber[]
 ```
 
 List ident number of a variation
@@ -6095,10 +6095,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6124,7 +6124,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationMarketIdentNumber[]**](../Model/VariationMarketIdentNumber.md)
+[**\ck\Model\VariationMarketIdentNumber[]**](../Model/VariationMarketIdentNumber.md)
 
 ### Authorization
 
@@ -6157,10 +6157,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6206,7 +6206,7 @@ try {
 ## `restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdGet($id, $variation_id, $market_ident_number_id): \ck/plenty-client\Model\VariationMarketIdentNumber
+restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdGet($id, $variation_id, $market_ident_number_id): \ck\Model\VariationMarketIdentNumber
 ```
 
 Get a market ident number
@@ -6221,10 +6221,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6252,7 +6252,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationMarketIdentNumber**](../Model/VariationMarketIdentNumber.md)
+[**\ck\Model\VariationMarketIdentNumber**](../Model/VariationMarketIdentNumber.md)
 
 ### Authorization
 
@@ -6270,7 +6270,7 @@ try {
 ## `restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPut($id, $variation_id, $market_ident_number_id, $_rest_items_id_variations_variation_id_market_ident_numbers_market_ident_number_id): \ck/plenty-client\Model\VariationMarketIdentNumber
+restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPut($id, $variation_id, $market_ident_number_id, $_rest_items_id_variations_variation_id_market_ident_numbers_market_ident_number_id): \ck\Model\VariationMarketIdentNumber
 ```
 
 Updates a market ident number
@@ -6285,10 +6285,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6297,7 +6297,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $market_ident_number_id = 56; // int
-$_rest_items_id_variations_variation_id_market_ident_numbers_market_ident_number_id = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest
+$_rest_items_id_variations_variation_id_market_ident_numbers_market_ident_number_id = new \ck\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdMarketIdentNumbersMarketIdentNumberIdPut($id, $variation_id, $market_ident_number_id, $_rest_items_id_variations_variation_id_market_ident_numbers_market_ident_number_id);
@@ -6314,11 +6314,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **market_ident_number_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_market_ident_numbers_market_ident_number_id** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest**](../Model/RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_market_ident_numbers_market_ident_number_id** | [**\ck\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest**](../Model/RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationMarketIdentNumber**](../Model/VariationMarketIdentNumber.md)
+[**\ck\Model\VariationMarketIdentNumber**](../Model/VariationMarketIdentNumber.md)
 
 ### Authorization
 
@@ -6336,7 +6336,7 @@ try {
 ## `restItemsIdVariationsVariationIdMarketIdentNumbersPost()`
 
 ```php
-restItemsIdVariationsVariationIdMarketIdentNumbersPost($id, $variation_id, $_rest_items_id_variations_variation_id_market_ident_numbers): \ck/plenty-client\Model\VariationMarketIdentNumber
+restItemsIdVariationsVariationIdMarketIdentNumbersPost($id, $variation_id, $_rest_items_id_variations_variation_id_market_ident_numbers): \ck\Model\VariationMarketIdentNumber
 ```
 
 Create a market ident number
@@ -6351,10 +6351,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6362,7 +6362,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_market_ident_numbers = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest
+$_rest_items_id_variations_variation_id_market_ident_numbers = new \ck\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdMarketIdentNumbersPost($id, $variation_id, $_rest_items_id_variations_variation_id_market_ident_numbers);
@@ -6378,11 +6378,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_market_ident_numbers** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest**](../Model/RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_market_ident_numbers** | [**\ck\Model\RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest**](../Model/RestItemsIdVariationsVariationIdMarketIdentNumbersPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationMarketIdentNumber**](../Model/VariationMarketIdentNumber.md)
+[**\ck\Model\VariationMarketIdentNumber**](../Model/VariationMarketIdentNumber.md)
 
 ### Authorization
 
@@ -6400,7 +6400,7 @@ try {
 ## `restItemsIdVariationsVariationIdStockBookIncomingItemsPut()`
 
 ```php
-restItemsIdVariationsVariationIdStockBookIncomingItemsPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_book_incoming_items): \ck/plenty-client\Model\VariationStock[]
+restItemsIdVariationsVariationIdStockBookIncomingItemsPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_book_incoming_items): \ck\Model\VariationStock[]
 ```
 
 Book incoming stock
@@ -6415,10 +6415,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6427,7 +6427,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $item_id = 56; // int | The ID of the item
 $variation_id = 56; // int | The ID of the variation
 $id = 56; // int
-$_rest_items_id_variations_variation_id_stock_book_incoming_items = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest
+$_rest_items_id_variations_variation_id_stock_book_incoming_items = new \ck\Model\RestItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest(); // \ck\Model\RestItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdStockBookIncomingItemsPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_book_incoming_items);
@@ -6444,11 +6444,11 @@ try {
 | **item_id** | **int**| The ID of the item | |
 | **variation_id** | **int**| The ID of the variation | |
 | **id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_stock_book_incoming_items** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest**](../Model/RestItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_stock_book_incoming_items** | [**\ck\Model\RestItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest**](../Model/RestItemsIdVariationsVariationIdStockBookIncomingItemsPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationStock[]**](../Model/VariationStock.md)
+[**\ck\Model\VariationStock[]**](../Model/VariationStock.md)
 
 ### Authorization
 
@@ -6466,7 +6466,7 @@ try {
 ## `restItemsIdVariationsVariationIdStockBookOutgoingItemsPut()`
 
 ```php
-restItemsIdVariationsVariationIdStockBookOutgoingItemsPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_book_outgoing_items): \ck/plenty-client\Model\VariationStock[]
+restItemsIdVariationsVariationIdStockBookOutgoingItemsPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_book_outgoing_items): \ck\Model\VariationStock[]
 ```
 
 Book outgoing stock
@@ -6481,10 +6481,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6493,7 +6493,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $item_id = 56; // int | The ID of the item
 $variation_id = 56; // int | The ID of the variation
 $id = 56; // int
-$_rest_items_id_variations_variation_id_stock_book_outgoing_items = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockBookOutgoingItemsPutRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockBookOutgoingItemsPutRequest
+$_rest_items_id_variations_variation_id_stock_book_outgoing_items = new \ck\Model\RestItemsIdVariationsVariationIdStockBookOutgoingItemsPutRequest(); // \ck\Model\RestItemsIdVariationsVariationIdStockBookOutgoingItemsPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdStockBookOutgoingItemsPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_book_outgoing_items);
@@ -6510,11 +6510,11 @@ try {
 | **item_id** | **int**| The ID of the item | |
 | **variation_id** | **int**| The ID of the variation | |
 | **id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_stock_book_outgoing_items** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockBookOutgoingItemsPutRequest**](../Model/RestItemsIdVariationsVariationIdStockBookOutgoingItemsPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_stock_book_outgoing_items** | [**\ck\Model\RestItemsIdVariationsVariationIdStockBookOutgoingItemsPutRequest**](../Model/RestItemsIdVariationsVariationIdStockBookOutgoingItemsPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationStock[]**](../Model/VariationStock.md)
+[**\ck\Model\VariationStock[]**](../Model/VariationStock.md)
 
 ### Authorization
 
@@ -6532,7 +6532,7 @@ try {
 ## `restItemsIdVariationsVariationIdStockCorrectionPut()`
 
 ```php
-restItemsIdVariationsVariationIdStockCorrectionPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_correction): \ck/plenty-client\Model\VariationStock[]
+restItemsIdVariationsVariationIdStockCorrectionPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_correction): \ck\Model\VariationStock[]
 ```
 
 Correct stock
@@ -6547,10 +6547,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6559,7 +6559,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $item_id = 56; // int | The ID of the item
 $variation_id = 56; // int | The ID of the variation
 $id = 56; // int
-$_rest_items_id_variations_variation_id_stock_correction = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockCorrectionPutRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockCorrectionPutRequest
+$_rest_items_id_variations_variation_id_stock_correction = new \ck\Model\RestItemsIdVariationsVariationIdStockCorrectionPutRequest(); // \ck\Model\RestItemsIdVariationsVariationIdStockCorrectionPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdStockCorrectionPut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_correction);
@@ -6576,11 +6576,11 @@ try {
 | **item_id** | **int**| The ID of the item | |
 | **variation_id** | **int**| The ID of the variation | |
 | **id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_stock_correction** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockCorrectionPutRequest**](../Model/RestItemsIdVariationsVariationIdStockCorrectionPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_stock_correction** | [**\ck\Model\RestItemsIdVariationsVariationIdStockCorrectionPutRequest**](../Model/RestItemsIdVariationsVariationIdStockCorrectionPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationStock[]**](../Model/VariationStock.md)
+[**\ck\Model\VariationStock[]**](../Model/VariationStock.md)
 
 ### Authorization
 
@@ -6598,7 +6598,7 @@ try {
 ## `restItemsIdVariationsVariationIdStockGet()`
 
 ```php
-restItemsIdVariationsVariationIdStockGet($item_id, $variation_id, $id, $columns): \ck/plenty-client\Model\VariationStock[]
+restItemsIdVariationsVariationIdStockGet($item_id, $variation_id, $id, $columns): \ck\Model\VariationStock[]
 ```
 
 List stock of a variation per warehouse
@@ -6613,10 +6613,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6646,7 +6646,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationStock[]**](../Model/VariationStock.md)
+[**\ck\Model\VariationStock[]**](../Model/VariationStock.md)
 
 ### Authorization
 
@@ -6664,7 +6664,7 @@ try {
 ## `restItemsIdVariationsVariationIdStockMovementsGet()`
 
 ```php
-restItemsIdVariationsVariationIdStockMovementsGet($item_id, $variation_id, $page, $items_per_page, $id, $warehouse_id, $created_at_from, $created_at_to, $year, $columns): \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response
+restItemsIdVariationsVariationIdStockMovementsGet($item_id, $variation_id, $page, $items_per_page, $id, $warehouse_id, $created_at_from, $created_at_to, $year, $columns): \ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response
 ```
 
 List stock movements
@@ -6679,10 +6679,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6724,7 +6724,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response**](../Model/RestItemsIdVariationsVariationIdStockMovementsGet200Response.md)
+[**\ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response**](../Model/RestItemsIdVariationsVariationIdStockMovementsGet200Response.md)
 
 ### Authorization
 
@@ -6742,7 +6742,7 @@ try {
 ## `restItemsIdVariationsVariationIdStockRedistributePut()`
 
 ```php
-restItemsIdVariationsVariationIdStockRedistributePut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_redistribute): \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response
+restItemsIdVariationsVariationIdStockRedistributePut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_redistribute): \ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response
 ```
 
 Redistribute stock
@@ -6757,10 +6757,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6769,7 +6769,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $item_id = 56; // int | The ID of the item
 $variation_id = 56; // int | The ID of the variation
 $id = 56; // int
-$_rest_items_id_variations_variation_id_stock_redistribute = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePutRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePutRequest
+$_rest_items_id_variations_variation_id_stock_redistribute = new \ck\Model\RestItemsIdVariationsVariationIdStockRedistributePutRequest(); // \ck\Model\RestItemsIdVariationsVariationIdStockRedistributePutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdStockRedistributePut($item_id, $variation_id, $id, $_rest_items_id_variations_variation_id_stock_redistribute);
@@ -6786,11 +6786,11 @@ try {
 | **item_id** | **int**| The ID of the item | |
 | **variation_id** | **int**| The ID of the variation | |
 | **id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_stock_redistribute** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePutRequest**](../Model/RestItemsIdVariationsVariationIdStockRedistributePutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_stock_redistribute** | [**\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePutRequest**](../Model/RestItemsIdVariationsVariationIdStockRedistributePutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response**](../Model/RestItemsIdVariationsVariationIdStockRedistributePut200Response.md)
+[**\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response**](../Model/RestItemsIdVariationsVariationIdStockRedistributePut200Response.md)
 
 ### Authorization
 
@@ -6808,7 +6808,7 @@ try {
 ## `restItemsIdVariationsVariationIdStockStorageLocationsGet()`
 
 ```php
-restItemsIdVariationsVariationIdStockStorageLocationsGet($item_id, $variation_id, $page, $items_per_page, $id, $columns): \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response
+restItemsIdVariationsVariationIdStockStorageLocationsGet($item_id, $variation_id, $page, $items_per_page, $id, $columns): \ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response
 ```
 
 List stock of a variation per storage locations
@@ -6823,10 +6823,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6860,7 +6860,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response**](../Model/RestItemsIdVariationsVariationIdStockRedistributePut200Response.md)
+[**\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response**](../Model/RestItemsIdVariationsVariationIdStockRedistributePut200Response.md)
 
 ### Authorization
 
@@ -6893,10 +6893,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6942,7 +6942,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdGet($id, $variation_id, $additional_sku_id): \ck/plenty-client\Model\VariationAdditionalSku
+restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdGet($id, $variation_id, $additional_sku_id): \ck\Model\VariationAdditionalSku
 ```
 
 Gets an additional SKU
@@ -6957,10 +6957,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6988,7 +6988,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationAdditionalSku**](../Model/VariationAdditionalSku.md)
+[**\ck\Model\VariationAdditionalSku**](../Model/VariationAdditionalSku.md)
 
 ### Authorization
 
@@ -7006,7 +7006,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPut($id, $variation_id, $additional_sku_id, $_rest_items_id_variations_variation_id_variation_additional_skus_additional_sku_id): \ck/plenty-client\Model\VariationAdditionalSku
+restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPut($id, $variation_id, $additional_sku_id, $_rest_items_id_variations_variation_id_variation_additional_skus_additional_sku_id): \ck\Model\VariationAdditionalSku
 ```
 
 Update an additional SKU
@@ -7021,10 +7021,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7033,7 +7033,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $additional_sku_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_additional_skus_additional_sku_id = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest
+$_rest_items_id_variations_variation_id_variation_additional_skus_additional_sku_id = new \ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationAdditionalSkusAdditionalSkuIdPut($id, $variation_id, $additional_sku_id, $_rest_items_id_variations_variation_id_variation_additional_skus_additional_sku_id);
@@ -7050,11 +7050,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **additional_sku_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_additional_skus_additional_sku_id** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest**](../Model/RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_additional_skus_additional_sku_id** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest**](../Model/RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationAdditionalSku**](../Model/VariationAdditionalSku.md)
+[**\ck\Model\VariationAdditionalSku**](../Model/VariationAdditionalSku.md)
 
 ### Authorization
 
@@ -7072,7 +7072,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationAdditionalSkusGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationAdditionalSkusGet($id, $variation_id, $_rest_items_id_variations_variation_id_variation_additional_skus): \ck/plenty-client\Model\VariationAdditionalSku[]
+restItemsIdVariationsVariationIdVariationAdditionalSkusGet($id, $variation_id, $_rest_items_id_variations_variation_id_variation_additional_skus): \ck\Model\VariationAdditionalSku[]
 ```
 
 List additional SKUs
@@ -7087,10 +7087,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7098,7 +7098,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_additional_skus = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest
+$_rest_items_id_variations_variation_id_variation_additional_skus = new \ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationAdditionalSkusGet($id, $variation_id, $_rest_items_id_variations_variation_id_variation_additional_skus);
@@ -7114,11 +7114,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_additional_skus** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest**](../Model/RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_additional_skus** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest**](../Model/RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationAdditionalSku[]**](../Model/VariationAdditionalSku.md)
+[**\ck\Model\VariationAdditionalSku[]**](../Model/VariationAdditionalSku.md)
 
 ### Authorization
 
@@ -7136,7 +7136,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationAdditionalSkusPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationAdditionalSkusPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_additional_skus): \ck/plenty-client\Model\VariationAdditionalSku
+restItemsIdVariationsVariationIdVariationAdditionalSkusPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_additional_skus): \ck\Model\VariationAdditionalSku
 ```
 
 Create an additional SKU
@@ -7151,10 +7151,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7162,7 +7162,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_additional_skus = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest
+$_rest_items_id_variations_variation_id_variation_additional_skus = new \ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationAdditionalSkusPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_additional_skus);
@@ -7178,11 +7178,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_additional_skus** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest**](../Model/RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_additional_skus** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest**](../Model/RestItemsIdVariationsVariationIdVariationAdditionalSkusGetRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationAdditionalSku**](../Model/VariationAdditionalSku.md)
+[**\ck\Model\VariationAdditionalSku**](../Model/VariationAdditionalSku.md)
 
 ### Authorization
 
@@ -7215,10 +7215,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7264,7 +7264,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdGet($id, $variation_id, $barcode_id): \ck/plenty-client\Model\VariationBarcode
+restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdGet($id, $variation_id, $barcode_id): \ck\Model\VariationBarcode
 ```
 
 Get a variation barcode
@@ -7279,10 +7279,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7310,7 +7310,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBarcode**](../Model/VariationBarcode.md)
+[**\ck\Model\VariationBarcode**](../Model/VariationBarcode.md)
 
 ### Authorization
 
@@ -7328,7 +7328,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPut($id, $variation_id, $barcode_id, $_rest_items_id_variations_variation_id_variation_barcodes_barcode_id): \ck/plenty-client\Model\VariationBarcode
+restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPut($id, $variation_id, $barcode_id, $_rest_items_id_variations_variation_id_variation_barcodes_barcode_id): \ck\Model\VariationBarcode
 ```
 
 Update a variation barcode
@@ -7343,10 +7343,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7355,7 +7355,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $barcode_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_barcodes_barcode_id = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest
+$_rest_items_id_variations_variation_id_variation_barcodes_barcode_id = new \ck\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationBarcodesBarcodeIdPut($id, $variation_id, $barcode_id, $_rest_items_id_variations_variation_id_variation_barcodes_barcode_id);
@@ -7372,11 +7372,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **barcode_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_barcodes_barcode_id** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationBarcodesPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_barcodes_barcode_id** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationBarcodesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBarcode**](../Model/VariationBarcode.md)
+[**\ck\Model\VariationBarcode**](../Model/VariationBarcode.md)
 
 ### Authorization
 
@@ -7394,7 +7394,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationBarcodesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationBarcodesGet($id, $variation_id, $with): \ck/plenty-client\Model\VariationBarcode[]
+restItemsIdVariationsVariationIdVariationBarcodesGet($id, $variation_id, $with): \ck\Model\VariationBarcode[]
 ```
 
 List variation barcodes
@@ -7409,10 +7409,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7440,7 +7440,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBarcode[]**](../Model/VariationBarcode.md)
+[**\ck\Model\VariationBarcode[]**](../Model/VariationBarcode.md)
 
 ### Authorization
 
@@ -7458,7 +7458,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationBarcodesPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationBarcodesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_barcodes): \ck/plenty-client\Model\VariationBarcode
+restItemsIdVariationsVariationIdVariationBarcodesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_barcodes): \ck\Model\VariationBarcode
 ```
 
 Create a variation barcode
@@ -7473,10 +7473,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7484,7 +7484,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_barcodes = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest
+$_rest_items_id_variations_variation_id_variation_barcodes = new \ck\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationBarcodesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_barcodes);
@@ -7500,11 +7500,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_barcodes** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationBarcodesPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_barcodes** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationBarcodesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationBarcodesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBarcode**](../Model/VariationBarcode.md)
+[**\ck\Model\VariationBarcode**](../Model/VariationBarcode.md)
 
 ### Authorization
 
@@ -7537,10 +7537,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7586,7 +7586,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationBundlesBundleIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationBundlesBundleIdGet($id, $variation_id, $bundle_id): \ck/plenty-client\Model\VariationBundle
+restItemsIdVariationsVariationIdVariationBundlesBundleIdGet($id, $variation_id, $bundle_id): \ck\Model\VariationBundle
 ```
 
 Get a variation bundle
@@ -7601,10 +7601,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7632,7 +7632,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBundle**](../Model/VariationBundle.md)
+[**\ck\Model\VariationBundle**](../Model/VariationBundle.md)
 
 ### Authorization
 
@@ -7650,7 +7650,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationBundlesBundleIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationBundlesBundleIdPut($id, $variation_id, $bundle_id, $_rest_items_id_variations_variation_id_variation_bundles_bundle_id): \ck/plenty-client\Model\VariationBundle
+restItemsIdVariationsVariationIdVariationBundlesBundleIdPut($id, $variation_id, $bundle_id, $_rest_items_id_variations_variation_id_variation_bundles_bundle_id): \ck\Model\VariationBundle
 ```
 
 Update a variation bundle
@@ -7665,10 +7665,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7677,7 +7677,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $bundle_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_bundles_bundle_id = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest
+$_rest_items_id_variations_variation_id_variation_bundles_bundle_id = new \ck\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationBundlesBundleIdPut($id, $variation_id, $bundle_id, $_rest_items_id_variations_variation_id_variation_bundles_bundle_id);
@@ -7694,11 +7694,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **bundle_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_bundles_bundle_id** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationBundlesPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_bundles_bundle_id** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationBundlesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBundle**](../Model/VariationBundle.md)
+[**\ck\Model\VariationBundle**](../Model/VariationBundle.md)
 
 ### Authorization
 
@@ -7716,7 +7716,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationBundlesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationBundlesGet($id, $variation_id): \ck/plenty-client\Model\VariationBundle[]
+restItemsIdVariationsVariationIdVariationBundlesGet($id, $variation_id): \ck\Model\VariationBundle[]
 ```
 
 List bundle components
@@ -7731,10 +7731,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7760,7 +7760,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBundle[]**](../Model/VariationBundle.md)
+[**\ck\Model\VariationBundle[]**](../Model/VariationBundle.md)
 
 ### Authorization
 
@@ -7778,7 +7778,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationBundlesPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationBundlesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_bundles): \ck/plenty-client\Model\VariationBundle
+restItemsIdVariationsVariationIdVariationBundlesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_bundles): \ck\Model\VariationBundle
 ```
 
 Add a variation to a bundle
@@ -7793,10 +7793,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7804,7 +7804,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_bundles = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest
+$_rest_items_id_variations_variation_id_variation_bundles = new \ck\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationBundlesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_bundles);
@@ -7820,11 +7820,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_bundles** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationBundlesPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_bundles** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationBundlesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationBundlesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBundle**](../Model/VariationBundle.md)
+[**\ck\Model\VariationBundle**](../Model/VariationBundle.md)
 
 ### Authorization
 
@@ -7857,10 +7857,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7906,7 +7906,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationCategoriesCatIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationCategoriesCatIdGet($id, $variation_id, $cat_id): \ck/plenty-client\Model\VariationCategory
+restItemsIdVariationsVariationIdVariationCategoriesCatIdGet($id, $variation_id, $cat_id): \ck\Model\VariationCategory
 ```
 
 Get link between category and variation
@@ -7921,10 +7921,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7952,7 +7952,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationCategory**](../Model/VariationCategory.md)
+[**\ck\Model\VariationCategory**](../Model/VariationCategory.md)
 
 ### Authorization
 
@@ -7970,7 +7970,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationCategoriesCatIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationCategoriesCatIdPut($id, $variation_id, $cat_id, $_rest_items_id_variations_variation_id_variation_categories_cat_id): \ck/plenty-client\Model\VariationCategory
+restItemsIdVariationsVariationIdVariationCategoriesCatIdPut($id, $variation_id, $cat_id, $_rest_items_id_variations_variation_id_variation_categories_cat_id): \ck\Model\VariationCategory
 ```
 
 Update variation category link
@@ -7985,10 +7985,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7997,7 +7997,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $cat_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_categories_cat_id = new \ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest
+$_rest_items_id_variations_variation_id_variation_categories_cat_id = new \ck\Model\RestItemsVariationsVariationCategoriesPutRequest(); // \ck\Model\RestItemsVariationsVariationCategoriesPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationCategoriesCatIdPut($id, $variation_id, $cat_id, $_rest_items_id_variations_variation_id_variation_categories_cat_id);
@@ -8014,11 +8014,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **cat_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_categories_cat_id** | [**\ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest**](../Model/RestItemsVariationsVariationCategoriesPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_categories_cat_id** | [**\ck\Model\RestItemsVariationsVariationCategoriesPutRequest**](../Model/RestItemsVariationsVariationCategoriesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationCategory**](../Model/VariationCategory.md)
+[**\ck\Model\VariationCategory**](../Model/VariationCategory.md)
 
 ### Authorization
 
@@ -8036,7 +8036,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationCategoriesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationCategoriesGet($id, $variation_id): \ck/plenty-client\Model\VariationCategory
+restItemsIdVariationsVariationIdVariationCategoriesGet($id, $variation_id): \ck\Model\VariationCategory
 ```
 
 List categories linked to a variation
@@ -8051,10 +8051,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8080,7 +8080,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationCategory**](../Model/VariationCategory.md)
+[**\ck\Model\VariationCategory**](../Model/VariationCategory.md)
 
 ### Authorization
 
@@ -8098,7 +8098,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationCategoriesPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationCategoriesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_categories): \ck/plenty-client\Model\VariationCategory
+restItemsIdVariationsVariationIdVariationCategoriesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_categories): \ck\Model\VariationCategory
 ```
 
 Link a category to a variation
@@ -8113,10 +8113,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8124,7 +8124,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_categories = new \ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest
+$_rest_items_id_variations_variation_id_variation_categories = new \ck\Model\RestItemsVariationsVariationCategoriesPutRequest(); // \ck\Model\RestItemsVariationsVariationCategoriesPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationCategoriesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_categories);
@@ -8140,11 +8140,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_categories** | [**\ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest**](../Model/RestItemsVariationsVariationCategoriesPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_categories** | [**\ck\Model\RestItemsVariationsVariationCategoriesPutRequest**](../Model/RestItemsVariationsVariationCategoriesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationCategory**](../Model/VariationCategory.md)
+[**\ck\Model\VariationCategory**](../Model/VariationCategory.md)
 
 ### Authorization
 
@@ -8162,7 +8162,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationClientsGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationClientsGet($id, $variation_id): \ck/plenty-client\Model\VariationClient[]
+restItemsIdVariationsVariationIdVariationClientsGet($id, $variation_id): \ck\Model\VariationClient[]
 ```
 
 List clients linked to a variation
@@ -8177,10 +8177,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8206,7 +8206,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationClient[]**](../Model/VariationClient.md)
+[**\ck\Model\VariationClient[]**](../Model/VariationClient.md)
 
 ### Authorization
 
@@ -8239,10 +8239,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8288,7 +8288,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationClientsPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationClientsPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_clients): \ck/plenty-client\Model\VariationClient
+restItemsIdVariationsVariationIdVariationClientsPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_clients): \ck\Model\VariationClient
 ```
 
 Link a client to a variation
@@ -8303,10 +8303,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8314,7 +8314,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_clients = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationClientsPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationClientsPostRequest
+$_rest_items_id_variations_variation_id_variation_clients = new \ck\Model\RestItemsIdVariationsVariationIdVariationClientsPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationClientsPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationClientsPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_clients);
@@ -8330,11 +8330,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_clients** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationClientsPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationClientsPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_clients** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationClientsPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationClientsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationClient**](../Model/VariationClient.md)
+[**\ck\Model\VariationClient**](../Model/VariationClient.md)
 
 ### Authorization
 
@@ -8352,7 +8352,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationComponentBundlesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationComponentBundlesGet($id, $variation_id): \ck/plenty-client\Model\VariationBundle[]
+restItemsIdVariationsVariationIdVariationComponentBundlesGet($id, $variation_id): \ck\Model\VariationBundle[]
 ```
 
 List bundles
@@ -8367,10 +8367,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8396,7 +8396,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationBundle[]**](../Model/VariationBundle.md)
+[**\ck\Model\VariationBundle[]**](../Model/VariationBundle.md)
 
 ### Authorization
 
@@ -8414,7 +8414,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationDefaultCategoriesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationDefaultCategoriesGet($id, $variation_id): \ck/plenty-client\Model\VariationDefaultCategory[]
+restItemsIdVariationsVariationIdVariationDefaultCategoriesGet($id, $variation_id): \ck\Model\VariationDefaultCategory[]
 ```
 
 List default category links
@@ -8429,10 +8429,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8458,7 +8458,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationDefaultCategory[]**](../Model/VariationDefaultCategory.md)
+[**\ck\Model\VariationDefaultCategory[]**](../Model/VariationDefaultCategory.md)
 
 ### Authorization
 
@@ -8491,10 +8491,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8540,7 +8540,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdGet($id, $variation_id, $plenty_id): \ck/plenty-client\Model\VariationDefaultCategory
+restItemsIdVariationsVariationIdVariationDefaultCategoriesPlentyIdGet($id, $variation_id, $plenty_id): \ck\Model\VariationDefaultCategory
 ```
 
 Gets a default category link
@@ -8555,10 +8555,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8586,7 +8586,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationDefaultCategory**](../Model/VariationDefaultCategory.md)
+[**\ck\Model\VariationDefaultCategory**](../Model/VariationDefaultCategory.md)
 
 ### Authorization
 
@@ -8604,7 +8604,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationDefaultCategoriesPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationDefaultCategoriesPost($id, $variation_id): \ck/plenty-client\Model\VariationDefaultCategory
+restItemsIdVariationsVariationIdVariationDefaultCategoriesPost($id, $variation_id): \ck\Model\VariationDefaultCategory
 ```
 
 Create a default category link
@@ -8619,10 +8619,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8648,7 +8648,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationDefaultCategory**](../Model/VariationDefaultCategory.md)
+[**\ck\Model\VariationDefaultCategory**](../Model/VariationDefaultCategory.md)
 
 ### Authorization
 
@@ -8666,7 +8666,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationImagesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationImagesGet($id, $variation_id, $updated_at): \ck/plenty-client\Model\VariationImage
+restItemsIdVariationsVariationIdVariationImagesGet($id, $variation_id, $updated_at): \ck\Model\VariationImage
 ```
 
 List image links of a variation
@@ -8681,10 +8681,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8712,7 +8712,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationImage**](../Model/VariationImage.md)
+[**\ck\Model\VariationImage**](../Model/VariationImage.md)
 
 ### Authorization
 
@@ -8745,10 +8745,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8794,7 +8794,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationImagesPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationImagesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_images): \ck/plenty-client\Model\VariationImage
+restItemsIdVariationsVariationIdVariationImagesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_images): \ck\Model\VariationImage
 ```
 
 Create an image link
@@ -8809,10 +8809,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8820,7 +8820,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_images = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationImagesPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationImagesPostRequest
+$_rest_items_id_variations_variation_id_variation_images = new \ck\Model\RestItemsIdVariationsVariationIdVariationImagesPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationImagesPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationImagesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_images);
@@ -8836,11 +8836,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_images** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationImagesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationImagesPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_images** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationImagesPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationImagesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationImage**](../Model/VariationImage.md)
+[**\ck\Model\VariationImage**](../Model/VariationImage.md)
 
 ### Authorization
 
@@ -8873,10 +8873,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8919,7 +8919,7 @@ void (empty response body)
 ## `restItemsIdVariationsVariationIdVariationMarketsGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationMarketsGet($id, $variation_id): \ck/plenty-client\Model\VariationMarket[]
+restItemsIdVariationsVariationIdVariationMarketsGet($id, $variation_id): \ck\Model\VariationMarket[]
 ```
 
 List markets linked to a variation
@@ -8934,10 +8934,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -8963,7 +8963,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationMarket[]**](../Model/VariationMarket.md)
+[**\ck\Model\VariationMarket[]**](../Model/VariationMarket.md)
 
 ### Authorization
 
@@ -8996,10 +8996,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9045,7 +9045,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationMarketsPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationMarketsPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_markets): \ck/plenty-client\Model\VariationMarket
+restItemsIdVariationsVariationIdVariationMarketsPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_markets): \ck\Model\VariationMarket
 ```
 
 Create link between variation and market
@@ -9060,10 +9060,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9071,7 +9071,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_markets = new \ck/plenty-client\Model\RestItemsVariationsVariationMarketsPostRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationMarketsPostRequest
+$_rest_items_id_variations_variation_id_variation_markets = new \ck\Model\RestItemsVariationsVariationMarketsPostRequest(); // \ck\Model\RestItemsVariationsVariationMarketsPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationMarketsPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_markets);
@@ -9087,11 +9087,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_markets** | [**\ck/plenty-client\Model\RestItemsVariationsVariationMarketsPostRequest**](../Model/RestItemsVariationsVariationMarketsPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_markets** | [**\ck\Model\RestItemsVariationsVariationMarketsPostRequest**](../Model/RestItemsVariationsVariationMarketsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationMarket**](../Model/VariationMarket.md)
+[**\ck\Model\VariationMarket**](../Model/VariationMarket.md)
 
 ### Authorization
 
@@ -9124,10 +9124,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9171,7 +9171,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationPropertiesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationPropertiesGet($id, $variation_id): \ck/plenty-client\Model\VariationPropertyValue[]
+restItemsIdVariationsVariationIdVariationPropertiesGet($id, $variation_id): \ck\Model\VariationPropertyValue[]
 ```
 
 List property values linked to a variation
@@ -9186,10 +9186,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9215,7 +9215,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationPropertyValue[]**](../Model/VariationPropertyValue.md)
+[**\ck\Model\VariationPropertyValue[]**](../Model/VariationPropertyValue.md)
 
 ### Authorization
 
@@ -9233,7 +9233,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationPropertiesPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationPropertiesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_properties): \ck/plenty-client\Model\VariationPropertyValue
+restItemsIdVariationsVariationIdVariationPropertiesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_properties): \ck\Model\VariationPropertyValue
 ```
 
 Create link between variation and property value
@@ -9248,10 +9248,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9259,7 +9259,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_properties = new \ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest
+$_rest_items_id_variations_variation_id_variation_properties = new \ck\Model\RestItemsVariationsVariationPropertiesPutRequest(); // \ck\Model\RestItemsVariationsVariationPropertiesPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationPropertiesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_properties);
@@ -9275,11 +9275,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_properties** | [**\ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest**](../Model/RestItemsVariationsVariationPropertiesPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_properties** | [**\ck\Model\RestItemsVariationsVariationPropertiesPutRequest**](../Model/RestItemsVariationsVariationPropertiesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationPropertyValue**](../Model/VariationPropertyValue.md)
+[**\ck\Model\VariationPropertyValue**](../Model/VariationPropertyValue.md)
 
 ### Authorization
 
@@ -9312,10 +9312,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9361,7 +9361,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationPropertiesPropertyIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationPropertiesPropertyIdGet($id, $variation_id, $property_id): \ck/plenty-client\Model\VariationPropertyValue
+restItemsIdVariationsVariationIdVariationPropertiesPropertyIdGet($id, $variation_id, $property_id): \ck\Model\VariationPropertyValue
 ```
 
 Get a property value
@@ -9376,10 +9376,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9407,7 +9407,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationPropertyValue**](../Model/VariationPropertyValue.md)
+[**\ck\Model\VariationPropertyValue**](../Model/VariationPropertyValue.md)
 
 ### Authorization
 
@@ -9425,7 +9425,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPut($id, $variation_id, $property_id, $_rest_items_id_variations_variation_id_variation_properties_property_id): \ck/plenty-client\Model\VariationPropertyValue
+restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPut($id, $variation_id, $property_id, $_rest_items_id_variations_variation_id_variation_properties_property_id): \ck\Model\VariationPropertyValue
 ```
 
 Update a property value
@@ -9440,10 +9440,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9452,7 +9452,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $property_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_properties_property_id = new \ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest
+$_rest_items_id_variations_variation_id_variation_properties_property_id = new \ck\Model\RestItemsVariationsVariationPropertiesPutRequest(); // \ck\Model\RestItemsVariationsVariationPropertiesPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationPropertiesPropertyIdPut($id, $variation_id, $property_id, $_rest_items_id_variations_variation_id_variation_properties_property_id);
@@ -9469,11 +9469,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **property_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_properties_property_id** | [**\ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest**](../Model/RestItemsVariationsVariationPropertiesPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_properties_property_id** | [**\ck\Model\RestItemsVariationsVariationPropertiesPutRequest**](../Model/RestItemsVariationsVariationPropertiesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationPropertyValue**](../Model/VariationPropertyValue.md)
+[**\ck\Model\VariationPropertyValue**](../Model/VariationPropertyValue.md)
 
 ### Authorization
 
@@ -9506,10 +9506,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9553,7 +9553,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSalesPricesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSalesPricesGet($id, $variation_id): \ck/plenty-client\Model\VariationSalesPrice[]
+restItemsIdVariationsVariationIdVariationSalesPricesGet($id, $variation_id): \ck\Model\VariationSalesPrice[]
 ```
 
 List sales prices of a variation
@@ -9568,10 +9568,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9597,7 +9597,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSalesPrice[]**](../Model/VariationSalesPrice.md)
+[**\ck\Model\VariationSalesPrice[]**](../Model/VariationSalesPrice.md)
 
 ### Authorization
 
@@ -9615,7 +9615,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSalesPricesPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSalesPricesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_sales_prices): \ck/plenty-client\Model\VariationSalesPrice
+restItemsIdVariationsVariationIdVariationSalesPricesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_sales_prices): \ck\Model\VariationSalesPrice
 ```
 
 Create link between variation and sales price
@@ -9630,10 +9630,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9641,7 +9641,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_sales_prices = new \ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest
+$_rest_items_id_variations_variation_id_variation_sales_prices = new \ck\Model\RestItemsVariationsVariationSalesPricesPutRequest(); // \ck\Model\RestItemsVariationsVariationSalesPricesPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationSalesPricesPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_sales_prices);
@@ -9657,11 +9657,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_sales_prices** | [**\ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest**](../Model/RestItemsVariationsVariationSalesPricesPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_sales_prices** | [**\ck\Model\RestItemsVariationsVariationSalesPricesPutRequest**](../Model/RestItemsVariationsVariationSalesPricesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSalesPrice**](../Model/VariationSalesPrice.md)
+[**\ck\Model\VariationSalesPrice**](../Model/VariationSalesPrice.md)
 
 ### Authorization
 
@@ -9694,10 +9694,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9743,7 +9743,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSalesPricesPriceIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSalesPricesPriceIdGet($id, $variation_id, $price_id): \ck/plenty-client\Model\VariationSalesPrice
+restItemsIdVariationsVariationIdVariationSalesPricesPriceIdGet($id, $variation_id, $price_id): \ck\Model\VariationSalesPrice
 ```
 
 Get sales price data for a variation
@@ -9758,10 +9758,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9789,7 +9789,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSalesPrice**](../Model/VariationSalesPrice.md)
+[**\ck\Model\VariationSalesPrice**](../Model/VariationSalesPrice.md)
 
 ### Authorization
 
@@ -9807,7 +9807,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPut($id, $variation_id, $price_id, $_rest_items_id_variations_variation_id_variation_sales_prices_price_id): \ck/plenty-client\Model\VariationSalesPrice
+restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPut($id, $variation_id, $price_id, $_rest_items_id_variations_variation_id_variation_sales_prices_price_id): \ck\Model\VariationSalesPrice
 ```
 
 Update sales price data
@@ -9822,10 +9822,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9834,7 +9834,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $price_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_sales_prices_price_id = new \ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest
+$_rest_items_id_variations_variation_id_variation_sales_prices_price_id = new \ck\Model\RestItemsVariationsVariationSalesPricesPutRequest(); // \ck\Model\RestItemsVariationsVariationSalesPricesPutRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationSalesPricesPriceIdPut($id, $variation_id, $price_id, $_rest_items_id_variations_variation_id_variation_sales_prices_price_id);
@@ -9851,11 +9851,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **price_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_sales_prices_price_id** | [**\ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest**](../Model/RestItemsVariationsVariationSalesPricesPutRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_sales_prices_price_id** | [**\ck\Model\RestItemsVariationsVariationSalesPricesPutRequest**](../Model/RestItemsVariationsVariationSalesPricesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSalesPrice**](../Model/VariationSalesPrice.md)
+[**\ck\Model\VariationSalesPrice**](../Model/VariationSalesPrice.md)
 
 ### Authorization
 
@@ -9873,7 +9873,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSkusGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSkusGet($id, $variation_id): \ck/plenty-client\Model\VariationSku[]
+restItemsIdVariationsVariationIdVariationSkusGet($id, $variation_id): \ck\Model\VariationSku[]
 ```
 
 List SKUs
@@ -9888,10 +9888,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9917,7 +9917,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSku[]**](../Model/VariationSku.md)
+[**\ck\Model\VariationSku[]**](../Model/VariationSku.md)
 
 ### Authorization
 
@@ -9935,7 +9935,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSkusPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSkusPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_skus): \ck/plenty-client\Model\VariationSku
+restItemsIdVariationsVariationIdVariationSkusPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_skus): \ck\Model\VariationSku
 ```
 
 Create an SKU
@@ -9950,10 +9950,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -9961,7 +9961,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $variation_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_skus = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest
+$_rest_items_id_variations_variation_id_variation_skus = new \ck\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationSkusPost($id, $variation_id, $_rest_items_id_variations_variation_id_variation_skus);
@@ -9977,11 +9977,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_skus** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationSkusPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_skus** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationSkusPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSku**](../Model/VariationSku.md)
+[**\ck\Model\VariationSku**](../Model/VariationSku.md)
 
 ### Authorization
 
@@ -10014,10 +10014,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10063,7 +10063,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSkusSkuIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSkusSkuIdGet($id, $variation_id, $sku_id): \ck/plenty-client\Model\VariationSku
+restItemsIdVariationsVariationIdVariationSkusSkuIdGet($id, $variation_id, $sku_id): \ck\Model\VariationSku
 ```
 
 Get an SKU
@@ -10078,10 +10078,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10109,7 +10109,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSku**](../Model/VariationSku.md)
+[**\ck\Model\VariationSku**](../Model/VariationSku.md)
 
 ### Authorization
 
@@ -10127,7 +10127,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSkusSkuIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSkusSkuIdPut($id, $variation_id, $sku_id, $_rest_items_id_variations_variation_id_variation_skus_sku_id): \ck/plenty-client\Model\VariationSku
+restItemsIdVariationsVariationIdVariationSkusSkuIdPut($id, $variation_id, $sku_id, $_rest_items_id_variations_variation_id_variation_skus_sku_id): \ck\Model\VariationSku
 ```
 
 Update an SKU
@@ -10142,10 +10142,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10154,7 +10154,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $id = 56; // int
 $variation_id = 56; // int
 $sku_id = 56; // int
-$_rest_items_id_variations_variation_id_variation_skus_sku_id = new \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest(); // \ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest
+$_rest_items_id_variations_variation_id_variation_skus_sku_id = new \ck\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest(); // \ck\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest
 
 try {
     $result = $apiInstance->restItemsIdVariationsVariationIdVariationSkusSkuIdPut($id, $variation_id, $sku_id, $_rest_items_id_variations_variation_id_variation_skus_sku_id);
@@ -10171,11 +10171,11 @@ try {
 | **id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **sku_id** | **int**|  | |
-| **_rest_items_id_variations_variation_id_variation_skus_sku_id** | [**\ck/plenty-client\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationSkusPostRequest.md)|  | [optional] |
+| **_rest_items_id_variations_variation_id_variation_skus_sku_id** | [**\ck\Model\RestItemsIdVariationsVariationIdVariationSkusPostRequest**](../Model/RestItemsIdVariationsVariationIdVariationSkusPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSku**](../Model/VariationSku.md)
+[**\ck\Model\VariationSku**](../Model/VariationSku.md)
 
 ### Authorization
 
@@ -10193,7 +10193,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSuppliersGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSuppliersGet($id, $variation_id): \ck/plenty-client\Model\VariationSupplier[]
+restItemsIdVariationsVariationIdVariationSuppliersGet($id, $variation_id): \ck\Model\VariationSupplier[]
 ```
 
 Lists suppliers for a variation
@@ -10208,10 +10208,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10237,7 +10237,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSupplier[]**](../Model/VariationSupplier.md)
+[**\ck\Model\VariationSupplier[]**](../Model/VariationSupplier.md)
 
 ### Authorization
 
@@ -10255,7 +10255,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSuppliersPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSuppliersPost($id, $variation_id): \ck/plenty-client\Model\VariationSupplier
+restItemsIdVariationsVariationIdVariationSuppliersPost($id, $variation_id): \ck\Model\VariationSupplier
 ```
 
 Create a link between variation and supplier
@@ -10270,10 +10270,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10299,7 +10299,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSupplier**](../Model/VariationSupplier.md)
+[**\ck\Model\VariationSupplier**](../Model/VariationSupplier.md)
 
 ### Authorization
 
@@ -10332,10 +10332,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10381,7 +10381,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdGet($id, $variation_id, $variation_supplier_id): \ck/plenty-client\Model\VariationSupplier
+restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdGet($id, $variation_id, $variation_supplier_id): \ck\Model\VariationSupplier
 ```
 
 Get supplier data for a variation
@@ -10396,10 +10396,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10427,7 +10427,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSupplier**](../Model/VariationSupplier.md)
+[**\ck\Model\VariationSupplier**](../Model/VariationSupplier.md)
 
 ### Authorization
 
@@ -10445,7 +10445,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdPut($id, $variation_id, $variation_supplier_id): \ck/plenty-client\Model\VariationSupplier
+restItemsIdVariationsVariationIdVariationSuppliersVariationSupplierIdPut($id, $variation_id, $variation_supplier_id): \ck\Model\VariationSupplier
 ```
 
 Updates supplier data for a variation
@@ -10460,10 +10460,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10491,7 +10491,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationSupplier**](../Model/VariationSupplier.md)
+[**\ck\Model\VariationSupplier**](../Model/VariationSupplier.md)
 
 ### Authorization
 
@@ -10509,7 +10509,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationWarehousesGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationWarehousesGet($id, $variation_id): \ck/plenty-client\Model\VariationWarehouse[]
+restItemsIdVariationsVariationIdVariationWarehousesGet($id, $variation_id): \ck\Model\VariationWarehouse[]
 ```
 
 List the warehouses linked to a variation
@@ -10524,10 +10524,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10553,7 +10553,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationWarehouse[]**](../Model/VariationWarehouse.md)
+[**\ck\Model\VariationWarehouse[]**](../Model/VariationWarehouse.md)
 
 ### Authorization
 
@@ -10571,7 +10571,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationWarehousesPost()`
 
 ```php
-restItemsIdVariationsVariationIdVariationWarehousesPost($id, $variation_id): \ck/plenty-client\Model\VariationWarehouse
+restItemsIdVariationsVariationIdVariationWarehousesPost($id, $variation_id): \ck\Model\VariationWarehouse
 ```
 
 Create link between a variation and a warehouse
@@ -10586,10 +10586,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10615,7 +10615,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationWarehouse**](../Model/VariationWarehouse.md)
+[**\ck\Model\VariationWarehouse**](../Model/VariationWarehouse.md)
 
 ### Authorization
 
@@ -10648,10 +10648,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10697,7 +10697,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdGet()`
 
 ```php
-restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdGet($id, $variation_id, $warehouse_id): \ck/plenty-client\Model\VariationWarehouse
+restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdGet($id, $variation_id, $warehouse_id): \ck\Model\VariationWarehouse
 ```
 
 Get warehouse data for a variation
@@ -10712,10 +10712,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10743,7 +10743,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationWarehouse**](../Model/VariationWarehouse.md)
+[**\ck\Model\VariationWarehouse**](../Model/VariationWarehouse.md)
 
 ### Authorization
 
@@ -10761,7 +10761,7 @@ try {
 ## `restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdPut()`
 
 ```php
-restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdPut($id, $variation_id, $warehouse_id): \ck/plenty-client\Model\VariationWarehouse
+restItemsIdVariationsVariationIdVariationWarehousesWarehouseIdPut($id, $variation_id, $warehouse_id): \ck\Model\VariationWarehouse
 ```
 
 Update warehouse data of a variation
@@ -10776,10 +10776,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10807,7 +10807,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationWarehouse**](../Model/VariationWarehouse.md)
+[**\ck\Model\VariationWarehouse**](../Model/VariationWarehouse.md)
 
 ### Authorization
 
@@ -10840,10 +10840,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10900,10 +10900,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10944,7 +10944,7 @@ void (empty response body)
 ## `restItemsItemIdGet()`
 
 ```php
-restItemsItemIdGet($item_id, $lang): \ck/plenty-client\Model\Item
+restItemsItemIdGet($item_id, $lang): \ck\Model\Item
 ```
 
 Show an item
@@ -10959,10 +10959,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -10988,7 +10988,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Item**](../Model/Item.md)
+[**\ck\Model\Item**](../Model/Item.md)
 
 ### Authorization
 
@@ -11021,10 +11021,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11065,7 +11065,7 @@ void (empty response body)
 ## `restItemsItemIdItemShippingProfilesGet()`
 
 ```php
-restItemsItemIdItemShippingProfilesGet($item_id): \ck/plenty-client\Model\ItemShippingProfiles[]
+restItemsItemIdItemShippingProfilesGet($item_id): \ck\Model\ItemShippingProfiles[]
 ```
 
 List shipping profiles of an item
@@ -11080,10 +11080,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11107,7 +11107,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemShippingProfiles[]**](../Model/ItemShippingProfiles.md)
+[**\ck\Model\ItemShippingProfiles[]**](../Model/ItemShippingProfiles.md)
 
 ### Authorization
 
@@ -11140,10 +11140,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11187,7 +11187,7 @@ try {
 ## `restItemsItemIdItemShippingProfilesPost()`
 
 ```php
-restItemsItemIdItemShippingProfilesPost($item_id): \ck/plenty-client\Model\ItemShippingProfiles
+restItemsItemIdItemShippingProfilesPost($item_id): \ck\Model\ItemShippingProfiles
 ```
 
 Activate a shipping profile
@@ -11202,10 +11202,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11229,7 +11229,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemShippingProfiles**](../Model/ItemShippingProfiles.md)
+[**\ck\Model\ItemShippingProfiles**](../Model/ItemShippingProfiles.md)
 
 ### Authorization
 
@@ -11247,7 +11247,7 @@ try {
 ## `restItemsItemIdPut()`
 
 ```php
-restItemsItemIdPut($item_id, $_rest_items_item_id): \ck/plenty-client\Model\Item
+restItemsItemIdPut($item_id, $_rest_items_item_id): \ck\Model\Item
 ```
 
 Update a item
@@ -11262,17 +11262,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $item_id = 56; // int
-$_rest_items_item_id = new \ck/plenty-client\Model\RestItemsItemIdPutRequest(); // \ck/plenty-client\Model\RestItemsItemIdPutRequest
+$_rest_items_item_id = new \ck\Model\RestItemsItemIdPutRequest(); // \ck\Model\RestItemsItemIdPutRequest
 
 try {
     $result = $apiInstance->restItemsItemIdPut($item_id, $_rest_items_item_id);
@@ -11287,11 +11287,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **item_id** | **int**|  | |
-| **_rest_items_item_id** | [**\ck/plenty-client\Model\RestItemsItemIdPutRequest**](../Model/RestItemsItemIdPutRequest.md)|  | [optional] |
+| **_rest_items_item_id** | [**\ck\Model\RestItemsItemIdPutRequest**](../Model/RestItemsItemIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Item**](../Model/Item.md)
+[**\ck\Model\Item**](../Model/Item.md)
 
 ### Authorization
 
@@ -11309,7 +11309,7 @@ try {
 ## `restItemsItemIdVariationsGet()`
 
 ```php
-restItemsItemIdVariationsGet($item_id, $with, $lang, $page, $items_per_page, $is_main, $is_active, $barcode, $number_exact, $number_fuzzy, $is_bundle, $supplier_number, $manufacturer_id, $updated_between, $created_between, $related_updated_between): \ck/plenty-client\Model\RestItemsVariationsGet200Response
+restItemsItemIdVariationsGet($item_id, $with, $lang, $page, $items_per_page, $is_main, $is_active, $barcode, $number_exact, $number_fuzzy, $is_bundle, $supplier_number, $manufacturer_id, $updated_between, $created_between, $related_updated_between): \ck\Model\RestItemsVariationsGet200Response
 ```
 
 List variations of an item
@@ -11324,10 +11324,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11381,7 +11381,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsVariationsGet200Response**](../Model/RestItemsVariationsGet200Response.md)
+[**\ck\Model\RestItemsVariationsGet200Response**](../Model/RestItemsVariationsGet200Response.md)
 
 ### Authorization
 
@@ -11399,7 +11399,7 @@ try {
 ## `restItemsItemIdVariationsPost()`
 
 ```php
-restItemsItemIdVariationsPost($item_id, $_rest_items_item_id_variations): \ck/plenty-client\Model\Variation
+restItemsItemIdVariationsPost($item_id, $_rest_items_item_id_variations): \ck\Model\Variation
 ```
 
 Create a variation
@@ -11414,17 +11414,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $item_id = 56; // int
-$_rest_items_item_id_variations = new \ck/plenty-client\Model\RestItemsVariationsPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsPutRequest
+$_rest_items_item_id_variations = new \ck\Model\RestItemsVariationsPutRequest(); // \ck\Model\RestItemsVariationsPutRequest
 
 try {
     $result = $apiInstance->restItemsItemIdVariationsPost($item_id, $_rest_items_item_id_variations);
@@ -11439,11 +11439,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **item_id** | **int**|  | |
-| **_rest_items_item_id_variations** | [**\ck/plenty-client\Model\RestItemsVariationsPutRequest**](../Model/RestItemsVariationsPutRequest.md)|  | [optional] |
+| **_rest_items_item_id_variations** | [**\ck\Model\RestItemsVariationsPutRequest**](../Model/RestItemsVariationsPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Variation**](../Model/Variation.md)
+[**\ck\Model\Variation**](../Model/Variation.md)
 
 ### Authorization
 
@@ -11476,10 +11476,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11538,10 +11538,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11584,7 +11584,7 @@ void (empty response body)
 ## `restItemsItemIdVariationsVariationIdGet()`
 
 ```php
-restItemsItemIdVariationsVariationIdGet($item_id, $variation_id, $with): \ck/plenty-client\Model\Variation
+restItemsItemIdVariationsVariationIdGet($item_id, $variation_id, $with): \ck\Model\Variation
 ```
 
 Get a variation
@@ -11599,10 +11599,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11630,7 +11630,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Variation**](../Model/Variation.md)
+[**\ck\Model\Variation**](../Model/Variation.md)
 
 ### Authorization
 
@@ -11648,7 +11648,7 @@ try {
 ## `restItemsItemIdVariationsVariationIdPut()`
 
 ```php
-restItemsItemIdVariationsVariationIdPut($item_id, $variation_id, $_rest_items_item_id_variations_variation_id): \ck/plenty-client\Model\Variation
+restItemsItemIdVariationsVariationIdPut($item_id, $variation_id, $_rest_items_item_id_variations_variation_id): \ck\Model\Variation
 ```
 
 Update a variation
@@ -11663,10 +11663,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11674,7 +11674,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $item_id = 56; // int
 $variation_id = 56; // int
-$_rest_items_item_id_variations_variation_id = new \ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdPutRequest(); // \ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdPutRequest
+$_rest_items_item_id_variations_variation_id = new \ck\Model\RestItemsItemIdVariationsVariationIdPutRequest(); // \ck\Model\RestItemsItemIdVariationsVariationIdPutRequest
 
 try {
     $result = $apiInstance->restItemsItemIdVariationsVariationIdPut($item_id, $variation_id, $_rest_items_item_id_variations_variation_id);
@@ -11690,11 +11690,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **item_id** | **int**|  | |
 | **variation_id** | **int**|  | |
-| **_rest_items_item_id_variations_variation_id** | [**\ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdPutRequest**](../Model/RestItemsItemIdVariationsVariationIdPutRequest.md)|  | [optional] |
+| **_rest_items_item_id_variations_variation_id** | [**\ck\Model\RestItemsItemIdVariationsVariationIdPutRequest**](../Model/RestItemsItemIdVariationsVariationIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Variation**](../Model/Variation.md)
+[**\ck\Model\Variation**](../Model/Variation.md)
 
 ### Authorization
 
@@ -11712,7 +11712,7 @@ try {
 ## `restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsGet()`
 
 ```php
-restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsGet($item_id, $variation_id, $property_id): \ck/plenty-client\Model\VariationPropertyValueText[]
+restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsGet($item_id, $variation_id, $property_id): \ck\Model\VariationPropertyValueText[]
 ```
 
 Get property value texts
@@ -11727,10 +11727,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11758,7 +11758,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationPropertyValueText[]**](../Model/VariationPropertyValueText.md)
+[**\ck\Model\VariationPropertyValueText[]**](../Model/VariationPropertyValueText.md)
 
 ### Authorization
 
@@ -11791,10 +11791,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11842,7 +11842,7 @@ try {
 ## `restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangGet()`
 
 ```php
-restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangGet($item_id, $variation_id, $property_id, $lang): \ck/plenty-client\Model\VariationPropertyValueText
+restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangGet($item_id, $variation_id, $property_id, $lang): \ck\Model\VariationPropertyValueText
 ```
 
 Get property value text by language
@@ -11857,10 +11857,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11890,7 +11890,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationPropertyValueText**](../Model/VariationPropertyValueText.md)
+[**\ck\Model\VariationPropertyValueText**](../Model/VariationPropertyValueText.md)
 
 ### Authorization
 
@@ -11908,7 +11908,7 @@ try {
 ## `restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPut()`
 
 ```php
-restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPut($item_id, $variation_id, $property_id, $lang, $_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts_lang): \ck/plenty-client\Model\VariationPropertyValueText
+restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPut($item_id, $variation_id, $property_id, $lang, $_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts_lang): \ck\Model\VariationPropertyValueText
 ```
 
 Update property value text by language
@@ -11923,10 +11923,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -11936,7 +11936,7 @@ $item_id = 56; // int
 $variation_id = 56; // int
 $property_id = 56; // int
 $lang = 56; // int
-$_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts_lang = new \ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest(); // \ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest
+$_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts_lang = new \ck\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest(); // \ck\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest
 
 try {
     $result = $apiInstance->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsLangPut($item_id, $variation_id, $property_id, $lang, $_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts_lang);
@@ -11954,11 +11954,11 @@ try {
 | **variation_id** | **int**|  | |
 | **property_id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts_lang** | [**\ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest**](../Model/RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest.md)|  | [optional] |
+| **_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts_lang** | [**\ck\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest**](../Model/RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationPropertyValueText**](../Model/VariationPropertyValueText.md)
+[**\ck\Model\VariationPropertyValueText**](../Model/VariationPropertyValueText.md)
 
 ### Authorization
 
@@ -11976,7 +11976,7 @@ try {
 ## `restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPost()`
 
 ```php
-restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPost($item_id, $variation_id, $property_id, $_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts): \ck/plenty-client\Model\VariationPropertyValueText
+restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPost($item_id, $variation_id, $property_id, $_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts): \ck\Model\VariationPropertyValueText
 ```
 
 Create property value text by language
@@ -11991,10 +11991,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12003,7 +12003,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $item_id = 56; // int
 $variation_id = 56; // int
 $property_id = 56; // int
-$_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts = new \ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest(); // \ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest
+$_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts = new \ck\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest(); // \ck\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest
 
 try {
     $result = $apiInstance->restItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPost($item_id, $variation_id, $property_id, $_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts);
@@ -12020,11 +12020,11 @@ try {
 | **item_id** | **int**|  | |
 | **variation_id** | **int**|  | |
 | **property_id** | **int**|  | |
-| **_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts** | [**\ck/plenty-client\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest**](../Model/RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest.md)|  | [optional] |
+| **_rest_items_item_id_variations_variation_id_variation_properties_property_id_texts** | [**\ck\Model\RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest**](../Model/RestItemsItemIdVariationsVariationIdVariationPropertiesPropertyIdTextsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\VariationPropertyValueText**](../Model/VariationPropertyValueText.md)
+[**\ck\Model\VariationPropertyValueText**](../Model/VariationPropertyValueText.md)
 
 ### Authorization
 
@@ -12042,7 +12042,7 @@ try {
 ## `restItemsItemShippingProfilesGet()`
 
 ```php
-restItemsItemShippingProfilesGet(): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restItemsItemShippingProfilesGet(): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 List all shipping profiles of all items
@@ -12057,10 +12057,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12081,7 +12081,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 
@@ -12114,10 +12114,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12171,10 +12171,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12213,7 +12213,7 @@ This endpoint does not need any parameter.
 ## `restItemsManufacturersGet()`
 
 ```php
-restItemsManufacturersGet($with, $updated_at, $name): \ck/plenty-client\Model\RestItemsManufacturersGet200Response
+restItemsManufacturersGet($with, $updated_at, $name): \ck\Model\RestItemsManufacturersGet200Response
 ```
 
 List manufacturers
@@ -12228,10 +12228,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12259,7 +12259,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsManufacturersGet200Response**](../Model/RestItemsManufacturersGet200Response.md)
+[**\ck\Model\RestItemsManufacturersGet200Response**](../Model/RestItemsManufacturersGet200Response.md)
 
 ### Authorization
 
@@ -12277,7 +12277,7 @@ try {
 ## `restItemsManufacturersIdCommissionsGet()`
 
 ```php
-restItemsManufacturersIdCommissionsGet($id): \ck/plenty-client\Model\ManufacturerCommission[]
+restItemsManufacturersIdCommissionsGet($id): \ck\Model\ManufacturerCommission[]
 ```
 
 List commissions
@@ -12292,10 +12292,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12319,7 +12319,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ManufacturerCommission[]**](../Model/ManufacturerCommission.md)
+[**\ck\Model\ManufacturerCommission[]**](../Model/ManufacturerCommission.md)
 
 ### Authorization
 
@@ -12352,10 +12352,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12399,7 +12399,7 @@ try {
 ## `restItemsManufacturersIdCommissionsManufacturerIdGet()`
 
 ```php
-restItemsManufacturersIdCommissionsManufacturerIdGet($id, $manufacturer_id): \ck/plenty-client\Model\ManufacturerCommission
+restItemsManufacturersIdCommissionsManufacturerIdGet($id, $manufacturer_id): \ck\Model\ManufacturerCommission
 ```
 
 Get a commission
@@ -12414,10 +12414,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12443,7 +12443,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ManufacturerCommission**](../Model/ManufacturerCommission.md)
+[**\ck\Model\ManufacturerCommission**](../Model/ManufacturerCommission.md)
 
 ### Authorization
 
@@ -12461,7 +12461,7 @@ try {
 ## `restItemsManufacturersIdCommissionsManufacturerIdPut()`
 
 ```php
-restItemsManufacturersIdCommissionsManufacturerIdPut($id, $manufacturer_id): \ck/plenty-client\Model\ManufacturerCommission
+restItemsManufacturersIdCommissionsManufacturerIdPut($id, $manufacturer_id): \ck\Model\ManufacturerCommission
 ```
 
 Update a commission
@@ -12476,10 +12476,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12505,7 +12505,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ManufacturerCommission**](../Model/ManufacturerCommission.md)
+[**\ck\Model\ManufacturerCommission**](../Model/ManufacturerCommission.md)
 
 ### Authorization
 
@@ -12523,7 +12523,7 @@ try {
 ## `restItemsManufacturersIdCommissionsPost()`
 
 ```php
-restItemsManufacturersIdCommissionsPost($id): \ck/plenty-client\Model\ManufacturerCommission
+restItemsManufacturersIdCommissionsPost($id): \ck\Model\ManufacturerCommission
 ```
 
 Create a commission
@@ -12538,10 +12538,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12565,7 +12565,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ManufacturerCommission**](../Model/ManufacturerCommission.md)
+[**\ck\Model\ManufacturerCommission**](../Model/ManufacturerCommission.md)
 
 ### Authorization
 
@@ -12598,10 +12598,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12643,7 +12643,7 @@ try {
 ## `restItemsManufacturersIdGet()`
 
 ```php
-restItemsManufacturersIdGet($id): \ck/plenty-client\Model\Manufacturer
+restItemsManufacturersIdGet($id): \ck\Model\Manufacturer
 ```
 
 Get a manufacturer
@@ -12658,10 +12658,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12685,7 +12685,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Manufacturer**](../Model/Manufacturer.md)
+[**\ck\Model\Manufacturer**](../Model/Manufacturer.md)
 
 ### Authorization
 
@@ -12703,7 +12703,7 @@ try {
 ## `restItemsManufacturersIdPut()`
 
 ```php
-restItemsManufacturersIdPut($id): \ck/plenty-client\Model\Manufacturer
+restItemsManufacturersIdPut($id): \ck\Model\Manufacturer
 ```
 
 Update a manufacturer
@@ -12718,10 +12718,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12745,7 +12745,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Manufacturer**](../Model/Manufacturer.md)
+[**\ck\Model\Manufacturer**](../Model/Manufacturer.md)
 
 ### Authorization
 
@@ -12763,7 +12763,7 @@ try {
 ## `restItemsManufacturersPost()`
 
 ```php
-restItemsManufacturersPost(): \ck/plenty-client\Model\Manufacturer
+restItemsManufacturersPost(): \ck\Model\Manufacturer
 ```
 
 Create a manufacturer
@@ -12778,10 +12778,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12802,7 +12802,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Manufacturer**](../Model/Manufacturer.md)
+[**\ck\Model\Manufacturer**](../Model/Manufacturer.md)
 
 ### Authorization
 
@@ -12820,7 +12820,7 @@ This endpoint does not need any parameter.
 ## `restItemsPackingUnitsGet()`
 
 ```php
-restItemsPackingUnitsGet($language): \ck/plenty-client\Model\PackingUnit[]
+restItemsPackingUnitsGet($language): \ck\Model\PackingUnit[]
 ```
 
 Get the item variation packing units
@@ -12835,10 +12835,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12862,7 +12862,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PackingUnit[]**](../Model/PackingUnit.md)
+[**\ck\Model\PackingUnit[]**](../Model/PackingUnit.md)
 
 ### Authorization
 
@@ -12880,7 +12880,7 @@ try {
 ## `restItemsPackingUnitsIdGet()`
 
 ```php
-restItemsPackingUnitsIdGet($id, $language, $is_unit_id): \ck/plenty-client\Model\PackingUnit
+restItemsPackingUnitsIdGet($id, $language, $is_unit_id): \ck\Model\PackingUnit
 ```
 
 Get the item variation packing unit for a specific given id
@@ -12895,10 +12895,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -12926,7 +12926,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PackingUnit**](../Model/PackingUnit.md)
+[**\ck\Model\PackingUnit**](../Model/PackingUnit.md)
 
 ### Authorization
 
@@ -12944,7 +12944,7 @@ try {
 ## `restItemsPost()`
 
 ```php
-restItemsPost($_rest_items): \ck/plenty-client\Model\Item
+restItemsPost($_rest_items): \ck\Model\Item
 ```
 
 Create new items
@@ -12959,16 +12959,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items = new \ck/plenty-client\Model\RestItemsPostRequest(); // \ck/plenty-client\Model\RestItemsPostRequest
+$_rest_items = new \ck\Model\RestItemsPostRequest(); // \ck\Model\RestItemsPostRequest
 
 try {
     $result = $apiInstance->restItemsPost($_rest_items);
@@ -12982,11 +12982,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items** | [**\ck/plenty-client\Model\RestItemsPostRequest**](../Model/RestItemsPostRequest.md)|  | [optional] |
+| **_rest_items** | [**\ck\Model\RestItemsPostRequest**](../Model/RestItemsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Item**](../Model/Item.md)
+[**\ck\Model\Item**](../Model/Item.md)
 
 ### Authorization
 
@@ -13004,7 +13004,7 @@ try {
 ## `restItemsPropertiesGet()`
 
 ```php
-restItemsPropertiesGet($with, $updated_at, $group_id, $page, $items_per_page): \ck/plenty-client\Model\RestItemsPropertiesGet200Response
+restItemsPropertiesGet($with, $updated_at, $group_id, $page, $items_per_page): \ck\Model\RestItemsPropertiesGet200Response
 ```
 
 List properties
@@ -13019,10 +13019,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13054,7 +13054,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsPropertiesGet200Response**](../Model/RestItemsPropertiesGet200Response.md)
+[**\ck\Model\RestItemsPropertiesGet200Response**](../Model/RestItemsPropertiesGet200Response.md)
 
 ### Authorization
 
@@ -13087,10 +13087,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13131,7 +13131,7 @@ void (empty response body)
 ## `restItemsPropertiesIdGet()`
 
 ```php
-restItemsPropertiesIdGet($id): \ck/plenty-client\Model\Property
+restItemsPropertiesIdGet($id): \ck\Model\Property
 ```
 
 Get a property
@@ -13146,10 +13146,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13173,7 +13173,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Property**](../Model/Property.md)
+[**\ck\Model\Property**](../Model/Property.md)
 
 ### Authorization
 
@@ -13191,7 +13191,7 @@ try {
 ## `restItemsPropertiesIdMarketReferencesGet()`
 
 ```php
-restItemsPropertiesIdMarketReferencesGet($id): \ck/plenty-client\Model\PropertyMarketReference[]
+restItemsPropertiesIdMarketReferencesGet($id): \ck\Model\PropertyMarketReference[]
 ```
 
 List property market references
@@ -13206,10 +13206,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13233,7 +13233,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyMarketReference[]**](../Model/PropertyMarketReference.md)
+[**\ck\Model\PropertyMarketReference[]**](../Model/PropertyMarketReference.md)
 
 ### Authorization
 
@@ -13266,10 +13266,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13313,7 +13313,7 @@ try {
 ## `restItemsPropertiesIdMarketReferencesMarketIdGet()`
 
 ```php
-restItemsPropertiesIdMarketReferencesMarketIdGet($id, $market_id): \ck/plenty-client\Model\PropertyMarketReference
+restItemsPropertiesIdMarketReferencesMarketIdGet($id, $market_id): \ck\Model\PropertyMarketReference
 ```
 
 Get a property market reference
@@ -13328,10 +13328,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13357,7 +13357,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyMarketReference**](../Model/PropertyMarketReference.md)
+[**\ck\Model\PropertyMarketReference**](../Model/PropertyMarketReference.md)
 
 ### Authorization
 
@@ -13375,7 +13375,7 @@ try {
 ## `restItemsPropertiesIdMarketReferencesMarketIdPut()`
 
 ```php
-restItemsPropertiesIdMarketReferencesMarketIdPut($id, $market_id, $_rest_items_properties_id_market_references_market_id): \ck/plenty-client\Model\PropertyMarketReference
+restItemsPropertiesIdMarketReferencesMarketIdPut($id, $market_id, $_rest_items_properties_id_market_references_market_id): \ck\Model\PropertyMarketReference
 ```
 
 Update a property market reference
@@ -13390,10 +13390,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13401,7 +13401,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $market_id = 56; // int
-$_rest_items_properties_id_market_references_market_id = new \ck/plenty-client\Model\RestItemsPropertiesIdMarketReferencesPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesIdMarketReferencesPostRequest
+$_rest_items_properties_id_market_references_market_id = new \ck\Model\RestItemsPropertiesIdMarketReferencesPostRequest(); // \ck\Model\RestItemsPropertiesIdMarketReferencesPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesIdMarketReferencesMarketIdPut($id, $market_id, $_rest_items_properties_id_market_references_market_id);
@@ -13417,11 +13417,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **market_id** | **int**|  | |
-| **_rest_items_properties_id_market_references_market_id** | [**\ck/plenty-client\Model\RestItemsPropertiesIdMarketReferencesPostRequest**](../Model/RestItemsPropertiesIdMarketReferencesPostRequest.md)|  | [optional] |
+| **_rest_items_properties_id_market_references_market_id** | [**\ck\Model\RestItemsPropertiesIdMarketReferencesPostRequest**](../Model/RestItemsPropertiesIdMarketReferencesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyMarketReference**](../Model/PropertyMarketReference.md)
+[**\ck\Model\PropertyMarketReference**](../Model/PropertyMarketReference.md)
 
 ### Authorization
 
@@ -13439,7 +13439,7 @@ try {
 ## `restItemsPropertiesIdMarketReferencesPost()`
 
 ```php
-restItemsPropertiesIdMarketReferencesPost($id, $_rest_items_properties_id_market_references): \ck/plenty-client\Model\PropertyMarketReference
+restItemsPropertiesIdMarketReferencesPost($id, $_rest_items_properties_id_market_references): \ck\Model\PropertyMarketReference
 ```
 
 Create a property market reference
@@ -13454,17 +13454,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_properties_id_market_references = new \ck/plenty-client\Model\RestItemsPropertiesIdMarketReferencesPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesIdMarketReferencesPostRequest
+$_rest_items_properties_id_market_references = new \ck\Model\RestItemsPropertiesIdMarketReferencesPostRequest(); // \ck\Model\RestItemsPropertiesIdMarketReferencesPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesIdMarketReferencesPost($id, $_rest_items_properties_id_market_references);
@@ -13479,11 +13479,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_properties_id_market_references** | [**\ck/plenty-client\Model\RestItemsPropertiesIdMarketReferencesPostRequest**](../Model/RestItemsPropertiesIdMarketReferencesPostRequest.md)|  | [optional] |
+| **_rest_items_properties_id_market_references** | [**\ck\Model\RestItemsPropertiesIdMarketReferencesPostRequest**](../Model/RestItemsPropertiesIdMarketReferencesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyMarketReference**](../Model/PropertyMarketReference.md)
+[**\ck\Model\PropertyMarketReference**](../Model/PropertyMarketReference.md)
 
 ### Authorization
 
@@ -13501,7 +13501,7 @@ try {
 ## `restItemsPropertiesIdNamesGet()`
 
 ```php
-restItemsPropertiesIdNamesGet($id): \ck/plenty-client\Model\PropertyName[]
+restItemsPropertiesIdNamesGet($id): \ck\Model\PropertyName[]
 ```
 
 List the property names
@@ -13516,10 +13516,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13543,7 +13543,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyName[]**](../Model/PropertyName.md)
+[**\ck\Model\PropertyName[]**](../Model/PropertyName.md)
 
 ### Authorization
 
@@ -13576,10 +13576,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13622,7 +13622,7 @@ void (empty response body)
 ## `restItemsPropertiesIdNamesLangGet()`
 
 ```php
-restItemsPropertiesIdNamesLangGet($id, $lang): \ck/plenty-client\Model\PropertyName
+restItemsPropertiesIdNamesLangGet($id, $lang): \ck\Model\PropertyName
 ```
 
 Get a property name
@@ -13637,10 +13637,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13666,7 +13666,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyName**](../Model/PropertyName.md)
+[**\ck\Model\PropertyName**](../Model/PropertyName.md)
 
 ### Authorization
 
@@ -13684,7 +13684,7 @@ try {
 ## `restItemsPropertiesIdNamesLangPut()`
 
 ```php
-restItemsPropertiesIdNamesLangPut($id, $lang, $_rest_items_properties_id_names_lang): \ck/plenty-client\Model\PropertyName
+restItemsPropertiesIdNamesLangPut($id, $lang, $_rest_items_properties_id_names_lang): \ck\Model\PropertyName
 ```
 
 Update a property name
@@ -13699,10 +13699,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13710,7 +13710,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $lang = 56; // int
-$_rest_items_properties_id_names_lang = new \ck/plenty-client\Model\RestItemsPropertiesIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesIdNamesPostRequest
+$_rest_items_properties_id_names_lang = new \ck\Model\RestItemsPropertiesIdNamesPostRequest(); // \ck\Model\RestItemsPropertiesIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesIdNamesLangPut($id, $lang, $_rest_items_properties_id_names_lang);
@@ -13726,11 +13726,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_properties_id_names_lang** | [**\ck/plenty-client\Model\RestItemsPropertiesIdNamesPostRequest**](../Model/RestItemsPropertiesIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_properties_id_names_lang** | [**\ck\Model\RestItemsPropertiesIdNamesPostRequest**](../Model/RestItemsPropertiesIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyName**](../Model/PropertyName.md)
+[**\ck\Model\PropertyName**](../Model/PropertyName.md)
 
 ### Authorization
 
@@ -13748,7 +13748,7 @@ try {
 ## `restItemsPropertiesIdNamesPost()`
 
 ```php
-restItemsPropertiesIdNamesPost($id, $_rest_items_properties_id_names): \ck/plenty-client\Model\PropertyName
+restItemsPropertiesIdNamesPost($id, $_rest_items_properties_id_names): \ck\Model\PropertyName
 ```
 
 Create a property name
@@ -13763,17 +13763,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_properties_id_names = new \ck/plenty-client\Model\RestItemsPropertiesIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesIdNamesPostRequest
+$_rest_items_properties_id_names = new \ck\Model\RestItemsPropertiesIdNamesPostRequest(); // \ck\Model\RestItemsPropertiesIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesIdNamesPost($id, $_rest_items_properties_id_names);
@@ -13788,11 +13788,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_properties_id_names** | [**\ck/plenty-client\Model\RestItemsPropertiesIdNamesPostRequest**](../Model/RestItemsPropertiesIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_properties_id_names** | [**\ck\Model\RestItemsPropertiesIdNamesPostRequest**](../Model/RestItemsPropertiesIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyName**](../Model/PropertyName.md)
+[**\ck\Model\PropertyName**](../Model/PropertyName.md)
 
 ### Authorization
 
@@ -13810,7 +13810,7 @@ try {
 ## `restItemsPropertiesIdPut()`
 
 ```php
-restItemsPropertiesIdPut($id, $_rest_items_properties_id): \ck/plenty-client\Model\Property
+restItemsPropertiesIdPut($id, $_rest_items_properties_id): \ck\Model\Property
 ```
 
 Update a property
@@ -13825,17 +13825,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_properties_id = new \ck/plenty-client\Model\RestItemsPropertiesPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesPostRequest
+$_rest_items_properties_id = new \ck\Model\RestItemsPropertiesPostRequest(); // \ck\Model\RestItemsPropertiesPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesIdPut($id, $_rest_items_properties_id);
@@ -13850,11 +13850,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_properties_id** | [**\ck/plenty-client\Model\RestItemsPropertiesPostRequest**](../Model/RestItemsPropertiesPostRequest.md)|  | [optional] |
+| **_rest_items_properties_id** | [**\ck\Model\RestItemsPropertiesPostRequest**](../Model/RestItemsPropertiesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Property**](../Model/Property.md)
+[**\ck\Model\Property**](../Model/Property.md)
 
 ### Authorization
 
@@ -13872,7 +13872,7 @@ try {
 ## `restItemsPropertiesPost()`
 
 ```php
-restItemsPropertiesPost($_rest_items_properties): \ck/plenty-client\Model\Property
+restItemsPropertiesPost($_rest_items_properties): \ck\Model\Property
 ```
 
 Create a property
@@ -13887,16 +13887,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_properties = new \ck/plenty-client\Model\RestItemsPropertiesPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesPostRequest
+$_rest_items_properties = new \ck\Model\RestItemsPropertiesPostRequest(); // \ck\Model\RestItemsPropertiesPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesPost($_rest_items_properties);
@@ -13910,11 +13910,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_properties** | [**\ck/plenty-client\Model\RestItemsPropertiesPostRequest**](../Model/RestItemsPropertiesPostRequest.md)|  | [optional] |
+| **_rest_items_properties** | [**\ck\Model\RestItemsPropertiesPostRequest**](../Model/RestItemsPropertiesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Property**](../Model/Property.md)
+[**\ck\Model\Property**](../Model/Property.md)
 
 ### Authorization
 
@@ -13932,7 +13932,7 @@ try {
 ## `restItemsPropertiesPropertyIdSelectionsGet()`
 
 ```php
-restItemsPropertiesPropertyIdSelectionsGet($property_id): \ck/plenty-client\Model\PropertySelection[]
+restItemsPropertiesPropertyIdSelectionsGet($property_id): \ck\Model\PropertySelection[]
 ```
 
 List property selections
@@ -13947,10 +13947,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -13974,7 +13974,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertySelection[]**](../Model/PropertySelection.md)
+[**\ck\Model\PropertySelection[]**](../Model/PropertySelection.md)
 
 ### Authorization
 
@@ -14007,10 +14007,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14054,7 +14054,7 @@ try {
 ## `restItemsPropertiesPropertyIdSelectionsIdGet()`
 
 ```php
-restItemsPropertiesPropertyIdSelectionsIdGet($property_id, $id): \ck/plenty-client\Model\PropertySelection[]
+restItemsPropertiesPropertyIdSelectionsIdGet($property_id, $id): \ck\Model\PropertySelection[]
 ```
 
 Get a property selection
@@ -14069,10 +14069,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14098,7 +14098,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertySelection[]**](../Model/PropertySelection.md)
+[**\ck\Model\PropertySelection[]**](../Model/PropertySelection.md)
 
 ### Authorization
 
@@ -14131,10 +14131,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14180,7 +14180,7 @@ try {
 ## `restItemsPropertiesPropertyIdSelectionsIdLangGet()`
 
 ```php
-restItemsPropertiesPropertyIdSelectionsIdLangGet($property_id, $id, $lang): \ck/plenty-client\Model\PropertySelection
+restItemsPropertiesPropertyIdSelectionsIdLangGet($property_id, $id, $lang): \ck\Model\PropertySelection
 ```
 
 List property selections by language
@@ -14195,10 +14195,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14226,7 +14226,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertySelection**](../Model/PropertySelection.md)
+[**\ck\Model\PropertySelection**](../Model/PropertySelection.md)
 
 ### Authorization
 
@@ -14244,7 +14244,7 @@ try {
 ## `restItemsPropertiesPropertyIdSelectionsIdLangPut()`
 
 ```php
-restItemsPropertiesPropertyIdSelectionsIdLangPut($property_id, $id, $lang, $_rest_items_properties_property_id_selections_id_lang): \ck/plenty-client\Model\PropertySelection
+restItemsPropertiesPropertyIdSelectionsIdLangPut($property_id, $id, $lang, $_rest_items_properties_property_id_selections_id_lang): \ck\Model\PropertySelection
 ```
 
 Update a property selection
@@ -14259,10 +14259,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14271,7 +14271,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 $property_id = 56; // int
 $id = 56; // int
 $lang = 56; // int
-$_rest_items_properties_property_id_selections_id_lang = new \ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest
+$_rest_items_properties_property_id_selections_id_lang = new \ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest(); // \ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesPropertyIdSelectionsIdLangPut($property_id, $id, $lang, $_rest_items_properties_property_id_selections_id_lang);
@@ -14288,11 +14288,11 @@ try {
 | **property_id** | **int**|  | |
 | **id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_properties_property_id_selections_id_lang** | [**\ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest**](../Model/RestItemsPropertiesPropertyIdSelectionsPostRequest.md)|  | [optional] |
+| **_rest_items_properties_property_id_selections_id_lang** | [**\ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest**](../Model/RestItemsPropertiesPropertyIdSelectionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertySelection**](../Model/PropertySelection.md)
+[**\ck\Model\PropertySelection**](../Model/PropertySelection.md)
 
 ### Authorization
 
@@ -14310,7 +14310,7 @@ try {
 ## `restItemsPropertiesPropertyIdSelectionsIdPost()`
 
 ```php
-restItemsPropertiesPropertyIdSelectionsIdPost($property_id, $id, $_rest_items_properties_property_id_selections_id): \ck/plenty-client\Model\PropertySelection
+restItemsPropertiesPropertyIdSelectionsIdPost($property_id, $id, $_rest_items_properties_property_id_selections_id): \ck\Model\PropertySelection
 ```
 
 Creates a property selection lang
@@ -14325,10 +14325,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14336,7 +14336,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $property_id = 56; // int
 $id = 56; // int
-$_rest_items_properties_property_id_selections_id = new \ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest
+$_rest_items_properties_property_id_selections_id = new \ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest(); // \ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesPropertyIdSelectionsIdPost($property_id, $id, $_rest_items_properties_property_id_selections_id);
@@ -14352,11 +14352,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **property_id** | **int**|  | |
 | **id** | **int**|  | |
-| **_rest_items_properties_property_id_selections_id** | [**\ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest**](../Model/RestItemsPropertiesPropertyIdSelectionsPostRequest.md)|  | [optional] |
+| **_rest_items_properties_property_id_selections_id** | [**\ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest**](../Model/RestItemsPropertiesPropertyIdSelectionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertySelection**](../Model/PropertySelection.md)
+[**\ck\Model\PropertySelection**](../Model/PropertySelection.md)
 
 ### Authorization
 
@@ -14374,7 +14374,7 @@ try {
 ## `restItemsPropertiesPropertyIdSelectionsLangGet()`
 
 ```php
-restItemsPropertiesPropertyIdSelectionsLangGet($property_id, $lang): \ck/plenty-client\Model\PropertySelection[]
+restItemsPropertiesPropertyIdSelectionsLangGet($property_id, $lang): \ck\Model\PropertySelection[]
 ```
 
 List property selections
@@ -14389,10 +14389,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14418,7 +14418,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertySelection[]**](../Model/PropertySelection.md)
+[**\ck\Model\PropertySelection[]**](../Model/PropertySelection.md)
 
 ### Authorization
 
@@ -14436,7 +14436,7 @@ try {
 ## `restItemsPropertiesPropertyIdSelectionsPost()`
 
 ```php
-restItemsPropertiesPropertyIdSelectionsPost($property_id, $_rest_items_properties_property_id_selections): \ck/plenty-client\Model\PropertySelection
+restItemsPropertiesPropertyIdSelectionsPost($property_id, $_rest_items_properties_property_id_selections): \ck\Model\PropertySelection
 ```
 
 Create a property selection
@@ -14451,17 +14451,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $property_id = 56; // int
-$_rest_items_properties_property_id_selections = new \ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest(); // \ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest
+$_rest_items_properties_property_id_selections = new \ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest(); // \ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertiesPropertyIdSelectionsPost($property_id, $_rest_items_properties_property_id_selections);
@@ -14476,11 +14476,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **property_id** | **int**|  | |
-| **_rest_items_properties_property_id_selections** | [**\ck/plenty-client\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest**](../Model/RestItemsPropertiesPropertyIdSelectionsPostRequest.md)|  | [optional] |
+| **_rest_items_properties_property_id_selections** | [**\ck\Model\RestItemsPropertiesPropertyIdSelectionsPostRequest**](../Model/RestItemsPropertiesPropertyIdSelectionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertySelection**](../Model/PropertySelection.md)
+[**\ck\Model\PropertySelection**](../Model/PropertySelection.md)
 
 ### Authorization
 
@@ -14498,7 +14498,7 @@ try {
 ## `restItemsPropertyGroupsGet()`
 
 ```php
-restItemsPropertyGroupsGet($with): \ck/plenty-client\Model\RestItemsPropertyGroupsGet200Response
+restItemsPropertyGroupsGet($with): \ck\Model\RestItemsPropertyGroupsGet200Response
 ```
 
 List property groups
@@ -14513,10 +14513,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14540,7 +14540,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsPropertyGroupsGet200Response**](../Model/RestItemsPropertyGroupsGet200Response.md)
+[**\ck\Model\RestItemsPropertyGroupsGet200Response**](../Model/RestItemsPropertyGroupsGet200Response.md)
 
 ### Authorization
 
@@ -14573,10 +14573,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14618,7 +14618,7 @@ try {
 ## `restItemsPropertyGroupsIdGet()`
 
 ```php
-restItemsPropertyGroupsIdGet($id): \ck/plenty-client\Model\PropertyGroup
+restItemsPropertyGroupsIdGet($id): \ck\Model\PropertyGroup
 ```
 
 Get a property group
@@ -14633,10 +14633,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14660,7 +14660,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyGroup**](../Model/PropertyGroup.md)
+[**\ck\Model\PropertyGroup**](../Model/PropertyGroup.md)
 
 ### Authorization
 
@@ -14678,7 +14678,7 @@ try {
 ## `restItemsPropertyGroupsIdNamesGet()`
 
 ```php
-restItemsPropertyGroupsIdNamesGet($id): \ck/plenty-client\Model\PropertyGroupName[]
+restItemsPropertyGroupsIdNamesGet($id): \ck\Model\PropertyGroupName[]
 ```
 
 List the property group names of a property group
@@ -14693,10 +14693,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14720,7 +14720,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyGroupName[]**](../Model/PropertyGroupName.md)
+[**\ck\Model\PropertyGroupName[]**](../Model/PropertyGroupName.md)
 
 ### Authorization
 
@@ -14753,10 +14753,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14800,7 +14800,7 @@ try {
 ## `restItemsPropertyGroupsIdNamesLangGet()`
 
 ```php
-restItemsPropertyGroupsIdNamesLangGet($id, $lang): \ck/plenty-client\Model\PropertyGroupName
+restItemsPropertyGroupsIdNamesLangGet($id, $lang): \ck\Model\PropertyGroupName
 ```
 
 Get a property group name in a language
@@ -14815,10 +14815,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14844,7 +14844,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyGroupName**](../Model/PropertyGroupName.md)
+[**\ck\Model\PropertyGroupName**](../Model/PropertyGroupName.md)
 
 ### Authorization
 
@@ -14862,7 +14862,7 @@ try {
 ## `restItemsPropertyGroupsIdNamesLangPut()`
 
 ```php
-restItemsPropertyGroupsIdNamesLangPut($id, $lang, $_rest_items_property_groups_id_names_lang): \ck/plenty-client\Model\PropertyGroupName
+restItemsPropertyGroupsIdNamesLangPut($id, $lang, $_rest_items_property_groups_id_names_lang): \ck\Model\PropertyGroupName
 ```
 
 Update a property group name
@@ -14877,10 +14877,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -14888,7 +14888,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $lang = 56; // int
-$_rest_items_property_groups_id_names_lang = new \ck/plenty-client\Model\RestItemsPropertyGroupsIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsPropertyGroupsIdNamesPostRequest
+$_rest_items_property_groups_id_names_lang = new \ck\Model\RestItemsPropertyGroupsIdNamesPostRequest(); // \ck\Model\RestItemsPropertyGroupsIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertyGroupsIdNamesLangPut($id, $lang, $_rest_items_property_groups_id_names_lang);
@@ -14904,11 +14904,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_property_groups_id_names_lang** | [**\ck/plenty-client\Model\RestItemsPropertyGroupsIdNamesPostRequest**](../Model/RestItemsPropertyGroupsIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_property_groups_id_names_lang** | [**\ck\Model\RestItemsPropertyGroupsIdNamesPostRequest**](../Model/RestItemsPropertyGroupsIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyGroupName**](../Model/PropertyGroupName.md)
+[**\ck\Model\PropertyGroupName**](../Model/PropertyGroupName.md)
 
 ### Authorization
 
@@ -14926,7 +14926,7 @@ try {
 ## `restItemsPropertyGroupsIdNamesPost()`
 
 ```php
-restItemsPropertyGroupsIdNamesPost($id, $_rest_items_property_groups_id_names): \ck/plenty-client\Model\PropertyGroupName
+restItemsPropertyGroupsIdNamesPost($id, $_rest_items_property_groups_id_names): \ck\Model\PropertyGroupName
 ```
 
 Create a property group name
@@ -14941,17 +14941,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_property_groups_id_names = new \ck/plenty-client\Model\RestItemsPropertyGroupsIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsPropertyGroupsIdNamesPostRequest
+$_rest_items_property_groups_id_names = new \ck\Model\RestItemsPropertyGroupsIdNamesPostRequest(); // \ck\Model\RestItemsPropertyGroupsIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertyGroupsIdNamesPost($id, $_rest_items_property_groups_id_names);
@@ -14966,11 +14966,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_property_groups_id_names** | [**\ck/plenty-client\Model\RestItemsPropertyGroupsIdNamesPostRequest**](../Model/RestItemsPropertyGroupsIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_property_groups_id_names** | [**\ck\Model\RestItemsPropertyGroupsIdNamesPostRequest**](../Model/RestItemsPropertyGroupsIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyGroupName**](../Model/PropertyGroupName.md)
+[**\ck\Model\PropertyGroupName**](../Model/PropertyGroupName.md)
 
 ### Authorization
 
@@ -14988,7 +14988,7 @@ try {
 ## `restItemsPropertyGroupsIdPut()`
 
 ```php
-restItemsPropertyGroupsIdPut($id, $_rest_items_property_groups_id): \ck/plenty-client\Model\PropertyGroup
+restItemsPropertyGroupsIdPut($id, $_rest_items_property_groups_id): \ck\Model\PropertyGroup
 ```
 
 Update a property group
@@ -15003,17 +15003,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_property_groups_id = new \ck/plenty-client\Model\RestItemsPropertyGroupsPostRequest(); // \ck/plenty-client\Model\RestItemsPropertyGroupsPostRequest
+$_rest_items_property_groups_id = new \ck\Model\RestItemsPropertyGroupsPostRequest(); // \ck\Model\RestItemsPropertyGroupsPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertyGroupsIdPut($id, $_rest_items_property_groups_id);
@@ -15028,11 +15028,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_property_groups_id** | [**\ck/plenty-client\Model\RestItemsPropertyGroupsPostRequest**](../Model/RestItemsPropertyGroupsPostRequest.md)|  | [optional] |
+| **_rest_items_property_groups_id** | [**\ck\Model\RestItemsPropertyGroupsPostRequest**](../Model/RestItemsPropertyGroupsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyGroup**](../Model/PropertyGroup.md)
+[**\ck\Model\PropertyGroup**](../Model/PropertyGroup.md)
 
 ### Authorization
 
@@ -15050,7 +15050,7 @@ try {
 ## `restItemsPropertyGroupsPost()`
 
 ```php
-restItemsPropertyGroupsPost($_rest_items_property_groups): \ck/plenty-client\Model\PropertyGroup
+restItemsPropertyGroupsPost($_rest_items_property_groups): \ck\Model\PropertyGroup
 ```
 
 Create a property group
@@ -15065,16 +15065,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_property_groups = new \ck/plenty-client\Model\RestItemsPropertyGroupsPostRequest(); // \ck/plenty-client\Model\RestItemsPropertyGroupsPostRequest
+$_rest_items_property_groups = new \ck\Model\RestItemsPropertyGroupsPostRequest(); // \ck\Model\RestItemsPropertyGroupsPostRequest
 
 try {
     $result = $apiInstance->restItemsPropertyGroupsPost($_rest_items_property_groups);
@@ -15088,11 +15088,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_property_groups** | [**\ck/plenty-client\Model\RestItemsPropertyGroupsPostRequest**](../Model/RestItemsPropertyGroupsPostRequest.md)|  | [optional] |
+| **_rest_items_property_groups** | [**\ck\Model\RestItemsPropertyGroupsPostRequest**](../Model/RestItemsPropertyGroupsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PropertyGroup**](../Model/PropertyGroup.md)
+[**\ck\Model\PropertyGroup**](../Model/PropertyGroup.md)
 
 ### Authorization
 
@@ -15125,16 +15125,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items = new \ck/plenty-client\Model\RestItemsPutRequest(); // \ck/plenty-client\Model\RestItemsPutRequest
+$_rest_items = new \ck\Model\RestItemsPutRequest(); // \ck\Model\RestItemsPutRequest
 
 try {
     $result = $apiInstance->restItemsPut($_rest_items);
@@ -15148,7 +15148,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items** | [**\ck/plenty-client\Model\RestItemsPutRequest**](../Model/RestItemsPutRequest.md)|  | [optional] |
+| **_rest_items** | [**\ck\Model\RestItemsPutRequest**](../Model/RestItemsPutRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -15170,7 +15170,7 @@ try {
 ## `restItemsSalesPricesGet()`
 
 ```php
-restItemsSalesPricesGet($updated_at): \ck/plenty-client\Model\RestItemsSalesPricesGet200Response
+restItemsSalesPricesGet($updated_at): \ck\Model\RestItemsSalesPricesGet200Response
 ```
 
 List sales prices
@@ -15185,10 +15185,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15212,7 +15212,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsSalesPricesGet200Response**](../Model/RestItemsSalesPricesGet200Response.md)
+[**\ck\Model\RestItemsSalesPricesGet200Response**](../Model/RestItemsSalesPricesGet200Response.md)
 
 ### Authorization
 
@@ -15245,10 +15245,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15294,7 +15294,7 @@ try {
 ## `restItemsSalesPricesIdAccountsGet()`
 
 ```php
-restItemsSalesPricesIdAccountsGet($id): \ck/plenty-client\Model\SalesPriceAccount[]
+restItemsSalesPricesIdAccountsGet($id): \ck\Model\SalesPriceAccount[]
 ```
 
 List referrer accounts
@@ -15309,10 +15309,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15336,7 +15336,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceAccount[]**](../Model/SalesPriceAccount.md)
+[**\ck\Model\SalesPriceAccount[]**](../Model/SalesPriceAccount.md)
 
 ### Authorization
 
@@ -15354,7 +15354,7 @@ try {
 ## `restItemsSalesPricesIdAccountsPost()`
 
 ```php
-restItemsSalesPricesIdAccountsPost($id, $_rest_items_sales_prices_id_accounts): \ck/plenty-client\Model\SalesPriceAccount
+restItemsSalesPricesIdAccountsPost($id, $_rest_items_sales_prices_id_accounts): \ck\Model\SalesPriceAccount
 ```
 
 Activate a referrer account
@@ -15369,17 +15369,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_sales_prices_id_accounts = new \ck/plenty-client\Model\RestItemsSalesPricesIdAccountsPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesIdAccountsPostRequest
+$_rest_items_sales_prices_id_accounts = new \ck\Model\RestItemsSalesPricesIdAccountsPostRequest(); // \ck\Model\RestItemsSalesPricesIdAccountsPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdAccountsPost($id, $_rest_items_sales_prices_id_accounts);
@@ -15394,11 +15394,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_sales_prices_id_accounts** | [**\ck/plenty-client\Model\RestItemsSalesPricesIdAccountsPostRequest**](../Model/RestItemsSalesPricesIdAccountsPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id_accounts** | [**\ck\Model\RestItemsSalesPricesIdAccountsPostRequest**](../Model/RestItemsSalesPricesIdAccountsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceAccount**](../Model/SalesPriceAccount.md)
+[**\ck\Model\SalesPriceAccount**](../Model/SalesPriceAccount.md)
 
 ### Authorization
 
@@ -15431,10 +15431,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15478,7 +15478,7 @@ try {
 ## `restItemsSalesPricesIdCountriesGet()`
 
 ```php
-restItemsSalesPricesIdCountriesGet($id): \ck/plenty-client\Model\SalesPriceCountry[]
+restItemsSalesPricesIdCountriesGet($id): \ck\Model\SalesPriceCountry[]
 ```
 
 List countries by sales price
@@ -15493,10 +15493,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15520,7 +15520,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceCountry[]**](../Model/SalesPriceCountry.md)
+[**\ck\Model\SalesPriceCountry[]**](../Model/SalesPriceCountry.md)
 
 ### Authorization
 
@@ -15538,7 +15538,7 @@ try {
 ## `restItemsSalesPricesIdCountriesPost()`
 
 ```php
-restItemsSalesPricesIdCountriesPost($id, $_rest_items_sales_prices_id_countries): \ck/plenty-client\Model\SalesPriceCountry
+restItemsSalesPricesIdCountriesPost($id, $_rest_items_sales_prices_id_countries): \ck\Model\SalesPriceCountry
 ```
 
 Activate a country
@@ -15553,17 +15553,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_sales_prices_id_countries = new \ck/plenty-client\Model\RestItemsSalesPricesIdCountriesPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesIdCountriesPostRequest
+$_rest_items_sales_prices_id_countries = new \ck\Model\RestItemsSalesPricesIdCountriesPostRequest(); // \ck\Model\RestItemsSalesPricesIdCountriesPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdCountriesPost($id, $_rest_items_sales_prices_id_countries);
@@ -15578,11 +15578,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_sales_prices_id_countries** | [**\ck/plenty-client\Model\RestItemsSalesPricesIdCountriesPostRequest**](../Model/RestItemsSalesPricesIdCountriesPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id_countries** | [**\ck\Model\RestItemsSalesPricesIdCountriesPostRequest**](../Model/RestItemsSalesPricesIdCountriesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceCountry**](../Model/SalesPriceCountry.md)
+[**\ck\Model\SalesPriceCountry**](../Model/SalesPriceCountry.md)
 
 ### Authorization
 
@@ -15615,10 +15615,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15662,7 +15662,7 @@ try {
 ## `restItemsSalesPricesIdCurrenciesGet()`
 
 ```php
-restItemsSalesPricesIdCurrenciesGet($id): \ck/plenty-client\Model\SalesPriceCurrency[]
+restItemsSalesPricesIdCurrenciesGet($id): \ck\Model\SalesPriceCurrency[]
 ```
 
 List activated currencies
@@ -15677,10 +15677,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15704,7 +15704,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceCurrency[]**](../Model/SalesPriceCurrency.md)
+[**\ck\Model\SalesPriceCurrency[]**](../Model/SalesPriceCurrency.md)
 
 ### Authorization
 
@@ -15722,7 +15722,7 @@ try {
 ## `restItemsSalesPricesIdCurrenciesPost()`
 
 ```php
-restItemsSalesPricesIdCurrenciesPost($id, $_rest_items_sales_prices_id_currencies): \ck/plenty-client\Model\SalesPriceCurrency
+restItemsSalesPricesIdCurrenciesPost($id, $_rest_items_sales_prices_id_currencies): \ck\Model\SalesPriceCurrency
 ```
 
 Activate a currency
@@ -15737,17 +15737,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_sales_prices_id_currencies = new \ck/plenty-client\Model\RestItemsSalesPricesIdCurrenciesPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesIdCurrenciesPostRequest
+$_rest_items_sales_prices_id_currencies = new \ck\Model\RestItemsSalesPricesIdCurrenciesPostRequest(); // \ck\Model\RestItemsSalesPricesIdCurrenciesPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdCurrenciesPost($id, $_rest_items_sales_prices_id_currencies);
@@ -15762,11 +15762,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_sales_prices_id_currencies** | [**\ck/plenty-client\Model\RestItemsSalesPricesIdCurrenciesPostRequest**](../Model/RestItemsSalesPricesIdCurrenciesPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id_currencies** | [**\ck\Model\RestItemsSalesPricesIdCurrenciesPostRequest**](../Model/RestItemsSalesPricesIdCurrenciesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceCurrency**](../Model/SalesPriceCurrency.md)
+[**\ck\Model\SalesPriceCurrency**](../Model/SalesPriceCurrency.md)
 
 ### Authorization
 
@@ -15799,10 +15799,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15846,7 +15846,7 @@ try {
 ## `restItemsSalesPricesIdCustomerClassesGet()`
 
 ```php
-restItemsSalesPricesIdCustomerClassesGet($id): \ck/plenty-client\Model\SalesPriceCustomerClass[]
+restItemsSalesPricesIdCustomerClassesGet($id): \ck\Model\SalesPriceCustomerClass[]
 ```
 
 List activated customer classes
@@ -15861,10 +15861,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -15888,7 +15888,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceCustomerClass[]**](../Model/SalesPriceCustomerClass.md)
+[**\ck\Model\SalesPriceCustomerClass[]**](../Model/SalesPriceCustomerClass.md)
 
 ### Authorization
 
@@ -15906,7 +15906,7 @@ try {
 ## `restItemsSalesPricesIdCustomerClassesPost()`
 
 ```php
-restItemsSalesPricesIdCustomerClassesPost($id, $_rest_items_sales_prices_id_customer_classes): \ck/plenty-client\Model\SalesPriceCustomerClass
+restItemsSalesPricesIdCustomerClassesPost($id, $_rest_items_sales_prices_id_customer_classes): \ck\Model\SalesPriceCustomerClass
 ```
 
 Activate a customer class
@@ -15921,17 +15921,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_sales_prices_id_customer_classes = new \ck/plenty-client\Model\RestItemsSalesPricesIdCustomerClassesPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesIdCustomerClassesPostRequest
+$_rest_items_sales_prices_id_customer_classes = new \ck\Model\RestItemsSalesPricesIdCustomerClassesPostRequest(); // \ck\Model\RestItemsSalesPricesIdCustomerClassesPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdCustomerClassesPost($id, $_rest_items_sales_prices_id_customer_classes);
@@ -15946,11 +15946,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_sales_prices_id_customer_classes** | [**\ck/plenty-client\Model\RestItemsSalesPricesIdCustomerClassesPostRequest**](../Model/RestItemsSalesPricesIdCustomerClassesPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id_customer_classes** | [**\ck\Model\RestItemsSalesPricesIdCustomerClassesPostRequest**](../Model/RestItemsSalesPricesIdCustomerClassesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceCustomerClass**](../Model/SalesPriceCustomerClass.md)
+[**\ck\Model\SalesPriceCustomerClass**](../Model/SalesPriceCustomerClass.md)
 
 ### Authorization
 
@@ -15983,10 +15983,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16028,7 +16028,7 @@ try {
 ## `restItemsSalesPricesIdGet()`
 
 ```php
-restItemsSalesPricesIdGet($id): \ck/plenty-client\Model\SalesPrice
+restItemsSalesPricesIdGet($id): \ck\Model\SalesPrice
 ```
 
 Get a sales price
@@ -16043,10 +16043,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16070,7 +16070,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPrice**](../Model/SalesPrice.md)
+[**\ck\Model\SalesPrice**](../Model/SalesPrice.md)
 
 ### Authorization
 
@@ -16088,7 +16088,7 @@ try {
 ## `restItemsSalesPricesIdNamesGet()`
 
 ```php
-restItemsSalesPricesIdNamesGet($id): \ck/plenty-client\Model\SalesPriceName[]
+restItemsSalesPricesIdNamesGet($id): \ck\Model\SalesPriceName[]
 ```
 
 List names of a sales price
@@ -16103,10 +16103,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16130,7 +16130,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceName[]**](../Model/SalesPriceName.md)
+[**\ck\Model\SalesPriceName[]**](../Model/SalesPriceName.md)
 
 ### Authorization
 
@@ -16163,10 +16163,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16210,7 +16210,7 @@ try {
 ## `restItemsSalesPricesIdNamesLangGet()`
 
 ```php
-restItemsSalesPricesIdNamesLangGet($id, $lang): \ck/plenty-client\Model\SalesPriceName
+restItemsSalesPricesIdNamesLangGet($id, $lang): \ck\Model\SalesPriceName
 ```
 
 Gets a sales price name
@@ -16225,10 +16225,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16254,7 +16254,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceName**](../Model/SalesPriceName.md)
+[**\ck\Model\SalesPriceName**](../Model/SalesPriceName.md)
 
 ### Authorization
 
@@ -16272,7 +16272,7 @@ try {
 ## `restItemsSalesPricesIdNamesLangPut()`
 
 ```php
-restItemsSalesPricesIdNamesLangPut($id, $lang, $_rest_items_sales_prices_id_names_lang): \ck/plenty-client\Model\SalesPriceName
+restItemsSalesPricesIdNamesLangPut($id, $lang, $_rest_items_sales_prices_id_names_lang): \ck\Model\SalesPriceName
 ```
 
 Update a sales price name
@@ -16287,10 +16287,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16298,7 +16298,7 @@ $apiInstance = new ck/plenty-client\Api\ItemApi(
 );
 $id = 56; // int
 $lang = 56; // int
-$_rest_items_sales_prices_id_names_lang = new \ck/plenty-client\Model\RestItemsSalesPricesIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesIdNamesPostRequest
+$_rest_items_sales_prices_id_names_lang = new \ck\Model\RestItemsSalesPricesIdNamesPostRequest(); // \ck\Model\RestItemsSalesPricesIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdNamesLangPut($id, $lang, $_rest_items_sales_prices_id_names_lang);
@@ -16314,11 +16314,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **lang** | **int**|  | |
-| **_rest_items_sales_prices_id_names_lang** | [**\ck/plenty-client\Model\RestItemsSalesPricesIdNamesPostRequest**](../Model/RestItemsSalesPricesIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id_names_lang** | [**\ck\Model\RestItemsSalesPricesIdNamesPostRequest**](../Model/RestItemsSalesPricesIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceName**](../Model/SalesPriceName.md)
+[**\ck\Model\SalesPriceName**](../Model/SalesPriceName.md)
 
 ### Authorization
 
@@ -16336,7 +16336,7 @@ try {
 ## `restItemsSalesPricesIdNamesPost()`
 
 ```php
-restItemsSalesPricesIdNamesPost($id, $_rest_items_sales_prices_id_names): \ck/plenty-client\Model\SalesPriceName
+restItemsSalesPricesIdNamesPost($id, $_rest_items_sales_prices_id_names): \ck\Model\SalesPriceName
 ```
 
 Create a sales price name
@@ -16351,17 +16351,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_sales_prices_id_names = new \ck/plenty-client\Model\RestItemsSalesPricesIdNamesPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesIdNamesPostRequest
+$_rest_items_sales_prices_id_names = new \ck\Model\RestItemsSalesPricesIdNamesPostRequest(); // \ck\Model\RestItemsSalesPricesIdNamesPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdNamesPost($id, $_rest_items_sales_prices_id_names);
@@ -16376,11 +16376,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_sales_prices_id_names** | [**\ck/plenty-client\Model\RestItemsSalesPricesIdNamesPostRequest**](../Model/RestItemsSalesPricesIdNamesPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id_names** | [**\ck\Model\RestItemsSalesPricesIdNamesPostRequest**](../Model/RestItemsSalesPricesIdNamesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceName**](../Model/SalesPriceName.md)
+[**\ck\Model\SalesPriceName**](../Model/SalesPriceName.md)
 
 ### Authorization
 
@@ -16398,7 +16398,7 @@ try {
 ## `restItemsSalesPricesIdOnlineStoresGet()`
 
 ```php
-restItemsSalesPricesIdOnlineStoresGet($id): \ck/plenty-client\Model\SalesPriceOnlineStore[]
+restItemsSalesPricesIdOnlineStoresGet($id): \ck\Model\SalesPriceOnlineStore[]
 ```
 
 List activated clients (stores)
@@ -16413,10 +16413,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16440,7 +16440,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceOnlineStore[]**](../Model/SalesPriceOnlineStore.md)
+[**\ck\Model\SalesPriceOnlineStore[]**](../Model/SalesPriceOnlineStore.md)
 
 ### Authorization
 
@@ -16458,7 +16458,7 @@ try {
 ## `restItemsSalesPricesIdOnlineStoresPost()`
 
 ```php
-restItemsSalesPricesIdOnlineStoresPost($id, $_rest_items_sales_prices_id_online_stores): \ck/plenty-client\Model\SalesPriceOnlineStore
+restItemsSalesPricesIdOnlineStoresPost($id, $_rest_items_sales_prices_id_online_stores): \ck\Model\SalesPriceOnlineStore
 ```
 
 Activate a client (store)
@@ -16473,17 +16473,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_sales_prices_id_online_stores = new \ck/plenty-client\Model\RestItemsSalesPricesIdOnlineStoresPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesIdOnlineStoresPostRequest
+$_rest_items_sales_prices_id_online_stores = new \ck\Model\RestItemsSalesPricesIdOnlineStoresPostRequest(); // \ck\Model\RestItemsSalesPricesIdOnlineStoresPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdOnlineStoresPost($id, $_rest_items_sales_prices_id_online_stores);
@@ -16498,11 +16498,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_sales_prices_id_online_stores** | [**\ck/plenty-client\Model\RestItemsSalesPricesIdOnlineStoresPostRequest**](../Model/RestItemsSalesPricesIdOnlineStoresPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id_online_stores** | [**\ck\Model\RestItemsSalesPricesIdOnlineStoresPostRequest**](../Model/RestItemsSalesPricesIdOnlineStoresPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceOnlineStore**](../Model/SalesPriceOnlineStore.md)
+[**\ck\Model\SalesPriceOnlineStore**](../Model/SalesPriceOnlineStore.md)
 
 ### Authorization
 
@@ -16535,10 +16535,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16582,7 +16582,7 @@ try {
 ## `restItemsSalesPricesIdPut()`
 
 ```php
-restItemsSalesPricesIdPut($id, $_rest_items_sales_prices_id): \ck/plenty-client\Model\SalesPrice
+restItemsSalesPricesIdPut($id, $_rest_items_sales_prices_id): \ck\Model\SalesPrice
 ```
 
 Update a sales price
@@ -16597,17 +16597,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_sales_prices_id = new \ck/plenty-client\Model\RestItemsSalesPricesPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesPostRequest
+$_rest_items_sales_prices_id = new \ck\Model\RestItemsSalesPricesPostRequest(); // \ck\Model\RestItemsSalesPricesPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdPut($id, $_rest_items_sales_prices_id);
@@ -16622,11 +16622,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_sales_prices_id** | [**\ck/plenty-client\Model\RestItemsSalesPricesPostRequest**](../Model/RestItemsSalesPricesPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id** | [**\ck\Model\RestItemsSalesPricesPostRequest**](../Model/RestItemsSalesPricesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPrice**](../Model/SalesPrice.md)
+[**\ck\Model\SalesPrice**](../Model/SalesPrice.md)
 
 ### Authorization
 
@@ -16644,7 +16644,7 @@ try {
 ## `restItemsSalesPricesIdReferrersGet()`
 
 ```php
-restItemsSalesPricesIdReferrersGet($id): \ck/plenty-client\Model\SalesPriceReferrer[]
+restItemsSalesPricesIdReferrersGet($id): \ck\Model\SalesPriceReferrer[]
 ```
 
 List activated referrers
@@ -16659,10 +16659,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16686,7 +16686,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceReferrer[]**](../Model/SalesPriceReferrer.md)
+[**\ck\Model\SalesPriceReferrer[]**](../Model/SalesPriceReferrer.md)
 
 ### Authorization
 
@@ -16704,7 +16704,7 @@ try {
 ## `restItemsSalesPricesIdReferrersPost()`
 
 ```php
-restItemsSalesPricesIdReferrersPost($id, $_rest_items_sales_prices_id_referrers): \ck/plenty-client\Model\SalesPriceReferrer
+restItemsSalesPricesIdReferrersPost($id, $_rest_items_sales_prices_id_referrers): \ck\Model\SalesPriceReferrer
 ```
 
 Activate a referrer
@@ -16719,17 +16719,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_sales_prices_id_referrers = new \ck/plenty-client\Model\RestItemsSalesPricesIdReferrersPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesIdReferrersPostRequest
+$_rest_items_sales_prices_id_referrers = new \ck\Model\RestItemsSalesPricesIdReferrersPostRequest(); // \ck\Model\RestItemsSalesPricesIdReferrersPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesIdReferrersPost($id, $_rest_items_sales_prices_id_referrers);
@@ -16744,11 +16744,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_sales_prices_id_referrers** | [**\ck/plenty-client\Model\RestItemsSalesPricesIdReferrersPostRequest**](../Model/RestItemsSalesPricesIdReferrersPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices_id_referrers** | [**\ck\Model\RestItemsSalesPricesIdReferrersPostRequest**](../Model/RestItemsSalesPricesIdReferrersPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPriceReferrer**](../Model/SalesPriceReferrer.md)
+[**\ck\Model\SalesPriceReferrer**](../Model/SalesPriceReferrer.md)
 
 ### Authorization
 
@@ -16781,10 +16781,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16828,7 +16828,7 @@ try {
 ## `restItemsSalesPricesPost()`
 
 ```php
-restItemsSalesPricesPost($_rest_items_sales_prices): \ck/plenty-client\Model\SalesPrice
+restItemsSalesPricesPost($_rest_items_sales_prices): \ck\Model\SalesPrice
 ```
 
 Create a sales price
@@ -16843,16 +16843,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_sales_prices = new \ck/plenty-client\Model\RestItemsSalesPricesPostRequest(); // \ck/plenty-client\Model\RestItemsSalesPricesPostRequest
+$_rest_items_sales_prices = new \ck\Model\RestItemsSalesPricesPostRequest(); // \ck\Model\RestItemsSalesPricesPostRequest
 
 try {
     $result = $apiInstance->restItemsSalesPricesPost($_rest_items_sales_prices);
@@ -16866,11 +16866,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_sales_prices** | [**\ck/plenty-client\Model\RestItemsSalesPricesPostRequest**](../Model/RestItemsSalesPricesPostRequest.md)|  | [optional] |
+| **_rest_items_sales_prices** | [**\ck\Model\RestItemsSalesPricesPostRequest**](../Model/RestItemsSalesPricesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesPrice**](../Model/SalesPrice.md)
+[**\ck\Model\SalesPrice**](../Model/SalesPrice.md)
 
 ### Authorization
 
@@ -16888,7 +16888,7 @@ try {
 ## `restItemsUnitsGet()`
 
 ```php
-restItemsUnitsGet($updated_at): \ck/plenty-client\Model\RestItemsUnitsGet200Response
+restItemsUnitsGet($updated_at): \ck\Model\RestItemsUnitsGet200Response
 ```
 
 List units
@@ -16903,10 +16903,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -16930,7 +16930,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsUnitsGet200Response**](../Model/RestItemsUnitsGet200Response.md)
+[**\ck\Model\RestItemsUnitsGet200Response**](../Model/RestItemsUnitsGet200Response.md)
 
 ### Authorization
 
@@ -16963,10 +16963,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17008,7 +17008,7 @@ try {
 ## `restItemsUnitsIdGet()`
 
 ```php
-restItemsUnitsIdGet($id): \ck/plenty-client\Model\Unit
+restItemsUnitsIdGet($id): \ck\Model\Unit
 ```
 
 Get a unit
@@ -17023,10 +17023,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17050,7 +17050,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Unit**](../Model/Unit.md)
+[**\ck\Model\Unit**](../Model/Unit.md)
 
 ### Authorization
 
@@ -17068,7 +17068,7 @@ try {
 ## `restItemsUnitsIdNamesGet()`
 
 ```php
-restItemsUnitsIdNamesGet($id): \ck/plenty-client\Model\UnitName[]
+restItemsUnitsIdNamesGet($id): \ck\Model\UnitName[]
 ```
 
 List unit names
@@ -17083,10 +17083,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17110,7 +17110,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\UnitName[]**](../Model/UnitName.md)
+[**\ck\Model\UnitName[]**](../Model/UnitName.md)
 
 ### Authorization
 
@@ -17143,10 +17143,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17190,7 +17190,7 @@ try {
 ## `restItemsUnitsIdNamesLangGet()`
 
 ```php
-restItemsUnitsIdNamesLangGet($id, $lang): \ck/plenty-client\Model\UnitName
+restItemsUnitsIdNamesLangGet($id, $lang): \ck\Model\UnitName
 ```
 
 Get a unit name
@@ -17205,10 +17205,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17234,7 +17234,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\UnitName**](../Model/UnitName.md)
+[**\ck\Model\UnitName**](../Model/UnitName.md)
 
 ### Authorization
 
@@ -17252,7 +17252,7 @@ try {
 ## `restItemsUnitsIdNamesLangPut()`
 
 ```php
-restItemsUnitsIdNamesLangPut($id, $lang): \ck/plenty-client\Model\UnitName
+restItemsUnitsIdNamesLangPut($id, $lang): \ck\Model\UnitName
 ```
 
 Update a unit name
@@ -17267,10 +17267,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17296,7 +17296,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\UnitName**](../Model/UnitName.md)
+[**\ck\Model\UnitName**](../Model/UnitName.md)
 
 ### Authorization
 
@@ -17314,7 +17314,7 @@ try {
 ## `restItemsUnitsIdNamesPost()`
 
 ```php
-restItemsUnitsIdNamesPost($id): \ck/plenty-client\Model\UnitName
+restItemsUnitsIdNamesPost($id): \ck\Model\UnitName
 ```
 
 Create a unit name
@@ -17329,10 +17329,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17356,7 +17356,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\UnitName**](../Model/UnitName.md)
+[**\ck\Model\UnitName**](../Model/UnitName.md)
 
 ### Authorization
 
@@ -17374,7 +17374,7 @@ try {
 ## `restItemsUnitsIdPut()`
 
 ```php
-restItemsUnitsIdPut($id, $_rest_items_units_id): \ck/plenty-client\Model\Unit
+restItemsUnitsIdPut($id, $_rest_items_units_id): \ck\Model\Unit
 ```
 
 Update a unit
@@ -17389,17 +17389,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_items_units_id = new \ck/plenty-client\Model\RestItemsUnitsPostRequest(); // \ck/plenty-client\Model\RestItemsUnitsPostRequest
+$_rest_items_units_id = new \ck\Model\RestItemsUnitsPostRequest(); // \ck\Model\RestItemsUnitsPostRequest
 
 try {
     $result = $apiInstance->restItemsUnitsIdPut($id, $_rest_items_units_id);
@@ -17414,11 +17414,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_items_units_id** | [**\ck/plenty-client\Model\RestItemsUnitsPostRequest**](../Model/RestItemsUnitsPostRequest.md)|  | [optional] |
+| **_rest_items_units_id** | [**\ck\Model\RestItemsUnitsPostRequest**](../Model/RestItemsUnitsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Unit**](../Model/Unit.md)
+[**\ck\Model\Unit**](../Model/Unit.md)
 
 ### Authorization
 
@@ -17436,7 +17436,7 @@ try {
 ## `restItemsUnitsPost()`
 
 ```php
-restItemsUnitsPost($_rest_items_units): \ck/plenty-client\Model\Unit
+restItemsUnitsPost($_rest_items_units): \ck\Model\Unit
 ```
 
 Create a unit
@@ -17451,16 +17451,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_units = new \ck/plenty-client\Model\RestItemsUnitsPostRequest(); // \ck/plenty-client\Model\RestItemsUnitsPostRequest
+$_rest_items_units = new \ck\Model\RestItemsUnitsPostRequest(); // \ck\Model\RestItemsUnitsPostRequest
 
 try {
     $result = $apiInstance->restItemsUnitsPost($_rest_items_units);
@@ -17474,11 +17474,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_units** | [**\ck/plenty-client\Model\RestItemsUnitsPostRequest**](../Model/RestItemsUnitsPostRequest.md)|  | [optional] |
+| **_rest_items_units** | [**\ck\Model\RestItemsUnitsPostRequest**](../Model/RestItemsUnitsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Unit**](../Model/Unit.md)
+[**\ck\Model\Unit**](../Model/Unit.md)
 
 ### Authorization
 
@@ -17496,7 +17496,7 @@ try {
 ## `restItemsVariationsGet()`
 
 ```php
-restItemsVariationsGet($with, $lang, $page, $items_per_page, $id, $item_id, $variation_tag_id, $item_name, $flag_one, $flag_two, $store_special, $category_id, $is_main, $is_active, $barcode, $number_exact, $number_fuzzy, $is_bundle, $plenty_id, $referrer_id, $supplier_number, $sku, $manufacturer_id, $updated_between, $created_between, $related_updated_between, $item_description, $stock_warehouse_id, $supplier_id): \ck/plenty-client\Model\RestItemsVariationsGet200Response
+restItemsVariationsGet($with, $lang, $page, $items_per_page, $id, $item_id, $variation_tag_id, $item_name, $flag_one, $flag_two, $store_special, $category_id, $is_main, $is_active, $barcode, $number_exact, $number_fuzzy, $is_bundle, $plenty_id, $referrer_id, $supplier_number, $sku, $manufacturer_id, $updated_between, $created_between, $related_updated_between, $item_description, $stock_warehouse_id, $supplier_id): \ck\Model\RestItemsVariationsGet200Response
 ```
 
 Search variations
@@ -17511,10 +17511,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17594,7 +17594,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsVariationsGet200Response**](../Model/RestItemsVariationsGet200Response.md)
+[**\ck\Model\RestItemsVariationsGet200Response**](../Model/RestItemsVariationsGet200Response.md)
 
 ### Authorization
 
@@ -17627,16 +17627,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_variations = new \ck/plenty-client\Model\RestItemsVariationsPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsPutRequest
+$_rest_items_variations = new \ck\Model\RestItemsVariationsPutRequest(); // \ck\Model\RestItemsVariationsPutRequest
 
 try {
     $result = $apiInstance->restItemsVariationsPut($_rest_items_variations);
@@ -17650,7 +17650,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_variations** | [**\ck/plenty-client\Model\RestItemsVariationsPutRequest**](../Model/RestItemsVariationsPutRequest.md)|  | [optional] |
+| **_rest_items_variations** | [**\ck\Model\RestItemsVariationsPutRequest**](../Model/RestItemsVariationsPutRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -17687,16 +17687,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_variations_variation_categories = new \ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest
+$_rest_items_variations_variation_categories = new \ck\Model\RestItemsVariationsVariationCategoriesPutRequest(); // \ck\Model\RestItemsVariationsVariationCategoriesPutRequest
 
 try {
     $result = $apiInstance->restItemsVariationsVariationCategoriesPost($_rest_items_variations_variation_categories);
@@ -17710,7 +17710,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_variations_variation_categories** | [**\ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest**](../Model/RestItemsVariationsVariationCategoriesPutRequest.md)|  | [optional] |
+| **_rest_items_variations_variation_categories** | [**\ck\Model\RestItemsVariationsVariationCategoriesPutRequest**](../Model/RestItemsVariationsVariationCategoriesPutRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -17747,16 +17747,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_variations_variation_categories = new \ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest
+$_rest_items_variations_variation_categories = new \ck\Model\RestItemsVariationsVariationCategoriesPutRequest(); // \ck\Model\RestItemsVariationsVariationCategoriesPutRequest
 
 try {
     $result = $apiInstance->restItemsVariationsVariationCategoriesPut($_rest_items_variations_variation_categories);
@@ -17770,7 +17770,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_variations_variation_categories** | [**\ck/plenty-client\Model\RestItemsVariationsVariationCategoriesPutRequest**](../Model/RestItemsVariationsVariationCategoriesPutRequest.md)|  | [optional] |
+| **_rest_items_variations_variation_categories** | [**\ck\Model\RestItemsVariationsVariationCategoriesPutRequest**](../Model/RestItemsVariationsVariationCategoriesPutRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -17792,7 +17792,7 @@ try {
 ## `restItemsVariationsVariationMarketsGet()`
 
 ```php
-restItemsVariationsVariationMarketsGet(): \ck/plenty-client\Model\RestItemsVariationsVariationMarketsGet200Response
+restItemsVariationsVariationMarketsGet(): \ck\Model\RestItemsVariationsVariationMarketsGet200Response
 ```
 
 List all links between variations and markets
@@ -17807,10 +17807,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -17831,7 +17831,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsVariationsVariationMarketsGet200Response**](../Model/RestItemsVariationsVariationMarketsGet200Response.md)
+[**\ck\Model\RestItemsVariationsVariationMarketsGet200Response**](../Model/RestItemsVariationsVariationMarketsGet200Response.md)
 
 ### Authorization
 
@@ -17864,16 +17864,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_variations_variation_markets = new \ck/plenty-client\Model\RestItemsVariationsVariationMarketsPostRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationMarketsPostRequest
+$_rest_items_variations_variation_markets = new \ck\Model\RestItemsVariationsVariationMarketsPostRequest(); // \ck\Model\RestItemsVariationsVariationMarketsPostRequest
 
 try {
     $result = $apiInstance->restItemsVariationsVariationMarketsPost($_rest_items_variations_variation_markets);
@@ -17887,7 +17887,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_variations_variation_markets** | [**\ck/plenty-client\Model\RestItemsVariationsVariationMarketsPostRequest**](../Model/RestItemsVariationsVariationMarketsPostRequest.md)|  | [optional] |
+| **_rest_items_variations_variation_markets** | [**\ck\Model\RestItemsVariationsVariationMarketsPostRequest**](../Model/RestItemsVariationsVariationMarketsPostRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -17924,16 +17924,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_variations_variation_properties = new \ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest
+$_rest_items_variations_variation_properties = new \ck\Model\RestItemsVariationsVariationPropertiesPutRequest(); // \ck\Model\RestItemsVariationsVariationPropertiesPutRequest
 
 try {
     $result = $apiInstance->restItemsVariationsVariationPropertiesPost($_rest_items_variations_variation_properties);
@@ -17947,7 +17947,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_variations_variation_properties** | [**\ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest**](../Model/RestItemsVariationsVariationPropertiesPutRequest.md)|  | [optional] |
+| **_rest_items_variations_variation_properties** | [**\ck\Model\RestItemsVariationsVariationPropertiesPutRequest**](../Model/RestItemsVariationsVariationPropertiesPutRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -17984,16 +17984,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_variations_variation_properties = new \ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest
+$_rest_items_variations_variation_properties = new \ck\Model\RestItemsVariationsVariationPropertiesPutRequest(); // \ck\Model\RestItemsVariationsVariationPropertiesPutRequest
 
 try {
     $result = $apiInstance->restItemsVariationsVariationPropertiesPut($_rest_items_variations_variation_properties);
@@ -18007,7 +18007,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_variations_variation_properties** | [**\ck/plenty-client\Model\RestItemsVariationsVariationPropertiesPutRequest**](../Model/RestItemsVariationsVariationPropertiesPutRequest.md)|  | [optional] |
+| **_rest_items_variations_variation_properties** | [**\ck\Model\RestItemsVariationsVariationPropertiesPutRequest**](../Model/RestItemsVariationsVariationPropertiesPutRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -18029,7 +18029,7 @@ try {
 ## `restItemsVariationsVariationSalesPricesGet()`
 
 ```php
-restItemsVariationsVariationSalesPricesGet($variation_id, $sales_price_id, $updated_at): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restItemsVariationsVariationSalesPricesGet($variation_id, $sales_price_id, $updated_at): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 Get all sales price relations
@@ -18044,10 +18044,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -18075,7 +18075,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 
@@ -18108,16 +18108,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_variations_variation_sales_prices = new \ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest
+$_rest_items_variations_variation_sales_prices = new \ck\Model\RestItemsVariationsVariationSalesPricesPutRequest(); // \ck\Model\RestItemsVariationsVariationSalesPricesPutRequest
 
 try {
     $result = $apiInstance->restItemsVariationsVariationSalesPricesPost($_rest_items_variations_variation_sales_prices);
@@ -18131,7 +18131,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_variations_variation_sales_prices** | [**\ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest**](../Model/RestItemsVariationsVariationSalesPricesPutRequest.md)|  | [optional] |
+| **_rest_items_variations_variation_sales_prices** | [**\ck\Model\RestItemsVariationsVariationSalesPricesPutRequest**](../Model/RestItemsVariationsVariationSalesPricesPutRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -18168,16 +18168,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ItemApi(
+$apiInstance = new ck\Api\ItemApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_items_variations_variation_sales_prices = new \ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest(); // \ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest
+$_rest_items_variations_variation_sales_prices = new \ck\Model\RestItemsVariationsVariationSalesPricesPutRequest(); // \ck\Model\RestItemsVariationsVariationSalesPricesPutRequest
 
 try {
     $result = $apiInstance->restItemsVariationsVariationSalesPricesPut($_rest_items_variations_variation_sales_prices);
@@ -18191,7 +18191,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_items_variations_variation_sales_prices** | [**\ck/plenty-client\Model\RestItemsVariationsVariationSalesPricesPutRequest**](../Model/RestItemsVariationsVariationSalesPricesPutRequest.md)|  | [optional] |
+| **_rest_items_variations_variation_sales_prices** | [**\ck\Model\RestItemsVariationsVariationSalesPricesPutRequest**](../Model/RestItemsVariationsVariationSalesPricesPutRequest.md)|  | [optional] |
 
 ### Return type
 

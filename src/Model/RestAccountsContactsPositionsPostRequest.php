@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestAccountsContactsPositionsPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RestAccountsContactsPositionsPostRequest implements ModelInterface, ArrayA
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'names' => '\ck/plenty-client\Model\ContactPositionName[]',
+        'names' => '\ck\Model\ContactPositionName[]',
         'name' => 'string',
         'lang' => 'string'
     ];
@@ -313,7 +313,7 @@ class RestAccountsContactsPositionsPostRequest implements ModelInterface, ArrayA
     /**
      * Gets names
      *
-     * @return \ck/plenty-client\Model\ContactPositionName[]
+     * @return \ck\Model\ContactPositionName[]
      */
     public function getNames(): array
     {
@@ -323,7 +323,7 @@ class RestAccountsContactsPositionsPostRequest implements ModelInterface, ArrayA
     /**
      * Sets names
      *
-     * @param \ck/plenty-client\Model\ContactPositionName[] $names names
+     * @param \ck\Model\ContactPositionName[] $names names
      *
      * @return $this
      */

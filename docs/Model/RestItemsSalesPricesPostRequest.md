@@ -11,20 +11,20 @@ Name | Type | Description | Notes
 **is_displayed_by_default** | **bool** | Flag that indicates if the sales price is displayed automatically in the Sales Prices area of the plentymarkets backend when a new item is created. When false, the sales price can still be added manually when a new item is created. |
 **is_live_conversion** | **bool** | Flag that indicates if the sales price is converted live in the online store. When true, the default currency price will be converted into the active currencies based on the conversion rates saved in plentymarkets. |
 **interval** | **string** | The interval of the price. Possible values are: daily, weekly, monthly, quarterly, semi-annual and annual. optional allowed values are none, daily, weekly, monthly, quarterly, semi-annual, annual | [optional]
-**names** | [**\ck/plenty-client\Model\SalesPriceName[]**](SalesPriceName.md) |  |
+**names** | [**\ck\Model\SalesPriceName[]**](SalesPriceName.md) |  |
 **lang** | **string** | The language code of the sales price name |
 **name_internal** | **string** | The internal name of the sales price. The internal name is used in the plentymarkets back end only. |
 **name_external** | **string** | The external name of the sales price. The external name is displayed in the online store and as such is visible for customers. |
-**countries** | [**\ck/plenty-client\Model\SalesPriceCountry[]**](SalesPriceCountry.md) |  |
+**countries** | [**\ck\Model\SalesPriceCountry[]**](SalesPriceCountry.md) |  |
 **country_id** | **int** | The unique ID of the country |
-**currencies** | [**\ck/plenty-client\Model\SalesPriceCurrency[]**](SalesPriceCurrency.md) |  |
+**currencies** | [**\ck\Model\SalesPriceCurrency[]**](SalesPriceCurrency.md) |  |
 **currency** | **string** | The ISO code of the currency; -1 &#x3D; all currencies. |
-**customer_classes** | [**\ck/plenty-client\Model\SalesPriceCustomerClass[]**](SalesPriceCustomerClass.md) |  |
-**referrers** | [**\ck/plenty-client\Model\SalesPriceReferrer[]**](SalesPriceReferrer.md) |  |
+**customer_classes** | [**\ck\Model\SalesPriceCustomerClass[]**](SalesPriceCustomerClass.md) |  |
+**referrers** | [**\ck\Model\SalesPriceReferrer[]**](SalesPriceReferrer.md) |  |
 **referrer_id** | **int** | The ID of the referrer linked to the sales price |
-**clients** | [**\ck/plenty-client\Model\SalesPriceOnlineStore[]**](SalesPriceOnlineStore.md) |  |
+**clients** | [**\ck\Model\SalesPriceOnlineStore[]**](SalesPriceOnlineStore.md) |  |
 **plenty_id** | **int** | The unique ID of the client (store) |
-**accounts** | [**\ck/plenty-client\Model\SalesPriceAccount[]**](SalesPriceAccount.md) |  | [optional]
+**accounts** | [**\ck\Model\SalesPriceAccount[]**](SalesPriceAccount.md) |  | [optional]
 **account_id** | **int** | The ID of the referrer account linked to the sales price |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

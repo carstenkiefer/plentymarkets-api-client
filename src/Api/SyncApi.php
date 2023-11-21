@@ -3,7 +3,7 @@
  * SyncApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * SyncApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -144,12 +144,12 @@ class SyncApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageObject
+     * @return \ck\Model\StorageObject
      */
     public function restElasticSyncDocumentGet(
         string $key,
         string $contentType = self::contentTypes['restElasticSyncDocumentGet'][0]
-    ): \ck/plenty-client\Model\StorageObject
+    ): \ck\Model\StorageObject
     {
         list($response) = $this->restElasticSyncDocumentGetWithHttpInfo($key, $contentType);
         return $response;
@@ -165,7 +165,7 @@ class SyncApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncDocumentGetWithHttpInfo(
         string $key,
@@ -211,23 +211,23 @@ class SyncApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageObject' === '\SplFileObject') {
+                    if ('\ck\Model\StorageObject' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageObject' !== 'string') {
+                        if ('\ck\Model\StorageObject' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageObject', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageObject', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageObject';
+            $returnType = '\ck\Model\StorageObject';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -248,7 +248,7 @@ class SyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageObject',
+                        '\ck\Model\StorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -298,7 +298,7 @@ class SyncApi
         string $contentType = self::contentTypes['restElasticSyncDocumentGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageObject';
+        $returnType = '\ck\Model\StorageObject';
         $request = $this->restElasticSyncDocumentGetRequest($key, $contentType);
 
         return $this->client
@@ -447,12 +447,12 @@ class SyncApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageObject
+     * @return \ck\Model\StorageObject
      */
     public function restElasticSyncDocumentPost(
         string $key,
         string $contentType = self::contentTypes['restElasticSyncDocumentPost'][0]
-    ): \ck/plenty-client\Model\StorageObject
+    ): \ck\Model\StorageObject
     {
         list($response) = $this->restElasticSyncDocumentPostWithHttpInfo($key, $contentType);
         return $response;
@@ -468,7 +468,7 @@ class SyncApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncDocumentPostWithHttpInfo(
         string $key,
@@ -514,23 +514,23 @@ class SyncApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageObject' === '\SplFileObject') {
+                    if ('\ck\Model\StorageObject' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageObject' !== 'string') {
+                        if ('\ck\Model\StorageObject' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageObject', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageObject', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageObject';
+            $returnType = '\ck\Model\StorageObject';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -551,7 +551,7 @@ class SyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageObject',
+                        '\ck\Model\StorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -601,7 +601,7 @@ class SyncApi
         string $contentType = self::contentTypes['restElasticSyncDocumentPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageObject';
+        $returnType = '\ck\Model\StorageObject';
         $request = $this->restElasticSyncDocumentPostRequest($key, $contentType);
 
         return $this->client
@@ -1356,12 +1356,12 @@ class SyncApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageObjectList
+     * @return \ck\Model\StorageObjectList
      */
     public function restElasticSyncDocumentsGet(
         ?string $continuation_token = null,
         string $contentType = self::contentTypes['restElasticSyncDocumentsGet'][0]
-    ): \ck/plenty-client\Model\StorageObjectList
+    ): \ck\Model\StorageObjectList
     {
         list($response) = $this->restElasticSyncDocumentsGetWithHttpInfo($continuation_token, $contentType);
         return $response;
@@ -1377,7 +1377,7 @@ class SyncApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageObjectList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageObjectList, HTTP status code, HTTP response headers (array of strings)
      */
     public function restElasticSyncDocumentsGetWithHttpInfo(
         ?string $continuation_token = null,
@@ -1423,23 +1423,23 @@ class SyncApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageObjectList' === '\SplFileObject') {
+                    if ('\ck\Model\StorageObjectList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageObjectList' !== 'string') {
+                        if ('\ck\Model\StorageObjectList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageObjectList', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageObjectList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageObjectList';
+            $returnType = '\ck\Model\StorageObjectList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1460,7 +1460,7 @@ class SyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageObjectList',
+                        '\ck\Model\StorageObjectList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1510,7 +1510,7 @@ class SyncApi
         string $contentType = self::contentTypes['restElasticSyncDocumentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageObjectList';
+        $returnType = '\ck\Model\StorageObjectList';
         $request = $this->restElasticSyncDocumentsGetRequest($continuation_token, $contentType);
 
         return $this->client

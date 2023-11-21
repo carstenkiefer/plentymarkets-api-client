@@ -3,7 +3,7 @@
  * CategoryApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * CategoryApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -180,7 +180,7 @@ class CategoryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestCategoriesGet200Response
+     * @return \ck\Model\RestCategoriesGet200Response
      */
     public function restCategoriesGet(
         ?int $page = null,
@@ -197,7 +197,7 @@ class CategoryApi
         ?int $tag_id = null,
         ?string $meta_keywords = null,
         string $contentType = self::contentTypes['restCategoriesGet'][0]
-    ): \ck/plenty-client\Model\RestCategoriesGet200Response
+    ): \ck\Model\RestCategoriesGet200Response
     {
         list($response) = $this->restCategoriesGetWithHttpInfo($page, $items_per_page, $with, $lang, $type, $parent_id, $plenty_id, $name, $level, $linklist, $updated_at, $tag_id, $meta_keywords, $contentType);
         return $response;
@@ -225,7 +225,7 @@ class CategoryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestCategoriesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestCategoriesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesGetWithHttpInfo(
         ?int $page = null,
@@ -283,23 +283,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestCategoriesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestCategoriesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestCategoriesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestCategoriesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestCategoriesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestCategoriesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestCategoriesGet200Response';
+            $returnType = '\ck\Model\RestCategoriesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -320,7 +320,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestCategoriesGet200Response',
+                        '\ck\Model\RestCategoriesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -418,7 +418,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoriesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestCategoriesGet200Response';
+        $returnType = '\ck\Model\RestCategoriesGet200Response';
         $request = $this->restCategoriesGetRequest($page, $items_per_page, $with, $lang, $type, $parent_id, $plenty_id, $name, $level, $linklist, $updated_at, $tag_id, $meta_keywords, $contentType);
 
         return $this->client
@@ -1305,7 +1305,7 @@ class CategoryApi
      * Delete category details for the specified languages
      *
      * @param  int $id id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details _rest_categories_id_details (optional)
+     * @param  \ck\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details _rest_categories_id_details (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdDetailsDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -1314,7 +1314,7 @@ class CategoryApi
      */
     public function restCategoriesIdDetailsDelete(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest $_rest_categories_id_details = null,
+        ?\ck\Model\RestCategoriesIdDetailsDeleteRequest $_rest_categories_id_details = null,
         string $contentType = self::contentTypes['restCategoriesIdDetailsDelete'][0]
     ): object
     {
@@ -1328,7 +1328,7 @@ class CategoryApi
      * Delete category details for the specified languages
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details (optional)
+     * @param  \ck\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdDetailsDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -1337,7 +1337,7 @@ class CategoryApi
      */
     public function restCategoriesIdDetailsDeleteWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest $_rest_categories_id_details = null,
+        ?\ck\Model\RestCategoriesIdDetailsDeleteRequest $_rest_categories_id_details = null,
         string $contentType = self::contentTypes['restCategoriesIdDetailsDelete'][0]
     ): array
     {
@@ -1433,7 +1433,7 @@ class CategoryApi
      * Delete category details for the specified languages
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details (optional)
+     * @param  \ck\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdDetailsDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1441,7 +1441,7 @@ class CategoryApi
      */
     public function restCategoriesIdDetailsDeleteAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest $_rest_categories_id_details = null,
+        ?\ck\Model\RestCategoriesIdDetailsDeleteRequest $_rest_categories_id_details = null,
         string $contentType = self::contentTypes['restCategoriesIdDetailsDelete'][0]
     ): PromiseInterface
     {
@@ -1459,7 +1459,7 @@ class CategoryApi
      * Delete category details for the specified languages
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details (optional)
+     * @param  \ck\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdDetailsDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1514,7 +1514,7 @@ class CategoryApi
      * Create request for operation 'restCategoriesIdDetailsDelete'
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details (optional)
+     * @param  \ck\Model\RestCategoriesIdDetailsDeleteRequest|null $_rest_categories_id_details (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdDetailsDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1640,7 +1640,7 @@ class CategoryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestCategoriesGet200Response
+     * @return \ck\Model\RestCategoriesGet200Response
      */
     public function restCategoriesIdGet(
         int $id,
@@ -1656,7 +1656,7 @@ class CategoryApi
         ?bool $linklist = null,
         ?string $updated_at = null,
         string $contentType = self::contentTypes['restCategoriesIdGet'][0]
-    ): \ck/plenty-client\Model\RestCategoriesGet200Response
+    ): \ck\Model\RestCategoriesGet200Response
     {
         list($response) = $this->restCategoriesIdGetWithHttpInfo($id, $page, $items_per_page, $with, $lang, $type, $parent_id, $plenty_id, $name, $level, $linklist, $updated_at, $contentType);
         return $response;
@@ -1683,7 +1683,7 @@ class CategoryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestCategoriesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestCategoriesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdGetWithHttpInfo(
         int $id,
@@ -1740,23 +1740,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestCategoriesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestCategoriesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestCategoriesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestCategoriesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestCategoriesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestCategoriesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestCategoriesGet200Response';
+            $returnType = '\ck\Model\RestCategoriesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1777,7 +1777,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestCategoriesGet200Response',
+                        '\ck\Model\RestCategoriesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1871,7 +1871,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoriesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestCategoriesGet200Response';
+        $returnType = '\ck\Model\RestCategoriesGet200Response';
         $request = $this->restCategoriesIdGetRequest($id, $page, $items_per_page, $with, $lang, $type, $parent_id, $plenty_id, $name, $level, $linklist, $updated_at, $contentType);
 
         return $this->client
@@ -2147,18 +2147,18 @@ class CategoryApi
      * Updates one category
      *
      * @param  int $id id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories_id _rest_categories_id (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories_id _rest_categories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Category
+     * @return \ck\Model\Category
      */
     public function restCategoriesIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesPutRequest $_rest_categories_id = null,
+        ?\ck\Model\RestCategoriesPutRequest $_rest_categories_id = null,
         string $contentType = self::contentTypes['restCategoriesIdPut'][0]
-    ): \ck/plenty-client\Model\Category
+    ): \ck\Model\Category
     {
         list($response) = $this->restCategoriesIdPutWithHttpInfo($id, $_rest_categories_id, $contentType);
         return $response;
@@ -2170,16 +2170,16 @@ class CategoryApi
      * Updates one category
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories_id (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Category, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Category, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesPutRequest $_rest_categories_id = null,
+        ?\ck\Model\RestCategoriesPutRequest $_rest_categories_id = null,
         string $contentType = self::contentTypes['restCategoriesIdPut'][0]
     ): array
     {
@@ -2222,23 +2222,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Category' === '\SplFileObject') {
+                    if ('\ck\Model\Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Category' !== 'string') {
+                        if ('\ck\Model\Category' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Category', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Category';
+            $returnType = '\ck\Model\Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2259,7 +2259,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Category',
+                        '\ck\Model\Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2275,7 +2275,7 @@ class CategoryApi
      * Updates one category
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories_id (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2283,7 +2283,7 @@ class CategoryApi
      */
     public function restCategoriesIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesPutRequest $_rest_categories_id = null,
+        ?\ck\Model\RestCategoriesPutRequest $_rest_categories_id = null,
         string $contentType = self::contentTypes['restCategoriesIdPut'][0]
     ): PromiseInterface
     {
@@ -2301,7 +2301,7 @@ class CategoryApi
      * Updates one category
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories_id (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2313,7 +2313,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoriesIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Category';
+        $returnType = '\ck\Model\Category';
         $request = $this->restCategoriesIdPutRequest($id, $_rest_categories_id, $contentType);
 
         return $this->client
@@ -2356,7 +2356,7 @@ class CategoryApi
      * Create request for operation 'restCategoriesIdPut'
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories_id (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2467,18 +2467,18 @@ class CategoryApi
      * Delete a category template
      *
      * @param  int $id id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates _rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates _rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CategoryTemplate
+     * @return \ck\Model\CategoryTemplate
      */
     public function restCategoriesIdTemplatesDelete(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesDelete'][0]
-    ): \ck/plenty-client\Model\CategoryTemplate
+    ): \ck\Model\CategoryTemplate
     {
         list($response) = $this->restCategoriesIdTemplatesDeleteWithHttpInfo($id, $_rest_categories_id_templates, $contentType);
         return $response;
@@ -2490,16 +2490,16 @@ class CategoryApi
      * Delete a category template
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CategoryTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CategoryTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdTemplatesDeleteWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesDelete'][0]
     ): array
     {
@@ -2542,23 +2542,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CategoryTemplate' === '\SplFileObject') {
+                    if ('\ck\Model\CategoryTemplate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CategoryTemplate' !== 'string') {
+                        if ('\ck\Model\CategoryTemplate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CategoryTemplate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CategoryTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CategoryTemplate';
+            $returnType = '\ck\Model\CategoryTemplate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2579,7 +2579,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CategoryTemplate',
+                        '\ck\Model\CategoryTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2595,7 +2595,7 @@ class CategoryApi
      * Delete a category template
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2603,7 +2603,7 @@ class CategoryApi
      */
     public function restCategoriesIdTemplatesDeleteAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesDelete'][0]
     ): PromiseInterface
     {
@@ -2621,7 +2621,7 @@ class CategoryApi
      * Delete a category template
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2633,7 +2633,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoriesIdTemplatesDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CategoryTemplate';
+        $returnType = '\ck\Model\CategoryTemplate';
         $request = $this->restCategoriesIdTemplatesDeleteRequest($id, $_rest_categories_id_templates, $contentType);
 
         return $this->client
@@ -2676,7 +2676,7 @@ class CategoryApi
      * Create request for operation 'restCategoriesIdTemplatesDelete'
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2789,20 +2789,20 @@ class CategoryApi
      * @param  int $plenty_id The unique plenty ID of the client (store) (required)
      * @param  int $id id (required)
      * @param  string|null $lang The &lt;a href&#x3D;&#39;https://developers.plentymarkets.com/rest-doc/introduction#countries&#39; target&#x3D;&#39;_blank&#39;&gt;language&lt;/a&gt; of the template. If no language filter is set, the default language of the system is used. (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates _rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates _rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesGet'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CategoryTemplate
+     * @return \ck\Model\CategoryTemplate
      */
     public function restCategoriesIdTemplatesGet(
         int $plenty_id,
         int $id,
         ?string $lang = null,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesGet'][0]
-    ): \ck/plenty-client\Model\CategoryTemplate
+    ): \ck\Model\CategoryTemplate
     {
         list($response) = $this->restCategoriesIdTemplatesGetWithHttpInfo($plenty_id, $id, $lang, $_rest_categories_id_templates, $contentType);
         return $response;
@@ -2816,18 +2816,18 @@ class CategoryApi
      * @param  int $plenty_id The unique plenty ID of the client (store) (required)
      * @param  int $id (required)
      * @param  string|null $lang The &lt;a href&#x3D;&#39;https://developers.plentymarkets.com/rest-doc/introduction#countries&#39; target&#x3D;&#39;_blank&#39;&gt;language&lt;/a&gt; of the template. If no language filter is set, the default language of the system is used. (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesGet'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CategoryTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CategoryTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdTemplatesGetWithHttpInfo(
         int $plenty_id,
         int $id,
         ?string $lang = null,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesGet'][0]
     ): array
     {
@@ -2870,23 +2870,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CategoryTemplate' === '\SplFileObject') {
+                    if ('\ck\Model\CategoryTemplate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CategoryTemplate' !== 'string') {
+                        if ('\ck\Model\CategoryTemplate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CategoryTemplate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CategoryTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CategoryTemplate';
+            $returnType = '\ck\Model\CategoryTemplate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2907,7 +2907,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CategoryTemplate',
+                        '\ck\Model\CategoryTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2925,7 +2925,7 @@ class CategoryApi
      * @param  int $plenty_id The unique plenty ID of the client (store) (required)
      * @param  int $id (required)
      * @param  string|null $lang The &lt;a href&#x3D;&#39;https://developers.plentymarkets.com/rest-doc/introduction#countries&#39; target&#x3D;&#39;_blank&#39;&gt;language&lt;/a&gt; of the template. If no language filter is set, the default language of the system is used. (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2935,7 +2935,7 @@ class CategoryApi
         int $plenty_id,
         int $id,
         ?string $lang = null,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesGetRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesGet'][0]
     ): PromiseInterface
     {
@@ -2955,7 +2955,7 @@ class CategoryApi
      * @param  int $plenty_id The unique plenty ID of the client (store) (required)
      * @param  int $id (required)
      * @param  string|null $lang The &lt;a href&#x3D;&#39;https://developers.plentymarkets.com/rest-doc/introduction#countries&#39; target&#x3D;&#39;_blank&#39;&gt;language&lt;/a&gt; of the template. If no language filter is set, the default language of the system is used. (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2969,7 +2969,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoriesIdTemplatesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CategoryTemplate';
+        $returnType = '\ck\Model\CategoryTemplate';
         $request = $this->restCategoriesIdTemplatesGetRequest($plenty_id, $id, $lang, $_rest_categories_id_templates, $contentType);
 
         return $this->client
@@ -3014,7 +3014,7 @@ class CategoryApi
      * @param  int $plenty_id The unique plenty ID of the client (store) (required)
      * @param  int $id (required)
      * @param  string|null $lang The &lt;a href&#x3D;&#39;https://developers.plentymarkets.com/rest-doc/introduction#countries&#39; target&#x3D;&#39;_blank&#39;&gt;language&lt;/a&gt; of the template. If no language filter is set, the default language of the system is used. (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesGetRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3153,18 +3153,18 @@ class CategoryApi
      * Update a category template
      *
      * @param  int $id id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates _rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates _rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CategoryTemplate
+     * @return \ck\Model\CategoryTemplate
      */
     public function restCategoriesIdTemplatesPut(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesPutRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesPut'][0]
-    ): \ck/plenty-client\Model\CategoryTemplate
+    ): \ck\Model\CategoryTemplate
     {
         list($response) = $this->restCategoriesIdTemplatesPutWithHttpInfo($id, $_rest_categories_id_templates, $contentType);
         return $response;
@@ -3176,16 +3176,16 @@ class CategoryApi
      * Update a category template
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CategoryTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CategoryTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesIdTemplatesPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesPutRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesPut'][0]
     ): array
     {
@@ -3228,23 +3228,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CategoryTemplate' === '\SplFileObject') {
+                    if ('\ck\Model\CategoryTemplate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CategoryTemplate' !== 'string') {
+                        if ('\ck\Model\CategoryTemplate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CategoryTemplate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CategoryTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CategoryTemplate';
+            $returnType = '\ck\Model\CategoryTemplate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3265,7 +3265,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CategoryTemplate',
+                        '\ck\Model\CategoryTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3281,7 +3281,7 @@ class CategoryApi
      * Update a category template
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3289,7 +3289,7 @@ class CategoryApi
      */
     public function restCategoriesIdTemplatesPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest $_rest_categories_id_templates = null,
+        ?\ck\Model\RestCategoriesIdTemplatesPutRequest $_rest_categories_id_templates = null,
         string $contentType = self::contentTypes['restCategoriesIdTemplatesPut'][0]
     ): PromiseInterface
     {
@@ -3307,7 +3307,7 @@ class CategoryApi
      * Update a category template
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3319,7 +3319,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoriesIdTemplatesPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CategoryTemplate';
+        $returnType = '\ck\Model\CategoryTemplate';
         $request = $this->restCategoriesIdTemplatesPutRequest($id, $_rest_categories_id_templates, $contentType);
 
         return $this->client
@@ -3362,7 +3362,7 @@ class CategoryApi
      * Create request for operation 'restCategoriesIdTemplatesPut'
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates (optional)
+     * @param  \ck\Model\RestCategoriesIdTemplatesPutRequest|null $_rest_categories_id_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesIdTemplatesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3472,15 +3472,15 @@ class CategoryApi
      *
      * Creates new categories
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPostRequest|null $_rest_categories _rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPostRequest|null $_rest_categories _rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Category[]
+     * @return \ck\Model\Category[]
      */
     public function restCategoriesPost(
-        ?\ck/plenty-client\Model\RestCategoriesPostRequest $_rest_categories = null,
+        ?\ck\Model\RestCategoriesPostRequest $_rest_categories = null,
         string $contentType = self::contentTypes['restCategoriesPost'][0]
     ): array
     {
@@ -3493,15 +3493,15 @@ class CategoryApi
      *
      * Creates new categories
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPostRequest|null $_rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPostRequest|null $_rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Category[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Category[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestCategoriesPostRequest $_rest_categories = null,
+        ?\ck\Model\RestCategoriesPostRequest $_rest_categories = null,
         string $contentType = self::contentTypes['restCategoriesPost'][0]
     ): array
     {
@@ -3544,23 +3544,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Category[]' === '\SplFileObject') {
+                    if ('\ck\Model\Category[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Category[]' !== 'string') {
+                        if ('\ck\Model\Category[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Category[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Category[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Category[]';
+            $returnType = '\ck\Model\Category[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3581,7 +3581,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Category[]',
+                        '\ck\Model\Category[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3596,14 +3596,14 @@ class CategoryApi
      *
      * Creates new categories
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPostRequest|null $_rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPostRequest|null $_rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restCategoriesPostAsync(
-        ?\ck/plenty-client\Model\RestCategoriesPostRequest $_rest_categories = null,
+        ?\ck\Model\RestCategoriesPostRequest $_rest_categories = null,
         string $contentType = self::contentTypes['restCategoriesPost'][0]
     ): PromiseInterface
     {
@@ -3620,7 +3620,7 @@ class CategoryApi
      *
      * Creates new categories
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPostRequest|null $_rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPostRequest|null $_rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3631,7 +3631,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoriesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Category[]';
+        $returnType = '\ck\Model\Category[]';
         $request = $this->restCategoriesPostRequest($_rest_categories, $contentType);
 
         return $this->client
@@ -3673,7 +3673,7 @@ class CategoryApi
     /**
      * Create request for operation 'restCategoriesPost'
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPostRequest|null $_rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPostRequest|null $_rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3767,15 +3767,15 @@ class CategoryApi
      *
      * Updates categories
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories _rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories _rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Category[]
+     * @return \ck\Model\Category[]
      */
     public function restCategoriesPut(
-        ?\ck/plenty-client\Model\RestCategoriesPutRequest $_rest_categories = null,
+        ?\ck\Model\RestCategoriesPutRequest $_rest_categories = null,
         string $contentType = self::contentTypes['restCategoriesPut'][0]
     ): array
     {
@@ -3788,15 +3788,15 @@ class CategoryApi
      *
      * Updates categories
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Category[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Category[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesPutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestCategoriesPutRequest $_rest_categories = null,
+        ?\ck\Model\RestCategoriesPutRequest $_rest_categories = null,
         string $contentType = self::contentTypes['restCategoriesPut'][0]
     ): array
     {
@@ -3839,23 +3839,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Category[]' === '\SplFileObject') {
+                    if ('\ck\Model\Category[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Category[]' !== 'string') {
+                        if ('\ck\Model\Category[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Category[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Category[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Category[]';
+            $returnType = '\ck\Model\Category[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3876,7 +3876,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Category[]',
+                        '\ck\Model\Category[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3891,14 +3891,14 @@ class CategoryApi
      *
      * Updates categories
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restCategoriesPutAsync(
-        ?\ck/plenty-client\Model\RestCategoriesPutRequest $_rest_categories = null,
+        ?\ck\Model\RestCategoriesPutRequest $_rest_categories = null,
         string $contentType = self::contentTypes['restCategoriesPut'][0]
     ): PromiseInterface
     {
@@ -3915,7 +3915,7 @@ class CategoryApi
      *
      * Updates categories
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3926,7 +3926,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoriesPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Category[]';
+        $returnType = '\ck\Model\Category[]';
         $request = $this->restCategoriesPutRequest($_rest_categories, $contentType);
 
         return $this->client
@@ -3968,7 +3968,7 @@ class CategoryApi
     /**
      * Create request for operation 'restCategoriesPut'
      *
-     * @param  \ck/plenty-client\Model\RestCategoriesPutRequest|null $_rest_categories (optional)
+     * @param  \ck\Model\RestCategoriesPutRequest|null $_rest_categories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4404,12 +4404,12 @@ class CategoryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CategoryBranch
+     * @return \ck\Model\CategoryBranch
      */
     public function restCategoryBranchesIdGet(
         int $id,
         string $contentType = self::contentTypes['restCategoryBranchesIdGet'][0]
-    ): \ck/plenty-client\Model\CategoryBranch
+    ): \ck\Model\CategoryBranch
     {
         list($response) = $this->restCategoryBranchesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -4425,7 +4425,7 @@ class CategoryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CategoryBranch, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CategoryBranch, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoryBranchesIdGetWithHttpInfo(
         int $id,
@@ -4471,23 +4471,23 @@ class CategoryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CategoryBranch' === '\SplFileObject') {
+                    if ('\ck\Model\CategoryBranch' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CategoryBranch' !== 'string') {
+                        if ('\ck\Model\CategoryBranch' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CategoryBranch', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CategoryBranch', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CategoryBranch';
+            $returnType = '\ck\Model\CategoryBranch';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4508,7 +4508,7 @@ class CategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CategoryBranch',
+                        '\ck\Model\CategoryBranch',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4558,7 +4558,7 @@ class CategoryApi
         string $contentType = self::contentTypes['restCategoryBranchesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CategoryBranch';
+        $returnType = '\ck\Model\CategoryBranch';
         $request = $this->restCategoryBranchesIdGetRequest($id, $contentType);
 
         return $this->client

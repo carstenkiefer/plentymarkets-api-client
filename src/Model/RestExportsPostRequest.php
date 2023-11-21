@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestExportsPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -63,11 +63,11 @@ class RestExportsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
         'format_key' => 'string',
         'type' => 'string',
         'output_type' => 'string',
-        'filters' => '\ck/plenty-client\Model\Filter[]',
+        'filters' => '\ck\Model\Filter[]',
         'key' => 'string',
         'value' => 'string',
-        'format_settings' => '\ck/plenty-client\Model\FormatSetting[]',
-        'output_params' => '\ck/plenty-client\Model\OutputParam[]'
+        'format_settings' => '\ck\Model\FormatSetting[]',
+        'output_params' => '\ck\Model\OutputParam[]'
     ];
 
     /**
@@ -503,7 +503,7 @@ class RestExportsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets filters
      *
-     * @return \ck/plenty-client\Model\Filter[]|null
+     * @return \ck\Model\Filter[]|null
      */
     public function getFilters(): ?array
     {
@@ -513,7 +513,7 @@ class RestExportsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets filters
      *
-     * @param \ck/plenty-client\Model\Filter[]|null $filters filters
+     * @param \ck\Model\Filter[]|null $filters filters
      *
      * @return $this
      */
@@ -584,7 +584,7 @@ class RestExportsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets format_settings
      *
-     * @return \ck/plenty-client\Model\FormatSetting[]|null
+     * @return \ck\Model\FormatSetting[]|null
      */
     public function getFormatSettings(): ?array
     {
@@ -594,7 +594,7 @@ class RestExportsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets format_settings
      *
-     * @param \ck/plenty-client\Model\FormatSetting[]|null $format_settings format_settings
+     * @param \ck\Model\FormatSetting[]|null $format_settings format_settings
      *
      * @return $this
      */
@@ -611,7 +611,7 @@ class RestExportsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets output_params
      *
-     * @return \ck/plenty-client\Model\OutputParam[]|null
+     * @return \ck\Model\OutputParam[]|null
      */
     public function getOutputParams(): ?array
     {
@@ -621,7 +621,7 @@ class RestExportsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets output_params
      *
-     * @param \ck/plenty-client\Model\OutputParam[]|null $output_params output_params
+     * @param \ck\Model\OutputParam[]|null $output_params output_params
      *
      * @return $this
      */

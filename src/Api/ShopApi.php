@@ -3,7 +3,7 @@
  * ShopApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ShopApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -434,12 +434,12 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContentLink
+     * @return \ck\Model\ContentLink
      */
     public function restShopBuilderContentLinksContentLinkIdGet(
         int $content_link_id,
         string $contentType = self::contentTypes['restShopBuilderContentLinksContentLinkIdGet'][0]
-    ): \ck/plenty-client\Model\ContentLink
+    ): \ck\Model\ContentLink
     {
         list($response) = $this->restShopBuilderContentLinksContentLinkIdGetWithHttpInfo($content_link_id, $contentType);
         return $response;
@@ -455,7 +455,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContentLink, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContentLink, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentLinksContentLinkIdGetWithHttpInfo(
         int $content_link_id,
@@ -501,23 +501,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContentLink' === '\SplFileObject') {
+                    if ('\ck\Model\ContentLink' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContentLink' !== 'string') {
+                        if ('\ck\Model\ContentLink' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContentLink', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContentLink', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContentLink';
+            $returnType = '\ck\Model\ContentLink';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -538,7 +538,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContentLink',
+                        '\ck\Model\ContentLink',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -588,7 +588,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentLinksContentLinkIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContentLink';
+        $returnType = '\ck\Model\ContentLink';
         $request = $this->restShopBuilderContentLinksContentLinkIdGetRequest($content_link_id, $contentType);
 
         return $this->client
@@ -1034,18 +1034,18 @@ class ShopApi
      * Update a content link.
      *
      * @param  int $content_link_id content_link_id (required)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id _rest_shop_builder_content_links_content_link_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id _rest_shop_builder_content_links_content_link_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContentLink
+     * @return \ck\Model\ContentLink
      */
     public function restShopBuilderContentLinksContentLinkIdPut(
         int $content_link_id,
-        ?\ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links_content_link_id = null,
+        ?\ck\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links_content_link_id = null,
         string $contentType = self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'][0]
-    ): \ck/plenty-client\Model\ContentLink
+    ): \ck\Model\ContentLink
     {
         list($response) = $this->restShopBuilderContentLinksContentLinkIdPutWithHttpInfo($content_link_id, $_rest_shop_builder_content_links_content_link_id, $contentType);
         return $response;
@@ -1057,16 +1057,16 @@ class ShopApi
      * Update a content link.
      *
      * @param  int $content_link_id (required)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContentLink, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContentLink, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentLinksContentLinkIdPutWithHttpInfo(
         int $content_link_id,
-        ?\ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links_content_link_id = null,
+        ?\ck\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links_content_link_id = null,
         string $contentType = self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'][0]
     ): array
     {
@@ -1109,23 +1109,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContentLink' === '\SplFileObject') {
+                    if ('\ck\Model\ContentLink' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContentLink' !== 'string') {
+                        if ('\ck\Model\ContentLink' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContentLink', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContentLink', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContentLink';
+            $returnType = '\ck\Model\ContentLink';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1146,7 +1146,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContentLink',
+                        '\ck\Model\ContentLink',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1162,7 +1162,7 @@ class ShopApi
      * Update a content link.
      *
      * @param  int $content_link_id (required)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1170,7 +1170,7 @@ class ShopApi
      */
     public function restShopBuilderContentLinksContentLinkIdPutAsync(
         int $content_link_id,
-        ?\ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links_content_link_id = null,
+        ?\ck\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links_content_link_id = null,
         string $contentType = self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'][0]
     ): PromiseInterface
     {
@@ -1188,7 +1188,7 @@ class ShopApi
      * Update a content link.
      *
      * @param  int $content_link_id (required)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1200,7 +1200,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContentLink';
+        $returnType = '\ck\Model\ContentLink';
         $request = $this->restShopBuilderContentLinksContentLinkIdPutRequest($content_link_id, $_rest_shop_builder_content_links_content_link_id, $contentType);
 
         return $this->client
@@ -1243,7 +1243,7 @@ class ShopApi
      * Create request for operation 'restShopBuilderContentLinksContentLinkIdPut'
      *
      * @param  int $content_link_id (required)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links_content_link_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksContentLinkIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1357,7 +1357,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContentLink[]
+     * @return \ck\Model\ContentLink[]
      */
     public function restShopBuilderContentLinksGet(
         string $contentType = self::contentTypes['restShopBuilderContentLinksGet'][0]
@@ -1376,7 +1376,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContentLink[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContentLink[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentLinksGetWithHttpInfo(
         string $contentType = self::contentTypes['restShopBuilderContentLinksGet'][0]
@@ -1421,23 +1421,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContentLink[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContentLink[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContentLink[]' !== 'string') {
+                        if ('\ck\Model\ContentLink[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContentLink[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContentLink[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContentLink[]';
+            $returnType = '\ck\Model\ContentLink[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1458,7 +1458,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContentLink[]',
+                        '\ck\Model\ContentLink[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1504,7 +1504,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentLinksGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContentLink[]';
+        $returnType = '\ck\Model\ContentLink[]';
         $request = $this->restShopBuilderContentLinksGetRequest($contentType);
 
         return $this->client
@@ -1630,17 +1630,17 @@ class ShopApi
      *
      * Link a content to a layout container of a frontend plugin.
      *
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links _rest_shop_builder_content_links (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links _rest_shop_builder_content_links (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContentLink
+     * @return \ck\Model\ContentLink
      */
     public function restShopBuilderContentLinksPost(
-        ?\ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links = null,
+        ?\ck\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links = null,
         string $contentType = self::contentTypes['restShopBuilderContentLinksPost'][0]
-    ): \ck/plenty-client\Model\ContentLink
+    ): \ck\Model\ContentLink
     {
         list($response) = $this->restShopBuilderContentLinksPostWithHttpInfo($_rest_shop_builder_content_links, $contentType);
         return $response;
@@ -1651,15 +1651,15 @@ class ShopApi
      *
      * Link a content to a layout container of a frontend plugin.
      *
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContentLink, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContentLink, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentLinksPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links = null,
+        ?\ck\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links = null,
         string $contentType = self::contentTypes['restShopBuilderContentLinksPost'][0]
     ): array
     {
@@ -1702,23 +1702,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContentLink' === '\SplFileObject') {
+                    if ('\ck\Model\ContentLink' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContentLink' !== 'string') {
+                        if ('\ck\Model\ContentLink' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContentLink', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContentLink', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContentLink';
+            $returnType = '\ck\Model\ContentLink';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1739,7 +1739,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContentLink',
+                        '\ck\Model\ContentLink',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1754,14 +1754,14 @@ class ShopApi
      *
      * Link a content to a layout container of a frontend plugin.
      *
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restShopBuilderContentLinksPostAsync(
-        ?\ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links = null,
+        ?\ck\Model\RestShopBuilderContentLinksPostRequest $_rest_shop_builder_content_links = null,
         string $contentType = self::contentTypes['restShopBuilderContentLinksPost'][0]
     ): PromiseInterface
     {
@@ -1778,7 +1778,7 @@ class ShopApi
      *
      * Link a content to a layout container of a frontend plugin.
      *
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1789,7 +1789,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentLinksPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContentLink';
+        $returnType = '\ck\Model\ContentLink';
         $request = $this->restShopBuilderContentLinksPostRequest($_rest_shop_builder_content_links, $contentType);
 
         return $this->client
@@ -1831,7 +1831,7 @@ class ShopApi
     /**
      * Create request for operation 'restShopBuilderContentLinksPost'
      *
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links (optional)
+     * @param  \ck\Model\RestShopBuilderContentLinksPostRequest|null $_rest_shop_builder_content_links (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentLinksPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2178,12 +2178,12 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Content
+     * @return \ck\Model\Content
      */
     public function restShopBuilderContentsContentIdGet(
         int $content_id,
         string $contentType = self::contentTypes['restShopBuilderContentsContentIdGet'][0]
-    ): \ck/plenty-client\Model\Content
+    ): \ck\Model\Content
     {
         list($response) = $this->restShopBuilderContentsContentIdGetWithHttpInfo($content_id, $contentType);
         return $response;
@@ -2199,7 +2199,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Content, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Content, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsContentIdGetWithHttpInfo(
         int $content_id,
@@ -2245,23 +2245,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Content' === '\SplFileObject') {
+                    if ('\ck\Model\Content' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Content' !== 'string') {
+                        if ('\ck\Model\Content' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Content', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Content', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Content';
+            $returnType = '\ck\Model\Content';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2282,7 +2282,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Content',
+                        '\ck\Model\Content',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2332,7 +2332,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentsContentIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Content';
+        $returnType = '\ck\Model\Content';
         $request = $this->restShopBuilderContentsContentIdGetRequest($content_id, $contentType);
 
         return $this->client
@@ -2778,12 +2778,12 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Content
+     * @return \ck\Model\Content
      */
     public function restShopBuilderContentsContentIdPost(
         int $content_id,
         string $contentType = self::contentTypes['restShopBuilderContentsContentIdPost'][0]
-    ): \ck/plenty-client\Model\Content
+    ): \ck\Model\Content
     {
         list($response) = $this->restShopBuilderContentsContentIdPostWithHttpInfo($content_id, $contentType);
         return $response;
@@ -2799,7 +2799,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Content, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Content, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsContentIdPostWithHttpInfo(
         int $content_id,
@@ -2845,23 +2845,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Content' === '\SplFileObject') {
+                    if ('\ck\Model\Content' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Content' !== 'string') {
+                        if ('\ck\Model\Content' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Content', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Content', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Content';
+            $returnType = '\ck\Model\Content';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2882,7 +2882,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Content',
+                        '\ck\Model\Content',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2932,7 +2932,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentsContentIdPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Content';
+        $returnType = '\ck\Model\Content';
         $request = $this->restShopBuilderContentsContentIdPostRequest($content_id, $contentType);
 
         return $this->client
@@ -3077,19 +3077,19 @@ class ShopApi
      *
      * @param  int $content_id content_id (required)
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id _rest_shop_builder_contents_content_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id _rest_shop_builder_contents_content_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsContentIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Content
+     * @return \ck\Model\Content
      */
     public function restShopBuilderContentsContentIdPut(
         int $content_id,
         ?string $frontend_lang = null,
-        ?\ck/plenty-client\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents_content_id = null,
+        ?\ck\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents_content_id = null,
         string $contentType = self::contentTypes['restShopBuilderContentsContentIdPut'][0]
-    ): \ck/plenty-client\Model\Content
+    ): \ck\Model\Content
     {
         list($response) = $this->restShopBuilderContentsContentIdPutWithHttpInfo($content_id, $frontend_lang, $_rest_shop_builder_contents_content_id, $contentType);
         return $response;
@@ -3102,17 +3102,17 @@ class ShopApi
      *
      * @param  int $content_id (required)
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsContentIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Content, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Content, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsContentIdPutWithHttpInfo(
         int $content_id,
         ?string $frontend_lang = null,
-        ?\ck/plenty-client\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents_content_id = null,
+        ?\ck\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents_content_id = null,
         string $contentType = self::contentTypes['restShopBuilderContentsContentIdPut'][0]
     ): array
     {
@@ -3155,23 +3155,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Content' === '\SplFileObject') {
+                    if ('\ck\Model\Content' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Content' !== 'string') {
+                        if ('\ck\Model\Content' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Content', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Content', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Content';
+            $returnType = '\ck\Model\Content';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3192,7 +3192,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Content',
+                        '\ck\Model\Content',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3209,7 +3209,7 @@ class ShopApi
      *
      * @param  int $content_id (required)
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsContentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3218,7 +3218,7 @@ class ShopApi
     public function restShopBuilderContentsContentIdPutAsync(
         int $content_id,
         ?string $frontend_lang = null,
-        ?\ck/plenty-client\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents_content_id = null,
+        ?\ck\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents_content_id = null,
         string $contentType = self::contentTypes['restShopBuilderContentsContentIdPut'][0]
     ): PromiseInterface
     {
@@ -3237,7 +3237,7 @@ class ShopApi
      *
      * @param  int $content_id (required)
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsContentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3250,7 +3250,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentsContentIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Content';
+        $returnType = '\ck\Model\Content';
         $request = $this->restShopBuilderContentsContentIdPutRequest($content_id, $frontend_lang, $_rest_shop_builder_contents_content_id, $contentType);
 
         return $this->client
@@ -3294,7 +3294,7 @@ class ShopApi
      *
      * @param  int $content_id (required)
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents_content_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsContentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3419,7 +3419,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Content[]
+     * @return \ck\Model\Content[]
      */
     public function restShopBuilderContentsGet(
         string $contentType = self::contentTypes['restShopBuilderContentsGet'][0]
@@ -3438,7 +3438,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Content[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Content[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsGetWithHttpInfo(
         string $contentType = self::contentTypes['restShopBuilderContentsGet'][0]
@@ -3483,23 +3483,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Content[]' === '\SplFileObject') {
+                    if ('\ck\Model\Content[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Content[]' !== 'string') {
+                        if ('\ck\Model\Content[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Content[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Content[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Content[]';
+            $returnType = '\ck\Model\Content[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3520,7 +3520,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Content[]',
+                        '\ck\Model\Content[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3566,7 +3566,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Content[]';
+        $returnType = '\ck\Model\Content[]';
         $request = $this->restShopBuilderContentsGetRequest($contentType);
 
         return $this->client
@@ -3693,18 +3693,18 @@ class ShopApi
      * Create new content.
      *
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents _rest_shop_builder_contents (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents _rest_shop_builder_contents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Content
+     * @return \ck\Model\Content
      */
     public function restShopBuilderContentsPost(
         ?string $frontend_lang = null,
-        ?\ck/plenty-client\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents = null,
+        ?\ck\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents = null,
         string $contentType = self::contentTypes['restShopBuilderContentsPost'][0]
-    ): \ck/plenty-client\Model\Content
+    ): \ck\Model\Content
     {
         list($response) = $this->restShopBuilderContentsPostWithHttpInfo($frontend_lang, $_rest_shop_builder_contents, $contentType);
         return $response;
@@ -3716,16 +3716,16 @@ class ShopApi
      * Create new content.
      *
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Content, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Content, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsPostWithHttpInfo(
         ?string $frontend_lang = null,
-        ?\ck/plenty-client\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents = null,
+        ?\ck\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents = null,
         string $contentType = self::contentTypes['restShopBuilderContentsPost'][0]
     ): array
     {
@@ -3768,23 +3768,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Content' === '\SplFileObject') {
+                    if ('\ck\Model\Content' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Content' !== 'string') {
+                        if ('\ck\Model\Content' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Content', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Content', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Content';
+            $returnType = '\ck\Model\Content';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3805,7 +3805,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Content',
+                        '\ck\Model\Content',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3821,7 +3821,7 @@ class ShopApi
      * Create new content.
      *
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3829,7 +3829,7 @@ class ShopApi
      */
     public function restShopBuilderContentsPostAsync(
         ?string $frontend_lang = null,
-        ?\ck/plenty-client\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents = null,
+        ?\ck\Model\RestShopBuilderContentsPostRequest $_rest_shop_builder_contents = null,
         string $contentType = self::contentTypes['restShopBuilderContentsPost'][0]
     ): PromiseInterface
     {
@@ -3847,7 +3847,7 @@ class ShopApi
      * Create new content.
      *
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3859,7 +3859,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Content';
+        $returnType = '\ck\Model\Content';
         $request = $this->restShopBuilderContentsPostRequest($frontend_lang, $_rest_shop_builder_contents, $contentType);
 
         return $this->client
@@ -3902,7 +3902,7 @@ class ShopApi
      * Create request for operation 'restShopBuilderContentsPost'
      *
      * @param  string|null $frontend_lang Language to be used when rendering frontend widgets. (optional)
-     * @param  \ck/plenty-client\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents (optional)
+     * @param  \ck\Model\RestShopBuilderContentsPostRequest|null $_rest_shop_builder_contents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restShopBuilderContentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4296,7 +4296,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+     * @return \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
      */
     public function restShopBuilderContentsSearchGet(
         ?int $page = null,
@@ -4308,7 +4308,7 @@ class ShopApi
         ?string $language = null,
         ?int $active = null,
         string $contentType = self::contentTypes['restShopBuilderContentsSearchGet'][0]
-    ): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+    ): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
     {
         list($response) = $this->restShopBuilderContentsSearchGetWithHttpInfo($page, $items_per_page, $data_provider_name, $type, $container_name, $plugin_set_id, $language, $active, $contentType);
         return $response;
@@ -4331,7 +4331,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderContentsSearchGetWithHttpInfo(
         ?int $page = null,
@@ -4384,23 +4384,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
+            $returnType = '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4421,7 +4421,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response',
+                        '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4499,7 +4499,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderContentsSearchGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
+        $returnType = '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
         $request = $this->restShopBuilderContentsSearchGetRequest($page, $items_per_page, $data_provider_name, $type, $container_name, $plugin_set_id, $language, $active, $contentType);
 
         return $this->client
@@ -4725,7 +4725,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContentPage[]
+     * @return \ck\Model\ContentPage[]
      */
     public function restShopBuilderPagesGet(
         string $contentType = self::contentTypes['restShopBuilderPagesGet'][0]
@@ -4744,7 +4744,7 @@ class ShopApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContentPage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContentPage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restShopBuilderPagesGetWithHttpInfo(
         string $contentType = self::contentTypes['restShopBuilderPagesGet'][0]
@@ -4789,23 +4789,23 @@ class ShopApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContentPage[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContentPage[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContentPage[]' !== 'string') {
+                        if ('\ck\Model\ContentPage[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContentPage[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContentPage[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContentPage[]';
+            $returnType = '\ck\Model\ContentPage[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4826,7 +4826,7 @@ class ShopApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContentPage[]',
+                        '\ck\Model\ContentPage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4872,7 +4872,7 @@ class ShopApi
         string $contentType = self::contentTypes['restShopBuilderPagesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContentPage[]';
+        $returnType = '\ck\Model\ContentPage[]';
         $request = $this->restShopBuilderPagesGetRequest($contentType);
 
         return $this->client

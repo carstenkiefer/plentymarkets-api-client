@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **listing_id** | **int** | The listing ID of the current listing market. optional | [optional]
 **option_template_id** | **int** | The ID of an existing listing option template from where to load listing market settings. @see OptionTemplate. optional | [optional]
 **referrer_id** | **int** | The ID of the referrer. |
-**listing** | [**\ck/plenty-client\Model\ListingMarketHistory[]**](ListingMarketHistory.md) |  |
+**listing** | [**\ck\Model\ListingMarketHistory[]**](ListingMarketHistory.md) |  |
 **properties** | **object[]** |  | [optional]
 **prices** | **object[]** |  | [optional]
 **texts** | **object[]** |  | [optional]

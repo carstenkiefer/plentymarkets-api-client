@@ -65,29 +65,29 @@ Name | Type | Description | Notes
 **sales_price_variation_id** | **int** | Either the ID of the variation or the ID of the item&#39;s main variation. No other values are permitted.ID of the variation &#x3D; Sales prices are not inherited from the main variation.ID of the item&#39;s main variation &#x3D; Inheritance of sales prices is active. optional | [optional]
 **supplier_variation_id** | **int** | Either the ID of the variation or the ID of the item&#39;s main variation. No other values are permitted.ID of the variation &#x3D; Suppliers are not inherited from the main variation.ID of the item&#39;s main variation &#x3D; Inheritance of suppliers is active. optional | [optional]
 **warehouse_variation_id** | **int** | Either the ID of the variation or the ID of the item&#39;s main variation. No other values are permitted.ID of the variation &#x3D; Warehouses are not inherited from the main variation.ID of the item&#39;s main variation &#x3D; Inheritance of warehouses is active. optional | [optional]
-**variation_barcodes** | [**\ck/plenty-client\Model\VariationBarcode[]**](VariationBarcode.md) |  | [optional]
+**variation_barcodes** | [**\ck\Model\VariationBarcode[]**](VariationBarcode.md) |  | [optional]
 **barcode_id** | **int** | The unique ID of the barcode linked to the variation. The combination of code and barcode ID must be unique. |
 **code** | **string** | The code of the variation&#39;s barcode. The combination of code and barcode ID must be unique. |
-**variation_sales_prices** | [**\ck/plenty-client\Model\VariationSalesPrice[]**](VariationSalesPrice.md) |  | [optional]
+**variation_sales_prices** | [**\ck\Model\VariationSalesPrice[]**](VariationSalesPrice.md) |  | [optional]
 **sales_price_id** | **int** | The unique ID of the sales price |
 **price** | **float** | The price of the variation saved for this sales price |
-**variation_categories** | [**\ck/plenty-client\Model\VariationCategory[]**](VariationCategory.md) |  | [optional]
+**variation_categories** | [**\ck\Model\VariationCategory[]**](VariationCategory.md) |  | [optional]
 **category_id** | **int** | The unique ID of the category |
 **is_neckermann_primary** | **string** | Flag that indicates if the category is the primary category for the market Neckermann for this variation. optional | [optional]
-**variation_clients** | [**\ck/plenty-client\Model\VariationClient[]**](VariationClient.md) |  | [optional]
+**variation_clients** | [**\ck\Model\VariationClient[]**](VariationClient.md) |  | [optional]
 **plenty_id** | **int** | The unique plenty ID of the client (store) |
-**variation_markets** | [**\ck/plenty-client\Model\VariationMarket[]**](VariationMarket.md) |  | [optional]
+**variation_markets** | [**\ck\Model\VariationMarket[]**](VariationMarket.md) |  | [optional]
 **market_id** | **float** | The ID of the market reference. |
-**variation_default_category** | [**\ck/plenty-client\Model\VariationDefaultCategory[]**](VariationDefaultCategory.md) |  | [optional]
+**variation_default_category** | [**\ck\Model\VariationDefaultCategory[]**](VariationDefaultCategory.md) |  | [optional]
 **branch_id** | **int** | The unique ID of the category branch |
-**variation_suppliers** | [**\ck/plenty-client\Model\VariationSupplier[]**](VariationSupplier.md) |  | [optional]
+**variation_suppliers** | [**\ck\Model\VariationSupplier[]**](VariationSupplier.md) |  | [optional]
 **supplier_id** | **int** | The unique ID of the supplier optional | [optional]
 **item_number** | **string** | The external item number assigned to the variation by this supplier optional | [optional]
 **last_price_query** | **string** | The date of the last price query to this supplier. This helps to plan price negotiations. optional | [optional]
 **discount** | **float** | The discount in percent the supplier grants for the variation. optional | [optional]
 **is_discountable** | **string** | Flag that indicates if the supplier&#39;s discount for this variation is active. optional | [optional]
 **packaging_unit** | **float** | The packaging unit of the supplier if it differs from the packaging unit settings in plentymarkets. optional | [optional]
-**variation_warehouses** | [**\ck/plenty-client\Model\VariationWarehouse[]**](VariationWarehouse.md) |  | [optional]
+**variation_warehouses** | [**\ck\Model\VariationWarehouse[]**](VariationWarehouse.md) |  | [optional]
 **warehouse_id** | **int** | The unique ID of the warehouse |
 **warehouse_zone_id** | **int** | The unique ID of the warehouse zone optional | [optional]
 **storage_location_type** | **string** | The storage location type of the warehouse optional allowed values are none, small, medium, large, europallet | [optional]
@@ -96,19 +96,19 @@ Name | Type | Description | Notes
 **stock_turnover_in_days** | **int** | The stock turnover in days for the variation in this warehouse optional | [optional]
 **storage_location** | **int** | The storage location of the variation in this warehouse optional | [optional]
 **stock_buffer** | **int** | The stock buffer for the variation in this warehouse optional | [optional]
-**variation_attribute_values** | [**\ck/plenty-client\Model\AttributeValueSet[]**](AttributeValueSet.md) |  | [optional]
+**variation_attribute_values** | [**\ck\Model\AttributeValueSet[]**](AttributeValueSet.md) |  | [optional]
 **value_id** | **int** | The ID of the attribute value |
-**unit** | [**\ck/plenty-client\Model\UnitCombination[]**](UnitCombination.md) |  |
+**unit** | [**\ck\Model\UnitCombination[]**](UnitCombination.md) |  |
 **parent_variation_id** | **int** | optional | [optional]
 **parent_variation_quantity** | **float** | optional | [optional]
 **item** | **object[]** |  | [optional]
-**item_cross_selling** | [**\ck/plenty-client\Model\ItemCrossSelling[]**](ItemCrossSelling.md) |  | [optional]
+**item_cross_selling** | [**\ck\Model\ItemCrossSelling[]**](ItemCrossSelling.md) |  | [optional]
 **cross_item_id** | **int** | The unique ID of the cross-selling item that is linked to the item |
 **relationship** | **string** | The cross-selling relationship between item and cross-selling item. Possible values:Accessory &#x3D; The cross-selling item is an accessory of the item.ReplacementPart &#x3D; The cross-selling item is a replacement part for the item.Similar &#x3D; The cross-selling item is similar to the item.Bundle &#x3D; The cross-selling item is suitable to be sold as a bundle with the item.  allowed values are Variation, DisplaySet, Collection, Accessory, Customized, Part, Complements, Piece, Necessary, ReplacementPart, Similar, Episode, Season, Bundle, Component |
 **is_dynamic** | **bool** | Flag that indicates if the cross-selling link was generated automatically. optional | [optional]
-**item_shipping_profiles** | [**\ck/plenty-client\Model\ItemShippingProfiles[]**](ItemShippingProfiles.md) |  | [optional]
+**item_shipping_profiles** | [**\ck\Model\ItemShippingProfiles[]**](ItemShippingProfiles.md) |  | [optional]
 **profile_id** | **int** | The unique ID of the shipping profile |
-**variation_texts** | [**\ck/plenty-client\Model\VariationDescription[]**](VariationDescription.md) |  | [optional]
+**variation_texts** | [**\ck\Model\VariationDescription[]**](VariationDescription.md) |  | [optional]
 **lang** | **string** | The language code of the description |
 **name2** | **string** | Alternative item name that can be used e.g. for markets. Character limit: max. 240 characters. optional | [optional]
 **name3** | **string** | Alternative item name that can be used e.g. for markets. Character limit: max. 240 characters. optional | [optional]
@@ -120,32 +120,32 @@ Name | Type | Description | Notes
 **meta_keywords** | **string** | Meta keywords to tag the item for search engines. More than one keyword can be separated by commas. optional | [optional]
 **images** | **object[]** |  | [optional]
 **item_images** | **object[]** |  | [optional]
-**variation_bundle_components** | [**\ck/plenty-client\Model\VariationBundle[]**](VariationBundle.md) |  | [optional]
+**variation_bundle_components** | [**\ck\Model\VariationBundle[]**](VariationBundle.md) |  | [optional]
 **component_variation_id** | **int** | The unique ID of the variation added as bundle component  with componentQuantity |
 **component_quantity** | **int** | The quantity of the variation to be added as bundle component  with componentVariationId |
-**market_item_numbers** | [**\ck/plenty-client\Model\VariationMarketIdentNumber[]**](VariationMarketIdentNumber.md) |  | [optional]
+**market_item_numbers** | [**\ck\Model\VariationMarketIdentNumber[]**](VariationMarketIdentNumber.md) |  | [optional]
 **country_id** | **int** | The country code of the market ident number (ASIN/ePID) | [optional]
 **type** | **string** | The type of market ident number (ASIN/ePID) allowed values are ASIN, EPID, UPC, RSIN | [optional]
 **value** | **string** | The value of the market ident number (ASIN/ePID) | [optional]
-**variation_skus** | [**\ck/plenty-client\Model\VariationSku[]**](VariationSku.md) |  | [optional]
+**variation_skus** | [**\ck\Model\VariationSku[]**](VariationSku.md) |  | [optional]
 **account_id** | **int** | The ID of the market account | [optional]
 **sku** | **string** | The additional sku for this variation. |
 **initial_sku** | **string** | The initial SKU of the variation. The initial SKU cannot be modified even if the variation SKU is changed. However, it is possible to reset the variation SKU to the initial SKU. optional | [optional]
 **parent_sku** | **string** | The Parent SKU of the variation. The Parent SKU is adjustable. The same Parent SKU value should be used on variations of same article. optional | [optional]
 **status** | **string** | The status of the variation after the export. Possible entries are INACTIVE, ERROR, SENT and ACTIVE. optional allowed values are ACTIVE, INACTIVE, ERROR, SENT | [optional]
 **additional_information** | **string** | The field that contains additional information. optional | [optional]
-**variation_additional_skus** | [**\ck/plenty-client\Model\VariationAdditionalSku[]**](VariationAdditionalSku.md) |  | [optional]
+**variation_additional_skus** | [**\ck\Model\VariationAdditionalSku[]**](VariationAdditionalSku.md) |  | [optional]
 **market_account_id** | **int** | The ID of the market account. | [optional]
-**properties** | [**\ck/plenty-client\Model\PropertyRelation[]**](PropertyRelation.md) |  | [optional]
+**properties** | [**\ck\Model\PropertyRelation[]**](PropertyRelation.md) |  | [optional]
 **property_id** | **int** | The unique ID of the property |
 **selection_relation_id** | **int** | The ID of the selection relation optional | [optional]
-**variation_properties** | [**\ck/plenty-client\Model\VariationPropertyValue[]**](VariationPropertyValue.md) |  | [optional]
+**variation_properties** | [**\ck\Model\VariationPropertyValue[]**](VariationPropertyValue.md) |  | [optional]
 **property_selection_id** | **int** | The unique ID of the property selection of the variation optional | [optional]
 **value_int** | **int** | The int value of the property value of the variation optional | [optional]
 **value_float** | **float** | The float value of the property value of the variation optional | [optional]
 **value_file** | **string** | The file value of the property value of the variation optional | [optional]
-**tags** | [**\ck/plenty-client\Model\Tag[]**](Tag.md) |  | [optional]
-**comments** | [**\ck/plenty-client\Model\Comment[]**](Comment.md) |  | [optional]
+**tags** | [**\ck\Model\Tag[]**](Tag.md) |  | [optional]
+**comments** | [**\ck\Model\Comment[]**](Comment.md) |  | [optional]
 **user_id** | **int** | The ID of the user optional | [optional]
 **text** | **string** | The comment text |
 **is_visible_for_contact** | **bool** | If true, the comment is visible for the associated contact. |

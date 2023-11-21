@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestItemsPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -86,11 +86,11 @@ class RestItemsPutRequest implements ModelInterface, ArrayAccess, JsonSerializab
         'flag_two' => 'int',
         'age_restriction' => 'int',
         'feedback' => 'int',
-        'ebay_titles' => '\ck/plenty-client\Model\ItemEbayTitle[]',
+        'ebay_titles' => '\ck\Model\ItemEbayTitle[]',
         'title' => 'string',
-        'item_shipping_profiles' => '\ck/plenty-client\Model\ItemShippingProfiles[]',
+        'item_shipping_profiles' => '\ck\Model\ItemShippingProfiles[]',
         'profile_id' => 'int',
-        'item_properties' => '\ck/plenty-client\Model\ItemProperty[]',
+        'item_properties' => '\ck\Model\ItemProperty[]',
         'property_id' => 'int',
         'property_selection_id' => 'int'
     ];
@@ -1299,7 +1299,7 @@ class RestItemsPutRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Gets ebay_titles
      *
-     * @return \ck/plenty-client\Model\ItemEbayTitle[]|null
+     * @return \ck\Model\ItemEbayTitle[]|null
      */
     public function getEbayTitles(): ?array
     {
@@ -1309,7 +1309,7 @@ class RestItemsPutRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Sets ebay_titles
      *
-     * @param \ck/plenty-client\Model\ItemEbayTitle[]|null $ebay_titles ebay_titles
+     * @param \ck\Model\ItemEbayTitle[]|null $ebay_titles ebay_titles
      *
      * @return $this
      */
@@ -1353,7 +1353,7 @@ class RestItemsPutRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Gets item_shipping_profiles
      *
-     * @return \ck/plenty-client\Model\ItemShippingProfiles[]|null
+     * @return \ck\Model\ItemShippingProfiles[]|null
      */
     public function getItemShippingProfiles(): ?array
     {
@@ -1363,7 +1363,7 @@ class RestItemsPutRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Sets item_shipping_profiles
      *
-     * @param \ck/plenty-client\Model\ItemShippingProfiles[]|null $item_shipping_profiles item_shipping_profiles
+     * @param \ck\Model\ItemShippingProfiles[]|null $item_shipping_profiles item_shipping_profiles
      *
      * @return $this
      */
@@ -1407,7 +1407,7 @@ class RestItemsPutRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Gets item_properties
      *
-     * @return \ck/plenty-client\Model\ItemProperty[]|null
+     * @return \ck\Model\ItemProperty[]|null
      */
     public function getItemProperties(): ?array
     {
@@ -1417,7 +1417,7 @@ class RestItemsPutRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Sets item_properties
      *
-     * @param \ck/plenty-client\Model\ItemProperty[]|null $item_properties item_properties
+     * @param \ck\Model\ItemProperty[]|null $item_properties item_properties
      *
      * @return $this
      */

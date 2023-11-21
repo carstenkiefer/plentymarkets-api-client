@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**corrections** | [**\ck/plenty-client\Model\VariationStockCorrection[]**](VariationStockCorrection.md) |  | [optional]
+**corrections** | [**\ck\Model\VariationStockCorrection[]**](VariationStockCorrection.md) |  | [optional]
 **variation_id** | **int** | The ID of the variation |
 **quantity** | **float** | The quantity of the variation |
 **storage_location_id** | **int** | The ID of the storage location |

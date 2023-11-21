@@ -3,7 +3,7 @@
  * HeaderSelector
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,12 +24,12 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client;
+namespace ck;
 
 /**
  * HeaderSelector Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

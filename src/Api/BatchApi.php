@@ -3,7 +3,7 @@
  * BatchApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * BatchApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -127,7 +127,7 @@ class BatchApi
      *
      * Make batch requests
      *
-     * @param  \ck/plenty-client\Model\RestBatchGetRequest|null $_rest_batch _rest_batch (optional)
+     * @param  \ck\Model\RestBatchGetRequest|null $_rest_batch _rest_batch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBatchGet'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -135,7 +135,7 @@ class BatchApi
      * @return object[]
      */
     public function restBatchGet(
-        ?\ck/plenty-client\Model\RestBatchGetRequest $_rest_batch = null,
+        ?\ck\Model\RestBatchGetRequest $_rest_batch = null,
         string $contentType = self::contentTypes['restBatchGet'][0]
     ): array
     {
@@ -148,7 +148,7 @@ class BatchApi
      *
      * Make batch requests
      *
-     * @param  \ck/plenty-client\Model\RestBatchGetRequest|null $_rest_batch (optional)
+     * @param  \ck\Model\RestBatchGetRequest|null $_rest_batch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBatchGet'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -156,7 +156,7 @@ class BatchApi
      * @return array of object[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBatchGetWithHttpInfo(
-        ?\ck/plenty-client\Model\RestBatchGetRequest $_rest_batch = null,
+        ?\ck\Model\RestBatchGetRequest $_rest_batch = null,
         string $contentType = self::contentTypes['restBatchGet'][0]
     ): array
     {
@@ -251,14 +251,14 @@ class BatchApi
      *
      * Make batch requests
      *
-     * @param  \ck/plenty-client\Model\RestBatchGetRequest|null $_rest_batch (optional)
+     * @param  \ck\Model\RestBatchGetRequest|null $_rest_batch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBatchGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restBatchGetAsync(
-        ?\ck/plenty-client\Model\RestBatchGetRequest $_rest_batch = null,
+        ?\ck\Model\RestBatchGetRequest $_rest_batch = null,
         string $contentType = self::contentTypes['restBatchGet'][0]
     ): PromiseInterface
     {
@@ -275,7 +275,7 @@ class BatchApi
      *
      * Make batch requests
      *
-     * @param  \ck/plenty-client\Model\RestBatchGetRequest|null $_rest_batch (optional)
+     * @param  \ck\Model\RestBatchGetRequest|null $_rest_batch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBatchGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -328,7 +328,7 @@ class BatchApi
     /**
      * Create request for operation 'restBatchGet'
      *
-     * @param  \ck/plenty-client\Model\RestBatchGetRequest|null $_rest_batch (optional)
+     * @param  \ck\Model\RestBatchGetRequest|null $_rest_batch (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBatchGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

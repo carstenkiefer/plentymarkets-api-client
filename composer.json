@@ -1,5 +1,4 @@
 {
-    "name": "carstenkiefer/plentymarkets-api-client",
     "description": "The plentymarkets REST API expands the functionality of the plentymarkets CMS and allows access to resources, i.e. data records, via unique URI paths",
     "keywords": [
         "openapitools",
@@ -32,10 +31,10 @@
         "phpunit/phpunit": "^9.0"
     },
     "autoload": {
-        "psr-4": { "ck/plenty-client\\" : "src/" }
+        "psr-4": { "ck\\" : "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "ck/plenty-client\\Test\\" : "tests/" }
+        "psr-4": { "ck\\Test\\" : "tests/" }
     },
     "scripts": {
         "test": [

@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestMessagesPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,13 +60,13 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     protected static array $openAPITypes = [
         'message' => 'string',
         'whispered' => 'bool',
-        'to' => '\ck/plenty-client\Model\MessageTo[]',
-        'linked_to' => '\ck/plenty-client\Model\MessageLinkedTo[]',
-        'meta_data' => '\ck/plenty-client\Model\MessageMetaData[]',
-        'from' => '\ck/plenty-client\Model\MessageFrom[]',
+        'to' => '\ck\Model\MessageTo[]',
+        'linked_to' => '\ck\Model\MessageLinkedTo[]',
+        'meta_data' => '\ck\Model\MessageMetaData[]',
+        'from' => '\ck\Model\MessageFrom[]',
         'tags' => 'object[]',
-        'referrer' => '\ck/plenty-client\Model\MessageReferrer[]',
-        'attachments' => '\ck/plenty-client\Model\Attachment[]',
+        'referrer' => '\ck\Model\MessageReferrer[]',
+        'attachments' => '\ck\Model\Attachment[]',
         'name' => 'string',
         'size' => 'int',
         'content_type' => 'string'
@@ -442,7 +442,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets to
      *
-     * @return \ck/plenty-client\Model\MessageTo[]
+     * @return \ck\Model\MessageTo[]
      */
     public function getTo(): array
     {
@@ -452,7 +452,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets to
      *
-     * @param \ck/plenty-client\Model\MessageTo[] $to to
+     * @param \ck\Model\MessageTo[] $to to
      *
      * @return $this
      */
@@ -469,7 +469,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets linked_to
      *
-     * @return \ck/plenty-client\Model\MessageLinkedTo[]|null
+     * @return \ck\Model\MessageLinkedTo[]|null
      */
     public function getLinkedTo(): ?array
     {
@@ -479,7 +479,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets linked_to
      *
-     * @param \ck/plenty-client\Model\MessageLinkedTo[]|null $linked_to linked_to
+     * @param \ck\Model\MessageLinkedTo[]|null $linked_to linked_to
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets meta_data
      *
-     * @return \ck/plenty-client\Model\MessageMetaData[]|null
+     * @return \ck\Model\MessageMetaData[]|null
      */
     public function getMetaData(): ?array
     {
@@ -506,7 +506,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets meta_data
      *
-     * @param \ck/plenty-client\Model\MessageMetaData[]|null $meta_data meta_data
+     * @param \ck\Model\MessageMetaData[]|null $meta_data meta_data
      *
      * @return $this
      */
@@ -523,7 +523,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets from
      *
-     * @return \ck/plenty-client\Model\MessageFrom[]
+     * @return \ck\Model\MessageFrom[]
      */
     public function getFrom(): array
     {
@@ -533,7 +533,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets from
      *
-     * @param \ck/plenty-client\Model\MessageFrom[] $from from
+     * @param \ck\Model\MessageFrom[] $from from
      *
      * @return $this
      */
@@ -577,7 +577,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets referrer
      *
-     * @return \ck/plenty-client\Model\MessageReferrer[]
+     * @return \ck\Model\MessageReferrer[]
      */
     public function getReferrer(): array
     {
@@ -587,7 +587,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets referrer
      *
-     * @param \ck/plenty-client\Model\MessageReferrer[] $referrer referrer
+     * @param \ck\Model\MessageReferrer[] $referrer referrer
      *
      * @return $this
      */
@@ -604,7 +604,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets attachments
      *
-     * @return \ck/plenty-client\Model\Attachment[]|null
+     * @return \ck\Model\Attachment[]|null
      */
     public function getAttachments(): ?array
     {
@@ -614,7 +614,7 @@ class RestMessagesPostRequest implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets attachments
      *
-     * @param \ck/plenty-client\Model\Attachment[]|null $attachments attachments
+     * @param \ck\Model\Attachment[]|null $attachments attachments
      *
      * @return $this
      */

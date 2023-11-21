@@ -3,7 +3,7 @@
  * BlogApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * BlogApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,11 +143,11 @@ class BlogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\BlogPost
+     * @return \ck\Model\BlogPost
      */
     public function restBlogsPostPost(
         string $contentType = self::contentTypes['restBlogsPostPost'][0]
-    ): \ck/plenty-client\Model\BlogPost
+    ): \ck\Model\BlogPost
     {
         list($response) = $this->restBlogsPostPostWithHttpInfo($contentType);
         return $response;
@@ -162,7 +162,7 @@ class BlogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\BlogPost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\BlogPost, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBlogsPostPostWithHttpInfo(
         string $contentType = self::contentTypes['restBlogsPostPost'][0]
@@ -207,23 +207,23 @@ class BlogApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\BlogPost' === '\SplFileObject') {
+                    if ('\ck\Model\BlogPost' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\BlogPost' !== 'string') {
+                        if ('\ck\Model\BlogPost' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\BlogPost', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\BlogPost', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\BlogPost';
+            $returnType = '\ck\Model\BlogPost';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -244,7 +244,7 @@ class BlogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\BlogPost',
+                        '\ck\Model\BlogPost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -290,7 +290,7 @@ class BlogApi
         string $contentType = self::contentTypes['restBlogsPostPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\BlogPost';
+        $returnType = '\ck\Model\BlogPost';
         $request = $this->restBlogsPostPostRequest($contentType);
 
         return $this->client
@@ -669,12 +669,12 @@ class BlogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\BlogPost
+     * @return \ck\Model\BlogPost
      */
     public function restBlogsPostPostIdGet(
         int $post_id,
         string $contentType = self::contentTypes['restBlogsPostPostIdGet'][0]
-    ): \ck/plenty-client\Model\BlogPost
+    ): \ck\Model\BlogPost
     {
         list($response) = $this->restBlogsPostPostIdGetWithHttpInfo($post_id, $contentType);
         return $response;
@@ -690,7 +690,7 @@ class BlogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\BlogPost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\BlogPost, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBlogsPostPostIdGetWithHttpInfo(
         int $post_id,
@@ -736,23 +736,23 @@ class BlogApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\BlogPost' === '\SplFileObject') {
+                    if ('\ck\Model\BlogPost' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\BlogPost' !== 'string') {
+                        if ('\ck\Model\BlogPost' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\BlogPost', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\BlogPost', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\BlogPost';
+            $returnType = '\ck\Model\BlogPost';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -773,7 +773,7 @@ class BlogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\BlogPost',
+                        '\ck\Model\BlogPost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -823,7 +823,7 @@ class BlogApi
         string $contentType = self::contentTypes['restBlogsPostPostIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\BlogPost';
+        $returnType = '\ck\Model\BlogPost';
         $request = $this->restBlogsPostPostIdGetRequest($post_id, $contentType);
 
         return $this->client
@@ -971,12 +971,12 @@ class BlogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\BlogPost
+     * @return \ck\Model\BlogPost
      */
     public function restBlogsPostPostIdPut(
         int $post_id,
         string $contentType = self::contentTypes['restBlogsPostPostIdPut'][0]
-    ): \ck/plenty-client\Model\BlogPost
+    ): \ck\Model\BlogPost
     {
         list($response) = $this->restBlogsPostPostIdPutWithHttpInfo($post_id, $contentType);
         return $response;
@@ -992,7 +992,7 @@ class BlogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\BlogPost, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\BlogPost, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBlogsPostPostIdPutWithHttpInfo(
         int $post_id,
@@ -1038,23 +1038,23 @@ class BlogApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\BlogPost' === '\SplFileObject') {
+                    if ('\ck\Model\BlogPost' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\BlogPost' !== 'string') {
+                        if ('\ck\Model\BlogPost' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\BlogPost', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\BlogPost', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\BlogPost';
+            $returnType = '\ck\Model\BlogPost';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1075,7 +1075,7 @@ class BlogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\BlogPost',
+                        '\ck\Model\BlogPost',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1125,7 +1125,7 @@ class BlogApi
         string $contentType = self::contentTypes['restBlogsPostPostIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\BlogPost';
+        $returnType = '\ck\Model\BlogPost';
         $request = $this->restBlogsPostPostIdPutRequest($post_id, $contentType);
 
         return $this->client
@@ -1272,7 +1272,7 @@ class BlogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\BlogPost[]
+     * @return \ck\Model\BlogPost[]
      */
     public function restBlogsPostsGet(
         string $contentType = self::contentTypes['restBlogsPostsGet'][0]
@@ -1291,7 +1291,7 @@ class BlogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\BlogPost[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\BlogPost[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBlogsPostsGetWithHttpInfo(
         string $contentType = self::contentTypes['restBlogsPostsGet'][0]
@@ -1336,23 +1336,23 @@ class BlogApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\BlogPost[]' === '\SplFileObject') {
+                    if ('\ck\Model\BlogPost[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\BlogPost[]' !== 'string') {
+                        if ('\ck\Model\BlogPost[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\BlogPost[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\BlogPost[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\BlogPost[]';
+            $returnType = '\ck\Model\BlogPost[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1373,7 +1373,7 @@ class BlogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\BlogPost[]',
+                        '\ck\Model\BlogPost[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1419,7 +1419,7 @@ class BlogApi
         string $contentType = self::contentTypes['restBlogsPostsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\BlogPost[]';
+        $returnType = '\ck\Model\BlogPost[]';
         $request = $this->restBlogsPostsGetRequest($contentType);
 
         return $this->client

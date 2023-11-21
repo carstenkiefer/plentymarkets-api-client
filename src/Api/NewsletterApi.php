@@ -3,7 +3,7 @@
  * NewsletterApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * NewsletterApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -191,7 +191,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Entry[]
+     * @return \ck\Model\Entry[]
      */
     public function restNewslettersDelete(
         string $contentType = self::contentTypes['restNewslettersDelete'][0]
@@ -210,7 +210,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Entry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Entry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersDeleteWithHttpInfo(
         string $contentType = self::contentTypes['restNewslettersDelete'][0]
@@ -255,23 +255,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Entry[]' === '\SplFileObject') {
+                    if ('\ck\Model\Entry[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Entry[]' !== 'string') {
+                        if ('\ck\Model\Entry[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Entry[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Entry[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Entry[]';
+            $returnType = '\ck\Model\Entry[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -292,7 +292,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Entry[]',
+                        '\ck\Model\Entry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -338,7 +338,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Entry[]';
+        $returnType = '\ck\Model\Entry[]';
         $request = $this->restNewslettersDeleteRequest($contentType);
 
         return $this->client
@@ -771,12 +771,12 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Entry
+     * @return \ck\Model\Entry
      */
     public function restNewslettersEntryIdDelete(
         int $entry_id,
         string $contentType = self::contentTypes['restNewslettersEntryIdDelete'][0]
-    ): \ck/plenty-client\Model\Entry
+    ): \ck\Model\Entry
     {
         list($response) = $this->restNewslettersEntryIdDeleteWithHttpInfo($entry_id, $contentType);
         return $response;
@@ -792,7 +792,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Entry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Entry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersEntryIdDeleteWithHttpInfo(
         int $entry_id,
@@ -838,23 +838,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Entry' === '\SplFileObject') {
+                    if ('\ck\Model\Entry' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Entry' !== 'string') {
+                        if ('\ck\Model\Entry' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Entry', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Entry', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Entry';
+            $returnType = '\ck\Model\Entry';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -875,7 +875,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Entry',
+                        '\ck\Model\Entry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -925,7 +925,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersEntryIdDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Entry';
+        $returnType = '\ck\Model\Entry';
         $request = $this->restNewslettersEntryIdDeleteRequest($entry_id, $contentType);
 
         return $this->client
@@ -1073,12 +1073,12 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Entry
+     * @return \ck\Model\Entry
      */
     public function restNewslettersEntryIdGet(
         int $entry_id,
         string $contentType = self::contentTypes['restNewslettersEntryIdGet'][0]
-    ): \ck/plenty-client\Model\Entry
+    ): \ck\Model\Entry
     {
         list($response) = $this->restNewslettersEntryIdGetWithHttpInfo($entry_id, $contentType);
         return $response;
@@ -1094,7 +1094,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Entry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Entry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersEntryIdGetWithHttpInfo(
         int $entry_id,
@@ -1140,23 +1140,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Entry' === '\SplFileObject') {
+                    if ('\ck\Model\Entry' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Entry' !== 'string') {
+                        if ('\ck\Model\Entry' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Entry', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Entry', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Entry';
+            $returnType = '\ck\Model\Entry';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1177,7 +1177,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Entry',
+                        '\ck\Model\Entry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1227,7 +1227,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersEntryIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Entry';
+        $returnType = '\ck\Model\Entry';
         $request = $this->restNewslettersEntryIdGetRequest($entry_id, $contentType);
 
         return $this->client
@@ -1379,7 +1379,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Entry
+     * @return \ck\Model\Entry
      */
     public function restNewslettersEntryIdPut(
         int $entry_id,
@@ -1388,7 +1388,7 @@ class NewsletterApi
         ?string $body = null,
         ?string $kind = null,
         string $contentType = self::contentTypes['restNewslettersEntryIdPut'][0]
-    ): \ck/plenty-client\Model\Entry
+    ): \ck\Model\Entry
     {
         list($response) = $this->restNewslettersEntryIdPutWithHttpInfo($entry_id, $folder_id, $subject, $body, $kind, $contentType);
         return $response;
@@ -1408,7 +1408,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Entry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Entry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersEntryIdPutWithHttpInfo(
         int $entry_id,
@@ -1458,23 +1458,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Entry' === '\SplFileObject') {
+                    if ('\ck\Model\Entry' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Entry' !== 'string') {
+                        if ('\ck\Model\Entry' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Entry', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Entry', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Entry';
+            $returnType = '\ck\Model\Entry';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1495,7 +1495,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Entry',
+                        '\ck\Model\Entry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1561,7 +1561,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersEntryIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Entry';
+        $returnType = '\ck\Model\Entry';
         $request = $this->restNewslettersEntryIdPutRequest($entry_id, $folder_id, $subject, $body, $kind, $contentType);
 
         return $this->client
@@ -1762,7 +1762,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Folder[]
+     * @return \ck\Model\Folder[]
      */
     public function restNewslettersFoldersDelete(
         string $contentType = self::contentTypes['restNewslettersFoldersDelete'][0]
@@ -1781,7 +1781,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Folder[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Folder[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersDeleteWithHttpInfo(
         string $contentType = self::contentTypes['restNewslettersFoldersDelete'][0]
@@ -1826,23 +1826,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Folder[]' === '\SplFileObject') {
+                    if ('\ck\Model\Folder[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Folder[]' !== 'string') {
+                        if ('\ck\Model\Folder[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Folder[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Folder[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Folder[]';
+            $returnType = '\ck\Model\Folder[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1863,7 +1863,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Folder[]',
+                        '\ck\Model\Folder[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1909,7 +1909,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersFoldersDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Folder[]';
+        $returnType = '\ck\Model\Folder[]';
         $request = $this->restNewslettersFoldersDeleteRequest($contentType);
 
         return $this->client
@@ -2040,12 +2040,12 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Folder
+     * @return \ck\Model\Folder
      */
     public function restNewslettersFoldersFolderIdDelete(
         int $folder_id,
         string $contentType = self::contentTypes['restNewslettersFoldersFolderIdDelete'][0]
-    ): \ck/plenty-client\Model\Folder
+    ): \ck\Model\Folder
     {
         list($response) = $this->restNewslettersFoldersFolderIdDeleteWithHttpInfo($folder_id, $contentType);
         return $response;
@@ -2061,7 +2061,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Folder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Folder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersFolderIdDeleteWithHttpInfo(
         int $folder_id,
@@ -2107,23 +2107,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Folder' === '\SplFileObject') {
+                    if ('\ck\Model\Folder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Folder' !== 'string') {
+                        if ('\ck\Model\Folder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Folder', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Folder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Folder';
+            $returnType = '\ck\Model\Folder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2144,7 +2144,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Folder',
+                        '\ck\Model\Folder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2194,7 +2194,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersFoldersFolderIdDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Folder';
+        $returnType = '\ck\Model\Folder';
         $request = $this->restNewslettersFoldersFolderIdDeleteRequest($folder_id, $contentType);
 
         return $this->client
@@ -2342,12 +2342,12 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Folder
+     * @return \ck\Model\Folder
      */
     public function restNewslettersFoldersFolderIdGet(
         int $folder_id,
         string $contentType = self::contentTypes['restNewslettersFoldersFolderIdGet'][0]
-    ): \ck/plenty-client\Model\Folder
+    ): \ck\Model\Folder
     {
         list($response) = $this->restNewslettersFoldersFolderIdGetWithHttpInfo($folder_id, $contentType);
         return $response;
@@ -2363,7 +2363,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Folder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Folder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersFolderIdGetWithHttpInfo(
         int $folder_id,
@@ -2409,23 +2409,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Folder' === '\SplFileObject') {
+                    if ('\ck\Model\Folder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Folder' !== 'string') {
+                        if ('\ck\Model\Folder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Folder', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Folder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Folder';
+            $returnType = '\ck\Model\Folder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2446,7 +2446,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Folder',
+                        '\ck\Model\Folder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2496,7 +2496,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersFoldersFolderIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Folder';
+        $returnType = '\ck\Model\Folder';
         $request = $this->restNewslettersFoldersFolderIdGetRequest($folder_id, $contentType);
 
         return $this->client
@@ -2649,7 +2649,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Folder
+     * @return \ck\Model\Folder
      */
     public function restNewslettersFoldersFolderIdPut(
         int $folder_id,
@@ -2659,7 +2659,7 @@ class NewsletterApi
         ?bool $is_deletable = null,
         ?bool $is_selectable = null,
         string $contentType = self::contentTypes['restNewslettersFoldersFolderIdPut'][0]
-    ): \ck/plenty-client\Model\Folder
+    ): \ck\Model\Folder
     {
         list($response) = $this->restNewslettersFoldersFolderIdPutWithHttpInfo($folder_id, $name, $position, $client_ids, $is_deletable, $is_selectable, $contentType);
         return $response;
@@ -2680,7 +2680,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Folder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Folder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersFolderIdPutWithHttpInfo(
         int $folder_id,
@@ -2731,23 +2731,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Folder' === '\SplFileObject') {
+                    if ('\ck\Model\Folder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Folder' !== 'string') {
+                        if ('\ck\Model\Folder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Folder', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Folder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Folder';
+            $returnType = '\ck\Model\Folder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2768,7 +2768,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Folder',
+                        '\ck\Model\Folder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2838,7 +2838,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersFoldersFolderIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Folder';
+        $returnType = '\ck\Model\Folder';
         $request = $this->restNewslettersFoldersFolderIdPutRequest($folder_id, $name, $position, $client_ids, $is_deletable, $is_selectable, $contentType);
 
         return $this->client
@@ -3046,7 +3046,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Recipient[]
+     * @return \ck\Model\Recipient[]
      */
     public function restNewslettersFoldersFolderIdRecipientsGet(
         int $folder_id,
@@ -3067,7 +3067,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersFolderIdRecipientsGetWithHttpInfo(
         int $folder_id,
@@ -3113,23 +3113,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Recipient[]' === '\SplFileObject') {
+                    if ('\ck\Model\Recipient[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Recipient[]' !== 'string') {
+                        if ('\ck\Model\Recipient[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Recipient[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Recipient[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Recipient[]';
+            $returnType = '\ck\Model\Recipient[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3150,7 +3150,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Recipient[]',
+                        '\ck\Model\Recipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3200,7 +3200,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersFoldersFolderIdRecipientsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Recipient[]';
+        $returnType = '\ck\Model\Recipient[]';
         $request = $this->restNewslettersFoldersFolderIdRecipientsGetRequest($folder_id, $contentType);
 
         return $this->client
@@ -3348,7 +3348,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Recipient[]
+     * @return \ck\Model\Recipient[]
      */
     public function restNewslettersFoldersGet(
         int $folder_id,
@@ -3369,7 +3369,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersGetWithHttpInfo(
         int $folder_id,
@@ -3415,23 +3415,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Recipient[]' === '\SplFileObject') {
+                    if ('\ck\Model\Recipient[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Recipient[]' !== 'string') {
+                        if ('\ck\Model\Recipient[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Recipient[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Recipient[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Recipient[]';
+            $returnType = '\ck\Model\Recipient[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3452,7 +3452,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Recipient[]',
+                        '\ck\Model\Recipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3502,7 +3502,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersFoldersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Recipient[]';
+        $returnType = '\ck\Model\Recipient[]';
         $request = $this->restNewslettersFoldersGetRequest($folder_id, $contentType);
 
         return $this->client
@@ -3651,12 +3651,12 @@ class NewsletterApi
      * @param  int|null $position The position of the newsletter folder (optional)
      * @param  bool|null $is_deletable Flag that indicates if the newsletter folder can be deleted. Default value of is deletable is 1. The folders &#39;Customers&#39; and &#39;Interested parties&#39; are available by default and cannot be deleted. (optional)
      * @param  bool|null $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders _rest_newsletters_folders (optional)
+     * @param  \ck\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders _rest_newsletters_folders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersFoldersPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Folder
+     * @return \ck\Model\Folder
      */
     public function restNewslettersFoldersPost(
         ?int $id = null,
@@ -3664,9 +3664,9 @@ class NewsletterApi
         ?int $position = null,
         ?bool $is_deletable = null,
         ?bool $is_selectable = null,
-        ?\ck/plenty-client\Model\RestNewslettersFoldersPostRequest $_rest_newsletters_folders = null,
+        ?\ck\Model\RestNewslettersFoldersPostRequest $_rest_newsletters_folders = null,
         string $contentType = self::contentTypes['restNewslettersFoldersPost'][0]
-    ): \ck/plenty-client\Model\Folder
+    ): \ck\Model\Folder
     {
         list($response) = $this->restNewslettersFoldersPostWithHttpInfo($id, $name, $position, $is_deletable, $is_selectable, $_rest_newsletters_folders, $contentType);
         return $response;
@@ -3682,12 +3682,12 @@ class NewsletterApi
      * @param  int|null $position The position of the newsletter folder (optional)
      * @param  bool|null $is_deletable Flag that indicates if the newsletter folder can be deleted. Default value of is deletable is 1. The folders &#39;Customers&#39; and &#39;Interested parties&#39; are available by default and cannot be deleted. (optional)
      * @param  bool|null $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders (optional)
+     * @param  \ck\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersFoldersPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Folder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Folder, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersFoldersPostWithHttpInfo(
         ?int $id = null,
@@ -3695,7 +3695,7 @@ class NewsletterApi
         ?int $position = null,
         ?bool $is_deletable = null,
         ?bool $is_selectable = null,
-        ?\ck/plenty-client\Model\RestNewslettersFoldersPostRequest $_rest_newsletters_folders = null,
+        ?\ck\Model\RestNewslettersFoldersPostRequest $_rest_newsletters_folders = null,
         string $contentType = self::contentTypes['restNewslettersFoldersPost'][0]
     ): array
     {
@@ -3738,23 +3738,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Folder' === '\SplFileObject') {
+                    if ('\ck\Model\Folder' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Folder' !== 'string') {
+                        if ('\ck\Model\Folder' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Folder', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Folder', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Folder';
+            $returnType = '\ck\Model\Folder';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3775,7 +3775,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Folder',
+                        '\ck\Model\Folder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3795,7 +3795,7 @@ class NewsletterApi
      * @param  int|null $position The position of the newsletter folder (optional)
      * @param  bool|null $is_deletable Flag that indicates if the newsletter folder can be deleted. Default value of is deletable is 1. The folders &#39;Customers&#39; and &#39;Interested parties&#39; are available by default and cannot be deleted. (optional)
      * @param  bool|null $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders (optional)
+     * @param  \ck\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersFoldersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3807,7 +3807,7 @@ class NewsletterApi
         ?int $position = null,
         ?bool $is_deletable = null,
         ?bool $is_selectable = null,
-        ?\ck/plenty-client\Model\RestNewslettersFoldersPostRequest $_rest_newsletters_folders = null,
+        ?\ck\Model\RestNewslettersFoldersPostRequest $_rest_newsletters_folders = null,
         string $contentType = self::contentTypes['restNewslettersFoldersPost'][0]
     ): PromiseInterface
     {
@@ -3829,7 +3829,7 @@ class NewsletterApi
      * @param  int|null $position The position of the newsletter folder (optional)
      * @param  bool|null $is_deletable Flag that indicates if the newsletter folder can be deleted. Default value of is deletable is 1. The folders &#39;Customers&#39; and &#39;Interested parties&#39; are available by default and cannot be deleted. (optional)
      * @param  bool|null $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders (optional)
+     * @param  \ck\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersFoldersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3845,7 +3845,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersFoldersPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Folder';
+        $returnType = '\ck\Model\Folder';
         $request = $this->restNewslettersFoldersPostRequest($id, $name, $position, $is_deletable, $is_selectable, $_rest_newsletters_folders, $contentType);
 
         return $this->client
@@ -3892,7 +3892,7 @@ class NewsletterApi
      * @param  int|null $position The position of the newsletter folder (optional)
      * @param  bool|null $is_deletable Flag that indicates if the newsletter folder can be deleted. Default value of is deletable is 1. The folders &#39;Customers&#39; and &#39;Interested parties&#39; are available by default and cannot be deleted. (optional)
      * @param  bool|null $is_selectable Flag that indicates if the newsletter folder can be selected by customers in the online store. If it is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders (optional)
+     * @param  \ck\Model\RestNewslettersFoldersPostRequest|null $_rest_newsletters_folders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersFoldersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4045,7 +4045,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Entry[]
+     * @return \ck\Model\Entry[]
      */
     public function restNewslettersGet(
         string $contentType = self::contentTypes['restNewslettersGet'][0]
@@ -4064,7 +4064,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Entry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Entry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersGetWithHttpInfo(
         string $contentType = self::contentTypes['restNewslettersGet'][0]
@@ -4109,23 +4109,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Entry[]' === '\SplFileObject') {
+                    if ('\ck\Model\Entry[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Entry[]' !== 'string') {
+                        if ('\ck\Model\Entry[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Entry[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Entry[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Entry[]';
+            $returnType = '\ck\Model\Entry[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4146,7 +4146,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Entry[]',
+                        '\ck\Model\Entry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4192,7 +4192,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Entry[]';
+        $returnType = '\ck\Model\Entry[]';
         $request = $this->restNewslettersGetRequest($contentType);
 
         return $this->client
@@ -4329,7 +4329,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+     * @return \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
      */
     public function restNewslettersListRecipientsGet(
         int $recipient_id,
@@ -4340,7 +4340,7 @@ class NewsletterApi
         ?bool $is_confirmed = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restNewslettersListRecipientsGet'][0]
-    ): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+    ): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
     {
         list($response) = $this->restNewslettersListRecipientsGetWithHttpInfo($recipient_id, $columns, $page, $items_per_page, $folder_id, $is_confirmed, $with, $contentType);
         return $response;
@@ -4362,7 +4362,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersListRecipientsGetWithHttpInfo(
         int $recipient_id,
@@ -4414,23 +4414,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
+            $returnType = '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4451,7 +4451,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response',
+                        '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4525,7 +4525,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersListRecipientsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
+        $returnType = '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
         $request = $this->restNewslettersListRecipientsGetRequest($recipient_id, $columns, $page, $items_per_page, $folder_id, $is_confirmed, $with, $contentType);
 
         return $this->client
@@ -4744,20 +4744,20 @@ class NewsletterApi
      * @param  string|null $subject The subject of the newsletter entry (optional)
      * @param  string|null $body The body of the newsletter entry (optional)
      * @param  string|null $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#39;plain&#39;, &#39;html&#39;]. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersPostRequest|null $_rest_newsletters _rest_newsletters (optional)
+     * @param  \ck\Model\RestNewslettersPostRequest|null $_rest_newsletters _rest_newsletters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Entry
+     * @return \ck\Model\Entry
      */
     public function restNewslettersPost(
         ?string $subject = null,
         ?string $body = null,
         ?string $kind = null,
-        ?\ck/plenty-client\Model\RestNewslettersPostRequest $_rest_newsletters = null,
+        ?\ck\Model\RestNewslettersPostRequest $_rest_newsletters = null,
         string $contentType = self::contentTypes['restNewslettersPost'][0]
-    ): \ck/plenty-client\Model\Entry
+    ): \ck\Model\Entry
     {
         list($response) = $this->restNewslettersPostWithHttpInfo($subject, $body, $kind, $_rest_newsletters, $contentType);
         return $response;
@@ -4771,18 +4771,18 @@ class NewsletterApi
      * @param  string|null $subject The subject of the newsletter entry (optional)
      * @param  string|null $body The body of the newsletter entry (optional)
      * @param  string|null $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#39;plain&#39;, &#39;html&#39;]. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersPostRequest|null $_rest_newsletters (optional)
+     * @param  \ck\Model\RestNewslettersPostRequest|null $_rest_newsletters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Entry, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Entry, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersPostWithHttpInfo(
         ?string $subject = null,
         ?string $body = null,
         ?string $kind = null,
-        ?\ck/plenty-client\Model\RestNewslettersPostRequest $_rest_newsletters = null,
+        ?\ck\Model\RestNewslettersPostRequest $_rest_newsletters = null,
         string $contentType = self::contentTypes['restNewslettersPost'][0]
     ): array
     {
@@ -4825,23 +4825,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Entry' === '\SplFileObject') {
+                    if ('\ck\Model\Entry' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Entry' !== 'string') {
+                        if ('\ck\Model\Entry' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Entry', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Entry', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Entry';
+            $returnType = '\ck\Model\Entry';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4862,7 +4862,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Entry',
+                        '\ck\Model\Entry',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4880,7 +4880,7 @@ class NewsletterApi
      * @param  string|null $subject The subject of the newsletter entry (optional)
      * @param  string|null $body The body of the newsletter entry (optional)
      * @param  string|null $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#39;plain&#39;, &#39;html&#39;]. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersPostRequest|null $_rest_newsletters (optional)
+     * @param  \ck\Model\RestNewslettersPostRequest|null $_rest_newsletters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4890,7 +4890,7 @@ class NewsletterApi
         ?string $subject = null,
         ?string $body = null,
         ?string $kind = null,
-        ?\ck/plenty-client\Model\RestNewslettersPostRequest $_rest_newsletters = null,
+        ?\ck\Model\RestNewslettersPostRequest $_rest_newsletters = null,
         string $contentType = self::contentTypes['restNewslettersPost'][0]
     ): PromiseInterface
     {
@@ -4910,7 +4910,7 @@ class NewsletterApi
      * @param  string|null $subject The subject of the newsletter entry (optional)
      * @param  string|null $body The body of the newsletter entry (optional)
      * @param  string|null $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#39;plain&#39;, &#39;html&#39;]. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersPostRequest|null $_rest_newsletters (optional)
+     * @param  \ck\Model\RestNewslettersPostRequest|null $_rest_newsletters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4924,7 +4924,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Entry';
+        $returnType = '\ck\Model\Entry';
         $request = $this->restNewslettersPostRequest($subject, $body, $kind, $_rest_newsletters, $contentType);
 
         return $this->client
@@ -4969,7 +4969,7 @@ class NewsletterApi
      * @param  string|null $subject The subject of the newsletter entry (optional)
      * @param  string|null $body The body of the newsletter entry (optional)
      * @param  string|null $kind The type of the entry. The content can be saved as plain text or in HTML format. Possible values: [&#39;plain&#39;, &#39;html&#39;]. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersPostRequest|null $_rest_newsletters (optional)
+     * @param  \ck\Model\RestNewslettersPostRequest|null $_rest_newsletters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5100,7 +5100,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Recipient[]
+     * @return \ck\Model\Recipient[]
      */
     public function restNewslettersRecipientsDelete(
         string $contentType = self::contentTypes['restNewslettersRecipientsDelete'][0]
@@ -5119,7 +5119,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsDeleteWithHttpInfo(
         string $contentType = self::contentTypes['restNewslettersRecipientsDelete'][0]
@@ -5164,23 +5164,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Recipient[]' === '\SplFileObject') {
+                    if ('\ck\Model\Recipient[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Recipient[]' !== 'string') {
+                        if ('\ck\Model\Recipient[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Recipient[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Recipient[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Recipient[]';
+            $returnType = '\ck\Model\Recipient[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5201,7 +5201,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Recipient[]',
+                        '\ck\Model\Recipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5247,7 +5247,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersRecipientsDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Recipient[]';
+        $returnType = '\ck\Model\Recipient[]';
         $request = $this->restNewslettersRecipientsDeleteRequest($contentType);
 
         return $this->client
@@ -5380,7 +5380,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Recipient[]
+     * @return \ck\Model\Recipient[]
      */
     public function restNewslettersRecipientsGet(
         ?string $email = null,
@@ -5405,7 +5405,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsGetWithHttpInfo(
         ?string $email = null,
@@ -5453,23 +5453,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Recipient[]' === '\SplFileObject') {
+                    if ('\ck\Model\Recipient[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Recipient[]' !== 'string') {
+                        if ('\ck\Model\Recipient[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Recipient[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Recipient[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Recipient[]';
+            $returnType = '\ck\Model\Recipient[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5490,7 +5490,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Recipient[]',
+                        '\ck\Model\Recipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5548,7 +5548,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersRecipientsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Recipient[]';
+        $returnType = '\ck\Model\Recipient[]';
         $request = $this->restNewslettersRecipientsGetRequest($email, $folder_id, $recipient_id, $contentType);
 
         return $this->client
@@ -5717,12 +5717,12 @@ class NewsletterApi
      * @param  bool|null $is_frontend Value that indicates if the REST call was retrieved from the front end. Possible values are: &#39;true&#39; or &#39;false&#39;. True &#x3D; The REST call was retrieved from the front end. False &#x3D; The REST call was not retrieved from the front end. (optional)
      * @param  bool|null $ignore_visibility Value that indicates if the REST call considers folders without visibility. Possible value: &#39;true&#39;. If the value &#39;true&#39; is set, the folder visibility will be ignored. This means that both visible and invisible folders will be listed depending on the folder IDs entered in the REST call. (optional)
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients _rest_newsletters_recipients (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients _rest_newsletters_recipients (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Recipient[]
+     * @return \ck\Model\Recipient[]
      */
     public function restNewslettersRecipientsPost(
         ?string $email = null,
@@ -5732,7 +5732,7 @@ class NewsletterApi
         ?bool $is_frontend = null,
         ?bool $ignore_visibility = null,
         ?string $ip_address = null,
-        ?\ck/plenty-client\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients = null,
+        ?\ck\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients = null,
         string $contentType = self::contentTypes['restNewslettersRecipientsPost'][0]
     ): array
     {
@@ -5752,12 +5752,12 @@ class NewsletterApi
      * @param  bool|null $is_frontend Value that indicates if the REST call was retrieved from the front end. Possible values are: &#39;true&#39; or &#39;false&#39;. True &#x3D; The REST call was retrieved from the front end. False &#x3D; The REST call was not retrieved from the front end. (optional)
      * @param  bool|null $ignore_visibility Value that indicates if the REST call considers folders without visibility. Possible value: &#39;true&#39;. If the value &#39;true&#39; is set, the folder visibility will be ignored. This means that both visible and invisible folders will be listed depending on the folder IDs entered in the REST call. (optional)
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Recipient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsPostWithHttpInfo(
         ?string $email = null,
@@ -5767,7 +5767,7 @@ class NewsletterApi
         ?bool $is_frontend = null,
         ?bool $ignore_visibility = null,
         ?string $ip_address = null,
-        ?\ck/plenty-client\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients = null,
+        ?\ck\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients = null,
         string $contentType = self::contentTypes['restNewslettersRecipientsPost'][0]
     ): array
     {
@@ -5810,23 +5810,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Recipient[]' === '\SplFileObject') {
+                    if ('\ck\Model\Recipient[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Recipient[]' !== 'string') {
+                        if ('\ck\Model\Recipient[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Recipient[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Recipient[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Recipient[]';
+            $returnType = '\ck\Model\Recipient[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5847,7 +5847,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Recipient[]',
+                        '\ck\Model\Recipient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5869,7 +5869,7 @@ class NewsletterApi
      * @param  bool|null $is_frontend Value that indicates if the REST call was retrieved from the front end. Possible values are: &#39;true&#39; or &#39;false&#39;. True &#x3D; The REST call was retrieved from the front end. False &#x3D; The REST call was not retrieved from the front end. (optional)
      * @param  bool|null $ignore_visibility Value that indicates if the REST call considers folders without visibility. Possible value: &#39;true&#39;. If the value &#39;true&#39; is set, the folder visibility will be ignored. This means that both visible and invisible folders will be listed depending on the folder IDs entered in the REST call. (optional)
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5883,7 +5883,7 @@ class NewsletterApi
         ?bool $is_frontend = null,
         ?bool $ignore_visibility = null,
         ?string $ip_address = null,
-        ?\ck/plenty-client\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients = null,
+        ?\ck\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients = null,
         string $contentType = self::contentTypes['restNewslettersRecipientsPost'][0]
     ): PromiseInterface
     {
@@ -5907,7 +5907,7 @@ class NewsletterApi
      * @param  bool|null $is_frontend Value that indicates if the REST call was retrieved from the front end. Possible values are: &#39;true&#39; or &#39;false&#39;. True &#x3D; The REST call was retrieved from the front end. False &#x3D; The REST call was not retrieved from the front end. (optional)
      * @param  bool|null $ignore_visibility Value that indicates if the REST call considers folders without visibility. Possible value: &#39;true&#39;. If the value &#39;true&#39; is set, the folder visibility will be ignored. This means that both visible and invisible folders will be listed depending on the folder IDs entered in the REST call. (optional)
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5925,7 +5925,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersRecipientsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Recipient[]';
+        $returnType = '\ck\Model\Recipient[]';
         $request = $this->restNewslettersRecipientsPostRequest($email, $first_name, $last_name, $folder_ids, $is_frontend, $ignore_visibility, $ip_address, $_rest_newsletters_recipients, $contentType);
 
         return $this->client
@@ -5974,7 +5974,7 @@ class NewsletterApi
      * @param  bool|null $is_frontend Value that indicates if the REST call was retrieved from the front end. Possible values are: &#39;true&#39; or &#39;false&#39;. True &#x3D; The REST call was retrieved from the front end. False &#x3D; The REST call was not retrieved from the front end. (optional)
      * @param  bool|null $ignore_visibility Value that indicates if the REST call considers folders without visibility. Possible value: &#39;true&#39;. If the value &#39;true&#39; is set, the folder visibility will be ignored. This means that both visible and invisible folders will be listed depending on the folder IDs entered in the REST call. (optional)
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6150,12 +6150,12 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Recipient
+     * @return \ck\Model\Recipient
      */
     public function restNewslettersRecipientsRecipientIdDelete(
         int $recipient_id,
         string $contentType = self::contentTypes['restNewslettersRecipientsRecipientIdDelete'][0]
-    ): \ck/plenty-client\Model\Recipient
+    ): \ck\Model\Recipient
     {
         list($response) = $this->restNewslettersRecipientsRecipientIdDeleteWithHttpInfo($recipient_id, $contentType);
         return $response;
@@ -6171,7 +6171,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Recipient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Recipient, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsRecipientIdDeleteWithHttpInfo(
         int $recipient_id,
@@ -6217,23 +6217,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Recipient' === '\SplFileObject') {
+                    if ('\ck\Model\Recipient' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Recipient' !== 'string') {
+                        if ('\ck\Model\Recipient' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Recipient', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Recipient', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Recipient';
+            $returnType = '\ck\Model\Recipient';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6254,7 +6254,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Recipient',
+                        '\ck\Model\Recipient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6304,7 +6304,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersRecipientsRecipientIdDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Recipient';
+        $returnType = '\ck\Model\Recipient';
         $request = $this->restNewslettersRecipientsRecipientIdDeleteRequest($recipient_id, $contentType);
 
         return $this->client
@@ -6452,12 +6452,12 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Recipient
+     * @return \ck\Model\Recipient
      */
     public function restNewslettersRecipientsRecipientIdGet(
         int $recipient_id,
         string $contentType = self::contentTypes['restNewslettersRecipientsRecipientIdGet'][0]
-    ): \ck/plenty-client\Model\Recipient
+    ): \ck\Model\Recipient
     {
         list($response) = $this->restNewslettersRecipientsRecipientIdGetWithHttpInfo($recipient_id, $contentType);
         return $response;
@@ -6473,7 +6473,7 @@ class NewsletterApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Recipient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Recipient, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsRecipientIdGetWithHttpInfo(
         int $recipient_id,
@@ -6519,23 +6519,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Recipient' === '\SplFileObject') {
+                    if ('\ck\Model\Recipient' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Recipient' !== 'string') {
+                        if ('\ck\Model\Recipient' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Recipient', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Recipient', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Recipient';
+            $returnType = '\ck\Model\Recipient';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6556,7 +6556,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Recipient',
+                        '\ck\Model\Recipient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6606,7 +6606,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersRecipientsRecipientIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Recipient';
+        $returnType = '\ck\Model\Recipient';
         $request = $this->restNewslettersRecipientsRecipientIdGetRequest($recipient_id, $contentType);
 
         return $this->client
@@ -6758,12 +6758,12 @@ class NewsletterApi
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
      * @param  string|null $birthday The customer birthday as Date string (e.g. &#39;1982-11-24&#39;, &#39;1982/11/24&#39; or &#39;24.11.1982&#39;) (optional)
      * @param  string|null $gender The gender of the customer, one of the following values: &#39;m&#39;,&#39;f&#39;,&#39;d&#39;. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id _rest_newsletters_recipients_recipient_id (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id _rest_newsletters_recipients_recipient_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsRecipientIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Recipient
+     * @return \ck\Model\Recipient
      */
     public function restNewslettersRecipientsRecipientIdPut(
         int $recipient_id,
@@ -6775,9 +6775,9 @@ class NewsletterApi
         ?string $ip_address = null,
         ?string $birthday = null,
         ?string $gender = null,
-        ?\ck/plenty-client\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients_recipient_id = null,
+        ?\ck\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients_recipient_id = null,
         string $contentType = self::contentTypes['restNewslettersRecipientsRecipientIdPut'][0]
-    ): \ck/plenty-client\Model\Recipient
+    ): \ck\Model\Recipient
     {
         list($response) = $this->restNewslettersRecipientsRecipientIdPutWithHttpInfo($recipient_id, $email, $first_name, $last_name, $folder_ids, $folder_id, $ip_address, $birthday, $gender, $_rest_newsletters_recipients_recipient_id, $contentType);
         return $response;
@@ -6797,12 +6797,12 @@ class NewsletterApi
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
      * @param  string|null $birthday The customer birthday as Date string (e.g. &#39;1982-11-24&#39;, &#39;1982/11/24&#39; or &#39;24.11.1982&#39;) (optional)
      * @param  string|null $gender The gender of the customer, one of the following values: &#39;m&#39;,&#39;f&#39;,&#39;d&#39;. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsRecipientIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Recipient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Recipient, HTTP status code, HTTP response headers (array of strings)
      */
     public function restNewslettersRecipientsRecipientIdPutWithHttpInfo(
         int $recipient_id,
@@ -6814,7 +6814,7 @@ class NewsletterApi
         ?string $ip_address = null,
         ?string $birthday = null,
         ?string $gender = null,
-        ?\ck/plenty-client\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients_recipient_id = null,
+        ?\ck\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients_recipient_id = null,
         string $contentType = self::contentTypes['restNewslettersRecipientsRecipientIdPut'][0]
     ): array
     {
@@ -6857,23 +6857,23 @@ class NewsletterApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Recipient' === '\SplFileObject') {
+                    if ('\ck\Model\Recipient' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Recipient' !== 'string') {
+                        if ('\ck\Model\Recipient' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Recipient', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Recipient', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Recipient';
+            $returnType = '\ck\Model\Recipient';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6894,7 +6894,7 @@ class NewsletterApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Recipient',
+                        '\ck\Model\Recipient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6918,7 +6918,7 @@ class NewsletterApi
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
      * @param  string|null $birthday The customer birthday as Date string (e.g. &#39;1982-11-24&#39;, &#39;1982/11/24&#39; or &#39;24.11.1982&#39;) (optional)
      * @param  string|null $gender The gender of the customer, one of the following values: &#39;m&#39;,&#39;f&#39;,&#39;d&#39;. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsRecipientIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6934,7 +6934,7 @@ class NewsletterApi
         ?string $ip_address = null,
         ?string $birthday = null,
         ?string $gender = null,
-        ?\ck/plenty-client\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients_recipient_id = null,
+        ?\ck\Model\RestNewslettersRecipientsPostRequest $_rest_newsletters_recipients_recipient_id = null,
         string $contentType = self::contentTypes['restNewslettersRecipientsRecipientIdPut'][0]
     ): PromiseInterface
     {
@@ -6960,7 +6960,7 @@ class NewsletterApi
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
      * @param  string|null $birthday The customer birthday as Date string (e.g. &#39;1982-11-24&#39;, &#39;1982/11/24&#39; or &#39;24.11.1982&#39;) (optional)
      * @param  string|null $gender The gender of the customer, one of the following values: &#39;m&#39;,&#39;f&#39;,&#39;d&#39;. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsRecipientIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6980,7 +6980,7 @@ class NewsletterApi
         string $contentType = self::contentTypes['restNewslettersRecipientsRecipientIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Recipient';
+        $returnType = '\ck\Model\Recipient';
         $request = $this->restNewslettersRecipientsRecipientIdPutRequest($recipient_id, $email, $first_name, $last_name, $folder_ids, $folder_id, $ip_address, $birthday, $gender, $_rest_newsletters_recipients_recipient_id, $contentType);
 
         return $this->client
@@ -7031,7 +7031,7 @@ class NewsletterApi
      * @param  string|null $ip_address The IP address from where the customer has confirmed the newsletter (optional)
      * @param  string|null $birthday The customer birthday as Date string (e.g. &#39;1982-11-24&#39;, &#39;1982/11/24&#39; or &#39;24.11.1982&#39;) (optional)
      * @param  string|null $gender The gender of the customer, one of the following values: &#39;m&#39;,&#39;f&#39;,&#39;d&#39;. (optional)
-     * @param  \ck/plenty-client\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id (optional)
+     * @param  \ck\Model\RestNewslettersRecipientsPostRequest|null $_rest_newsletters_recipients_recipient_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restNewslettersRecipientsRecipientIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

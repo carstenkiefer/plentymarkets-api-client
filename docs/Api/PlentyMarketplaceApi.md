@@ -1,4 +1,4 @@
-# ck/plenty-client\PlentyMarketplaceApi
+# ck\PlentyMarketplaceApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\PlentyMarketplaceApi(
+$apiInstance = new ck\Api\PlentyMarketplaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \ck/plenty-client\Model\RestIoCustomerLoginPostRequest(); // \ck/plenty-client\Model\RestIoCustomerLoginPostRequest
+$body = new \ck\Model\RestIoCustomerLoginPostRequest(); // \ck\Model\RestIoCustomerLoginPostRequest
 
 try {
     $apiInstance->restIoCustomerLoginPost($body);
@@ -44,7 +44,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\ck/plenty-client\Model\RestIoCustomerLoginPostRequest**](../Model/RestIoCustomerLoginPostRequest.md)|  | |
+| **body** | [**\ck\Model\RestIoCustomerLoginPostRequest**](../Model/RestIoCustomerLoginPostRequest.md)|  | |
 
 ### Return type
 
@@ -81,13 +81,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\PlentyMarketplaceApi(
+$apiInstance = new ck\Api\PlentyMarketplaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $plenty_id = 'plenty_id_example'; // string | Cookie from a successful login.
-$body = new \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest(); // \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest
+$body = new \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest(); // \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest
 
 try {
     $apiInstance->restPartnerPortalPartnerPluginVisibilityPost($plenty_id, $body);
@@ -101,7 +101,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **plenty_id** | **string**| Cookie from a successful login. | |
-| **body** | [**\ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest**](../Model/RestPartnerPortalPartnerPluginVisibilityPostRequest.md)|  | |
+| **body** | [**\ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest**](../Model/RestPartnerPortalPartnerPluginVisibilityPostRequest.md)|  | |
 
 ### Return type
 

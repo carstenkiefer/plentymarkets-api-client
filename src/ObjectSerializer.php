@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,17 +25,17 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client;
+namespace ck;
 
 use DateTimeInterface;
 use DateTime;
 use GuzzleHttp\Psr7\Utils;
-use ck/plenty-client\Model\ModelInterface;
+use ck\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -509,7 +509,7 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\ck/plenty-client\Model\\' . $data->{$discriminator};
+                $subclass = '\ck\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

@@ -1,4 +1,4 @@
-# ck/plenty-client\FulfillmentApi
+# ck\FulfillmentApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restFulfillmentPicklistPickingOrderItemGet()`
 
 ```php
-restFulfillmentPicklistPickingOrderItemGet(): \ck/plenty-client\Model\PickingOrderItem[]
+restFulfillmentPicklistPickingOrderItemGet(): \ck\Model\PickingOrderItem[]
 ```
 
 
@@ -24,10 +24,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FulfillmentApi(
+$apiInstance = new ck\Api\FulfillmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -48,7 +48,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\PickingOrderItem[]**](../Model/PickingOrderItem.md)
+[**\ck\Model\PickingOrderItem[]**](../Model/PickingOrderItem.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ This endpoint does not need any parameter.
 ## `restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGet()`
 
 ```php
-restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGet($picking_order_item_id): \ck/plenty-client\Model\PickingOrderItem
+restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGet($picking_order_item_id): \ck\Model\PickingOrderItem
 ```
 
 
@@ -79,10 +79,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FulfillmentApi(
+$apiInstance = new ck\Api\FulfillmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PickingOrderItem**](../Model/PickingOrderItem.md)
+[**\ck\Model\PickingOrderItem**](../Model/PickingOrderItem.md)
 
 ### Authorization
 

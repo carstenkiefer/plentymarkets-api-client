@@ -1,4 +1,4 @@
-# ck/plenty-client\FeedbackApi
+# ck\FeedbackApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -41,10 +41,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -87,7 +87,7 @@ void (empty response body)
 ## `restFeedbacksCommentCommentIdGet()`
 
 ```php
-restFeedbacksCommentCommentIdGet($feedback_comment_id, $comment_id): \ck/plenty-client\Model\FeedbackComment
+restFeedbacksCommentCommentIdGet($feedback_comment_id, $comment_id): \ck\Model\FeedbackComment
 ```
 
 Get a feedback comment
@@ -102,10 +102,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -131,7 +131,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\FeedbackComment**](../Model/FeedbackComment.md)
+[**\ck\Model\FeedbackComment**](../Model/FeedbackComment.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ try {
 ## `restFeedbacksCommentPost()`
 
 ```php
-restFeedbacksCommentPost($message, $comment_relation_target_type_id, $comment_relation_target_id): \ck/plenty-client\Model\FeedbackComment
+restFeedbacksCommentPost($message, $comment_relation_target_type_id, $comment_relation_target_id): \ck\Model\FeedbackComment
 ```
 
 Create a feedback comment
@@ -164,10 +164,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -195,7 +195,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\FeedbackComment**](../Model/FeedbackComment.md)
+[**\ck\Model\FeedbackComment**](../Model/FeedbackComment.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ try {
 ## `restFeedbacksCommentsGet()`
 
 ```php
-restFeedbacksCommentsGet(): \ck/plenty-client\Model\FeedbackComment[]
+restFeedbacksCommentsGet(): \ck\Model\FeedbackComment[]
 ```
 
 List feedback comments
@@ -228,10 +228,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -252,7 +252,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\FeedbackComment[]**](../Model/FeedbackComment.md)
+[**\ck\Model\FeedbackComment[]**](../Model/FeedbackComment.md)
 
 ### Authorization
 
@@ -285,10 +285,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -344,10 +344,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -388,7 +388,7 @@ void (empty response body)
 ## `restFeedbacksFeedbackFeedbackIdGet()`
 
 ```php
-restFeedbacksFeedbackFeedbackIdGet($feedback_id): \ck/plenty-client\Model\Feedback
+restFeedbacksFeedbackFeedbackIdGet($feedback_id): \ck\Model\Feedback
 ```
 
 Get a feedback
@@ -403,10 +403,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -430,7 +430,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Feedback**](../Model/Feedback.md)
+[**\ck\Model\Feedback**](../Model/Feedback.md)
 
 ### Authorization
 
@@ -448,7 +448,7 @@ try {
 ## `restFeedbacksFeedbackFeedbackIdPut()`
 
 ```php
-restFeedbacksFeedbackFeedbackIdPut($feedback_id): \ck/plenty-client\Model\Feedback
+restFeedbacksFeedbackFeedbackIdPut($feedback_id): \ck\Model\Feedback
 ```
 
 Update a feedback
@@ -463,10 +463,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -490,7 +490,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Feedback**](../Model/Feedback.md)
+[**\ck\Model\Feedback**](../Model/Feedback.md)
 
 ### Authorization
 
@@ -508,7 +508,7 @@ try {
 ## `restFeedbacksFeedbackPost()`
 
 ```php
-restFeedbacksFeedbackPost($title, $feedback_relation_target_id, $feedback_relation_target_type_id, $feedback_relation_source_type_id): \ck/plenty-client\Model\Feedback
+restFeedbacksFeedbackPost($title, $feedback_relation_target_id, $feedback_relation_target_type_id, $feedback_relation_source_type_id): \ck\Model\Feedback
 ```
 
 Create a feedback
@@ -523,10 +523,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -556,7 +556,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Feedback**](../Model/Feedback.md)
+[**\ck\Model\Feedback**](../Model/Feedback.md)
 
 ### Authorization
 
@@ -574,7 +574,7 @@ try {
 ## `restFeedbacksFeedbackRepliesFeedbackIdGet()`
 
 ```php
-restFeedbacksFeedbackRepliesFeedbackIdGet($feedback_id): \ck/plenty-client\Model\Feedback
+restFeedbacksFeedbackRepliesFeedbackIdGet($feedback_id): \ck\Model\Feedback
 ```
 
 List feedback replies
@@ -589,10 +589,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -616,7 +616,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Feedback**](../Model/Feedback.md)
+[**\ck\Model\Feedback**](../Model/Feedback.md)
 
 ### Authorization
 
@@ -634,7 +634,7 @@ try {
 ## `restFeedbacksFeedbacksGet()`
 
 ```php
-restFeedbacksFeedbacksGet(): \ck/plenty-client\Model\Feedback[]
+restFeedbacksFeedbacksGet(): \ck\Model\Feedback[]
 ```
 
 List feedbacks
@@ -649,10 +649,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -673,7 +673,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Feedback[]**](../Model/Feedback.md)
+[**\ck\Model\Feedback[]**](../Model/Feedback.md)
 
 ### Authorization
 
@@ -691,7 +691,7 @@ This endpoint does not need any parameter.
 ## `restFeedbacksFeedbacksVisibilityPut()`
 
 ```php
-restFeedbacksFeedbacksVisibilityPut($feedback_ids, $is_visible): \ck/plenty-client\Model\Feedback[]
+restFeedbacksFeedbacksVisibilityPut($feedback_ids, $is_visible): \ck\Model\Feedback[]
 ```
 
 Update the visibility of multiple feedbacks
@@ -706,10 +706,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -735,7 +735,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Feedback[]**](../Model/Feedback.md)
+[**\ck\Model\Feedback[]**](../Model/Feedback.md)
 
 ### Authorization
 
@@ -768,10 +768,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -809,7 +809,7 @@ void (empty response body)
 ## `restFeedbacksRatingPost()`
 
 ```php
-restFeedbacksRatingPost($rating_value, $rating_relation_target_type_id, $rating_relation_target_id): \ck/plenty-client\Model\FeedbackRating
+restFeedbacksRatingPost($rating_value, $rating_relation_target_type_id, $rating_relation_target_id): \ck\Model\FeedbackRating
 ```
 
 Create a feedback rating
@@ -824,10 +824,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -855,7 +855,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\FeedbackRating**](../Model/FeedbackRating.md)
+[**\ck\Model\FeedbackRating**](../Model/FeedbackRating.md)
 
 ### Authorization
 
@@ -888,10 +888,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -934,7 +934,7 @@ void (empty response body)
 ## `restFeedbacksRatingRatingIdGet()`
 
 ```php
-restFeedbacksRatingRatingIdGet($feedback_rating_id, $rating_id): \ck/plenty-client\Model\FeedbackRating
+restFeedbacksRatingRatingIdGet($feedback_rating_id, $rating_id): \ck\Model\FeedbackRating
 ```
 
 Get a feedback rating
@@ -949,10 +949,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -978,7 +978,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\FeedbackRating**](../Model/FeedbackRating.md)
+[**\ck\Model\FeedbackRating**](../Model/FeedbackRating.md)
 
 ### Authorization
 
@@ -996,7 +996,7 @@ try {
 ## `restFeedbacksRatingsGet()`
 
 ```php
-restFeedbacksRatingsGet(): \ck/plenty-client\Model\FeedbackRating[]
+restFeedbacksRatingsGet(): \ck\Model\FeedbackRating[]
 ```
 
 List feedback ratings
@@ -1011,10 +1011,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\FeedbackApi(
+$apiInstance = new ck\Api\FeedbackApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1035,7 +1035,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\FeedbackRating[]**](../Model/FeedbackRating.md)
+[**\ck\Model\FeedbackRating[]**](../Model/FeedbackRating.md)
 
 ### Authorization
 

@@ -3,7 +3,7 @@
  * Configuration
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,14 +24,14 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client;
+namespace ck;
 
 use InvalidArgumentException;
 
 /**
  * Configuration Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -424,7 +424,7 @@ class Configuration
      */
     public static function toDebugReport(): string
     {
-        $report  = 'PHP SDK (ck/plenty-client) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (ck) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 1.0.0' . PHP_EOL;

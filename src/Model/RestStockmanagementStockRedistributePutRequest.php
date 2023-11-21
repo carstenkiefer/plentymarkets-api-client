@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestStockmanagementStockRedistributePutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RestStockmanagementStockRedistributePutRequest implements ModelInterface, 
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'redistributions' => '\ck/plenty-client\Model\VariationStockRedistribution[]',
+        'redistributions' => '\ck\Model\VariationStockRedistribution[]',
         'variation_id' => 'int',
         'reason_id' => 'int',
         'quantity' => 'float',
@@ -374,7 +374,7 @@ class RestStockmanagementStockRedistributePutRequest implements ModelInterface, 
     /**
      * Gets redistributions
      *
-     * @return \ck/plenty-client\Model\VariationStockRedistribution[]
+     * @return \ck\Model\VariationStockRedistribution[]
      */
     public function getRedistributions(): array
     {
@@ -384,7 +384,7 @@ class RestStockmanagementStockRedistributePutRequest implements ModelInterface, 
     /**
      * Sets redistributions
      *
-     * @param \ck/plenty-client\Model\VariationStockRedistribution[] $redistributions redistributions
+     * @param \ck\Model\VariationStockRedistribution[] $redistributions redistributions
      *
      * @return $this
      */

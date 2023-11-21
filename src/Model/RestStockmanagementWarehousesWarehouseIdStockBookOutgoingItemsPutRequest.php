@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest i
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'outgoing_items' => '\ck/plenty-client\Model\VariationStockDischarge[]',
+        'outgoing_items' => '\ck\Model\VariationStockDischarge[]',
         'variation_id' => 'int',
         'delivered_at' => 'string',
         'order_number' => 'string',
@@ -382,7 +382,7 @@ class RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest i
     /**
      * Gets outgoing_items
      *
-     * @return \ck/plenty-client\Model\VariationStockDischarge[]|null
+     * @return \ck\Model\VariationStockDischarge[]|null
      */
     public function getOutgoingItems(): ?array
     {
@@ -392,7 +392,7 @@ class RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest i
     /**
      * Sets outgoing_items
      *
-     * @param \ck/plenty-client\Model\VariationStockDischarge[]|null $outgoing_items outgoing_items
+     * @param \ck\Model\VariationStockDischarge[]|null $outgoing_items outgoing_items
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestCategoriesPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class RestCategoriesPostRequest implements ModelInterface, ArrayAccess, JsonSeri
         'linklist' => 'string',
         'right' => 'string',
         'sitemap' => 'string',
-        'details' => '\ck/plenty-client\Model\CategoryDetails[]',
+        'details' => '\ck\Model\CategoryDetails[]',
         'plenty_id' => 'int',
         'name' => 'string',
         'lang' => 'string',
@@ -81,8 +81,8 @@ class RestCategoriesPostRequest implements ModelInterface, ArrayAccess, JsonSeri
         'page_view' => 'string',
         'fulltext' => 'bool',
         'meta_robots' => 'string',
-        'clients' => '\ck/plenty-client\Model\CategoryClient[]',
-        'elmar_categories' => '\ck/plenty-client\Model\CategoryProperty[]',
+        'clients' => '\ck\Model\CategoryClient[]',
+        'elmar_categories' => '\ck\Model\CategoryProperty[]',
         'category_id' => 'int',
         'market_id' => 'float',
         'value' => 'string'
@@ -659,7 +659,7 @@ class RestCategoriesPostRequest implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Gets details
      *
-     * @return \ck/plenty-client\Model\CategoryDetails[]
+     * @return \ck\Model\CategoryDetails[]
      */
     public function getDetails(): array
     {
@@ -669,7 +669,7 @@ class RestCategoriesPostRequest implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Sets details
      *
-     * @param \ck/plenty-client\Model\CategoryDetails[] $details details
+     * @param \ck\Model\CategoryDetails[] $details details
      *
      * @return $this
      */
@@ -1118,7 +1118,7 @@ class RestCategoriesPostRequest implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Gets clients
      *
-     * @return \ck/plenty-client\Model\CategoryClient[]|null
+     * @return \ck\Model\CategoryClient[]|null
      */
     public function getClients(): ?array
     {
@@ -1128,7 +1128,7 @@ class RestCategoriesPostRequest implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Sets clients
      *
-     * @param \ck/plenty-client\Model\CategoryClient[]|null $clients clients
+     * @param \ck\Model\CategoryClient[]|null $clients clients
      *
      * @return $this
      */
@@ -1145,7 +1145,7 @@ class RestCategoriesPostRequest implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Gets elmar_categories
      *
-     * @return \ck/plenty-client\Model\CategoryProperty[]|null
+     * @return \ck\Model\CategoryProperty[]|null
      */
     public function getElmarCategories(): ?array
     {
@@ -1155,7 +1155,7 @@ class RestCategoriesPostRequest implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Sets elmar_categories
      *
-     * @param \ck/plenty-client\Model\CategoryProperty[]|null $elmar_categories elmar_categories
+     * @param \ck\Model\CategoryProperty[]|null $elmar_categories elmar_categories
      *
      * @return $this
      */

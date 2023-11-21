@@ -3,7 +3,7 @@
  * CommentApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * CommentApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -392,12 +392,12 @@ class CommentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Comment
+     * @return \ck\Model\Comment
      */
     public function restCommentsCommentIdGet(
         int $comment_id,
         string $contentType = self::contentTypes['restCommentsCommentIdGet'][0]
-    ): \ck/plenty-client\Model\Comment
+    ): \ck\Model\Comment
     {
         list($response) = $this->restCommentsCommentIdGetWithHttpInfo($comment_id, $contentType);
         return $response;
@@ -413,7 +413,7 @@ class CommentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Comment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Comment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCommentsCommentIdGetWithHttpInfo(
         int $comment_id,
@@ -459,23 +459,23 @@ class CommentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Comment' === '\SplFileObject') {
+                    if ('\ck\Model\Comment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Comment' !== 'string') {
+                        if ('\ck\Model\Comment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Comment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Comment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Comment';
+            $returnType = '\ck\Model\Comment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -496,7 +496,7 @@ class CommentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Comment',
+                        '\ck\Model\Comment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -546,7 +546,7 @@ class CommentApi
         string $contentType = self::contentTypes['restCommentsCommentIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Comment';
+        $returnType = '\ck\Model\Comment';
         $request = $this->restCommentsCommentIdGetRequest($comment_id, $contentType);
 
         return $this->client
@@ -696,7 +696,7 @@ class CommentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Comment
+     * @return \ck\Model\Comment
      */
     public function restCommentsCommentIdPut(
         int $comment_id,
@@ -705,7 +705,7 @@ class CommentApi
         ?int $user_id = null,
         ?bool $is_visible_for_contact = null,
         string $contentType = self::contentTypes['restCommentsCommentIdPut'][0]
-    ): \ck/plenty-client\Model\Comment
+    ): \ck\Model\Comment
     {
         list($response) = $this->restCommentsCommentIdPutWithHttpInfo($comment_id, $reference_type, $reference_value, $user_id, $is_visible_for_contact, $contentType);
         return $response;
@@ -723,7 +723,7 @@ class CommentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Comment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Comment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCommentsCommentIdPutWithHttpInfo(
         int $comment_id,
@@ -773,23 +773,23 @@ class CommentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Comment' === '\SplFileObject') {
+                    if ('\ck\Model\Comment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Comment' !== 'string') {
+                        if ('\ck\Model\Comment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Comment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Comment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Comment';
+            $returnType = '\ck\Model\Comment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -810,7 +810,7 @@ class CommentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Comment',
+                        '\ck\Model\Comment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -872,7 +872,7 @@ class CommentApi
         string $contentType = self::contentTypes['restCommentsCommentIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Comment';
+        $returnType = '\ck\Model\Comment';
         $request = $this->restCommentsCommentIdPutRequest($comment_id, $reference_type, $reference_value, $user_id, $is_visible_for_contact, $contentType);
 
         return $this->client
@@ -1075,17 +1075,17 @@ class CommentApi
      *
      * Create a comment
      *
-     * @param  \ck/plenty-client\Model\RestCommentsPostRequest|null $_rest_comments _rest_comments (optional)
+     * @param  \ck\Model\RestCommentsPostRequest|null $_rest_comments _rest_comments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCommentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Comment
+     * @return \ck\Model\Comment
      */
     public function restCommentsPost(
-        ?\ck/plenty-client\Model\RestCommentsPostRequest $_rest_comments = null,
+        ?\ck\Model\RestCommentsPostRequest $_rest_comments = null,
         string $contentType = self::contentTypes['restCommentsPost'][0]
-    ): \ck/plenty-client\Model\Comment
+    ): \ck\Model\Comment
     {
         list($response) = $this->restCommentsPostWithHttpInfo($_rest_comments, $contentType);
         return $response;
@@ -1096,15 +1096,15 @@ class CommentApi
      *
      * Create a comment
      *
-     * @param  \ck/plenty-client\Model\RestCommentsPostRequest|null $_rest_comments (optional)
+     * @param  \ck\Model\RestCommentsPostRequest|null $_rest_comments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCommentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Comment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Comment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCommentsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestCommentsPostRequest $_rest_comments = null,
+        ?\ck\Model\RestCommentsPostRequest $_rest_comments = null,
         string $contentType = self::contentTypes['restCommentsPost'][0]
     ): array
     {
@@ -1147,23 +1147,23 @@ class CommentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Comment' === '\SplFileObject') {
+                    if ('\ck\Model\Comment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Comment' !== 'string') {
+                        if ('\ck\Model\Comment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Comment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Comment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Comment';
+            $returnType = '\ck\Model\Comment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1184,7 +1184,7 @@ class CommentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Comment',
+                        '\ck\Model\Comment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1199,14 +1199,14 @@ class CommentApi
      *
      * Create a comment
      *
-     * @param  \ck/plenty-client\Model\RestCommentsPostRequest|null $_rest_comments (optional)
+     * @param  \ck\Model\RestCommentsPostRequest|null $_rest_comments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCommentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restCommentsPostAsync(
-        ?\ck/plenty-client\Model\RestCommentsPostRequest $_rest_comments = null,
+        ?\ck\Model\RestCommentsPostRequest $_rest_comments = null,
         string $contentType = self::contentTypes['restCommentsPost'][0]
     ): PromiseInterface
     {
@@ -1223,7 +1223,7 @@ class CommentApi
      *
      * Create a comment
      *
-     * @param  \ck/plenty-client\Model\RestCommentsPostRequest|null $_rest_comments (optional)
+     * @param  \ck\Model\RestCommentsPostRequest|null $_rest_comments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCommentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1234,7 +1234,7 @@ class CommentApi
         string $contentType = self::contentTypes['restCommentsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Comment';
+        $returnType = '\ck\Model\Comment';
         $request = $this->restCommentsPostRequest($_rest_comments, $contentType);
 
         return $this->client
@@ -1276,7 +1276,7 @@ class CommentApi
     /**
      * Create request for operation 'restCommentsPost'
      *
-     * @param  \ck/plenty-client\Model\RestCommentsPostRequest|null $_rest_comments (optional)
+     * @param  \ck\Model\RestCommentsPostRequest|null $_rest_comments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCommentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1378,7 +1378,7 @@ class CommentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Comment[]
+     * @return \ck\Model\Comment[]
      */
     public function restCommentsReferenceTypeReferenceValueGet(
         string $reference_type,
@@ -1405,7 +1405,7 @@ class CommentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Comment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Comment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCommentsReferenceTypeReferenceValueGetWithHttpInfo(
         string $reference_type,
@@ -1454,23 +1454,23 @@ class CommentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Comment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Comment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Comment[]' !== 'string') {
+                        if ('\ck\Model\Comment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Comment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Comment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Comment[]';
+            $returnType = '\ck\Model\Comment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1491,7 +1491,7 @@ class CommentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Comment[]',
+                        '\ck\Model\Comment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1553,7 +1553,7 @@ class CommentApi
         string $contentType = self::contentTypes['restCommentsReferenceTypeReferenceValueGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Comment[]';
+        $returnType = '\ck\Model\Comment[]';
         $request = $this->restCommentsReferenceTypeReferenceValueGetRequest($reference_type, $reference_value, $user_id, $is_visible_for_contact, $contentType);
 
         return $this->client

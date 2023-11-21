@@ -1,4 +1,4 @@
-# ck/plenty-client\ShopApi
+# ck\ShopApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -43,10 +43,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -87,7 +87,7 @@ void (empty response body)
 ## `restShopBuilderContentLinksContentLinkIdGet()`
 
 ```php
-restShopBuilderContentLinksContentLinkIdGet($content_link_id): \ck/plenty-client\Model\ContentLink
+restShopBuilderContentLinksContentLinkIdGet($content_link_id): \ck\Model\ContentLink
 ```
 
 Find a content link by id.
@@ -102,10 +102,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContentLink**](../Model/ContentLink.md)
+[**\ck\Model\ContentLink**](../Model/ContentLink.md)
 
 ### Authorization
 
@@ -162,10 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -207,7 +207,7 @@ try {
 ## `restShopBuilderContentLinksContentLinkIdPut()`
 
 ```php
-restShopBuilderContentLinksContentLinkIdPut($content_link_id, $_rest_shop_builder_content_links_content_link_id): \ck/plenty-client\Model\ContentLink
+restShopBuilderContentLinksContentLinkIdPut($content_link_id, $_rest_shop_builder_content_links_content_link_id): \ck\Model\ContentLink
 ```
 
 Update a content link.
@@ -222,17 +222,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $content_link_id = 56; // int
-$_rest_shop_builder_content_links_content_link_id = new \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest(); // \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest
+$_rest_shop_builder_content_links_content_link_id = new \ck\Model\RestShopBuilderContentLinksPostRequest(); // \ck\Model\RestShopBuilderContentLinksPostRequest
 
 try {
     $result = $apiInstance->restShopBuilderContentLinksContentLinkIdPut($content_link_id, $_rest_shop_builder_content_links_content_link_id);
@@ -247,11 +247,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **content_link_id** | **int**|  | |
-| **_rest_shop_builder_content_links_content_link_id** | [**\ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest**](../Model/RestShopBuilderContentLinksPostRequest.md)|  | [optional] |
+| **_rest_shop_builder_content_links_content_link_id** | [**\ck\Model\RestShopBuilderContentLinksPostRequest**](../Model/RestShopBuilderContentLinksPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContentLink**](../Model/ContentLink.md)
+[**\ck\Model\ContentLink**](../Model/ContentLink.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ try {
 ## `restShopBuilderContentLinksGet()`
 
 ```php
-restShopBuilderContentLinksGet(): \ck/plenty-client\Model\ContentLink[]
+restShopBuilderContentLinksGet(): \ck\Model\ContentLink[]
 ```
 
 List all content links for a given plugin set
@@ -284,10 +284,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -308,7 +308,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContentLink[]**](../Model/ContentLink.md)
+[**\ck\Model\ContentLink[]**](../Model/ContentLink.md)
 
 ### Authorization
 
@@ -326,7 +326,7 @@ This endpoint does not need any parameter.
 ## `restShopBuilderContentLinksPost()`
 
 ```php
-restShopBuilderContentLinksPost($_rest_shop_builder_content_links): \ck/plenty-client\Model\ContentLink
+restShopBuilderContentLinksPost($_rest_shop_builder_content_links): \ck\Model\ContentLink
 ```
 
 Link a content to a layout container of a frontend plugin.
@@ -341,16 +341,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_shop_builder_content_links = new \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest(); // \ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest
+$_rest_shop_builder_content_links = new \ck\Model\RestShopBuilderContentLinksPostRequest(); // \ck\Model\RestShopBuilderContentLinksPostRequest
 
 try {
     $result = $apiInstance->restShopBuilderContentLinksPost($_rest_shop_builder_content_links);
@@ -364,11 +364,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_shop_builder_content_links** | [**\ck/plenty-client\Model\RestShopBuilderContentLinksPostRequest**](../Model/RestShopBuilderContentLinksPostRequest.md)|  | [optional] |
+| **_rest_shop_builder_content_links** | [**\ck\Model\RestShopBuilderContentLinksPostRequest**](../Model/RestShopBuilderContentLinksPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContentLink**](../Model/ContentLink.md)
+[**\ck\Model\ContentLink**](../Model/ContentLink.md)
 
 ### Authorization
 
@@ -401,10 +401,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -445,7 +445,7 @@ void (empty response body)
 ## `restShopBuilderContentsContentIdGet()`
 
 ```php
-restShopBuilderContentsContentIdGet($content_id): \ck/plenty-client\Model\Content
+restShopBuilderContentsContentIdGet($content_id): \ck\Model\Content
 ```
 
 Find a content by id.
@@ -460,10 +460,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -487,7 +487,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Content**](../Model/Content.md)
+[**\ck\Model\Content**](../Model/Content.md)
 
 ### Authorization
 
@@ -520,7 +520,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -561,7 +561,7 @@ No authorization required
 ## `restShopBuilderContentsContentIdPost()`
 
 ```php
-restShopBuilderContentsContentIdPost($content_id): \ck/plenty-client\Model\Content
+restShopBuilderContentsContentIdPost($content_id): \ck\Model\Content
 ```
 
 Duplicate a content by id.
@@ -576,10 +576,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -603,7 +603,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Content**](../Model/Content.md)
+[**\ck\Model\Content**](../Model/Content.md)
 
 ### Authorization
 
@@ -621,7 +621,7 @@ try {
 ## `restShopBuilderContentsContentIdPut()`
 
 ```php
-restShopBuilderContentsContentIdPut($content_id, $frontend_lang, $_rest_shop_builder_contents_content_id): \ck/plenty-client\Model\Content
+restShopBuilderContentsContentIdPut($content_id, $frontend_lang, $_rest_shop_builder_contents_content_id): \ck\Model\Content
 ```
 
 Update a content.
@@ -636,10 +636,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -647,7 +647,7 @@ $apiInstance = new ck/plenty-client\Api\ShopApi(
 );
 $content_id = 56; // int
 $frontend_lang = 'frontend_lang_example'; // string | Language to be used when rendering frontend widgets.
-$_rest_shop_builder_contents_content_id = new \ck/plenty-client\Model\RestShopBuilderContentsPostRequest(); // \ck/plenty-client\Model\RestShopBuilderContentsPostRequest
+$_rest_shop_builder_contents_content_id = new \ck\Model\RestShopBuilderContentsPostRequest(); // \ck\Model\RestShopBuilderContentsPostRequest
 
 try {
     $result = $apiInstance->restShopBuilderContentsContentIdPut($content_id, $frontend_lang, $_rest_shop_builder_contents_content_id);
@@ -663,11 +663,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **content_id** | **int**|  | |
 | **frontend_lang** | **string**| Language to be used when rendering frontend widgets. | [optional] |
-| **_rest_shop_builder_contents_content_id** | [**\ck/plenty-client\Model\RestShopBuilderContentsPostRequest**](../Model/RestShopBuilderContentsPostRequest.md)|  | [optional] |
+| **_rest_shop_builder_contents_content_id** | [**\ck\Model\RestShopBuilderContentsPostRequest**](../Model/RestShopBuilderContentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Content**](../Model/Content.md)
+[**\ck\Model\Content**](../Model/Content.md)
 
 ### Authorization
 
@@ -685,7 +685,7 @@ try {
 ## `restShopBuilderContentsGet()`
 
 ```php
-restShopBuilderContentsGet(): \ck/plenty-client\Model\Content[]
+restShopBuilderContentsGet(): \ck\Model\Content[]
 ```
 
 List all contents.
@@ -700,10 +700,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -724,7 +724,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Content[]**](../Model/Content.md)
+[**\ck\Model\Content[]**](../Model/Content.md)
 
 ### Authorization
 
@@ -742,7 +742,7 @@ This endpoint does not need any parameter.
 ## `restShopBuilderContentsPost()`
 
 ```php
-restShopBuilderContentsPost($frontend_lang, $_rest_shop_builder_contents): \ck/plenty-client\Model\Content
+restShopBuilderContentsPost($frontend_lang, $_rest_shop_builder_contents): \ck\Model\Content
 ```
 
 Create new content.
@@ -757,17 +757,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $frontend_lang = 'frontend_lang_example'; // string | Language to be used when rendering frontend widgets.
-$_rest_shop_builder_contents = new \ck/plenty-client\Model\RestShopBuilderContentsPostRequest(); // \ck/plenty-client\Model\RestShopBuilderContentsPostRequest
+$_rest_shop_builder_contents = new \ck\Model\RestShopBuilderContentsPostRequest(); // \ck\Model\RestShopBuilderContentsPostRequest
 
 try {
     $result = $apiInstance->restShopBuilderContentsPost($frontend_lang, $_rest_shop_builder_contents);
@@ -782,11 +782,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **frontend_lang** | **string**| Language to be used when rendering frontend widgets. | [optional] |
-| **_rest_shop_builder_contents** | [**\ck/plenty-client\Model\RestShopBuilderContentsPostRequest**](../Model/RestShopBuilderContentsPostRequest.md)|  | [optional] |
+| **_rest_shop_builder_contents** | [**\ck\Model\RestShopBuilderContentsPostRequest**](../Model/RestShopBuilderContentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Content**](../Model/Content.md)
+[**\ck\Model\Content**](../Model/Content.md)
 
 ### Authorization
 
@@ -819,10 +819,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -861,7 +861,7 @@ This endpoint does not need any parameter.
 ## `restShopBuilderContentsSearchGet()`
 
 ```php
-restShopBuilderContentsSearchGet($page, $items_per_page, $data_provider_name, $type, $container_name, $plugin_set_id, $language, $active): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restShopBuilderContentsSearchGet($page, $items_per_page, $data_provider_name, $type, $container_name, $plugin_set_id, $language, $active): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 Search for contents.
@@ -876,10 +876,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -917,7 +917,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 
@@ -935,7 +935,7 @@ try {
 ## `restShopBuilderPagesGet()`
 
 ```php
-restShopBuilderPagesGet(): \ck/plenty-client\Model\ContentPage[]
+restShopBuilderPagesGet(): \ck\Model\ContentPage[]
 ```
 
 List content pages
@@ -950,10 +950,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -974,7 +974,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContentPage[]**](../Model/ContentPage.md)
+[**\ck\Model\ContentPage[]**](../Model/ContentPage.md)
 
 ### Authorization
 
@@ -1007,10 +1007,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1067,7 +1067,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1120,10 +1120,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ShopApi(
+$apiInstance = new ck\Api\ShopApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

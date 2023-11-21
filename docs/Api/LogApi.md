@@ -1,4 +1,4 @@
-# ck/plenty-client\LogApi
+# ck\LogApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restDeleteLogGet()`
 
 ```php
-restDeleteLogGet($reference_type, $user_id, $updated_between, $page, $items_per_page): \ck/plenty-client\Model\RestDeleteLogGet200Response
+restDeleteLogGet($reference_type, $user_id, $updated_between, $page, $items_per_page): \ck\Model\RestDeleteLogGet200Response
 ```
 
 Search the delete log
@@ -32,10 +32,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LogApi(
+$apiInstance = new ck\Api\LogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -67,7 +67,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestDeleteLogGet200Response**](../Model/RestDeleteLogGet200Response.md)
+[**\ck\Model\RestDeleteLogGet200Response**](../Model/RestDeleteLogGet200Response.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ try {
 ## `restLogsGet()`
 
 ```php
-restLogsGet($page, $items_per_page, $integration, $identifier, $reference_type, $reference_value, $additional_info, $code, $level, $from_date, $to_date, $with): \ck/plenty-client\Model\RestLogsGet200Response
+restLogsGet($page, $items_per_page, $integration, $identifier, $reference_type, $reference_value, $additional_info, $code, $level, $from_date, $to_date, $with): \ck\Model\RestLogsGet200Response
 ```
 
 Perform a search operation.
@@ -98,10 +98,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LogApi(
+$apiInstance = new ck\Api\LogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -147,7 +147,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestLogsGet200Response**](../Model/RestLogsGet200Response.md)
+[**\ck\Model\RestLogsGet200Response**](../Model/RestLogsGet200Response.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ try {
 ## `restLogsIdGet()`
 
 ```php
-restLogsIdGet($id): \ck/plenty-client\Model\Log
+restLogsIdGet($id): \ck\Model\Log
 ```
 
 Get Log entry by ID.
@@ -178,10 +178,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LogApi(
+$apiInstance = new ck\Api\LogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -205,7 +205,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Log**](../Model/Log.md)
+[**\ck\Model\Log**](../Model/Log.md)
 
 ### Authorization
 
@@ -236,10 +236,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LogApi(
+$apiInstance = new ck\Api\LogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -291,16 +291,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LogApi(
+$apiInstance = new ck\Api\LogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_logs = new \ck/plenty-client\Model\RestLogsPostRequest(); // \ck/plenty-client\Model\RestLogsPostRequest
+$_rest_logs = new \ck\Model\RestLogsPostRequest(); // \ck\Model\RestLogsPostRequest
 
 try {
     $result = $apiInstance->restLogsPost($_rest_logs);
@@ -314,7 +314,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_logs** | [**\ck/plenty-client\Model\RestLogsPostRequest**](../Model/RestLogsPostRequest.md)|  | [optional] |
+| **_rest_logs** | [**\ck\Model\RestLogsPostRequest**](../Model/RestLogsPostRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -349,10 +349,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LogApi(
+$apiInstance = new ck\Api\LogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -404,10 +404,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LogApi(
+$apiInstance = new ck\Api\LogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -459,10 +459,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LogApi(
+$apiInstance = new ck\Api\LogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

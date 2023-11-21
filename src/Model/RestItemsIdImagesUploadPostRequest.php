@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestItemsIdImagesUploadPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -64,11 +64,11 @@ class RestItemsIdImagesUploadPostRequest implements ModelInterface, ArrayAccess,
         'upload_file_name' => 'string',
         'upload_image_data' => 'string',
         'upload_url' => 'string',
-        'names' => '\ck/plenty-client\Model\ItemImageName[]',
+        'names' => '\ck\Model\ItemImageName[]',
         'lang' => 'string',
         'name' => 'string',
         'alternate' => 'string',
-        'availabilities' => '\ck/plenty-client\Model\ItemImageAvailability[]',
+        'availabilities' => '\ck\Model\ItemImageAvailability[]',
         'type' => 'string',
         'value' => 'float'
     ];
@@ -554,7 +554,7 @@ class RestItemsIdImagesUploadPostRequest implements ModelInterface, ArrayAccess,
     /**
      * Gets names
      *
-     * @return \ck/plenty-client\Model\ItemImageName[]|null
+     * @return \ck\Model\ItemImageName[]|null
      */
     public function getNames(): ?array
     {
@@ -564,7 +564,7 @@ class RestItemsIdImagesUploadPostRequest implements ModelInterface, ArrayAccess,
     /**
      * Sets names
      *
-     * @param \ck/plenty-client\Model\ItemImageName[]|null $names names
+     * @param \ck\Model\ItemImageName[]|null $names names
      *
      * @return $this
      */
@@ -662,7 +662,7 @@ class RestItemsIdImagesUploadPostRequest implements ModelInterface, ArrayAccess,
     /**
      * Gets availabilities
      *
-     * @return \ck/plenty-client\Model\ItemImageAvailability[]|null
+     * @return \ck\Model\ItemImageAvailability[]|null
      */
     public function getAvailabilities(): ?array
     {
@@ -672,7 +672,7 @@ class RestItemsIdImagesUploadPostRequest implements ModelInterface, ArrayAccess,
     /**
      * Sets availabilities
      *
-     * @param \ck/plenty-client\Model\ItemImageAvailability[]|null $availabilities availabilities
+     * @param \ck\Model\ItemImageAvailability[]|null $availabilities availabilities
      *
      * @return $this
      */

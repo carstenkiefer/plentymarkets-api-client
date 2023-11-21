@@ -3,7 +3,7 @@
  * BasketApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * BasketApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,11 +140,11 @@ class BasketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Basket
+     * @return \ck\Model\Basket
      */
     public function restBasketGet(
         string $contentType = self::contentTypes['restBasketGet'][0]
-    ): \ck/plenty-client\Model\Basket
+    ): \ck\Model\Basket
     {
         list($response) = $this->restBasketGetWithHttpInfo($contentType);
         return $response;
@@ -159,7 +159,7 @@ class BasketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Basket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Basket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBasketGetWithHttpInfo(
         string $contentType = self::contentTypes['restBasketGet'][0]
@@ -204,23 +204,23 @@ class BasketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Basket' === '\SplFileObject') {
+                    if ('\ck\Model\Basket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Basket' !== 'string') {
+                        if ('\ck\Model\Basket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Basket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Basket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Basket';
+            $returnType = '\ck\Model\Basket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -241,7 +241,7 @@ class BasketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Basket',
+                        '\ck\Model\Basket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -287,7 +287,7 @@ class BasketApi
         string $contentType = self::contentTypes['restBasketGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Basket';
+        $returnType = '\ck\Model\Basket';
         $request = $this->restBasketGetRequest($contentType);
 
         return $this->client
@@ -413,7 +413,7 @@ class BasketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\BasketItem[]
+     * @return \ck\Model\BasketItem[]
      */
     public function restBasketItemsGet(
         string $contentType = self::contentTypes['restBasketItemsGet'][0]
@@ -432,7 +432,7 @@ class BasketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\BasketItem[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\BasketItem[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBasketItemsGetWithHttpInfo(
         string $contentType = self::contentTypes['restBasketItemsGet'][0]
@@ -477,23 +477,23 @@ class BasketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\BasketItem[]' === '\SplFileObject') {
+                    if ('\ck\Model\BasketItem[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\BasketItem[]' !== 'string') {
+                        if ('\ck\Model\BasketItem[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\BasketItem[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\BasketItem[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\BasketItem[]';
+            $returnType = '\ck\Model\BasketItem[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -514,7 +514,7 @@ class BasketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\BasketItem[]',
+                        '\ck\Model\BasketItem[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class BasketApi
         string $contentType = self::contentTypes['restBasketItemsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\BasketItem[]';
+        $returnType = '\ck\Model\BasketItem[]';
         $request = $this->restBasketItemsGetRequest($contentType);
 
         return $this->client
@@ -687,12 +687,12 @@ class BasketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\BasketItem
+     * @return \ck\Model\BasketItem
      */
     public function restBasketItemsIdGet(
         int $id,
         string $contentType = self::contentTypes['restBasketItemsIdGet'][0]
-    ): \ck/plenty-client\Model\BasketItem
+    ): \ck\Model\BasketItem
     {
         list($response) = $this->restBasketItemsIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -708,7 +708,7 @@ class BasketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\BasketItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\BasketItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBasketItemsIdGetWithHttpInfo(
         int $id,
@@ -754,23 +754,23 @@ class BasketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\BasketItem' === '\SplFileObject') {
+                    if ('\ck\Model\BasketItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\BasketItem' !== 'string') {
+                        if ('\ck\Model\BasketItem' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\BasketItem', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\BasketItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\BasketItem';
+            $returnType = '\ck\Model\BasketItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -791,7 +791,7 @@ class BasketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\BasketItem',
+                        '\ck\Model\BasketItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -841,7 +841,7 @@ class BasketApi
         string $contentType = self::contentTypes['restBasketItemsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\BasketItem';
+        $returnType = '\ck\Model\BasketItem';
         $request = $this->restBasketItemsIdGetRequest($id, $contentType);
 
         return $this->client
@@ -980,17 +980,17 @@ class BasketApi
      *
      * Add item to basket
      *
-     * @param  \ck/plenty-client\Model\RestBasketItemsPostRequest|null $_rest_basket_items _rest_basket_items (optional)
+     * @param  \ck\Model\RestBasketItemsPostRequest|null $_rest_basket_items _rest_basket_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBasketItemsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\BasketItem
+     * @return \ck\Model\BasketItem
      */
     public function restBasketItemsPost(
-        ?\ck/plenty-client\Model\RestBasketItemsPostRequest $_rest_basket_items = null,
+        ?\ck\Model\RestBasketItemsPostRequest $_rest_basket_items = null,
         string $contentType = self::contentTypes['restBasketItemsPost'][0]
-    ): \ck/plenty-client\Model\BasketItem
+    ): \ck\Model\BasketItem
     {
         list($response) = $this->restBasketItemsPostWithHttpInfo($_rest_basket_items, $contentType);
         return $response;
@@ -1001,15 +1001,15 @@ class BasketApi
      *
      * Add item to basket
      *
-     * @param  \ck/plenty-client\Model\RestBasketItemsPostRequest|null $_rest_basket_items (optional)
+     * @param  \ck\Model\RestBasketItemsPostRequest|null $_rest_basket_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBasketItemsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\BasketItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\BasketItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBasketItemsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestBasketItemsPostRequest $_rest_basket_items = null,
+        ?\ck\Model\RestBasketItemsPostRequest $_rest_basket_items = null,
         string $contentType = self::contentTypes['restBasketItemsPost'][0]
     ): array
     {
@@ -1052,23 +1052,23 @@ class BasketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\BasketItem' === '\SplFileObject') {
+                    if ('\ck\Model\BasketItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\BasketItem' !== 'string') {
+                        if ('\ck\Model\BasketItem' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\BasketItem', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\BasketItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\BasketItem';
+            $returnType = '\ck\Model\BasketItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1089,7 +1089,7 @@ class BasketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\BasketItem',
+                        '\ck\Model\BasketItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1104,14 +1104,14 @@ class BasketApi
      *
      * Add item to basket
      *
-     * @param  \ck/plenty-client\Model\RestBasketItemsPostRequest|null $_rest_basket_items (optional)
+     * @param  \ck\Model\RestBasketItemsPostRequest|null $_rest_basket_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBasketItemsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restBasketItemsPostAsync(
-        ?\ck/plenty-client\Model\RestBasketItemsPostRequest $_rest_basket_items = null,
+        ?\ck\Model\RestBasketItemsPostRequest $_rest_basket_items = null,
         string $contentType = self::contentTypes['restBasketItemsPost'][0]
     ): PromiseInterface
     {
@@ -1128,7 +1128,7 @@ class BasketApi
      *
      * Add item to basket
      *
-     * @param  \ck/plenty-client\Model\RestBasketItemsPostRequest|null $_rest_basket_items (optional)
+     * @param  \ck\Model\RestBasketItemsPostRequest|null $_rest_basket_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBasketItemsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1139,7 +1139,7 @@ class BasketApi
         string $contentType = self::contentTypes['restBasketItemsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\BasketItem';
+        $returnType = '\ck\Model\BasketItem';
         $request = $this->restBasketItemsPostRequest($_rest_basket_items, $contentType);
 
         return $this->client
@@ -1181,7 +1181,7 @@ class BasketApi
     /**
      * Create request for operation 'restBasketItemsPost'
      *
-     * @param  \ck/plenty-client\Model\RestBasketItemsPostRequest|null $_rest_basket_items (optional)
+     * @param  \ck\Model\RestBasketItemsPostRequest|null $_rest_basket_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBasketItemsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

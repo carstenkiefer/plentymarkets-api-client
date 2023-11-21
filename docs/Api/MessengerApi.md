@@ -1,4 +1,4 @@
-# ck/plenty-client\MessengerApi
+# ck\MessengerApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -20,7 +20,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restMessagesGet()`
 
 ```php
-restMessagesGet($uuid, $successors, $amount): \ck/plenty-client\Model\Message[]
+restMessagesGet($uuid, $successors, $amount): \ck\Model\Message[]
 ```
 
 List message stream of a certain message (excluding message with UUID5)
@@ -35,10 +35,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -66,7 +66,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message[]**](../Model/Message.md)
+[**\ck\Model\Message[]**](../Model/Message.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ try {
 ## `restMessagesGetGet()`
 
 ```php
-restMessagesGetGet($page, $items_per_page): \ck/plenty-client\Model\Message[]
+restMessagesGetGet($page, $items_per_page): \ck\Model\Message[]
 ```
 
 List messages per page
@@ -99,10 +99,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -128,7 +128,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message[]**](../Model/Message.md)
+[**\ck\Model\Message[]**](../Model/Message.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ try {
 ## `restMessagesPost()`
 
 ```php
-restMessagesPost($_rest_messages): \ck/plenty-client\Model\Message
+restMessagesPost($_rest_messages): \ck\Model\Message
 ```
 
 Create message
@@ -161,16 +161,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_messages = new \ck/plenty-client\Model\RestMessagesPostRequest(); // \ck/plenty-client\Model\RestMessagesPostRequest
+$_rest_messages = new \ck\Model\RestMessagesPostRequest(); // \ck\Model\RestMessagesPostRequest
 
 try {
     $result = $apiInstance->restMessagesPost($_rest_messages);
@@ -184,11 +184,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_messages** | [**\ck/plenty-client\Model\RestMessagesPostRequest**](../Model/RestMessagesPostRequest.md)|  | [optional] |
+| **_rest_messages** | [**\ck\Model\RestMessagesPostRequest**](../Model/RestMessagesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message**](../Model/Message.md)
+[**\ck\Model\Message**](../Model/Message.md)
 
 ### Authorization
 
@@ -221,10 +221,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -268,7 +268,7 @@ try {
 ## `restMessagesUuid5ControlsPut()`
 
 ```php
-restMessagesUuid5ControlsPut($uuid5, $_rest_messages_uuid5_controls): \ck/plenty-client\Model\Message
+restMessagesUuid5ControlsPut($uuid5, $_rest_messages_uuid5_controls): \ck\Model\Message
 ```
 
 Update message controls
@@ -283,17 +283,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $uuid5 = 56; // int
-$_rest_messages_uuid5_controls = new \ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest(); // \ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest
+$_rest_messages_uuid5_controls = new \ck\Model\RestMessagesUuid5ControlsPutRequest(); // \ck\Model\RestMessagesUuid5ControlsPutRequest
 
 try {
     $result = $apiInstance->restMessagesUuid5ControlsPut($uuid5, $_rest_messages_uuid5_controls);
@@ -308,11 +308,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **uuid5** | **int**|  | |
-| **_rest_messages_uuid5_controls** | [**\ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest**](../Model/RestMessagesUuid5ControlsPutRequest.md)|  | [optional] |
+| **_rest_messages_uuid5_controls** | [**\ck\Model\RestMessagesUuid5ControlsPutRequest**](../Model/RestMessagesUuid5ControlsPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message**](../Model/Message.md)
+[**\ck\Model\Message**](../Model/Message.md)
 
 ### Authorization
 
@@ -345,10 +345,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -390,7 +390,7 @@ try {
 ## `restMessagesUuid5DonePut()`
 
 ```php
-restMessagesUuid5DonePut($uuid5, $done_at, $_rest_messages_uuid5_done): \ck/plenty-client\Model\Message[]
+restMessagesUuid5DonePut($uuid5, $done_at, $_rest_messages_uuid5_done): \ck\Model\Message[]
 ```
 
 Set or unset doneAt date of message
@@ -405,10 +405,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -416,7 +416,7 @@ $apiInstance = new ck/plenty-client\Api\MessengerApi(
 );
 $uuid5 = 'uuid5_example'; // string | The UUID5 of the message
 $done_at = 'done_at_example'; // string | Set (or unset, if doneAt is not given) the doneAt date in the message.
-$_rest_messages_uuid5_done = new \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest(); // \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest
+$_rest_messages_uuid5_done = new \ck\Model\RestMessagesUuid5DonePutRequest(); // \ck\Model\RestMessagesUuid5DonePutRequest
 
 try {
     $result = $apiInstance->restMessagesUuid5DonePut($uuid5, $done_at, $_rest_messages_uuid5_done);
@@ -432,11 +432,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **uuid5** | **string**| The UUID5 of the message | |
 | **done_at** | **string**| Set (or unset, if doneAt is not given) the doneAt date in the message. | [optional] |
-| **_rest_messages_uuid5_done** | [**\ck/plenty-client\Model\RestMessagesUuid5DonePutRequest**](../Model/RestMessagesUuid5DonePutRequest.md)|  | [optional] |
+| **_rest_messages_uuid5_done** | [**\ck\Model\RestMessagesUuid5DonePutRequest**](../Model/RestMessagesUuid5DonePutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message[]**](../Model/Message.md)
+[**\ck\Model\Message[]**](../Model/Message.md)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ try {
 ## `restMessagesUuid5Get()`
 
 ```php
-restMessagesUuid5Get($uuid5): \ck/plenty-client\Model\Message[]
+restMessagesUuid5Get($uuid5): \ck\Model\Message[]
 ```
 
 Get message for the given UUID5 and all its associated successors
@@ -469,10 +469,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -496,7 +496,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message[]**](../Model/Message.md)
+[**\ck\Model\Message[]**](../Model/Message.md)
 
 ### Authorization
 
@@ -514,7 +514,7 @@ try {
 ## `restMessagesUuid5ReadByPut()`
 
 ```php
-restMessagesUuid5ReadByPut($read_by, $uuid5): \ck/plenty-client\Model\Message[]
+restMessagesUuid5ReadByPut($read_by, $uuid5): \ck\Model\Message[]
 ```
 
 Update ReadBy array of message
@@ -529,10 +529,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -558,7 +558,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message[]**](../Model/Message.md)
+[**\ck\Model\Message[]**](../Model/Message.md)
 
 ### Authorization
 
@@ -576,7 +576,7 @@ try {
 ## `restMessagesUuid5TagsPut()`
 
 ```php
-restMessagesUuid5TagsPut($tags, $uuid5): \ck/plenty-client\Model\Message[]
+restMessagesUuid5TagsPut($tags, $uuid5): \ck\Model\Message[]
 ```
 
 Update tags of message
@@ -591,10 +591,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -620,7 +620,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message[]**](../Model/Message.md)
+[**\ck\Model\Message[]**](../Model/Message.md)
 
 ### Authorization
 
@@ -638,7 +638,7 @@ try {
 ## `restMessagesUuid5VisibilityPut()`
 
 ```php
-restMessagesUuid5VisibilityPut($uuid5, $_rest_messages_uuid5_visibility): \ck/plenty-client\Model\Message[]
+restMessagesUuid5VisibilityPut($uuid5, $_rest_messages_uuid5_visibility): \ck\Model\Message[]
 ```
 
 Update message visibility
@@ -653,17 +653,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MessengerApi(
+$apiInstance = new ck\Api\MessengerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $uuid5 = 'uuid5_example'; // string | The UUID of the message
-$_rest_messages_uuid5_visibility = new \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest(); // \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest
+$_rest_messages_uuid5_visibility = new \ck\Model\RestMessagesUuid5DonePutRequest(); // \ck\Model\RestMessagesUuid5DonePutRequest
 
 try {
     $result = $apiInstance->restMessagesUuid5VisibilityPut($uuid5, $_rest_messages_uuid5_visibility);
@@ -678,11 +678,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **uuid5** | **string**| The UUID of the message | |
-| **_rest_messages_uuid5_visibility** | [**\ck/plenty-client\Model\RestMessagesUuid5DonePutRequest**](../Model/RestMessagesUuid5DonePutRequest.md)|  | [optional] |
+| **_rest_messages_uuid5_visibility** | [**\ck\Model\RestMessagesUuid5DonePutRequest**](../Model/RestMessagesUuid5DonePutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Message[]**](../Model/Message.md)
+[**\ck\Model\Message[]**](../Model/Message.md)
 
 ### Authorization
 

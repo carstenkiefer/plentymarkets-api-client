@@ -1,4 +1,4 @@
-# ck/plenty-client\TagApi
+# ck\TagApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -37,16 +37,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_tags_bulk = new \ck/plenty-client\Model\RestTagsPostRequest(); // \ck/plenty-client\Model\RestTagsPostRequest
+$_rest_tags_bulk = new \ck\Model\RestTagsPostRequest(); // \ck\Model\RestTagsPostRequest
 
 try {
     $result = $apiInstance->restTagsBulkPost($_rest_tags_bulk);
@@ -60,7 +60,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_tags_bulk** | [**\ck/plenty-client\Model\RestTagsPostRequest**](../Model/RestTagsPostRequest.md)|  | [optional] |
+| **_rest_tags_bulk** | [**\ck\Model\RestTagsPostRequest**](../Model/RestTagsPostRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -97,16 +97,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_tags_bulk = new \ck/plenty-client\Model\RestTagsPostRequest(); // \ck/plenty-client\Model\RestTagsPostRequest
+$_rest_tags_bulk = new \ck\Model\RestTagsPostRequest(); // \ck\Model\RestTagsPostRequest
 
 try {
     $result = $apiInstance->restTagsBulkPut($_rest_tags_bulk);
@@ -120,7 +120,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_tags_bulk** | [**\ck/plenty-client\Model\RestTagsPostRequest**](../Model/RestTagsPostRequest.md)|  | [optional] |
+| **_rest_tags_bulk** | [**\ck\Model\RestTagsPostRequest**](../Model/RestTagsPostRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -157,10 +157,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -225,10 +225,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -269,7 +269,7 @@ void (empty response body)
 ## `restTagsIdGet()`
 
 ```php
-restTagsIdGet($id): \ck/plenty-client\Model\Tag
+restTagsIdGet($id): \ck\Model\Tag
 ```
 
 Get tag by ID
@@ -284,10 +284,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -311,7 +311,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Tag**](../Model/Tag.md)
+[**\ck\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -329,7 +329,7 @@ try {
 ## `restTagsIdPut()`
 
 ```php
-restTagsIdPut($id, $_rest_tags_id): \ck/plenty-client\Model\Tag
+restTagsIdPut($id, $_rest_tags_id): \ck\Model\Tag
 ```
 
 Update tag
@@ -344,17 +344,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The ID of the tag
-$_rest_tags_id = new \ck/plenty-client\Model\RestTagsPostRequest(); // \ck/plenty-client\Model\RestTagsPostRequest
+$_rest_tags_id = new \ck\Model\RestTagsPostRequest(); // \ck\Model\RestTagsPostRequest
 
 try {
     $result = $apiInstance->restTagsIdPut($id, $_rest_tags_id);
@@ -369,11 +369,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| The ID of the tag | |
-| **_rest_tags_id** | [**\ck/plenty-client\Model\RestTagsPostRequest**](../Model/RestTagsPostRequest.md)|  | [optional] |
+| **_rest_tags_id** | [**\ck\Model\RestTagsPostRequest**](../Model/RestTagsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Tag**](../Model/Tag.md)
+[**\ck\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -406,10 +406,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -455,7 +455,7 @@ try {
 ## `restTagsPost()`
 
 ```php
-restTagsPost($_rest_tags): \ck/plenty-client\Model\Tag
+restTagsPost($_rest_tags): \ck\Model\Tag
 ```
 
 Create a tag
@@ -468,16 +468,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_tags = new \ck/plenty-client\Model\RestTagsPostRequest(); // \ck/plenty-client\Model\RestTagsPostRequest
+$_rest_tags = new \ck\Model\RestTagsPostRequest(); // \ck\Model\RestTagsPostRequest
 
 try {
     $result = $apiInstance->restTagsPost($_rest_tags);
@@ -491,11 +491,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_tags** | [**\ck/plenty-client\Model\RestTagsPostRequest**](../Model/RestTagsPostRequest.md)|  | [optional] |
+| **_rest_tags** | [**\ck\Model\RestTagsPostRequest**](../Model/RestTagsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Tag**](../Model/Tag.md)
+[**\ck\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -528,10 +528,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -585,10 +585,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -636,7 +636,7 @@ try {
 ## `restTagsRelationshipsPost()`
 
 ```php
-restTagsRelationshipsPost($tag_id, $tag_type, $relationship_value, $relatonship_uuid5, $_rest_tags_relationships): \ck/plenty-client\Model\TagRelationship
+restTagsRelationshipsPost($tag_id, $tag_type, $relationship_value, $relatonship_uuid5, $_rest_tags_relationships): \ck\Model\TagRelationship
 ```
 
 Create tag relationship
@@ -651,10 +651,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -664,7 +664,7 @@ $tag_id = 56; // int | The ID of the tag.
 $tag_type = 'tag_type_example'; // string | The type of tag. Allowed values are category, ticket, variation, board, contact.
 $relationship_value = 56; // int | The ID of the data record for which a tag relationship is created.
 $relatonship_uuid5 = 'relatonship_uuid5_example'; // string | The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key.
-$_rest_tags_relationships = new \ck/plenty-client\Model\RestTagsRelationshipsPostRequest(); // \ck/plenty-client\Model\RestTagsRelationshipsPostRequest
+$_rest_tags_relationships = new \ck\Model\RestTagsRelationshipsPostRequest(); // \ck\Model\RestTagsRelationshipsPostRequest
 
 try {
     $result = $apiInstance->restTagsRelationshipsPost($tag_id, $tag_type, $relationship_value, $relatonship_uuid5, $_rest_tags_relationships);
@@ -682,11 +682,11 @@ try {
 | **tag_type** | **string**| The type of tag. Allowed values are category, ticket, variation, board, contact. | [optional] |
 | **relationship_value** | **int**| The ID of the data record for which a tag relationship is created. | [optional] |
 | **relatonship_uuid5** | **string**| The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key. | [optional] |
-| **_rest_tags_relationships** | [**\ck/plenty-client\Model\RestTagsRelationshipsPostRequest**](../Model/RestTagsRelationshipsPostRequest.md)|  | [optional] |
+| **_rest_tags_relationships** | [**\ck\Model\RestTagsRelationshipsPostRequest**](../Model/RestTagsRelationshipsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\TagRelationship**](../Model/TagRelationship.md)
+[**\ck\Model\TagRelationship**](../Model/TagRelationship.md)
 
 ### Authorization
 
@@ -719,10 +719,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -769,7 +769,7 @@ void (empty response body)
 ## `restTagsRelationshipsRelationshipValueTagTypeIdPut()`
 
 ```php
-restTagsRelationshipsRelationshipValueTagTypeIdPut($relationship_value, $tag_type, $id): \ck/plenty-client\Model\TagRelationship
+restTagsRelationshipsRelationshipValueTagTypeIdPut($relationship_value, $tag_type, $id): \ck\Model\TagRelationship
 ```
 
 Update tag relationship
@@ -784,10 +784,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TagApi(
+$apiInstance = new ck\Api\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -815,7 +815,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\TagRelationship**](../Model/TagRelationship.md)
+[**\ck\Model\TagRelationship**](../Model/TagRelationship.md)
 
 ### Authorization
 

@@ -3,7 +3,7 @@
  * DocumentApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * DocumentApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -848,12 +848,12 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+     * @return \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
      */
     public function restCategoriesCategoryIdDocumentsGet(
         int $category_id,
         string $contentType = self::contentTypes['restCategoriesCategoryIdDocumentsGet'][0]
-    ): \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+    ): \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
     {
         list($response) = $this->restCategoriesCategoryIdDocumentsGetWithHttpInfo($category_id, $contentType);
         return $response;
@@ -869,7 +869,7 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesCategoryIdDocumentsGetWithHttpInfo(
         int $category_id,
@@ -915,23 +915,23 @@ class DocumentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response';
+            $returnType = '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -952,7 +952,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response',
+                        '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1002,7 +1002,7 @@ class DocumentApi
         string $contentType = self::contentTypes['restCategoriesCategoryIdDocumentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response';
+        $returnType = '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response';
         $request = $this->restCategoriesCategoryIdDocumentsGetRequest($category_id, $contentType);
 
         return $this->client
@@ -1151,12 +1151,12 @@ class DocumentApi
      * @param  string|null $number_with_prefix Number with prefix (optional)
      * @param  int|null $directory_id The directory ID (optional)
      * @param  string|null $display_date The date displayed on the document (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents _rest_categories_category_id_documents (optional)
+     * @param  \ck\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents _rest_categories_category_id_documents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesCategoryIdDocumentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Document[]
+     * @return \ck\Model\Document[]
      */
     public function restCategoriesCategoryIdDocumentsPost(
         int $documents,
@@ -1165,7 +1165,7 @@ class DocumentApi
         ?string $number_with_prefix = null,
         ?int $directory_id = null,
         ?string $display_date = null,
-        ?\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest $_rest_categories_category_id_documents = null,
+        ?\ck\Model\RestCategoriesCategoryIdDocumentsPostRequest $_rest_categories_category_id_documents = null,
         string $contentType = self::contentTypes['restCategoriesCategoryIdDocumentsPost'][0]
     ): array
     {
@@ -1184,12 +1184,12 @@ class DocumentApi
      * @param  string|null $number_with_prefix Number with prefix (optional)
      * @param  int|null $directory_id The directory ID (optional)
      * @param  string|null $display_date The date displayed on the document (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents (optional)
+     * @param  \ck\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesCategoryIdDocumentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Document[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Document[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCategoriesCategoryIdDocumentsPostWithHttpInfo(
         int $documents,
@@ -1198,7 +1198,7 @@ class DocumentApi
         ?string $number_with_prefix = null,
         ?int $directory_id = null,
         ?string $display_date = null,
-        ?\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest $_rest_categories_category_id_documents = null,
+        ?\ck\Model\RestCategoriesCategoryIdDocumentsPostRequest $_rest_categories_category_id_documents = null,
         string $contentType = self::contentTypes['restCategoriesCategoryIdDocumentsPost'][0]
     ): array
     {
@@ -1241,23 +1241,23 @@ class DocumentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Document[]' === '\SplFileObject') {
+                    if ('\ck\Model\Document[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Document[]' !== 'string') {
+                        if ('\ck\Model\Document[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Document[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Document[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Document[]';
+            $returnType = '\ck\Model\Document[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1278,7 +1278,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Document[]',
+                        '\ck\Model\Document[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1299,7 +1299,7 @@ class DocumentApi
      * @param  string|null $number_with_prefix Number with prefix (optional)
      * @param  int|null $directory_id The directory ID (optional)
      * @param  string|null $display_date The date displayed on the document (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents (optional)
+     * @param  \ck\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesCategoryIdDocumentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1312,7 +1312,7 @@ class DocumentApi
         ?string $number_with_prefix = null,
         ?int $directory_id = null,
         ?string $display_date = null,
-        ?\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest $_rest_categories_category_id_documents = null,
+        ?\ck\Model\RestCategoriesCategoryIdDocumentsPostRequest $_rest_categories_category_id_documents = null,
         string $contentType = self::contentTypes['restCategoriesCategoryIdDocumentsPost'][0]
     ): PromiseInterface
     {
@@ -1335,7 +1335,7 @@ class DocumentApi
      * @param  string|null $number_with_prefix Number with prefix (optional)
      * @param  int|null $directory_id The directory ID (optional)
      * @param  string|null $display_date The date displayed on the document (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents (optional)
+     * @param  \ck\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesCategoryIdDocumentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1352,7 +1352,7 @@ class DocumentApi
         string $contentType = self::contentTypes['restCategoriesCategoryIdDocumentsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Document[]';
+        $returnType = '\ck\Model\Document[]';
         $request = $this->restCategoriesCategoryIdDocumentsPostRequest($documents, $category_id, $number, $number_with_prefix, $directory_id, $display_date, $_rest_categories_category_id_documents, $contentType);
 
         return $this->client
@@ -1400,7 +1400,7 @@ class DocumentApi
      * @param  string|null $number_with_prefix Number with prefix (optional)
      * @param  int|null $directory_id The directory ID (optional)
      * @param  string|null $display_date The date displayed on the document (optional)
-     * @param  \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents (optional)
+     * @param  \ck\Model\RestCategoriesCategoryIdDocumentsPostRequest|null $_rest_categories_category_id_documents (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restCategoriesCategoryIdDocumentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2401,7 +2401,7 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+     * @return \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
      */
     public function restOrdersDocumentsGet(
         int $page,
@@ -2415,7 +2415,7 @@ class DocumentApi
         ?int $with = null,
         ?bool $with_content = null,
         string $contentType = self::contentTypes['restOrdersDocumentsGet'][0]
-    ): \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+    ): \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
     {
         list($response) = $this->restOrdersDocumentsGetWithHttpInfo($page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $display_date_from, $display_date_to, $with, $with_content, $contentType);
         return $response;
@@ -2440,7 +2440,7 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDocumentsGetWithHttpInfo(
         int $page,
@@ -2495,23 +2495,23 @@ class DocumentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response';
+            $returnType = '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2532,7 +2532,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response',
+                        '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2618,7 +2618,7 @@ class DocumentApi
         string $contentType = self::contentTypes['restOrdersDocumentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response';
+        $returnType = '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response';
         $request = $this->restOrdersDocumentsGetRequest($page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $display_date_from, $display_date_to, $with, $with_content, $contentType);
 
         return $this->client
@@ -2893,7 +2893,7 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+     * @return \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
      */
     public function restOrdersDocumentsTypeGet(
         string $type,
@@ -2910,7 +2910,7 @@ class DocumentApi
         ?int $with = null,
         ?bool $with_content = null,
         string $contentType = self::contentTypes['restOrdersDocumentsTypeGet'][0]
-    ): \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+    ): \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
     {
         list($response) = $this->restOrdersDocumentsTypeGetWithHttpInfo($type, $page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $updated_at_from, $updated_at_to, $display_date_from, $display_date_to, $with, $with_content, $contentType);
         return $response;
@@ -2938,7 +2938,7 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDocumentsTypeGetWithHttpInfo(
         string $type,
@@ -2996,23 +2996,23 @@ class DocumentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response';
+            $returnType = '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3033,7 +3033,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response',
+                        '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3131,7 +3131,7 @@ class DocumentApi
         string $contentType = self::contentTypes['restOrdersDocumentsTypeGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response';
+        $returnType = '\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response';
         $request = $this->restOrdersDocumentsTypeGetRequest($type, $page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $updated_at_from, $updated_at_to, $display_date_from, $display_date_to, $with, $with_content, $contentType);
 
         return $this->client
@@ -10018,14 +10018,14 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Document
+     * @return \ck\Model\Document
      */
     public function restOrdersOrderIdDocumentsTypeCurrentGet(
         int $order_id,
         string $type,
         ?bool $with_content = null,
         string $contentType = self::contentTypes['restOrdersOrderIdDocumentsTypeCurrentGet'][0]
-    ): \ck/plenty-client\Model\Document
+    ): \ck\Model\Document
     {
         list($response) = $this->restOrdersOrderIdDocumentsTypeCurrentGetWithHttpInfo($order_id, $type, $with_content, $contentType);
         return $response;
@@ -10043,7 +10043,7 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Document, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Document, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDocumentsTypeCurrentGetWithHttpInfo(
         int $order_id,
@@ -10091,23 +10091,23 @@ class DocumentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Document' === '\SplFileObject') {
+                    if ('\ck\Model\Document' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Document' !== 'string') {
+                        if ('\ck\Model\Document' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Document', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Document', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Document';
+            $returnType = '\ck\Model\Document';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10128,7 +10128,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Document',
+                        '\ck\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10186,7 +10186,7 @@ class DocumentApi
         string $contentType = self::contentTypes['restOrdersOrderIdDocumentsTypeCurrentGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Document';
+        $returnType = '\ck\Model\Document';
         $request = $this->restOrdersOrderIdDocumentsTypeCurrentGetRequest($order_id, $type, $with_content, $contentType);
 
         return $this->client
@@ -10687,17 +10687,17 @@ class DocumentApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  string $type The document type. Supported types are &#39;invoiceExternal&#39;, &#39;deliveryNote&#39;, &#39;poDeliveryNote&#39;, &#39;orderConfirmation&#39;, &#39;offer&#39;, &#39;dunningLetter&#39;, &#39;reversalDunningLetter&#39;, &#39;returnNote&#39;, &#39;successConfirmation&#39;, &#39;correction&#39;, &#39;creditNoteExternal&#39;, &#39;reorder&#39;, &#39;uploaded&#39;. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type _rest_orders_order_id_documents_type (optional)
+     * @param  \ck\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type _rest_orders_order_id_documents_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdDocumentsTypePost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Document[]
+     * @return \ck\Model\Document[]
      */
     public function restOrdersOrderIdDocumentsTypePost(
         int $order_id,
         string $type,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest $_rest_orders_order_id_documents_type = null,
+        ?\ck\Model\RestOrdersOrderIdDocumentsTypePostRequest $_rest_orders_order_id_documents_type = null,
         string $contentType = self::contentTypes['restOrdersOrderIdDocumentsTypePost'][0]
     ): array
     {
@@ -10712,17 +10712,17 @@ class DocumentApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  string $type The document type. Supported types are &#39;invoiceExternal&#39;, &#39;deliveryNote&#39;, &#39;poDeliveryNote&#39;, &#39;orderConfirmation&#39;, &#39;offer&#39;, &#39;dunningLetter&#39;, &#39;reversalDunningLetter&#39;, &#39;returnNote&#39;, &#39;successConfirmation&#39;, &#39;correction&#39;, &#39;creditNoteExternal&#39;, &#39;reorder&#39;, &#39;uploaded&#39;. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type (optional)
+     * @param  \ck\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdDocumentsTypePost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Document[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Document[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDocumentsTypePostWithHttpInfo(
         int $order_id,
         string $type,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest $_rest_orders_order_id_documents_type = null,
+        ?\ck\Model\RestOrdersOrderIdDocumentsTypePostRequest $_rest_orders_order_id_documents_type = null,
         string $contentType = self::contentTypes['restOrdersOrderIdDocumentsTypePost'][0]
     ): array
     {
@@ -10765,23 +10765,23 @@ class DocumentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Document[]' === '\SplFileObject') {
+                    if ('\ck\Model\Document[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Document[]' !== 'string') {
+                        if ('\ck\Model\Document[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Document[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Document[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Document[]';
+            $returnType = '\ck\Model\Document[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10802,7 +10802,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Document[]',
+                        '\ck\Model\Document[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10819,7 +10819,7 @@ class DocumentApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  string $type The document type. Supported types are &#39;invoiceExternal&#39;, &#39;deliveryNote&#39;, &#39;poDeliveryNote&#39;, &#39;orderConfirmation&#39;, &#39;offer&#39;, &#39;dunningLetter&#39;, &#39;reversalDunningLetter&#39;, &#39;returnNote&#39;, &#39;successConfirmation&#39;, &#39;correction&#39;, &#39;creditNoteExternal&#39;, &#39;reorder&#39;, &#39;uploaded&#39;. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type (optional)
+     * @param  \ck\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdDocumentsTypePost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10828,7 +10828,7 @@ class DocumentApi
     public function restOrdersOrderIdDocumentsTypePostAsync(
         int $order_id,
         string $type,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest $_rest_orders_order_id_documents_type = null,
+        ?\ck\Model\RestOrdersOrderIdDocumentsTypePostRequest $_rest_orders_order_id_documents_type = null,
         string $contentType = self::contentTypes['restOrdersOrderIdDocumentsTypePost'][0]
     ): PromiseInterface
     {
@@ -10847,7 +10847,7 @@ class DocumentApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  string $type The document type. Supported types are &#39;invoiceExternal&#39;, &#39;deliveryNote&#39;, &#39;poDeliveryNote&#39;, &#39;orderConfirmation&#39;, &#39;offer&#39;, &#39;dunningLetter&#39;, &#39;reversalDunningLetter&#39;, &#39;returnNote&#39;, &#39;successConfirmation&#39;, &#39;correction&#39;, &#39;creditNoteExternal&#39;, &#39;reorder&#39;, &#39;uploaded&#39;. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type (optional)
+     * @param  \ck\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdDocumentsTypePost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10860,7 +10860,7 @@ class DocumentApi
         string $contentType = self::contentTypes['restOrdersOrderIdDocumentsTypePost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Document[]';
+        $returnType = '\ck\Model\Document[]';
         $request = $this->restOrdersOrderIdDocumentsTypePostRequest($order_id, $type, $_rest_orders_order_id_documents_type, $contentType);
 
         return $this->client
@@ -10904,7 +10904,7 @@ class DocumentApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  string $type The document type. Supported types are &#39;invoiceExternal&#39;, &#39;deliveryNote&#39;, &#39;poDeliveryNote&#39;, &#39;orderConfirmation&#39;, &#39;offer&#39;, &#39;dunningLetter&#39;, &#39;reversalDunningLetter&#39;, &#39;returnNote&#39;, &#39;successConfirmation&#39;, &#39;correction&#39;, &#39;creditNoteExternal&#39;, &#39;reorder&#39;, &#39;uploaded&#39;. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type (optional)
+     * @param  \ck\Model\RestOrdersOrderIdDocumentsTypePostRequest|null $_rest_orders_order_id_documents_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdDocumentsTypePost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11037,14 +11037,14 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Document
+     * @return \ck\Model\Document
      */
     public function restOrdersOrderIdDocumentsTypeRecentGet(
         int $order_id,
         string $type,
         ?bool $with_content = null,
         string $contentType = self::contentTypes['restOrdersOrderIdDocumentsTypeRecentGet'][0]
-    ): \ck/plenty-client\Model\Document
+    ): \ck\Model\Document
     {
         list($response) = $this->restOrdersOrderIdDocumentsTypeRecentGetWithHttpInfo($order_id, $type, $with_content, $contentType);
         return $response;
@@ -11062,7 +11062,7 @@ class DocumentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Document, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Document, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDocumentsTypeRecentGetWithHttpInfo(
         int $order_id,
@@ -11110,23 +11110,23 @@ class DocumentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Document' === '\SplFileObject') {
+                    if ('\ck\Model\Document' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Document' !== 'string') {
+                        if ('\ck\Model\Document' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Document', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Document', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Document';
+            $returnType = '\ck\Model\Document';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11147,7 +11147,7 @@ class DocumentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Document',
+                        '\ck\Model\Document',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11205,7 +11205,7 @@ class DocumentApi
         string $contentType = self::contentTypes['restOrdersOrderIdDocumentsTypeRecentGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Document';
+        $returnType = '\ck\Model\Document';
         $request = $this->restOrdersOrderIdDocumentsTypeRecentGetRequest($order_id, $type, $with_content, $contentType);
 
         return $this->client

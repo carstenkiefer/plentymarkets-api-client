@@ -3,7 +3,7 @@
  * SalesRepresentativeRegionApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * SalesRepresentativeRegionApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -151,13 +151,13 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\SalesRepresentativeRegion
+     * @return \ck\Model\SalesRepresentativeRegion
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGet(
         int $account_id,
         int $contact_id,
         string $contentType = self::contentTypes['restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGet'][0]
-    ): \ck/plenty-client\Model\SalesRepresentativeRegion
+    ): \ck\Model\SalesRepresentativeRegion
     {
         list($response) = $this->restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGetWithHttpInfo($account_id, $contact_id, $contentType);
         return $response;
@@ -174,7 +174,7 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\SalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\SalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGetWithHttpInfo(
         int $account_id,
@@ -221,23 +221,23 @@ class SalesRepresentativeRegionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\SalesRepresentativeRegion' === '\SplFileObject') {
+                    if ('\ck\Model\SalesRepresentativeRegion' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\SalesRepresentativeRegion' !== 'string') {
+                        if ('\ck\Model\SalesRepresentativeRegion' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\SalesRepresentativeRegion', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\SalesRepresentativeRegion', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\SalesRepresentativeRegion';
+            $returnType = '\ck\Model\SalesRepresentativeRegion';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -258,7 +258,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\SalesRepresentativeRegion',
+                        '\ck\Model\SalesRepresentativeRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -312,7 +312,7 @@ class SalesRepresentativeRegionApi
         string $contentType = self::contentTypes['restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\SalesRepresentativeRegion';
+        $returnType = '\ck\Model\SalesRepresentativeRegion';
         $request = $this->restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGetRequest($account_id, $contact_id, $contentType);
 
         return $this->client
@@ -478,13 +478,13 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\SalesRepresentativeRegion
+     * @return \ck\Model\SalesRepresentativeRegion
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPost(
         int $account_id,
         int $contact_id,
         string $contentType = self::contentTypes['restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPost'][0]
-    ): \ck/plenty-client\Model\SalesRepresentativeRegion
+    ): \ck\Model\SalesRepresentativeRegion
     {
         list($response) = $this->restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPostWithHttpInfo($account_id, $contact_id, $contentType);
         return $response;
@@ -501,7 +501,7 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\SalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\SalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPostWithHttpInfo(
         int $account_id,
@@ -548,23 +548,23 @@ class SalesRepresentativeRegionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\SalesRepresentativeRegion' === '\SplFileObject') {
+                    if ('\ck\Model\SalesRepresentativeRegion' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\SalesRepresentativeRegion' !== 'string') {
+                        if ('\ck\Model\SalesRepresentativeRegion' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\SalesRepresentativeRegion', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\SalesRepresentativeRegion', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\SalesRepresentativeRegion';
+            $returnType = '\ck\Model\SalesRepresentativeRegion';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -585,7 +585,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\SalesRepresentativeRegion',
+                        '\ck\Model\SalesRepresentativeRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -639,7 +639,7 @@ class SalesRepresentativeRegionApi
         string $contentType = self::contentTypes['restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\SalesRepresentativeRegion';
+        $returnType = '\ck\Model\SalesRepresentativeRegion';
         $request = $this->restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPostRequest($account_id, $contact_id, $contentType);
 
         return $this->client
@@ -1105,11 +1105,11 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+     * @return \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
      */
     public function restAccountsContactsSalesRepresentativeRegionsGet(
         string $contentType = self::contentTypes['restAccountsContactsSalesRepresentativeRegionsGet'][0]
-    ): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+    ): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
     {
         list($response) = $this->restAccountsContactsSalesRepresentativeRegionsGetWithHttpInfo($contentType);
         return $response;
@@ -1124,7 +1124,7 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsSalesRepresentativeRegionsGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsContactsSalesRepresentativeRegionsGet'][0]
@@ -1169,23 +1169,23 @@ class SalesRepresentativeRegionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
+            $returnType = '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1206,7 +1206,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response',
+                        '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1252,7 +1252,7 @@ class SalesRepresentativeRegionApi
         string $contentType = self::contentTypes['restAccountsContactsSalesRepresentativeRegionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
+        $returnType = '\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response';
         $request = $this->restAccountsContactsSalesRepresentativeRegionsGetRequest($contentType);
 
         return $this->client
@@ -1685,12 +1685,12 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\SalesRepresentativeRegion
+     * @return \ck\Model\SalesRepresentativeRegion
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGet(
         int $sales_representative_region_id,
         string $contentType = self::contentTypes['restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGet'][0]
-    ): \ck/plenty-client\Model\SalesRepresentativeRegion
+    ): \ck\Model\SalesRepresentativeRegion
     {
         list($response) = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGetWithHttpInfo($sales_representative_region_id, $contentType);
         return $response;
@@ -1706,7 +1706,7 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\SalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\SalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGetWithHttpInfo(
         int $sales_representative_region_id,
@@ -1752,23 +1752,23 @@ class SalesRepresentativeRegionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\SalesRepresentativeRegion' === '\SplFileObject') {
+                    if ('\ck\Model\SalesRepresentativeRegion' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\SalesRepresentativeRegion' !== 'string') {
+                        if ('\ck\Model\SalesRepresentativeRegion' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\SalesRepresentativeRegion', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\SalesRepresentativeRegion', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\SalesRepresentativeRegion';
+            $returnType = '\ck\Model\SalesRepresentativeRegion';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1789,7 +1789,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\SalesRepresentativeRegion',
+                        '\ck\Model\SalesRepresentativeRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1839,7 +1839,7 @@ class SalesRepresentativeRegionApi
         string $contentType = self::contentTypes['restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\SalesRepresentativeRegion';
+        $returnType = '\ck\Model\SalesRepresentativeRegion';
         $request = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGetRequest($sales_representative_region_id, $contentType);
 
         return $this->client
@@ -1987,12 +1987,12 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\SalesRepresentativeRegion
+     * @return \ck\Model\SalesRepresentativeRegion
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPut(
         int $sales_representative_region_id,
         string $contentType = self::contentTypes['restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPut'][0]
-    ): \ck/plenty-client\Model\SalesRepresentativeRegion
+    ): \ck\Model\SalesRepresentativeRegion
     {
         list($response) = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPutWithHttpInfo($sales_representative_region_id, $contentType);
         return $response;
@@ -2008,7 +2008,7 @@ class SalesRepresentativeRegionApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\SalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\SalesRepresentativeRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPutWithHttpInfo(
         int $sales_representative_region_id,
@@ -2054,23 +2054,23 @@ class SalesRepresentativeRegionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\SalesRepresentativeRegion' === '\SplFileObject') {
+                    if ('\ck\Model\SalesRepresentativeRegion' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\SalesRepresentativeRegion' !== 'string') {
+                        if ('\ck\Model\SalesRepresentativeRegion' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\SalesRepresentativeRegion', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\SalesRepresentativeRegion', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\SalesRepresentativeRegion';
+            $returnType = '\ck\Model\SalesRepresentativeRegion';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2091,7 +2091,7 @@ class SalesRepresentativeRegionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\SalesRepresentativeRegion',
+                        '\ck\Model\SalesRepresentativeRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2141,7 +2141,7 @@ class SalesRepresentativeRegionApi
         string $contentType = self::contentTypes['restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\SalesRepresentativeRegion';
+        $returnType = '\ck\Model\SalesRepresentativeRegion';
         $request = $this->restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPutRequest($sales_representative_region_id, $contentType);
 
         return $this->client

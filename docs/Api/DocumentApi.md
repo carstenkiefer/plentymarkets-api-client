@@ -1,4 +1,4 @@
-# ck/plenty-client\DocumentApi
+# ck\DocumentApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -52,10 +52,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -114,10 +114,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -159,7 +159,7 @@ try {
 ## `restCategoriesCategoryIdDocumentsGet()`
 
 ```php
-restCategoriesCategoryIdDocumentsGet($category_id): \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+restCategoriesCategoryIdDocumentsGet($category_id): \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
 ```
 
 List documents of a category
@@ -174,10 +174,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response**](../Model/RestCategoriesCategoryIdDocumentsGet200Response.md)
+[**\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response**](../Model/RestCategoriesCategoryIdDocumentsGet200Response.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ try {
 ## `restCategoriesCategoryIdDocumentsPost()`
 
 ```php
-restCategoriesCategoryIdDocumentsPost($documents, $category_id, $number, $number_with_prefix, $directory_id, $display_date, $_rest_categories_category_id_documents): \ck/plenty-client\Model\Document[]
+restCategoriesCategoryIdDocumentsPost($documents, $category_id, $number, $number_with_prefix, $directory_id, $display_date, $_rest_categories_category_id_documents): \ck\Model\Document[]
 ```
 
 Upload category documents
@@ -234,10 +234,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -249,7 +249,7 @@ $number = 56; // int | The document number
 $number_with_prefix = 'number_with_prefix_example'; // string | Number with prefix
 $directory_id = 56; // int | The directory ID
 $display_date = 'display_date_example'; // string | The date displayed on the document
-$_rest_categories_category_id_documents = new \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest(); // \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest
+$_rest_categories_category_id_documents = new \ck\Model\RestCategoriesCategoryIdDocumentsPostRequest(); // \ck\Model\RestCategoriesCategoryIdDocumentsPostRequest
 
 try {
     $result = $apiInstance->restCategoriesCategoryIdDocumentsPost($documents, $category_id, $number, $number_with_prefix, $directory_id, $display_date, $_rest_categories_category_id_documents);
@@ -269,11 +269,11 @@ try {
 | **number_with_prefix** | **string**| Number with prefix | [optional] |
 | **directory_id** | **int**| The directory ID | [optional] |
 | **display_date** | **string**| The date displayed on the document | [optional] |
-| **_rest_categories_category_id_documents** | [**\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsPostRequest**](../Model/RestCategoriesCategoryIdDocumentsPostRequest.md)|  | [optional] |
+| **_rest_categories_category_id_documents** | [**\ck\Model\RestCategoriesCategoryIdDocumentsPostRequest**](../Model/RestCategoriesCategoryIdDocumentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Document[]**](../Model/Document.md)
+[**\ck\Model\Document[]**](../Model/Document.md)
 
 ### Authorization
 
@@ -306,10 +306,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -366,10 +366,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -431,7 +431,7 @@ try {
 ## `restOrdersDocumentsGet()`
 
 ```php
-restOrdersDocumentsGet($page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $display_date_from, $display_date_to, $with, $with_content): \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+restOrdersDocumentsGet($page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $display_date_from, $display_date_to, $with, $with_content): \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
 ```
 
 List order documents
@@ -444,10 +444,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -489,7 +489,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response**](../Model/RestCategoriesCategoryIdDocumentsGet200Response.md)
+[**\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response**](../Model/RestCategoriesCategoryIdDocumentsGet200Response.md)
 
 ### Authorization
 
@@ -507,7 +507,7 @@ try {
 ## `restOrdersDocumentsTypeGet()`
 
 ```php
-restOrdersDocumentsTypeGet($type, $page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $updated_at_from, $updated_at_to, $display_date_from, $display_date_to, $with, $with_content): \ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response
+restOrdersDocumentsTypeGet($type, $page, $items_per_page, $contact_id, $plenty_id, $created_at_from, $created_at_to, $updated_at_from, $updated_at_to, $display_date_from, $display_date_to, $with, $with_content): \ck\Model\RestCategoriesCategoryIdDocumentsGet200Response
 ```
 
 List documents of a type
@@ -522,10 +522,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -573,7 +573,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestCategoriesCategoryIdDocumentsGet200Response**](../Model/RestCategoriesCategoryIdDocumentsGet200Response.md)
+[**\ck\Model\RestCategoriesCategoryIdDocumentsGet200Response**](../Model/RestCategoriesCategoryIdDocumentsGet200Response.md)
 
 ### Authorization
 
@@ -606,10 +606,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -670,10 +670,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -736,10 +736,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -802,10 +802,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -864,10 +864,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -932,10 +932,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1010,10 +1010,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1074,10 +1074,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1150,10 +1150,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1214,10 +1214,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1276,10 +1276,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1352,10 +1352,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1416,10 +1416,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1480,10 +1480,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1544,10 +1544,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1608,10 +1608,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1672,10 +1672,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1736,10 +1736,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1785,7 +1785,7 @@ try {
 ## `restOrdersOrderIdDocumentsTypeCurrentGet()`
 
 ```php
-restOrdersOrderIdDocumentsTypeCurrentGet($order_id, $type, $with_content): \ck/plenty-client\Model\Document
+restOrdersOrderIdDocumentsTypeCurrentGet($order_id, $type, $with_content): \ck\Model\Document
 ```
 
 Get current invoice or credit note of an order
@@ -1800,10 +1800,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1831,7 +1831,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Document**](../Model/Document.md)
+[**\ck\Model\Document**](../Model/Document.md)
 
 ### Authorization
 
@@ -1864,10 +1864,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1911,7 +1911,7 @@ try {
 ## `restOrdersOrderIdDocumentsTypePost()`
 
 ```php
-restOrdersOrderIdDocumentsTypePost($order_id, $type, $_rest_orders_order_id_documents_type): \ck/plenty-client\Model\Document[]
+restOrdersOrderIdDocumentsTypePost($order_id, $type, $_rest_orders_order_id_documents_type): \ck\Model\Document[]
 ```
 
 Upload order documents
@@ -1926,10 +1926,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1937,7 +1937,7 @@ $apiInstance = new ck/plenty-client\Api\DocumentApi(
 );
 $order_id = 56; // int | The ID of the order
 $type = 'type_example'; // string | The document type. Supported types are 'invoiceExternal', 'deliveryNote', 'poDeliveryNote', 'orderConfirmation', 'offer', 'dunningLetter', 'reversalDunningLetter', 'returnNote', 'successConfirmation', 'correction', 'creditNoteExternal', 'reorder', 'uploaded'.
-$_rest_orders_order_id_documents_type = new \ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest(); // \ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest
+$_rest_orders_order_id_documents_type = new \ck\Model\RestOrdersOrderIdDocumentsTypePostRequest(); // \ck\Model\RestOrdersOrderIdDocumentsTypePostRequest
 
 try {
     $result = $apiInstance->restOrdersOrderIdDocumentsTypePost($order_id, $type, $_rest_orders_order_id_documents_type);
@@ -1953,11 +1953,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **order_id** | **int**| The ID of the order | |
 | **type** | **string**| The document type. Supported types are &#39;invoiceExternal&#39;, &#39;deliveryNote&#39;, &#39;poDeliveryNote&#39;, &#39;orderConfirmation&#39;, &#39;offer&#39;, &#39;dunningLetter&#39;, &#39;reversalDunningLetter&#39;, &#39;returnNote&#39;, &#39;successConfirmation&#39;, &#39;correction&#39;, &#39;creditNoteExternal&#39;, &#39;reorder&#39;, &#39;uploaded&#39;. | |
-| **_rest_orders_order_id_documents_type** | [**\ck/plenty-client\Model\RestOrdersOrderIdDocumentsTypePostRequest**](../Model/RestOrdersOrderIdDocumentsTypePostRequest.md)|  | [optional] |
+| **_rest_orders_order_id_documents_type** | [**\ck\Model\RestOrdersOrderIdDocumentsTypePostRequest**](../Model/RestOrdersOrderIdDocumentsTypePostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Document[]**](../Model/Document.md)
+[**\ck\Model\Document[]**](../Model/Document.md)
 
 ### Authorization
 
@@ -1975,7 +1975,7 @@ try {
 ## `restOrdersOrderIdDocumentsTypeRecentGet()`
 
 ```php
-restOrdersOrderIdDocumentsTypeRecentGet($order_id, $type, $with_content): \ck/plenty-client\Model\Document
+restOrdersOrderIdDocumentsTypeRecentGet($order_id, $type, $with_content): \ck\Model\Document
 ```
 
 Get most recent document of an order
@@ -1990,10 +1990,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\DocumentApi(
+$apiInstance = new ck\Api\DocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2021,7 +2021,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Document**](../Model/Document.md)
+[**\ck\Model\Document**](../Model/Document.md)
 
 ### Authorization
 

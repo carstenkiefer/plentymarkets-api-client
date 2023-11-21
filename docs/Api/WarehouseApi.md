@@ -1,4 +1,4 @@
-# ck/plenty-client\WarehouseApi
+# ck\WarehouseApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -38,7 +38,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restWarehousesLayoutsPost()`
 
 ```php
-restWarehousesLayoutsPost($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $dimension_id, $position, $level_id, $label, $purpose_key, $status_key): \ck/plenty-client\Model\WarehouseLocationDimension
+restWarehousesLayoutsPost($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $dimension_id, $position, $level_id, $label, $purpose_key, $status_key): \ck\Model\WarehouseLocationDimension
 ```
 
 Create a warehouse location layout
@@ -53,10 +53,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
+[**\ck\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
 
 ### Authorization
 
@@ -137,10 +137,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -197,10 +197,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,10 +256,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -298,7 +298,7 @@ This endpoint does not need any parameter.
 ## `restWarehousesLocationsDimensionsPost()`
 
 ```php
-restWarehousesLocationsDimensionsPost($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path): \ck/plenty-client\Model\WarehouseLocationDimension
+restWarehousesLocationsDimensionsPost($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path): \ck\Model\WarehouseLocationDimension
 ```
 
 Create a warehouse location dimension
@@ -313,10 +313,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -352,7 +352,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
+[**\ck\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
 
 ### Authorization
 
@@ -385,10 +385,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -429,7 +429,7 @@ void (empty response body)
 ## `restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGet()`
 
 ```php
-restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGet($warehouse_location_dimension_id): \ck/plenty-client\Model\WarehouseLocationDimension
+restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGet($warehouse_location_dimension_id): \ck\Model\WarehouseLocationDimension
 ```
 
 Get a warehouse location dimension
@@ -444,10 +444,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -471,7 +471,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
+[**\ck\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
 
 ### Authorization
 
@@ -489,7 +489,7 @@ try {
 ## `restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPut()`
 
 ```php
-restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPut($warehouse_location_dimension_id): \ck/plenty-client\Model\WarehouseLocationDimension
+restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPut($warehouse_location_dimension_id): \ck\Model\WarehouseLocationDimension
 ```
 
 Update a warehouse location dimension
@@ -504,10 +504,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -531,7 +531,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
+[**\ck\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ try {
 ## `restWarehousesLocationsGroupPut()`
 
 ```php
-restWarehousesLocationsGroupPut($purpose, $status): \ck/plenty-client\Model\WarehouseLocation[]
+restWarehousesLocationsGroupPut($purpose, $status): \ck\Model\WarehouseLocation[]
 ```
 
 Edit the purpose and status for a group of storage locations
@@ -564,10 +564,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -593,7 +593,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocation[]**](../Model/WarehouseLocation.md)
+[**\ck\Model\WarehouseLocation[]**](../Model/WarehouseLocation.md)
 
 ### Authorization
 
@@ -626,10 +626,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -674,7 +674,7 @@ void (empty response body)
 ## `restWarehousesLocationsLevelsPost()`
 
 ```php
-restWarehousesLocationsLevelsPost($parent_id, $dimension_id, $position, $name): \ck/plenty-client\Model\WarehouseLocationLevel
+restWarehousesLocationsLevelsPost($parent_id, $dimension_id, $position, $name): \ck\Model\WarehouseLocationLevel
 ```
 
 Create a warehouse location level
@@ -689,10 +689,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -722,7 +722,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationLevel**](../Model/WarehouseLocationLevel.md)
+[**\ck\Model\WarehouseLocationLevel**](../Model/WarehouseLocationLevel.md)
 
 ### Authorization
 
@@ -755,10 +755,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -799,7 +799,7 @@ void (empty response body)
 ## `restWarehousesLocationsLevelsWarehouseLocationLevelIdGet()`
 
 ```php
-restWarehousesLocationsLevelsWarehouseLocationLevelIdGet($warehouse_location_level_id): \ck/plenty-client\Model\WarehouseLocationLevel
+restWarehousesLocationsLevelsWarehouseLocationLevelIdGet($warehouse_location_level_id): \ck\Model\WarehouseLocationLevel
 ```
 
 Get a warehouse location level
@@ -814,10 +814,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -841,7 +841,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationLevel**](../Model/WarehouseLocationLevel.md)
+[**\ck\Model\WarehouseLocationLevel**](../Model/WarehouseLocationLevel.md)
 
 ### Authorization
 
@@ -859,7 +859,7 @@ try {
 ## `restWarehousesLocationsLevelsWarehouseLocationLevelIdPut()`
 
 ```php
-restWarehousesLocationsLevelsWarehouseLocationLevelIdPut($warehouse_location_level_id): \ck/plenty-client\Model\WarehouseLocationLevel
+restWarehousesLocationsLevelsWarehouseLocationLevelIdPut($warehouse_location_level_id): \ck\Model\WarehouseLocationLevel
 ```
 
 Update a warehouse location level
@@ -874,10 +874,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -901,7 +901,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationLevel**](../Model/WarehouseLocationLevel.md)
+[**\ck\Model\WarehouseLocationLevel**](../Model/WarehouseLocationLevel.md)
 
 ### Authorization
 
@@ -919,7 +919,7 @@ try {
 ## `restWarehousesLocationsMultipleDimensionsPost()`
 
 ```php
-restWarehousesLocationsMultipleDimensionsPost($dimensions): \ck/plenty-client\Model\WarehouseLocationDimension[]
+restWarehousesLocationsMultipleDimensionsPost($dimensions): \ck\Model\WarehouseLocationDimension[]
 ```
 
 Create multiple warehouse location dimensions
@@ -934,10 +934,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -961,7 +961,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationDimension[]**](../Model/WarehouseLocationDimension.md)
+[**\ck\Model\WarehouseLocationDimension[]**](../Model/WarehouseLocationDimension.md)
 
 ### Authorization
 
@@ -994,10 +994,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1042,7 +1042,7 @@ void (empty response body)
 ## `restWarehousesLocationsPost()`
 
 ```php
-restWarehousesLocationsPost($level_id, $label, $purpose_key, $status_key, $position): \ck/plenty-client\Model\WarehouseLocation
+restWarehousesLocationsPost($level_id, $label, $purpose_key, $status_key, $position): \ck\Model\WarehouseLocation
 ```
 
 Create a warehouse location
@@ -1057,10 +1057,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1092,7 +1092,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocation**](../Model/WarehouseLocation.md)
+[**\ck\Model\WarehouseLocation**](../Model/WarehouseLocation.md)
 
 ### Authorization
 
@@ -1125,10 +1125,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1176,7 +1176,7 @@ try {
 ## `restWarehousesLocationsStockWarehouseLocationIdGet()`
 
 ```php
-restWarehousesLocationsStockWarehouseLocationIdGet($warehouse_location_id, $warehouse_location_id2): \ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
+restWarehousesLocationsStockWarehouseLocationIdGet($warehouse_location_id, $warehouse_location_id2): \ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
 ```
 
 List warehouse locations stock
@@ -1191,10 +1191,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1220,7 +1220,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response**](../Model/RestWarehousesLocationsStockWarehouseLocationIdGet200Response.md)
+[**\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response**](../Model/RestWarehousesLocationsStockWarehouseLocationIdGet200Response.md)
 
 ### Authorization
 
@@ -1253,10 +1253,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1315,10 +1315,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1359,7 +1359,7 @@ void (empty response body)
 ## `restWarehousesLocationsWarehouseLocationIdGet()`
 
 ```php
-restWarehousesLocationsWarehouseLocationIdGet($warehouse_location_id): \ck/plenty-client\Model\WarehouseLocation
+restWarehousesLocationsWarehouseLocationIdGet($warehouse_location_id): \ck\Model\WarehouseLocation
 ```
 
 Get a warehouse location
@@ -1374,10 +1374,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1401,7 +1401,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocation**](../Model/WarehouseLocation.md)
+[**\ck\Model\WarehouseLocation**](../Model/WarehouseLocation.md)
 
 ### Authorization
 
@@ -1419,7 +1419,7 @@ try {
 ## `restWarehousesLocationsWarehouseLocationIdPut()`
 
 ```php
-restWarehousesLocationsWarehouseLocationIdPut($warehouse_location_id): \ck/plenty-client\Model\WarehouseLocation
+restWarehousesLocationsWarehouseLocationIdPut($warehouse_location_id): \ck\Model\WarehouseLocation
 ```
 
 Update a warehouse location
@@ -1434,10 +1434,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1461,7 +1461,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocation**](../Model/WarehouseLocation.md)
+[**\ck\Model\WarehouseLocation**](../Model/WarehouseLocation.md)
 
 ### Authorization
 
@@ -1494,10 +1494,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1554,10 +1554,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1599,7 +1599,7 @@ try {
 ## `restWarehousesWarehouseIdLocationsDimensionsGet()`
 
 ```php
-restWarehousesWarehouseIdLocationsDimensionsGet($warehouse_id): \ck/plenty-client\Model\WarehouseLocationDimension
+restWarehousesWarehouseIdLocationsDimensionsGet($warehouse_id): \ck\Model\WarehouseLocationDimension
 ```
 
 List warehouse location dimensions
@@ -1614,10 +1614,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1641,7 +1641,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
+[**\ck\Model\WarehouseLocationDimension**](../Model/WarehouseLocationDimension.md)
 
 ### Authorization
 
@@ -1659,7 +1659,7 @@ try {
 ## `restWarehousesWarehouseIdLocationsGet()`
 
 ```php
-restWarehousesWarehouseIdLocationsGet($warehouse_id): \ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
+restWarehousesWarehouseIdLocationsGet($warehouse_id): \ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
 ```
 
 List warehouse locations
@@ -1674,10 +1674,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1701,7 +1701,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response**](../Model/RestWarehousesLocationsStockWarehouseLocationIdGet200Response.md)
+[**\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response**](../Model/RestWarehousesLocationsStockWarehouseLocationIdGet200Response.md)
 
 ### Authorization
 
@@ -1734,10 +1734,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1783,7 +1783,7 @@ try {
 ## `restWarehousesWarehouseIdLocationsLevelsGet()`
 
 ```php
-restWarehousesWarehouseIdLocationsLevelsGet($warehouse_id): \ck/plenty-client\Model\WarehouseLocationLevel[]
+restWarehousesWarehouseIdLocationsLevelsGet($warehouse_id): \ck\Model\WarehouseLocationLevel[]
 ```
 
 List warehouse location levels
@@ -1798,10 +1798,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\WarehouseApi(
+$apiInstance = new ck\Api\WarehouseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1825,7 +1825,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\WarehouseLocationLevel[]**](../Model/WarehouseLocationLevel.md)
+[**\ck\Model\WarehouseLocationLevel[]**](../Model/WarehouseLocationLevel.md)
 
 ### Authorization
 

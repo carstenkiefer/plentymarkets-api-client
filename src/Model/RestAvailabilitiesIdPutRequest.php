@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestAvailabilitiesIdPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class RestAvailabilitiesIdPutRequest implements ModelInterface, ArrayAccess, Jso
     protected static array $openAPITypes = [
         'id' => 'int',
         'average_days' => 'int',
-        'names' => '\ck/plenty-client\Model\AvailabilityName[]',
+        'names' => '\ck\Model\AvailabilityName[]',
         'name' => 'string',
         'lang' => 'string'
     ];
@@ -384,7 +384,7 @@ class RestAvailabilitiesIdPutRequest implements ModelInterface, ArrayAccess, Jso
     /**
      * Gets names
      *
-     * @return \ck/plenty-client\Model\AvailabilityName[]
+     * @return \ck\Model\AvailabilityName[]
      */
     public function getNames(): array
     {
@@ -394,7 +394,7 @@ class RestAvailabilitiesIdPutRequest implements ModelInterface, ArrayAccess, Jso
     /**
      * Sets names
      *
-     * @param \ck/plenty-client\Model\AvailabilityName[] $names names
+     * @param \ck\Model\AvailabilityName[] $names names
      *
      * @return $this
      */

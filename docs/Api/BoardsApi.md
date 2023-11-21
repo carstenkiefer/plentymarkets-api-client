@@ -1,4 +1,4 @@
-# ck/plenty-client\BoardsApi
+# ck\BoardsApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -30,10 +30,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardsApi(
+$apiInstance = new ck\Api\BoardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -75,7 +75,7 @@ try {
 ## `restBoardsBoardIdGet()`
 
 ```php
-restBoardsBoardIdGet($board_id, $tasks_per_page): \ck/plenty-client\Model\Board
+restBoardsBoardIdGet($board_id, $tasks_per_page): \ck\Model\Board
 ```
 
 Get board by ID
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardsApi(
+$apiInstance = new ck\Api\BoardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Board**](../Model/Board.md)
+[**\ck\Model\Board**](../Model/Board.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ try {
 ## `restBoardsBoardIdPost()`
 
 ```php
-restBoardsBoardIdPost($board_id): \ck/plenty-client\Model\Board
+restBoardsBoardIdPost($board_id): \ck\Model\Board
 ```
 
 Copy board
@@ -152,10 +152,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardsApi(
+$apiInstance = new ck\Api\BoardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +179,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Board**](../Model/Board.md)
+[**\ck\Model\Board**](../Model/Board.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ try {
 ## `restBoardsBoardIdPut()`
 
 ```php
-restBoardsBoardIdPut($board_id, $_rest_boards_board_id): \ck/plenty-client\Model\Board
+restBoardsBoardIdPut($board_id, $_rest_boards_board_id): \ck\Model\Board
 ```
 
 Update board
@@ -212,17 +212,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardsApi(
+$apiInstance = new ck\Api\BoardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $board_id = 'board_id_example'; // string | The ID of the board
-$_rest_boards_board_id = new \ck/plenty-client\Model\RestBoardsBoardIdPutRequest(); // \ck/plenty-client\Model\RestBoardsBoardIdPutRequest
+$_rest_boards_board_id = new \ck\Model\RestBoardsBoardIdPutRequest(); // \ck\Model\RestBoardsBoardIdPutRequest
 
 try {
     $result = $apiInstance->restBoardsBoardIdPut($board_id, $_rest_boards_board_id);
@@ -237,11 +237,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **board_id** | **string**| The ID of the board | |
-| **_rest_boards_board_id** | [**\ck/plenty-client\Model\RestBoardsBoardIdPutRequest**](../Model/RestBoardsBoardIdPutRequest.md)|  | [optional] |
+| **_rest_boards_board_id** | [**\ck\Model\RestBoardsBoardIdPutRequest**](../Model/RestBoardsBoardIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Board**](../Model/Board.md)
+[**\ck\Model\Board**](../Model/Board.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ try {
 ## `restBoardsGet()`
 
 ```php
-restBoardsGet(): \ck/plenty-client\Model\Board[]
+restBoardsGet(): \ck\Model\Board[]
 ```
 
 List all boards
@@ -274,10 +274,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardsApi(
+$apiInstance = new ck\Api\BoardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -298,7 +298,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Board[]**](../Model/Board.md)
+[**\ck\Model\Board[]**](../Model/Board.md)
 
 ### Authorization
 
@@ -316,7 +316,7 @@ This endpoint does not need any parameter.
 ## `restBoardsPost()`
 
 ```php
-restBoardsPost($_rest_boards): \ck/plenty-client\Model\Board
+restBoardsPost($_rest_boards): \ck\Model\Board
 ```
 
 Create new board
@@ -331,16 +331,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardsApi(
+$apiInstance = new ck\Api\BoardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_boards = new \ck/plenty-client\Model\RestBoardsPostRequest(); // \ck/plenty-client\Model\RestBoardsPostRequest
+$_rest_boards = new \ck\Model\RestBoardsPostRequest(); // \ck\Model\RestBoardsPostRequest
 
 try {
     $result = $apiInstance->restBoardsPost($_rest_boards);
@@ -354,11 +354,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_boards** | [**\ck/plenty-client\Model\RestBoardsPostRequest**](../Model/RestBoardsPostRequest.md)|  | [optional] |
+| **_rest_boards** | [**\ck\Model\RestBoardsPostRequest**](../Model/RestBoardsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Board**](../Model/Board.md)
+[**\ck\Model\Board**](../Model/Board.md)
 
 ### Authorization
 

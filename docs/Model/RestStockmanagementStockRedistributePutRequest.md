@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**redistributions** | [**\ck/plenty-client\Model\VariationStockRedistribution[]**](VariationStockRedistribution.md) |  |
+**redistributions** | [**\ck\Model\VariationStockRedistribution[]**](VariationStockRedistribution.md) |  |
 **variation_id** | **int** | The ID of the variation |
 **reason_id** | **int** | The reason for the redistribution. Valid reasons are:   401: Stock transfer  402: Stock correction by stocktaking  403: Stock transfer because of need for repair  optional | [optional]
 **quantity** | **float** | The quantity to redistribute |

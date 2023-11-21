@@ -3,7 +3,7 @@
  * ConvertGuestsApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ConvertGuestsApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,11 +131,11 @@ class ConvertGuestsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Contact
+     * @return \ck\Model\Contact
      */
     public function restAccountsGuestsConvertPost(
         string $contentType = self::contentTypes['restAccountsGuestsConvertPost'][0]
-    ): \ck/plenty-client\Model\Contact
+    ): \ck\Model\Contact
     {
         list($response) = $this->restAccountsGuestsConvertPostWithHttpInfo($contentType);
         return $response;
@@ -150,7 +150,7 @@ class ConvertGuestsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsGuestsConvertPostWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsGuestsConvertPost'][0]
@@ -195,23 +195,23 @@ class ConvertGuestsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Contact' === '\SplFileObject') {
+                    if ('\ck\Model\Contact' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Contact' !== 'string') {
+                        if ('\ck\Model\Contact' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Contact', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Contact', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Contact';
+            $returnType = '\ck\Model\Contact';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -232,7 +232,7 @@ class ConvertGuestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Contact',
+                        '\ck\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -278,7 +278,7 @@ class ConvertGuestsApi
         string $contentType = self::contentTypes['restAccountsGuestsConvertPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Contact';
+        $returnType = '\ck\Model\Contact';
         $request = $this->restAccountsGuestsConvertPostRequest($contentType);
 
         return $this->client

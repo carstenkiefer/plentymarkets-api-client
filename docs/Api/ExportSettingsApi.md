@@ -1,4 +1,4 @@
-# ck/plenty-client\ExportSettingsApi
+# ck\ExportSettingsApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -30,10 +30,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ExportSettingsApi(
+$apiInstance = new ck\Api\ExportSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ExportSettingsApi(
+$apiInstance = new ck\Api\ExportSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -136,7 +136,7 @@ try {
 ## `restExportsExportIdGet()`
 
 ```php
-restExportsExportIdGet($export_id): \ck/plenty-client\Model\Export
+restExportsExportIdGet($export_id): \ck\Model\Export
 ```
 
 Get export
@@ -151,10 +151,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ExportSettingsApi(
+$apiInstance = new ck\Api\ExportSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Export**](../Model/Export.md)
+[**\ck\Model\Export**](../Model/Export.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ try {
 ## `restExportsExportIdPut()`
 
 ```php
-restExportsExportIdPut($export_id, $_rest_exports_export_id): \ck/plenty-client\Model\Export
+restExportsExportIdPut($export_id, $_rest_exports_export_id): \ck\Model\Export
 ```
 
 Update an export
@@ -211,17 +211,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ExportSettingsApi(
+$apiInstance = new ck\Api\ExportSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $export_id = 56; // int
-$_rest_exports_export_id = new \ck/plenty-client\Model\RestExportsExportIdPutRequest(); // \ck/plenty-client\Model\RestExportsExportIdPutRequest
+$_rest_exports_export_id = new \ck\Model\RestExportsExportIdPutRequest(); // \ck\Model\RestExportsExportIdPutRequest
 
 try {
     $result = $apiInstance->restExportsExportIdPut($export_id, $_rest_exports_export_id);
@@ -236,11 +236,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **export_id** | **int**|  | |
-| **_rest_exports_export_id** | [**\ck/plenty-client\Model\RestExportsExportIdPutRequest**](../Model/RestExportsExportIdPutRequest.md)|  | [optional] |
+| **_rest_exports_export_id** | [**\ck\Model\RestExportsExportIdPutRequest**](../Model/RestExportsExportIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Export**](../Model/Export.md)
+[**\ck\Model\Export**](../Model/Export.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ try {
 ## `restExportsGet()`
 
 ```php
-restExportsGet($id, $format_key, $type, $name, $page, $items_per_page): \ck/plenty-client\Model\RestExportsGet200Response
+restExportsGet($id, $format_key, $type, $name, $page, $items_per_page): \ck\Model\RestExportsGet200Response
 ```
 
 List elastic exports
@@ -273,10 +273,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ExportSettingsApi(
+$apiInstance = new ck\Api\ExportSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -310,7 +310,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestExportsGet200Response**](../Model/RestExportsGet200Response.md)
+[**\ck\Model\RestExportsGet200Response**](../Model/RestExportsGet200Response.md)
 
 ### Authorization
 
@@ -328,7 +328,7 @@ try {
 ## `restExportsPost()`
 
 ```php
-restExportsPost($_rest_exports): \ck/plenty-client\Model\Export
+restExportsPost($_rest_exports): \ck\Model\Export
 ```
 
 Create an export
@@ -343,16 +343,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ExportSettingsApi(
+$apiInstance = new ck\Api\ExportSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_exports = new \ck/plenty-client\Model\RestExportsPostRequest(); // \ck/plenty-client\Model\RestExportsPostRequest
+$_rest_exports = new \ck\Model\RestExportsPostRequest(); // \ck\Model\RestExportsPostRequest
 
 try {
     $result = $apiInstance->restExportsPost($_rest_exports);
@@ -366,11 +366,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_exports** | [**\ck/plenty-client\Model\RestExportsPostRequest**](../Model/RestExportsPostRequest.md)|  | [optional] |
+| **_rest_exports** | [**\ck\Model\RestExportsPostRequest**](../Model/RestExportsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Export**](../Model/Export.md)
+[**\ck\Model\Export**](../Model/Export.md)
 
 ### Authorization
 

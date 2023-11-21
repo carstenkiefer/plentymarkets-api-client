@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestLogsGet200Response Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class RestLogsGet200Response implements ModelInterface, ArrayAccess, JsonSeriali
         'first_on_page' => 'int',
         'last_on_page' => 'int',
         'items_per_page' => 'int',
-        'entries' => '\ck/plenty-client\Model\Log[]',
+        'entries' => '\ck\Model\Log[]',
         'filters' => 'object'
     ];
 
@@ -535,7 +535,7 @@ class RestLogsGet200Response implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets entries
      *
-     * @return \ck/plenty-client\Model\Log[]|null
+     * @return \ck\Model\Log[]|null
      */
     public function getEntries(): ?array
     {
@@ -545,7 +545,7 @@ class RestLogsGet200Response implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets entries
      *
-     * @param \ck/plenty-client\Model\Log[]|null $entries List of Log
+     * @param \ck\Model\Log[]|null $entries List of Log
      *
      * @return $this
      */

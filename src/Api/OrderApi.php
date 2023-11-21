@@ -3,7 +3,7 @@
  * OrderApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * OrderApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -884,12 +884,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restDeliveryOrdersOrderIdPut(
         int $order_id,
         string $contentType = self::contentTypes['restDeliveryOrdersOrderIdPut'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restDeliveryOrdersOrderIdPutWithHttpInfo($order_id, $contentType);
         return $response;
@@ -905,7 +905,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restDeliveryOrdersOrderIdPutWithHttpInfo(
         int $order_id,
@@ -951,23 +951,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -988,7 +988,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1038,7 +1038,7 @@ class OrderApi
         string $contentType = self::contentTypes['restDeliveryOrdersOrderIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restDeliveryOrdersOrderIdPutRequest($order_id, $contentType);
 
         return $this->client
@@ -1185,11 +1185,11 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restDeliveryOrdersPost(
         string $contentType = self::contentTypes['restDeliveryOrdersPost'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restDeliveryOrdersPostWithHttpInfo($contentType);
         return $response;
@@ -1204,7 +1204,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restDeliveryOrdersPostWithHttpInfo(
         string $contentType = self::contentTypes['restDeliveryOrdersPost'][0]
@@ -1249,23 +1249,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1286,7 +1286,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1332,7 +1332,7 @@ class OrderApi
         string $contentType = self::contentTypes['restDeliveryOrdersPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restDeliveryOrdersPostRequest($contentType);
 
         return $this->client
@@ -1466,7 +1466,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersGet200Response
+     * @return \ck\Model\RestOrdersGet200Response
      */
     public function restOrdersContactsContactIdGet(
         int $contact_id,
@@ -1474,7 +1474,7 @@ class OrderApi
         int $items_per_page,
         ?int $with = null,
         string $contentType = self::contentTypes['restOrdersContactsContactIdGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersGet200Response
+    ): \ck\Model\RestOrdersGet200Response
     {
         list($response) = $this->restOrdersContactsContactIdGetWithHttpInfo($contact_id, $page, $items_per_page, $with, $contentType);
         return $response;
@@ -1493,7 +1493,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersContactsContactIdGetWithHttpInfo(
         int $contact_id,
@@ -1542,23 +1542,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersGet200Response';
+            $returnType = '\ck\Model\RestOrdersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1579,7 +1579,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersGet200Response',
+                        '\ck\Model\RestOrdersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1641,7 +1641,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersContactsContactIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersGet200Response';
+        $returnType = '\ck\Model\RestOrdersGet200Response';
         $request = $this->restOrdersContactsContactIdGetRequest($contact_id, $page, $items_per_page, $with, $contentType);
 
         return $this->client
@@ -1837,12 +1837,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restOrdersContactsContactIdMultiOrderPost(
         int $contact_id,
         string $contentType = self::contentTypes['restOrdersContactsContactIdMultiOrderPost'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restOrdersContactsContactIdMultiOrderPostWithHttpInfo($contact_id, $contentType);
         return $response;
@@ -1858,7 +1858,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersContactsContactIdMultiOrderPostWithHttpInfo(
         int $contact_id,
@@ -1904,23 +1904,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1941,7 +1941,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1991,7 +1991,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersContactsContactIdMultiOrderPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restOrdersContactsContactIdMultiOrderPostRequest($contact_id, $contentType);
 
         return $this->client
@@ -2135,18 +2135,18 @@ class OrderApi
      * Create a coupon code
      *
      * @param  int $campaign_id campaign_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes _rest_orders_coupons_campaigns_campaign_id_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes _rest_orders_coupons_campaigns_campaign_id_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CouponCampaignCode
+     * @return \ck\Model\CouponCampaignCode
      */
     public function restOrdersCouponsCampaignsCampaignIdCodesPost(
         int $campaign_id,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest $_rest_orders_coupons_campaigns_campaign_id_codes = null,
+        ?\ck\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest $_rest_orders_coupons_campaigns_campaign_id_codes = null,
         string $contentType = self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'][0]
-    ): \ck/plenty-client\Model\CouponCampaignCode
+    ): \ck\Model\CouponCampaignCode
     {
         list($response) = $this->restOrdersCouponsCampaignsCampaignIdCodesPostWithHttpInfo($campaign_id, $_rest_orders_coupons_campaigns_campaign_id_codes, $contentType);
         return $response;
@@ -2158,16 +2158,16 @@ class OrderApi
      * Create a coupon code
      *
      * @param  int $campaign_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CouponCampaignCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CouponCampaignCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCampaignsCampaignIdCodesPostWithHttpInfo(
         int $campaign_id,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest $_rest_orders_coupons_campaigns_campaign_id_codes = null,
+        ?\ck\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest $_rest_orders_coupons_campaigns_campaign_id_codes = null,
         string $contentType = self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'][0]
     ): array
     {
@@ -2210,23 +2210,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CouponCampaignCode' === '\SplFileObject') {
+                    if ('\ck\Model\CouponCampaignCode' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CouponCampaignCode' !== 'string') {
+                        if ('\ck\Model\CouponCampaignCode' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CouponCampaignCode', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CouponCampaignCode', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CouponCampaignCode';
+            $returnType = '\ck\Model\CouponCampaignCode';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2247,7 +2247,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CouponCampaignCode',
+                        '\ck\Model\CouponCampaignCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2263,7 +2263,7 @@ class OrderApi
      * Create a coupon code
      *
      * @param  int $campaign_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2271,7 +2271,7 @@ class OrderApi
      */
     public function restOrdersCouponsCampaignsCampaignIdCodesPostAsync(
         int $campaign_id,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest $_rest_orders_coupons_campaigns_campaign_id_codes = null,
+        ?\ck\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest $_rest_orders_coupons_campaigns_campaign_id_codes = null,
         string $contentType = self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'][0]
     ): PromiseInterface
     {
@@ -2289,7 +2289,7 @@ class OrderApi
      * Create a coupon code
      *
      * @param  int $campaign_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2301,7 +2301,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CouponCampaignCode';
+        $returnType = '\ck\Model\CouponCampaignCode';
         $request = $this->restOrdersCouponsCampaignsCampaignIdCodesPostRequest($campaign_id, $_rest_orders_coupons_campaigns_campaign_id_codes, $contentType);
 
         return $this->client
@@ -2344,7 +2344,7 @@ class OrderApi
      * Create request for operation 'restOrdersCouponsCampaignsCampaignIdCodesPost'
      *
      * @param  int $campaign_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCampaignsCampaignIdCodesPostRequest|null $_rest_orders_coupons_campaigns_campaign_id_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCampaignsCampaignIdCodesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3109,13 +3109,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CouponCampaignCode
+     * @return \ck\Model\CouponCampaignCode
      */
     public function restOrdersCouponsCampaignsCodesCodeGet(
         string $code,
         ?string $with = null,
         string $contentType = self::contentTypes['restOrdersCouponsCampaignsCodesCodeGet'][0]
-    ): \ck/plenty-client\Model\CouponCampaignCode
+    ): \ck\Model\CouponCampaignCode
     {
         list($response) = $this->restOrdersCouponsCampaignsCodesCodeGetWithHttpInfo($code, $with, $contentType);
         return $response;
@@ -3132,7 +3132,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CouponCampaignCode, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CouponCampaignCode, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCampaignsCodesCodeGetWithHttpInfo(
         string $code,
@@ -3179,23 +3179,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CouponCampaignCode' === '\SplFileObject') {
+                    if ('\ck\Model\CouponCampaignCode' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CouponCampaignCode' !== 'string') {
+                        if ('\ck\Model\CouponCampaignCode' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CouponCampaignCode', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CouponCampaignCode', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CouponCampaignCode';
+            $returnType = '\ck\Model\CouponCampaignCode';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3216,7 +3216,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CouponCampaignCode',
+                        '\ck\Model\CouponCampaignCode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3270,7 +3270,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCouponsCampaignsCodesCodeGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CouponCampaignCode';
+        $returnType = '\ck\Model\CouponCampaignCode';
         $request = $this->restOrdersCouponsCampaignsCodesCodeGetRequest($code, $with, $contentType);
 
         return $this->client
@@ -3432,14 +3432,14 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response
+     * @return \ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response
      */
     public function restOrdersCouponsCodesContactsContactIdGet(
         int $contact_id,
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restOrdersCouponsCodesContactsContactIdGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response
+    ): \ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response
     {
         list($response) = $this->restOrdersCouponsCodesContactsContactIdGetWithHttpInfo($contact_id, $page, $items_per_page, $contentType);
         return $response;
@@ -3457,7 +3457,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCodesContactsContactIdGetWithHttpInfo(
         int $contact_id,
@@ -3505,23 +3505,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response';
+            $returnType = '\ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3542,7 +3542,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response',
+                        '\ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3600,7 +3600,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCouponsCodesContactsContactIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersCouponsCodesContactsContactIdGet200Response';
+        $returnType = '\ck\Model\RestOrdersCouponsCodesContactsContactIdGet200Response';
         $request = $this->restOrdersCouponsCodesContactsContactIdGetRequest($contact_id, $page, $items_per_page, $contentType);
 
         return $this->client
@@ -3774,12 +3774,12 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon _rest_orders_coupons_codes_coupon (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon _rest_orders_coupons_codes_coupon (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesCouponPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CouponCodeValidation
+     * @return \ck\Model\CouponCodeValidation
      */
     public function restOrdersCouponsCodesCouponPost(
         string $coupon,
@@ -3789,9 +3789,9 @@ class OrderApi
         ?string $tax_id_number = null,
         ?int $contact_class = null,
         ?int $contact_type = null,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes_coupon = null,
+        ?\ck\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes_coupon = null,
         string $contentType = self::contentTypes['restOrdersCouponsCodesCouponPost'][0]
-    ): \ck/plenty-client\Model\CouponCodeValidation
+    ): \ck\Model\CouponCodeValidation
     {
         list($response) = $this->restOrdersCouponsCodesCouponPostWithHttpInfo($coupon, $plenty_id, $ship_to_country, $call_from_scheduler, $tax_id_number, $contact_class, $contact_type, $_rest_orders_coupons_codes_coupon, $contentType);
         return $response;
@@ -3809,12 +3809,12 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesCouponPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CouponCodeValidation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CouponCodeValidation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCodesCouponPostWithHttpInfo(
         string $coupon,
@@ -3824,7 +3824,7 @@ class OrderApi
         ?string $tax_id_number = null,
         ?int $contact_class = null,
         ?int $contact_type = null,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes_coupon = null,
+        ?\ck\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes_coupon = null,
         string $contentType = self::contentTypes['restOrdersCouponsCodesCouponPost'][0]
     ): array
     {
@@ -3867,23 +3867,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CouponCodeValidation' === '\SplFileObject') {
+                    if ('\ck\Model\CouponCodeValidation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CouponCodeValidation' !== 'string') {
+                        if ('\ck\Model\CouponCodeValidation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CouponCodeValidation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CouponCodeValidation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CouponCodeValidation';
+            $returnType = '\ck\Model\CouponCodeValidation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3904,7 +3904,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CouponCodeValidation',
+                        '\ck\Model\CouponCodeValidation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3926,7 +3926,7 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesCouponPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3940,7 +3940,7 @@ class OrderApi
         ?string $tax_id_number = null,
         ?int $contact_class = null,
         ?int $contact_type = null,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes_coupon = null,
+        ?\ck\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes_coupon = null,
         string $contentType = self::contentTypes['restOrdersCouponsCodesCouponPost'][0]
     ): PromiseInterface
     {
@@ -3964,7 +3964,7 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesCouponPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3982,7 +3982,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCouponsCodesCouponPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CouponCodeValidation';
+        $returnType = '\ck\Model\CouponCodeValidation';
         $request = $this->restOrdersCouponsCodesCouponPostRequest($coupon, $plenty_id, $ship_to_country, $call_from_scheduler, $tax_id_number, $contact_class, $contact_type, $_rest_orders_coupons_codes_coupon, $contentType);
 
         return $this->client
@@ -4031,7 +4031,7 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes_coupon (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesCouponPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4226,12 +4226,12 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes _rest_orders_coupons_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes _rest_orders_coupons_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CouponCodeValidation[]
+     * @return \ck\Model\CouponCodeValidation[]
      */
     public function restOrdersCouponsCodesPost(
         int $coupons,
@@ -4241,7 +4241,7 @@ class OrderApi
         ?string $tax_id_number = null,
         ?int $contact_class = null,
         ?int $contact_type = null,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes = null,
+        ?\ck\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes = null,
         string $contentType = self::contentTypes['restOrdersCouponsCodesPost'][0]
     ): array
     {
@@ -4261,12 +4261,12 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CouponCodeValidation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CouponCodeValidation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCouponsCodesPostWithHttpInfo(
         int $coupons,
@@ -4276,7 +4276,7 @@ class OrderApi
         ?string $tax_id_number = null,
         ?int $contact_class = null,
         ?int $contact_type = null,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes = null,
+        ?\ck\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes = null,
         string $contentType = self::contentTypes['restOrdersCouponsCodesPost'][0]
     ): array
     {
@@ -4319,23 +4319,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CouponCodeValidation[]' === '\SplFileObject') {
+                    if ('\ck\Model\CouponCodeValidation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CouponCodeValidation[]' !== 'string') {
+                        if ('\ck\Model\CouponCodeValidation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CouponCodeValidation[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CouponCodeValidation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CouponCodeValidation[]';
+            $returnType = '\ck\Model\CouponCodeValidation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4356,7 +4356,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CouponCodeValidation[]',
+                        '\ck\Model\CouponCodeValidation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4378,7 +4378,7 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4392,7 +4392,7 @@ class OrderApi
         ?string $tax_id_number = null,
         ?int $contact_class = null,
         ?int $contact_type = null,
-        ?\ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes = null,
+        ?\ck\Model\RestOrdersCouponsCodesPostRequest $_rest_orders_coupons_codes = null,
         string $contentType = self::contentTypes['restOrdersCouponsCodesPost'][0]
     ): PromiseInterface
     {
@@ -4416,7 +4416,7 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4434,7 +4434,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCouponsCodesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CouponCodeValidation[]';
+        $returnType = '\ck\Model\CouponCodeValidation[]';
         $request = $this->restOrdersCouponsCodesPostRequest($coupons, $plenty_id, $ship_to_country, $call_from_scheduler, $tax_id_number, $contact_class, $contact_type, $_rest_orders_coupons_codes, $contentType);
 
         return $this->client
@@ -4483,7 +4483,7 @@ class OrderApi
      * @param  string|null $tax_id_number The tax id number. (optional)
      * @param  int|null $contact_class The contact class. (optional)
      * @param  int|null $contact_type The contact type. (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes (optional)
+     * @param  \ck\Model\RestOrdersCouponsCodesPostRequest|null $_rest_orders_coupons_codes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersCouponsCodesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4679,14 +4679,14 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Currency
+     * @return \ck\Model\Currency
      */
     public function restOrdersCurrenciesCountriesCountryIdGet(
         int $country_id,
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restOrdersCurrenciesCountriesCountryIdGet'][0]
-    ): \ck/plenty-client\Model\Currency
+    ): \ck\Model\Currency
     {
         list($response) = $this->restOrdersCurrenciesCountriesCountryIdGetWithHttpInfo($country_id, $columns, $with, $contentType);
         return $response;
@@ -4704,7 +4704,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Currency, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Currency, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesCountriesCountryIdGetWithHttpInfo(
         int $country_id,
@@ -4752,23 +4752,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Currency' === '\SplFileObject') {
+                    if ('\ck\Model\Currency' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Currency' !== 'string') {
+                        if ('\ck\Model\Currency' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Currency', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Currency', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Currency';
+            $returnType = '\ck\Model\Currency';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4789,7 +4789,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Currency',
+                        '\ck\Model\Currency',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4847,7 +4847,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCurrenciesCountriesCountryIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Currency';
+        $returnType = '\ck\Model\Currency';
         $request = $this->restOrdersCurrenciesCountriesCountryIdGetRequest($country_id, $columns, $with, $contentType);
 
         return $this->client
@@ -5020,7 +5020,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Country[]
+     * @return \ck\Model\Country[]
      */
     public function restOrdersCurrenciesCurrencyIsoCountriesGet(
         string $currency_iso,
@@ -5043,7 +5043,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Country[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Country[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesCurrencyIsoCountriesGetWithHttpInfo(
         string $currency_iso,
@@ -5090,23 +5090,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Country[]' === '\SplFileObject') {
+                    if ('\ck\Model\Country[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Country[]' !== 'string') {
+                        if ('\ck\Model\Country[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Country[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Country[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Country[]';
+            $returnType = '\ck\Model\Country[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5127,7 +5127,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Country[]',
+                        '\ck\Model\Country[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5181,7 +5181,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCurrenciesCurrencyIsoCountriesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Country[]';
+        $returnType = '\ck\Model\Country[]';
         $request = $this->restOrdersCurrenciesCurrencyIsoCountriesGetRequest($currency_iso, $columns, $contentType);
 
         return $this->client
@@ -5341,12 +5341,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CurrencyExchangeRate
+     * @return \ck\Model\CurrencyExchangeRate
      */
     public function restOrdersCurrenciesCurrencyIsoExchangeRateGet(
         int $currency_iso,
         string $contentType = self::contentTypes['restOrdersCurrenciesCurrencyIsoExchangeRateGet'][0]
-    ): \ck/plenty-client\Model\CurrencyExchangeRate
+    ): \ck\Model\CurrencyExchangeRate
     {
         list($response) = $this->restOrdersCurrenciesCurrencyIsoExchangeRateGetWithHttpInfo($currency_iso, $contentType);
         return $response;
@@ -5362,7 +5362,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CurrencyExchangeRate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CurrencyExchangeRate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesCurrencyIsoExchangeRateGetWithHttpInfo(
         int $currency_iso,
@@ -5408,23 +5408,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CurrencyExchangeRate' === '\SplFileObject') {
+                    if ('\ck\Model\CurrencyExchangeRate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CurrencyExchangeRate' !== 'string') {
+                        if ('\ck\Model\CurrencyExchangeRate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CurrencyExchangeRate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CurrencyExchangeRate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CurrencyExchangeRate';
+            $returnType = '\ck\Model\CurrencyExchangeRate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5445,7 +5445,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CurrencyExchangeRate',
+                        '\ck\Model\CurrencyExchangeRate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5495,7 +5495,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCurrenciesCurrencyIsoExchangeRateGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CurrencyExchangeRate';
+        $returnType = '\ck\Model\CurrencyExchangeRate';
         $request = $this->restOrdersCurrenciesCurrencyIsoExchangeRateGetRequest($currency_iso, $contentType);
 
         return $this->client
@@ -5645,14 +5645,14 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Currency
+     * @return \ck\Model\Currency
      */
     public function restOrdersCurrenciesCurrencyIsoGet(
         string $currency_iso,
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restOrdersCurrenciesCurrencyIsoGet'][0]
-    ): \ck/plenty-client\Model\Currency
+    ): \ck\Model\Currency
     {
         list($response) = $this->restOrdersCurrenciesCurrencyIsoGetWithHttpInfo($currency_iso, $columns, $with, $contentType);
         return $response;
@@ -5670,7 +5670,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Currency, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Currency, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesCurrencyIsoGetWithHttpInfo(
         string $currency_iso,
@@ -5718,23 +5718,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Currency' === '\SplFileObject') {
+                    if ('\ck\Model\Currency' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Currency' !== 'string') {
+                        if ('\ck\Model\Currency' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Currency', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Currency', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Currency';
+            $returnType = '\ck\Model\Currency';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5755,7 +5755,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Currency',
+                        '\ck\Model\Currency',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5813,7 +5813,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCurrenciesCurrencyIsoGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Currency';
+        $returnType = '\ck\Model\Currency';
         $request = $this->restOrdersCurrenciesCurrencyIsoGetRequest($currency_iso, $columns, $with, $contentType);
 
         return $this->client
@@ -6590,7 +6590,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Currency[]
+     * @return \ck\Model\Currency[]
      */
     public function restOrdersCurrenciesGet(
         ?int $columns = null,
@@ -6613,7 +6613,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Currency[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Currency[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersCurrenciesGetWithHttpInfo(
         ?int $columns = null,
@@ -6660,23 +6660,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Currency[]' === '\SplFileObject') {
+                    if ('\ck\Model\Currency[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Currency[]' !== 'string') {
+                        if ('\ck\Model\Currency[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Currency[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Currency[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Currency[]';
+            $returnType = '\ck\Model\Currency[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6697,7 +6697,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Currency[]',
+                        '\ck\Model\Currency[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6751,7 +6751,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersCurrenciesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Currency[]';
+        $returnType = '\ck\Model\Currency[]';
         $request = $this->restOrdersCurrenciesGetRequest($columns, $with, $contentType);
 
         return $this->client
@@ -6905,7 +6905,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderDateType[]
+     * @return \ck\Model\OrderDateType[]
      */
     public function restOrdersDatesTypesGet(
         string $contentType = self::contentTypes['restOrdersDatesTypesGet'][0]
@@ -6924,7 +6924,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderDateType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderDateType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDatesTypesGetWithHttpInfo(
         string $contentType = self::contentTypes['restOrdersDatesTypesGet'][0]
@@ -6969,23 +6969,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderDateType[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderDateType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderDateType[]' !== 'string') {
+                        if ('\ck\Model\OrderDateType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderDateType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderDateType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderDateType[]';
+            $returnType = '\ck\Model\OrderDateType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7006,7 +7006,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderDateType[]',
+                        '\ck\Model\OrderDateType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7052,7 +7052,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersDatesTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderDateType[]';
+        $returnType = '\ck\Model\OrderDateType[]';
         $request = $this->restOrdersDatesTypesGetRequest($contentType);
 
         return $this->client
@@ -7183,12 +7183,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderDateType
+     * @return \ck\Model\OrderDateType
      */
     public function restOrdersDatesTypesTypeIdGet(
         int $type_id,
         string $contentType = self::contentTypes['restOrdersDatesTypesTypeIdGet'][0]
-    ): \ck/plenty-client\Model\OrderDateType
+    ): \ck\Model\OrderDateType
     {
         list($response) = $this->restOrdersDatesTypesTypeIdGetWithHttpInfo($type_id, $contentType);
         return $response;
@@ -7204,7 +7204,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderDateType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderDateType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDatesTypesTypeIdGetWithHttpInfo(
         int $type_id,
@@ -7250,23 +7250,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderDateType' === '\SplFileObject') {
+                    if ('\ck\Model\OrderDateType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderDateType' !== 'string') {
+                        if ('\ck\Model\OrderDateType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderDateType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderDateType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderDateType';
+            $returnType = '\ck\Model\OrderDateType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7287,7 +7287,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderDateType',
+                        '\ck\Model\OrderDateType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7337,7 +7337,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersDatesTypesTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderDateType';
+        $returnType = '\ck\Model\OrderDateType';
         $request = $this->restOrdersDatesTypesTypeIdGetRequest($type_id, $contentType);
 
         return $this->client
@@ -7485,7 +7485,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderDateTypeName[]
+     * @return \ck\Model\OrderDateTypeName[]
      */
     public function restOrdersDatesTypesTypeIdNamesGet(
         int $type_id,
@@ -7506,7 +7506,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderDateTypeName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderDateTypeName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDatesTypesTypeIdNamesGetWithHttpInfo(
         int $type_id,
@@ -7552,23 +7552,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderDateTypeName[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderDateTypeName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderDateTypeName[]' !== 'string') {
+                        if ('\ck\Model\OrderDateTypeName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderDateTypeName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderDateTypeName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderDateTypeName[]';
+            $returnType = '\ck\Model\OrderDateTypeName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7589,7 +7589,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderDateTypeName[]',
+                        '\ck\Model\OrderDateTypeName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7639,7 +7639,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersDatesTypesTypeIdNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderDateTypeName[]';
+        $returnType = '\ck\Model\OrderDateTypeName[]';
         $request = $this->restOrdersDatesTypesTypeIdNamesGetRequest($type_id, $contentType);
 
         return $this->client
@@ -7788,13 +7788,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderDateTypeName
+     * @return \ck\Model\OrderDateTypeName
      */
     public function restOrdersDatesTypesTypeIdNamesLangGet(
         int $type_id,
         string $lang,
         string $contentType = self::contentTypes['restOrdersDatesTypesTypeIdNamesLangGet'][0]
-    ): \ck/plenty-client\Model\OrderDateTypeName
+    ): \ck\Model\OrderDateTypeName
     {
         list($response) = $this->restOrdersDatesTypesTypeIdNamesLangGetWithHttpInfo($type_id, $lang, $contentType);
         return $response;
@@ -7811,7 +7811,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderDateTypeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderDateTypeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersDatesTypesTypeIdNamesLangGetWithHttpInfo(
         int $type_id,
@@ -7858,23 +7858,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderDateTypeName' === '\SplFileObject') {
+                    if ('\ck\Model\OrderDateTypeName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderDateTypeName' !== 'string') {
+                        if ('\ck\Model\OrderDateTypeName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderDateTypeName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderDateTypeName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderDateTypeName';
+            $returnType = '\ck\Model\OrderDateTypeName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7895,7 +7895,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderDateTypeName',
+                        '\ck\Model\OrderDateTypeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7949,7 +7949,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersDatesTypesTypeIdNamesLangGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderDateTypeName';
+        $returnType = '\ck\Model\OrderDateTypeName';
         $request = $this->restOrdersDatesTypesTypeIdNamesLangGetRequest($type_id, $lang, $contentType);
 
         return $this->client
@@ -8548,7 +8548,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersGet200Response
+     * @return \ck\Model\RestOrdersGet200Response
      */
     public function restOrdersGet(
         ?string $order_type = null,
@@ -8590,7 +8590,7 @@ class OrderApi
         ?int $items_per_page = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restOrdersGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersGet200Response
+    ): \ck\Model\RestOrdersGet200Response
     {
         list($response) = $this->restOrdersGetWithHttpInfo($order_type, $contact_id, $referrer_id, $shipping_profile_id, $shipping_service_provider_id, $owner_user_id, $warehouse_id, $is_ebay_plus, $included_variation, $included_item, $order_ids, $country_id, $order_item_name, $variation_number, $sender_contact, $sender_warehouse, $receiver_contact, $receiver_warehouse, $external_order_id, $client_id, $payment_status, $updated_at_from, $updated_at_to, $created_at_from, $created_at_to, $paid_at_from, $paid_at_to, $outgoing_items_booked_at_from, $outgoing_items_booked_at_to, $status_from, $status_to, $has_document, $has_document_number, $parent_order_id, $add_order_items, $page, $items_per_page, $with, $contentType);
         return $response;
@@ -8643,7 +8643,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersGetWithHttpInfo(
         ?string $order_type = null,
@@ -8726,23 +8726,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersGet200Response';
+            $returnType = '\ck\Model\RestOrdersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8763,7 +8763,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersGet200Response',
+                        '\ck\Model\RestOrdersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8961,7 +8961,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersGet200Response';
+        $returnType = '\ck\Model\RestOrdersGet200Response';
         $request = $this->restOrdersGetRequest($order_type, $contact_id, $referrer_id, $shipping_profile_id, $shipping_service_provider_id, $owner_user_id, $warehouse_id, $is_ebay_plus, $included_variation, $included_item, $order_ids, $country_id, $order_item_name, $variation_number, $sender_contact, $sender_warehouse, $receiver_contact, $receiver_warehouse, $external_order_id, $client_id, $payment_status, $updated_at_from, $updated_at_to, $created_at_from, $created_at_to, $paid_at_from, $paid_at_to, $outgoing_items_booked_at_from, $outgoing_items_booked_at_to, $status_from, $status_to, $has_document, $has_document_number, $parent_order_id, $add_order_items, $page, $items_per_page, $with, $contentType);
 
         return $this->client
@@ -9796,12 +9796,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemDate
+     * @return \ck\Model\OrderItemDate
      */
     public function restOrdersItemsDatesIdGet(
         int $id,
         string $contentType = self::contentTypes['restOrdersItemsDatesIdGet'][0]
-    ): \ck/plenty-client\Model\OrderItemDate
+    ): \ck\Model\OrderItemDate
     {
         list($response) = $this->restOrdersItemsDatesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -9817,7 +9817,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsDatesIdGetWithHttpInfo(
         int $id,
@@ -9863,23 +9863,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemDate' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemDate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemDate' !== 'string') {
+                        if ('\ck\Model\OrderItemDate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemDate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemDate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemDate';
+            $returnType = '\ck\Model\OrderItemDate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9900,7 +9900,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemDate',
+                        '\ck\Model\OrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9950,7 +9950,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsDatesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemDate';
+        $returnType = '\ck\Model\OrderItemDate';
         $request = $this->restOrdersItemsDatesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -10094,18 +10094,18 @@ class OrderApi
      * Update a date of an order item
      *
      * @param  int $id The ID of the order item date (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id _rest_orders_items_dates_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id _rest_orders_items_dates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemDate
+     * @return \ck\Model\OrderItemDate
      */
     public function restOrdersItemsDatesIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_dates_id = null,
+        ?\ck\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_dates_id = null,
         string $contentType = self::contentTypes['restOrdersItemsDatesIdPut'][0]
-    ): \ck/plenty-client\Model\OrderItemDate
+    ): \ck\Model\OrderItemDate
     {
         list($response) = $this->restOrdersItemsDatesIdPutWithHttpInfo($id, $_rest_orders_items_dates_id, $contentType);
         return $response;
@@ -10117,16 +10117,16 @@ class OrderApi
      * Update a date of an order item
      *
      * @param  int $id The ID of the order item date (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsDatesIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_dates_id = null,
+        ?\ck\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_dates_id = null,
         string $contentType = self::contentTypes['restOrdersItemsDatesIdPut'][0]
     ): array
     {
@@ -10169,23 +10169,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemDate' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemDate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemDate' !== 'string') {
+                        if ('\ck\Model\OrderItemDate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemDate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemDate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemDate';
+            $returnType = '\ck\Model\OrderItemDate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10206,7 +10206,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemDate',
+                        '\ck\Model\OrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10222,7 +10222,7 @@ class OrderApi
      * Update a date of an order item
      *
      * @param  int $id The ID of the order item date (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10230,7 +10230,7 @@ class OrderApi
      */
     public function restOrdersItemsDatesIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_dates_id = null,
+        ?\ck\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_dates_id = null,
         string $contentType = self::contentTypes['restOrdersItemsDatesIdPut'][0]
     ): PromiseInterface
     {
@@ -10248,7 +10248,7 @@ class OrderApi
      * Update a date of an order item
      *
      * @param  int $id The ID of the order item date (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10260,7 +10260,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsDatesIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemDate';
+        $returnType = '\ck\Model\OrderItemDate';
         $request = $this->restOrdersItemsDatesIdPutRequest($id, $_rest_orders_items_dates_id, $contentType);
 
         return $this->client
@@ -10303,7 +10303,7 @@ class OrderApi
      * Create request for operation 'restOrdersItemsDatesIdPut'
      *
      * @param  int $id The ID of the order item date (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_dates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10413,17 +10413,17 @@ class OrderApi
      *
      * Create a date for an order item
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates _rest_orders_items_dates (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates _rest_orders_items_dates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemDate
+     * @return \ck\Model\OrderItemDate
      */
     public function restOrdersItemsDatesPost(
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_dates = null,
+        ?\ck\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_dates = null,
         string $contentType = self::contentTypes['restOrdersItemsDatesPost'][0]
-    ): \ck/plenty-client\Model\OrderItemDate
+    ): \ck\Model\OrderItemDate
     {
         list($response) = $this->restOrdersItemsDatesPostWithHttpInfo($_rest_orders_items_dates, $contentType);
         return $response;
@@ -10434,15 +10434,15 @@ class OrderApi
      *
      * Create a date for an order item
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsDatesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_dates = null,
+        ?\ck\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_dates = null,
         string $contentType = self::contentTypes['restOrdersItemsDatesPost'][0]
     ): array
     {
@@ -10485,23 +10485,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemDate' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemDate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemDate' !== 'string') {
+                        if ('\ck\Model\OrderItemDate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemDate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemDate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemDate';
+            $returnType = '\ck\Model\OrderItemDate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10522,7 +10522,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemDate',
+                        '\ck\Model\OrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10537,14 +10537,14 @@ class OrderApi
      *
      * Create a date for an order item
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restOrdersItemsDatesPostAsync(
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_dates = null,
+        ?\ck\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_dates = null,
         string $contentType = self::contentTypes['restOrdersItemsDatesPost'][0]
     ): PromiseInterface
     {
@@ -10561,7 +10561,7 @@ class OrderApi
      *
      * Create a date for an order item
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10572,7 +10572,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsDatesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemDate';
+        $returnType = '\ck\Model\OrderItemDate';
         $request = $this->restOrdersItemsDatesPostRequest($_rest_orders_items_dates, $contentType);
 
         return $this->client
@@ -10614,7 +10614,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersItemsDatesPost'
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_dates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsDatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11035,7 +11035,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemDate[]
+     * @return \ck\Model\OrderItemDate[]
      */
     public function restOrdersItemsOrderItemIdDatesGet(
         int $order_item_id,
@@ -11056,7 +11056,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemDate[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemDate[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdDatesGetWithHttpInfo(
         int $order_item_id,
@@ -11102,23 +11102,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemDate[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemDate[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemDate[]' !== 'string') {
+                        if ('\ck\Model\OrderItemDate[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemDate[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemDate[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemDate[]';
+            $returnType = '\ck\Model\OrderItemDate[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11139,7 +11139,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemDate[]',
+                        '\ck\Model\OrderItemDate[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11189,7 +11189,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemDate[]';
+        $returnType = '\ck\Model\OrderItemDate[]';
         $request = $this->restOrdersItemsOrderItemIdDatesGetRequest($order_item_id, $contentType);
 
         return $this->client
@@ -11611,13 +11611,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemDate
+     * @return \ck\Model\OrderItemDate
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdGet(
         int $order_item_id,
         int $type_id,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdGet'][0]
-    ): \ck/plenty-client\Model\OrderItemDate
+    ): \ck\Model\OrderItemDate
     {
         list($response) = $this->restOrdersItemsOrderItemIdDatesTypeIdGetWithHttpInfo($order_item_id, $type_id, $contentType);
         return $response;
@@ -11634,7 +11634,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdGetWithHttpInfo(
         int $order_item_id,
@@ -11681,23 +11681,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemDate' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemDate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemDate' !== 'string') {
+                        if ('\ck\Model\OrderItemDate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemDate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemDate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemDate';
+            $returnType = '\ck\Model\OrderItemDate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11718,7 +11718,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemDate',
+                        '\ck\Model\OrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11772,7 +11772,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemDate';
+        $returnType = '\ck\Model\OrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdGetRequest($order_item_id, $type_id, $contentType);
 
         return $this->client
@@ -11934,19 +11934,19 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id _rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id _rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemDate
+     * @return \ck\Model\OrderItemDate
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPost(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_order_item_id_dates_type_id = null,
+        ?\ck\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_order_item_id_dates_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'][0]
-    ): \ck/plenty-client\Model\OrderItemDate
+    ): \ck\Model\OrderItemDate
     {
         list($response) = $this->restOrdersItemsOrderItemIdDatesTypeIdPostWithHttpInfo($order_item_id, $type_id, $_rest_orders_items_order_item_id_dates_type_id, $contentType);
         return $response;
@@ -11959,17 +11959,17 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPostWithHttpInfo(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_order_item_id_dates_type_id = null,
+        ?\ck\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_order_item_id_dates_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'][0]
     ): array
     {
@@ -12012,23 +12012,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemDate' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemDate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemDate' !== 'string') {
+                        if ('\ck\Model\OrderItemDate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemDate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemDate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemDate';
+            $returnType = '\ck\Model\OrderItemDate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12049,7 +12049,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemDate',
+                        '\ck\Model\OrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12066,7 +12066,7 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12075,7 +12075,7 @@ class OrderApi
     public function restOrdersItemsOrderItemIdDatesTypeIdPostAsync(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_order_item_id_dates_type_id = null,
+        ?\ck\Model\RestOrdersItemsDatesPostRequest $_rest_orders_items_order_item_id_dates_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'][0]
     ): PromiseInterface
     {
@@ -12094,7 +12094,7 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12107,7 +12107,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemDate';
+        $returnType = '\ck\Model\OrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdPostRequest($order_item_id, $type_id, $_rest_orders_items_order_item_id_dates_type_id, $contentType);
 
         return $this->client
@@ -12151,7 +12151,7 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesPostRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12279,19 +12279,19 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id _rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id _rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemDate
+     * @return \ck\Model\OrderItemDate
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPut(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_order_item_id_dates_type_id = null,
+        ?\ck\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_order_item_id_dates_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'][0]
-    ): \ck/plenty-client\Model\OrderItemDate
+    ): \ck\Model\OrderItemDate
     {
         list($response) = $this->restOrdersItemsOrderItemIdDatesTypeIdPutWithHttpInfo($order_item_id, $type_id, $_rest_orders_items_order_item_id_dates_type_id, $contentType);
         return $response;
@@ -12304,17 +12304,17 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdDatesTypeIdPutWithHttpInfo(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_order_item_id_dates_type_id = null,
+        ?\ck\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_order_item_id_dates_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'][0]
     ): array
     {
@@ -12357,23 +12357,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemDate' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemDate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemDate' !== 'string') {
+                        if ('\ck\Model\OrderItemDate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemDate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemDate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemDate';
+            $returnType = '\ck\Model\OrderItemDate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12394,7 +12394,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemDate',
+                        '\ck\Model\OrderItemDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12411,7 +12411,7 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12420,7 +12420,7 @@ class OrderApi
     public function restOrdersItemsOrderItemIdDatesTypeIdPutAsync(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_order_item_id_dates_type_id = null,
+        ?\ck\Model\RestOrdersItemsDatesIdPutRequest $_rest_orders_items_order_item_id_dates_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'][0]
     ): PromiseInterface
     {
@@ -12439,7 +12439,7 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12452,7 +12452,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemDate';
+        $returnType = '\ck\Model\OrderItemDate';
         $request = $this->restOrdersItemsOrderItemIdDatesTypeIdPutRequest($order_item_id, $type_id, $_rest_orders_items_order_item_id_dates_type_id, $contentType);
 
         return $this->client
@@ -12496,7 +12496,7 @@ class OrderApi
      *
      * @param  int $order_item_id The ID of the order item (required)
      * @param  int $type_id The ID of the order date type (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsDatesIdPutRequest|null $_rest_orders_items_order_item_id_dates_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdDatesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12627,7 +12627,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemProperty[]
+     * @return \ck\Model\OrderItemProperty[]
      */
     public function restOrdersItemsOrderItemIdPropertiesGet(
         int $order_item_id,
@@ -12648,7 +12648,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdPropertiesGetWithHttpInfo(
         int $order_item_id,
@@ -12694,23 +12694,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemProperty[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemProperty[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemProperty[]' !== 'string') {
+                        if ('\ck\Model\OrderItemProperty[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemProperty[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemProperty[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemProperty[]';
+            $returnType = '\ck\Model\OrderItemProperty[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12731,7 +12731,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemProperty[]',
+                        '\ck\Model\OrderItemProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12781,7 +12781,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemProperty[]';
+        $returnType = '\ck\Model\OrderItemProperty[]';
         $request = $this->restOrdersItemsOrderItemIdPropertiesGetRequest($order_item_id, $contentType);
 
         return $this->client
@@ -13203,13 +13203,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemProperty
+     * @return \ck\Model\OrderItemProperty
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdGet(
         int $order_item_id,
         int $type_id,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdGet'][0]
-    ): \ck/plenty-client\Model\OrderItemProperty
+    ): \ck\Model\OrderItemProperty
     {
         list($response) = $this->restOrdersItemsOrderItemIdPropertiesTypeIdGetWithHttpInfo($order_item_id, $type_id, $contentType);
         return $response;
@@ -13226,7 +13226,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdGetWithHttpInfo(
         int $order_item_id,
@@ -13273,23 +13273,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemProperty' !== 'string') {
+                        if ('\ck\Model\OrderItemProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+            $returnType = '\ck\Model\OrderItemProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13310,7 +13310,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemProperty',
+                        '\ck\Model\OrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13364,7 +13364,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+        $returnType = '\ck\Model\OrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdGetRequest($order_item_id, $type_id, $contentType);
 
         return $this->client
@@ -13526,19 +13526,19 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id _rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id _rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemProperty
+     * @return \ck\Model\OrderItemProperty
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPost(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_order_item_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_order_item_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'][0]
-    ): \ck/plenty-client\Model\OrderItemProperty
+    ): \ck\Model\OrderItemProperty
     {
         list($response) = $this->restOrdersItemsOrderItemIdPropertiesTypeIdPostWithHttpInfo($order_item_id, $type_id, $_rest_orders_items_order_item_id_properties_type_id, $contentType);
         return $response;
@@ -13551,17 +13551,17 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPostWithHttpInfo(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_order_item_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_order_item_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'][0]
     ): array
     {
@@ -13604,23 +13604,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemProperty' !== 'string') {
+                        if ('\ck\Model\OrderItemProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+            $returnType = '\ck\Model\OrderItemProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13641,7 +13641,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemProperty',
+                        '\ck\Model\OrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13658,7 +13658,7 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13667,7 +13667,7 @@ class OrderApi
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPostAsync(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_order_item_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_order_item_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'][0]
     ): PromiseInterface
     {
@@ -13686,7 +13686,7 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13699,7 +13699,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+        $returnType = '\ck\Model\OrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdPostRequest($order_item_id, $type_id, $_rest_orders_items_order_item_id_properties_type_id, $contentType);
 
         return $this->client
@@ -13743,7 +13743,7 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13871,19 +13871,19 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id _rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id _rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemProperty
+     * @return \ck\Model\OrderItemProperty
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPut(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_order_item_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_order_item_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'][0]
-    ): \ck/plenty-client\Model\OrderItemProperty
+    ): \ck\Model\OrderItemProperty
     {
         list($response) = $this->restOrdersItemsOrderItemIdPropertiesTypeIdPutWithHttpInfo($order_item_id, $type_id, $_rest_orders_items_order_item_id_properties_type_id, $contentType);
         return $response;
@@ -13896,17 +13896,17 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPutWithHttpInfo(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_order_item_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_order_item_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'][0]
     ): array
     {
@@ -13949,23 +13949,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemProperty' !== 'string') {
+                        if ('\ck\Model\OrderItemProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+            $returnType = '\ck\Model\OrderItemProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13986,7 +13986,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemProperty',
+                        '\ck\Model\OrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14003,7 +14003,7 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14012,7 +14012,7 @@ class OrderApi
     public function restOrdersItemsOrderItemIdPropertiesTypeIdPutAsync(
         int $order_item_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_order_item_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_order_item_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'][0]
     ): PromiseInterface
     {
@@ -14031,7 +14031,7 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14044,7 +14044,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+        $returnType = '\ck\Model\OrderItemProperty';
         $request = $this->restOrdersItemsOrderItemIdPropertiesTypeIdPutRequest($order_item_id, $type_id, $_rest_orders_items_order_item_id_properties_type_id, $contentType);
 
         return $this->client
@@ -14088,7 +14088,7 @@ class OrderApi
      *
      * @param  int $order_item_id The order item ID. (required)
      * @param  int $type_id The order item property type ID. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_order_item_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14221,7 +14221,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemTransaction[]
+     * @return \ck\Model\OrderItemTransaction[]
      */
     public function restOrdersItemsOrderItemIdTransactionsGet(
         int $order_item_id,
@@ -14246,7 +14246,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemTransaction[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemTransaction[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdTransactionsGetWithHttpInfo(
         int $order_item_id,
@@ -14294,23 +14294,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemTransaction[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemTransaction[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemTransaction[]' !== 'string') {
+                        if ('\ck\Model\OrderItemTransaction[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemTransaction[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemTransaction[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemTransaction[]';
+            $returnType = '\ck\Model\OrderItemTransaction[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14331,7 +14331,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemTransaction[]',
+                        '\ck\Model\OrderItemTransaction[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14389,7 +14389,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdTransactionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemTransaction[]';
+        $returnType = '\ck\Model\OrderItemTransaction[]';
         $request = $this->restOrdersItemsOrderItemIdTransactionsGetRequest($order_item_id, $columns, $with, $contentType);
 
         return $this->client
@@ -14557,18 +14557,18 @@ class OrderApi
      * Create order item transaction
      *
      * @param  int $order_item_id order_item_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions _rest_orders_items_order_item_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions _rest_orders_items_order_item_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemTransaction
+     * @return \ck\Model\OrderItemTransaction
      */
     public function restOrdersItemsOrderItemIdTransactionsPost(
         int $order_item_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest $_rest_orders_items_order_item_id_transactions = null,
+        ?\ck\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest $_rest_orders_items_order_item_id_transactions = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'][0]
-    ): \ck/plenty-client\Model\OrderItemTransaction
+    ): \ck\Model\OrderItemTransaction
     {
         list($response) = $this->restOrdersItemsOrderItemIdTransactionsPostWithHttpInfo($order_item_id, $_rest_orders_items_order_item_id_transactions, $contentType);
         return $response;
@@ -14580,16 +14580,16 @@ class OrderApi
      * Create order item transaction
      *
      * @param  int $order_item_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemTransaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemTransaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOrderItemIdTransactionsPostWithHttpInfo(
         int $order_item_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest $_rest_orders_items_order_item_id_transactions = null,
+        ?\ck\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest $_rest_orders_items_order_item_id_transactions = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'][0]
     ): array
     {
@@ -14632,23 +14632,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemTransaction' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemTransaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemTransaction' !== 'string') {
+                        if ('\ck\Model\OrderItemTransaction' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemTransaction', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemTransaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemTransaction';
+            $returnType = '\ck\Model\OrderItemTransaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14669,7 +14669,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemTransaction',
+                        '\ck\Model\OrderItemTransaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14685,7 +14685,7 @@ class OrderApi
      * Create order item transaction
      *
      * @param  int $order_item_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14693,7 +14693,7 @@ class OrderApi
      */
     public function restOrdersItemsOrderItemIdTransactionsPostAsync(
         int $order_item_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest $_rest_orders_items_order_item_id_transactions = null,
+        ?\ck\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest $_rest_orders_items_order_item_id_transactions = null,
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'][0]
     ): PromiseInterface
     {
@@ -14711,7 +14711,7 @@ class OrderApi
      * Create order item transaction
      *
      * @param  int $order_item_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14723,7 +14723,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemTransaction';
+        $returnType = '\ck\Model\OrderItemTransaction';
         $request = $this->restOrdersItemsOrderItemIdTransactionsPostRequest($order_item_id, $_rest_orders_items_order_item_id_transactions, $contentType);
 
         return $this->client
@@ -14766,7 +14766,7 @@ class OrderApi
      * Create request for operation 'restOrdersItemsOrderItemIdTransactionsPost'
      *
      * @param  int $order_item_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersItemsOrderItemIdTransactionsPostRequest|null $_rest_orders_items_order_item_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOrderItemIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14876,7 +14876,7 @@ class OrderApi
      *
      * Revert outgoing stock for order items
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks _rest_orders_items_outgoing_stocks (optional)
+     * @param  \ck\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks _rest_orders_items_outgoing_stocks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOutgoingStocksDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -14884,7 +14884,7 @@ class OrderApi
      * @return void
      */
     public function restOrdersItemsOutgoingStocksDelete(
-        ?\ck/plenty-client\Model\RestOrdersItemsOutgoingStocksDeleteRequest $_rest_orders_items_outgoing_stocks = null,
+        ?\ck\Model\RestOrdersItemsOutgoingStocksDeleteRequest $_rest_orders_items_outgoing_stocks = null,
         string $contentType = self::contentTypes['restOrdersItemsOutgoingStocksDelete'][0]
     ): void
     {
@@ -14896,7 +14896,7 @@ class OrderApi
      *
      * Revert outgoing stock for order items
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks (optional)
+     * @param  \ck\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOutgoingStocksDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -14904,7 +14904,7 @@ class OrderApi
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsOutgoingStocksDeleteWithHttpInfo(
-        ?\ck/plenty-client\Model\RestOrdersItemsOutgoingStocksDeleteRequest $_rest_orders_items_outgoing_stocks = null,
+        ?\ck\Model\RestOrdersItemsOutgoingStocksDeleteRequest $_rest_orders_items_outgoing_stocks = null,
         string $contentType = self::contentTypes['restOrdersItemsOutgoingStocksDelete'][0]
     ): array
     {
@@ -14959,14 +14959,14 @@ class OrderApi
      *
      * Revert outgoing stock for order items
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks (optional)
+     * @param  \ck\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOutgoingStocksDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restOrdersItemsOutgoingStocksDeleteAsync(
-        ?\ck/plenty-client\Model\RestOrdersItemsOutgoingStocksDeleteRequest $_rest_orders_items_outgoing_stocks = null,
+        ?\ck\Model\RestOrdersItemsOutgoingStocksDeleteRequest $_rest_orders_items_outgoing_stocks = null,
         string $contentType = self::contentTypes['restOrdersItemsOutgoingStocksDelete'][0]
     ): PromiseInterface
     {
@@ -14983,7 +14983,7 @@ class OrderApi
      *
      * Revert outgoing stock for order items
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks (optional)
+     * @param  \ck\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOutgoingStocksDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15023,7 +15023,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersItemsOutgoingStocksDelete'
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks (optional)
+     * @param  \ck\Model\RestOrdersItemsOutgoingStocksDeleteRequest|null $_rest_orders_items_outgoing_stocks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsOutgoingStocksDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15370,12 +15370,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemProperty
+     * @return \ck\Model\OrderItemProperty
      */
     public function restOrdersItemsPropertiesIdGet(
         int $id,
         string $contentType = self::contentTypes['restOrdersItemsPropertiesIdGet'][0]
-    ): \ck/plenty-client\Model\OrderItemProperty
+    ): \ck\Model\OrderItemProperty
     {
         list($response) = $this->restOrdersItemsPropertiesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -15391,7 +15391,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsPropertiesIdGetWithHttpInfo(
         int $id,
@@ -15437,23 +15437,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemProperty' !== 'string') {
+                        if ('\ck\Model\OrderItemProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+            $returnType = '\ck\Model\OrderItemProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15474,7 +15474,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemProperty',
+                        '\ck\Model\OrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15524,7 +15524,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsPropertiesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+        $returnType = '\ck\Model\OrderItemProperty';
         $request = $this->restOrdersItemsPropertiesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -15668,18 +15668,18 @@ class OrderApi
      * Update order item property
      *
      * @param  int $id The ID of the order item property instance to be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id _rest_orders_items_properties_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id _rest_orders_items_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemProperty
+     * @return \ck\Model\OrderItemProperty
      */
     public function restOrdersItemsPropertiesIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_properties_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_properties_id = null,
         string $contentType = self::contentTypes['restOrdersItemsPropertiesIdPut'][0]
-    ): \ck/plenty-client\Model\OrderItemProperty
+    ): \ck\Model\OrderItemProperty
     {
         list($response) = $this->restOrdersItemsPropertiesIdPutWithHttpInfo($id, $_rest_orders_items_properties_id, $contentType);
         return $response;
@@ -15691,16 +15691,16 @@ class OrderApi
      * Update order item property
      *
      * @param  int $id The ID of the order item property instance to be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsPropertiesIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_properties_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_properties_id = null,
         string $contentType = self::contentTypes['restOrdersItemsPropertiesIdPut'][0]
     ): array
     {
@@ -15743,23 +15743,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemProperty' !== 'string') {
+                        if ('\ck\Model\OrderItemProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+            $returnType = '\ck\Model\OrderItemProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15780,7 +15780,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemProperty',
+                        '\ck\Model\OrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15796,7 +15796,7 @@ class OrderApi
      * Update order item property
      *
      * @param  int $id The ID of the order item property instance to be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15804,7 +15804,7 @@ class OrderApi
      */
     public function restOrdersItemsPropertiesIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_properties_id = null,
+        ?\ck\Model\RestOrdersItemsPropertiesIdPutRequest $_rest_orders_items_properties_id = null,
         string $contentType = self::contentTypes['restOrdersItemsPropertiesIdPut'][0]
     ): PromiseInterface
     {
@@ -15822,7 +15822,7 @@ class OrderApi
      * Update order item property
      *
      * @param  int $id The ID of the order item property instance to be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15834,7 +15834,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsPropertiesIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+        $returnType = '\ck\Model\OrderItemProperty';
         $request = $this->restOrdersItemsPropertiesIdPutRequest($id, $_rest_orders_items_properties_id, $contentType);
 
         return $this->client
@@ -15877,7 +15877,7 @@ class OrderApi
      * Create request for operation 'restOrdersItemsPropertiesIdPut'
      *
      * @param  int $id The ID of the order item property instance to be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesIdPutRequest|null $_rest_orders_items_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15987,17 +15987,17 @@ class OrderApi
      *
      * Create order item property
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties _rest_orders_items_properties (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties _rest_orders_items_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemProperty
+     * @return \ck\Model\OrderItemProperty
      */
     public function restOrdersItemsPropertiesPost(
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_properties = null,
+        ?\ck\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_properties = null,
         string $contentType = self::contentTypes['restOrdersItemsPropertiesPost'][0]
-    ): \ck/plenty-client\Model\OrderItemProperty
+    ): \ck\Model\OrderItemProperty
     {
         list($response) = $this->restOrdersItemsPropertiesPostWithHttpInfo($_rest_orders_items_properties, $contentType);
         return $response;
@@ -16008,15 +16008,15 @@ class OrderApi
      *
      * Create order item property
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsPropertiesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_properties = null,
+        ?\ck\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_properties = null,
         string $contentType = self::contentTypes['restOrdersItemsPropertiesPost'][0]
     ): array
     {
@@ -16059,23 +16059,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemProperty' !== 'string') {
+                        if ('\ck\Model\OrderItemProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+            $returnType = '\ck\Model\OrderItemProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -16096,7 +16096,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemProperty',
+                        '\ck\Model\OrderItemProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16111,14 +16111,14 @@ class OrderApi
      *
      * Create order item property
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restOrdersItemsPropertiesPostAsync(
-        ?\ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_properties = null,
+        ?\ck\Model\RestOrdersItemsPropertiesPostRequest $_rest_orders_items_properties = null,
         string $contentType = self::contentTypes['restOrdersItemsPropertiesPost'][0]
     ): PromiseInterface
     {
@@ -16135,7 +16135,7 @@ class OrderApi
      *
      * Create order item property
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -16146,7 +16146,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsPropertiesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemProperty';
+        $returnType = '\ck\Model\OrderItemProperty';
         $request = $this->restOrdersItemsPropertiesPostRequest($_rest_orders_items_properties, $contentType);
 
         return $this->client
@@ -16188,7 +16188,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersItemsPropertiesPost'
      *
-     * @param  \ck/plenty-client\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties (optional)
+     * @param  \ck\Model\RestOrdersItemsPropertiesPostRequest|null $_rest_orders_items_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -16620,7 +16620,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response
+     * @return \ck\Model\RestOrdersItemsTransactionsGet200Response
      */
     public function restOrdersItemsTransactionsGet(
         ?int $page = null,
@@ -16635,7 +16635,7 @@ class OrderApi
         ?string $status = null,
         ?bool $is_booked = null,
         string $contentType = self::contentTypes['restOrdersItemsTransactionsGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response
+    ): \ck\Model\RestOrdersItemsTransactionsGet200Response
     {
         list($response) = $this->restOrdersItemsTransactionsGetWithHttpInfo($page, $items_per_page, $columns, $with, $sort_by, $sort_order, $order_item_id, $order_id, $direction, $status, $is_booked, $contentType);
         return $response;
@@ -16661,7 +16661,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersItemsTransactionsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsTransactionsGetWithHttpInfo(
         ?int $page = null,
@@ -16717,23 +16717,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersItemsTransactionsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersItemsTransactionsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersItemsTransactionsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response';
+            $returnType = '\ck\Model\RestOrdersItemsTransactionsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -16754,7 +16754,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response',
+                        '\ck\Model\RestOrdersItemsTransactionsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16844,7 +16844,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsTransactionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersItemsTransactionsGet200Response';
+        $returnType = '\ck\Model\RestOrdersItemsTransactionsGet200Response';
         $request = $this->restOrdersItemsTransactionsGetRequest($page, $items_per_page, $columns, $with, $sort_by, $sort_order, $order_item_id, $order_id, $direction, $status, $is_booked, $contentType);
 
         return $this->client
@@ -17405,18 +17405,18 @@ class OrderApi
      * Update order item transaction
      *
      * @param  int $transaction_id transaction_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id _rest_orders_items_transactions_transaction_id (optional)
+     * @param  \ck\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id _rest_orders_items_transactions_transaction_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemTransaction
+     * @return \ck\Model\OrderItemTransaction
      */
     public function restOrdersItemsTransactionsTransactionIdPut(
         int $transaction_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsTransactionsTransactionIdPutRequest $_rest_orders_items_transactions_transaction_id = null,
+        ?\ck\Model\RestOrdersItemsTransactionsTransactionIdPutRequest $_rest_orders_items_transactions_transaction_id = null,
         string $contentType = self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'][0]
-    ): \ck/plenty-client\Model\OrderItemTransaction
+    ): \ck\Model\OrderItemTransaction
     {
         list($response) = $this->restOrdersItemsTransactionsTransactionIdPutWithHttpInfo($transaction_id, $_rest_orders_items_transactions_transaction_id, $contentType);
         return $response;
@@ -17428,16 +17428,16 @@ class OrderApi
      * Update order item transaction
      *
      * @param  int $transaction_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id (optional)
+     * @param  \ck\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemTransaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemTransaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersItemsTransactionsTransactionIdPutWithHttpInfo(
         int $transaction_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsTransactionsTransactionIdPutRequest $_rest_orders_items_transactions_transaction_id = null,
+        ?\ck\Model\RestOrdersItemsTransactionsTransactionIdPutRequest $_rest_orders_items_transactions_transaction_id = null,
         string $contentType = self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'][0]
     ): array
     {
@@ -17480,23 +17480,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemTransaction' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemTransaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemTransaction' !== 'string') {
+                        if ('\ck\Model\OrderItemTransaction' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemTransaction', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemTransaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemTransaction';
+            $returnType = '\ck\Model\OrderItemTransaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17517,7 +17517,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemTransaction',
+                        '\ck\Model\OrderItemTransaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17533,7 +17533,7 @@ class OrderApi
      * Update order item transaction
      *
      * @param  int $transaction_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id (optional)
+     * @param  \ck\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -17541,7 +17541,7 @@ class OrderApi
      */
     public function restOrdersItemsTransactionsTransactionIdPutAsync(
         int $transaction_id,
-        ?\ck/plenty-client\Model\RestOrdersItemsTransactionsTransactionIdPutRequest $_rest_orders_items_transactions_transaction_id = null,
+        ?\ck\Model\RestOrdersItemsTransactionsTransactionIdPutRequest $_rest_orders_items_transactions_transaction_id = null,
         string $contentType = self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'][0]
     ): PromiseInterface
     {
@@ -17559,7 +17559,7 @@ class OrderApi
      * Update order item transaction
      *
      * @param  int $transaction_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id (optional)
+     * @param  \ck\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -17571,7 +17571,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemTransaction';
+        $returnType = '\ck\Model\OrderItemTransaction';
         $request = $this->restOrdersItemsTransactionsTransactionIdPutRequest($transaction_id, $_rest_orders_items_transactions_transaction_id, $contentType);
 
         return $this->client
@@ -17614,7 +17614,7 @@ class OrderApi
      * Create request for operation 'restOrdersItemsTransactionsTransactionIdPut'
      *
      * @param  int $transaction_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id (optional)
+     * @param  \ck\Model\RestOrdersItemsTransactionsTransactionIdPutRequest|null $_rest_orders_items_transactions_transaction_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersItemsTransactionsTransactionIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18047,7 +18047,7 @@ class OrderApi
      * Cancel an order
      *
      * @param  int $order_id The ID of the order to be canceled. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel _rest_orders_order_id_cancel (optional)
+     * @param  \ck\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel _rest_orders_order_id_cancel (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdCancelPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -18056,7 +18056,7 @@ class OrderApi
      */
     public function restOrdersOrderIdCancelPut(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdCancelPutRequest $_rest_orders_order_id_cancel = null,
+        ?\ck\Model\RestOrdersOrderIdCancelPutRequest $_rest_orders_order_id_cancel = null,
         string $contentType = self::contentTypes['restOrdersOrderIdCancelPut'][0]
     ): void
     {
@@ -18069,7 +18069,7 @@ class OrderApi
      * Cancel an order
      *
      * @param  int $order_id The ID of the order to be canceled. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel (optional)
+     * @param  \ck\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdCancelPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -18078,7 +18078,7 @@ class OrderApi
      */
     public function restOrdersOrderIdCancelPutWithHttpInfo(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdCancelPutRequest $_rest_orders_order_id_cancel = null,
+        ?\ck\Model\RestOrdersOrderIdCancelPutRequest $_rest_orders_order_id_cancel = null,
         string $contentType = self::contentTypes['restOrdersOrderIdCancelPut'][0]
     ): array
     {
@@ -18134,7 +18134,7 @@ class OrderApi
      * Cancel an order
      *
      * @param  int $order_id The ID of the order to be canceled. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel (optional)
+     * @param  \ck\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdCancelPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18142,7 +18142,7 @@ class OrderApi
      */
     public function restOrdersOrderIdCancelPutAsync(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdCancelPutRequest $_rest_orders_order_id_cancel = null,
+        ?\ck\Model\RestOrdersOrderIdCancelPutRequest $_rest_orders_order_id_cancel = null,
         string $contentType = self::contentTypes['restOrdersOrderIdCancelPut'][0]
     ): PromiseInterface
     {
@@ -18160,7 +18160,7 @@ class OrderApi
      * Cancel an order
      *
      * @param  int $order_id The ID of the order to be canceled. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel (optional)
+     * @param  \ck\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdCancelPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18202,7 +18202,7 @@ class OrderApi
      * Create request for operation 'restOrdersOrderIdCancelPut'
      *
      * @param  int $order_id The ID of the order to be canceled. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel (optional)
+     * @param  \ck\Model\RestOrdersOrderIdCancelPutRequest|null $_rest_orders_order_id_cancel (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdCancelPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18317,12 +18317,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactWish
+     * @return \ck\Model\ContactWish
      */
     public function restOrdersOrderIdContactWishGet(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdContactWishGet'][0]
-    ): \ck/plenty-client\Model\ContactWish
+    ): \ck\Model\ContactWish
     {
         list($response) = $this->restOrdersOrderIdContactWishGetWithHttpInfo($order_id, $contentType);
         return $response;
@@ -18338,7 +18338,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactWish, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactWish, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdContactWishGetWithHttpInfo(
         int $order_id,
@@ -18384,23 +18384,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactWish' === '\SplFileObject') {
+                    if ('\ck\Model\ContactWish' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactWish' !== 'string') {
+                        if ('\ck\Model\ContactWish' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactWish', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactWish', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactWish';
+            $returnType = '\ck\Model\ContactWish';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18421,7 +18421,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactWish',
+                        '\ck\Model\ContactWish',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18471,7 +18471,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdContactWishGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactWish';
+        $returnType = '\ck\Model\ContactWish';
         $request = $this->restOrdersOrderIdContactWishGetRequest($order_id, $contentType);
 
         return $this->client
@@ -18620,13 +18620,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CouponCodeValidation
+     * @return \ck\Model\CouponCodeValidation
      */
     public function restOrdersOrderIdCouponsCouponPost(
         int $order_id,
         string $coupon,
         string $contentType = self::contentTypes['restOrdersOrderIdCouponsCouponPost'][0]
-    ): \ck/plenty-client\Model\CouponCodeValidation
+    ): \ck\Model\CouponCodeValidation
     {
         list($response) = $this->restOrdersOrderIdCouponsCouponPostWithHttpInfo($order_id, $coupon, $contentType);
         return $response;
@@ -18643,7 +18643,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CouponCodeValidation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CouponCodeValidation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdCouponsCouponPostWithHttpInfo(
         int $order_id,
@@ -18690,23 +18690,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CouponCodeValidation' === '\SplFileObject') {
+                    if ('\ck\Model\CouponCodeValidation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CouponCodeValidation' !== 'string') {
+                        if ('\ck\Model\CouponCodeValidation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CouponCodeValidation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CouponCodeValidation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CouponCodeValidation';
+            $returnType = '\ck\Model\CouponCodeValidation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18727,7 +18727,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CouponCodeValidation',
+                        '\ck\Model\CouponCodeValidation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18781,7 +18781,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdCouponsCouponPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CouponCodeValidation';
+        $returnType = '\ck\Model\CouponCodeValidation';
         $request = $this->restOrdersOrderIdCouponsCouponPostRequest($order_id, $coupon, $contentType);
 
         return $this->client
@@ -18946,7 +18946,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderDate[]
+     * @return \ck\Model\OrderDate[]
      */
     public function restOrdersOrderIdDatesGet(
         int $order_id,
@@ -18967,7 +18967,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderDate[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderDate[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDatesGetWithHttpInfo(
         int $order_id,
@@ -19013,23 +19013,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderDate[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderDate[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderDate[]' !== 'string') {
+                        if ('\ck\Model\OrderDate[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderDate[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderDate[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderDate[]';
+            $returnType = '\ck\Model\OrderDate[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19050,7 +19050,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderDate[]',
+                        '\ck\Model\OrderDate[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19100,7 +19100,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdDatesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderDate[]';
+        $returnType = '\ck\Model\OrderDate[]';
         $request = $this->restOrdersOrderIdDatesGetRequest($order_id, $contentType);
 
         return $this->client
@@ -19249,13 +19249,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderDate
+     * @return \ck\Model\OrderDate
      */
     public function restOrdersOrderIdDatesTypeIdGet(
         int $type_id,
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdDatesTypeIdGet'][0]
-    ): \ck/plenty-client\Model\OrderDate
+    ): \ck\Model\OrderDate
     {
         list($response) = $this->restOrdersOrderIdDatesTypeIdGetWithHttpInfo($type_id, $order_id, $contentType);
         return $response;
@@ -19272,7 +19272,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderDate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderDate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDatesTypeIdGetWithHttpInfo(
         int $type_id,
@@ -19319,23 +19319,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderDate' === '\SplFileObject') {
+                    if ('\ck\Model\OrderDate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderDate' !== 'string') {
+                        if ('\ck\Model\OrderDate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderDate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderDate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderDate';
+            $returnType = '\ck\Model\OrderDate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19356,7 +19356,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderDate',
+                        '\ck\Model\OrderDate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19410,7 +19410,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdDatesTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderDate';
+        $returnType = '\ck\Model\OrderDate';
         $request = $this->restOrdersOrderIdDatesTypeIdGetRequest($type_id, $order_id, $contentType);
 
         return $this->client
@@ -20125,12 +20125,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restOrdersOrderIdDeliveryOrdersPost(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdDeliveryOrdersPost'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restOrdersOrderIdDeliveryOrdersPostWithHttpInfo($order_id, $contentType);
         return $response;
@@ -20146,7 +20146,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdDeliveryOrdersPostWithHttpInfo(
         int $order_id,
@@ -20192,23 +20192,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20229,7 +20229,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20279,7 +20279,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdDeliveryOrdersPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restOrdersOrderIdDeliveryOrdersPostRequest($order_id, $contentType);
 
         return $this->client
@@ -20429,14 +20429,14 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restOrdersOrderIdGet(
         int $order_id,
         ?int $with = null,
         ?bool $add_order_items = null,
         string $contentType = self::contentTypes['restOrdersOrderIdGet'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restOrdersOrderIdGetWithHttpInfo($order_id, $with, $add_order_items, $contentType);
         return $response;
@@ -20454,7 +20454,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdGetWithHttpInfo(
         int $order_id,
@@ -20502,23 +20502,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20539,7 +20539,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20597,7 +20597,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restOrdersOrderIdGetRequest($order_id, $with, $add_order_items, $contentType);
 
         return $this->client
@@ -20774,7 +20774,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response
+     * @return \ck\Model\RestOrdersOrderIdItemsGet200Response
      */
     public function restOrdersOrderIdItemsGet(
         int $order_id,
@@ -20784,7 +20784,7 @@ class OrderApi
         ?string $sort_order = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restOrdersOrderIdItemsGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response
+    ): \ck\Model\RestOrdersOrderIdItemsGet200Response
     {
         list($response) = $this->restOrdersOrderIdItemsGetWithHttpInfo($order_id, $page, $items_per_page, $sort_by, $sort_order, $with, $contentType);
         return $response;
@@ -20805,7 +20805,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersOrderIdItemsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdItemsGetWithHttpInfo(
         int $order_id,
@@ -20856,23 +20856,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersOrderIdItemsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersOrderIdItemsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersOrderIdItemsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response';
+            $returnType = '\ck\Model\RestOrdersOrderIdItemsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20893,7 +20893,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response',
+                        '\ck\Model\RestOrdersOrderIdItemsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20963,7 +20963,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdItemsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersOrderIdItemsGet200Response';
+        $returnType = '\ck\Model\RestOrdersOrderIdItemsGet200Response';
         $request = $this->restOrdersOrderIdItemsGetRequest($order_id, $page, $items_per_page, $sort_by, $sort_order, $with, $contentType);
 
         return $this->client
@@ -21445,7 +21445,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderSerialNumber[]
+     * @return \ck\Model\OrderSerialNumber[]
      */
     public function restOrdersOrderIdItemsOrderItemIdSerialNumbersGet(
         int $order_id,
@@ -21468,7 +21468,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderSerialNumber[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderSerialNumber[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdItemsOrderItemIdSerialNumbersGetWithHttpInfo(
         int $order_id,
@@ -21515,23 +21515,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderSerialNumber[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderSerialNumber[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderSerialNumber[]' !== 'string') {
+                        if ('\ck\Model\OrderSerialNumber[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderSerialNumber[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderSerialNumber[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderSerialNumber[]';
+            $returnType = '\ck\Model\OrderSerialNumber[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -21552,7 +21552,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderSerialNumber[]',
+                        '\ck\Model\OrderSerialNumber[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21606,7 +21606,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdItemsOrderItemIdSerialNumbersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderSerialNumber[]';
+        $returnType = '\ck\Model\OrderSerialNumber[]';
         $request = $this->restOrdersOrderIdItemsOrderItemIdSerialNumbersGetRequest($order_id, $order_item_id, $contentType);
 
         return $this->client
@@ -21771,7 +21771,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderSerialNumber[]
+     * @return \ck\Model\OrderSerialNumber[]
      */
     public function restOrdersOrderIdItemsSerialNumbersGet(
         int $order_id,
@@ -21792,7 +21792,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderSerialNumber[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderSerialNumber[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdItemsSerialNumbersGetWithHttpInfo(
         int $order_id,
@@ -21838,23 +21838,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderSerialNumber[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderSerialNumber[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderSerialNumber[]' !== 'string') {
+                        if ('\ck\Model\OrderSerialNumber[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderSerialNumber[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderSerialNumber[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderSerialNumber[]';
+            $returnType = '\ck\Model\OrderSerialNumber[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -21875,7 +21875,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderSerialNumber[]',
+                        '\ck\Model\OrderSerialNumber[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21925,7 +21925,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdItemsSerialNumbersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderSerialNumber[]';
+        $returnType = '\ck\Model\OrderSerialNumber[]';
         $request = $this->restOrdersOrderIdItemsSerialNumbersGetRequest($order_id, $contentType);
 
         return $this->client
@@ -22887,18 +22887,18 @@ class OrderApi
      * Create property for an order
      *
      * @param  int $order_id order_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties _rest_orders_order_id_properties (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties _rest_orders_order_id_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderProperty
+     * @return \ck\Model\OrderProperty
      */
     public function restOrdersOrderIdPropertiesPost(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesPost'][0]
-    ): \ck/plenty-client\Model\OrderProperty
+    ): \ck\Model\OrderProperty
     {
         list($response) = $this->restOrdersOrderIdPropertiesPostWithHttpInfo($order_id, $_rest_orders_order_id_properties, $contentType);
         return $response;
@@ -22910,16 +22910,16 @@ class OrderApi
      * Create property for an order
      *
      * @param  int $order_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdPropertiesPostWithHttpInfo(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesPost'][0]
     ): array
     {
@@ -22962,23 +22962,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderProperty' !== 'string') {
+                        if ('\ck\Model\OrderProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderProperty';
+            $returnType = '\ck\Model\OrderProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22999,7 +22999,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderProperty',
+                        '\ck\Model\OrderProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23015,7 +23015,7 @@ class OrderApi
      * Create property for an order
      *
      * @param  int $order_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23023,7 +23023,7 @@ class OrderApi
      */
     public function restOrdersOrderIdPropertiesPostAsync(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesPost'][0]
     ): PromiseInterface
     {
@@ -23041,7 +23041,7 @@ class OrderApi
      * Create property for an order
      *
      * @param  int $order_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23053,7 +23053,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderProperty';
+        $returnType = '\ck\Model\OrderProperty';
         $request = $this->restOrdersOrderIdPropertiesPostRequest($order_id, $_rest_orders_order_id_properties, $contentType);
 
         return $this->client
@@ -23096,7 +23096,7 @@ class OrderApi
      * Create request for operation 'restOrdersOrderIdPropertiesPost'
      *
      * @param  int $order_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23208,7 +23208,7 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      * @param  int $type_id type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id _rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id _rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -23218,7 +23218,7 @@ class OrderApi
     public function restOrdersOrderIdPropertiesTypeIdDelete(
         int $order_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest $_rest_orders_order_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest $_rest_orders_order_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesTypeIdDelete'][0]
     ): object
     {
@@ -23233,7 +23233,7 @@ class OrderApi
      *
      * @param  int $order_id (required)
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -23243,7 +23243,7 @@ class OrderApi
     public function restOrdersOrderIdPropertiesTypeIdDeleteWithHttpInfo(
         int $order_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest $_rest_orders_order_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest $_rest_orders_order_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesTypeIdDelete'][0]
     ): array
     {
@@ -23340,7 +23340,7 @@ class OrderApi
      *
      * @param  int $order_id (required)
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23349,7 +23349,7 @@ class OrderApi
     public function restOrdersOrderIdPropertiesTypeIdDeleteAsync(
         int $order_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest $_rest_orders_order_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest $_rest_orders_order_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesTypeIdDelete'][0]
     ): PromiseInterface
     {
@@ -23368,7 +23368,7 @@ class OrderApi
      *
      * @param  int $order_id (required)
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23425,7 +23425,7 @@ class OrderApi
      *
      * @param  int $order_id (required)
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesTypeIdDeleteRequest|null $_rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23553,19 +23553,19 @@ class OrderApi
      *
      * @param  int $order_id order_id (required)
      * @param  int $type_id type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id _rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id _rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderProperty
+     * @return \ck\Model\OrderProperty
      */
     public function restOrdersOrderIdPropertiesTypeIdPut(
         int $order_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'][0]
-    ): \ck/plenty-client\Model\OrderProperty
+    ): \ck\Model\OrderProperty
     {
         list($response) = $this->restOrdersOrderIdPropertiesTypeIdPutWithHttpInfo($order_id, $type_id, $_rest_orders_order_id_properties_type_id, $contentType);
         return $response;
@@ -23578,17 +23578,17 @@ class OrderApi
      *
      * @param  int $order_id (required)
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdPropertiesTypeIdPutWithHttpInfo(
         int $order_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'][0]
     ): array
     {
@@ -23631,23 +23631,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderProperty' !== 'string') {
+                        if ('\ck\Model\OrderProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderProperty';
+            $returnType = '\ck\Model\OrderProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -23668,7 +23668,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderProperty',
+                        '\ck\Model\OrderProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23685,7 +23685,7 @@ class OrderApi
      *
      * @param  int $order_id (required)
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23694,7 +23694,7 @@ class OrderApi
     public function restOrdersOrderIdPropertiesTypeIdPutAsync(
         int $order_id,
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties_type_id = null,
+        ?\ck\Model\RestOrdersOrderIdPropertiesPostRequest $_rest_orders_order_id_properties_type_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'][0]
     ): PromiseInterface
     {
@@ -23713,7 +23713,7 @@ class OrderApi
      *
      * @param  int $order_id (required)
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23726,7 +23726,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderProperty';
+        $returnType = '\ck\Model\OrderProperty';
         $request = $this->restOrdersOrderIdPropertiesTypeIdPutRequest($order_id, $type_id, $_rest_orders_order_id_properties_type_id, $contentType);
 
         return $this->client
@@ -23770,7 +23770,7 @@ class OrderApi
      *
      * @param  int $order_id (required)
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPropertiesPostRequest|null $_rest_orders_order_id_properties_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPropertiesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23897,18 +23897,18 @@ class OrderApi
      * Update an order
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id _rest_orders_order_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id _rest_orders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restOrdersOrderIdPut(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPutRequest $_rest_orders_order_id = null,
+        ?\ck\Model\RestOrdersOrderIdPutRequest $_rest_orders_order_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPut'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restOrdersOrderIdPutWithHttpInfo($order_id, $_rest_orders_order_id, $contentType);
         return $response;
@@ -23920,16 +23920,16 @@ class OrderApi
      * Update an order
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdPutWithHttpInfo(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPutRequest $_rest_orders_order_id = null,
+        ?\ck\Model\RestOrdersOrderIdPutRequest $_rest_orders_order_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPut'][0]
     ): array
     {
@@ -23972,23 +23972,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -24009,7 +24009,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24025,7 +24025,7 @@ class OrderApi
      * Update an order
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -24033,7 +24033,7 @@ class OrderApi
      */
     public function restOrdersOrderIdPutAsync(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdPutRequest $_rest_orders_order_id = null,
+        ?\ck\Model\RestOrdersOrderIdPutRequest $_rest_orders_order_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdPut'][0]
     ): PromiseInterface
     {
@@ -24051,7 +24051,7 @@ class OrderApi
      * Update an order
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -24063,7 +24063,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restOrdersOrderIdPutRequest($order_id, $_rest_orders_order_id, $contentType);
 
         return $this->client
@@ -24106,7 +24106,7 @@ class OrderApi
      * Create request for operation 'restOrdersOrderIdPut'
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdPutRequest|null $_rest_orders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -24773,7 +24773,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPackage[]
+     * @return \ck\Model\OrderShippingPackage[]
      */
     public function restOrdersOrderIdShippingPackagesGet(
         int $order_id,
@@ -24798,7 +24798,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPackage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPackage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesGetWithHttpInfo(
         int $order_id,
@@ -24846,23 +24846,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPackage[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPackage[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPackage[]' !== 'string') {
+                        if ('\ck\Model\OrderShippingPackage[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPackage[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPackage[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPackage[]';
+            $returnType = '\ck\Model\OrderShippingPackage[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -24883,7 +24883,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPackage[]',
+                        '\ck\Model\OrderShippingPackage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24941,7 +24941,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPackage[]';
+        $returnType = '\ck\Model\OrderShippingPackage[]';
         $request = $this->restOrdersOrderIdShippingPackagesGetRequest($order_id, $columns, $with, $contentType);
 
         return $this->client
@@ -25113,12 +25113,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPackageItems
+     * @return \ck\Model\OrderShippingPackageItems
      */
     public function restOrdersOrderIdShippingPackagesItemsGet(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesItemsGet'][0]
-    ): \ck/plenty-client\Model\OrderShippingPackageItems
+    ): \ck\Model\OrderShippingPackageItems
     {
         list($response) = $this->restOrdersOrderIdShippingPackagesItemsGetWithHttpInfo($order_id, $contentType);
         return $response;
@@ -25134,7 +25134,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesItemsGetWithHttpInfo(
         int $order_id,
@@ -25180,23 +25180,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPackageItems' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPackageItems' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPackageItems' !== 'string') {
+                        if ('\ck\Model\OrderShippingPackageItems' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPackageItems', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPackageItems', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPackageItems';
+            $returnType = '\ck\Model\OrderShippingPackageItems';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -25217,7 +25217,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPackageItems',
+                        '\ck\Model\OrderShippingPackageItems',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25267,7 +25267,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesItemsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPackageItems';
+        $returnType = '\ck\Model\OrderShippingPackageItems';
         $request = $this->restOrdersOrderIdShippingPackagesItemsGetRequest($order_id, $contentType);
 
         return $this->client
@@ -25690,14 +25690,14 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPackage
+     * @return \ck\Model\OrderShippingPackage
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdGet(
         int $order_id,
         int $order_shipping_package_id,
         ?int $columns = null,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdGet'][0]
-    ): \ck/plenty-client\Model\OrderShippingPackage
+    ): \ck\Model\OrderShippingPackage
     {
         list($response) = $this->restOrdersOrderIdShippingPackagesOrderShippingPackageIdGetWithHttpInfo($order_id, $order_shipping_package_id, $columns, $contentType);
         return $response;
@@ -25715,7 +25715,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdGetWithHttpInfo(
         int $order_id,
@@ -25763,23 +25763,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPackage' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPackage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPackage' !== 'string') {
+                        if ('\ck\Model\OrderShippingPackage' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPackage', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPackage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPackage';
+            $returnType = '\ck\Model\OrderShippingPackage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -25800,7 +25800,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPackage',
+                        '\ck\Model\OrderShippingPackage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25858,7 +25858,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPackage';
+        $returnType = '\ck\Model\OrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesOrderShippingPackageIdGetRequest($order_id, $order_shipping_package_id, $columns, $contentType);
 
         return $this->client
@@ -26032,19 +26032,19 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id _rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id _rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPackage
+     * @return \ck\Model\OrderShippingPackage
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut(
         int $order_id,
         int $order_shipping_package_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest $_rest_orders_order_id_shipping_packages_order_shipping_package_id = null,
+        ?\ck\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest $_rest_orders_order_id_shipping_packages_order_shipping_package_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'][0]
-    ): \ck/plenty-client\Model\OrderShippingPackage
+    ): \ck\Model\OrderShippingPackage
     {
         list($response) = $this->restOrdersOrderIdShippingPackagesOrderShippingPackageIdPutWithHttpInfo($order_id, $order_shipping_package_id, $_rest_orders_order_id_shipping_packages_order_shipping_package_id, $contentType);
         return $response;
@@ -26057,17 +26057,17 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdPutWithHttpInfo(
         int $order_id,
         int $order_shipping_package_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest $_rest_orders_order_id_shipping_packages_order_shipping_package_id = null,
+        ?\ck\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest $_rest_orders_order_id_shipping_packages_order_shipping_package_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'][0]
     ): array
     {
@@ -26110,23 +26110,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPackage' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPackage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPackage' !== 'string') {
+                        if ('\ck\Model\OrderShippingPackage' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPackage', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPackage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPackage';
+            $returnType = '\ck\Model\OrderShippingPackage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -26147,7 +26147,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPackage',
+                        '\ck\Model\OrderShippingPackage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26164,7 +26164,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -26173,7 +26173,7 @@ class OrderApi
     public function restOrdersOrderIdShippingPackagesOrderShippingPackageIdPutAsync(
         int $order_id,
         int $order_shipping_package_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest $_rest_orders_order_id_shipping_packages_order_shipping_package_id = null,
+        ?\ck\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest $_rest_orders_order_id_shipping_packages_order_shipping_package_id = null,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'][0]
     ): PromiseInterface
     {
@@ -26192,7 +26192,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -26205,7 +26205,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPackage';
+        $returnType = '\ck\Model\OrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest($order_id, $order_shipping_package_id, $_rest_orders_order_id_shipping_packages_order_shipping_package_id, $contentType);
 
         return $this->client
@@ -26249,7 +26249,7 @@ class OrderApi
      *
      * @param  int $order_id The ID of the order (required)
      * @param  int $order_shipping_package_id The ID of the order shipping package (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesOrderShippingPackageIdPutRequest|null $_rest_orders_order_id_shipping_packages_order_shipping_package_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesOrderShippingPackageIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -26678,18 +26678,18 @@ class OrderApi
      * Create an order shipping package
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages _rest_orders_order_id_shipping_packages (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages _rest_orders_order_id_shipping_packages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPackage
+     * @return \ck\Model\OrderShippingPackage
      */
     public function restOrdersOrderIdShippingPackagesPost(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesPostRequest $_rest_orders_order_id_shipping_packages = null,
+        ?\ck\Model\RestOrdersOrderIdShippingPackagesPostRequest $_rest_orders_order_id_shipping_packages = null,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesPost'][0]
-    ): \ck/plenty-client\Model\OrderShippingPackage
+    ): \ck\Model\OrderShippingPackage
     {
         list($response) = $this->restOrdersOrderIdShippingPackagesPostWithHttpInfo($order_id, $_rest_orders_order_id_shipping_packages, $contentType);
         return $response;
@@ -26701,16 +26701,16 @@ class OrderApi
      * Create an order shipping package
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPackage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPackagesPostWithHttpInfo(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesPostRequest $_rest_orders_order_id_shipping_packages = null,
+        ?\ck\Model\RestOrdersOrderIdShippingPackagesPostRequest $_rest_orders_order_id_shipping_packages = null,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesPost'][0]
     ): array
     {
@@ -26753,23 +26753,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPackage' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPackage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPackage' !== 'string') {
+                        if ('\ck\Model\OrderShippingPackage' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPackage', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPackage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPackage';
+            $returnType = '\ck\Model\OrderShippingPackage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -26790,7 +26790,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPackage',
+                        '\ck\Model\OrderShippingPackage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26806,7 +26806,7 @@ class OrderApi
      * Create an order shipping package
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -26814,7 +26814,7 @@ class OrderApi
      */
     public function restOrdersOrderIdShippingPackagesPostAsync(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesPostRequest $_rest_orders_order_id_shipping_packages = null,
+        ?\ck\Model\RestOrdersOrderIdShippingPackagesPostRequest $_rest_orders_order_id_shipping_packages = null,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesPost'][0]
     ): PromiseInterface
     {
@@ -26832,7 +26832,7 @@ class OrderApi
      * Create an order shipping package
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -26844,7 +26844,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPackagesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPackage';
+        $returnType = '\ck\Model\OrderShippingPackage';
         $request = $this->restOrdersOrderIdShippingPackagesPostRequest($order_id, $_rest_orders_order_id_shipping_packages, $contentType);
 
         return $this->client
@@ -26887,7 +26887,7 @@ class OrderApi
      * Create request for operation 'restOrdersOrderIdShippingPackagesPost'
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages (optional)
+     * @param  \ck\Model\RestOrdersOrderIdShippingPackagesPostRequest|null $_rest_orders_order_id_shipping_packages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdShippingPackagesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -27304,12 +27304,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPackageItems
+     * @return \ck\Model\OrderShippingPackageItems
      */
     public function restOrdersOrderIdShippingPalletsPackagesItemsGet(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPalletsPackagesItemsGet'][0]
-    ): \ck/plenty-client\Model\OrderShippingPackageItems
+    ): \ck\Model\OrderShippingPackageItems
     {
         list($response) = $this->restOrdersOrderIdShippingPalletsPackagesItemsGetWithHttpInfo($order_id, $contentType);
         return $response;
@@ -27325,7 +27325,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPalletsPackagesItemsGetWithHttpInfo(
         int $order_id,
@@ -27371,23 +27371,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPackageItems' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPackageItems' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPackageItems' !== 'string') {
+                        if ('\ck\Model\OrderShippingPackageItems' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPackageItems', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPackageItems', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPackageItems';
+            $returnType = '\ck\Model\OrderShippingPackageItems';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -27408,7 +27408,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPackageItems',
+                        '\ck\Model\OrderShippingPackageItems',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27458,7 +27458,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPalletsPackagesItemsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPackageItems';
+        $returnType = '\ck\Model\OrderShippingPackageItems';
         $request = $this->restOrdersOrderIdShippingPalletsPackagesItemsGetRequest($order_id, $contentType);
 
         return $this->client
@@ -27934,7 +27934,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPackage[]
+     * @return \ck\Model\OrderShippingPackage[]
      */
     public function restOrdersOrderIdShippingPalletsPalletIdPackagesGet(
         int $order_id,
@@ -27957,7 +27957,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPackage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPackage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingPalletsPalletIdPackagesGetWithHttpInfo(
         int $order_id,
@@ -28004,23 +28004,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPackage[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPackage[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPackage[]' !== 'string') {
+                        if ('\ck\Model\OrderShippingPackage[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPackage[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPackage[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPackage[]';
+            $returnType = '\ck\Model\OrderShippingPackage[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -28041,7 +28041,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPackage[]',
+                        '\ck\Model\OrderShippingPackage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28095,7 +28095,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingPalletsPalletIdPackagesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPackage[]';
+        $returnType = '\ck\Model\OrderShippingPackage[]';
         $request = $this->restOrdersOrderIdShippingPalletsPalletIdPackagesGetRequest($order_id, $pallet_id, $contentType);
 
         return $this->client
@@ -28889,12 +28889,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingInformation
+     * @return \ck\Model\ShippingInformation
      */
     public function restOrdersOrderIdShippingShippingInformationAdditionalDataPut(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingShippingInformationAdditionalDataPut'][0]
-    ): \ck/plenty-client\Model\ShippingInformation
+    ): \ck\Model\ShippingInformation
     {
         list($response) = $this->restOrdersOrderIdShippingShippingInformationAdditionalDataPutWithHttpInfo($order_id, $contentType);
         return $response;
@@ -28910,7 +28910,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingShippingInformationAdditionalDataPutWithHttpInfo(
         int $order_id,
@@ -28956,23 +28956,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingInformation' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingInformation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingInformation' !== 'string') {
+                        if ('\ck\Model\ShippingInformation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingInformation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingInformation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingInformation';
+            $returnType = '\ck\Model\ShippingInformation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -28993,7 +28993,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingInformation',
+                        '\ck\Model\ShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29043,7 +29043,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingShippingInformationAdditionalDataPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingInformation';
+        $returnType = '\ck\Model\ShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationAdditionalDataPutRequest($order_id, $contentType);
 
         return $this->client
@@ -29191,12 +29191,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingInformation
+     * @return \ck\Model\ShippingInformation
      */
     public function restOrdersOrderIdShippingShippingInformationDelete(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingShippingInformationDelete'][0]
-    ): \ck/plenty-client\Model\ShippingInformation
+    ): \ck\Model\ShippingInformation
     {
         list($response) = $this->restOrdersOrderIdShippingShippingInformationDeleteWithHttpInfo($order_id, $contentType);
         return $response;
@@ -29212,7 +29212,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingShippingInformationDeleteWithHttpInfo(
         int $order_id,
@@ -29258,23 +29258,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingInformation' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingInformation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingInformation' !== 'string') {
+                        if ('\ck\Model\ShippingInformation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingInformation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingInformation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingInformation';
+            $returnType = '\ck\Model\ShippingInformation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29295,7 +29295,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingInformation',
+                        '\ck\Model\ShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29345,7 +29345,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingShippingInformationDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingInformation';
+        $returnType = '\ck\Model\ShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationDeleteRequest($order_id, $contentType);
 
         return $this->client
@@ -29493,12 +29493,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingInformation
+     * @return \ck\Model\ShippingInformation
      */
     public function restOrdersOrderIdShippingShippingInformationGet(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingShippingInformationGet'][0]
-    ): \ck/plenty-client\Model\ShippingInformation
+    ): \ck\Model\ShippingInformation
     {
         list($response) = $this->restOrdersOrderIdShippingShippingInformationGetWithHttpInfo($order_id, $contentType);
         return $response;
@@ -29514,7 +29514,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingShippingInformationGetWithHttpInfo(
         int $order_id,
@@ -29560,23 +29560,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingInformation' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingInformation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingInformation' !== 'string') {
+                        if ('\ck\Model\ShippingInformation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingInformation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingInformation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingInformation';
+            $returnType = '\ck\Model\ShippingInformation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29597,7 +29597,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingInformation',
+                        '\ck\Model\ShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29647,7 +29647,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingShippingInformationGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingInformation';
+        $returnType = '\ck\Model\ShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationGetRequest($order_id, $contentType);
 
         return $this->client
@@ -29795,12 +29795,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingInformation
+     * @return \ck\Model\ShippingInformation
      */
     public function restOrdersOrderIdShippingShippingInformationStatusPut(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingShippingInformationStatusPut'][0]
-    ): \ck/plenty-client\Model\ShippingInformation
+    ): \ck\Model\ShippingInformation
     {
         list($response) = $this->restOrdersOrderIdShippingShippingInformationStatusPutWithHttpInfo($order_id, $contentType);
         return $response;
@@ -29816,7 +29816,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingShippingInformationStatusPutWithHttpInfo(
         int $order_id,
@@ -29862,23 +29862,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingInformation' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingInformation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingInformation' !== 'string') {
+                        if ('\ck\Model\ShippingInformation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingInformation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingInformation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingInformation';
+            $returnType = '\ck\Model\ShippingInformation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29899,7 +29899,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingInformation',
+                        '\ck\Model\ShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29949,7 +29949,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingShippingInformationStatusPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingInformation';
+        $returnType = '\ck\Model\ShippingInformation';
         $request = $this->restOrdersOrderIdShippingShippingInformationStatusPutRequest($order_id, $contentType);
 
         return $this->client
@@ -30097,7 +30097,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StatusHistoryEntry[]
+     * @return \ck\Model\StatusHistoryEntry[]
      */
     public function restOrdersOrderIdStatusHistoryGet(
         int $order_id,
@@ -30118,7 +30118,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StatusHistoryEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StatusHistoryEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdStatusHistoryGetWithHttpInfo(
         int $order_id,
@@ -30164,23 +30164,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StatusHistoryEntry[]' === '\SplFileObject') {
+                    if ('\ck\Model\StatusHistoryEntry[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StatusHistoryEntry[]' !== 'string') {
+                        if ('\ck\Model\StatusHistoryEntry[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StatusHistoryEntry[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StatusHistoryEntry[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StatusHistoryEntry[]';
+            $returnType = '\ck\Model\StatusHistoryEntry[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -30201,7 +30201,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StatusHistoryEntry[]',
+                        '\ck\Model\StatusHistoryEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30251,7 +30251,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdStatusHistoryGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StatusHistoryEntry[]';
+        $returnType = '\ck\Model\StatusHistoryEntry[]';
         $request = $this->restOrdersOrderIdStatusHistoryGetRequest($order_id, $contentType);
 
         return $this->client
@@ -30395,16 +30395,16 @@ class OrderApi
      * Create order item transactions for an order
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions _rest_orders_order_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions _rest_orders_order_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderItemTransaction[]
+     * @return \ck\Model\OrderItemTransaction[]
      */
     public function restOrdersOrderIdTransactionsPost(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdTransactionsPostRequest $_rest_orders_order_id_transactions = null,
+        ?\ck\Model\RestOrdersOrderIdTransactionsPostRequest $_rest_orders_order_id_transactions = null,
         string $contentType = self::contentTypes['restOrdersOrderIdTransactionsPost'][0]
     ): array
     {
@@ -30418,16 +30418,16 @@ class OrderApi
      * Create order item transactions for an order
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderItemTransaction[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderItemTransaction[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdTransactionsPostWithHttpInfo(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdTransactionsPostRequest $_rest_orders_order_id_transactions = null,
+        ?\ck\Model\RestOrdersOrderIdTransactionsPostRequest $_rest_orders_order_id_transactions = null,
         string $contentType = self::contentTypes['restOrdersOrderIdTransactionsPost'][0]
     ): array
     {
@@ -30470,23 +30470,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderItemTransaction[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderItemTransaction[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderItemTransaction[]' !== 'string') {
+                        if ('\ck\Model\OrderItemTransaction[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderItemTransaction[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderItemTransaction[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderItemTransaction[]';
+            $returnType = '\ck\Model\OrderItemTransaction[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -30507,7 +30507,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderItemTransaction[]',
+                        '\ck\Model\OrderItemTransaction[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30523,7 +30523,7 @@ class OrderApi
      * Create order item transactions for an order
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -30531,7 +30531,7 @@ class OrderApi
      */
     public function restOrdersOrderIdTransactionsPostAsync(
         int $order_id,
-        ?\ck/plenty-client\Model\RestOrdersOrderIdTransactionsPostRequest $_rest_orders_order_id_transactions = null,
+        ?\ck\Model\RestOrdersOrderIdTransactionsPostRequest $_rest_orders_order_id_transactions = null,
         string $contentType = self::contentTypes['restOrdersOrderIdTransactionsPost'][0]
     ): PromiseInterface
     {
@@ -30549,7 +30549,7 @@ class OrderApi
      * Create order item transactions for an order
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -30561,7 +30561,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersOrderIdTransactionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderItemTransaction[]';
+        $returnType = '\ck\Model\OrderItemTransaction[]';
         $request = $this->restOrdersOrderIdTransactionsPostRequest($order_id, $_rest_orders_order_id_transactions, $contentType);
 
         return $this->client
@@ -30604,7 +30604,7 @@ class OrderApi
      * Create request for operation 'restOrdersOrderIdTransactionsPost'
      *
      * @param  int $order_id The ID of the order (required)
-     * @param  \ck/plenty-client\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions (optional)
+     * @param  \ck\Model\RestOrdersOrderIdTransactionsPostRequest|null $_rest_orders_order_id_transactions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersOrderIdTransactionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -30715,18 +30715,18 @@ class OrderApi
      * Create an order
      *
      * @param  int|null $coupon One or multiple coupon code to be redeemed with order creation (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersPostRequest|null $_rest_orders _rest_orders (optional)
+     * @param  \ck\Model\RestOrdersPostRequest|null $_rest_orders _rest_orders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restOrdersPost(
         ?int $coupon = null,
-        ?\ck/plenty-client\Model\RestOrdersPostRequest $_rest_orders = null,
+        ?\ck\Model\RestOrdersPostRequest $_rest_orders = null,
         string $contentType = self::contentTypes['restOrdersPost'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restOrdersPostWithHttpInfo($coupon, $_rest_orders, $contentType);
         return $response;
@@ -30738,16 +30738,16 @@ class OrderApi
      * Create an order
      *
      * @param  int|null $coupon One or multiple coupon code to be redeemed with order creation (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersPostRequest|null $_rest_orders (optional)
+     * @param  \ck\Model\RestOrdersPostRequest|null $_rest_orders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPostWithHttpInfo(
         ?int $coupon = null,
-        ?\ck/plenty-client\Model\RestOrdersPostRequest $_rest_orders = null,
+        ?\ck\Model\RestOrdersPostRequest $_rest_orders = null,
         string $contentType = self::contentTypes['restOrdersPost'][0]
     ): array
     {
@@ -30790,23 +30790,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -30827,7 +30827,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30843,7 +30843,7 @@ class OrderApi
      * Create an order
      *
      * @param  int|null $coupon One or multiple coupon code to be redeemed with order creation (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersPostRequest|null $_rest_orders (optional)
+     * @param  \ck\Model\RestOrdersPostRequest|null $_rest_orders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -30851,7 +30851,7 @@ class OrderApi
      */
     public function restOrdersPostAsync(
         ?int $coupon = null,
-        ?\ck/plenty-client\Model\RestOrdersPostRequest $_rest_orders = null,
+        ?\ck\Model\RestOrdersPostRequest $_rest_orders = null,
         string $contentType = self::contentTypes['restOrdersPost'][0]
     ): PromiseInterface
     {
@@ -30869,7 +30869,7 @@ class OrderApi
      * Create an order
      *
      * @param  int|null $coupon One or multiple coupon code to be redeemed with order creation (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersPostRequest|null $_rest_orders (optional)
+     * @param  \ck\Model\RestOrdersPostRequest|null $_rest_orders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -30881,7 +30881,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restOrdersPostRequest($coupon, $_rest_orders, $contentType);
 
         return $this->client
@@ -30924,7 +30924,7 @@ class OrderApi
      * Create request for operation 'restOrdersPost'
      *
      * @param  int|null $coupon One or multiple coupon code to be redeemed with order creation (optional)
-     * @param  \ck/plenty-client\Model\RestOrdersPostRequest|null $_rest_orders (optional)
+     * @param  \ck\Model\RestOrdersPostRequest|null $_rest_orders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -31332,18 +31332,18 @@ class OrderApi
      * Update property of an order by property ID
      *
      * @param  int $id id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id _rest_orders_properties_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id _rest_orders_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderProperty
+     * @return \ck\Model\OrderProperty
      */
     public function restOrdersPropertiesIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersPropertiesIdPutRequest $_rest_orders_properties_id = null,
+        ?\ck\Model\RestOrdersPropertiesIdPutRequest $_rest_orders_properties_id = null,
         string $contentType = self::contentTypes['restOrdersPropertiesIdPut'][0]
-    ): \ck/plenty-client\Model\OrderProperty
+    ): \ck\Model\OrderProperty
     {
         list($response) = $this->restOrdersPropertiesIdPutWithHttpInfo($id, $_rest_orders_properties_id, $contentType);
         return $response;
@@ -31355,16 +31355,16 @@ class OrderApi
      * Update property of an order by property ID
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersPropertiesIdPutRequest $_rest_orders_properties_id = null,
+        ?\ck\Model\RestOrdersPropertiesIdPutRequest $_rest_orders_properties_id = null,
         string $contentType = self::contentTypes['restOrdersPropertiesIdPut'][0]
     ): array
     {
@@ -31407,23 +31407,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderProperty' === '\SplFileObject') {
+                    if ('\ck\Model\OrderProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderProperty' !== 'string') {
+                        if ('\ck\Model\OrderProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderProperty';
+            $returnType = '\ck\Model\OrderProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -31444,7 +31444,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderProperty',
+                        '\ck\Model\OrderProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31460,7 +31460,7 @@ class OrderApi
      * Update property of an order by property ID
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -31468,7 +31468,7 @@ class OrderApi
      */
     public function restOrdersPropertiesIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestOrdersPropertiesIdPutRequest $_rest_orders_properties_id = null,
+        ?\ck\Model\RestOrdersPropertiesIdPutRequest $_rest_orders_properties_id = null,
         string $contentType = self::contentTypes['restOrdersPropertiesIdPut'][0]
     ): PromiseInterface
     {
@@ -31486,7 +31486,7 @@ class OrderApi
      * Update property of an order by property ID
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -31498,7 +31498,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersPropertiesIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderProperty';
+        $returnType = '\ck\Model\OrderProperty';
         $request = $this->restOrdersPropertiesIdPutRequest($id, $_rest_orders_properties_id, $contentType);
 
         return $this->client
@@ -31541,7 +31541,7 @@ class OrderApi
      * Create request for operation 'restOrdersPropertiesIdPut'
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesIdPutRequest|null $_rest_orders_properties_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -31656,7 +31656,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderPropertyType[]
+     * @return \ck\Model\OrderPropertyType[]
      */
     public function restOrdersPropertiesTypesGet(
         ?int $lang = null,
@@ -31677,7 +31677,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderPropertyType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderPropertyType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesTypesGetWithHttpInfo(
         ?int $lang = null,
@@ -31723,23 +31723,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderPropertyType[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderPropertyType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderPropertyType[]' !== 'string') {
+                        if ('\ck\Model\OrderPropertyType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderPropertyType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderPropertyType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderPropertyType[]';
+            $returnType = '\ck\Model\OrderPropertyType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -31760,7 +31760,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderPropertyType[]',
+                        '\ck\Model\OrderPropertyType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31810,7 +31810,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersPropertiesTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderPropertyType[]';
+        $returnType = '\ck\Model\OrderPropertyType[]';
         $request = $this->restOrdersPropertiesTypesGetRequest($lang, $contentType);
 
         return $this->client
@@ -31948,17 +31948,17 @@ class OrderApi
      *
      * Create order property type
      *
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types _rest_orders_properties_types (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types _rest_orders_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderPropertyType
+     * @return \ck\Model\OrderPropertyType
      */
     public function restOrdersPropertiesTypesPost(
-        ?\ck/plenty-client\Model\RestOrdersPropertiesTypesPostRequest $_rest_orders_properties_types = null,
+        ?\ck\Model\RestOrdersPropertiesTypesPostRequest $_rest_orders_properties_types = null,
         string $contentType = self::contentTypes['restOrdersPropertiesTypesPost'][0]
-    ): \ck/plenty-client\Model\OrderPropertyType
+    ): \ck\Model\OrderPropertyType
     {
         list($response) = $this->restOrdersPropertiesTypesPostWithHttpInfo($_rest_orders_properties_types, $contentType);
         return $response;
@@ -31969,15 +31969,15 @@ class OrderApi
      *
      * Create order property type
      *
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesTypesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestOrdersPropertiesTypesPostRequest $_rest_orders_properties_types = null,
+        ?\ck\Model\RestOrdersPropertiesTypesPostRequest $_rest_orders_properties_types = null,
         string $contentType = self::contentTypes['restOrdersPropertiesTypesPost'][0]
     ): array
     {
@@ -32020,23 +32020,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderPropertyType' === '\SplFileObject') {
+                    if ('\ck\Model\OrderPropertyType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderPropertyType' !== 'string') {
+                        if ('\ck\Model\OrderPropertyType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderPropertyType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderPropertyType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderPropertyType';
+            $returnType = '\ck\Model\OrderPropertyType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32057,7 +32057,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderPropertyType',
+                        '\ck\Model\OrderPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32072,14 +32072,14 @@ class OrderApi
      *
      * Create order property type
      *
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restOrdersPropertiesTypesPostAsync(
-        ?\ck/plenty-client\Model\RestOrdersPropertiesTypesPostRequest $_rest_orders_properties_types = null,
+        ?\ck\Model\RestOrdersPropertiesTypesPostRequest $_rest_orders_properties_types = null,
         string $contentType = self::contentTypes['restOrdersPropertiesTypesPost'][0]
     ): PromiseInterface
     {
@@ -32096,7 +32096,7 @@ class OrderApi
      *
      * Create order property type
      *
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32107,7 +32107,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersPropertiesTypesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderPropertyType';
+        $returnType = '\ck\Model\OrderPropertyType';
         $request = $this->restOrdersPropertiesTypesPostRequest($_rest_orders_properties_types, $contentType);
 
         return $this->client
@@ -32149,7 +32149,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersPropertiesTypesPost'
      *
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesPostRequest|null $_rest_orders_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32497,13 +32497,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderPropertyType
+     * @return \ck\Model\OrderPropertyType
      */
     public function restOrdersPropertiesTypesTypeIdGet(
         int $type_id,
         ?int $lang = null,
         string $contentType = self::contentTypes['restOrdersPropertiesTypesTypeIdGet'][0]
-    ): \ck/plenty-client\Model\OrderPropertyType
+    ): \ck\Model\OrderPropertyType
     {
         list($response) = $this->restOrdersPropertiesTypesTypeIdGetWithHttpInfo($type_id, $lang, $contentType);
         return $response;
@@ -32520,7 +32520,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesTypesTypeIdGetWithHttpInfo(
         int $type_id,
@@ -32567,23 +32567,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderPropertyType' === '\SplFileObject') {
+                    if ('\ck\Model\OrderPropertyType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderPropertyType' !== 'string') {
+                        if ('\ck\Model\OrderPropertyType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderPropertyType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderPropertyType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderPropertyType';
+            $returnType = '\ck\Model\OrderPropertyType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32604,7 +32604,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderPropertyType',
+                        '\ck\Model\OrderPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32658,7 +32658,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersPropertiesTypesTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderPropertyType';
+        $returnType = '\ck\Model\OrderPropertyType';
         $request = $this->restOrdersPropertiesTypesTypeIdGetRequest($type_id, $lang, $contentType);
 
         return $this->client
@@ -32814,18 +32814,18 @@ class OrderApi
      * Update property type
      *
      * @param  int $type_id type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id _rest_orders_properties_types_type_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id _rest_orders_properties_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderPropertyType
+     * @return \ck\Model\OrderPropertyType
      */
     public function restOrdersPropertiesTypesTypeIdPut(
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersPropertiesTypesTypeIdPutRequest $_rest_orders_properties_types_type_id = null,
+        ?\ck\Model\RestOrdersPropertiesTypesTypeIdPutRequest $_rest_orders_properties_types_type_id = null,
         string $contentType = self::contentTypes['restOrdersPropertiesTypesTypeIdPut'][0]
-    ): \ck/plenty-client\Model\OrderPropertyType
+    ): \ck\Model\OrderPropertyType
     {
         list($response) = $this->restOrdersPropertiesTypesTypeIdPutWithHttpInfo($type_id, $_rest_orders_properties_types_type_id, $contentType);
         return $response;
@@ -32837,16 +32837,16 @@ class OrderApi
      * Update property type
      *
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersPropertiesTypesTypeIdPutWithHttpInfo(
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersPropertiesTypesTypeIdPutRequest $_rest_orders_properties_types_type_id = null,
+        ?\ck\Model\RestOrdersPropertiesTypesTypeIdPutRequest $_rest_orders_properties_types_type_id = null,
         string $contentType = self::contentTypes['restOrdersPropertiesTypesTypeIdPut'][0]
     ): array
     {
@@ -32889,23 +32889,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderPropertyType' === '\SplFileObject') {
+                    if ('\ck\Model\OrderPropertyType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderPropertyType' !== 'string') {
+                        if ('\ck\Model\OrderPropertyType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderPropertyType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderPropertyType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderPropertyType';
+            $returnType = '\ck\Model\OrderPropertyType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32926,7 +32926,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderPropertyType',
+                        '\ck\Model\OrderPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32942,7 +32942,7 @@ class OrderApi
      * Update property type
      *
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32950,7 +32950,7 @@ class OrderApi
      */
     public function restOrdersPropertiesTypesTypeIdPutAsync(
         int $type_id,
-        ?\ck/plenty-client\Model\RestOrdersPropertiesTypesTypeIdPutRequest $_rest_orders_properties_types_type_id = null,
+        ?\ck\Model\RestOrdersPropertiesTypesTypeIdPutRequest $_rest_orders_properties_types_type_id = null,
         string $contentType = self::contentTypes['restOrdersPropertiesTypesTypeIdPut'][0]
     ): PromiseInterface
     {
@@ -32968,7 +32968,7 @@ class OrderApi
      * Update property type
      *
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32980,7 +32980,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersPropertiesTypesTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderPropertyType';
+        $returnType = '\ck\Model\OrderPropertyType';
         $request = $this->restOrdersPropertiesTypesTypeIdPutRequest($type_id, $_rest_orders_properties_types_type_id, $contentType);
 
         return $this->client
@@ -33023,7 +33023,7 @@ class OrderApi
      * Create request for operation 'restOrdersPropertiesTypesTypeIdPut'
      *
      * @param  int $type_id (required)
-     * @param  \ck/plenty-client\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id (optional)
+     * @param  \ck\Model\RestOrdersPropertiesTypesTypeIdPutRequest|null $_rest_orders_properties_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersPropertiesTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -33138,7 +33138,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderReferrer[]
+     * @return \ck\Model\OrderReferrer[]
      */
     public function restOrdersReferrersGet(
         ?int $columns = null,
@@ -33159,7 +33159,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderReferrer[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderReferrer[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersReferrersGetWithHttpInfo(
         ?int $columns = null,
@@ -33205,23 +33205,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderReferrer[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderReferrer[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderReferrer[]' !== 'string') {
+                        if ('\ck\Model\OrderReferrer[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderReferrer[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderReferrer[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderReferrer[]';
+            $returnType = '\ck\Model\OrderReferrer[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -33242,7 +33242,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderReferrer[]',
+                        '\ck\Model\OrderReferrer[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33292,7 +33292,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersReferrersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderReferrer[]';
+        $returnType = '\ck\Model\OrderReferrer[]';
         $request = $this->restOrdersReferrersGetRequest($columns, $contentType);
 
         return $this->client
@@ -33751,7 +33751,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingPackageType[]
+     * @return \ck\Model\ShippingPackageType[]
      */
     public function restOrdersShippingPackageTypesGet(
         string $contentType = self::contentTypes['restOrdersShippingPackageTypesGet'][0]
@@ -33770,7 +33770,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingPackageType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingPackageType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackageTypesGetWithHttpInfo(
         string $contentType = self::contentTypes['restOrdersShippingPackageTypesGet'][0]
@@ -33815,23 +33815,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingPackageType[]' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingPackageType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingPackageType[]' !== 'string') {
+                        if ('\ck\Model\ShippingPackageType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingPackageType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingPackageType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingPackageType[]';
+            $returnType = '\ck\Model\ShippingPackageType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -33852,7 +33852,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingPackageType[]',
+                        '\ck\Model\ShippingPackageType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33898,7 +33898,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPackageTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingPackageType[]';
+        $returnType = '\ck\Model\ShippingPackageType[]';
         $request = $this->restOrdersShippingPackageTypesGetRequest($contentType);
 
         return $this->client
@@ -34029,12 +34029,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingPackageType
+     * @return \ck\Model\ShippingPackageType
      */
     public function restOrdersShippingPackageTypesShippingPackageTypeIdGet(
         int $shipping_package_type_id,
         string $contentType = self::contentTypes['restOrdersShippingPackageTypesShippingPackageTypeIdGet'][0]
-    ): \ck/plenty-client\Model\ShippingPackageType
+    ): \ck\Model\ShippingPackageType
     {
         list($response) = $this->restOrdersShippingPackageTypesShippingPackageTypeIdGetWithHttpInfo($shipping_package_type_id, $contentType);
         return $response;
@@ -34050,7 +34050,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingPackageType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingPackageType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackageTypesShippingPackageTypeIdGetWithHttpInfo(
         int $shipping_package_type_id,
@@ -34096,23 +34096,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingPackageType' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingPackageType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingPackageType' !== 'string') {
+                        if ('\ck\Model\ShippingPackageType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingPackageType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingPackageType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingPackageType';
+            $returnType = '\ck\Model\ShippingPackageType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -34133,7 +34133,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingPackageType',
+                        '\ck\Model\ShippingPackageType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34183,7 +34183,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPackageTypesShippingPackageTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingPackageType';
+        $returnType = '\ck\Model\ShippingPackageType';
         $request = $this->restOrdersShippingPackageTypesShippingPackageTypeIdGetRequest($shipping_package_type_id, $contentType);
 
         return $this->client
@@ -35639,12 +35639,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPackageItems
+     * @return \ck\Model\OrderShippingPackageItems
      */
     public function restOrdersShippingPackagesPackageIdItemsGet(
         int $package_id,
         string $contentType = self::contentTypes['restOrdersShippingPackagesPackageIdItemsGet'][0]
-    ): \ck/plenty-client\Model\OrderShippingPackageItems
+    ): \ck\Model\OrderShippingPackageItems
     {
         list($response) = $this->restOrdersShippingPackagesPackageIdItemsGetWithHttpInfo($package_id, $contentType);
         return $response;
@@ -35660,7 +35660,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPackageItems, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPackagesPackageIdItemsGetWithHttpInfo(
         int $package_id,
@@ -35706,23 +35706,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPackageItems' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPackageItems' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPackageItems' !== 'string') {
+                        if ('\ck\Model\OrderShippingPackageItems' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPackageItems', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPackageItems', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPackageItems';
+            $returnType = '\ck\Model\OrderShippingPackageItems';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -35743,7 +35743,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPackageItems',
+                        '\ck\Model\OrderShippingPackageItems',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35793,7 +35793,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPackagesPackageIdItemsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPackageItems';
+        $returnType = '\ck\Model\OrderShippingPackageItems';
         $request = $this->restOrdersShippingPackagesPackageIdItemsGetRequest($package_id, $contentType);
 
         return $this->client
@@ -36243,7 +36243,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPallet[]
+     * @return \ck\Model\OrderShippingPallet[]
      */
     public function restOrdersShippingPalletsGet(
         string $order_id,
@@ -36264,7 +36264,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPallet[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPallet[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsGetWithHttpInfo(
         string $order_id,
@@ -36310,23 +36310,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPallet[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPallet[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPallet[]' !== 'string') {
+                        if ('\ck\Model\OrderShippingPallet[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPallet[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPallet[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPallet[]';
+            $returnType = '\ck\Model\OrderShippingPallet[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -36347,7 +36347,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPallet[]',
+                        '\ck\Model\OrderShippingPallet[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36397,7 +36397,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPalletsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPallet[]';
+        $returnType = '\ck\Model\OrderShippingPallet[]';
         $request = $this->restOrdersShippingPalletsGetRequest($order_id, $contentType);
 
         return $this->client
@@ -36542,18 +36542,18 @@ class OrderApi
      * Delete all pallets of an order
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id _rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id _rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPallet
+     * @return \ck\Model\OrderShippingPallet
      */
     public function restOrdersShippingPalletsPalletIdDelete(
         int $pallet_id,
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPalletIdDeleteRequest $_rest_orders_shipping_pallets_pallet_id = null,
+        ?\ck\Model\RestOrdersShippingPalletsPalletIdDeleteRequest $_rest_orders_shipping_pallets_pallet_id = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdDelete'][0]
-    ): \ck/plenty-client\Model\OrderShippingPallet
+    ): \ck\Model\OrderShippingPallet
     {
         list($response) = $this->restOrdersShippingPalletsPalletIdDeleteWithHttpInfo($pallet_id, $_rest_orders_shipping_pallets_pallet_id, $contentType);
         return $response;
@@ -36565,16 +36565,16 @@ class OrderApi
      * Delete all pallets of an order
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsPalletIdDeleteWithHttpInfo(
         int $pallet_id,
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPalletIdDeleteRequest $_rest_orders_shipping_pallets_pallet_id = null,
+        ?\ck\Model\RestOrdersShippingPalletsPalletIdDeleteRequest $_rest_orders_shipping_pallets_pallet_id = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdDelete'][0]
     ): array
     {
@@ -36617,23 +36617,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPallet' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPallet' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPallet' !== 'string') {
+                        if ('\ck\Model\OrderShippingPallet' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPallet', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPallet', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPallet';
+            $returnType = '\ck\Model\OrderShippingPallet';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -36654,7 +36654,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPallet',
+                        '\ck\Model\OrderShippingPallet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -36670,7 +36670,7 @@ class OrderApi
      * Delete all pallets of an order
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -36678,7 +36678,7 @@ class OrderApi
      */
     public function restOrdersShippingPalletsPalletIdDeleteAsync(
         int $pallet_id,
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPalletIdDeleteRequest $_rest_orders_shipping_pallets_pallet_id = null,
+        ?\ck\Model\RestOrdersShippingPalletsPalletIdDeleteRequest $_rest_orders_shipping_pallets_pallet_id = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdDelete'][0]
     ): PromiseInterface
     {
@@ -36696,7 +36696,7 @@ class OrderApi
      * Delete all pallets of an order
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -36708,7 +36708,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdDelete'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPallet';
+        $returnType = '\ck\Model\OrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdDeleteRequest($pallet_id, $_rest_orders_shipping_pallets_pallet_id, $contentType);
 
         return $this->client
@@ -36751,7 +36751,7 @@ class OrderApi
      * Create request for operation 'restOrdersShippingPalletsPalletIdDelete'
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPalletIdDeleteRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -36866,12 +36866,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPallet
+     * @return \ck\Model\OrderShippingPallet
      */
     public function restOrdersShippingPalletsPalletIdGet(
         int $pallet_id,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdGet'][0]
-    ): \ck/plenty-client\Model\OrderShippingPallet
+    ): \ck\Model\OrderShippingPallet
     {
         list($response) = $this->restOrdersShippingPalletsPalletIdGetWithHttpInfo($pallet_id, $contentType);
         return $response;
@@ -36887,7 +36887,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsPalletIdGetWithHttpInfo(
         int $pallet_id,
@@ -36933,23 +36933,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPallet' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPallet' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPallet' !== 'string') {
+                        if ('\ck\Model\OrderShippingPallet' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPallet', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPallet', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPallet';
+            $returnType = '\ck\Model\OrderShippingPallet';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -36970,7 +36970,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPallet',
+                        '\ck\Model\OrderShippingPallet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37020,7 +37020,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPallet';
+        $returnType = '\ck\Model\OrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdGetRequest($pallet_id, $contentType);
 
         return $this->client
@@ -37164,18 +37164,18 @@ class OrderApi
      * Update all pallets of an order
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id _rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id _rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPallet
+     * @return \ck\Model\OrderShippingPallet
      */
     public function restOrdersShippingPalletsPalletIdPut(
         int $pallet_id,
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets_pallet_id = null,
+        ?\ck\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets_pallet_id = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdPut'][0]
-    ): \ck/plenty-client\Model\OrderShippingPallet
+    ): \ck\Model\OrderShippingPallet
     {
         list($response) = $this->restOrdersShippingPalletsPalletIdPutWithHttpInfo($pallet_id, $_rest_orders_shipping_pallets_pallet_id, $contentType);
         return $response;
@@ -37187,16 +37187,16 @@ class OrderApi
      * Update all pallets of an order
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsPalletIdPutWithHttpInfo(
         int $pallet_id,
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets_pallet_id = null,
+        ?\ck\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets_pallet_id = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdPut'][0]
     ): array
     {
@@ -37239,23 +37239,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPallet' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPallet' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPallet' !== 'string') {
+                        if ('\ck\Model\OrderShippingPallet' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPallet', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPallet', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPallet';
+            $returnType = '\ck\Model\OrderShippingPallet';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -37276,7 +37276,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPallet',
+                        '\ck\Model\OrderShippingPallet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37292,7 +37292,7 @@ class OrderApi
      * Update all pallets of an order
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -37300,7 +37300,7 @@ class OrderApi
      */
     public function restOrdersShippingPalletsPalletIdPutAsync(
         int $pallet_id,
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets_pallet_id = null,
+        ?\ck\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets_pallet_id = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdPut'][0]
     ): PromiseInterface
     {
@@ -37318,7 +37318,7 @@ class OrderApi
      * Update all pallets of an order
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -37330,7 +37330,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPalletsPalletIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPallet';
+        $returnType = '\ck\Model\OrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPalletIdPutRequest($pallet_id, $_rest_orders_shipping_pallets_pallet_id, $contentType);
 
         return $this->client
@@ -37373,7 +37373,7 @@ class OrderApi
      * Create request for operation 'restOrdersShippingPalletsPalletIdPut'
      *
      * @param  int $pallet_id The ID of the pallet (required)
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets_pallet_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPalletIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -37483,17 +37483,17 @@ class OrderApi
      *
      * Create order shipping pallets
      *
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets _rest_orders_shipping_pallets (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets _rest_orders_shipping_pallets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderShippingPallet
+     * @return \ck\Model\OrderShippingPallet
      */
     public function restOrdersShippingPalletsPost(
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets = null,
+        ?\ck\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPost'][0]
-    ): \ck/plenty-client\Model\OrderShippingPallet
+    ): \ck\Model\OrderShippingPallet
     {
         list($response) = $this->restOrdersShippingPalletsPostWithHttpInfo($_rest_orders_shipping_pallets, $contentType);
         return $response;
@@ -37504,15 +37504,15 @@ class OrderApi
      *
      * Create order shipping pallets
      *
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderShippingPallet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPalletsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets = null,
+        ?\ck\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPost'][0]
     ): array
     {
@@ -37555,23 +37555,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderShippingPallet' === '\SplFileObject') {
+                    if ('\ck\Model\OrderShippingPallet' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderShippingPallet' !== 'string') {
+                        if ('\ck\Model\OrderShippingPallet' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderShippingPallet', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderShippingPallet', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderShippingPallet';
+            $returnType = '\ck\Model\OrderShippingPallet';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -37592,7 +37592,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderShippingPallet',
+                        '\ck\Model\OrderShippingPallet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37607,14 +37607,14 @@ class OrderApi
      *
      * Create order shipping pallets
      *
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restOrdersShippingPalletsPostAsync(
-        ?\ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets = null,
+        ?\ck\Model\RestOrdersShippingPalletsPostRequest $_rest_orders_shipping_pallets = null,
         string $contentType = self::contentTypes['restOrdersShippingPalletsPost'][0]
     ): PromiseInterface
     {
@@ -37631,7 +37631,7 @@ class OrderApi
      *
      * Create order shipping pallets
      *
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -37642,7 +37642,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPalletsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderShippingPallet';
+        $returnType = '\ck\Model\OrderShippingPallet';
         $request = $this->restOrdersShippingPalletsPostRequest($_rest_orders_shipping_pallets, $contentType);
 
         return $this->client
@@ -37684,7 +37684,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersShippingPalletsPost'
      *
-     * @param  \ck/plenty-client\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets (optional)
+     * @param  \ck\Model\RestOrdersShippingPalletsPostRequest|null $_rest_orders_shipping_pallets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersShippingPalletsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -37784,13 +37784,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ParcelServiceRegion
+     * @return \ck\Model\ParcelServiceRegion
      */
     public function restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGet(
         int $parcel_service_region_id,
         ?int $columns = null,
         string $contentType = self::contentTypes['restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGet'][0]
-    ): \ck/plenty-client\Model\ParcelServiceRegion
+    ): \ck\Model\ParcelServiceRegion
     {
         list($response) = $this->restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGetWithHttpInfo($parcel_service_region_id, $columns, $contentType);
         return $response;
@@ -37807,7 +37807,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ParcelServiceRegion, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ParcelServiceRegion, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGetWithHttpInfo(
         int $parcel_service_region_id,
@@ -37854,23 +37854,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ParcelServiceRegion' === '\SplFileObject') {
+                    if ('\ck\Model\ParcelServiceRegion' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ParcelServiceRegion' !== 'string') {
+                        if ('\ck\Model\ParcelServiceRegion' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ParcelServiceRegion', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ParcelServiceRegion', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ParcelServiceRegion';
+            $returnType = '\ck\Model\ParcelServiceRegion';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -37891,7 +37891,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ParcelServiceRegion',
+                        '\ck\Model\ParcelServiceRegion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -37945,7 +37945,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ParcelServiceRegion';
+        $returnType = '\ck\Model\ParcelServiceRegion';
         $request = $this->restOrdersShippingParcelServiceRegionsParcelServiceRegionIdGetRequest($parcel_service_region_id, $columns, $contentType);
 
         return $this->client
@@ -38110,7 +38110,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ParcelServicePreset[]
+     * @return \ck\Model\ParcelServicePreset[]
      */
     public function restOrdersShippingPresetsGet(
         ?int $columns = null,
@@ -38141,7 +38141,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ParcelServicePreset[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ParcelServicePreset[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPresetsGetWithHttpInfo(
         ?int $columns = null,
@@ -38192,23 +38192,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ParcelServicePreset[]' === '\SplFileObject') {
+                    if ('\ck\Model\ParcelServicePreset[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ParcelServicePreset[]' !== 'string') {
+                        if ('\ck\Model\ParcelServicePreset[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ParcelServicePreset[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ParcelServicePreset[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ParcelServicePreset[]';
+            $returnType = '\ck\Model\ParcelServicePreset[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -38229,7 +38229,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ParcelServicePreset[]',
+                        '\ck\Model\ParcelServicePreset[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38299,7 +38299,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPresetsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ParcelServicePreset[]';
+        $returnType = '\ck\Model\ParcelServicePreset[]';
         $request = $this->restOrdersShippingPresetsGetRequest($columns, $parcel_service_name, $shipping_service_provider, $with, $updated_at_before, $updated_at_after, $contentType);
 
         return $this->client
@@ -38503,13 +38503,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ParcelServicePreset
+     * @return \ck\Model\ParcelServicePreset
      */
     public function restOrdersShippingPresetsPresetIdGet(
         int $preset_id,
         ?int $columns = null,
         string $contentType = self::contentTypes['restOrdersShippingPresetsPresetIdGet'][0]
-    ): \ck/plenty-client\Model\ParcelServicePreset
+    ): \ck\Model\ParcelServicePreset
     {
         list($response) = $this->restOrdersShippingPresetsPresetIdGetWithHttpInfo($preset_id, $columns, $contentType);
         return $response;
@@ -38526,7 +38526,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ParcelServicePreset, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ParcelServicePreset, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPresetsPresetIdGetWithHttpInfo(
         int $preset_id,
@@ -38573,23 +38573,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ParcelServicePreset' === '\SplFileObject') {
+                    if ('\ck\Model\ParcelServicePreset' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ParcelServicePreset' !== 'string') {
+                        if ('\ck\Model\ParcelServicePreset' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ParcelServicePreset', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ParcelServicePreset', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ParcelServicePreset';
+            $returnType = '\ck\Model\ParcelServicePreset';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -38610,7 +38610,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ParcelServicePreset',
+                        '\ck\Model\ParcelServicePreset',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38664,7 +38664,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPresetsPresetIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ParcelServicePreset';
+        $returnType = '\ck\Model\ParcelServicePreset';
         $request = $this->restOrdersShippingPresetsPresetIdGetRequest($preset_id, $columns, $contentType);
 
         return $this->client
@@ -38825,7 +38825,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ParcelServiceRegion[]
+     * @return \ck\Model\ParcelServiceRegion[]
      */
     public function restOrdersShippingPresetsPresetIdParcelServiceRegionsGet(
         int $preset_id,
@@ -38848,7 +38848,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ParcelServiceRegion[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ParcelServiceRegion[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingPresetsPresetIdParcelServiceRegionsGetWithHttpInfo(
         int $preset_id,
@@ -38895,23 +38895,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ParcelServiceRegion[]' === '\SplFileObject') {
+                    if ('\ck\Model\ParcelServiceRegion[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ParcelServiceRegion[]' !== 'string') {
+                        if ('\ck\Model\ParcelServiceRegion[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ParcelServiceRegion[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ParcelServiceRegion[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ParcelServiceRegion[]';
+            $returnType = '\ck\Model\ParcelServiceRegion[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -38932,7 +38932,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ParcelServiceRegion[]',
+                        '\ck\Model\ParcelServiceRegion[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -38986,7 +38986,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingPresetsPresetIdParcelServiceRegionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ParcelServiceRegion[]';
+        $returnType = '\ck\Model\ParcelServiceRegion[]';
         $request = $this->restOrdersShippingPresetsPresetIdParcelServiceRegionsGetRequest($preset_id, $columns, $contentType);
 
         return $this->client
@@ -39147,13 +39147,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response
+     * @return \ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersGet(
         ?int $is_plugin = null,
         ?int $plugin_id = null,
         string $contentType = self::contentTypes['restOrdersShippingReturnsReturnsServiceProvidersGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response
+    ): \ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response
     {
         list($response) = $this->restOrdersShippingReturnsReturnsServiceProvidersGetWithHttpInfo($is_plugin, $plugin_id, $contentType);
         return $response;
@@ -39170,7 +39170,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersGetWithHttpInfo(
         ?int $is_plugin = null,
@@ -39217,23 +39217,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response';
+            $returnType = '\ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -39254,7 +39254,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response',
+                        '\ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -39308,7 +39308,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingReturnsReturnsServiceProvidersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response';
+        $returnType = '\ck\Model\RestOrdersShippingReturnsReturnsServiceProvidersGet200Response';
         $request = $this->restOrdersShippingReturnsReturnsServiceProvidersGetRequest($is_plugin, $plugin_id, $contentType);
 
         return $this->client
@@ -39740,12 +39740,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ReturnsServiceProvider
+     * @return \ck\Model\ReturnsServiceProvider
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersProviderIdGet(
         int $provider_id,
         string $contentType = self::contentTypes['restOrdersShippingReturnsReturnsServiceProvidersProviderIdGet'][0]
-    ): \ck/plenty-client\Model\ReturnsServiceProvider
+    ): \ck\Model\ReturnsServiceProvider
     {
         list($response) = $this->restOrdersShippingReturnsReturnsServiceProvidersProviderIdGetWithHttpInfo($provider_id, $contentType);
         return $response;
@@ -39761,7 +39761,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ReturnsServiceProvider, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ReturnsServiceProvider, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingReturnsReturnsServiceProvidersProviderIdGetWithHttpInfo(
         int $provider_id,
@@ -39807,23 +39807,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ReturnsServiceProvider' === '\SplFileObject') {
+                    if ('\ck\Model\ReturnsServiceProvider' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ReturnsServiceProvider' !== 'string') {
+                        if ('\ck\Model\ReturnsServiceProvider' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ReturnsServiceProvider', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ReturnsServiceProvider', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ReturnsServiceProvider';
+            $returnType = '\ck\Model\ReturnsServiceProvider';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -39844,7 +39844,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ReturnsServiceProvider',
+                        '\ck\Model\ReturnsServiceProvider',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -39894,7 +39894,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingReturnsReturnsServiceProvidersProviderIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ReturnsServiceProvider';
+        $returnType = '\ck\Model\ReturnsServiceProvider';
         $request = $this->restOrdersShippingReturnsReturnsServiceProvidersProviderIdGetRequest($provider_id, $contentType);
 
         return $this->client
@@ -40318,11 +40318,11 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingInformation
+     * @return \ck\Model\ShippingInformation
      */
     public function restOrdersShippingShippingInformationPost(
         string $contentType = self::contentTypes['restOrdersShippingShippingInformationPost'][0]
-    ): \ck/plenty-client\Model\ShippingInformation
+    ): \ck\Model\ShippingInformation
     {
         list($response) = $this->restOrdersShippingShippingInformationPostWithHttpInfo($contentType);
         return $response;
@@ -40337,7 +40337,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingInformationPostWithHttpInfo(
         string $contentType = self::contentTypes['restOrdersShippingShippingInformationPost'][0]
@@ -40382,23 +40382,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingInformation' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingInformation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingInformation' !== 'string') {
+                        if ('\ck\Model\ShippingInformation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingInformation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingInformation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingInformation';
+            $returnType = '\ck\Model\ShippingInformation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -40419,7 +40419,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingInformation',
+                        '\ck\Model\ShippingInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -40465,7 +40465,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingShippingInformationPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingInformation';
+        $returnType = '\ck\Model\ShippingInformation';
         $request = $this->restOrdersShippingShippingInformationPostRequest($contentType);
 
         return $this->client
@@ -40598,14 +40598,14 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response
+     * @return \ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response
      */
     public function restOrdersShippingShippingServiceProvidersGet(
         ?string $updated_at_before = null,
         ?string $updated_at_after = null,
         ?string $with = null,
         string $contentType = self::contentTypes['restOrdersShippingShippingServiceProvidersGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response
+    ): \ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response
     {
         list($response) = $this->restOrdersShippingShippingServiceProvidersGetWithHttpInfo($updated_at_before, $updated_at_after, $with, $contentType);
         return $response;
@@ -40623,7 +40623,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingServiceProvidersGetWithHttpInfo(
         ?string $updated_at_before = null,
@@ -40671,23 +40671,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response';
+            $returnType = '\ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -40708,7 +40708,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response',
+                        '\ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -40766,7 +40766,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingShippingServiceProvidersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersShippingShippingServiceProvidersGet200Response';
+        $returnType = '\ck\Model\RestOrdersShippingShippingServiceProvidersGet200Response';
         $request = $this->restOrdersShippingShippingServiceProvidersGetRequest($updated_at_before, $updated_at_after, $with, $contentType);
 
         return $this->client
@@ -41209,11 +41209,11 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingServiceProvider
+     * @return \ck\Model\ShippingServiceProvider
      */
     public function restOrdersShippingShippingServiceProvidersPost(
         string $contentType = self::contentTypes['restOrdersShippingShippingServiceProvidersPost'][0]
-    ): \ck/plenty-client\Model\ShippingServiceProvider
+    ): \ck\Model\ShippingServiceProvider
     {
         list($response) = $this->restOrdersShippingShippingServiceProvidersPostWithHttpInfo($contentType);
         return $response;
@@ -41228,7 +41228,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingServiceProvider, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingServiceProvider, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingServiceProvidersPostWithHttpInfo(
         string $contentType = self::contentTypes['restOrdersShippingShippingServiceProvidersPost'][0]
@@ -41273,23 +41273,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingServiceProvider' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingServiceProvider' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingServiceProvider' !== 'string') {
+                        if ('\ck\Model\ShippingServiceProvider' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingServiceProvider', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingServiceProvider', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingServiceProvider';
+            $returnType = '\ck\Model\ShippingServiceProvider';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -41310,7 +41310,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingServiceProvider',
+                        '\ck\Model\ShippingServiceProvider',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -41356,7 +41356,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingShippingServiceProvidersPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingServiceProvider';
+        $returnType = '\ck\Model\ShippingServiceProvider';
         $request = $this->restOrdersShippingShippingServiceProvidersPostRequest($contentType);
 
         return $this->client
@@ -41488,13 +41488,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingServiceProvider
+     * @return \ck\Model\ShippingServiceProvider
      */
     public function restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGet(
         int $shipping_service_provider_id,
         int $shipping_service_provider_id2,
         string $contentType = self::contentTypes['restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGet'][0]
-    ): \ck/plenty-client\Model\ShippingServiceProvider
+    ): \ck\Model\ShippingServiceProvider
     {
         list($response) = $this->restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGetWithHttpInfo($shipping_service_provider_id, $shipping_service_provider_id2, $contentType);
         return $response;
@@ -41511,7 +41511,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingServiceProvider, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingServiceProvider, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGetWithHttpInfo(
         int $shipping_service_provider_id,
@@ -41558,23 +41558,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingServiceProvider' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingServiceProvider' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingServiceProvider' !== 'string') {
+                        if ('\ck\Model\ShippingServiceProvider' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingServiceProvider', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingServiceProvider', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingServiceProvider';
+            $returnType = '\ck\Model\ShippingServiceProvider';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -41595,7 +41595,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingServiceProvider',
+                        '\ck\Model\ShippingServiceProvider',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -41649,7 +41649,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingServiceProvider';
+        $returnType = '\ck\Model\ShippingServiceProvider';
         $request = $this->restOrdersShippingShippingServiceProvidersShippingServiceProviderIdGetRequest($shipping_service_provider_id, $shipping_service_provider_id2, $contentType);
 
         return $this->client
@@ -41819,7 +41819,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response
+     * @return \ck\Model\RestOrdersStatusHistoryGet200Response
      */
     public function restOrdersStatusHistoryGet(
         ?int $order_id = null,
@@ -41828,7 +41828,7 @@ class OrderApi
         ?string $created_at_to = null,
         ?string $user_id = null,
         string $contentType = self::contentTypes['restOrdersStatusHistoryGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response
+    ): \ck\Model\RestOrdersStatusHistoryGet200Response
     {
         list($response) = $this->restOrdersStatusHistoryGetWithHttpInfo($order_id, $status_id, $created_at_from, $created_at_to, $user_id, $contentType);
         return $response;
@@ -41848,7 +41848,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersStatusHistoryGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusHistoryGetWithHttpInfo(
         ?int $order_id = null,
@@ -41898,23 +41898,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersStatusHistoryGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersStatusHistoryGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersStatusHistoryGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response';
+            $returnType = '\ck\Model\RestOrdersStatusHistoryGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -41935,7 +41935,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response',
+                        '\ck\Model\RestOrdersStatusHistoryGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -42001,7 +42001,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersStatusHistoryGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersStatusHistoryGet200Response';
+        $returnType = '\ck\Model\RestOrdersStatusHistoryGet200Response';
         $request = $this->restOrdersStatusHistoryGetRequest($order_id, $status_id, $created_at_from, $created_at_to, $user_id, $contentType);
 
         return $this->client
@@ -42470,13 +42470,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersStatusesGet200Response
+     * @return \ck\Model\RestOrdersStatusesGet200Response
      */
     public function restOrdersStatusesGet(
         ?float $status_id_from = null,
         ?float $status_id_to = null,
         string $contentType = self::contentTypes['restOrdersStatusesGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersStatusesGet200Response
+    ): \ck\Model\RestOrdersStatusesGet200Response
     {
         list($response) = $this->restOrdersStatusesGetWithHttpInfo($status_id_from, $status_id_to, $contentType);
         return $response;
@@ -42493,7 +42493,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersStatusesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersStatusesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusesGetWithHttpInfo(
         ?float $status_id_from = null,
@@ -42540,23 +42540,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersStatusesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersStatusesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersStatusesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersStatusesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersStatusesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersStatusesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersStatusesGet200Response';
+            $returnType = '\ck\Model\RestOrdersStatusesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -42577,7 +42577,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersStatusesGet200Response',
+                        '\ck\Model\RestOrdersStatusesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -42631,7 +42631,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersStatusesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersStatusesGet200Response';
+        $returnType = '\ck\Model\RestOrdersStatusesGet200Response';
         $request = $this->restOrdersStatusesGetRequest($status_id_from, $status_id_to, $contentType);
 
         return $this->client
@@ -43056,17 +43056,17 @@ class OrderApi
      *
      * Creates an order status.
      *
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses _rest_orders_statuses (optional)
+     * @param  \ck\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses _rest_orders_statuses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderStatus
+     * @return \ck\Model\OrderStatus
      */
     public function restOrdersStatusesPost(
-        ?\ck/plenty-client\Model\RestOrdersStatusesPostRequest $_rest_orders_statuses = null,
+        ?\ck\Model\RestOrdersStatusesPostRequest $_rest_orders_statuses = null,
         string $contentType = self::contentTypes['restOrdersStatusesPost'][0]
-    ): \ck/plenty-client\Model\OrderStatus
+    ): \ck\Model\OrderStatus
     {
         list($response) = $this->restOrdersStatusesPostWithHttpInfo($_rest_orders_statuses, $contentType);
         return $response;
@@ -43077,15 +43077,15 @@ class OrderApi
      *
      * Creates an order status.
      *
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses (optional)
+     * @param  \ck\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestOrdersStatusesPostRequest $_rest_orders_statuses = null,
+        ?\ck\Model\RestOrdersStatusesPostRequest $_rest_orders_statuses = null,
         string $contentType = self::contentTypes['restOrdersStatusesPost'][0]
     ): array
     {
@@ -43128,23 +43128,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderStatus' === '\SplFileObject') {
+                    if ('\ck\Model\OrderStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderStatus' !== 'string') {
+                        if ('\ck\Model\OrderStatus' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderStatus', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderStatus', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderStatus';
+            $returnType = '\ck\Model\OrderStatus';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -43165,7 +43165,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderStatus',
+                        '\ck\Model\OrderStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -43180,14 +43180,14 @@ class OrderApi
      *
      * Creates an order status.
      *
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses (optional)
+     * @param  \ck\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restOrdersStatusesPostAsync(
-        ?\ck/plenty-client\Model\RestOrdersStatusesPostRequest $_rest_orders_statuses = null,
+        ?\ck\Model\RestOrdersStatusesPostRequest $_rest_orders_statuses = null,
         string $contentType = self::contentTypes['restOrdersStatusesPost'][0]
     ): PromiseInterface
     {
@@ -43204,7 +43204,7 @@ class OrderApi
      *
      * Creates an order status.
      *
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses (optional)
+     * @param  \ck\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -43215,7 +43215,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersStatusesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderStatus';
+        $returnType = '\ck\Model\OrderStatus';
         $request = $this->restOrdersStatusesPostRequest($_rest_orders_statuses, $contentType);
 
         return $this->client
@@ -43257,7 +43257,7 @@ class OrderApi
     /**
      * Create request for operation 'restOrdersStatusesPost'
      *
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses (optional)
+     * @param  \ck\Model\RestOrdersStatusesPostRequest|null $_rest_orders_statuses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -43604,12 +43604,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderStatus
+     * @return \ck\Model\OrderStatus
      */
     public function restOrdersStatusesStatusIdGet(
         float $status_id,
         string $contentType = self::contentTypes['restOrdersStatusesStatusIdGet'][0]
-    ): \ck/plenty-client\Model\OrderStatus
+    ): \ck\Model\OrderStatus
     {
         list($response) = $this->restOrdersStatusesStatusIdGetWithHttpInfo($status_id, $contentType);
         return $response;
@@ -43625,7 +43625,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusesStatusIdGetWithHttpInfo(
         float $status_id,
@@ -43671,23 +43671,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderStatus' === '\SplFileObject') {
+                    if ('\ck\Model\OrderStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderStatus' !== 'string') {
+                        if ('\ck\Model\OrderStatus' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderStatus', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderStatus', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderStatus';
+            $returnType = '\ck\Model\OrderStatus';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -43708,7 +43708,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderStatus',
+                        '\ck\Model\OrderStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -43758,7 +43758,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersStatusesStatusIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderStatus';
+        $returnType = '\ck\Model\OrderStatus';
         $request = $this->restOrdersStatusesStatusIdGetRequest($status_id, $contentType);
 
         return $this->client
@@ -43902,18 +43902,18 @@ class OrderApi
      * Update an order status
      *
      * @param  float $status_id The ID of the order status that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id _rest_orders_statuses_status_id (optional)
+     * @param  \ck\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id _rest_orders_statuses_status_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesStatusIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderStatus
+     * @return \ck\Model\OrderStatus
      */
     public function restOrdersStatusesStatusIdPut(
         float $status_id,
-        ?\ck/plenty-client\Model\RestOrdersStatusesStatusIdPutRequest $_rest_orders_statuses_status_id = null,
+        ?\ck\Model\RestOrdersStatusesStatusIdPutRequest $_rest_orders_statuses_status_id = null,
         string $contentType = self::contentTypes['restOrdersStatusesStatusIdPut'][0]
-    ): \ck/plenty-client\Model\OrderStatus
+    ): \ck\Model\OrderStatus
     {
         list($response) = $this->restOrdersStatusesStatusIdPutWithHttpInfo($status_id, $_rest_orders_statuses_status_id, $contentType);
         return $response;
@@ -43925,16 +43925,16 @@ class OrderApi
      * Update an order status
      *
      * @param  float $status_id The ID of the order status that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id (optional)
+     * @param  \ck\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesStatusIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersStatusesStatusIdPutWithHttpInfo(
         float $status_id,
-        ?\ck/plenty-client\Model\RestOrdersStatusesStatusIdPutRequest $_rest_orders_statuses_status_id = null,
+        ?\ck\Model\RestOrdersStatusesStatusIdPutRequest $_rest_orders_statuses_status_id = null,
         string $contentType = self::contentTypes['restOrdersStatusesStatusIdPut'][0]
     ): array
     {
@@ -43977,23 +43977,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderStatus' === '\SplFileObject') {
+                    if ('\ck\Model\OrderStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderStatus' !== 'string') {
+                        if ('\ck\Model\OrderStatus' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderStatus', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderStatus', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderStatus';
+            $returnType = '\ck\Model\OrderStatus';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -44014,7 +44014,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderStatus',
+                        '\ck\Model\OrderStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -44030,7 +44030,7 @@ class OrderApi
      * Update an order status
      *
      * @param  float $status_id The ID of the order status that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id (optional)
+     * @param  \ck\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesStatusIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -44038,7 +44038,7 @@ class OrderApi
      */
     public function restOrdersStatusesStatusIdPutAsync(
         float $status_id,
-        ?\ck/plenty-client\Model\RestOrdersStatusesStatusIdPutRequest $_rest_orders_statuses_status_id = null,
+        ?\ck\Model\RestOrdersStatusesStatusIdPutRequest $_rest_orders_statuses_status_id = null,
         string $contentType = self::contentTypes['restOrdersStatusesStatusIdPut'][0]
     ): PromiseInterface
     {
@@ -44056,7 +44056,7 @@ class OrderApi
      * Update an order status
      *
      * @param  float $status_id The ID of the order status that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id (optional)
+     * @param  \ck\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesStatusIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -44068,7 +44068,7 @@ class OrderApi
         string $contentType = self::contentTypes['restOrdersStatusesStatusIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderStatus';
+        $returnType = '\ck\Model\OrderStatus';
         $request = $this->restOrdersStatusesStatusIdPutRequest($status_id, $_rest_orders_statuses_status_id, $contentType);
 
         return $this->client
@@ -44111,7 +44111,7 @@ class OrderApi
      * Create request for operation 'restOrdersStatusesStatusIdPut'
      *
      * @param  float $status_id The ID of the order status that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id (optional)
+     * @param  \ck\Model\RestOrdersStatusesStatusIdPutRequest|null $_rest_orders_statuses_status_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restOrdersStatusesStatusIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -44524,18 +44524,18 @@ class OrderApi
      * Update a redistribution
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id _rest_redistributions_order_id (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id _rest_redistributions_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsOrderIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restRedistributionsOrderIdPut(
         int $order_id,
-        ?\ck/plenty-client\Model\RestRedistributionsPostRequest $_rest_redistributions_order_id = null,
+        ?\ck\Model\RestRedistributionsPostRequest $_rest_redistributions_order_id = null,
         string $contentType = self::contentTypes['restRedistributionsOrderIdPut'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restRedistributionsOrderIdPutWithHttpInfo($order_id, $_rest_redistributions_order_id, $contentType);
         return $response;
@@ -44547,16 +44547,16 @@ class OrderApi
      * Update a redistribution
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsOrderIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restRedistributionsOrderIdPutWithHttpInfo(
         int $order_id,
-        ?\ck/plenty-client\Model\RestRedistributionsPostRequest $_rest_redistributions_order_id = null,
+        ?\ck\Model\RestRedistributionsPostRequest $_rest_redistributions_order_id = null,
         string $contentType = self::contentTypes['restRedistributionsOrderIdPut'][0]
     ): array
     {
@@ -44599,23 +44599,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -44636,7 +44636,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -44652,7 +44652,7 @@ class OrderApi
      * Update a redistribution
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -44660,7 +44660,7 @@ class OrderApi
      */
     public function restRedistributionsOrderIdPutAsync(
         int $order_id,
-        ?\ck/plenty-client\Model\RestRedistributionsPostRequest $_rest_redistributions_order_id = null,
+        ?\ck\Model\RestRedistributionsPostRequest $_rest_redistributions_order_id = null,
         string $contentType = self::contentTypes['restRedistributionsOrderIdPut'][0]
     ): PromiseInterface
     {
@@ -44678,7 +44678,7 @@ class OrderApi
      * Update a redistribution
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -44690,7 +44690,7 @@ class OrderApi
         string $contentType = self::contentTypes['restRedistributionsOrderIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restRedistributionsOrderIdPutRequest($order_id, $_rest_redistributions_order_id, $contentType);
 
         return $this->client
@@ -44733,7 +44733,7 @@ class OrderApi
      * Create request for operation 'restRedistributionsOrderIdPut'
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -44843,17 +44843,17 @@ class OrderApi
      *
      * Create a redistribution
      *
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions _rest_redistributions (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions _rest_redistributions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restRedistributionsPost(
-        ?\ck/plenty-client\Model\RestRedistributionsPostRequest $_rest_redistributions = null,
+        ?\ck\Model\RestRedistributionsPostRequest $_rest_redistributions = null,
         string $contentType = self::contentTypes['restRedistributionsPost'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restRedistributionsPostWithHttpInfo($_rest_redistributions, $contentType);
         return $response;
@@ -44864,15 +44864,15 @@ class OrderApi
      *
      * Create a redistribution
      *
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restRedistributionsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestRedistributionsPostRequest $_rest_redistributions = null,
+        ?\ck\Model\RestRedistributionsPostRequest $_rest_redistributions = null,
         string $contentType = self::contentTypes['restRedistributionsPost'][0]
     ): array
     {
@@ -44915,23 +44915,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -44952,7 +44952,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -44967,14 +44967,14 @@ class OrderApi
      *
      * Create a redistribution
      *
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restRedistributionsPostAsync(
-        ?\ck/plenty-client\Model\RestRedistributionsPostRequest $_rest_redistributions = null,
+        ?\ck\Model\RestRedistributionsPostRequest $_rest_redistributions = null,
         string $contentType = self::contentTypes['restRedistributionsPost'][0]
     ): PromiseInterface
     {
@@ -44991,7 +44991,7 @@ class OrderApi
      *
      * Create a redistribution
      *
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -45002,7 +45002,7 @@ class OrderApi
         string $contentType = self::contentTypes['restRedistributionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restRedistributionsPostRequest($_rest_redistributions, $contentType);
 
         return $this->client
@@ -45044,7 +45044,7 @@ class OrderApi
     /**
      * Create request for operation 'restRedistributionsPost'
      *
-     * @param  \ck/plenty-client\Model\RestRedistributionsPostRequest|null $_rest_redistributions (optional)
+     * @param  \ck\Model\RestRedistributionsPostRequest|null $_rest_redistributions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restRedistributionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -45143,12 +45143,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restReordersOrderIdCurrencyPut(
         int $order_id,
         string $contentType = self::contentTypes['restReordersOrderIdCurrencyPut'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restReordersOrderIdCurrencyPutWithHttpInfo($order_id, $contentType);
         return $response;
@@ -45164,7 +45164,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReordersOrderIdCurrencyPutWithHttpInfo(
         int $order_id,
@@ -45210,23 +45210,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -45247,7 +45247,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -45297,7 +45297,7 @@ class OrderApi
         string $contentType = self::contentTypes['restReordersOrderIdCurrencyPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restReordersOrderIdCurrencyPutRequest($order_id, $contentType);
 
         return $this->client
@@ -46049,12 +46049,12 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restReordersOrderIdDeliveryDatesPut(
         int $order_id,
         string $contentType = self::contentTypes['restReordersOrderIdDeliveryDatesPut'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restReordersOrderIdDeliveryDatesPutWithHttpInfo($order_id, $contentType);
         return $response;
@@ -46070,7 +46070,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReordersOrderIdDeliveryDatesPutWithHttpInfo(
         int $order_id,
@@ -46116,23 +46116,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -46153,7 +46153,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -46203,7 +46203,7 @@ class OrderApi
         string $contentType = self::contentTypes['restReordersOrderIdDeliveryDatesPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restReordersOrderIdDeliveryDatesPutRequest($order_id, $contentType);
 
         return $this->client
@@ -46347,18 +46347,18 @@ class OrderApi
      * Update a reorder
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders_order_id _rest_reorders_order_id (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders_order_id _rest_reorders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersOrderIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restReordersOrderIdPut(
         int $order_id,
-        ?\ck/plenty-client\Model\RestReordersPostRequest $_rest_reorders_order_id = null,
+        ?\ck\Model\RestReordersPostRequest $_rest_reorders_order_id = null,
         string $contentType = self::contentTypes['restReordersOrderIdPut'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restReordersOrderIdPutWithHttpInfo($order_id, $_rest_reorders_order_id, $contentType);
         return $response;
@@ -46370,16 +46370,16 @@ class OrderApi
      * Update a reorder
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders_order_id (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersOrderIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReordersOrderIdPutWithHttpInfo(
         int $order_id,
-        ?\ck/plenty-client\Model\RestReordersPostRequest $_rest_reorders_order_id = null,
+        ?\ck\Model\RestReordersPostRequest $_rest_reorders_order_id = null,
         string $contentType = self::contentTypes['restReordersOrderIdPut'][0]
     ): array
     {
@@ -46422,23 +46422,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -46459,7 +46459,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -46475,7 +46475,7 @@ class OrderApi
      * Update a reorder
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders_order_id (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -46483,7 +46483,7 @@ class OrderApi
      */
     public function restReordersOrderIdPutAsync(
         int $order_id,
-        ?\ck/plenty-client\Model\RestReordersPostRequest $_rest_reorders_order_id = null,
+        ?\ck\Model\RestReordersPostRequest $_rest_reorders_order_id = null,
         string $contentType = self::contentTypes['restReordersOrderIdPut'][0]
     ): PromiseInterface
     {
@@ -46501,7 +46501,7 @@ class OrderApi
      * Update a reorder
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders_order_id (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -46513,7 +46513,7 @@ class OrderApi
         string $contentType = self::contentTypes['restReordersOrderIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restReordersOrderIdPutRequest($order_id, $_rest_reorders_order_id, $contentType);
 
         return $this->client
@@ -46556,7 +46556,7 @@ class OrderApi
      * Create request for operation 'restReordersOrderIdPut'
      *
      * @param  int $order_id The ID of the order. (required)
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders_order_id (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders_order_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersOrderIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -46666,17 +46666,17 @@ class OrderApi
      *
      * Create a reorder
      *
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders _rest_reorders (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders _rest_reorders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Order
+     * @return \ck\Model\Order
      */
     public function restReordersPost(
-        ?\ck/plenty-client\Model\RestReordersPostRequest $_rest_reorders = null,
+        ?\ck\Model\RestReordersPostRequest $_rest_reorders = null,
         string $contentType = self::contentTypes['restReordersPost'][0]
-    ): \ck/plenty-client\Model\Order
+    ): \ck\Model\Order
     {
         list($response) = $this->restReordersPostWithHttpInfo($_rest_reorders, $contentType);
         return $response;
@@ -46687,15 +46687,15 @@ class OrderApi
      *
      * Create a reorder
      *
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReordersPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestReordersPostRequest $_rest_reorders = null,
+        ?\ck\Model\RestReordersPostRequest $_rest_reorders = null,
         string $contentType = self::contentTypes['restReordersPost'][0]
     ): array
     {
@@ -46738,23 +46738,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Order' === '\SplFileObject') {
+                    if ('\ck\Model\Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Order' !== 'string') {
+                        if ('\ck\Model\Order' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Order', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Order';
+            $returnType = '\ck\Model\Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -46775,7 +46775,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Order',
+                        '\ck\Model\Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -46790,14 +46790,14 @@ class OrderApi
      *
      * Create a reorder
      *
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restReordersPostAsync(
-        ?\ck/plenty-client\Model\RestReordersPostRequest $_rest_reorders = null,
+        ?\ck\Model\RestReordersPostRequest $_rest_reorders = null,
         string $contentType = self::contentTypes['restReordersPost'][0]
     ): PromiseInterface
     {
@@ -46814,7 +46814,7 @@ class OrderApi
      *
      * Create a reorder
      *
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -46825,7 +46825,7 @@ class OrderApi
         string $contentType = self::contentTypes['restReordersPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Order';
+        $returnType = '\ck\Model\Order';
         $request = $this->restReordersPostRequest($_rest_reorders, $contentType);
 
         return $this->client
@@ -46867,7 +46867,7 @@ class OrderApi
     /**
      * Create request for operation 'restReordersPost'
      *
-     * @param  \ck/plenty-client\Model\RestReordersPostRequest|null $_rest_reorders (optional)
+     * @param  \ck\Model\RestReordersPostRequest|null $_rest_reorders (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restReordersPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -46969,7 +46969,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response
+     * @return \ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response
      */
     public function restSystemSettingsTaricVatAssignmentGet(
         ?int $page = null,
@@ -46977,7 +46977,7 @@ class OrderApi
         ?int $country_id = null,
         ?int $taric_code = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentGet'][0]
-    ): \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response
+    ): \ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response
     {
         list($response) = $this->restSystemSettingsTaricVatAssignmentGetWithHttpInfo($page, $items_per_page, $country_id, $taric_code, $contentType);
         return $response;
@@ -46996,7 +46996,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restSystemSettingsTaricVatAssignmentGetWithHttpInfo(
         ?int $page = null,
@@ -47045,23 +47045,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response' !== 'string') {
+                        if ('\ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response';
+            $returnType = '\ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -47082,7 +47082,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response',
+                        '\ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -47144,7 +47144,7 @@ class OrderApi
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentGet200Response';
+        $returnType = '\ck\Model\RestSystemSettingsTaricVatAssignmentGet200Response';
         $request = $this->restSystemSettingsTaricVatAssignmentGetRequest($page, $items_per_page, $country_id, $taric_code, $contentType);
 
         return $this->client
@@ -47320,7 +47320,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id _rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id _rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -47330,7 +47330,7 @@ class OrderApi
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete'][0]
     ): object
     {
@@ -47345,7 +47345,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -47355,7 +47355,7 @@ class OrderApi
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteWithHttpInfo(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete'][0]
     ): array
     {
@@ -47452,7 +47452,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -47461,7 +47461,7 @@ class OrderApi
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteAsync(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete'][0]
     ): PromiseInterface
     {
@@ -47480,7 +47480,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -47537,7 +47537,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdDeleteRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdDelete'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -47669,13 +47669,13 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TaricVatAssignment
+     * @return \ck\Model\TaricVatAssignment
      */
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdGet(
         string $taric_code,
         int $country_id,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdGet'][0]
-    ): \ck/plenty-client\Model\TaricVatAssignment
+    ): \ck\Model\TaricVatAssignment
     {
         list($response) = $this->restSystemSettingsTaricVatAssignmentTaricCodeCountryIdGetWithHttpInfo($taric_code, $country_id, $contentType);
         return $response;
@@ -47692,7 +47692,7 @@ class OrderApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TaricVatAssignment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TaricVatAssignment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdGetWithHttpInfo(
         string $taric_code,
@@ -47739,23 +47739,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TaricVatAssignment' === '\SplFileObject') {
+                    if ('\ck\Model\TaricVatAssignment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TaricVatAssignment' !== 'string') {
+                        if ('\ck\Model\TaricVatAssignment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TaricVatAssignment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TaricVatAssignment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TaricVatAssignment';
+            $returnType = '\ck\Model\TaricVatAssignment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -47776,7 +47776,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TaricVatAssignment',
+                        '\ck\Model\TaricVatAssignment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -47830,7 +47830,7 @@ class OrderApi
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TaricVatAssignment';
+        $returnType = '\ck\Model\TaricVatAssignment';
         $request = $this->restSystemSettingsTaricVatAssignmentTaricCodeCountryIdGetRequest($taric_code, $country_id, $contentType);
 
         return $this->client
@@ -47992,19 +47992,19 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id _rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id _rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TaricVatAssignment
+     * @return \ck\Model\TaricVatAssignment
      */
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'][0]
-    ): \ck/plenty-client\Model\TaricVatAssignment
+    ): \ck\Model\TaricVatAssignment
     {
         list($response) = $this->restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPostWithHttpInfo($taric_code, $country_id, $_rest_system_settings_taric_vat_assignment_taric_code_country_id, $contentType);
         return $response;
@@ -48017,17 +48017,17 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TaricVatAssignment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TaricVatAssignment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPostWithHttpInfo(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'][0]
     ): array
     {
@@ -48070,23 +48070,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TaricVatAssignment' === '\SplFileObject') {
+                    if ('\ck\Model\TaricVatAssignment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TaricVatAssignment' !== 'string') {
+                        if ('\ck\Model\TaricVatAssignment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TaricVatAssignment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TaricVatAssignment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TaricVatAssignment';
+            $returnType = '\ck\Model\TaricVatAssignment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -48107,7 +48107,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TaricVatAssignment',
+                        '\ck\Model\TaricVatAssignment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -48124,7 +48124,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -48133,7 +48133,7 @@ class OrderApi
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPostAsync(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'][0]
     ): PromiseInterface
     {
@@ -48152,7 +48152,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -48165,7 +48165,7 @@ class OrderApi
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TaricVatAssignment';
+        $returnType = '\ck\Model\TaricVatAssignment';
         $request = $this->restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPostRequest($taric_code, $country_id, $_rest_system_settings_taric_vat_assignment_taric_code_country_id, $contentType);
 
         return $this->client
@@ -48209,7 +48209,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -48337,19 +48337,19 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id _rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id _rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TaricVatAssignment
+     * @return \ck\Model\TaricVatAssignment
      */
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'][0]
-    ): \ck/plenty-client\Model\TaricVatAssignment
+    ): \ck\Model\TaricVatAssignment
     {
         list($response) = $this->restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutWithHttpInfo($taric_code, $country_id, $_rest_system_settings_taric_vat_assignment_taric_code_country_id, $contentType);
         return $response;
@@ -48362,17 +48362,17 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TaricVatAssignment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TaricVatAssignment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutWithHttpInfo(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'][0]
     ): array
     {
@@ -48415,23 +48415,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TaricVatAssignment' === '\SplFileObject') {
+                    if ('\ck\Model\TaricVatAssignment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TaricVatAssignment' !== 'string') {
+                        if ('\ck\Model\TaricVatAssignment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TaricVatAssignment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TaricVatAssignment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TaricVatAssignment';
+            $returnType = '\ck\Model\TaricVatAssignment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -48452,7 +48452,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TaricVatAssignment',
+                        '\ck\Model\TaricVatAssignment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -48469,7 +48469,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -48478,7 +48478,7 @@ class OrderApi
     public function restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutAsync(
         string $taric_code,
         int $country_id,
-        ?\ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
+        ?\ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest $_rest_system_settings_taric_vat_assignment_taric_code_country_id = null,
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'][0]
     ): PromiseInterface
     {
@@ -48497,7 +48497,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -48510,7 +48510,7 @@ class OrderApi
         string $contentType = self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TaricVatAssignment';
+        $returnType = '\ck\Model\TaricVatAssignment';
         $request = $this->restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest($taric_code, $country_id, $_rest_system_settings_taric_vat_assignment_taric_code_country_id, $contentType);
 
         return $this->client
@@ -48554,7 +48554,7 @@ class OrderApi
      *
      * @param  string $taric_code The taric code. (required)
      * @param  int $country_id The country id. (required)
-     * @param  \ck/plenty-client\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
+     * @param  \ck\Model\RestSystemSettingsTaricVatAssignmentTaricCodeCountryIdPutRequest|null $_rest_system_settings_taric_vat_assignment_taric_code_country_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restSystemSettingsTaricVatAssignmentTaricCodeCountryIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

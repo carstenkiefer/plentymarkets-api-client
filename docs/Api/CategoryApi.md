@@ -1,4 +1,4 @@
-# ck/plenty-client\CategoryApi
+# ck\CategoryApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -22,7 +22,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restCategoriesGet()`
 
 ```php
-restCategoriesGet($page, $items_per_page, $with, $lang, $type, $parent_id, $plenty_id, $name, $level, $linklist, $updated_at, $tag_id, $meta_keywords): \ck/plenty-client\Model\RestCategoriesGet200Response
+restCategoriesGet($page, $items_per_page, $with, $lang, $type, $parent_id, $plenty_id, $name, $level, $linklist, $updated_at, $tag_id, $meta_keywords): \ck\Model\RestCategoriesGet200Response
 ```
 
 List categories
@@ -35,10 +35,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -86,7 +86,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestCategoriesGet200Response**](../Model/RestCategoriesGet200Response.md)
+[**\ck\Model\RestCategoriesGet200Response**](../Model/RestCategoriesGet200Response.md)
 
 ### Authorization
 
@@ -119,10 +119,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,10 +179,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -239,17 +239,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_categories_id_details = new \ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest(); // \ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest
+$_rest_categories_id_details = new \ck\Model\RestCategoriesIdDetailsDeleteRequest(); // \ck\Model\RestCategoriesIdDetailsDeleteRequest
 
 try {
     $result = $apiInstance->restCategoriesIdDetailsDelete($id, $_rest_categories_id_details);
@@ -264,7 +264,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_categories_id_details** | [**\ck/plenty-client\Model\RestCategoriesIdDetailsDeleteRequest**](../Model/RestCategoriesIdDetailsDeleteRequest.md)|  | [optional] |
+| **_rest_categories_id_details** | [**\ck\Model\RestCategoriesIdDetailsDeleteRequest**](../Model/RestCategoriesIdDetailsDeleteRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -286,7 +286,7 @@ try {
 ## `restCategoriesIdGet()`
 
 ```php
-restCategoriesIdGet($id, $page, $items_per_page, $with, $lang, $type, $parent_id, $plenty_id, $name, $level, $linklist, $updated_at): \ck/plenty-client\Model\RestCategoriesGet200Response
+restCategoriesIdGet($id, $page, $items_per_page, $with, $lang, $type, $parent_id, $plenty_id, $name, $level, $linklist, $updated_at): \ck\Model\RestCategoriesGet200Response
 ```
 
 Get a category
@@ -299,10 +299,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -348,7 +348,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestCategoriesGet200Response**](../Model/RestCategoriesGet200Response.md)
+[**\ck\Model\RestCategoriesGet200Response**](../Model/RestCategoriesGet200Response.md)
 
 ### Authorization
 
@@ -366,7 +366,7 @@ try {
 ## `restCategoriesIdPut()`
 
 ```php
-restCategoriesIdPut($id, $_rest_categories_id): \ck/plenty-client\Model\Category
+restCategoriesIdPut($id, $_rest_categories_id): \ck\Model\Category
 ```
 
 Updates one category
@@ -381,17 +381,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_categories_id = new \ck/plenty-client\Model\RestCategoriesPutRequest(); // \ck/plenty-client\Model\RestCategoriesPutRequest
+$_rest_categories_id = new \ck\Model\RestCategoriesPutRequest(); // \ck\Model\RestCategoriesPutRequest
 
 try {
     $result = $apiInstance->restCategoriesIdPut($id, $_rest_categories_id);
@@ -406,11 +406,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_categories_id** | [**\ck/plenty-client\Model\RestCategoriesPutRequest**](../Model/RestCategoriesPutRequest.md)|  | [optional] |
+| **_rest_categories_id** | [**\ck\Model\RestCategoriesPutRequest**](../Model/RestCategoriesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Category**](../Model/Category.md)
+[**\ck\Model\Category**](../Model/Category.md)
 
 ### Authorization
 
@@ -428,7 +428,7 @@ try {
 ## `restCategoriesIdTemplatesDelete()`
 
 ```php
-restCategoriesIdTemplatesDelete($id, $_rest_categories_id_templates): \ck/plenty-client\Model\CategoryTemplate
+restCategoriesIdTemplatesDelete($id, $_rest_categories_id_templates): \ck\Model\CategoryTemplate
 ```
 
 Delete a category template
@@ -443,17 +443,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_categories_id_templates = new \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest(); // \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest
+$_rest_categories_id_templates = new \ck\Model\RestCategoriesIdTemplatesGetRequest(); // \ck\Model\RestCategoriesIdTemplatesGetRequest
 
 try {
     $result = $apiInstance->restCategoriesIdTemplatesDelete($id, $_rest_categories_id_templates);
@@ -468,11 +468,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_categories_id_templates** | [**\ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest**](../Model/RestCategoriesIdTemplatesGetRequest.md)|  | [optional] |
+| **_rest_categories_id_templates** | [**\ck\Model\RestCategoriesIdTemplatesGetRequest**](../Model/RestCategoriesIdTemplatesGetRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\CategoryTemplate**](../Model/CategoryTemplate.md)
+[**\ck\Model\CategoryTemplate**](../Model/CategoryTemplate.md)
 
 ### Authorization
 
@@ -490,7 +490,7 @@ try {
 ## `restCategoriesIdTemplatesGet()`
 
 ```php
-restCategoriesIdTemplatesGet($plenty_id, $id, $lang, $_rest_categories_id_templates): \ck/plenty-client\Model\CategoryTemplate
+restCategoriesIdTemplatesGet($plenty_id, $id, $lang, $_rest_categories_id_templates): \ck\Model\CategoryTemplate
 ```
 
 Get a category template
@@ -505,10 +505,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -517,7 +517,7 @@ $apiInstance = new ck/plenty-client\Api\CategoryApi(
 $plenty_id = 56; // int | The unique plenty ID of the client (store)
 $id = 56; // int
 $lang = 'lang_example'; // string | The <a href='https://developers.plentymarkets.com/rest-doc/introduction#countries' target='_blank'>language</a> of the template. If no language filter is set, the default language of the system is used.
-$_rest_categories_id_templates = new \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest(); // \ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest
+$_rest_categories_id_templates = new \ck\Model\RestCategoriesIdTemplatesGetRequest(); // \ck\Model\RestCategoriesIdTemplatesGetRequest
 
 try {
     $result = $apiInstance->restCategoriesIdTemplatesGet($plenty_id, $id, $lang, $_rest_categories_id_templates);
@@ -534,11 +534,11 @@ try {
 | **plenty_id** | **int**| The unique plenty ID of the client (store) | |
 | **id** | **int**|  | |
 | **lang** | **string**| The &lt;a href&#x3D;&#39;https://developers.plentymarkets.com/rest-doc/introduction#countries&#39; target&#x3D;&#39;_blank&#39;&gt;language&lt;/a&gt; of the template. If no language filter is set, the default language of the system is used. | [optional] |
-| **_rest_categories_id_templates** | [**\ck/plenty-client\Model\RestCategoriesIdTemplatesGetRequest**](../Model/RestCategoriesIdTemplatesGetRequest.md)|  | [optional] |
+| **_rest_categories_id_templates** | [**\ck\Model\RestCategoriesIdTemplatesGetRequest**](../Model/RestCategoriesIdTemplatesGetRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\CategoryTemplate**](../Model/CategoryTemplate.md)
+[**\ck\Model\CategoryTemplate**](../Model/CategoryTemplate.md)
 
 ### Authorization
 
@@ -556,7 +556,7 @@ try {
 ## `restCategoriesIdTemplatesPut()`
 
 ```php
-restCategoriesIdTemplatesPut($id, $_rest_categories_id_templates): \ck/plenty-client\Model\CategoryTemplate
+restCategoriesIdTemplatesPut($id, $_rest_categories_id_templates): \ck\Model\CategoryTemplate
 ```
 
 Update a category template
@@ -571,17 +571,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$_rest_categories_id_templates = new \ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest(); // \ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest
+$_rest_categories_id_templates = new \ck\Model\RestCategoriesIdTemplatesPutRequest(); // \ck\Model\RestCategoriesIdTemplatesPutRequest
 
 try {
     $result = $apiInstance->restCategoriesIdTemplatesPut($id, $_rest_categories_id_templates);
@@ -596,11 +596,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **_rest_categories_id_templates** | [**\ck/plenty-client\Model\RestCategoriesIdTemplatesPutRequest**](../Model/RestCategoriesIdTemplatesPutRequest.md)|  | [optional] |
+| **_rest_categories_id_templates** | [**\ck\Model\RestCategoriesIdTemplatesPutRequest**](../Model/RestCategoriesIdTemplatesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\CategoryTemplate**](../Model/CategoryTemplate.md)
+[**\ck\Model\CategoryTemplate**](../Model/CategoryTemplate.md)
 
 ### Authorization
 
@@ -618,7 +618,7 @@ try {
 ## `restCategoriesPost()`
 
 ```php
-restCategoriesPost($_rest_categories): \ck/plenty-client\Model\Category[]
+restCategoriesPost($_rest_categories): \ck\Model\Category[]
 ```
 
 Creates new categories
@@ -631,16 +631,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_categories = new \ck/plenty-client\Model\RestCategoriesPostRequest(); // \ck/plenty-client\Model\RestCategoriesPostRequest
+$_rest_categories = new \ck\Model\RestCategoriesPostRequest(); // \ck\Model\RestCategoriesPostRequest
 
 try {
     $result = $apiInstance->restCategoriesPost($_rest_categories);
@@ -654,11 +654,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_categories** | [**\ck/plenty-client\Model\RestCategoriesPostRequest**](../Model/RestCategoriesPostRequest.md)|  | [optional] |
+| **_rest_categories** | [**\ck\Model\RestCategoriesPostRequest**](../Model/RestCategoriesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Category[]**](../Model/Category.md)
+[**\ck\Model\Category[]**](../Model/Category.md)
 
 ### Authorization
 
@@ -676,7 +676,7 @@ try {
 ## `restCategoriesPut()`
 
 ```php
-restCategoriesPut($_rest_categories): \ck/plenty-client\Model\Category[]
+restCategoriesPut($_rest_categories): \ck\Model\Category[]
 ```
 
 Updates categories
@@ -689,16 +689,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_categories = new \ck/plenty-client\Model\RestCategoriesPutRequest(); // \ck/plenty-client\Model\RestCategoriesPutRequest
+$_rest_categories = new \ck\Model\RestCategoriesPutRequest(); // \ck\Model\RestCategoriesPutRequest
 
 try {
     $result = $apiInstance->restCategoriesPut($_rest_categories);
@@ -712,11 +712,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_categories** | [**\ck/plenty-client\Model\RestCategoriesPutRequest**](../Model/RestCategoriesPutRequest.md)|  | [optional] |
+| **_rest_categories** | [**\ck\Model\RestCategoriesPutRequest**](../Model/RestCategoriesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Category[]**](../Model/Category.md)
+[**\ck\Model\Category[]**](../Model/Category.md)
 
 ### Authorization
 
@@ -747,10 +747,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -796,7 +796,7 @@ try {
 ## `restCategoryBranchesIdGet()`
 
 ```php
-restCategoryBranchesIdGet($id): \ck/plenty-client\Model\CategoryBranch
+restCategoryBranchesIdGet($id): \ck\Model\CategoryBranch
 ```
 
 Get category tree
@@ -811,10 +811,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CategoryApi(
+$apiInstance = new ck\Api\CategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -838,7 +838,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\CategoryBranch**](../Model/CategoryBranch.md)
+[**\ck\Model\CategoryBranch**](../Model/CategoryBranch.md)
 
 ### Authorization
 

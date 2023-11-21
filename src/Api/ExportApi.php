@@ -3,7 +3,7 @@
  * ExportApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ExportApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -1608,12 +1608,12 @@ class ExportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ExportDocument
+     * @return \ck\Model\ExportDocument
      */
     public function restOrdersShippingExportDocumentsOrderIdGet(
         int $order_id,
         string $contentType = self::contentTypes['restOrdersShippingExportDocumentsOrderIdGet'][0]
-    ): \ck/plenty-client\Model\ExportDocument
+    ): \ck\Model\ExportDocument
     {
         list($response) = $this->restOrdersShippingExportDocumentsOrderIdGetWithHttpInfo($order_id, $contentType);
         return $response;
@@ -1629,7 +1629,7 @@ class ExportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ExportDocument, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ExportDocument, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingExportDocumentsOrderIdGetWithHttpInfo(
         int $order_id,
@@ -1675,23 +1675,23 @@ class ExportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ExportDocument' === '\SplFileObject') {
+                    if ('\ck\Model\ExportDocument' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ExportDocument' !== 'string') {
+                        if ('\ck\Model\ExportDocument' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ExportDocument', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ExportDocument', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ExportDocument';
+            $returnType = '\ck\Model\ExportDocument';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1712,7 +1712,7 @@ class ExportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ExportDocument',
+                        '\ck\Model\ExportDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1762,7 +1762,7 @@ class ExportApi
         string $contentType = self::contentTypes['restOrdersShippingExportDocumentsOrderIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ExportDocument';
+        $returnType = '\ck\Model\ExportDocument';
         $request = $this->restOrdersShippingExportDocumentsOrderIdGetRequest($order_id, $contentType);
 
         return $this->client

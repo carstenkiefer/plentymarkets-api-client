@@ -1,4 +1,4 @@
-# ck/plenty-client\CustomerContractApi
+# ck\CustomerContractApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -29,7 +29,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\CustomerContractApi(
+$apiInstance = new ck\Api\CustomerContractApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -70,7 +70,7 @@ No authorization required
 ## `restCustomerContractsContractIdGet()`
 
 ```php
-restCustomerContractsContractIdGet($contract_id): \ck/plenty-client\Model\CustomerContract
+restCustomerContractsContractIdGet($contract_id): \ck\Model\CustomerContract
 ```
 
 Returns a single contract
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\CustomerContractApi(
+$apiInstance = new ck\Api\CustomerContractApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\CustomerContract**](../Model/CustomerContract.md)
+[**\ck\Model\CustomerContract**](../Model/CustomerContract.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\CustomerContractApi(
+$apiInstance = new ck\Api\CustomerContractApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -178,7 +178,7 @@ No authorization required
 ## `restCustomerContractsContractIdSignGet()`
 
 ```php
-restCustomerContractsContractIdSignGet($contract_id): \ck/plenty-client\Model\Signing
+restCustomerContractsContractIdSignGet($contract_id): \ck\Model\Signing
 ```
 
 Returns signing of a contract
@@ -191,7 +191,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\CustomerContractApi(
+$apiInstance = new ck\Api\CustomerContractApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -214,7 +214,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Signing**](../Model/Signing.md)
+[**\ck\Model\Signing**](../Model/Signing.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ No authorization required
 ## `restCustomerContractsContractIdSignPost()`
 
 ```php
-restCustomerContractsContractIdSignPost($contract_id): \ck/plenty-client\Model\Signing
+restCustomerContractsContractIdSignPost($contract_id): \ck\Model\Signing
 ```
 
 Sign a contract
@@ -245,7 +245,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\CustomerContractApi(
+$apiInstance = new ck\Api\CustomerContractApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -268,7 +268,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Signing**](../Model/Signing.md)
+[**\ck\Model\Signing**](../Model/Signing.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ No authorization required
 ## `restCustomerContractsGet()`
 
 ```php
-restCustomerContractsGet(): \ck/plenty-client\Model\CustomerContract[]
+restCustomerContractsGet(): \ck\Model\CustomerContract[]
 ```
 
 List contracts
@@ -299,7 +299,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\CustomerContractApi(
+$apiInstance = new ck\Api\CustomerContractApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -319,7 +319,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\CustomerContract[]**](../Model/CustomerContract.md)
+[**\ck\Model\CustomerContract[]**](../Model/CustomerContract.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ No authorization required
 ## `restCustomerContractsPost()`
 
 ```php
-restCustomerContractsPost(): \ck/plenty-client\Model\CustomerContract
+restCustomerContractsPost(): \ck\Model\CustomerContract
 ```
 
 Creates a new contract
@@ -350,7 +350,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\CustomerContractApi(
+$apiInstance = new ck\Api\CustomerContractApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -370,7 +370,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\CustomerContract**](../Model/CustomerContract.md)
+[**\ck\Model\CustomerContract**](../Model/CustomerContract.md)
 
 ### Authorization
 

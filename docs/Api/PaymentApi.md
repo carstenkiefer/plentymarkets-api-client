@@ -1,4 +1,4 @@
-# ck/plenty-client\PaymentApi
+# ck\PaymentApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -52,7 +52,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restPaymentPaymentIdContactContactIdPost()`
 
 ```php
-restPaymentPaymentIdContactContactIdPost($payment_id, $contact_id): \ck/plenty-client\Model\PaymentContactRelation
+restPaymentPaymentIdContactContactIdPost($payment_id, $contact_id): \ck\Model\PaymentContactRelation
 ```
 
 Create Payment-Contact-Relation
@@ -65,10 +65,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentContactRelation**](../Model/PaymentContactRelation.md)
+[**\ck\Model\PaymentContactRelation**](../Model/PaymentContactRelation.md)
 
 ### Authorization
 
@@ -125,10 +125,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -182,10 +182,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -226,7 +226,7 @@ void (empty response body)
 ## `restPaymentPaymentIdOrderOrderIdPost()`
 
 ```php
-restPaymentPaymentIdOrderOrderIdPost($payment_id, $order_id): \ck/plenty-client\Model\PaymentOrderRelation
+restPaymentPaymentIdOrderOrderIdPost($payment_id, $order_id): \ck\Model\PaymentOrderRelation
 ```
 
 Create Payment-Order-Relation
@@ -239,10 +239,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -268,7 +268,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentOrderRelation**](../Model/PaymentOrderRelation.md)
+[**\ck\Model\PaymentOrderRelation**](../Model/PaymentOrderRelation.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ try {
 ## `restPaymentPropertiesTypesNamesNameIdGet()`
 
 ```php
-restPaymentPropertiesTypesNamesNameIdGet($name_id): \ck/plenty-client\Model\PaymentPropertyTypeName[]
+restPaymentPropertiesTypesNamesNameIdGet($name_id): \ck\Model\PaymentPropertyTypeName[]
 ```
 
 Get a name of a property type
@@ -301,10 +301,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -328,7 +328,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentPropertyTypeName[]**](../Model/PaymentPropertyTypeName.md)
+[**\ck\Model\PaymentPropertyTypeName[]**](../Model/PaymentPropertyTypeName.md)
 
 ### Authorization
 
@@ -346,7 +346,7 @@ try {
 ## `restPaymentPropertiesTypesNamesPost()`
 
 ```php
-restPaymentPropertiesTypesNamesPost($_rest_payment_properties_types_names): \ck/plenty-client\Model\PaymentPropertyTypeName
+restPaymentPropertiesTypesNamesPost($_rest_payment_properties_types_names): \ck\Model\PaymentPropertyTypeName
 ```
 
 Create a name of a property type
@@ -359,16 +359,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payment_properties_types_names = new \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest(); // \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest
+$_rest_payment_properties_types_names = new \ck\Model\RestPaymentPropertiesTypesNamesPutRequest(); // \ck\Model\RestPaymentPropertiesTypesNamesPutRequest
 
 try {
     $result = $apiInstance->restPaymentPropertiesTypesNamesPost($_rest_payment_properties_types_names);
@@ -382,11 +382,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payment_properties_types_names** | [**\ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest**](../Model/RestPaymentPropertiesTypesNamesPutRequest.md)|  | [optional] |
+| **_rest_payment_properties_types_names** | [**\ck\Model\RestPaymentPropertiesTypesNamesPutRequest**](../Model/RestPaymentPropertiesTypesNamesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentPropertyTypeName**](../Model/PaymentPropertyTypeName.md)
+[**\ck\Model\PaymentPropertyTypeName**](../Model/PaymentPropertyTypeName.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ try {
 ## `restPaymentPropertiesTypesNamesPut()`
 
 ```php
-restPaymentPropertiesTypesNamesPut($_rest_payment_properties_types_names): \ck/plenty-client\Model\PaymentPropertyTypeName
+restPaymentPropertiesTypesNamesPut($_rest_payment_properties_types_names): \ck\Model\PaymentPropertyTypeName
 ```
 
 Update a name of a property type
@@ -417,16 +417,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payment_properties_types_names = new \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest(); // \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest
+$_rest_payment_properties_types_names = new \ck\Model\RestPaymentPropertiesTypesNamesPutRequest(); // \ck\Model\RestPaymentPropertiesTypesNamesPutRequest
 
 try {
     $result = $apiInstance->restPaymentPropertiesTypesNamesPut($_rest_payment_properties_types_names);
@@ -440,11 +440,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payment_properties_types_names** | [**\ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest**](../Model/RestPaymentPropertiesTypesNamesPutRequest.md)|  | [optional] |
+| **_rest_payment_properties_types_names** | [**\ck\Model\RestPaymentPropertiesTypesNamesPutRequest**](../Model/RestPaymentPropertiesTypesNamesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentPropertyTypeName**](../Model/PaymentPropertyTypeName.md)
+[**\ck\Model\PaymentPropertyTypeName**](../Model/PaymentPropertyTypeName.md)
 
 ### Authorization
 
@@ -462,7 +462,7 @@ try {
 ## `restPaymentsEntrydateGet()`
 
 ```php
-restPaymentsEntrydateGet($start_date, $end_date, $items_per_page, $page): \ck/plenty-client\Model\Payment[]
+restPaymentsEntrydateGet($start_date, $end_date, $items_per_page, $page): \ck\Model\Payment[]
 ```
 
 List payments by entry date
@@ -477,10 +477,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -510,7 +510,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment[]**](../Model/Payment.md)
+[**\ck\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 
@@ -528,7 +528,7 @@ try {
 ## `restPaymentsGet()`
 
 ```php
-restPaymentsGet($items_per_page, $page): \ck/plenty-client\Model\Payment[]
+restPaymentsGet($items_per_page, $page): \ck\Model\Payment[]
 ```
 
 List payments
@@ -541,10 +541,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -570,7 +570,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment[]**](../Model/Payment.md)
+[**\ck\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 
@@ -588,7 +588,7 @@ try {
 ## `restPaymentsImportdateGet()`
 
 ```php
-restPaymentsImportdateGet($start_date, $end_date, $items_per_page, $page): \ck/plenty-client\Model\Payment[]
+restPaymentsImportdateGet($start_date, $end_date, $items_per_page, $page): \ck\Model\Payment[]
 ```
 
 List payments by import date
@@ -603,10 +603,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -636,7 +636,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment[]**](../Model/Payment.md)
+[**\ck\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 
@@ -654,7 +654,7 @@ try {
 ## `restPaymentsMethodNamesGet()`
 
 ```php
-restPaymentsMethodNamesGet($items_per_page, $page): \ck/plenty-client\Model\PaymentMethodName[]
+restPaymentsMethodNamesGet($items_per_page, $page): \ck\Model\PaymentMethodName[]
 ```
 
 List payment methods names
@@ -669,7 +669,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -694,7 +694,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentMethodName[]**](../Model/PaymentMethodName.md)
+[**\ck\Model\PaymentMethodName[]**](../Model/PaymentMethodName.md)
 
 ### Authorization
 
@@ -712,7 +712,7 @@ No authorization required
 ## `restPaymentsMethodNamesPaymentMethodIdGet()`
 
 ```php
-restPaymentsMethodNamesPaymentMethodIdGet($payment_method_id, $items_per_page, $page): \ck/plenty-client\Model\PaymentMethodName[]
+restPaymentsMethodNamesPaymentMethodIdGet($payment_method_id, $items_per_page, $page): \ck\Model\PaymentMethodName[]
 ```
 
 List all payment method names for a payment method id
@@ -727,7 +727,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -754,7 +754,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentMethodName[]**](../Model/PaymentMethodName.md)
+[**\ck\Model\PaymentMethodName[]**](../Model/PaymentMethodName.md)
 
 ### Authorization
 
@@ -772,7 +772,7 @@ No authorization required
 ## `restPaymentsMethodNamesPaymentMethodIdLangGet()`
 
 ```php
-restPaymentsMethodNamesPaymentMethodIdLangGet($payment_method_id, $lang): \ck/plenty-client\Model\PaymentMethodName
+restPaymentsMethodNamesPaymentMethodIdLangGet($payment_method_id, $lang): \ck\Model\PaymentMethodName
 ```
 
 Gets a payment method name by id and lang
@@ -787,7 +787,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -812,7 +812,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentMethodName**](../Model/PaymentMethodName.md)
+[**\ck\Model\PaymentMethodName**](../Model/PaymentMethodName.md)
 
 ### Authorization
 
@@ -843,10 +843,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -898,10 +898,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -943,7 +943,7 @@ try {
 ## `restPaymentsMethodsGet()`
 
 ```php
-restPaymentsMethodsGet($items_per_page, $page): \ck/plenty-client\Model\PaymentMethod[]
+restPaymentsMethodsGet($items_per_page, $page): \ck\Model\PaymentMethod[]
 ```
 
 List payment methods
@@ -958,10 +958,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -987,7 +987,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentMethod[]**](../Model/PaymentMethod.md)
+[**\ck\Model\PaymentMethod[]**](../Model/PaymentMethod.md)
 
 ### Authorization
 
@@ -1018,10 +1018,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1072,10 +1072,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1130,10 +1130,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1185,10 +1185,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1243,10 +1243,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1298,10 +1298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1343,7 +1343,7 @@ try {
 ## `restPaymentsMethodsMethodIdGet()`
 
 ```php
-restPaymentsMethodsMethodIdGet($method_id, $items_per_page, $page): \ck/plenty-client\Model\Payment[]
+restPaymentsMethodsMethodIdGet($method_id, $items_per_page, $page): \ck\Model\Payment[]
 ```
 
 List payments of a payment method
@@ -1358,10 +1358,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1389,7 +1389,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment[]**](../Model/Payment.md)
+[**\ck\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 
@@ -1407,7 +1407,7 @@ try {
 ## `restPaymentsMethodsPluginsPluginKeyGet()`
 
 ```php
-restPaymentsMethodsPluginsPluginKeyGet($plugin_key, $items_per_page, $page): \ck/plenty-client\Model\PaymentMethod[]
+restPaymentsMethodsPluginsPluginKeyGet($plugin_key, $items_per_page, $page): \ck\Model\PaymentMethod[]
 ```
 
 Get a payment method
@@ -1422,10 +1422,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1453,7 +1453,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentMethod[]**](../Model/PaymentMethod.md)
+[**\ck\Model\PaymentMethod[]**](../Model/PaymentMethod.md)
 
 ### Authorization
 
@@ -1471,7 +1471,7 @@ try {
 ## `restPaymentsMethodsPost()`
 
 ```php
-restPaymentsMethodsPost($_rest_payments_methods): \ck/plenty-client\Model\PaymentMethod
+restPaymentsMethodsPost($_rest_payments_methods): \ck\Model\PaymentMethod
 ```
 
 Create a payment method
@@ -1486,16 +1486,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payments_methods = new \ck/plenty-client\Model\RestPaymentsMethodsPostRequest(); // \ck/plenty-client\Model\RestPaymentsMethodsPostRequest
+$_rest_payments_methods = new \ck\Model\RestPaymentsMethodsPostRequest(); // \ck\Model\RestPaymentsMethodsPostRequest
 
 try {
     $result = $apiInstance->restPaymentsMethodsPost($_rest_payments_methods);
@@ -1509,11 +1509,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payments_methods** | [**\ck/plenty-client\Model\RestPaymentsMethodsPostRequest**](../Model/RestPaymentsMethodsPostRequest.md)|  | [optional] |
+| **_rest_payments_methods** | [**\ck\Model\RestPaymentsMethodsPostRequest**](../Model/RestPaymentsMethodsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentMethod**](../Model/PaymentMethod.md)
+[**\ck\Model\PaymentMethod**](../Model/PaymentMethod.md)
 
 ### Authorization
 
@@ -1531,7 +1531,7 @@ try {
 ## `restPaymentsMethodsPut()`
 
 ```php
-restPaymentsMethodsPut($_rest_payments_methods): \ck/plenty-client\Model\PaymentMethod
+restPaymentsMethodsPut($_rest_payments_methods): \ck\Model\PaymentMethod
 ```
 
 Update a payment method
@@ -1546,16 +1546,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payments_methods = new \ck/plenty-client\Model\RestPaymentsMethodsPutRequest(); // \ck/plenty-client\Model\RestPaymentsMethodsPutRequest
+$_rest_payments_methods = new \ck\Model\RestPaymentsMethodsPutRequest(); // \ck\Model\RestPaymentsMethodsPutRequest
 
 try {
     $result = $apiInstance->restPaymentsMethodsPut($_rest_payments_methods);
@@ -1569,11 +1569,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payments_methods** | [**\ck/plenty-client\Model\RestPaymentsMethodsPutRequest**](../Model/RestPaymentsMethodsPutRequest.md)|  | [optional] |
+| **_rest_payments_methods** | [**\ck\Model\RestPaymentsMethodsPutRequest**](../Model/RestPaymentsMethodsPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentMethod**](../Model/PaymentMethod.md)
+[**\ck\Model\PaymentMethod**](../Model/PaymentMethod.md)
 
 ### Authorization
 
@@ -1591,7 +1591,7 @@ try {
 ## `restPaymentsOrdersOrderIdGet()`
 
 ```php
-restPaymentsOrdersOrderIdGet($order_id, $items_per_page, $page): \ck/plenty-client\Model\Payment[]
+restPaymentsOrdersOrderIdGet($order_id, $items_per_page, $page): \ck\Model\Payment[]
 ```
 
 List payments of an order
@@ -1606,10 +1606,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1637,7 +1637,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment[]**](../Model/Payment.md)
+[**\ck\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 
@@ -1655,7 +1655,7 @@ try {
 ## `restPaymentsPaymentIdGet()`
 
 ```php
-restPaymentsPaymentIdGet($payment_id): \ck/plenty-client\Model\Payment
+restPaymentsPaymentIdGet($payment_id): \ck\Model\Payment
 ```
 
 Get a payment
@@ -1670,10 +1670,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1697,7 +1697,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment**](../Model/Payment.md)
+[**\ck\Model\Payment**](../Model/Payment.md)
 
 ### Authorization
 
@@ -1715,7 +1715,7 @@ try {
 ## `restPaymentsPaymentIdPropertiesGet()`
 
 ```php
-restPaymentsPaymentIdPropertiesGet($payment_id, $items_per_page, $page): \ck/plenty-client\Model\PaymentProperty[]
+restPaymentsPaymentIdPropertiesGet($payment_id, $items_per_page, $page): \ck\Model\PaymentProperty[]
 ```
 
 List properties for a payment
@@ -1730,10 +1730,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1761,7 +1761,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentProperty[]**](../Model/PaymentProperty.md)
+[**\ck\Model\PaymentProperty[]**](../Model/PaymentProperty.md)
 
 ### Authorization
 
@@ -1779,7 +1779,7 @@ try {
 ## `restPaymentsPost()`
 
 ```php
-restPaymentsPost($_rest_payments): \ck/plenty-client\Model\Payment
+restPaymentsPost($_rest_payments): \ck\Model\Payment
 ```
 
 Create a payment
@@ -1792,16 +1792,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payments = new \ck/plenty-client\Model\RestPaymentsPostRequest(); // \ck/plenty-client\Model\RestPaymentsPostRequest
+$_rest_payments = new \ck\Model\RestPaymentsPostRequest(); // \ck\Model\RestPaymentsPostRequest
 
 try {
     $result = $apiInstance->restPaymentsPost($_rest_payments);
@@ -1815,11 +1815,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payments** | [**\ck/plenty-client\Model\RestPaymentsPostRequest**](../Model/RestPaymentsPostRequest.md)|  | [optional] |
+| **_rest_payments** | [**\ck\Model\RestPaymentsPostRequest**](../Model/RestPaymentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment**](../Model/Payment.md)
+[**\ck\Model\Payment**](../Model/Payment.md)
 
 ### Authorization
 
@@ -1837,7 +1837,7 @@ try {
 ## `restPaymentsPropertiesDateGet()`
 
 ```php
-restPaymentsPropertiesDateGet($start_date, $end_date, $items_per_page, $page): \ck/plenty-client\Model\PaymentProperty[]
+restPaymentsPropertiesDateGet($start_date, $end_date, $items_per_page, $page): \ck\Model\PaymentProperty[]
 ```
 
 List properties by creation date
@@ -1852,10 +1852,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1885,7 +1885,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentProperty[]**](../Model/PaymentProperty.md)
+[**\ck\Model\PaymentProperty[]**](../Model/PaymentProperty.md)
 
 ### Authorization
 
@@ -1903,7 +1903,7 @@ try {
 ## `restPaymentsPropertiesGet()`
 
 ```php
-restPaymentsPropertiesGet($items_per_page, $page): \ck/plenty-client\Model\PaymentProperty[]
+restPaymentsPropertiesGet($items_per_page, $page): \ck\Model\PaymentProperty[]
 ```
 
 List properties
@@ -1916,10 +1916,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1945,7 +1945,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentProperty[]**](../Model/PaymentProperty.md)
+[**\ck\Model\PaymentProperty[]**](../Model/PaymentProperty.md)
 
 ### Authorization
 
@@ -1963,7 +1963,7 @@ try {
 ## `restPaymentsPropertiesPost()`
 
 ```php
-restPaymentsPropertiesPost($_rest_payments_properties): \ck/plenty-client\Model\PaymentProperty
+restPaymentsPropertiesPost($_rest_payments_properties): \ck\Model\PaymentProperty
 ```
 
 Create a payment property
@@ -1976,16 +1976,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payments_properties = new \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest(); // \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest
+$_rest_payments_properties = new \ck\Model\RestPaymentsPropertiesPutRequest(); // \ck\Model\RestPaymentsPropertiesPutRequest
 
 try {
     $result = $apiInstance->restPaymentsPropertiesPost($_rest_payments_properties);
@@ -1999,11 +1999,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payments_properties** | [**\ck/plenty-client\Model\RestPaymentsPropertiesPutRequest**](../Model/RestPaymentsPropertiesPutRequest.md)|  | [optional] |
+| **_rest_payments_properties** | [**\ck\Model\RestPaymentsPropertiesPutRequest**](../Model/RestPaymentsPropertiesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentProperty**](../Model/PaymentProperty.md)
+[**\ck\Model\PaymentProperty**](../Model/PaymentProperty.md)
 
 ### Authorization
 
@@ -2021,7 +2021,7 @@ try {
 ## `restPaymentsPropertiesPropertyIdGet()`
 
 ```php
-restPaymentsPropertiesPropertyIdGet($property_id): \ck/plenty-client\Model\PaymentProperty
+restPaymentsPropertiesPropertyIdGet($property_id): \ck\Model\PaymentProperty
 ```
 
 Get a property
@@ -2036,10 +2036,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2063,7 +2063,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentProperty**](../Model/PaymentProperty.md)
+[**\ck\Model\PaymentProperty**](../Model/PaymentProperty.md)
 
 ### Authorization
 
@@ -2081,7 +2081,7 @@ try {
 ## `restPaymentsPropertiesPut()`
 
 ```php
-restPaymentsPropertiesPut($_rest_payments_properties): \ck/plenty-client\Model\PaymentProperty
+restPaymentsPropertiesPut($_rest_payments_properties): \ck\Model\PaymentProperty
 ```
 
 Update a payment property
@@ -2094,16 +2094,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payments_properties = new \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest(); // \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest
+$_rest_payments_properties = new \ck\Model\RestPaymentsPropertiesPutRequest(); // \ck\Model\RestPaymentsPropertiesPutRequest
 
 try {
     $result = $apiInstance->restPaymentsPropertiesPut($_rest_payments_properties);
@@ -2117,11 +2117,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payments_properties** | [**\ck/plenty-client\Model\RestPaymentsPropertiesPutRequest**](../Model/RestPaymentsPropertiesPutRequest.md)|  | [optional] |
+| **_rest_payments_properties** | [**\ck\Model\RestPaymentsPropertiesPutRequest**](../Model/RestPaymentsPropertiesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentProperty**](../Model/PaymentProperty.md)
+[**\ck\Model\PaymentProperty**](../Model/PaymentProperty.md)
 
 ### Authorization
 
@@ -2139,7 +2139,7 @@ try {
 ## `restPaymentsPropertiesTypesGet()`
 
 ```php
-restPaymentsPropertiesTypesGet($items_per_page, $page): \ck/plenty-client\Model\PaymentPropertyType[]
+restPaymentsPropertiesTypesGet($items_per_page, $page): \ck\Model\PaymentPropertyType[]
 ```
 
 List property types
@@ -2154,10 +2154,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2183,7 +2183,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentPropertyType[]**](../Model/PaymentPropertyType.md)
+[**\ck\Model\PaymentPropertyType[]**](../Model/PaymentPropertyType.md)
 
 ### Authorization
 
@@ -2201,7 +2201,7 @@ try {
 ## `restPaymentsPropertiesTypesPost()`
 
 ```php
-restPaymentsPropertiesTypesPost($_rest_payments_properties_types): \ck/plenty-client\Model\PaymentPropertyType
+restPaymentsPropertiesTypesPost($_rest_payments_properties_types): \ck\Model\PaymentPropertyType
 ```
 
 Create a property type
@@ -2214,16 +2214,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payments_properties_types = new \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest(); // \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest
+$_rest_payments_properties_types = new \ck\Model\RestPaymentsPropertiesTypesPutRequest(); // \ck\Model\RestPaymentsPropertiesTypesPutRequest
 
 try {
     $result = $apiInstance->restPaymentsPropertiesTypesPost($_rest_payments_properties_types);
@@ -2237,11 +2237,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payments_properties_types** | [**\ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest**](../Model/RestPaymentsPropertiesTypesPutRequest.md)|  | [optional] |
+| **_rest_payments_properties_types** | [**\ck\Model\RestPaymentsPropertiesTypesPutRequest**](../Model/RestPaymentsPropertiesTypesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentPropertyType**](../Model/PaymentPropertyType.md)
+[**\ck\Model\PaymentPropertyType**](../Model/PaymentPropertyType.md)
 
 ### Authorization
 
@@ -2259,7 +2259,7 @@ try {
 ## `restPaymentsPropertiesTypesPut()`
 
 ```php
-restPaymentsPropertiesTypesPut($_rest_payments_properties_types): \ck/plenty-client\Model\PaymentPropertyType
+restPaymentsPropertiesTypesPut($_rest_payments_properties_types): \ck\Model\PaymentPropertyType
 ```
 
 Update a property type
@@ -2272,16 +2272,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payments_properties_types = new \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest(); // \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest
+$_rest_payments_properties_types = new \ck\Model\RestPaymentsPropertiesTypesPutRequest(); // \ck\Model\RestPaymentsPropertiesTypesPutRequest
 
 try {
     $result = $apiInstance->restPaymentsPropertiesTypesPut($_rest_payments_properties_types);
@@ -2295,11 +2295,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payments_properties_types** | [**\ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest**](../Model/RestPaymentsPropertiesTypesPutRequest.md)|  | [optional] |
+| **_rest_payments_properties_types** | [**\ck\Model\RestPaymentsPropertiesTypesPutRequest**](../Model/RestPaymentsPropertiesTypesPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentPropertyType**](../Model/PaymentPropertyType.md)
+[**\ck\Model\PaymentPropertyType**](../Model/PaymentPropertyType.md)
 
 ### Authorization
 
@@ -2317,7 +2317,7 @@ try {
 ## `restPaymentsPropertiesTypesTypeIdGet()`
 
 ```php
-restPaymentsPropertiesTypesTypeIdGet($type_id): \ck/plenty-client\Model\PaymentPropertyType[]
+restPaymentsPropertiesTypesTypeIdGet($type_id): \ck\Model\PaymentPropertyType[]
 ```
 
 Get a property type
@@ -2332,10 +2332,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2359,7 +2359,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentPropertyType[]**](../Model/PaymentPropertyType.md)
+[**\ck\Model\PaymentPropertyType[]**](../Model/PaymentPropertyType.md)
 
 ### Authorization
 
@@ -2377,7 +2377,7 @@ try {
 ## `restPaymentsPropertyPropertyTypeIdPropertyValueGet()`
 
 ```php
-restPaymentsPropertyPropertyTypeIdPropertyValueGet($property_type_id, $property_value, $items_per_page, $page): \ck/plenty-client\Model\Payment[]
+restPaymentsPropertyPropertyTypeIdPropertyValueGet($property_type_id, $property_value, $items_per_page, $page): \ck\Model\Payment[]
 ```
 
 List payments by property type ID and value
@@ -2392,10 +2392,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2425,7 +2425,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment[]**](../Model/Payment.md)
+[**\ck\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 
@@ -2443,7 +2443,7 @@ try {
 ## `restPaymentsPut()`
 
 ```php
-restPaymentsPut($_rest_payments): \ck/plenty-client\Model\Payment
+restPaymentsPut($_rest_payments): \ck\Model\Payment
 ```
 
 Update a payment
@@ -2456,16 +2456,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_payments = new \ck/plenty-client\Model\RestPaymentsPutRequest(); // \ck/plenty-client\Model\RestPaymentsPutRequest
+$_rest_payments = new \ck\Model\RestPaymentsPutRequest(); // \ck\Model\RestPaymentsPutRequest
 
 try {
     $result = $apiInstance->restPaymentsPut($_rest_payments);
@@ -2479,11 +2479,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_payments** | [**\ck/plenty-client\Model\RestPaymentsPutRequest**](../Model/RestPaymentsPutRequest.md)|  | [optional] |
+| **_rest_payments** | [**\ck\Model\RestPaymentsPutRequest**](../Model/RestPaymentsPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment**](../Model/Payment.md)
+[**\ck\Model\Payment**](../Model/Payment.md)
 
 ### Authorization
 
@@ -2501,7 +2501,7 @@ try {
 ## `restPaymentsStatusStatusIdGet()`
 
 ```php
-restPaymentsStatusStatusIdGet($status_id, $items_per_page, $page): \ck/plenty-client\Model\Payment[]
+restPaymentsStatusStatusIdGet($status_id, $items_per_page, $page): \ck\Model\Payment[]
 ```
 
 List payments of a payment status
@@ -2516,10 +2516,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2547,7 +2547,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment[]**](../Model/Payment.md)
+[**\ck\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 
@@ -2565,7 +2565,7 @@ try {
 ## `restPaymentsTransactionsTransactionTypeIdGet()`
 
 ```php
-restPaymentsTransactionsTransactionTypeIdGet($transaction_type_id, $items_per_page, $page): \ck/plenty-client\Model\Payment[]
+restPaymentsTransactionsTransactionTypeIdGet($transaction_type_id, $items_per_page, $page): \ck\Model\Payment[]
 ```
 
 List payments of a transaction type
@@ -2580,10 +2580,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PaymentApi(
+$apiInstance = new ck\Api\PaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2611,7 +2611,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Payment[]**](../Model/Payment.md)
+[**\ck\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 

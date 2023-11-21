@@ -3,7 +3,7 @@
  * MessengerApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * MessengerApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -164,7 +164,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message[]
+     * @return \ck\Model\Message[]
      */
     public function restMessagesGet(
         ?string $uuid = null,
@@ -189,7 +189,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesGetWithHttpInfo(
         ?string $uuid = null,
@@ -237,23 +237,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message[]' === '\SplFileObject') {
+                    if ('\ck\Model\Message[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message[]' !== 'string') {
+                        if ('\ck\Model\Message[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message[]';
+            $returnType = '\ck\Model\Message[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -274,7 +274,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message[]',
+                        '\ck\Model\Message[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -332,7 +332,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message[]';
+        $returnType = '\ck\Model\Message[]';
         $request = $this->restMessagesGetRequest($uuid, $successors, $amount, $contentType);
 
         return $this->client
@@ -500,7 +500,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message[]
+     * @return \ck\Model\Message[]
      */
     public function restMessagesGetGet(
         ?int $page = null,
@@ -523,7 +523,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesGetGetWithHttpInfo(
         ?int $page = null,
@@ -570,23 +570,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message[]' === '\SplFileObject') {
+                    if ('\ck\Model\Message[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message[]' !== 'string') {
+                        if ('\ck\Model\Message[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message[]';
+            $returnType = '\ck\Model\Message[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -607,7 +607,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message[]',
+                        '\ck\Model\Message[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -661,7 +661,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesGetGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message[]';
+        $returnType = '\ck\Model\Message[]';
         $request = $this->restMessagesGetGetRequest($page, $items_per_page, $contentType);
 
         return $this->client
@@ -811,17 +811,17 @@ class MessengerApi
      *
      * Create message
      *
-     * @param  \ck/plenty-client\Model\RestMessagesPostRequest|null $_rest_messages _rest_messages (optional)
+     * @param  \ck\Model\RestMessagesPostRequest|null $_rest_messages _rest_messages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message
+     * @return \ck\Model\Message
      */
     public function restMessagesPost(
-        ?\ck/plenty-client\Model\RestMessagesPostRequest $_rest_messages = null,
+        ?\ck\Model\RestMessagesPostRequest $_rest_messages = null,
         string $contentType = self::contentTypes['restMessagesPost'][0]
-    ): \ck/plenty-client\Model\Message
+    ): \ck\Model\Message
     {
         list($response) = $this->restMessagesPostWithHttpInfo($_rest_messages, $contentType);
         return $response;
@@ -832,15 +832,15 @@ class MessengerApi
      *
      * Create message
      *
-     * @param  \ck/plenty-client\Model\RestMessagesPostRequest|null $_rest_messages (optional)
+     * @param  \ck\Model\RestMessagesPostRequest|null $_rest_messages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestMessagesPostRequest $_rest_messages = null,
+        ?\ck\Model\RestMessagesPostRequest $_rest_messages = null,
         string $contentType = self::contentTypes['restMessagesPost'][0]
     ): array
     {
@@ -883,23 +883,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message' === '\SplFileObject') {
+                    if ('\ck\Model\Message' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message' !== 'string') {
+                        if ('\ck\Model\Message' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message';
+            $returnType = '\ck\Model\Message';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -920,7 +920,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message',
+                        '\ck\Model\Message',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -935,14 +935,14 @@ class MessengerApi
      *
      * Create message
      *
-     * @param  \ck/plenty-client\Model\RestMessagesPostRequest|null $_rest_messages (optional)
+     * @param  \ck\Model\RestMessagesPostRequest|null $_rest_messages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restMessagesPostAsync(
-        ?\ck/plenty-client\Model\RestMessagesPostRequest $_rest_messages = null,
+        ?\ck\Model\RestMessagesPostRequest $_rest_messages = null,
         string $contentType = self::contentTypes['restMessagesPost'][0]
     ): PromiseInterface
     {
@@ -959,7 +959,7 @@ class MessengerApi
      *
      * Create message
      *
-     * @param  \ck/plenty-client\Model\RestMessagesPostRequest|null $_rest_messages (optional)
+     * @param  \ck\Model\RestMessagesPostRequest|null $_rest_messages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -970,7 +970,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message';
+        $returnType = '\ck\Model\Message';
         $request = $this->restMessagesPostRequest($_rest_messages, $contentType);
 
         return $this->client
@@ -1012,7 +1012,7 @@ class MessengerApi
     /**
      * Create request for operation 'restMessagesPost'
      *
-     * @param  \ck/plenty-client\Model\RestMessagesPostRequest|null $_rest_messages (optional)
+     * @param  \ck\Model\RestMessagesPostRequest|null $_rest_messages (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1435,18 +1435,18 @@ class MessengerApi
      * Update message controls
      *
      * @param  int $uuid5 uuid5 (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls _rest_messages_uuid5_controls (optional)
+     * @param  \ck\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls _rest_messages_uuid5_controls (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5ControlsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message
+     * @return \ck\Model\Message
      */
     public function restMessagesUuid5ControlsPut(
         int $uuid5,
-        ?\ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest $_rest_messages_uuid5_controls = null,
+        ?\ck\Model\RestMessagesUuid5ControlsPutRequest $_rest_messages_uuid5_controls = null,
         string $contentType = self::contentTypes['restMessagesUuid5ControlsPut'][0]
-    ): \ck/plenty-client\Model\Message
+    ): \ck\Model\Message
     {
         list($response) = $this->restMessagesUuid5ControlsPutWithHttpInfo($uuid5, $_rest_messages_uuid5_controls, $contentType);
         return $response;
@@ -1458,16 +1458,16 @@ class MessengerApi
      * Update message controls
      *
      * @param  int $uuid5 (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls (optional)
+     * @param  \ck\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5ControlsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5ControlsPutWithHttpInfo(
         int $uuid5,
-        ?\ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest $_rest_messages_uuid5_controls = null,
+        ?\ck\Model\RestMessagesUuid5ControlsPutRequest $_rest_messages_uuid5_controls = null,
         string $contentType = self::contentTypes['restMessagesUuid5ControlsPut'][0]
     ): array
     {
@@ -1510,23 +1510,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message' === '\SplFileObject') {
+                    if ('\ck\Model\Message' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message' !== 'string') {
+                        if ('\ck\Model\Message' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message';
+            $returnType = '\ck\Model\Message';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1547,7 +1547,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message',
+                        '\ck\Model\Message',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1563,7 +1563,7 @@ class MessengerApi
      * Update message controls
      *
      * @param  int $uuid5 (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls (optional)
+     * @param  \ck\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5ControlsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1571,7 +1571,7 @@ class MessengerApi
      */
     public function restMessagesUuid5ControlsPutAsync(
         int $uuid5,
-        ?\ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest $_rest_messages_uuid5_controls = null,
+        ?\ck\Model\RestMessagesUuid5ControlsPutRequest $_rest_messages_uuid5_controls = null,
         string $contentType = self::contentTypes['restMessagesUuid5ControlsPut'][0]
     ): PromiseInterface
     {
@@ -1589,7 +1589,7 @@ class MessengerApi
      * Update message controls
      *
      * @param  int $uuid5 (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls (optional)
+     * @param  \ck\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5ControlsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1601,7 +1601,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesUuid5ControlsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message';
+        $returnType = '\ck\Model\Message';
         $request = $this->restMessagesUuid5ControlsPutRequest($uuid5, $_rest_messages_uuid5_controls, $contentType);
 
         return $this->client
@@ -1644,7 +1644,7 @@ class MessengerApi
      * Create request for operation 'restMessagesUuid5ControlsPut'
      *
      * @param  int $uuid5 (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls (optional)
+     * @param  \ck\Model\RestMessagesUuid5ControlsPutRequest|null $_rest_messages_uuid5_controls (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5ControlsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2058,17 +2058,17 @@ class MessengerApi
      *
      * @param  string $uuid5 The UUID5 of the message (required)
      * @param  string|null $done_at Set (or unset, if doneAt is not given) the doneAt date in the message. (optional)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done _rest_messages_uuid5_done (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done _rest_messages_uuid5_done (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5DonePut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message[]
+     * @return \ck\Model\Message[]
      */
     public function restMessagesUuid5DonePut(
         string $uuid5,
         ?string $done_at = null,
-        ?\ck/plenty-client\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_done = null,
+        ?\ck\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_done = null,
         string $contentType = self::contentTypes['restMessagesUuid5DonePut'][0]
     ): array
     {
@@ -2083,17 +2083,17 @@ class MessengerApi
      *
      * @param  string $uuid5 The UUID5 of the message (required)
      * @param  string|null $done_at Set (or unset, if doneAt is not given) the doneAt date in the message. (optional)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5DonePut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5DonePutWithHttpInfo(
         string $uuid5,
         ?string $done_at = null,
-        ?\ck/plenty-client\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_done = null,
+        ?\ck\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_done = null,
         string $contentType = self::contentTypes['restMessagesUuid5DonePut'][0]
     ): array
     {
@@ -2136,23 +2136,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message[]' === '\SplFileObject') {
+                    if ('\ck\Model\Message[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message[]' !== 'string') {
+                        if ('\ck\Model\Message[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message[]';
+            $returnType = '\ck\Model\Message[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2173,7 +2173,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message[]',
+                        '\ck\Model\Message[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2190,7 +2190,7 @@ class MessengerApi
      *
      * @param  string $uuid5 The UUID5 of the message (required)
      * @param  string|null $done_at Set (or unset, if doneAt is not given) the doneAt date in the message. (optional)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5DonePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2199,7 +2199,7 @@ class MessengerApi
     public function restMessagesUuid5DonePutAsync(
         string $uuid5,
         ?string $done_at = null,
-        ?\ck/plenty-client\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_done = null,
+        ?\ck\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_done = null,
         string $contentType = self::contentTypes['restMessagesUuid5DonePut'][0]
     ): PromiseInterface
     {
@@ -2218,7 +2218,7 @@ class MessengerApi
      *
      * @param  string $uuid5 The UUID5 of the message (required)
      * @param  string|null $done_at Set (or unset, if doneAt is not given) the doneAt date in the message. (optional)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5DonePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2231,7 +2231,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesUuid5DonePut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message[]';
+        $returnType = '\ck\Model\Message[]';
         $request = $this->restMessagesUuid5DonePutRequest($uuid5, $done_at, $_rest_messages_uuid5_done, $contentType);
 
         return $this->client
@@ -2275,7 +2275,7 @@ class MessengerApi
      *
      * @param  string $uuid5 The UUID5 of the message (required)
      * @param  string|null $done_at Set (or unset, if doneAt is not given) the doneAt date in the message. (optional)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_done (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5DonePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2401,7 +2401,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message[]
+     * @return \ck\Model\Message[]
      */
     public function restMessagesUuid5Get(
         string $uuid5,
@@ -2422,7 +2422,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5GetWithHttpInfo(
         string $uuid5,
@@ -2468,23 +2468,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message[]' === '\SplFileObject') {
+                    if ('\ck\Model\Message[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message[]' !== 'string') {
+                        if ('\ck\Model\Message[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message[]';
+            $returnType = '\ck\Model\Message[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2505,7 +2505,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message[]',
+                        '\ck\Model\Message[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2555,7 +2555,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesUuid5Get'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message[]';
+        $returnType = '\ck\Model\Message[]';
         $request = $this->restMessagesUuid5GetRequest($uuid5, $contentType);
 
         return $this->client
@@ -2704,7 +2704,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message[]
+     * @return \ck\Model\Message[]
      */
     public function restMessagesUuid5ReadByPut(
         int $read_by,
@@ -2727,7 +2727,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5ReadByPutWithHttpInfo(
         int $read_by,
@@ -2774,23 +2774,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message[]' === '\SplFileObject') {
+                    if ('\ck\Model\Message[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message[]' !== 'string') {
+                        if ('\ck\Model\Message[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message[]';
+            $returnType = '\ck\Model\Message[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2811,7 +2811,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message[]',
+                        '\ck\Model\Message[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2865,7 +2865,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesUuid5ReadByPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message[]';
+        $returnType = '\ck\Model\Message[]';
         $request = $this->restMessagesUuid5ReadByPutRequest($read_by, $uuid5, $contentType);
 
         return $this->client
@@ -3032,7 +3032,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message[]
+     * @return \ck\Model\Message[]
      */
     public function restMessagesUuid5TagsPut(
         int $tags,
@@ -3055,7 +3055,7 @@ class MessengerApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5TagsPutWithHttpInfo(
         int $tags,
@@ -3102,23 +3102,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message[]' === '\SplFileObject') {
+                    if ('\ck\Model\Message[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message[]' !== 'string') {
+                        if ('\ck\Model\Message[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message[]';
+            $returnType = '\ck\Model\Message[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3139,7 +3139,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message[]',
+                        '\ck\Model\Message[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3193,7 +3193,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesUuid5TagsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message[]';
+        $returnType = '\ck\Model\Message[]';
         $request = $this->restMessagesUuid5TagsPutRequest($tags, $uuid5, $contentType);
 
         return $this->client
@@ -3355,16 +3355,16 @@ class MessengerApi
      * Update message visibility
      *
      * @param  string $uuid5 The UUID of the message (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility _rest_messages_uuid5_visibility (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility _rest_messages_uuid5_visibility (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5VisibilityPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Message[]
+     * @return \ck\Model\Message[]
      */
     public function restMessagesUuid5VisibilityPut(
         string $uuid5,
-        ?\ck/plenty-client\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_visibility = null,
+        ?\ck\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_visibility = null,
         string $contentType = self::contentTypes['restMessagesUuid5VisibilityPut'][0]
     ): array
     {
@@ -3378,16 +3378,16 @@ class MessengerApi
      * Update message visibility
      *
      * @param  string $uuid5 The UUID of the message (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5VisibilityPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Message[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Message[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMessagesUuid5VisibilityPutWithHttpInfo(
         string $uuid5,
-        ?\ck/plenty-client\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_visibility = null,
+        ?\ck\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_visibility = null,
         string $contentType = self::contentTypes['restMessagesUuid5VisibilityPut'][0]
     ): array
     {
@@ -3430,23 +3430,23 @@ class MessengerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Message[]' === '\SplFileObject') {
+                    if ('\ck\Model\Message[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Message[]' !== 'string') {
+                        if ('\ck\Model\Message[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Message[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Message[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Message[]';
+            $returnType = '\ck\Model\Message[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3467,7 +3467,7 @@ class MessengerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Message[]',
+                        '\ck\Model\Message[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3483,7 +3483,7 @@ class MessengerApi
      * Update message visibility
      *
      * @param  string $uuid5 The UUID of the message (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5VisibilityPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3491,7 +3491,7 @@ class MessengerApi
      */
     public function restMessagesUuid5VisibilityPutAsync(
         string $uuid5,
-        ?\ck/plenty-client\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_visibility = null,
+        ?\ck\Model\RestMessagesUuid5DonePutRequest $_rest_messages_uuid5_visibility = null,
         string $contentType = self::contentTypes['restMessagesUuid5VisibilityPut'][0]
     ): PromiseInterface
     {
@@ -3509,7 +3509,7 @@ class MessengerApi
      * Update message visibility
      *
      * @param  string $uuid5 The UUID of the message (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5VisibilityPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3521,7 +3521,7 @@ class MessengerApi
         string $contentType = self::contentTypes['restMessagesUuid5VisibilityPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Message[]';
+        $returnType = '\ck\Model\Message[]';
         $request = $this->restMessagesUuid5VisibilityPutRequest($uuid5, $_rest_messages_uuid5_visibility, $contentType);
 
         return $this->client
@@ -3564,7 +3564,7 @@ class MessengerApi
      * Create request for operation 'restMessagesUuid5VisibilityPut'
      *
      * @param  string $uuid5 The UUID of the message (required)
-     * @param  \ck/plenty-client\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility (optional)
+     * @param  \ck\Model\RestMessagesUuid5DonePutRequest|null $_rest_messages_uuid5_visibility (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMessagesUuid5VisibilityPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

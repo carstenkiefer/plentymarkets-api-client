@@ -1,4 +1,4 @@
-# ck/plenty-client\BoardApi
+# ck\BoardApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -40,10 +40,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -102,10 +102,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -151,7 +151,7 @@ try {
 ## `restBoardsBoardIdColumnsColumnIdPost()`
 
 ```php
-restBoardsBoardIdColumnsColumnIdPost($board_id, $column_id): \ck/plenty-client\Model\BoardColumn
+restBoardsBoardIdColumnsColumnIdPost($board_id, $column_id): \ck\Model\BoardColumn
 ```
 
 Copy column
@@ -166,10 +166,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -195,7 +195,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardColumn**](../Model/BoardColumn.md)
+[**\ck\Model\BoardColumn**](../Model/BoardColumn.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ try {
 ## `restBoardsBoardIdColumnsColumnIdPut()`
 
 ```php
-restBoardsBoardIdColumnsColumnIdPut($board_id, $column_id, $_rest_boards_board_id_columns_column_id): \ck/plenty-client\Model\BoardColumn
+restBoardsBoardIdColumnsColumnIdPut($board_id, $column_id, $_rest_boards_board_id_columns_column_id): \ck\Model\BoardColumn
 ```
 
 Update column
@@ -228,10 +228,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -239,7 +239,7 @@ $apiInstance = new ck/plenty-client\Api\BoardApi(
 );
 $board_id = 'board_id_example'; // string | The ID of the board
 $column_id = 'column_id_example'; // string | The ID of the column
-$_rest_boards_board_id_columns_column_id = new \ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdPutRequest(); // \ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdPutRequest
+$_rest_boards_board_id_columns_column_id = new \ck\Model\RestBoardsBoardIdColumnsColumnIdPutRequest(); // \ck\Model\RestBoardsBoardIdColumnsColumnIdPutRequest
 
 try {
     $result = $apiInstance->restBoardsBoardIdColumnsColumnIdPut($board_id, $column_id, $_rest_boards_board_id_columns_column_id);
@@ -255,11 +255,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **board_id** | **string**| The ID of the board | |
 | **column_id** | **string**| The ID of the column | |
-| **_rest_boards_board_id_columns_column_id** | [**\ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdPutRequest**](../Model/RestBoardsBoardIdColumnsColumnIdPutRequest.md)|  | [optional] |
+| **_rest_boards_board_id_columns_column_id** | [**\ck\Model\RestBoardsBoardIdColumnsColumnIdPutRequest**](../Model/RestBoardsBoardIdColumnsColumnIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardColumn**](../Model/BoardColumn.md)
+[**\ck\Model\BoardColumn**](../Model/BoardColumn.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ try {
 ## `restBoardsBoardIdColumnsColumnIdTasksGet()`
 
 ```php
-restBoardsBoardIdColumnsColumnIdTasksGet($board_id, $column_id, $start_at, $tasks_per_page): \ck/plenty-client\Model\BoardTask[]
+restBoardsBoardIdColumnsColumnIdTasksGet($board_id, $column_id, $start_at, $tasks_per_page): \ck\Model\BoardTask[]
 ```
 
 List all task of a column
@@ -292,10 +292,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -325,7 +325,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardTask[]**](../Model/BoardTask.md)
+[**\ck\Model\BoardTask[]**](../Model/BoardTask.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ try {
 ## `restBoardsBoardIdColumnsColumnIdTasksPost()`
 
 ```php
-restBoardsBoardIdColumnsColumnIdTasksPost($board_id, $column_id, $_rest_boards_board_id_columns_column_id_tasks): \ck/plenty-client\Model\BoardTask
+restBoardsBoardIdColumnsColumnIdTasksPost($board_id, $column_id, $_rest_boards_board_id_columns_column_id_tasks): \ck\Model\BoardTask
 ```
 
 Create task in specific column
@@ -358,10 +358,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -369,7 +369,7 @@ $apiInstance = new ck/plenty-client\Api\BoardApi(
 );
 $board_id = 'board_id_example'; // string | The ID of the board
 $column_id = 'column_id_example'; // string | The ID of the column
-$_rest_boards_board_id_columns_column_id_tasks = new \ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdTasksPostRequest(); // \ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdTasksPostRequest
+$_rest_boards_board_id_columns_column_id_tasks = new \ck\Model\RestBoardsBoardIdColumnsColumnIdTasksPostRequest(); // \ck\Model\RestBoardsBoardIdColumnsColumnIdTasksPostRequest
 
 try {
     $result = $apiInstance->restBoardsBoardIdColumnsColumnIdTasksPost($board_id, $column_id, $_rest_boards_board_id_columns_column_id_tasks);
@@ -385,11 +385,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **board_id** | **string**| The ID of the board | |
 | **column_id** | **string**| The ID of the column | |
-| **_rest_boards_board_id_columns_column_id_tasks** | [**\ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdTasksPostRequest**](../Model/RestBoardsBoardIdColumnsColumnIdTasksPostRequest.md)|  | [optional] |
+| **_rest_boards_board_id_columns_column_id_tasks** | [**\ck\Model\RestBoardsBoardIdColumnsColumnIdTasksPostRequest**](../Model/RestBoardsBoardIdColumnsColumnIdTasksPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardTask**](../Model/BoardTask.md)
+[**\ck\Model\BoardTask**](../Model/BoardTask.md)
 
 ### Authorization
 
@@ -422,10 +422,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -471,7 +471,7 @@ try {
 ## `restBoardsBoardIdColumnsColumnIdTasksTaskIdGet()`
 
 ```php
-restBoardsBoardIdColumnsColumnIdTasksTaskIdGet($board_id, $column_id, $task_id): \ck/plenty-client\Model\BoardTask
+restBoardsBoardIdColumnsColumnIdTasksTaskIdGet($board_id, $column_id, $task_id): \ck\Model\BoardTask
 ```
 
 Get task by ID
@@ -486,10 +486,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -517,7 +517,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardTask**](../Model/BoardTask.md)
+[**\ck\Model\BoardTask**](../Model/BoardTask.md)
 
 ### Authorization
 
@@ -550,10 +550,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -601,7 +601,7 @@ try {
 ## `restBoardsBoardIdColumnsColumnIdTasksTaskIdPost()`
 
 ```php
-restBoardsBoardIdColumnsColumnIdTasksTaskIdPost($board_id, $column_id, $task_id): \ck/plenty-client\Model\BoardTask
+restBoardsBoardIdColumnsColumnIdTasksTaskIdPost($board_id, $column_id, $task_id): \ck\Model\BoardTask
 ```
 
 Copy task
@@ -616,10 +616,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -647,7 +647,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardTask**](../Model/BoardTask.md)
+[**\ck\Model\BoardTask**](../Model/BoardTask.md)
 
 ### Authorization
 
@@ -665,7 +665,7 @@ try {
 ## `restBoardsBoardIdColumnsColumnIdTasksTaskIdPut()`
 
 ```php
-restBoardsBoardIdColumnsColumnIdTasksTaskIdPut($board_id, $column_id, $task_id, $_rest_boards_board_id_columns_column_id_tasks_task_id): \ck/plenty-client\Model\BoardTask
+restBoardsBoardIdColumnsColumnIdTasksTaskIdPut($board_id, $column_id, $task_id, $_rest_boards_board_id_columns_column_id_tasks_task_id): \ck\Model\BoardTask
 ```
 
 Update task
@@ -680,10 +680,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -692,7 +692,7 @@ $apiInstance = new ck/plenty-client\Api\BoardApi(
 $board_id = 'board_id_example'; // string | The ID of the board
 $column_id = 'column_id_example'; // string | The ID of the column
 $task_id = 'task_id_example'; // string | The ID of the task
-$_rest_boards_board_id_columns_column_id_tasks_task_id = new \ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest(); // \ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest
+$_rest_boards_board_id_columns_column_id_tasks_task_id = new \ck\Model\RestBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest(); // \ck\Model\RestBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest
 
 try {
     $result = $apiInstance->restBoardsBoardIdColumnsColumnIdTasksTaskIdPut($board_id, $column_id, $task_id, $_rest_boards_board_id_columns_column_id_tasks_task_id);
@@ -709,11 +709,11 @@ try {
 | **board_id** | **string**| The ID of the board | |
 | **column_id** | **string**| The ID of the column | |
 | **task_id** | **string**| The ID of the task | |
-| **_rest_boards_board_id_columns_column_id_tasks_task_id** | [**\ck/plenty-client\Model\RestBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest**](../Model/RestBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest.md)|  | [optional] |
+| **_rest_boards_board_id_columns_column_id_tasks_task_id** | [**\ck\Model\RestBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest**](../Model/RestBoardsBoardIdColumnsColumnIdTasksTaskIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardTask**](../Model/BoardTask.md)
+[**\ck\Model\BoardTask**](../Model/BoardTask.md)
 
 ### Authorization
 
@@ -731,7 +731,7 @@ try {
 ## `restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesPost()`
 
 ```php
-restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesPost($board_id, $column_id, $task_id, $reference_value): \ck/plenty-client\Model\BoardTaskReference
+restBoardsBoardIdColumnsColumnIdTasksTaskIdReferencesPost($board_id, $column_id, $task_id, $reference_value): \ck\Model\BoardTaskReference
 ```
 
 Create reference
@@ -746,10 +746,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -779,7 +779,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardTaskReference**](../Model/BoardTaskReference.md)
+[**\ck\Model\BoardTaskReference**](../Model/BoardTaskReference.md)
 
 ### Authorization
 
@@ -812,10 +812,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -878,10 +878,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -931,7 +931,7 @@ try {
 ## `restBoardsBoardIdColumnsGet()`
 
 ```php
-restBoardsBoardIdColumnsGet($board_id): \ck/plenty-client\Model\BoardColumn[]
+restBoardsBoardIdColumnsGet($board_id): \ck\Model\BoardColumn[]
 ```
 
 List all columns of a given board
@@ -946,10 +946,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -973,7 +973,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardColumn[]**](../Model/BoardColumn.md)
+[**\ck\Model\BoardColumn[]**](../Model/BoardColumn.md)
 
 ### Authorization
 
@@ -991,7 +991,7 @@ try {
 ## `restBoardsBoardIdColumnsPost()`
 
 ```php
-restBoardsBoardIdColumnsPost($board_id, $_rest_boards_board_id_columns): \ck/plenty-client\Model\BoardColumn
+restBoardsBoardIdColumnsPost($board_id, $_rest_boards_board_id_columns): \ck\Model\BoardColumn
 ```
 
 Create column and assign it to a board
@@ -1006,17 +1006,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BoardApi(
+$apiInstance = new ck\Api\BoardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $board_id = 'board_id_example'; // string | The ID of the board
-$_rest_boards_board_id_columns = new \ck/plenty-client\Model\RestBoardsBoardIdColumnsPostRequest(); // \ck/plenty-client\Model\RestBoardsBoardIdColumnsPostRequest
+$_rest_boards_board_id_columns = new \ck\Model\RestBoardsBoardIdColumnsPostRequest(); // \ck\Model\RestBoardsBoardIdColumnsPostRequest
 
 try {
     $result = $apiInstance->restBoardsBoardIdColumnsPost($board_id, $_rest_boards_board_id_columns);
@@ -1031,11 +1031,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **board_id** | **string**| The ID of the board | |
-| **_rest_boards_board_id_columns** | [**\ck/plenty-client\Model\RestBoardsBoardIdColumnsPostRequest**](../Model/RestBoardsBoardIdColumnsPostRequest.md)|  | [optional] |
+| **_rest_boards_board_id_columns** | [**\ck\Model\RestBoardsBoardIdColumnsPostRequest**](../Model/RestBoardsBoardIdColumnsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\BoardColumn**](../Model/BoardColumn.md)
+[**\ck\Model\BoardColumn**](../Model/BoardColumn.md)
 
 ### Authorization
 

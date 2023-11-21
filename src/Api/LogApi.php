@@ -3,7 +3,7 @@
  * LogApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * LogApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -157,7 +157,7 @@ class LogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestDeleteLogGet200Response
+     * @return \ck\Model\RestDeleteLogGet200Response
      */
     public function restDeleteLogGet(
         ?int $reference_type = null,
@@ -166,7 +166,7 @@ class LogApi
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restDeleteLogGet'][0]
-    ): \ck/plenty-client\Model\RestDeleteLogGet200Response
+    ): \ck\Model\RestDeleteLogGet200Response
     {
         list($response) = $this->restDeleteLogGetWithHttpInfo($reference_type, $user_id, $updated_between, $page, $items_per_page, $contentType);
         return $response;
@@ -186,7 +186,7 @@ class LogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestDeleteLogGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestDeleteLogGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restDeleteLogGetWithHttpInfo(
         ?int $reference_type = null,
@@ -236,23 +236,23 @@ class LogApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestDeleteLogGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestDeleteLogGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestDeleteLogGet200Response' !== 'string') {
+                        if ('\ck\Model\RestDeleteLogGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestDeleteLogGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestDeleteLogGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestDeleteLogGet200Response';
+            $returnType = '\ck\Model\RestDeleteLogGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -273,7 +273,7 @@ class LogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestDeleteLogGet200Response',
+                        '\ck\Model\RestDeleteLogGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -339,7 +339,7 @@ class LogApi
         string $contentType = self::contentTypes['restDeleteLogGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestDeleteLogGet200Response';
+        $returnType = '\ck\Model\RestDeleteLogGet200Response';
         $request = $this->restDeleteLogGetRequest($reference_type, $user_id, $updated_between, $page, $items_per_page, $contentType);
 
         return $this->client
@@ -541,7 +541,7 @@ class LogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestLogsGet200Response
+     * @return \ck\Model\RestLogsGet200Response
      */
     public function restLogsGet(
         ?int $page = null,
@@ -557,7 +557,7 @@ class LogApi
         ?string $to_date = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restLogsGet'][0]
-    ): \ck/plenty-client\Model\RestLogsGet200Response
+    ): \ck\Model\RestLogsGet200Response
     {
         list($response) = $this->restLogsGetWithHttpInfo($page, $items_per_page, $integration, $identifier, $reference_type, $reference_value, $additional_info, $code, $level, $from_date, $to_date, $with, $contentType);
         return $response;
@@ -584,7 +584,7 @@ class LogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestLogsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestLogsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLogsGetWithHttpInfo(
         ?int $page = null,
@@ -641,23 +641,23 @@ class LogApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestLogsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestLogsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestLogsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestLogsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestLogsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestLogsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestLogsGet200Response';
+            $returnType = '\ck\Model\RestLogsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -678,7 +678,7 @@ class LogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestLogsGet200Response',
+                        '\ck\Model\RestLogsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -772,7 +772,7 @@ class LogApi
         string $contentType = self::contentTypes['restLogsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestLogsGet200Response';
+        $returnType = '\ck\Model\RestLogsGet200Response';
         $request = $this->restLogsGetRequest($page, $items_per_page, $integration, $identifier, $reference_type, $reference_value, $additional_info, $code, $level, $from_date, $to_date, $with, $contentType);
 
         return $this->client
@@ -1047,12 +1047,12 @@ class LogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Log
+     * @return \ck\Model\Log
      */
     public function restLogsIdGet(
         int $id,
         string $contentType = self::contentTypes['restLogsIdGet'][0]
-    ): \ck/plenty-client\Model\Log
+    ): \ck\Model\Log
     {
         list($response) = $this->restLogsIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -1068,7 +1068,7 @@ class LogApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Log, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Log, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLogsIdGetWithHttpInfo(
         int $id,
@@ -1114,23 +1114,23 @@ class LogApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Log' === '\SplFileObject') {
+                    if ('\ck\Model\Log' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Log' !== 'string') {
+                        if ('\ck\Model\Log' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Log', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Log', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Log';
+            $returnType = '\ck\Model\Log';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1151,7 +1151,7 @@ class LogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Log',
+                        '\ck\Model\Log',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1201,7 +1201,7 @@ class LogApi
         string $contentType = self::contentTypes['restLogsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Log';
+        $returnType = '\ck\Model\Log';
         $request = $this->restLogsIdGetRequest($id, $contentType);
 
         return $this->client
@@ -1613,7 +1613,7 @@ class LogApi
      *
      * Create a log entry.
      *
-     * @param  \ck/plenty-client\Model\RestLogsPostRequest|null $_rest_logs _rest_logs (optional)
+     * @param  \ck\Model\RestLogsPostRequest|null $_rest_logs _rest_logs (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLogsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -1621,7 +1621,7 @@ class LogApi
      * @return object
      */
     public function restLogsPost(
-        ?\ck/plenty-client\Model\RestLogsPostRequest $_rest_logs = null,
+        ?\ck\Model\RestLogsPostRequest $_rest_logs = null,
         string $contentType = self::contentTypes['restLogsPost'][0]
     ): object
     {
@@ -1634,7 +1634,7 @@ class LogApi
      *
      * Create a log entry.
      *
-     * @param  \ck/plenty-client\Model\RestLogsPostRequest|null $_rest_logs (optional)
+     * @param  \ck\Model\RestLogsPostRequest|null $_rest_logs (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLogsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -1642,7 +1642,7 @@ class LogApi
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLogsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestLogsPostRequest $_rest_logs = null,
+        ?\ck\Model\RestLogsPostRequest $_rest_logs = null,
         string $contentType = self::contentTypes['restLogsPost'][0]
     ): array
     {
@@ -1737,14 +1737,14 @@ class LogApi
      *
      * Create a log entry.
      *
-     * @param  \ck/plenty-client\Model\RestLogsPostRequest|null $_rest_logs (optional)
+     * @param  \ck\Model\RestLogsPostRequest|null $_rest_logs (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLogsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restLogsPostAsync(
-        ?\ck/plenty-client\Model\RestLogsPostRequest $_rest_logs = null,
+        ?\ck\Model\RestLogsPostRequest $_rest_logs = null,
         string $contentType = self::contentTypes['restLogsPost'][0]
     ): PromiseInterface
     {
@@ -1761,7 +1761,7 @@ class LogApi
      *
      * Create a log entry.
      *
-     * @param  \ck/plenty-client\Model\RestLogsPostRequest|null $_rest_logs (optional)
+     * @param  \ck\Model\RestLogsPostRequest|null $_rest_logs (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLogsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1814,7 +1814,7 @@ class LogApi
     /**
      * Create request for operation 'restLogsPost'
      *
-     * @param  \ck/plenty-client\Model\RestLogsPostRequest|null $_rest_logs (optional)
+     * @param  \ck\Model\RestLogsPostRequest|null $_rest_logs (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLogsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

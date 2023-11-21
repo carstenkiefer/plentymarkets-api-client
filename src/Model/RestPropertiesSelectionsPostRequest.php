@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestPropertiesSelectionsPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class RestPropertiesSelectionsPostRequest implements ModelInterface, ArrayAccess
     protected static array $openAPITypes = [
         'property_id' => 'int',
         'position' => 'int',
-        'relation' => '\ck/plenty-client\Model\PropertyRelation[]'
+        'relation' => '\ck\Model\PropertyRelation[]'
     ];
 
     /**
@@ -364,7 +364,7 @@ class RestPropertiesSelectionsPostRequest implements ModelInterface, ArrayAccess
     /**
      * Gets relation
      *
-     * @return \ck/plenty-client\Model\PropertyRelation[]
+     * @return \ck\Model\PropertyRelation[]
      */
     public function getRelation(): array
     {
@@ -374,7 +374,7 @@ class RestPropertiesSelectionsPostRequest implements ModelInterface, ArrayAccess
     /**
      * Sets relation
      *
-     * @param \ck/plenty-client\Model\PropertyRelation[] $relation relation
+     * @param \ck\Model\PropertyRelation[] $relation relation
      *
      * @return $this
      */

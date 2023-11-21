@@ -1,4 +1,4 @@
-# ck/plenty-client\SalesRepresentativeRegionApi
+# ck\SalesRepresentativeRegionApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGet()`
 
 ```php
-restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGet($account_id, $contact_id): \ck/plenty-client\Model\SalesRepresentativeRegion
+restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsGet($account_id, $contact_id): \ck\Model\SalesRepresentativeRegion
 ```
 
 Get region by contactId and accountId
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SalesRepresentativeRegionApi(
+$apiInstance = new ck\Api\SalesRepresentativeRegionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesRepresentativeRegion**](../Model/SalesRepresentativeRegion.md)
+[**\ck\Model\SalesRepresentativeRegion**](../Model/SalesRepresentativeRegion.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPost()`
 
 ```php
-restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPost($account_id, $contact_id): \ck/plenty-client\Model\SalesRepresentativeRegion
+restAccountsAccountIdContactsContactIdSalesRepresentativeRegionsPost($account_id, $contact_id): \ck\Model\SalesRepresentativeRegion
 ```
 
 Create region for sales representative
@@ -93,10 +93,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SalesRepresentativeRegionApi(
+$apiInstance = new ck\Api\SalesRepresentativeRegionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -122,7 +122,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesRepresentativeRegion**](../Model/SalesRepresentativeRegion.md)
+[**\ck\Model\SalesRepresentativeRegion**](../Model/SalesRepresentativeRegion.md)
 
 ### Authorization
 
@@ -155,10 +155,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SalesRepresentativeRegionApi(
+$apiInstance = new ck\Api\SalesRepresentativeRegionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -200,7 +200,7 @@ try {
 ## `restAccountsContactsSalesRepresentativeRegionsGet()`
 
 ```php
-restAccountsContactsSalesRepresentativeRegionsGet(): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restAccountsContactsSalesRepresentativeRegionsGet(): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 Get sales representative of region
@@ -215,10 +215,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SalesRepresentativeRegionApi(
+$apiInstance = new ck\Api\SalesRepresentativeRegionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -239,7 +239,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 
@@ -272,10 +272,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SalesRepresentativeRegionApi(
+$apiInstance = new ck\Api\SalesRepresentativeRegionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -317,7 +317,7 @@ try {
 ## `restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGet()`
 
 ```php
-restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGet($sales_representative_region_id): \ck/plenty-client\Model\SalesRepresentativeRegion
+restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdGet($sales_representative_region_id): \ck\Model\SalesRepresentativeRegion
 ```
 
 Get region by ID
@@ -332,10 +332,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SalesRepresentativeRegionApi(
+$apiInstance = new ck\Api\SalesRepresentativeRegionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -359,7 +359,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesRepresentativeRegion**](../Model/SalesRepresentativeRegion.md)
+[**\ck\Model\SalesRepresentativeRegion**](../Model/SalesRepresentativeRegion.md)
 
 ### Authorization
 
@@ -377,7 +377,7 @@ try {
 ## `restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPut()`
 
 ```php
-restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPut($sales_representative_region_id): \ck/plenty-client\Model\SalesRepresentativeRegion
+restAccountsSalesRepresentativeRegionsSalesRepresentativeRegionIdPut($sales_representative_region_id): \ck\Model\SalesRepresentativeRegion
 ```
 
 Update region
@@ -392,10 +392,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SalesRepresentativeRegionApi(
+$apiInstance = new ck\Api\SalesRepresentativeRegionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -419,7 +419,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\SalesRepresentativeRegion**](../Model/SalesRepresentativeRegion.md)
+[**\ck\Model\SalesRepresentativeRegion**](../Model/SalesRepresentativeRegion.md)
 
 ### Authorization
 

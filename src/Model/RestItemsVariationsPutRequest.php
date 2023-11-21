@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestItemsVariationsPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -119,17 +119,17 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
         'sales_price_variation_id' => 'int',
         'supplier_variation_id' => 'int',
         'warehouse_variation_id' => 'int',
-        'variation_barcodes' => '\ck/plenty-client\Model\VariationBarcode[]',
-        'variation_sales_prices' => '\ck/plenty-client\Model\VariationSalesPrice[]',
-        'variation_categories' => '\ck/plenty-client\Model\VariationCategory[]',
-        'variation_clients' => '\ck/plenty-client\Model\VariationClient[]',
-        'variation_markets' => '\ck/plenty-client\Model\VariationMarket[]',
-        'variation_default_category' => '\ck/plenty-client\Model\VariationDefaultCategory[]',
-        'variation_suppliers' => '\ck/plenty-client\Model\VariationSupplier[]',
-        'variation_warehouses' => '\ck/plenty-client\Model\VariationWarehouse[]',
-        'variation_attribute_values' => '\ck/plenty-client\Model\AttributeValueSet[]',
+        'variation_barcodes' => '\ck\Model\VariationBarcode[]',
+        'variation_sales_prices' => '\ck\Model\VariationSalesPrice[]',
+        'variation_categories' => '\ck\Model\VariationCategory[]',
+        'variation_clients' => '\ck\Model\VariationClient[]',
+        'variation_markets' => '\ck\Model\VariationMarket[]',
+        'variation_default_category' => '\ck\Model\VariationDefaultCategory[]',
+        'variation_suppliers' => '\ck\Model\VariationSupplier[]',
+        'variation_warehouses' => '\ck\Model\VariationWarehouse[]',
+        'variation_attribute_values' => '\ck\Model\AttributeValueSet[]',
         'value_id' => 'int',
-        'unit' => '\ck/plenty-client\Model\UnitCombination[]',
+        'unit' => '\ck\Model\UnitCombination[]',
         'parent_variation_id' => 'int',
         'parent_variation_quantity' => 'float'
     ];
@@ -2457,7 +2457,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_barcodes
      *
-     * @return \ck/plenty-client\Model\VariationBarcode[]|null
+     * @return \ck\Model\VariationBarcode[]|null
      */
     public function getVariationBarcodes(): ?array
     {
@@ -2467,7 +2467,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_barcodes
      *
-     * @param \ck/plenty-client\Model\VariationBarcode[]|null $variation_barcodes variation_barcodes
+     * @param \ck\Model\VariationBarcode[]|null $variation_barcodes variation_barcodes
      *
      * @return $this
      */
@@ -2484,7 +2484,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_sales_prices
      *
-     * @return \ck/plenty-client\Model\VariationSalesPrice[]|null
+     * @return \ck\Model\VariationSalesPrice[]|null
      */
     public function getVariationSalesPrices(): ?array
     {
@@ -2494,7 +2494,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_sales_prices
      *
-     * @param \ck/plenty-client\Model\VariationSalesPrice[]|null $variation_sales_prices variation_sales_prices
+     * @param \ck\Model\VariationSalesPrice[]|null $variation_sales_prices variation_sales_prices
      *
      * @return $this
      */
@@ -2511,7 +2511,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_categories
      *
-     * @return \ck/plenty-client\Model\VariationCategory[]|null
+     * @return \ck\Model\VariationCategory[]|null
      */
     public function getVariationCategories(): ?array
     {
@@ -2521,7 +2521,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_categories
      *
-     * @param \ck/plenty-client\Model\VariationCategory[]|null $variation_categories variation_categories
+     * @param \ck\Model\VariationCategory[]|null $variation_categories variation_categories
      *
      * @return $this
      */
@@ -2538,7 +2538,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_clients
      *
-     * @return \ck/plenty-client\Model\VariationClient[]|null
+     * @return \ck\Model\VariationClient[]|null
      */
     public function getVariationClients(): ?array
     {
@@ -2548,7 +2548,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_clients
      *
-     * @param \ck/plenty-client\Model\VariationClient[]|null $variation_clients variation_clients
+     * @param \ck\Model\VariationClient[]|null $variation_clients variation_clients
      *
      * @return $this
      */
@@ -2565,7 +2565,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_markets
      *
-     * @return \ck/plenty-client\Model\VariationMarket[]|null
+     * @return \ck\Model\VariationMarket[]|null
      */
     public function getVariationMarkets(): ?array
     {
@@ -2575,7 +2575,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_markets
      *
-     * @param \ck/plenty-client\Model\VariationMarket[]|null $variation_markets variation_markets
+     * @param \ck\Model\VariationMarket[]|null $variation_markets variation_markets
      *
      * @return $this
      */
@@ -2592,7 +2592,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_default_category
      *
-     * @return \ck/plenty-client\Model\VariationDefaultCategory[]|null
+     * @return \ck\Model\VariationDefaultCategory[]|null
      */
     public function getVariationDefaultCategory(): ?array
     {
@@ -2602,7 +2602,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_default_category
      *
-     * @param \ck/plenty-client\Model\VariationDefaultCategory[]|null $variation_default_category variation_default_category
+     * @param \ck\Model\VariationDefaultCategory[]|null $variation_default_category variation_default_category
      *
      * @return $this
      */
@@ -2619,7 +2619,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_suppliers
      *
-     * @return \ck/plenty-client\Model\VariationSupplier[]|null
+     * @return \ck\Model\VariationSupplier[]|null
      */
     public function getVariationSuppliers(): ?array
     {
@@ -2629,7 +2629,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_suppliers
      *
-     * @param \ck/plenty-client\Model\VariationSupplier[]|null $variation_suppliers variation_suppliers
+     * @param \ck\Model\VariationSupplier[]|null $variation_suppliers variation_suppliers
      *
      * @return $this
      */
@@ -2646,7 +2646,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_warehouses
      *
-     * @return \ck/plenty-client\Model\VariationWarehouse[]|null
+     * @return \ck\Model\VariationWarehouse[]|null
      */
     public function getVariationWarehouses(): ?array
     {
@@ -2656,7 +2656,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_warehouses
      *
-     * @param \ck/plenty-client\Model\VariationWarehouse[]|null $variation_warehouses variation_warehouses
+     * @param \ck\Model\VariationWarehouse[]|null $variation_warehouses variation_warehouses
      *
      * @return $this
      */
@@ -2673,7 +2673,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets variation_attribute_values
      *
-     * @return \ck/plenty-client\Model\AttributeValueSet[]|null
+     * @return \ck\Model\AttributeValueSet[]|null
      */
     public function getVariationAttributeValues(): ?array
     {
@@ -2683,7 +2683,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets variation_attribute_values
      *
-     * @param \ck/plenty-client\Model\AttributeValueSet[]|null $variation_attribute_values variation_attribute_values
+     * @param \ck\Model\AttributeValueSet[]|null $variation_attribute_values variation_attribute_values
      *
      * @return $this
      */
@@ -2727,7 +2727,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets unit
      *
-     * @return \ck/plenty-client\Model\UnitCombination[]
+     * @return \ck\Model\UnitCombination[]
      */
     public function getUnit(): array
     {
@@ -2737,7 +2737,7 @@ class RestItemsVariationsPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets unit
      *
-     * @param \ck/plenty-client\Model\UnitCombination[] $unit unit
+     * @param \ck\Model\UnitCombination[] $unit unit
      *
      * @return $this
      */

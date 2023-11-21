@@ -3,7 +3,7 @@
  * BoardsApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * BoardsApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -450,13 +450,13 @@ class BoardsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Board
+     * @return \ck\Model\Board
      */
     public function restBoardsBoardIdGet(
         string $board_id,
         ?int $tasks_per_page = null,
         string $contentType = self::contentTypes['restBoardsBoardIdGet'][0]
-    ): \ck/plenty-client\Model\Board
+    ): \ck\Model\Board
     {
         list($response) = $this->restBoardsBoardIdGetWithHttpInfo($board_id, $tasks_per_page, $contentType);
         return $response;
@@ -473,7 +473,7 @@ class BoardsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Board, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Board, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdGetWithHttpInfo(
         string $board_id,
@@ -520,23 +520,23 @@ class BoardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Board' === '\SplFileObject') {
+                    if ('\ck\Model\Board' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Board' !== 'string') {
+                        if ('\ck\Model\Board' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Board', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Board', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Board';
+            $returnType = '\ck\Model\Board';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -557,7 +557,7 @@ class BoardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Board',
+                        '\ck\Model\Board',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -611,7 +611,7 @@ class BoardsApi
         string $contentType = self::contentTypes['restBoardsBoardIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Board';
+        $returnType = '\ck\Model\Board';
         $request = $this->restBoardsBoardIdGetRequest($board_id, $tasks_per_page, $contentType);
 
         return $this->client
@@ -771,12 +771,12 @@ class BoardsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Board
+     * @return \ck\Model\Board
      */
     public function restBoardsBoardIdPost(
         string $board_id,
         string $contentType = self::contentTypes['restBoardsBoardIdPost'][0]
-    ): \ck/plenty-client\Model\Board
+    ): \ck\Model\Board
     {
         list($response) = $this->restBoardsBoardIdPostWithHttpInfo($board_id, $contentType);
         return $response;
@@ -792,7 +792,7 @@ class BoardsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Board, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Board, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdPostWithHttpInfo(
         string $board_id,
@@ -838,23 +838,23 @@ class BoardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Board' === '\SplFileObject') {
+                    if ('\ck\Model\Board' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Board' !== 'string') {
+                        if ('\ck\Model\Board' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Board', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Board', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Board';
+            $returnType = '\ck\Model\Board';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -875,7 +875,7 @@ class BoardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Board',
+                        '\ck\Model\Board',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -925,7 +925,7 @@ class BoardsApi
         string $contentType = self::contentTypes['restBoardsBoardIdPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Board';
+        $returnType = '\ck\Model\Board';
         $request = $this->restBoardsBoardIdPostRequest($board_id, $contentType);
 
         return $this->client
@@ -1069,18 +1069,18 @@ class BoardsApi
      * Update board
      *
      * @param  string $board_id The ID of the board (required)
-     * @param  \ck/plenty-client\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id _rest_boards_board_id (optional)
+     * @param  \ck\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id _rest_boards_board_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsBoardIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Board
+     * @return \ck\Model\Board
      */
     public function restBoardsBoardIdPut(
         string $board_id,
-        ?\ck/plenty-client\Model\RestBoardsBoardIdPutRequest $_rest_boards_board_id = null,
+        ?\ck\Model\RestBoardsBoardIdPutRequest $_rest_boards_board_id = null,
         string $contentType = self::contentTypes['restBoardsBoardIdPut'][0]
-    ): \ck/plenty-client\Model\Board
+    ): \ck\Model\Board
     {
         list($response) = $this->restBoardsBoardIdPutWithHttpInfo($board_id, $_rest_boards_board_id, $contentType);
         return $response;
@@ -1092,16 +1092,16 @@ class BoardsApi
      * Update board
      *
      * @param  string $board_id The ID of the board (required)
-     * @param  \ck/plenty-client\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id (optional)
+     * @param  \ck\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsBoardIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Board, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Board, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsBoardIdPutWithHttpInfo(
         string $board_id,
-        ?\ck/plenty-client\Model\RestBoardsBoardIdPutRequest $_rest_boards_board_id = null,
+        ?\ck\Model\RestBoardsBoardIdPutRequest $_rest_boards_board_id = null,
         string $contentType = self::contentTypes['restBoardsBoardIdPut'][0]
     ): array
     {
@@ -1144,23 +1144,23 @@ class BoardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Board' === '\SplFileObject') {
+                    if ('\ck\Model\Board' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Board' !== 'string') {
+                        if ('\ck\Model\Board' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Board', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Board', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Board';
+            $returnType = '\ck\Model\Board';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1181,7 +1181,7 @@ class BoardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Board',
+                        '\ck\Model\Board',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1197,7 +1197,7 @@ class BoardsApi
      * Update board
      *
      * @param  string $board_id The ID of the board (required)
-     * @param  \ck/plenty-client\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id (optional)
+     * @param  \ck\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsBoardIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1205,7 +1205,7 @@ class BoardsApi
      */
     public function restBoardsBoardIdPutAsync(
         string $board_id,
-        ?\ck/plenty-client\Model\RestBoardsBoardIdPutRequest $_rest_boards_board_id = null,
+        ?\ck\Model\RestBoardsBoardIdPutRequest $_rest_boards_board_id = null,
         string $contentType = self::contentTypes['restBoardsBoardIdPut'][0]
     ): PromiseInterface
     {
@@ -1223,7 +1223,7 @@ class BoardsApi
      * Update board
      *
      * @param  string $board_id The ID of the board (required)
-     * @param  \ck/plenty-client\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id (optional)
+     * @param  \ck\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsBoardIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1235,7 +1235,7 @@ class BoardsApi
         string $contentType = self::contentTypes['restBoardsBoardIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Board';
+        $returnType = '\ck\Model\Board';
         $request = $this->restBoardsBoardIdPutRequest($board_id, $_rest_boards_board_id, $contentType);
 
         return $this->client
@@ -1278,7 +1278,7 @@ class BoardsApi
      * Create request for operation 'restBoardsBoardIdPut'
      *
      * @param  string $board_id The ID of the board (required)
-     * @param  \ck/plenty-client\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id (optional)
+     * @param  \ck\Model\RestBoardsBoardIdPutRequest|null $_rest_boards_board_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsBoardIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1392,7 +1392,7 @@ class BoardsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Board[]
+     * @return \ck\Model\Board[]
      */
     public function restBoardsGet(
         string $contentType = self::contentTypes['restBoardsGet'][0]
@@ -1411,7 +1411,7 @@ class BoardsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Board[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Board[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsGetWithHttpInfo(
         string $contentType = self::contentTypes['restBoardsGet'][0]
@@ -1456,23 +1456,23 @@ class BoardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Board[]' === '\SplFileObject') {
+                    if ('\ck\Model\Board[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Board[]' !== 'string') {
+                        if ('\ck\Model\Board[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Board[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Board[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Board[]';
+            $returnType = '\ck\Model\Board[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1493,7 +1493,7 @@ class BoardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Board[]',
+                        '\ck\Model\Board[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1539,7 +1539,7 @@ class BoardsApi
         string $contentType = self::contentTypes['restBoardsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Board[]';
+        $returnType = '\ck\Model\Board[]';
         $request = $this->restBoardsGetRequest($contentType);
 
         return $this->client
@@ -1665,17 +1665,17 @@ class BoardsApi
      *
      * Create new board
      *
-     * @param  \ck/plenty-client\Model\RestBoardsPostRequest|null $_rest_boards _rest_boards (optional)
+     * @param  \ck\Model\RestBoardsPostRequest|null $_rest_boards _rest_boards (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Board
+     * @return \ck\Model\Board
      */
     public function restBoardsPost(
-        ?\ck/plenty-client\Model\RestBoardsPostRequest $_rest_boards = null,
+        ?\ck\Model\RestBoardsPostRequest $_rest_boards = null,
         string $contentType = self::contentTypes['restBoardsPost'][0]
-    ): \ck/plenty-client\Model\Board
+    ): \ck\Model\Board
     {
         list($response) = $this->restBoardsPostWithHttpInfo($_rest_boards, $contentType);
         return $response;
@@ -1686,15 +1686,15 @@ class BoardsApi
      *
      * Create new board
      *
-     * @param  \ck/plenty-client\Model\RestBoardsPostRequest|null $_rest_boards (optional)
+     * @param  \ck\Model\RestBoardsPostRequest|null $_rest_boards (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Board, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Board, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBoardsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestBoardsPostRequest $_rest_boards = null,
+        ?\ck\Model\RestBoardsPostRequest $_rest_boards = null,
         string $contentType = self::contentTypes['restBoardsPost'][0]
     ): array
     {
@@ -1737,23 +1737,23 @@ class BoardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Board' === '\SplFileObject') {
+                    if ('\ck\Model\Board' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Board' !== 'string') {
+                        if ('\ck\Model\Board' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Board', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Board', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Board';
+            $returnType = '\ck\Model\Board';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1774,7 +1774,7 @@ class BoardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Board',
+                        '\ck\Model\Board',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1789,14 +1789,14 @@ class BoardsApi
      *
      * Create new board
      *
-     * @param  \ck/plenty-client\Model\RestBoardsPostRequest|null $_rest_boards (optional)
+     * @param  \ck\Model\RestBoardsPostRequest|null $_rest_boards (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restBoardsPostAsync(
-        ?\ck/plenty-client\Model\RestBoardsPostRequest $_rest_boards = null,
+        ?\ck\Model\RestBoardsPostRequest $_rest_boards = null,
         string $contentType = self::contentTypes['restBoardsPost'][0]
     ): PromiseInterface
     {
@@ -1813,7 +1813,7 @@ class BoardsApi
      *
      * Create new board
      *
-     * @param  \ck/plenty-client\Model\RestBoardsPostRequest|null $_rest_boards (optional)
+     * @param  \ck\Model\RestBoardsPostRequest|null $_rest_boards (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1824,7 +1824,7 @@ class BoardsApi
         string $contentType = self::contentTypes['restBoardsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Board';
+        $returnType = '\ck\Model\Board';
         $request = $this->restBoardsPostRequest($_rest_boards, $contentType);
 
         return $this->client
@@ -1866,7 +1866,7 @@ class BoardsApi
     /**
      * Create request for operation 'restBoardsPost'
      *
-     * @param  \ck/plenty-client\Model\RestBoardsPostRequest|null $_rest_boards (optional)
+     * @param  \ck\Model\RestBoardsPostRequest|null $_rest_boards (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restBoardsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

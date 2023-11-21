@@ -1,4 +1,4 @@
-# ck/plenty-client\TicketMessageApi
+# ck\TicketMessageApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restTicketsMessagesMessageIdGet()`
 
 ```php
-restTicketsMessagesMessageIdGet($message_id): \ck/plenty-client\Model\TicketMessage
+restTicketsMessagesMessageIdGet($message_id): \ck\Model\TicketMessage
 ```
 
 Get ticket message for given message ID
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TicketMessageApi(
+$apiInstance = new ck\Api\TicketMessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\TicketMessage**](../Model/TicketMessage.md)
+[**\ck\Model\TicketMessage**](../Model/TicketMessage.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `restTicketsTicketIdMessagesCommentGet()`
 
 ```php
-restTicketsTicketIdMessagesCommentGet($ticket_id): \ck/plenty-client\Model\TicketMessage[]
+restTicketsTicketIdMessagesCommentGet($ticket_id): \ck\Model\TicketMessage[]
 ```
 
 List all internal ticket messages
@@ -88,10 +88,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TicketMessageApi(
+$apiInstance = new ck\Api\TicketMessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\TicketMessage[]**](../Model/TicketMessage.md)
+[**\ck\Model\TicketMessage[]**](../Model/TicketMessage.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ try {
 ## `restTicketsTicketIdMessagesGet()`
 
 ```php
-restTicketsTicketIdMessagesGet($ticket_id): \ck/plenty-client\Model\TicketMessage[]
+restTicketsTicketIdMessagesGet($ticket_id): \ck\Model\TicketMessage[]
 ```
 
 List all ticket messages for given ticket ID
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TicketMessageApi(
+$apiInstance = new ck\Api\TicketMessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,7 +175,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\TicketMessage[]**](../Model/TicketMessage.md)
+[**\ck\Model\TicketMessage[]**](../Model/TicketMessage.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ try {
 ## `restTicketsTicketIdMessagesMessageGet()`
 
 ```php
-restTicketsTicketIdMessagesMessageGet($ticket_id): \ck/plenty-client\Model\TicketMessage[]
+restTicketsTicketIdMessagesMessageGet($ticket_id): \ck\Model\TicketMessage[]
 ```
 
 List all public ticket messages
@@ -208,10 +208,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\TicketMessageApi(
+$apiInstance = new ck\Api\TicketMessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -235,7 +235,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\TicketMessage[]**](../Model/TicketMessage.md)
+[**\ck\Model\TicketMessage[]**](../Model/TicketMessage.md)
 
 ### Authorization
 

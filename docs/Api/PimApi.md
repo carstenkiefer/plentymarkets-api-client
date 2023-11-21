@@ -1,4 +1,4 @@
-# ck/plenty-client\PimApi
+# ck\PimApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -49,10 +49,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -91,7 +91,7 @@ This endpoint does not need any parameter.
 ## `restPimAttributesGet()`
 
 ```php
-restPimAttributesGet($with, $ids, $backend_name, $name, $position, $updated_at): \ck/plenty-client\Model\RestItemsAttributesGet200Response
+restPimAttributesGet($with, $ids, $backend_name, $name, $position, $updated_at): \ck\Model\RestItemsAttributesGet200Response
 ```
 
 Search attributes
@@ -106,10 +106,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -143,7 +143,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsAttributesGet200Response**](../Model/RestItemsAttributesGet200Response.md)
+[**\ck\Model\RestItemsAttributesGet200Response**](../Model/RestItemsAttributesGet200Response.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ try {
 ## `restPimAttributesIdGet()`
 
 ```php
-restPimAttributesIdGet($id): \ck/plenty-client\Model\Attribute
+restPimAttributesIdGet($id): \ck\Model\Attribute
 ```
 
 Get one attribute
@@ -176,10 +176,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -203,7 +203,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Attribute**](../Model/Attribute.md)
+[**\ck\Model\Attribute**](../Model/Attribute.md)
 
 ### Authorization
 
@@ -236,10 +236,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -278,7 +278,7 @@ This endpoint does not need any parameter.
 ## `restPimAttributesNamesGet()`
 
 ```php
-restPimAttributesNamesGet($with, $attribute_id, $lang, $name): \ck/plenty-client\Model\RestPimAttributesNamesGet200Response
+restPimAttributesNamesGet($with, $attribute_id, $lang, $name): \ck\Model\RestPimAttributesNamesGet200Response
 ```
 
 Search attribute names
@@ -293,10 +293,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -326,7 +326,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestPimAttributesNamesGet200Response**](../Model/RestPimAttributesNamesGet200Response.md)
+[**\ck\Model\RestPimAttributesNamesGet200Response**](../Model/RestPimAttributesNamesGet200Response.md)
 
 ### Authorization
 
@@ -359,10 +359,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -416,10 +416,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -473,10 +473,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -530,10 +530,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -587,10 +587,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -629,7 +629,7 @@ This endpoint does not need any parameter.
 ## `restPimAttributesValuesGet()`
 
 ```php
-restPimAttributesValuesGet($with, $ids, $attribute_id, $backend_name, $name, $position, $updated_at): \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response
+restPimAttributesValuesGet($with, $ids, $attribute_id, $backend_name, $name, $position, $updated_at): \ck\Model\RestItemsAttributesAttributeIdValuesGet200Response
 ```
 
 Search attribute values
@@ -644,10 +644,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -683,7 +683,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response**](../Model/RestItemsAttributesAttributeIdValuesGet200Response.md)
+[**\ck\Model\RestItemsAttributesAttributeIdValuesGet200Response**](../Model/RestItemsAttributesAttributeIdValuesGet200Response.md)
 
 ### Authorization
 
@@ -701,7 +701,7 @@ try {
 ## `restPimAttributesValuesIdGet()`
 
 ```php
-restPimAttributesValuesIdGet($id): \ck/plenty-client\Model\AttributeValue
+restPimAttributesValuesIdGet($id): \ck\Model\AttributeValue
 ```
 
 Get one attribute value
@@ -716,10 +716,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -743,7 +743,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AttributeValue**](../Model/AttributeValue.md)
+[**\ck\Model\AttributeValue**](../Model/AttributeValue.md)
 
 ### Authorization
 
@@ -776,10 +776,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -818,7 +818,7 @@ This endpoint does not need any parameter.
 ## `restPimAttributesValuesNamesGet()`
 
 ```php
-restPimAttributesValuesNamesGet($with, $value_id, $lang, $name): \ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response
+restPimAttributesValuesNamesGet($with, $value_id, $lang, $name): \ck\Model\RestPimAttributesValuesNamesGet200Response
 ```
 
 Search attribute value names
@@ -833,10 +833,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -866,7 +866,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response**](../Model/RestPimAttributesValuesNamesGet200Response.md)
+[**\ck\Model\RestPimAttributesValuesNamesGet200Response**](../Model/RestPimAttributesValuesNamesGet200Response.md)
 
 ### Authorization
 
@@ -899,10 +899,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -956,10 +956,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1013,10 +1013,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1070,10 +1070,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1112,7 +1112,7 @@ This endpoint does not need any parameter.
 ## `restPimCategoriesBranchesGet()`
 
 ```php
-restPimCategoriesBranchesGet($with): \ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response
+restPimCategoriesBranchesGet($with): \ck\Model\RestPimCategoriesBranchesGet200Response
 ```
 
 Search category branches
@@ -1127,10 +1127,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1154,7 +1154,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response**](../Model/RestPimCategoriesBranchesGet200Response.md)
+[**\ck\Model\RestPimCategoriesBranchesGet200Response**](../Model/RestPimCategoriesBranchesGet200Response.md)
 
 ### Authorization
 
@@ -1172,7 +1172,7 @@ try {
 ## `restPimCategoriesClientsGet()`
 
 ```php
-restPimCategoriesClientsGet($with, $category_id, $plenty_id): \ck/plenty-client\Model\RestPimCategoriesClientsGet200Response
+restPimCategoriesClientsGet($with, $category_id, $plenty_id): \ck\Model\RestPimCategoriesClientsGet200Response
 ```
 
 Search category clients
@@ -1187,10 +1187,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1218,7 +1218,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestPimCategoriesClientsGet200Response**](../Model/RestPimCategoriesClientsGet200Response.md)
+[**\ck\Model\RestPimCategoriesClientsGet200Response**](../Model/RestPimCategoriesClientsGet200Response.md)
 
 ### Authorization
 
@@ -1236,7 +1236,7 @@ try {
 ## `restPimCategoriesDetailsGet()`
 
 ```php
-restPimCategoriesDetailsGet($with, $category_id, $plenty_id, $lang, $name, $position): \ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response
+restPimCategoriesDetailsGet($with, $category_id, $plenty_id, $lang, $name, $position): \ck\Model\RestPimCategoriesDetailsGet200Response
 ```
 
 Search category details
@@ -1251,10 +1251,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1288,7 +1288,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response**](../Model/RestPimCategoriesDetailsGet200Response.md)
+[**\ck\Model\RestPimCategoriesDetailsGet200Response**](../Model/RestPimCategoriesDetailsGet200Response.md)
 
 ### Authorization
 
@@ -1306,7 +1306,7 @@ try {
 ## `restPimCategoriesGet()`
 
 ```php
-restPimCategoriesGet($with, $ids, $type, $level, $name, $lang, $parent_id, $plenty_id, $linklist, $tag_id, $updated_at): \ck/plenty-client\Model\RestCategoriesGet200Response
+restPimCategoriesGet($with, $ids, $type, $level, $name, $lang, $parent_id, $plenty_id, $linklist, $tag_id, $updated_at): \ck\Model\RestCategoriesGet200Response
 ```
 
 Search categories
@@ -1321,10 +1321,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1368,7 +1368,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestCategoriesGet200Response**](../Model/RestCategoriesGet200Response.md)
+[**\ck\Model\RestCategoriesGet200Response**](../Model/RestCategoriesGet200Response.md)
 
 ### Authorization
 
@@ -1386,7 +1386,7 @@ try {
 ## `restPimCategoriesIdGet()`
 
 ```php
-restPimCategoriesIdGet($id): \ck/plenty-client\Model\Category
+restPimCategoriesIdGet($id): \ck\Model\Category
 ```
 
 Get one category
@@ -1401,10 +1401,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1428,7 +1428,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Category**](../Model/Category.md)
+[**\ck\Model\Category**](../Model/Category.md)
 
 ### Authorization
 
@@ -1446,7 +1446,7 @@ try {
 ## `restPimCategoriesPropertiesGet()`
 
 ```php
-restPimCategoriesPropertiesGet($with, $category_id, $plenty_id, $value): \ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response
+restPimCategoriesPropertiesGet($with, $category_id, $plenty_id, $value): \ck\Model\RestPimCategoriesPropertiesGet200Response
 ```
 
 Search category properties
@@ -1461,10 +1461,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1494,7 +1494,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response**](../Model/RestPimCategoriesPropertiesGet200Response.md)
+[**\ck\Model\RestPimCategoriesPropertiesGet200Response**](../Model/RestPimCategoriesPropertiesGet200Response.md)
 
 ### Authorization
 
@@ -1512,7 +1512,7 @@ try {
 ## `restPimVariationsGet()`
 
 ```php
-restPimVariationsGet($with, $sort_by, $group_by, $ids, $item_id, $item_ids, $is_active, $is_main, $is_salable, $supplier_id, $availability_ids, $has_children, $has_active_children, $attribute_id, $any_attribute_id, $all_attribute_ids, $attribute_value_id, $any_attribute_value_id, $all_attribute_value_ids, $barcode_code, $barcode_id, $bundle_type, $category_id, $any_category_id, $all_category_ids, $any_characteristic_id, $all_characteristic_ids, $client_id, $any_client_id, $all_client_ids, $automatic_client_visibilities, $image_has_market_id, $flag1, $flag2, $manufacturer_id, $any_manufacturer_id, $item_type, $market_id, $any_market_id, $all_market_ids, $price_between, $price_between_by_id, $any_sales_price_id, $property_selection_id, $any_property_selection_id, $all_property_selection_ids, $has_name_in_language, $created_at, $updated_at, $item_created_at, $item_updated_at, $availability_updated_at, $stock_updated_at, $page, $items_per_page): \ck/plenty-client\Model\RestItemsVariationsGet200Response
+restPimVariationsGet($with, $sort_by, $group_by, $ids, $item_id, $item_ids, $is_active, $is_main, $is_salable, $supplier_id, $availability_ids, $has_children, $has_active_children, $attribute_id, $any_attribute_id, $all_attribute_ids, $attribute_value_id, $any_attribute_value_id, $all_attribute_value_ids, $barcode_code, $barcode_id, $bundle_type, $category_id, $any_category_id, $all_category_ids, $any_characteristic_id, $all_characteristic_ids, $client_id, $any_client_id, $all_client_ids, $automatic_client_visibilities, $image_has_market_id, $flag1, $flag2, $manufacturer_id, $any_manufacturer_id, $item_type, $market_id, $any_market_id, $all_market_ids, $price_between, $price_between_by_id, $any_sales_price_id, $property_selection_id, $any_property_selection_id, $all_property_selection_ids, $has_name_in_language, $created_at, $updated_at, $item_created_at, $item_updated_at, $availability_updated_at, $stock_updated_at, $page, $items_per_page): \ck\Model\RestItemsVariationsGet200Response
 ```
 
 Lists variations
@@ -1527,10 +1527,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PimApi(
+$apiInstance = new ck\Api\PimApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1662,7 +1662,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestItemsVariationsGet200Response**](../Model/RestItemsVariationsGet200Response.md)
+[**\ck\Model\RestItemsVariationsGet200Response**](../Model/RestItemsVariationsGet200Response.md)
 
 ### Authorization
 

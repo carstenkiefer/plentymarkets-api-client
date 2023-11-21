@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**documents** | [**\ck/plenty-client\Model\DocumentData[]**](DocumentData.md) |  |
+**documents** | [**\ck\Model\DocumentData[]**](DocumentData.md) |  |
 **content** | **string** | The base64 encoded file data. |
 **number** | **int** | The document number optional | [optional]
 **number_with_prefix** | **string** | The document number with prefix |

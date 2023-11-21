@@ -1,4 +1,4 @@
-# ck/plenty-client\ContactAnonymizationApi
+# ck\ContactAnonymizationApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restAccountsContactsContactIdAnonymizePut()`
 
 ```php
-restAccountsContactsContactIdAnonymizePut($contact_id): \ck/plenty-client\Model\Contact
+restAccountsContactsContactIdAnonymizePut($contact_id): \ck\Model\Contact
 ```
 
 Anonymize contact
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ContactAnonymizationApi(
+$apiInstance = new ck\Api\ContactAnonymizationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Contact**](../Model/Contact.md)
+[**\ck\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 

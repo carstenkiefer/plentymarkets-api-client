@@ -3,7 +3,7 @@
  * ConvertGuestsApiTest
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,17 +24,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace ck/plenty-client\Test\Api;
+namespace ck\Test\Api;
 
-use ck/plenty-client\Configuration;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\ObjectSerializer;
+use ck\Configuration;
+use ck\ApiException;
+use ck\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * ConvertGuestsApiTest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

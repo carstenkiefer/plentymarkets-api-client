@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest i
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'incoming_items' => '\ck/plenty-client\Model\VariationStockIntake[]',
+        'incoming_items' => '\ck\Model\VariationStockIntake[]',
         'variation_id' => 'int',
         'delivered_at' => 'string',
         'order_number' => 'string',
@@ -389,7 +389,7 @@ class RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest i
     /**
      * Gets incoming_items
      *
-     * @return \ck/plenty-client\Model\VariationStockIntake[]|null
+     * @return \ck\Model\VariationStockIntake[]|null
      */
     public function getIncomingItems(): ?array
     {
@@ -399,7 +399,7 @@ class RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest i
     /**
      * Sets incoming_items
      *
-     * @param \ck/plenty-client\Model\VariationStockIntake[]|null $incoming_items incoming_items
+     * @param \ck\Model\VariationStockIntake[]|null $incoming_items incoming_items
      *
      * @return $this
      */

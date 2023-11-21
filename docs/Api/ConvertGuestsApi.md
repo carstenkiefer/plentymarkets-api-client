@@ -1,4 +1,4 @@
-# ck/plenty-client\ConvertGuestsApi
+# ck\ConvertGuestsApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restAccountsGuestsConvertPost()`
 
 ```php
-restAccountsGuestsConvertPost(): \ck/plenty-client\Model\Contact
+restAccountsGuestsConvertPost(): \ck\Model\Contact
 ```
 
 Convert guest account into regular account
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ConvertGuestsApi(
+$apiInstance = new ck\Api\ConvertGuestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Contact**](../Model/Contact.md)
+[**\ck\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 

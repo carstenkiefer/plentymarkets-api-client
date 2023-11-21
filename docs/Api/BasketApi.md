@@ -1,4 +1,4 @@
-# ck/plenty-client\BasketApi
+# ck\BasketApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restBasketGet()`
 
 ```php
-restBasketGet(): \ck/plenty-client\Model\Basket
+restBasketGet(): \ck\Model\Basket
 ```
 
 Get basket
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\BasketApi(
+$apiInstance = new ck\Api\BasketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -48,7 +48,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Basket**](../Model/Basket.md)
+[**\ck\Model\Basket**](../Model/Basket.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 ## `restBasketItemsGet()`
 
 ```php
-restBasketItemsGet(): \ck/plenty-client\Model\BasketItem[]
+restBasketItemsGet(): \ck\Model\BasketItem[]
 ```
 
 List basket items
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\BasketApi(
+$apiInstance = new ck\Api\BasketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -101,7 +101,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\BasketItem[]**](../Model/BasketItem.md)
+[**\ck\Model\BasketItem[]**](../Model/BasketItem.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 ## `restBasketItemsIdGet()`
 
 ```php
-restBasketItemsIdGet($id): \ck/plenty-client\Model\BasketItem
+restBasketItemsIdGet($id): \ck\Model\BasketItem
 ```
 
 Find a basket item by it's ID
@@ -134,7 +134,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\BasketApi(
+$apiInstance = new ck\Api\BasketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BasketItem**](../Model/BasketItem.md)
+[**\ck\Model\BasketItem**](../Model/BasketItem.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ No authorization required
 ## `restBasketItemsPost()`
 
 ```php
-restBasketItemsPost($_rest_basket_items): \ck/plenty-client\Model\BasketItem
+restBasketItemsPost($_rest_basket_items): \ck\Model\BasketItem
 ```
 
 Add item to basket
@@ -190,12 +190,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\BasketApi(
+$apiInstance = new ck\Api\BasketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$_rest_basket_items = new \ck/plenty-client\Model\RestBasketItemsPostRequest(); // \ck/plenty-client\Model\RestBasketItemsPostRequest
+$_rest_basket_items = new \ck\Model\RestBasketItemsPostRequest(); // \ck\Model\RestBasketItemsPostRequest
 
 try {
     $result = $apiInstance->restBasketItemsPost($_rest_basket_items);
@@ -209,11 +209,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_basket_items** | [**\ck/plenty-client\Model\RestBasketItemsPostRequest**](../Model/RestBasketItemsPostRequest.md)|  | [optional] |
+| **_rest_basket_items** | [**\ck\Model\RestBasketItemsPostRequest**](../Model/RestBasketItemsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\BasketItem**](../Model/BasketItem.md)
+[**\ck\Model\BasketItem**](../Model/BasketItem.md)
 
 ### Authorization
 

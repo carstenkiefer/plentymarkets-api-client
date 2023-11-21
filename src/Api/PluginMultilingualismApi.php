@@ -3,7 +3,7 @@
  * PluginMultilingualismApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * PluginMultilingualismApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,7 +149,7 @@ class PluginMultilingualismApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PluginTranslation
+     * @return \ck\Model\PluginTranslation
      */
     public function restLanguagesTranslationsPost(
         int $plugin_set_id,
@@ -159,7 +159,7 @@ class PluginMultilingualismApi
         string $value,
         string $file_name,
         string $contentType = self::contentTypes['restLanguagesTranslationsPost'][0]
-    ): \ck/plenty-client\Model\PluginTranslation
+    ): \ck\Model\PluginTranslation
     {
         list($response) = $this->restLanguagesTranslationsPostWithHttpInfo($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $contentType);
         return $response;
@@ -180,7 +180,7 @@ class PluginMultilingualismApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PluginTranslation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PluginTranslation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLanguagesTranslationsPostWithHttpInfo(
         int $plugin_set_id,
@@ -231,23 +231,23 @@ class PluginMultilingualismApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PluginTranslation' === '\SplFileObject') {
+                    if ('\ck\Model\PluginTranslation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PluginTranslation' !== 'string') {
+                        if ('\ck\Model\PluginTranslation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PluginTranslation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PluginTranslation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PluginTranslation';
+            $returnType = '\ck\Model\PluginTranslation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -268,7 +268,7 @@ class PluginMultilingualismApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PluginTranslation',
+                        '\ck\Model\PluginTranslation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -338,7 +338,7 @@ class PluginMultilingualismApi
         string $contentType = self::contentTypes['restLanguagesTranslationsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PluginTranslation';
+        $returnType = '\ck\Model\PluginTranslation';
         $request = $this->restLanguagesTranslationsPostRequest($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $contentType);
 
         return $this->client
@@ -852,13 +852,13 @@ class PluginMultilingualismApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PluginTranslation
+     * @return \ck\Model\PluginTranslation
      */
     public function restLanguagesTranslationsTranslationIdGet(
         int $id,
         int $translation_id,
         string $contentType = self::contentTypes['restLanguagesTranslationsTranslationIdGet'][0]
-    ): \ck/plenty-client\Model\PluginTranslation
+    ): \ck\Model\PluginTranslation
     {
         list($response) = $this->restLanguagesTranslationsTranslationIdGetWithHttpInfo($id, $translation_id, $contentType);
         return $response;
@@ -875,7 +875,7 @@ class PluginMultilingualismApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PluginTranslation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PluginTranslation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLanguagesTranslationsTranslationIdGetWithHttpInfo(
         int $id,
@@ -922,23 +922,23 @@ class PluginMultilingualismApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PluginTranslation' === '\SplFileObject') {
+                    if ('\ck\Model\PluginTranslation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PluginTranslation' !== 'string') {
+                        if ('\ck\Model\PluginTranslation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PluginTranslation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PluginTranslation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PluginTranslation';
+            $returnType = '\ck\Model\PluginTranslation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -959,7 +959,7 @@ class PluginMultilingualismApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PluginTranslation',
+                        '\ck\Model\PluginTranslation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1013,7 +1013,7 @@ class PluginMultilingualismApi
         string $contentType = self::contentTypes['restLanguagesTranslationsTranslationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PluginTranslation';
+        $returnType = '\ck\Model\PluginTranslation';
         $request = $this->restLanguagesTranslationsTranslationIdGetRequest($id, $translation_id, $contentType);
 
         return $this->client
@@ -1186,7 +1186,7 @@ class PluginMultilingualismApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PluginTranslation
+     * @return \ck\Model\PluginTranslation
      */
     public function restLanguagesTranslationsTranslationIdPut(
         int $id,
@@ -1198,7 +1198,7 @@ class PluginMultilingualismApi
         string $file_name,
         int $translation_id,
         string $contentType = self::contentTypes['restLanguagesTranslationsTranslationIdPut'][0]
-    ): \ck/plenty-client\Model\PluginTranslation
+    ): \ck\Model\PluginTranslation
     {
         list($response) = $this->restLanguagesTranslationsTranslationIdPutWithHttpInfo($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id, $contentType);
         return $response;
@@ -1221,7 +1221,7 @@ class PluginMultilingualismApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PluginTranslation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PluginTranslation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLanguagesTranslationsTranslationIdPutWithHttpInfo(
         int $id,
@@ -1274,23 +1274,23 @@ class PluginMultilingualismApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PluginTranslation' === '\SplFileObject') {
+                    if ('\ck\Model\PluginTranslation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PluginTranslation' !== 'string') {
+                        if ('\ck\Model\PluginTranslation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PluginTranslation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PluginTranslation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PluginTranslation';
+            $returnType = '\ck\Model\PluginTranslation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1311,7 +1311,7 @@ class PluginMultilingualismApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PluginTranslation',
+                        '\ck\Model\PluginTranslation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1389,7 +1389,7 @@ class PluginMultilingualismApi
         string $contentType = self::contentTypes['restLanguagesTranslationsTranslationIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PluginTranslation';
+        $returnType = '\ck\Model\PluginTranslation';
         $request = $this->restLanguagesTranslationsTranslationIdPutRequest($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id, $contentType);
 
         return $this->client

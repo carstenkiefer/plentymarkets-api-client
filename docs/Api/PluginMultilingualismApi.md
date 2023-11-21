@@ -1,4 +1,4 @@
-# ck/plenty-client\PluginMultilingualismApi
+# ck\PluginMultilingualismApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restLanguagesTranslationsPost()`
 
 ```php
-restLanguagesTranslationsPost($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name): \ck/plenty-client\Model\PluginTranslation
+restLanguagesTranslationsPost($plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name): \ck\Model\PluginTranslation
 ```
 
 Create a new translation
@@ -29,10 +29,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginMultilingualismApi(
+$apiInstance = new ck\Api\PluginMultilingualismApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -66,7 +66,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PluginTranslation**](../Model/PluginTranslation.md)
+[**\ck\Model\PluginTranslation**](../Model/PluginTranslation.md)
 
 ### Authorization
 
@@ -99,10 +99,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginMultilingualismApi(
+$apiInstance = new ck\Api\PluginMultilingualismApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -145,7 +145,7 @@ void (empty response body)
 ## `restLanguagesTranslationsTranslationIdGet()`
 
 ```php
-restLanguagesTranslationsTranslationIdGet($id, $translation_id): \ck/plenty-client\Model\PluginTranslation
+restLanguagesTranslationsTranslationIdGet($id, $translation_id): \ck\Model\PluginTranslation
 ```
 
 Get a translation
@@ -160,10 +160,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginMultilingualismApi(
+$apiInstance = new ck\Api\PluginMultilingualismApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -189,7 +189,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PluginTranslation**](../Model/PluginTranslation.md)
+[**\ck\Model\PluginTranslation**](../Model/PluginTranslation.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ try {
 ## `restLanguagesTranslationsTranslationIdPut()`
 
 ```php
-restLanguagesTranslationsTranslationIdPut($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id): \ck/plenty-client\Model\PluginTranslation
+restLanguagesTranslationsTranslationIdPut($id, $plugin_set_id, $plugin_name, $language_code, $key, $value, $file_name, $translation_id): \ck\Model\PluginTranslation
 ```
 
 Update a translation
@@ -222,10 +222,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginMultilingualismApi(
+$apiInstance = new ck\Api\PluginMultilingualismApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -263,7 +263,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PluginTranslation**](../Model/PluginTranslation.md)
+[**\ck\Model\PluginTranslation**](../Model/PluginTranslation.md)
 
 ### Authorization
 
@@ -296,10 +296,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginMultilingualismApi(
+$apiInstance = new ck\Api\PluginMultilingualismApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

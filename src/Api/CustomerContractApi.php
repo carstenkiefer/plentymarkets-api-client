@@ -3,7 +3,7 @@
  * CustomerContractApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * CustomerContractApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -448,12 +448,12 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CustomerContract
+     * @return \ck\Model\CustomerContract
      */
     public function restCustomerContractsContractIdGet(
         string $contract_id,
         string $contentType = self::contentTypes['restCustomerContractsContractIdGet'][0]
-    ): \ck/plenty-client\Model\CustomerContract
+    ): \ck\Model\CustomerContract
     {
         list($response) = $this->restCustomerContractsContractIdGetWithHttpInfo($contract_id, $contentType);
         return $response;
@@ -469,7 +469,7 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CustomerContract, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CustomerContract, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsContractIdGetWithHttpInfo(
         string $contract_id,
@@ -515,23 +515,23 @@ class CustomerContractApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CustomerContract' === '\SplFileObject') {
+                    if ('\ck\Model\CustomerContract' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CustomerContract' !== 'string') {
+                        if ('\ck\Model\CustomerContract' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CustomerContract', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CustomerContract', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CustomerContract';
+            $returnType = '\ck\Model\CustomerContract';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -552,7 +552,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CustomerContract',
+                        '\ck\Model\CustomerContract',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -602,7 +602,7 @@ class CustomerContractApi
         string $contentType = self::contentTypes['restCustomerContractsContractIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CustomerContract';
+        $returnType = '\ck\Model\CustomerContract';
         $request = $this->restCustomerContractsContractIdGetRequest($contract_id, $contentType);
 
         return $this->client
@@ -1044,12 +1044,12 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Signing
+     * @return \ck\Model\Signing
      */
     public function restCustomerContractsContractIdSignGet(
         string $contract_id,
         string $contentType = self::contentTypes['restCustomerContractsContractIdSignGet'][0]
-    ): \ck/plenty-client\Model\Signing
+    ): \ck\Model\Signing
     {
         list($response) = $this->restCustomerContractsContractIdSignGetWithHttpInfo($contract_id, $contentType);
         return $response;
@@ -1065,7 +1065,7 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Signing, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Signing, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsContractIdSignGetWithHttpInfo(
         string $contract_id,
@@ -1111,23 +1111,23 @@ class CustomerContractApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Signing' === '\SplFileObject') {
+                    if ('\ck\Model\Signing' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Signing' !== 'string') {
+                        if ('\ck\Model\Signing' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Signing', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Signing', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Signing';
+            $returnType = '\ck\Model\Signing';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1148,7 +1148,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Signing',
+                        '\ck\Model\Signing',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1198,7 +1198,7 @@ class CustomerContractApi
         string $contentType = self::contentTypes['restCustomerContractsContractIdSignGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Signing';
+        $returnType = '\ck\Model\Signing';
         $request = $this->restCustomerContractsContractIdSignGetRequest($contract_id, $contentType);
 
         return $this->client
@@ -1342,12 +1342,12 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Signing
+     * @return \ck\Model\Signing
      */
     public function restCustomerContractsContractIdSignPost(
         string $contract_id,
         string $contentType = self::contentTypes['restCustomerContractsContractIdSignPost'][0]
-    ): \ck/plenty-client\Model\Signing
+    ): \ck\Model\Signing
     {
         list($response) = $this->restCustomerContractsContractIdSignPostWithHttpInfo($contract_id, $contentType);
         return $response;
@@ -1363,7 +1363,7 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Signing, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Signing, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsContractIdSignPostWithHttpInfo(
         string $contract_id,
@@ -1409,23 +1409,23 @@ class CustomerContractApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Signing' === '\SplFileObject') {
+                    if ('\ck\Model\Signing' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Signing' !== 'string') {
+                        if ('\ck\Model\Signing' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Signing', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Signing', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Signing';
+            $returnType = '\ck\Model\Signing';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1446,7 +1446,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Signing',
+                        '\ck\Model\Signing',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1496,7 +1496,7 @@ class CustomerContractApi
         string $contentType = self::contentTypes['restCustomerContractsContractIdSignPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Signing';
+        $returnType = '\ck\Model\Signing';
         $request = $this->restCustomerContractsContractIdSignPostRequest($contract_id, $contentType);
 
         return $this->client
@@ -1639,7 +1639,7 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CustomerContract[]
+     * @return \ck\Model\CustomerContract[]
      */
     public function restCustomerContractsGet(
         string $contentType = self::contentTypes['restCustomerContractsGet'][0]
@@ -1658,7 +1658,7 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CustomerContract[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CustomerContract[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsGetWithHttpInfo(
         string $contentType = self::contentTypes['restCustomerContractsGet'][0]
@@ -1703,23 +1703,23 @@ class CustomerContractApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CustomerContract[]' === '\SplFileObject') {
+                    if ('\ck\Model\CustomerContract[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CustomerContract[]' !== 'string') {
+                        if ('\ck\Model\CustomerContract[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CustomerContract[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CustomerContract[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CustomerContract[]';
+            $returnType = '\ck\Model\CustomerContract[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1740,7 +1740,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CustomerContract[]',
+                        '\ck\Model\CustomerContract[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1786,7 +1786,7 @@ class CustomerContractApi
         string $contentType = self::contentTypes['restCustomerContractsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CustomerContract[]';
+        $returnType = '\ck\Model\CustomerContract[]';
         $request = $this->restCustomerContractsGetRequest($contentType);
 
         return $this->client
@@ -1912,11 +1912,11 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\CustomerContract
+     * @return \ck\Model\CustomerContract
      */
     public function restCustomerContractsPost(
         string $contentType = self::contentTypes['restCustomerContractsPost'][0]
-    ): \ck/plenty-client\Model\CustomerContract
+    ): \ck\Model\CustomerContract
     {
         list($response) = $this->restCustomerContractsPostWithHttpInfo($contentType);
         return $response;
@@ -1931,7 +1931,7 @@ class CustomerContractApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\CustomerContract, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\CustomerContract, HTTP status code, HTTP response headers (array of strings)
      */
     public function restCustomerContractsPostWithHttpInfo(
         string $contentType = self::contentTypes['restCustomerContractsPost'][0]
@@ -1976,23 +1976,23 @@ class CustomerContractApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\CustomerContract' === '\SplFileObject') {
+                    if ('\ck\Model\CustomerContract' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\CustomerContract' !== 'string') {
+                        if ('\ck\Model\CustomerContract' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\CustomerContract', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\CustomerContract', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\CustomerContract';
+            $returnType = '\ck\Model\CustomerContract';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2013,7 +2013,7 @@ class CustomerContractApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\CustomerContract',
+                        '\ck\Model\CustomerContract',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2059,7 +2059,7 @@ class CustomerContractApi
         string $contentType = self::contentTypes['restCustomerContractsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\CustomerContract';
+        $returnType = '\ck\Model\CustomerContract';
         $request = $this->restCustomerContractsPostRequest($contentType);
 
         return $this->client

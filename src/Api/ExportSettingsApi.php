@@ -3,7 +3,7 @@
  * ExportSettingsApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ExportSettingsApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -722,12 +722,12 @@ class ExportSettingsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Export
+     * @return \ck\Model\Export
      */
     public function restExportsExportIdGet(
         int $export_id,
         string $contentType = self::contentTypes['restExportsExportIdGet'][0]
-    ): \ck/plenty-client\Model\Export
+    ): \ck\Model\Export
     {
         list($response) = $this->restExportsExportIdGetWithHttpInfo($export_id, $contentType);
         return $response;
@@ -743,7 +743,7 @@ class ExportSettingsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Export, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Export, HTTP status code, HTTP response headers (array of strings)
      */
     public function restExportsExportIdGetWithHttpInfo(
         int $export_id,
@@ -789,23 +789,23 @@ class ExportSettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Export' === '\SplFileObject') {
+                    if ('\ck\Model\Export' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Export' !== 'string') {
+                        if ('\ck\Model\Export' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Export', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Export', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Export';
+            $returnType = '\ck\Model\Export';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -826,7 +826,7 @@ class ExportSettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Export',
+                        '\ck\Model\Export',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -876,7 +876,7 @@ class ExportSettingsApi
         string $contentType = self::contentTypes['restExportsExportIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Export';
+        $returnType = '\ck\Model\Export';
         $request = $this->restExportsExportIdGetRequest($export_id, $contentType);
 
         return $this->client
@@ -1020,18 +1020,18 @@ class ExportSettingsApi
      * Update an export
      *
      * @param  int $export_id export_id (required)
-     * @param  \ck/plenty-client\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id _rest_exports_export_id (optional)
+     * @param  \ck\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id _rest_exports_export_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsExportIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Export
+     * @return \ck\Model\Export
      */
     public function restExportsExportIdPut(
         int $export_id,
-        ?\ck/plenty-client\Model\RestExportsExportIdPutRequest $_rest_exports_export_id = null,
+        ?\ck\Model\RestExportsExportIdPutRequest $_rest_exports_export_id = null,
         string $contentType = self::contentTypes['restExportsExportIdPut'][0]
-    ): \ck/plenty-client\Model\Export
+    ): \ck\Model\Export
     {
         list($response) = $this->restExportsExportIdPutWithHttpInfo($export_id, $_rest_exports_export_id, $contentType);
         return $response;
@@ -1043,16 +1043,16 @@ class ExportSettingsApi
      * Update an export
      *
      * @param  int $export_id (required)
-     * @param  \ck/plenty-client\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id (optional)
+     * @param  \ck\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsExportIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Export, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Export, HTTP status code, HTTP response headers (array of strings)
      */
     public function restExportsExportIdPutWithHttpInfo(
         int $export_id,
-        ?\ck/plenty-client\Model\RestExportsExportIdPutRequest $_rest_exports_export_id = null,
+        ?\ck\Model\RestExportsExportIdPutRequest $_rest_exports_export_id = null,
         string $contentType = self::contentTypes['restExportsExportIdPut'][0]
     ): array
     {
@@ -1095,23 +1095,23 @@ class ExportSettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Export' === '\SplFileObject') {
+                    if ('\ck\Model\Export' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Export' !== 'string') {
+                        if ('\ck\Model\Export' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Export', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Export', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Export';
+            $returnType = '\ck\Model\Export';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1132,7 +1132,7 @@ class ExportSettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Export',
+                        '\ck\Model\Export',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1148,7 +1148,7 @@ class ExportSettingsApi
      * Update an export
      *
      * @param  int $export_id (required)
-     * @param  \ck/plenty-client\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id (optional)
+     * @param  \ck\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsExportIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1156,7 +1156,7 @@ class ExportSettingsApi
      */
     public function restExportsExportIdPutAsync(
         int $export_id,
-        ?\ck/plenty-client\Model\RestExportsExportIdPutRequest $_rest_exports_export_id = null,
+        ?\ck\Model\RestExportsExportIdPutRequest $_rest_exports_export_id = null,
         string $contentType = self::contentTypes['restExportsExportIdPut'][0]
     ): PromiseInterface
     {
@@ -1174,7 +1174,7 @@ class ExportSettingsApi
      * Update an export
      *
      * @param  int $export_id (required)
-     * @param  \ck/plenty-client\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id (optional)
+     * @param  \ck\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsExportIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1186,7 +1186,7 @@ class ExportSettingsApi
         string $contentType = self::contentTypes['restExportsExportIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Export';
+        $returnType = '\ck\Model\Export';
         $request = $this->restExportsExportIdPutRequest($export_id, $_rest_exports_export_id, $contentType);
 
         return $this->client
@@ -1229,7 +1229,7 @@ class ExportSettingsApi
      * Create request for operation 'restExportsExportIdPut'
      *
      * @param  int $export_id (required)
-     * @param  \ck/plenty-client\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id (optional)
+     * @param  \ck\Model\RestExportsExportIdPutRequest|null $_rest_exports_export_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsExportIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1349,7 +1349,7 @@ class ExportSettingsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestExportsGet200Response
+     * @return \ck\Model\RestExportsGet200Response
      */
     public function restExportsGet(
         ?int $id = null,
@@ -1359,7 +1359,7 @@ class ExportSettingsApi
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restExportsGet'][0]
-    ): \ck/plenty-client\Model\RestExportsGet200Response
+    ): \ck\Model\RestExportsGet200Response
     {
         list($response) = $this->restExportsGetWithHttpInfo($id, $format_key, $type, $name, $page, $items_per_page, $contentType);
         return $response;
@@ -1380,7 +1380,7 @@ class ExportSettingsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestExportsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestExportsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restExportsGetWithHttpInfo(
         ?int $id = null,
@@ -1431,23 +1431,23 @@ class ExportSettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestExportsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestExportsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestExportsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestExportsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestExportsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestExportsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestExportsGet200Response';
+            $returnType = '\ck\Model\RestExportsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1468,7 +1468,7 @@ class ExportSettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestExportsGet200Response',
+                        '\ck\Model\RestExportsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1538,7 +1538,7 @@ class ExportSettingsApi
         string $contentType = self::contentTypes['restExportsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestExportsGet200Response';
+        $returnType = '\ck\Model\RestExportsGet200Response';
         $request = $this->restExportsGetRequest($id, $format_key, $type, $name, $page, $items_per_page, $contentType);
 
         return $this->client
@@ -1736,17 +1736,17 @@ class ExportSettingsApi
      *
      * Create an export
      *
-     * @param  \ck/plenty-client\Model\RestExportsPostRequest|null $_rest_exports _rest_exports (optional)
+     * @param  \ck\Model\RestExportsPostRequest|null $_rest_exports _rest_exports (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Export
+     * @return \ck\Model\Export
      */
     public function restExportsPost(
-        ?\ck/plenty-client\Model\RestExportsPostRequest $_rest_exports = null,
+        ?\ck\Model\RestExportsPostRequest $_rest_exports = null,
         string $contentType = self::contentTypes['restExportsPost'][0]
-    ): \ck/plenty-client\Model\Export
+    ): \ck\Model\Export
     {
         list($response) = $this->restExportsPostWithHttpInfo($_rest_exports, $contentType);
         return $response;
@@ -1757,15 +1757,15 @@ class ExportSettingsApi
      *
      * Create an export
      *
-     * @param  \ck/plenty-client\Model\RestExportsPostRequest|null $_rest_exports (optional)
+     * @param  \ck\Model\RestExportsPostRequest|null $_rest_exports (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Export, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Export, HTTP status code, HTTP response headers (array of strings)
      */
     public function restExportsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestExportsPostRequest $_rest_exports = null,
+        ?\ck\Model\RestExportsPostRequest $_rest_exports = null,
         string $contentType = self::contentTypes['restExportsPost'][0]
     ): array
     {
@@ -1808,23 +1808,23 @@ class ExportSettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Export' === '\SplFileObject') {
+                    if ('\ck\Model\Export' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Export' !== 'string') {
+                        if ('\ck\Model\Export' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Export', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Export', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Export';
+            $returnType = '\ck\Model\Export';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1845,7 +1845,7 @@ class ExportSettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Export',
+                        '\ck\Model\Export',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1860,14 +1860,14 @@ class ExportSettingsApi
      *
      * Create an export
      *
-     * @param  \ck/plenty-client\Model\RestExportsPostRequest|null $_rest_exports (optional)
+     * @param  \ck\Model\RestExportsPostRequest|null $_rest_exports (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restExportsPostAsync(
-        ?\ck/plenty-client\Model\RestExportsPostRequest $_rest_exports = null,
+        ?\ck\Model\RestExportsPostRequest $_rest_exports = null,
         string $contentType = self::contentTypes['restExportsPost'][0]
     ): PromiseInterface
     {
@@ -1884,7 +1884,7 @@ class ExportSettingsApi
      *
      * Create an export
      *
-     * @param  \ck/plenty-client\Model\RestExportsPostRequest|null $_rest_exports (optional)
+     * @param  \ck\Model\RestExportsPostRequest|null $_rest_exports (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1895,7 +1895,7 @@ class ExportSettingsApi
         string $contentType = self::contentTypes['restExportsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Export';
+        $returnType = '\ck\Model\Export';
         $request = $this->restExportsPostRequest($_rest_exports, $contentType);
 
         return $this->client
@@ -1937,7 +1937,7 @@ class ExportSettingsApi
     /**
      * Create request for operation 'restExportsPost'
      *
-     * @param  \ck/plenty-client\Model\RestExportsPostRequest|null $_rest_exports (optional)
+     * @param  \ck\Model\RestExportsPostRequest|null $_rest_exports (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restExportsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

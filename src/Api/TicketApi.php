@@ -3,7 +3,7 @@
  * TicketApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * TicketApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -170,7 +170,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestTicketsGet200Response
+     * @return \ck\Model\RestTicketsGet200Response
      */
     public function restTicketsGet(
         ?int $id = null,
@@ -192,7 +192,7 @@ class TicketApi
         ?int $customer_class_id = null,
         ?int $resubmission_at = null,
         string $contentType = self::contentTypes['restTicketsGet'][0]
-    ): \ck/plenty-client\Model\RestTicketsGet200Response
+    ): \ck\Model\RestTicketsGet200Response
     {
         list($response) = $this->restTicketsGetWithHttpInfo($id, $type_id, $priority_id, $parent_ticket_id, $status_id, $confidential, $contact_id, $deadline_at, $title, $progress, $plenty_id, $source, $status_group_id, $role_id, $owner_id, $fulltext, $customer_class_id, $resubmission_at, $contentType);
         return $response;
@@ -225,7 +225,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestTicketsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestTicketsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsGetWithHttpInfo(
         ?int $id = null,
@@ -288,23 +288,23 @@ class TicketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestTicketsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestTicketsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestTicketsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestTicketsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestTicketsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestTicketsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestTicketsGet200Response';
+            $returnType = '\ck\Model\RestTicketsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -325,7 +325,7 @@ class TicketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestTicketsGet200Response',
+                        '\ck\Model\RestTicketsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -443,7 +443,7 @@ class TicketApi
         string $contentType = self::contentTypes['restTicketsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestTicketsGet200Response';
+        $returnType = '\ck\Model\RestTicketsGet200Response';
         $request = $this->restTicketsGetRequest($id, $type_id, $priority_id, $parent_ticket_id, $status_id, $confidential, $contact_id, $deadline_at, $title, $progress, $plenty_id, $source, $status_group_id, $role_id, $owner_id, $fulltext, $customer_class_id, $resubmission_at, $contentType);
 
         return $this->client
@@ -785,17 +785,17 @@ class TicketApi
      *
      * Create ticket
      *
-     * @param  \ck/plenty-client\Model\RestTicketsPostRequest|null $_rest_tickets _rest_tickets (optional)
+     * @param  \ck\Model\RestTicketsPostRequest|null $_rest_tickets _rest_tickets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTicketsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Ticket
+     * @return \ck\Model\Ticket
      */
     public function restTicketsPost(
-        ?\ck/plenty-client\Model\RestTicketsPostRequest $_rest_tickets = null,
+        ?\ck\Model\RestTicketsPostRequest $_rest_tickets = null,
         string $contentType = self::contentTypes['restTicketsPost'][0]
-    ): \ck/plenty-client\Model\Ticket
+    ): \ck\Model\Ticket
     {
         list($response) = $this->restTicketsPostWithHttpInfo($_rest_tickets, $contentType);
         return $response;
@@ -806,15 +806,15 @@ class TicketApi
      *
      * Create ticket
      *
-     * @param  \ck/plenty-client\Model\RestTicketsPostRequest|null $_rest_tickets (optional)
+     * @param  \ck\Model\RestTicketsPostRequest|null $_rest_tickets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTicketsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Ticket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Ticket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestTicketsPostRequest $_rest_tickets = null,
+        ?\ck\Model\RestTicketsPostRequest $_rest_tickets = null,
         string $contentType = self::contentTypes['restTicketsPost'][0]
     ): array
     {
@@ -857,23 +857,23 @@ class TicketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Ticket' === '\SplFileObject') {
+                    if ('\ck\Model\Ticket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Ticket' !== 'string') {
+                        if ('\ck\Model\Ticket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Ticket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Ticket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Ticket';
+            $returnType = '\ck\Model\Ticket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -894,7 +894,7 @@ class TicketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Ticket',
+                        '\ck\Model\Ticket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -909,14 +909,14 @@ class TicketApi
      *
      * Create ticket
      *
-     * @param  \ck/plenty-client\Model\RestTicketsPostRequest|null $_rest_tickets (optional)
+     * @param  \ck\Model\RestTicketsPostRequest|null $_rest_tickets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTicketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restTicketsPostAsync(
-        ?\ck/plenty-client\Model\RestTicketsPostRequest $_rest_tickets = null,
+        ?\ck\Model\RestTicketsPostRequest $_rest_tickets = null,
         string $contentType = self::contentTypes['restTicketsPost'][0]
     ): PromiseInterface
     {
@@ -933,7 +933,7 @@ class TicketApi
      *
      * Create ticket
      *
-     * @param  \ck/plenty-client\Model\RestTicketsPostRequest|null $_rest_tickets (optional)
+     * @param  \ck\Model\RestTicketsPostRequest|null $_rest_tickets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTicketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -944,7 +944,7 @@ class TicketApi
         string $contentType = self::contentTypes['restTicketsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Ticket';
+        $returnType = '\ck\Model\Ticket';
         $request = $this->restTicketsPostRequest($_rest_tickets, $contentType);
 
         return $this->client
@@ -986,7 +986,7 @@ class TicketApi
     /**
      * Create request for operation 'restTicketsPost'
      *
-     * @param  \ck/plenty-client\Model\RestTicketsPostRequest|null $_rest_tickets (optional)
+     * @param  \ck\Model\RestTicketsPostRequest|null $_rest_tickets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTicketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1084,7 +1084,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TicketStatusName[]
+     * @return \ck\Model\TicketStatusName[]
      */
     public function restTicketsStatusNamesGet(
         string $contentType = self::contentTypes['restTicketsStatusNamesGet'][0]
@@ -1103,7 +1103,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TicketStatusName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TicketStatusName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsStatusNamesGetWithHttpInfo(
         string $contentType = self::contentTypes['restTicketsStatusNamesGet'][0]
@@ -1148,23 +1148,23 @@ class TicketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TicketStatusName[]' === '\SplFileObject') {
+                    if ('\ck\Model\TicketStatusName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TicketStatusName[]' !== 'string') {
+                        if ('\ck\Model\TicketStatusName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TicketStatusName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TicketStatusName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TicketStatusName[]';
+            $returnType = '\ck\Model\TicketStatusName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1185,7 +1185,7 @@ class TicketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TicketStatusName[]',
+                        '\ck\Model\TicketStatusName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1231,7 +1231,7 @@ class TicketApi
         string $contentType = self::contentTypes['restTicketsStatusNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TicketStatusName[]';
+        $returnType = '\ck\Model\TicketStatusName[]';
         $request = $this->restTicketsStatusNamesGetRequest($contentType);
 
         return $this->client
@@ -1361,7 +1361,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TicketStatusName[]
+     * @return \ck\Model\TicketStatusName[]
      */
     public function restTicketsStatusTypeNamesGet(
         string $contentType = self::contentTypes['restTicketsStatusTypeNamesGet'][0]
@@ -1380,7 +1380,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TicketStatusName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TicketStatusName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsStatusTypeNamesGetWithHttpInfo(
         string $contentType = self::contentTypes['restTicketsStatusTypeNamesGet'][0]
@@ -1425,23 +1425,23 @@ class TicketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TicketStatusName[]' === '\SplFileObject') {
+                    if ('\ck\Model\TicketStatusName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TicketStatusName[]' !== 'string') {
+                        if ('\ck\Model\TicketStatusName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TicketStatusName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TicketStatusName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TicketStatusName[]';
+            $returnType = '\ck\Model\TicketStatusName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1462,7 +1462,7 @@ class TicketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TicketStatusName[]',
+                        '\ck\Model\TicketStatusName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1508,7 +1508,7 @@ class TicketApi
         string $contentType = self::contentTypes['restTicketsStatusTypeNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TicketStatusName[]';
+        $returnType = '\ck\Model\TicketStatusName[]';
         $request = $this->restTicketsStatusTypeNamesGetRequest($contentType);
 
         return $this->client
@@ -1640,13 +1640,13 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Ticket
+     * @return \ck\Model\Ticket
      */
     public function restTicketsTicketIdGet(
         int $ticket_id,
         ?int $with = null,
         string $contentType = self::contentTypes['restTicketsTicketIdGet'][0]
-    ): \ck/plenty-client\Model\Ticket
+    ): \ck\Model\Ticket
     {
         list($response) = $this->restTicketsTicketIdGetWithHttpInfo($ticket_id, $with, $contentType);
         return $response;
@@ -1663,7 +1663,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Ticket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Ticket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsTicketIdGetWithHttpInfo(
         int $ticket_id,
@@ -1710,23 +1710,23 @@ class TicketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Ticket' === '\SplFileObject') {
+                    if ('\ck\Model\Ticket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Ticket' !== 'string') {
+                        if ('\ck\Model\Ticket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Ticket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Ticket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Ticket';
+            $returnType = '\ck\Model\Ticket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1747,7 +1747,7 @@ class TicketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Ticket',
+                        '\ck\Model\Ticket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1801,7 +1801,7 @@ class TicketApi
         string $contentType = self::contentTypes['restTicketsTicketIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Ticket';
+        $returnType = '\ck\Model\Ticket';
         $request = $this->restTicketsTicketIdGetRequest($ticket_id, $with, $contentType);
 
         return $this->client
@@ -1961,12 +1961,12 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TicketMessage
+     * @return \ck\Model\TicketMessage
      */
     public function restTicketsTicketIdPost(
         int $ticket_id,
         string $contentType = self::contentTypes['restTicketsTicketIdPost'][0]
-    ): \ck/plenty-client\Model\TicketMessage
+    ): \ck\Model\TicketMessage
     {
         list($response) = $this->restTicketsTicketIdPostWithHttpInfo($ticket_id, $contentType);
         return $response;
@@ -1982,7 +1982,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TicketMessage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TicketMessage, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsTicketIdPostWithHttpInfo(
         int $ticket_id,
@@ -2028,23 +2028,23 @@ class TicketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TicketMessage' === '\SplFileObject') {
+                    if ('\ck\Model\TicketMessage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TicketMessage' !== 'string') {
+                        if ('\ck\Model\TicketMessage' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TicketMessage', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TicketMessage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TicketMessage';
+            $returnType = '\ck\Model\TicketMessage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2065,7 +2065,7 @@ class TicketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TicketMessage',
+                        '\ck\Model\TicketMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2115,7 +2115,7 @@ class TicketApi
         string $contentType = self::contentTypes['restTicketsTicketIdPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TicketMessage';
+        $returnType = '\ck\Model\TicketMessage';
         $request = $this->restTicketsTicketIdPostRequest($ticket_id, $contentType);
 
         return $this->client
@@ -2263,12 +2263,12 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Ticket
+     * @return \ck\Model\Ticket
      */
     public function restTicketsTicketIdPut(
         int $ticket_id,
         string $contentType = self::contentTypes['restTicketsTicketIdPut'][0]
-    ): \ck/plenty-client\Model\Ticket
+    ): \ck\Model\Ticket
     {
         list($response) = $this->restTicketsTicketIdPutWithHttpInfo($ticket_id, $contentType);
         return $response;
@@ -2284,7 +2284,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Ticket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Ticket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsTicketIdPutWithHttpInfo(
         int $ticket_id,
@@ -2330,23 +2330,23 @@ class TicketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Ticket' === '\SplFileObject') {
+                    if ('\ck\Model\Ticket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Ticket' !== 'string') {
+                        if ('\ck\Model\Ticket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Ticket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Ticket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Ticket';
+            $returnType = '\ck\Model\Ticket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2367,7 +2367,7 @@ class TicketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Ticket',
+                        '\ck\Model\Ticket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2417,7 +2417,7 @@ class TicketApi
         string $contentType = self::contentTypes['restTicketsTicketIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Ticket';
+        $returnType = '\ck\Model\Ticket';
         $request = $this->restTicketsTicketIdPutRequest($ticket_id, $contentType);
 
         return $this->client
@@ -2564,7 +2564,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TicketTypeName[]
+     * @return \ck\Model\TicketTypeName[]
      */
     public function restTicketsTypesNamesGet(
         string $contentType = self::contentTypes['restTicketsTypesNamesGet'][0]
@@ -2583,7 +2583,7 @@ class TicketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TicketTypeName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TicketTypeName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTicketsTypesNamesGetWithHttpInfo(
         string $contentType = self::contentTypes['restTicketsTypesNamesGet'][0]
@@ -2628,23 +2628,23 @@ class TicketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TicketTypeName[]' === '\SplFileObject') {
+                    if ('\ck\Model\TicketTypeName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TicketTypeName[]' !== 'string') {
+                        if ('\ck\Model\TicketTypeName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TicketTypeName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TicketTypeName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TicketTypeName[]';
+            $returnType = '\ck\Model\TicketTypeName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2665,7 +2665,7 @@ class TicketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TicketTypeName[]',
+                        '\ck\Model\TicketTypeName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2711,7 +2711,7 @@ class TicketApi
         string $contentType = self::contentTypes['restTicketsTypesNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TicketTypeName[]';
+        $returnType = '\ck\Model\TicketTypeName[]';
         $request = $this->restTicketsTypesNamesGetRequest($contentType);
 
         return $this->client

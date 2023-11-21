@@ -65,17 +65,17 @@ Name | Type | Description | Notes
 **sales_price_variation_id** | **int** | Either the ID of the variation or the ID of the item&#39;s main variation. No other values are permitted.ID of the variation &#x3D; Sales prices are not inherited from the main variation.ID of the item&#39;s main variation &#x3D; Inheritance of sales prices is active. optional | [optional]
 **supplier_variation_id** | **int** | Either the ID of the variation or the ID of the item&#39;s main variation. No other values are permitted.ID of the variation &#x3D; Suppliers are not inherited from the main variation.ID of the item&#39;s main variation &#x3D; Inheritance of suppliers is active. optional | [optional]
 **warehouse_variation_id** | **int** | Either the ID of the variation or the ID of the item&#39;s main variation. No other values are permitted.ID of the variation &#x3D; Warehouses are not inherited from the main variation.ID of the item&#39;s main variation &#x3D; Inheritance of warehouses is active. optional | [optional]
-**variation_barcodes** | [**\ck/plenty-client\Model\VariationBarcode[]**](VariationBarcode.md) |  | [optional]
-**variation_sales_prices** | [**\ck/plenty-client\Model\VariationSalesPrice[]**](VariationSalesPrice.md) |  | [optional]
-**variation_categories** | [**\ck/plenty-client\Model\VariationCategory[]**](VariationCategory.md) |  | [optional]
-**variation_clients** | [**\ck/plenty-client\Model\VariationClient[]**](VariationClient.md) |  | [optional]
-**variation_markets** | [**\ck/plenty-client\Model\VariationMarket[]**](VariationMarket.md) |  | [optional]
-**variation_default_category** | [**\ck/plenty-client\Model\VariationDefaultCategory[]**](VariationDefaultCategory.md) |  | [optional]
-**variation_suppliers** | [**\ck/plenty-client\Model\VariationSupplier[]**](VariationSupplier.md) |  | [optional]
-**variation_warehouses** | [**\ck/plenty-client\Model\VariationWarehouse[]**](VariationWarehouse.md) |  | [optional]
-**variation_attribute_values** | [**\ck/plenty-client\Model\AttributeValueSet[]**](AttributeValueSet.md) |  | [optional]
+**variation_barcodes** | [**\ck\Model\VariationBarcode[]**](VariationBarcode.md) |  | [optional]
+**variation_sales_prices** | [**\ck\Model\VariationSalesPrice[]**](VariationSalesPrice.md) |  | [optional]
+**variation_categories** | [**\ck\Model\VariationCategory[]**](VariationCategory.md) |  | [optional]
+**variation_clients** | [**\ck\Model\VariationClient[]**](VariationClient.md) |  | [optional]
+**variation_markets** | [**\ck\Model\VariationMarket[]**](VariationMarket.md) |  | [optional]
+**variation_default_category** | [**\ck\Model\VariationDefaultCategory[]**](VariationDefaultCategory.md) |  | [optional]
+**variation_suppliers** | [**\ck\Model\VariationSupplier[]**](VariationSupplier.md) |  | [optional]
+**variation_warehouses** | [**\ck\Model\VariationWarehouse[]**](VariationWarehouse.md) |  | [optional]
+**variation_attribute_values** | [**\ck\Model\AttributeValueSet[]**](AttributeValueSet.md) |  | [optional]
 **value_id** | **int** | The ID of the attribute value |
-**unit** | [**\ck/plenty-client\Model\UnitCombination[]**](UnitCombination.md) |  |
+**unit** | [**\ck\Model\UnitCombination[]**](UnitCombination.md) |  |
 **parent_variation_id** | **int** | optional | [optional]
 **parent_variation_quantity** | **float** | optional | [optional]
 

@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestShopBuilderContentsPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class RestShopBuilderContentsPostRequest implements ModelInterface, ArrayAccess,
         'type' => 'string',
         'data_provider_name' => 'string',
         'widgets' => 'string',
-        'link' => '\ck/plenty-client\Model\ContentLink[]'
+        'link' => '\ck\Model\ContentLink[]'
     ];
 
     /**
@@ -395,7 +395,7 @@ class RestShopBuilderContentsPostRequest implements ModelInterface, ArrayAccess,
     /**
      * Gets link
      *
-     * @return \ck/plenty-client\Model\ContentLink[]|null
+     * @return \ck\Model\ContentLink[]|null
      */
     public function getLink(): ?array
     {
@@ -405,7 +405,7 @@ class RestShopBuilderContentsPostRequest implements ModelInterface, ArrayAccess,
     /**
      * Sets link
      *
-     * @param \ck/plenty-client\Model\ContentLink[]|null $link link
+     * @param \ck\Model\ContentLink[]|null $link link
      *
      * @return $this
      */

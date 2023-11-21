@@ -3,7 +3,7 @@
  * PluginsApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * PluginsApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -158,7 +158,7 @@ class PluginsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Plugin[]
+     * @return \ck\Model\Plugin[]
      */
     public function restPluginsGet(
         string $contentType = self::contentTypes['restPluginsGet'][0]
@@ -177,7 +177,7 @@ class PluginsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Plugin[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Plugin[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsGetWithHttpInfo(
         string $contentType = self::contentTypes['restPluginsGet'][0]
@@ -222,23 +222,23 @@ class PluginsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Plugin[]' === '\SplFileObject') {
+                    if ('\ck\Model\Plugin[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Plugin[]' !== 'string') {
+                        if ('\ck\Model\Plugin[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Plugin[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Plugin[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Plugin[]';
+            $returnType = '\ck\Model\Plugin[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -259,7 +259,7 @@ class PluginsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Plugin[]',
+                        '\ck\Model\Plugin[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -305,7 +305,7 @@ class PluginsApi
         string $contentType = self::contentTypes['restPluginsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Plugin[]';
+        $returnType = '\ck\Model\Plugin[]';
         $request = $this->restPluginsGetRequest($contentType);
 
         return $this->client
@@ -957,12 +957,12 @@ class PluginsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Plugin
+     * @return \ck\Model\Plugin
      */
     public function restPluginsPluginIdGet(
         int $plugin_id,
         string $contentType = self::contentTypes['restPluginsPluginIdGet'][0]
-    ): \ck/plenty-client\Model\Plugin
+    ): \ck\Model\Plugin
     {
         list($response) = $this->restPluginsPluginIdGetWithHttpInfo($plugin_id, $contentType);
         return $response;
@@ -978,7 +978,7 @@ class PluginsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Plugin, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Plugin, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPluginIdGetWithHttpInfo(
         int $plugin_id,
@@ -1024,23 +1024,23 @@ class PluginsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Plugin' === '\SplFileObject') {
+                    if ('\ck\Model\Plugin' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Plugin' !== 'string') {
+                        if ('\ck\Model\Plugin' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Plugin', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Plugin', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Plugin';
+            $returnType = '\ck\Model\Plugin';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1061,7 +1061,7 @@ class PluginsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Plugin',
+                        '\ck\Model\Plugin',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1111,7 +1111,7 @@ class PluginsApi
         string $contentType = self::contentTypes['restPluginsPluginIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Plugin';
+        $returnType = '\ck\Model\Plugin';
         $request = $this->restPluginsPluginIdGetRequest($plugin_id, $contentType);
 
         return $this->client
@@ -1528,18 +1528,18 @@ class PluginsApi
      * Update a plugin
      *
      * @param  int $plugin_id plugin_id (required)
-     * @param  \ck/plenty-client\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id _rest_plugins_plugin_id (optional)
+     * @param  \ck\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id _rest_plugins_plugin_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPluginIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Plugin
+     * @return \ck\Model\Plugin
      */
     public function restPluginsPluginIdPut(
         int $plugin_id,
-        ?\ck/plenty-client\Model\RestPluginsPluginIdPutRequest $_rest_plugins_plugin_id = null,
+        ?\ck\Model\RestPluginsPluginIdPutRequest $_rest_plugins_plugin_id = null,
         string $contentType = self::contentTypes['restPluginsPluginIdPut'][0]
-    ): \ck/plenty-client\Model\Plugin
+    ): \ck\Model\Plugin
     {
         list($response) = $this->restPluginsPluginIdPutWithHttpInfo($plugin_id, $_rest_plugins_plugin_id, $contentType);
         return $response;
@@ -1551,16 +1551,16 @@ class PluginsApi
      * Update a plugin
      *
      * @param  int $plugin_id (required)
-     * @param  \ck/plenty-client\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id (optional)
+     * @param  \ck\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPluginIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Plugin, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Plugin, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPluginIdPutWithHttpInfo(
         int $plugin_id,
-        ?\ck/plenty-client\Model\RestPluginsPluginIdPutRequest $_rest_plugins_plugin_id = null,
+        ?\ck\Model\RestPluginsPluginIdPutRequest $_rest_plugins_plugin_id = null,
         string $contentType = self::contentTypes['restPluginsPluginIdPut'][0]
     ): array
     {
@@ -1603,23 +1603,23 @@ class PluginsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Plugin' === '\SplFileObject') {
+                    if ('\ck\Model\Plugin' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Plugin' !== 'string') {
+                        if ('\ck\Model\Plugin' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Plugin', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Plugin', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Plugin';
+            $returnType = '\ck\Model\Plugin';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1640,7 +1640,7 @@ class PluginsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Plugin',
+                        '\ck\Model\Plugin',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1656,7 +1656,7 @@ class PluginsApi
      * Update a plugin
      *
      * @param  int $plugin_id (required)
-     * @param  \ck/plenty-client\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id (optional)
+     * @param  \ck\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPluginIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1664,7 +1664,7 @@ class PluginsApi
      */
     public function restPluginsPluginIdPutAsync(
         int $plugin_id,
-        ?\ck/plenty-client\Model\RestPluginsPluginIdPutRequest $_rest_plugins_plugin_id = null,
+        ?\ck\Model\RestPluginsPluginIdPutRequest $_rest_plugins_plugin_id = null,
         string $contentType = self::contentTypes['restPluginsPluginIdPut'][0]
     ): PromiseInterface
     {
@@ -1682,7 +1682,7 @@ class PluginsApi
      * Update a plugin
      *
      * @param  int $plugin_id (required)
-     * @param  \ck/plenty-client\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id (optional)
+     * @param  \ck\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPluginIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1694,7 +1694,7 @@ class PluginsApi
         string $contentType = self::contentTypes['restPluginsPluginIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Plugin';
+        $returnType = '\ck\Model\Plugin';
         $request = $this->restPluginsPluginIdPutRequest($plugin_id, $_rest_plugins_plugin_id, $contentType);
 
         return $this->client
@@ -1737,7 +1737,7 @@ class PluginsApi
      * Create request for operation 'restPluginsPluginIdPut'
      *
      * @param  int $plugin_id (required)
-     * @param  \ck/plenty-client\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id (optional)
+     * @param  \ck\Model\RestPluginsPluginIdPutRequest|null $_rest_plugins_plugin_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPluginIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1847,17 +1847,17 @@ class PluginsApi
      *
      * Create a plugin
      *
-     * @param  \ck/plenty-client\Model\RestPluginsPostRequest|null $_rest_plugins _rest_plugins (optional)
+     * @param  \ck\Model\RestPluginsPostRequest|null $_rest_plugins _rest_plugins (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Plugin
+     * @return \ck\Model\Plugin
      */
     public function restPluginsPost(
-        ?\ck/plenty-client\Model\RestPluginsPostRequest $_rest_plugins = null,
+        ?\ck\Model\RestPluginsPostRequest $_rest_plugins = null,
         string $contentType = self::contentTypes['restPluginsPost'][0]
-    ): \ck/plenty-client\Model\Plugin
+    ): \ck\Model\Plugin
     {
         list($response) = $this->restPluginsPostWithHttpInfo($_rest_plugins, $contentType);
         return $response;
@@ -1868,15 +1868,15 @@ class PluginsApi
      *
      * Create a plugin
      *
-     * @param  \ck/plenty-client\Model\RestPluginsPostRequest|null $_rest_plugins (optional)
+     * @param  \ck\Model\RestPluginsPostRequest|null $_rest_plugins (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Plugin, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Plugin, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPluginsPostRequest $_rest_plugins = null,
+        ?\ck\Model\RestPluginsPostRequest $_rest_plugins = null,
         string $contentType = self::contentTypes['restPluginsPost'][0]
     ): array
     {
@@ -1919,23 +1919,23 @@ class PluginsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Plugin' === '\SplFileObject') {
+                    if ('\ck\Model\Plugin' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Plugin' !== 'string') {
+                        if ('\ck\Model\Plugin' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Plugin', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Plugin', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Plugin';
+            $returnType = '\ck\Model\Plugin';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1956,7 +1956,7 @@ class PluginsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Plugin',
+                        '\ck\Model\Plugin',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1971,14 +1971,14 @@ class PluginsApi
      *
      * Create a plugin
      *
-     * @param  \ck/plenty-client\Model\RestPluginsPostRequest|null $_rest_plugins (optional)
+     * @param  \ck\Model\RestPluginsPostRequest|null $_rest_plugins (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPluginsPostAsync(
-        ?\ck/plenty-client\Model\RestPluginsPostRequest $_rest_plugins = null,
+        ?\ck\Model\RestPluginsPostRequest $_rest_plugins = null,
         string $contentType = self::contentTypes['restPluginsPost'][0]
     ): PromiseInterface
     {
@@ -1995,7 +1995,7 @@ class PluginsApi
      *
      * Create a plugin
      *
-     * @param  \ck/plenty-client\Model\RestPluginsPostRequest|null $_rest_plugins (optional)
+     * @param  \ck\Model\RestPluginsPostRequest|null $_rest_plugins (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2006,7 +2006,7 @@ class PluginsApi
         string $contentType = self::contentTypes['restPluginsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Plugin';
+        $returnType = '\ck\Model\Plugin';
         $request = $this->restPluginsPostRequest($_rest_plugins, $contentType);
 
         return $this->client
@@ -2048,7 +2048,7 @@ class PluginsApi
     /**
      * Create request for operation 'restPluginsPost'
      *
-     * @param  \ck/plenty-client\Model\RestPluginsPostRequest|null $_rest_plugins (optional)
+     * @param  \ck\Model\RestPluginsPostRequest|null $_rest_plugins (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPluginsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2151,7 +2151,7 @@ class PluginsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response
+     * @return \ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response
      */
     public function restPluginsSearchGet(
         ?string $name = null,
@@ -2160,7 +2160,7 @@ class PluginsApi
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restPluginsSearchGet'][0]
-    ): \ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response
+    ): \ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response
     {
         list($response) = $this->restPluginsSearchGetWithHttpInfo($name, $type, $webstore_id, $page, $items_per_page, $contentType);
         return $response;
@@ -2180,7 +2180,7 @@ class PluginsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsSearchGetWithHttpInfo(
         ?string $name = null,
@@ -2230,23 +2230,23 @@ class PluginsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response' !== 'string') {
+                        if ('\ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response';
+            $returnType = '\ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2267,7 +2267,7 @@ class PluginsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response',
+                        '\ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2333,7 +2333,7 @@ class PluginsApi
         string $contentType = self::contentTypes['restPluginsSearchGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response';
+        $returnType = '\ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response';
         $request = $this->restPluginsSearchGetRequest($name, $type, $webstore_id, $page, $items_per_page, $contentType);
 
         return $this->client
@@ -2796,7 +2796,7 @@ class PluginsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Plugin[]
+     * @return \ck\Model\Plugin[]
      */
     public function restPluginsUiGet(
         string $contentType = self::contentTypes['restPluginsUiGet'][0]
@@ -2815,7 +2815,7 @@ class PluginsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Plugin[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Plugin[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsUiGetWithHttpInfo(
         string $contentType = self::contentTypes['restPluginsUiGet'][0]
@@ -2860,23 +2860,23 @@ class PluginsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Plugin[]' === '\SplFileObject') {
+                    if ('\ck\Model\Plugin[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Plugin[]' !== 'string') {
+                        if ('\ck\Model\Plugin[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Plugin[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Plugin[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Plugin[]';
+            $returnType = '\ck\Model\Plugin[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2897,7 +2897,7 @@ class PluginsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Plugin[]',
+                        '\ck\Model\Plugin[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2943,7 +2943,7 @@ class PluginsApi
         string $contentType = self::contentTypes['restPluginsUiGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Plugin[]';
+        $returnType = '\ck\Model\Plugin[]';
         $request = $this->restPluginsUiGetRequest($contentType);
 
         return $this->client

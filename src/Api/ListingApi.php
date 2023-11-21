@@ -3,7 +3,7 @@
  * ListingApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ListingApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -265,7 +265,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsGet200Response
+     * @return \ck\Model\RestListingsGet200Response
      */
     public function restListingsGet(
         ?int $id = null,
@@ -277,7 +277,7 @@ class ListingApi
         ?int $items_per_page = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsGet'][0]
-    ): \ck/plenty-client\Model\RestListingsGet200Response
+    ): \ck\Model\RestListingsGet200Response
     {
         list($response) = $this->restListingsGetWithHttpInfo($id, $item_id, $type_id, $stock_dependence_type_id, $unit_combination_id, $page, $items_per_page, $with, $contentType);
         return $response;
@@ -300,7 +300,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsGetWithHttpInfo(
         ?int $id = null,
@@ -353,23 +353,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsGet200Response';
+            $returnType = '\ck\Model\RestListingsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -390,7 +390,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsGet200Response',
+                        '\ck\Model\RestListingsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -468,7 +468,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsGet200Response';
+        $returnType = '\ck\Model\RestListingsGet200Response';
         $request = $this->restListingsGetRequest($id, $item_id, $type_id, $stock_dependence_type_id, $unit_combination_id, $page, $items_per_page, $with, $contentType);
 
         return $this->client
@@ -998,13 +998,13 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Listing
+     * @return \ck\Model\Listing
      */
     public function restListingsIdGet(
         int $id,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsIdGet'][0]
-    ): \ck/plenty-client\Model\Listing
+    ): \ck\Model\Listing
     {
         list($response) = $this->restListingsIdGetWithHttpInfo($id, $with, $contentType);
         return $response;
@@ -1021,7 +1021,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Listing, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Listing, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsIdGetWithHttpInfo(
         int $id,
@@ -1068,23 +1068,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Listing' === '\SplFileObject') {
+                    if ('\ck\Model\Listing' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Listing' !== 'string') {
+                        if ('\ck\Model\Listing' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Listing', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Listing', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Listing';
+            $returnType = '\ck\Model\Listing';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1105,7 +1105,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Listing',
+                        '\ck\Model\Listing',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1159,7 +1159,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Listing';
+        $returnType = '\ck\Model\Listing';
         $request = $this->restListingsIdGetRequest($id, $with, $contentType);
 
         return $this->client
@@ -1315,18 +1315,18 @@ class ListingApi
      * Update a listing
      *
      * @param  int $id The ID of the listing. (required)
-     * @param  \ck/plenty-client\Model\RestListingsIdPutRequest|null $_rest_listings_id _rest_listings_id (optional)
+     * @param  \ck\Model\RestListingsIdPutRequest|null $_rest_listings_id _rest_listings_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Listing
+     * @return \ck\Model\Listing
      */
     public function restListingsIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsIdPutRequest $_rest_listings_id = null,
+        ?\ck\Model\RestListingsIdPutRequest $_rest_listings_id = null,
         string $contentType = self::contentTypes['restListingsIdPut'][0]
-    ): \ck/plenty-client\Model\Listing
+    ): \ck\Model\Listing
     {
         list($response) = $this->restListingsIdPutWithHttpInfo($id, $_rest_listings_id, $contentType);
         return $response;
@@ -1338,16 +1338,16 @@ class ListingApi
      * Update a listing
      *
      * @param  int $id The ID of the listing. (required)
-     * @param  \ck/plenty-client\Model\RestListingsIdPutRequest|null $_rest_listings_id (optional)
+     * @param  \ck\Model\RestListingsIdPutRequest|null $_rest_listings_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Listing, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Listing, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsIdPutRequest $_rest_listings_id = null,
+        ?\ck\Model\RestListingsIdPutRequest $_rest_listings_id = null,
         string $contentType = self::contentTypes['restListingsIdPut'][0]
     ): array
     {
@@ -1390,23 +1390,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Listing' === '\SplFileObject') {
+                    if ('\ck\Model\Listing' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Listing' !== 'string') {
+                        if ('\ck\Model\Listing' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Listing', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Listing', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Listing';
+            $returnType = '\ck\Model\Listing';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1427,7 +1427,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Listing',
+                        '\ck\Model\Listing',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1443,7 +1443,7 @@ class ListingApi
      * Update a listing
      *
      * @param  int $id The ID of the listing. (required)
-     * @param  \ck/plenty-client\Model\RestListingsIdPutRequest|null $_rest_listings_id (optional)
+     * @param  \ck\Model\RestListingsIdPutRequest|null $_rest_listings_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1451,7 +1451,7 @@ class ListingApi
      */
     public function restListingsIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsIdPutRequest $_rest_listings_id = null,
+        ?\ck\Model\RestListingsIdPutRequest $_rest_listings_id = null,
         string $contentType = self::contentTypes['restListingsIdPut'][0]
     ): PromiseInterface
     {
@@ -1469,7 +1469,7 @@ class ListingApi
      * Update a listing
      *
      * @param  int $id The ID of the listing. (required)
-     * @param  \ck/plenty-client\Model\RestListingsIdPutRequest|null $_rest_listings_id (optional)
+     * @param  \ck\Model\RestListingsIdPutRequest|null $_rest_listings_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1481,7 +1481,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Listing';
+        $returnType = '\ck\Model\Listing';
         $request = $this->restListingsIdPutRequest($id, $_rest_listings_id, $contentType);
 
         return $this->client
@@ -1524,7 +1524,7 @@ class ListingApi
      * Create request for operation 'restListingsIdPut'
      *
      * @param  int $id The ID of the listing. (required)
-     * @param  \ck/plenty-client\Model\RestListingsIdPutRequest|null $_rest_listings_id (optional)
+     * @param  \ck\Model\RestListingsIdPutRequest|null $_rest_listings_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1941,12 +1941,12 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\LayoutTemplate
+     * @return \ck\Model\LayoutTemplate
      */
     public function restListingsLayoutTemplatesIdGet(
         int $id,
         string $contentType = self::contentTypes['restListingsLayoutTemplatesIdGet'][0]
-    ): \ck/plenty-client\Model\LayoutTemplate
+    ): \ck\Model\LayoutTemplate
     {
         list($response) = $this->restListingsLayoutTemplatesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -1962,7 +1962,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\LayoutTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\LayoutTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsLayoutTemplatesIdGetWithHttpInfo(
         int $id,
@@ -2008,23 +2008,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\LayoutTemplate' === '\SplFileObject') {
+                    if ('\ck\Model\LayoutTemplate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\LayoutTemplate' !== 'string') {
+                        if ('\ck\Model\LayoutTemplate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\LayoutTemplate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\LayoutTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\LayoutTemplate';
+            $returnType = '\ck\Model\LayoutTemplate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2045,7 +2045,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\LayoutTemplate',
+                        '\ck\Model\LayoutTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2095,7 +2095,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsLayoutTemplatesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\LayoutTemplate';
+        $returnType = '\ck\Model\LayoutTemplate';
         $request = $this->restListingsLayoutTemplatesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -2238,17 +2238,17 @@ class ListingApi
      *
      * Create new layout template
      *
-     * @param  \ck/plenty-client\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates _rest_listings_layout_templates (optional)
+     * @param  \ck\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates _rest_listings_layout_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsLayoutTemplatesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\LayoutTemplate
+     * @return \ck\Model\LayoutTemplate
      */
     public function restListingsLayoutTemplatesPost(
-        ?\ck/plenty-client\Model\RestListingsLayoutTemplatesPostRequest $_rest_listings_layout_templates = null,
+        ?\ck\Model\RestListingsLayoutTemplatesPostRequest $_rest_listings_layout_templates = null,
         string $contentType = self::contentTypes['restListingsLayoutTemplatesPost'][0]
-    ): \ck/plenty-client\Model\LayoutTemplate
+    ): \ck\Model\LayoutTemplate
     {
         list($response) = $this->restListingsLayoutTemplatesPostWithHttpInfo($_rest_listings_layout_templates, $contentType);
         return $response;
@@ -2259,15 +2259,15 @@ class ListingApi
      *
      * Create new layout template
      *
-     * @param  \ck/plenty-client\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates (optional)
+     * @param  \ck\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsLayoutTemplatesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\LayoutTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\LayoutTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsLayoutTemplatesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestListingsLayoutTemplatesPostRequest $_rest_listings_layout_templates = null,
+        ?\ck\Model\RestListingsLayoutTemplatesPostRequest $_rest_listings_layout_templates = null,
         string $contentType = self::contentTypes['restListingsLayoutTemplatesPost'][0]
     ): array
     {
@@ -2310,23 +2310,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\LayoutTemplate' === '\SplFileObject') {
+                    if ('\ck\Model\LayoutTemplate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\LayoutTemplate' !== 'string') {
+                        if ('\ck\Model\LayoutTemplate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\LayoutTemplate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\LayoutTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\LayoutTemplate';
+            $returnType = '\ck\Model\LayoutTemplate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2347,7 +2347,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\LayoutTemplate',
+                        '\ck\Model\LayoutTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2362,14 +2362,14 @@ class ListingApi
      *
      * Create new layout template
      *
-     * @param  \ck/plenty-client\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates (optional)
+     * @param  \ck\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsLayoutTemplatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restListingsLayoutTemplatesPostAsync(
-        ?\ck/plenty-client\Model\RestListingsLayoutTemplatesPostRequest $_rest_listings_layout_templates = null,
+        ?\ck\Model\RestListingsLayoutTemplatesPostRequest $_rest_listings_layout_templates = null,
         string $contentType = self::contentTypes['restListingsLayoutTemplatesPost'][0]
     ): PromiseInterface
     {
@@ -2386,7 +2386,7 @@ class ListingApi
      *
      * Create new layout template
      *
-     * @param  \ck/plenty-client\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates (optional)
+     * @param  \ck\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsLayoutTemplatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2397,7 +2397,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsLayoutTemplatesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\LayoutTemplate';
+        $returnType = '\ck\Model\LayoutTemplate';
         $request = $this->restListingsLayoutTemplatesPostRequest($_rest_listings_layout_templates, $contentType);
 
         return $this->client
@@ -2439,7 +2439,7 @@ class ListingApi
     /**
      * Create request for operation 'restListingsLayoutTemplatesPost'
      *
-     * @param  \ck/plenty-client\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates (optional)
+     * @param  \ck\Model\RestListingsLayoutTemplatesPostRequest|null $_rest_listings_layout_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsLayoutTemplatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2537,7 +2537,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketDirectory[]
+     * @return \ck\Model\ListingMarketDirectory[]
      */
     public function restListingsMarketsDirectoriesGet(
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesGet'][0]
@@ -2556,7 +2556,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketDirectory[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketDirectory[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesGetWithHttpInfo(
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesGet'][0]
@@ -2601,23 +2601,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketDirectory[]' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketDirectory[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketDirectory[]' !== 'string') {
+                        if ('\ck\Model\ListingMarketDirectory[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketDirectory[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketDirectory[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketDirectory[]';
+            $returnType = '\ck\Model\ListingMarketDirectory[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2638,7 +2638,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketDirectory[]',
+                        '\ck\Model\ListingMarketDirectory[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2684,7 +2684,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketDirectory[]';
+        $returnType = '\ck\Model\ListingMarketDirectory[]';
         $request = $this->restListingsMarketsDirectoriesGetRequest($contentType);
 
         return $this->client
@@ -3117,12 +3117,12 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketDirectory
+     * @return \ck\Model\ListingMarketDirectory
      */
     public function restListingsMarketsDirectoriesIdGet(
         int $id,
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesIdGet'][0]
-    ): \ck/plenty-client\Model\ListingMarketDirectory
+    ): \ck\Model\ListingMarketDirectory
     {
         list($response) = $this->restListingsMarketsDirectoriesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -3138,7 +3138,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesIdGetWithHttpInfo(
         int $id,
@@ -3184,23 +3184,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketDirectory' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketDirectory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketDirectory' !== 'string') {
+                        if ('\ck\Model\ListingMarketDirectory' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketDirectory', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketDirectory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketDirectory';
+            $returnType = '\ck\Model\ListingMarketDirectory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3221,7 +3221,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketDirectory',
+                        '\ck\Model\ListingMarketDirectory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3271,7 +3271,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketDirectory';
+        $returnType = '\ck\Model\ListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -3415,18 +3415,18 @@ class ListingApi
      * Update listing market directory
      *
      * @param  int $id The listing market directory ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id _rest_listings_markets_directories_id (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id _rest_listings_markets_directories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketDirectory
+     * @return \ck\Model\ListingMarketDirectory
      */
     public function restListingsMarketsDirectoriesIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsMarketsDirectoriesIdPutRequest $_rest_listings_markets_directories_id = null,
+        ?\ck\Model\RestListingsMarketsDirectoriesIdPutRequest $_rest_listings_markets_directories_id = null,
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesIdPut'][0]
-    ): \ck/plenty-client\Model\ListingMarketDirectory
+    ): \ck\Model\ListingMarketDirectory
     {
         list($response) = $this->restListingsMarketsDirectoriesIdPutWithHttpInfo($id, $_rest_listings_markets_directories_id, $contentType);
         return $response;
@@ -3438,16 +3438,16 @@ class ListingApi
      * Update listing market directory
      *
      * @param  int $id The listing market directory ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsMarketsDirectoriesIdPutRequest $_rest_listings_markets_directories_id = null,
+        ?\ck\Model\RestListingsMarketsDirectoriesIdPutRequest $_rest_listings_markets_directories_id = null,
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesIdPut'][0]
     ): array
     {
@@ -3490,23 +3490,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketDirectory' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketDirectory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketDirectory' !== 'string') {
+                        if ('\ck\Model\ListingMarketDirectory' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketDirectory', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketDirectory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketDirectory';
+            $returnType = '\ck\Model\ListingMarketDirectory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3527,7 +3527,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketDirectory',
+                        '\ck\Model\ListingMarketDirectory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3543,7 +3543,7 @@ class ListingApi
      * Update listing market directory
      *
      * @param  int $id The listing market directory ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3551,7 +3551,7 @@ class ListingApi
      */
     public function restListingsMarketsDirectoriesIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsMarketsDirectoriesIdPutRequest $_rest_listings_markets_directories_id = null,
+        ?\ck\Model\RestListingsMarketsDirectoriesIdPutRequest $_rest_listings_markets_directories_id = null,
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesIdPut'][0]
     ): PromiseInterface
     {
@@ -3569,7 +3569,7 @@ class ListingApi
      * Update listing market directory
      *
      * @param  int $id The listing market directory ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3581,7 +3581,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketDirectory';
+        $returnType = '\ck\Model\ListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesIdPutRequest($id, $_rest_listings_markets_directories_id, $contentType);
 
         return $this->client
@@ -3624,7 +3624,7 @@ class ListingApi
      * Create request for operation 'restListingsMarketsDirectoriesIdPut'
      *
      * @param  int $id The listing market directory ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesIdPutRequest|null $_rest_listings_markets_directories_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3734,17 +3734,17 @@ class ListingApi
      *
      * Create listing market directory
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories _rest_listings_markets_directories (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories _rest_listings_markets_directories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketDirectory
+     * @return \ck\Model\ListingMarketDirectory
      */
     public function restListingsMarketsDirectoriesPost(
-        ?\ck/plenty-client\Model\RestListingsMarketsDirectoriesPostRequest $_rest_listings_markets_directories = null,
+        ?\ck\Model\RestListingsMarketsDirectoriesPostRequest $_rest_listings_markets_directories = null,
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesPost'][0]
-    ): \ck/plenty-client\Model\ListingMarketDirectory
+    ): \ck\Model\ListingMarketDirectory
     {
         list($response) = $this->restListingsMarketsDirectoriesPostWithHttpInfo($_rest_listings_markets_directories, $contentType);
         return $response;
@@ -3755,15 +3755,15 @@ class ListingApi
      *
      * Create listing market directory
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketDirectory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsDirectoriesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestListingsMarketsDirectoriesPostRequest $_rest_listings_markets_directories = null,
+        ?\ck\Model\RestListingsMarketsDirectoriesPostRequest $_rest_listings_markets_directories = null,
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesPost'][0]
     ): array
     {
@@ -3806,23 +3806,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketDirectory' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketDirectory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketDirectory' !== 'string') {
+                        if ('\ck\Model\ListingMarketDirectory' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketDirectory', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketDirectory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketDirectory';
+            $returnType = '\ck\Model\ListingMarketDirectory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3843,7 +3843,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketDirectory',
+                        '\ck\Model\ListingMarketDirectory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3858,14 +3858,14 @@ class ListingApi
      *
      * Create listing market directory
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restListingsMarketsDirectoriesPostAsync(
-        ?\ck/plenty-client\Model\RestListingsMarketsDirectoriesPostRequest $_rest_listings_markets_directories = null,
+        ?\ck\Model\RestListingsMarketsDirectoriesPostRequest $_rest_listings_markets_directories = null,
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesPost'][0]
     ): PromiseInterface
     {
@@ -3882,7 +3882,7 @@ class ListingApi
      *
      * Create listing market directory
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3893,7 +3893,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsDirectoriesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketDirectory';
+        $returnType = '\ck\Model\ListingMarketDirectory';
         $request = $this->restListingsMarketsDirectoriesPostRequest($_rest_listings_markets_directories, $contentType);
 
         return $this->client
@@ -3935,7 +3935,7 @@ class ListingApi
     /**
      * Create request for operation 'restListingsMarketsDirectoriesPost'
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories (optional)
+     * @param  \ck\Model\RestListingsMarketsDirectoriesPostRequest|null $_rest_listings_markets_directories (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsDirectoriesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4043,7 +4043,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsMarketsGet200Response
+     * @return \ck\Model\RestListingsMarketsGet200Response
      */
     public function restListingsMarketsFindGet(
         ?int $page = null,
@@ -4057,7 +4057,7 @@ class ListingApi
         ?int $shipping_profile_id = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsMarketsFindGet'][0]
-    ): \ck/plenty-client\Model\RestListingsMarketsGet200Response
+    ): \ck\Model\RestListingsMarketsGet200Response
     {
         list($response) = $this->restListingsMarketsFindGetWithHttpInfo($page, $items_per_page, $id, $variations, $referrer_id, $credentials_id, $directory_id, $item_id, $shipping_profile_id, $with, $contentType);
         return $response;
@@ -4082,7 +4082,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsMarketsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsMarketsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsFindGetWithHttpInfo(
         ?int $page = null,
@@ -4137,23 +4137,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsMarketsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsMarketsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsMarketsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsMarketsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsMarketsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsMarketsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsMarketsGet200Response';
+            $returnType = '\ck\Model\RestListingsMarketsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4174,7 +4174,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsMarketsGet200Response',
+                        '\ck\Model\RestListingsMarketsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4260,7 +4260,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsFindGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsMarketsGet200Response';
+        $returnType = '\ck\Model\RestListingsMarketsGet200Response';
         $request = $this->restListingsMarketsFindGetRequest($page, $items_per_page, $id, $variations, $referrer_id, $credentials_id, $directory_id, $item_id, $shipping_profile_id, $with, $contentType);
 
         return $this->client
@@ -4530,7 +4530,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsMarketsGet200Response
+     * @return \ck\Model\RestListingsMarketsGet200Response
      */
     public function restListingsMarketsGet(
         ?int $page = null,
@@ -4554,7 +4554,7 @@ class ListingApi
         ?string $updated_at_to = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsMarketsGet'][0]
-    ): \ck/plenty-client\Model\RestListingsMarketsGet200Response
+    ): \ck\Model\RestListingsMarketsGet200Response
     {
         list($response) = $this->restListingsMarketsGetWithHttpInfo($page, $items_per_page, $id, $variation_id, $variations, $referrer_id, $credentials_id, $directory_id, $verified, $duration, $listing_id, $item_id, $listing_type_id, $stock_dependence_type_id, $status, $stock_condition, $shipping_profile_id, $updated_at_from, $updated_at_to, $with, $contentType);
         return $response;
@@ -4589,7 +4589,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsMarketsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsMarketsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsGetWithHttpInfo(
         ?int $page = null,
@@ -4654,23 +4654,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsMarketsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsMarketsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsMarketsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsMarketsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsMarketsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsMarketsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsMarketsGet200Response';
+            $returnType = '\ck\Model\RestListingsMarketsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4691,7 +4691,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsMarketsGet200Response',
+                        '\ck\Model\RestListingsMarketsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4817,7 +4817,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsMarketsGet200Response';
+        $returnType = '\ck\Model\RestListingsMarketsGet200Response';
         $request = $this->restListingsMarketsGetRequest($page, $items_per_page, $id, $variation_id, $variations, $referrer_id, $credentials_id, $directory_id, $verified, $duration, $listing_id, $item_id, $listing_type_id, $stock_dependence_type_id, $status, $stock_condition, $shipping_profile_id, $updated_at_from, $updated_at_to, $with, $contentType);
 
         return $this->client
@@ -5217,7 +5217,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response
+     * @return \ck\Model\RestListingsMarketsHistoriesGet200Response
      */
     public function restListingsMarketsHistoriesGet(
         ?int $page = null,
@@ -5251,7 +5251,7 @@ class ListingApi
         ?string $is_click_and_collect = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsMarketsHistoriesGet'][0]
-    ): \ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response
+    ): \ck\Model\RestListingsMarketsHistoriesGet200Response
     {
         list($response) = $this->restListingsMarketsHistoriesGetWithHttpInfo($page, $items_per_page, $listing_market_id, $variation_id, $variations, $referrer_id, $credentials_id, $directory_id, $verified, $duration, $external_id, $listing_id, $item_id, $listing_type_id, $stock_dependence_type_id, $status_id, $stock_condition, $updated_at_from, $updated_at_to, $text_data, $first_platform_category_id, $second_platform_category_id, $first_shop_category_id, $second_shop_category_id, $third_shop_category_id, $shipping_profile_id, $last_sale, $is_ebay_plus, $is_click_and_collect, $with, $contentType);
         return $response;
@@ -5296,7 +5296,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsMarketsHistoriesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsHistoriesGetWithHttpInfo(
         ?int $page = null,
@@ -5371,23 +5371,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsMarketsHistoriesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsMarketsHistoriesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsMarketsHistoriesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response';
+            $returnType = '\ck\Model\RestListingsMarketsHistoriesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5408,7 +5408,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response',
+                        '\ck\Model\RestListingsMarketsHistoriesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5574,7 +5574,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsHistoriesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsMarketsHistoriesGet200Response';
+        $returnType = '\ck\Model\RestListingsMarketsHistoriesGet200Response';
         $request = $this->restListingsMarketsHistoriesGetRequest($page, $items_per_page, $listing_market_id, $variation_id, $variations, $referrer_id, $credentials_id, $directory_id, $verified, $duration, $external_id, $listing_id, $item_id, $listing_type_id, $stock_dependence_type_id, $status_id, $stock_condition, $updated_at_from, $updated_at_to, $text_data, $first_platform_category_id, $second_platform_category_id, $first_shop_category_id, $second_shop_category_id, $third_shop_category_id, $shipping_profile_id, $last_sale, $is_ebay_plus, $is_click_and_collect, $with, $contentType);
 
         return $this->client
@@ -6066,13 +6066,13 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketHistory
+     * @return \ck\Model\ListingMarketHistory
      */
     public function restListingsMarketsHistoriesIdGet(
         int $id,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsMarketsHistoriesIdGet'][0]
-    ): \ck/plenty-client\Model\ListingMarketHistory
+    ): \ck\Model\ListingMarketHistory
     {
         list($response) = $this->restListingsMarketsHistoriesIdGetWithHttpInfo($id, $with, $contentType);
         return $response;
@@ -6089,7 +6089,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketHistory, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketHistory, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsHistoriesIdGetWithHttpInfo(
         int $id,
@@ -6136,23 +6136,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketHistory' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketHistory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketHistory' !== 'string') {
+                        if ('\ck\Model\ListingMarketHistory' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketHistory', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketHistory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketHistory';
+            $returnType = '\ck\Model\ListingMarketHistory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6173,7 +6173,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketHistory',
+                        '\ck\Model\ListingMarketHistory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6227,7 +6227,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsHistoriesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketHistory';
+        $returnType = '\ck\Model\ListingMarketHistory';
         $request = $this->restListingsMarketsHistoriesIdGetRequest($id, $with, $contentType);
 
         return $this->client
@@ -6690,13 +6690,13 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarket
+     * @return \ck\Model\ListingMarket
      */
     public function restListingsMarketsIdGet(
         int $id,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsMarketsIdGet'][0]
-    ): \ck/plenty-client\Model\ListingMarket
+    ): \ck\Model\ListingMarket
     {
         list($response) = $this->restListingsMarketsIdGetWithHttpInfo($id, $with, $contentType);
         return $response;
@@ -6713,7 +6713,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsIdGetWithHttpInfo(
         int $id,
@@ -6760,23 +6760,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarket' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarket' !== 'string') {
+                        if ('\ck\Model\ListingMarket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarket';
+            $returnType = '\ck\Model\ListingMarket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6797,7 +6797,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarket',
+                        '\ck\Model\ListingMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6851,7 +6851,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarket';
+        $returnType = '\ck\Model\ListingMarket';
         $request = $this->restListingsMarketsIdGetRequest($id, $with, $contentType);
 
         return $this->client
@@ -7008,19 +7008,19 @@ class ListingApi
      *
      * @param  int $id The listing market ID. (required)
      * @param  int $referrer_id The referrer ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id _rest_listings_markets_id (optional)
+     * @param  \ck\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id _rest_listings_markets_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarket
+     * @return \ck\Model\ListingMarket
      */
     public function restListingsMarketsIdPut(
         int $id,
         int $referrer_id,
-        ?\ck/plenty-client\Model\RestListingsMarketsIdPutRequest $_rest_listings_markets_id = null,
+        ?\ck\Model\RestListingsMarketsIdPutRequest $_rest_listings_markets_id = null,
         string $contentType = self::contentTypes['restListingsMarketsIdPut'][0]
-    ): \ck/plenty-client\Model\ListingMarket
+    ): \ck\Model\ListingMarket
     {
         list($response) = $this->restListingsMarketsIdPutWithHttpInfo($id, $referrer_id, $_rest_listings_markets_id, $contentType);
         return $response;
@@ -7033,17 +7033,17 @@ class ListingApi
      *
      * @param  int $id The listing market ID. (required)
      * @param  int $referrer_id The referrer ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id (optional)
+     * @param  \ck\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsIdPutWithHttpInfo(
         int $id,
         int $referrer_id,
-        ?\ck/plenty-client\Model\RestListingsMarketsIdPutRequest $_rest_listings_markets_id = null,
+        ?\ck\Model\RestListingsMarketsIdPutRequest $_rest_listings_markets_id = null,
         string $contentType = self::contentTypes['restListingsMarketsIdPut'][0]
     ): array
     {
@@ -7086,23 +7086,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarket' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarket' !== 'string') {
+                        if ('\ck\Model\ListingMarket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarket';
+            $returnType = '\ck\Model\ListingMarket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7123,7 +7123,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarket',
+                        '\ck\Model\ListingMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7140,7 +7140,7 @@ class ListingApi
      *
      * @param  int $id The listing market ID. (required)
      * @param  int $referrer_id The referrer ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id (optional)
+     * @param  \ck\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7149,7 +7149,7 @@ class ListingApi
     public function restListingsMarketsIdPutAsync(
         int $id,
         int $referrer_id,
-        ?\ck/plenty-client\Model\RestListingsMarketsIdPutRequest $_rest_listings_markets_id = null,
+        ?\ck\Model\RestListingsMarketsIdPutRequest $_rest_listings_markets_id = null,
         string $contentType = self::contentTypes['restListingsMarketsIdPut'][0]
     ): PromiseInterface
     {
@@ -7168,7 +7168,7 @@ class ListingApi
      *
      * @param  int $id The listing market ID. (required)
      * @param  int $referrer_id The referrer ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id (optional)
+     * @param  \ck\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7181,7 +7181,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarket';
+        $returnType = '\ck\Model\ListingMarket';
         $request = $this->restListingsMarketsIdPutRequest($id, $referrer_id, $_rest_listings_markets_id, $contentType);
 
         return $this->client
@@ -7225,7 +7225,7 @@ class ListingApi
      *
      * @param  int $id The listing market ID. (required)
      * @param  int $referrer_id The referrer ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id (optional)
+     * @param  \ck\Model\RestListingsMarketsIdPutRequest|null $_rest_listings_markets_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7365,7 +7365,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsMarketsInfosGet200Response
+     * @return \ck\Model\RestListingsMarketsInfosGet200Response
      */
     public function restListingsMarketsInfosGet(
         ?int $page = null,
@@ -7378,7 +7378,7 @@ class ListingApi
         ?string $created_at_to = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsMarketsInfosGet'][0]
-    ): \ck/plenty-client\Model\RestListingsMarketsInfosGet200Response
+    ): \ck\Model\RestListingsMarketsInfosGet200Response
     {
         list($response) = $this->restListingsMarketsInfosGetWithHttpInfo($page, $items_per_page, $id, $listing_market_id, $type, $code, $created_at_from, $created_at_to, $with, $contentType);
         return $response;
@@ -7402,7 +7402,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsMarketsInfosGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsMarketsInfosGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsInfosGetWithHttpInfo(
         ?int $page = null,
@@ -7456,23 +7456,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsMarketsInfosGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsMarketsInfosGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsMarketsInfosGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsMarketsInfosGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsMarketsInfosGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsMarketsInfosGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsMarketsInfosGet200Response';
+            $returnType = '\ck\Model\RestListingsMarketsInfosGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7493,7 +7493,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsMarketsInfosGet200Response',
+                        '\ck\Model\RestListingsMarketsInfosGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7575,7 +7575,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsInfosGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsMarketsInfosGet200Response';
+        $returnType = '\ck\Model\RestListingsMarketsInfosGet200Response';
         $request = $this->restListingsMarketsInfosGetRequest($page, $items_per_page, $id, $listing_market_id, $type, $code, $created_at_from, $created_at_to, $with, $contentType);
 
         return $this->client
@@ -7809,17 +7809,17 @@ class ListingApi
      *
      * Gets all ListingMarketItemSpecifics.
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find _rest_listings_markets_item_specifics_find (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find _rest_listings_markets_item_specifics_find (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsFindGet'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response
+     * @return \ck\Model\RestListingsMarketsItemSpecificsFindGet200Response
      */
     public function restListingsMarketsItemSpecificsFindGet(
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics_find = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics_find = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsFindGet'][0]
-    ): \ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response
+    ): \ck\Model\RestListingsMarketsItemSpecificsFindGet200Response
     {
         list($response) = $this->restListingsMarketsItemSpecificsFindGetWithHttpInfo($_rest_listings_markets_item_specifics_find, $contentType);
         return $response;
@@ -7830,15 +7830,15 @@ class ListingApi
      *
      * Gets all ListingMarketItemSpecifics.
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsFindGet'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsMarketsItemSpecificsFindGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsItemSpecificsFindGetWithHttpInfo(
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics_find = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics_find = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsFindGet'][0]
     ): array
     {
@@ -7881,23 +7881,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsMarketsItemSpecificsFindGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsMarketsItemSpecificsFindGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsMarketsItemSpecificsFindGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response';
+            $returnType = '\ck\Model\RestListingsMarketsItemSpecificsFindGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7918,7 +7918,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response',
+                        '\ck\Model\RestListingsMarketsItemSpecificsFindGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7933,14 +7933,14 @@ class ListingApi
      *
      * Gets all ListingMarketItemSpecifics.
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsFindGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restListingsMarketsItemSpecificsFindGetAsync(
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics_find = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics_find = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsFindGet'][0]
     ): PromiseInterface
     {
@@ -7957,7 +7957,7 @@ class ListingApi
      *
      * Gets all ListingMarketItemSpecifics.
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsFindGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7968,7 +7968,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsFindGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsMarketsItemSpecificsFindGet200Response';
+        $returnType = '\ck\Model\RestListingsMarketsItemSpecificsFindGet200Response';
         $request = $this->restListingsMarketsItemSpecificsFindGetRequest($_rest_listings_markets_item_specifics_find, $contentType);
 
         return $this->client
@@ -8010,7 +8010,7 @@ class ListingApi
     /**
      * Create request for operation 'restListingsMarketsItemSpecificsFindGet'
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics_find (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsFindGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8104,17 +8104,17 @@ class ListingApi
      *
      * Gets all ListingMarketItemSpecifics.
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics _rest_listings_markets_item_specifics (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics _rest_listings_markets_item_specifics (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsGet'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketItemSpecific
+     * @return \ck\Model\ListingMarketItemSpecific
      */
     public function restListingsMarketsItemSpecificsGet(
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsGet'][0]
-    ): \ck/plenty-client\Model\ListingMarketItemSpecific
+    ): \ck\Model\ListingMarketItemSpecific
     {
         list($response) = $this->restListingsMarketsItemSpecificsGetWithHttpInfo($_rest_listings_markets_item_specifics, $contentType);
         return $response;
@@ -8125,15 +8125,15 @@ class ListingApi
      *
      * Gets all ListingMarketItemSpecifics.
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsGet'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsItemSpecificsGetWithHttpInfo(
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsGet'][0]
     ): array
     {
@@ -8176,23 +8176,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketItemSpecific' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketItemSpecific' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketItemSpecific' !== 'string') {
+                        if ('\ck\Model\ListingMarketItemSpecific' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketItemSpecific', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketItemSpecific', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketItemSpecific';
+            $returnType = '\ck\Model\ListingMarketItemSpecific';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8213,7 +8213,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketItemSpecific',
+                        '\ck\Model\ListingMarketItemSpecific',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8228,14 +8228,14 @@ class ListingApi
      *
      * Gets all ListingMarketItemSpecifics.
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restListingsMarketsItemSpecificsGetAsync(
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsGetRequest $_rest_listings_markets_item_specifics = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsGet'][0]
     ): PromiseInterface
     {
@@ -8252,7 +8252,7 @@ class ListingApi
      *
      * Gets all ListingMarketItemSpecifics.
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8263,7 +8263,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketItemSpecific';
+        $returnType = '\ck\Model\ListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsGetRequest($_rest_listings_markets_item_specifics, $contentType);
 
         return $this->client
@@ -8305,7 +8305,7 @@ class ListingApi
     /**
      * Create request for operation 'restListingsMarketsItemSpecificsGet'
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsGetRequest|null $_rest_listings_markets_item_specifics (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsGet'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8706,12 +8706,12 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketItemSpecific
+     * @return \ck\Model\ListingMarketItemSpecific
      */
     public function restListingsMarketsItemSpecificsIdGet(
         int $id,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsIdGet'][0]
-    ): \ck/plenty-client\Model\ListingMarketItemSpecific
+    ): \ck\Model\ListingMarketItemSpecific
     {
         list($response) = $this->restListingsMarketsItemSpecificsIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -8727,7 +8727,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsItemSpecificsIdGetWithHttpInfo(
         int $id,
@@ -8773,23 +8773,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketItemSpecific' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketItemSpecific' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketItemSpecific' !== 'string') {
+                        if ('\ck\Model\ListingMarketItemSpecific' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketItemSpecific', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketItemSpecific', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketItemSpecific';
+            $returnType = '\ck\Model\ListingMarketItemSpecific';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8810,7 +8810,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketItemSpecific',
+                        '\ck\Model\ListingMarketItemSpecific',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8860,7 +8860,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketItemSpecific';
+        $returnType = '\ck\Model\ListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsIdGetRequest($id, $contentType);
 
         return $this->client
@@ -9004,18 +9004,18 @@ class ListingApi
      * Updates a ListingMarketItemSpecific.
      *
      * @param  int $id id (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id _rest_listings_markets_item_specifics_id (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id _rest_listings_markets_item_specifics_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketItemSpecific
+     * @return \ck\Model\ListingMarketItemSpecific
      */
     public function restListingsMarketsItemSpecificsIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsIdPutRequest $_rest_listings_markets_item_specifics_id = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsIdPutRequest $_rest_listings_markets_item_specifics_id = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsIdPut'][0]
-    ): \ck/plenty-client\Model\ListingMarketItemSpecific
+    ): \ck\Model\ListingMarketItemSpecific
     {
         list($response) = $this->restListingsMarketsItemSpecificsIdPutWithHttpInfo($id, $_rest_listings_markets_item_specifics_id, $contentType);
         return $response;
@@ -9027,16 +9027,16 @@ class ListingApi
      * Updates a ListingMarketItemSpecific.
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketItemSpecific, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsItemSpecificsIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsIdPutRequest $_rest_listings_markets_item_specifics_id = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsIdPutRequest $_rest_listings_markets_item_specifics_id = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsIdPut'][0]
     ): array
     {
@@ -9079,23 +9079,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketItemSpecific' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketItemSpecific' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketItemSpecific' !== 'string') {
+                        if ('\ck\Model\ListingMarketItemSpecific' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketItemSpecific', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketItemSpecific', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketItemSpecific';
+            $returnType = '\ck\Model\ListingMarketItemSpecific';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9116,7 +9116,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketItemSpecific',
+                        '\ck\Model\ListingMarketItemSpecific',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9132,7 +9132,7 @@ class ListingApi
      * Updates a ListingMarketItemSpecific.
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9140,7 +9140,7 @@ class ListingApi
      */
     public function restListingsMarketsItemSpecificsIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsMarketsItemSpecificsIdPutRequest $_rest_listings_markets_item_specifics_id = null,
+        ?\ck\Model\RestListingsMarketsItemSpecificsIdPutRequest $_rest_listings_markets_item_specifics_id = null,
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsIdPut'][0]
     ): PromiseInterface
     {
@@ -9158,7 +9158,7 @@ class ListingApi
      * Updates a ListingMarketItemSpecific.
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9170,7 +9170,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsItemSpecificsIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketItemSpecific';
+        $returnType = '\ck\Model\ListingMarketItemSpecific';
         $request = $this->restListingsMarketsItemSpecificsIdPutRequest($id, $_rest_listings_markets_item_specifics_id, $contentType);
 
         return $this->client
@@ -9213,7 +9213,7 @@ class ListingApi
      * Create request for operation 'restListingsMarketsItemSpecificsIdPut'
      *
      * @param  int $id (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id (optional)
+     * @param  \ck\Model\RestListingsMarketsItemSpecificsIdPutRequest|null $_rest_listings_markets_item_specifics_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsItemSpecificsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9323,15 +9323,15 @@ class ListingApi
      *
      * Create new listing market
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets _rest_listings_markets (optional)
+     * @param  \ck\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets _rest_listings_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarket[]
+     * @return \ck\Model\ListingMarket[]
      */
     public function restListingsMarketsPost(
-        ?\ck/plenty-client\Model\RestListingsMarketsPostRequest $_rest_listings_markets = null,
+        ?\ck\Model\RestListingsMarketsPostRequest $_rest_listings_markets = null,
         string $contentType = self::contentTypes['restListingsMarketsPost'][0]
     ): array
     {
@@ -9344,15 +9344,15 @@ class ListingApi
      *
      * Create new listing market
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets (optional)
+     * @param  \ck\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarket[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarket[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestListingsMarketsPostRequest $_rest_listings_markets = null,
+        ?\ck\Model\RestListingsMarketsPostRequest $_rest_listings_markets = null,
         string $contentType = self::contentTypes['restListingsMarketsPost'][0]
     ): array
     {
@@ -9395,23 +9395,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarket[]' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarket[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarket[]' !== 'string') {
+                        if ('\ck\Model\ListingMarket[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarket[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarket[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarket[]';
+            $returnType = '\ck\Model\ListingMarket[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9432,7 +9432,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarket[]',
+                        '\ck\Model\ListingMarket[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9447,14 +9447,14 @@ class ListingApi
      *
      * Create new listing market
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets (optional)
+     * @param  \ck\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restListingsMarketsPostAsync(
-        ?\ck/plenty-client\Model\RestListingsMarketsPostRequest $_rest_listings_markets = null,
+        ?\ck\Model\RestListingsMarketsPostRequest $_rest_listings_markets = null,
         string $contentType = self::contentTypes['restListingsMarketsPost'][0]
     ): PromiseInterface
     {
@@ -9471,7 +9471,7 @@ class ListingApi
      *
      * Create new listing market
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets (optional)
+     * @param  \ck\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9482,7 +9482,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarket[]';
+        $returnType = '\ck\Model\ListingMarket[]';
         $request = $this->restListingsMarketsPostRequest($_rest_listings_markets, $contentType);
 
         return $this->client
@@ -9524,7 +9524,7 @@ class ListingApi
     /**
      * Create request for operation 'restListingsMarketsPost'
      *
-     * @param  \ck/plenty-client\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets (optional)
+     * @param  \ck\Model\RestListingsMarketsPostRequest|null $_rest_listings_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9628,7 +9628,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsMarketsTextsGet200Response
+     * @return \ck\Model\RestListingsMarketsTextsGet200Response
      */
     public function restListingsMarketsTextsGet(
         ?int $id = null,
@@ -9638,7 +9638,7 @@ class ListingApi
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restListingsMarketsTextsGet'][0]
-    ): \ck/plenty-client\Model\RestListingsMarketsTextsGet200Response
+    ): \ck\Model\RestListingsMarketsTextsGet200Response
     {
         list($response) = $this->restListingsMarketsTextsGetWithHttpInfo($id, $listing_market_id, $language, $contains, $page, $items_per_page, $contentType);
         return $response;
@@ -9659,7 +9659,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsMarketsTextsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsMarketsTextsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsTextsGetWithHttpInfo(
         ?int $id = null,
@@ -9710,23 +9710,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsMarketsTextsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsMarketsTextsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsMarketsTextsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsMarketsTextsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsMarketsTextsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsMarketsTextsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsMarketsTextsGet200Response';
+            $returnType = '\ck\Model\RestListingsMarketsTextsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9747,7 +9747,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsMarketsTextsGet200Response',
+                        '\ck\Model\RestListingsMarketsTextsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9817,7 +9817,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsTextsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsMarketsTextsGet200Response';
+        $returnType = '\ck\Model\RestListingsMarketsTextsGet200Response';
         $request = $this->restListingsMarketsTextsGetRequest($id, $listing_market_id, $language, $contains, $page, $items_per_page, $contentType);
 
         return $this->client
@@ -10374,12 +10374,12 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketText
+     * @return \ck\Model\ListingMarketText
      */
     public function restListingsMarketsTextsIdGet(
         int $id,
         string $contentType = self::contentTypes['restListingsMarketsTextsIdGet'][0]
-    ): \ck/plenty-client\Model\ListingMarketText
+    ): \ck\Model\ListingMarketText
     {
         list($response) = $this->restListingsMarketsTextsIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -10395,7 +10395,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsTextsIdGetWithHttpInfo(
         int $id,
@@ -10441,23 +10441,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketText' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketText' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketText' !== 'string') {
+                        if ('\ck\Model\ListingMarketText' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketText', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketText', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketText';
+            $returnType = '\ck\Model\ListingMarketText';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10478,7 +10478,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketText',
+                        '\ck\Model\ListingMarketText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10528,7 +10528,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsTextsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketText';
+        $returnType = '\ck\Model\ListingMarketText';
         $request = $this->restListingsMarketsTextsIdGetRequest($id, $contentType);
 
         return $this->client
@@ -10673,19 +10673,19 @@ class ListingApi
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  string $lang The listing market text language that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang _rest_listings_markets_texts_listing_market_id_lang (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang _rest_listings_markets_texts_listing_market_id_lang (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketText
+     * @return \ck\Model\ListingMarketText
      */
     public function restListingsMarketsTextsListingMarketIdLangPut(
         int $listing_market_id,
         string $lang,
-        ?\ck/plenty-client\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest $_rest_listings_markets_texts_listing_market_id_lang = null,
+        ?\ck\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest $_rest_listings_markets_texts_listing_market_id_lang = null,
         string $contentType = self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'][0]
-    ): \ck/plenty-client\Model\ListingMarketText
+    ): \ck\Model\ListingMarketText
     {
         list($response) = $this->restListingsMarketsTextsListingMarketIdLangPutWithHttpInfo($listing_market_id, $lang, $_rest_listings_markets_texts_listing_market_id_lang, $contentType);
         return $response;
@@ -10698,17 +10698,17 @@ class ListingApi
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  string $lang The listing market text language that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsTextsListingMarketIdLangPutWithHttpInfo(
         int $listing_market_id,
         string $lang,
-        ?\ck/plenty-client\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest $_rest_listings_markets_texts_listing_market_id_lang = null,
+        ?\ck\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest $_rest_listings_markets_texts_listing_market_id_lang = null,
         string $contentType = self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'][0]
     ): array
     {
@@ -10751,23 +10751,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketText' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketText' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketText' !== 'string') {
+                        if ('\ck\Model\ListingMarketText' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketText', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketText', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketText';
+            $returnType = '\ck\Model\ListingMarketText';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10788,7 +10788,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketText',
+                        '\ck\Model\ListingMarketText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10805,7 +10805,7 @@ class ListingApi
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  string $lang The listing market text language that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10814,7 +10814,7 @@ class ListingApi
     public function restListingsMarketsTextsListingMarketIdLangPutAsync(
         int $listing_market_id,
         string $lang,
-        ?\ck/plenty-client\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest $_rest_listings_markets_texts_listing_market_id_lang = null,
+        ?\ck\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest $_rest_listings_markets_texts_listing_market_id_lang = null,
         string $contentType = self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'][0]
     ): PromiseInterface
     {
@@ -10833,7 +10833,7 @@ class ListingApi
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  string $lang The listing market text language that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10846,7 +10846,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketText';
+        $returnType = '\ck\Model\ListingMarketText';
         $request = $this->restListingsMarketsTextsListingMarketIdLangPutRequest($listing_market_id, $lang, $_rest_listings_markets_texts_listing_market_id_lang, $contentType);
 
         return $this->client
@@ -10890,7 +10890,7 @@ class ListingApi
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
      * @param  string $lang The listing market text language that should be updated. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsListingMarketIdLangPutRequest|null $_rest_listings_markets_texts_listing_market_id_lang (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsListingMarketIdLangPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11017,18 +11017,18 @@ class ListingApi
      * Create a listing market text
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts _rest_listings_markets_texts (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts _rest_listings_markets_texts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingMarketText
+     * @return \ck\Model\ListingMarketText
      */
     public function restListingsMarketsTextsPost(
         int $listing_market_id,
-        ?\ck/plenty-client\Model\RestListingsMarketsTextsPostRequest $_rest_listings_markets_texts = null,
+        ?\ck\Model\RestListingsMarketsTextsPostRequest $_rest_listings_markets_texts = null,
         string $contentType = self::contentTypes['restListingsMarketsTextsPost'][0]
-    ): \ck/plenty-client\Model\ListingMarketText
+    ): \ck\Model\ListingMarketText
     {
         list($response) = $this->restListingsMarketsTextsPostWithHttpInfo($listing_market_id, $_rest_listings_markets_texts, $contentType);
         return $response;
@@ -11040,16 +11040,16 @@ class ListingApi
      * Create a listing market text
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingMarketText, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingMarketText, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsMarketsTextsPostWithHttpInfo(
         int $listing_market_id,
-        ?\ck/plenty-client\Model\RestListingsMarketsTextsPostRequest $_rest_listings_markets_texts = null,
+        ?\ck\Model\RestListingsMarketsTextsPostRequest $_rest_listings_markets_texts = null,
         string $contentType = self::contentTypes['restListingsMarketsTextsPost'][0]
     ): array
     {
@@ -11092,23 +11092,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingMarketText' === '\SplFileObject') {
+                    if ('\ck\Model\ListingMarketText' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingMarketText' !== 'string') {
+                        if ('\ck\Model\ListingMarketText' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingMarketText', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingMarketText', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingMarketText';
+            $returnType = '\ck\Model\ListingMarketText';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11129,7 +11129,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingMarketText',
+                        '\ck\Model\ListingMarketText',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11145,7 +11145,7 @@ class ListingApi
      * Create a listing market text
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11153,7 +11153,7 @@ class ListingApi
      */
     public function restListingsMarketsTextsPostAsync(
         int $listing_market_id,
-        ?\ck/plenty-client\Model\RestListingsMarketsTextsPostRequest $_rest_listings_markets_texts = null,
+        ?\ck\Model\RestListingsMarketsTextsPostRequest $_rest_listings_markets_texts = null,
         string $contentType = self::contentTypes['restListingsMarketsTextsPost'][0]
     ): PromiseInterface
     {
@@ -11171,7 +11171,7 @@ class ListingApi
      * Create a listing market text
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11183,7 +11183,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsMarketsTextsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingMarketText';
+        $returnType = '\ck\Model\ListingMarketText';
         $request = $this->restListingsMarketsTextsPostRequest($listing_market_id, $_rest_listings_markets_texts, $contentType);
 
         return $this->client
@@ -11226,7 +11226,7 @@ class ListingApi
      * Create request for operation 'restListingsMarketsTextsPost'
      *
      * @param  int $listing_market_id The listing market ID this text belongs to. (required)
-     * @param  \ck/plenty-client\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts (optional)
+     * @param  \ck\Model\RestListingsMarketsTextsPostRequest|null $_rest_listings_markets_texts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsMarketsTextsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11644,12 +11644,12 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OptionTemplate
+     * @return \ck\Model\OptionTemplate
      */
     public function restListingsOptionTemplatesIdGet(
         int $id,
         string $contentType = self::contentTypes['restListingsOptionTemplatesIdGet'][0]
-    ): \ck/plenty-client\Model\OptionTemplate
+    ): \ck\Model\OptionTemplate
     {
         list($response) = $this->restListingsOptionTemplatesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -11665,7 +11665,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OptionTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OptionTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsOptionTemplatesIdGetWithHttpInfo(
         int $id,
@@ -11711,23 +11711,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OptionTemplate' === '\SplFileObject') {
+                    if ('\ck\Model\OptionTemplate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OptionTemplate' !== 'string') {
+                        if ('\ck\Model\OptionTemplate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OptionTemplate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OptionTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OptionTemplate';
+            $returnType = '\ck\Model\OptionTemplate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11748,7 +11748,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OptionTemplate',
+                        '\ck\Model\OptionTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11798,7 +11798,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsOptionTemplatesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OptionTemplate';
+        $returnType = '\ck\Model\OptionTemplate';
         $request = $this->restListingsOptionTemplatesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -11942,18 +11942,18 @@ class ListingApi
      * Update option template
      *
      * @param  int $id The option template ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id _rest_listings_option_templates_id (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id _rest_listings_option_templates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OptionTemplate
+     * @return \ck\Model\OptionTemplate
      */
     public function restListingsOptionTemplatesIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsOptionTemplatesIdPutRequest $_rest_listings_option_templates_id = null,
+        ?\ck\Model\RestListingsOptionTemplatesIdPutRequest $_rest_listings_option_templates_id = null,
         string $contentType = self::contentTypes['restListingsOptionTemplatesIdPut'][0]
-    ): \ck/plenty-client\Model\OptionTemplate
+    ): \ck\Model\OptionTemplate
     {
         list($response) = $this->restListingsOptionTemplatesIdPutWithHttpInfo($id, $_rest_listings_option_templates_id, $contentType);
         return $response;
@@ -11965,16 +11965,16 @@ class ListingApi
      * Update option template
      *
      * @param  int $id The option template ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OptionTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OptionTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsOptionTemplatesIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsOptionTemplatesIdPutRequest $_rest_listings_option_templates_id = null,
+        ?\ck\Model\RestListingsOptionTemplatesIdPutRequest $_rest_listings_option_templates_id = null,
         string $contentType = self::contentTypes['restListingsOptionTemplatesIdPut'][0]
     ): array
     {
@@ -12017,23 +12017,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OptionTemplate' === '\SplFileObject') {
+                    if ('\ck\Model\OptionTemplate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OptionTemplate' !== 'string') {
+                        if ('\ck\Model\OptionTemplate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OptionTemplate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OptionTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OptionTemplate';
+            $returnType = '\ck\Model\OptionTemplate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12054,7 +12054,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OptionTemplate',
+                        '\ck\Model\OptionTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12070,7 +12070,7 @@ class ListingApi
      * Update option template
      *
      * @param  int $id The option template ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12078,7 +12078,7 @@ class ListingApi
      */
     public function restListingsOptionTemplatesIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestListingsOptionTemplatesIdPutRequest $_rest_listings_option_templates_id = null,
+        ?\ck\Model\RestListingsOptionTemplatesIdPutRequest $_rest_listings_option_templates_id = null,
         string $contentType = self::contentTypes['restListingsOptionTemplatesIdPut'][0]
     ): PromiseInterface
     {
@@ -12096,7 +12096,7 @@ class ListingApi
      * Update option template
      *
      * @param  int $id The option template ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12108,7 +12108,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsOptionTemplatesIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OptionTemplate';
+        $returnType = '\ck\Model\OptionTemplate';
         $request = $this->restListingsOptionTemplatesIdPutRequest($id, $_rest_listings_option_templates_id, $contentType);
 
         return $this->client
@@ -12151,7 +12151,7 @@ class ListingApi
      * Create request for operation 'restListingsOptionTemplatesIdPut'
      *
      * @param  int $id The option template ID. (required)
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesIdPutRequest|null $_rest_listings_option_templates_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12261,17 +12261,17 @@ class ListingApi
      *
      * Create option template
      *
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates _rest_listings_option_templates (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates _rest_listings_option_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OptionTemplate
+     * @return \ck\Model\OptionTemplate
      */
     public function restListingsOptionTemplatesPost(
-        ?\ck/plenty-client\Model\RestListingsOptionTemplatesPostRequest $_rest_listings_option_templates = null,
+        ?\ck\Model\RestListingsOptionTemplatesPostRequest $_rest_listings_option_templates = null,
         string $contentType = self::contentTypes['restListingsOptionTemplatesPost'][0]
-    ): \ck/plenty-client\Model\OptionTemplate
+    ): \ck\Model\OptionTemplate
     {
         list($response) = $this->restListingsOptionTemplatesPostWithHttpInfo($_rest_listings_option_templates, $contentType);
         return $response;
@@ -12282,15 +12282,15 @@ class ListingApi
      *
      * Create option template
      *
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OptionTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OptionTemplate, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsOptionTemplatesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestListingsOptionTemplatesPostRequest $_rest_listings_option_templates = null,
+        ?\ck\Model\RestListingsOptionTemplatesPostRequest $_rest_listings_option_templates = null,
         string $contentType = self::contentTypes['restListingsOptionTemplatesPost'][0]
     ): array
     {
@@ -12333,23 +12333,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OptionTemplate' === '\SplFileObject') {
+                    if ('\ck\Model\OptionTemplate' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OptionTemplate' !== 'string') {
+                        if ('\ck\Model\OptionTemplate' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OptionTemplate', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OptionTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OptionTemplate';
+            $returnType = '\ck\Model\OptionTemplate';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12370,7 +12370,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OptionTemplate',
+                        '\ck\Model\OptionTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12385,14 +12385,14 @@ class ListingApi
      *
      * Create option template
      *
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restListingsOptionTemplatesPostAsync(
-        ?\ck/plenty-client\Model\RestListingsOptionTemplatesPostRequest $_rest_listings_option_templates = null,
+        ?\ck\Model\RestListingsOptionTemplatesPostRequest $_rest_listings_option_templates = null,
         string $contentType = self::contentTypes['restListingsOptionTemplatesPost'][0]
     ): PromiseInterface
     {
@@ -12409,7 +12409,7 @@ class ListingApi
      *
      * Create option template
      *
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12420,7 +12420,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsOptionTemplatesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OptionTemplate';
+        $returnType = '\ck\Model\OptionTemplate';
         $request = $this->restListingsOptionTemplatesPostRequest($_rest_listings_option_templates, $contentType);
 
         return $this->client
@@ -12462,7 +12462,7 @@ class ListingApi
     /**
      * Create request for operation 'restListingsOptionTemplatesPost'
      *
-     * @param  \ck/plenty-client\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates (optional)
+     * @param  \ck\Model\RestListingsOptionTemplatesPostRequest|null $_rest_listings_option_templates (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsOptionTemplatesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12833,17 +12833,17 @@ class ListingApi
      *
      * Create new listing
      *
-     * @param  \ck/plenty-client\Model\RestListingsPostRequest|null $_rest_listings _rest_listings (optional)
+     * @param  \ck\Model\RestListingsPostRequest|null $_rest_listings _rest_listings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Listing
+     * @return \ck\Model\Listing
      */
     public function restListingsPost(
-        ?\ck/plenty-client\Model\RestListingsPostRequest $_rest_listings = null,
+        ?\ck\Model\RestListingsPostRequest $_rest_listings = null,
         string $contentType = self::contentTypes['restListingsPost'][0]
-    ): \ck/plenty-client\Model\Listing
+    ): \ck\Model\Listing
     {
         list($response) = $this->restListingsPostWithHttpInfo($_rest_listings, $contentType);
         return $response;
@@ -12854,15 +12854,15 @@ class ListingApi
      *
      * Create new listing
      *
-     * @param  \ck/plenty-client\Model\RestListingsPostRequest|null $_rest_listings (optional)
+     * @param  \ck\Model\RestListingsPostRequest|null $_rest_listings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Listing, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Listing, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestListingsPostRequest $_rest_listings = null,
+        ?\ck\Model\RestListingsPostRequest $_rest_listings = null,
         string $contentType = self::contentTypes['restListingsPost'][0]
     ): array
     {
@@ -12905,23 +12905,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Listing' === '\SplFileObject') {
+                    if ('\ck\Model\Listing' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Listing' !== 'string') {
+                        if ('\ck\Model\Listing' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Listing', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Listing', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Listing';
+            $returnType = '\ck\Model\Listing';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12942,7 +12942,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Listing',
+                        '\ck\Model\Listing',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12957,14 +12957,14 @@ class ListingApi
      *
      * Create new listing
      *
-     * @param  \ck/plenty-client\Model\RestListingsPostRequest|null $_rest_listings (optional)
+     * @param  \ck\Model\RestListingsPostRequest|null $_rest_listings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restListingsPostAsync(
-        ?\ck/plenty-client\Model\RestListingsPostRequest $_rest_listings = null,
+        ?\ck\Model\RestListingsPostRequest $_rest_listings = null,
         string $contentType = self::contentTypes['restListingsPost'][0]
     ): PromiseInterface
     {
@@ -12981,7 +12981,7 @@ class ListingApi
      *
      * Create new listing
      *
-     * @param  \ck/plenty-client\Model\RestListingsPostRequest|null $_rest_listings (optional)
+     * @param  \ck\Model\RestListingsPostRequest|null $_rest_listings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12992,7 +12992,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Listing';
+        $returnType = '\ck\Model\Listing';
         $request = $this->restListingsPostRequest($_rest_listings, $contentType);
 
         return $this->client
@@ -13034,7 +13034,7 @@ class ListingApi
     /**
      * Create request for operation 'restListingsPost'
      *
-     * @param  \ck/plenty-client\Model\RestListingsPostRequest|null $_rest_listings (optional)
+     * @param  \ck\Model\RestListingsPostRequest|null $_rest_listings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restListingsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13137,7 +13137,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsShippingProfilesGet200Response
+     * @return \ck\Model\RestListingsShippingProfilesGet200Response
      */
     public function restListingsShippingProfilesGet(
         ?int $page = null,
@@ -13146,7 +13146,7 @@ class ListingApi
         ?int $referrer_id = null,
         ?int $credentials_id = null,
         string $contentType = self::contentTypes['restListingsShippingProfilesGet'][0]
-    ): \ck/plenty-client\Model\RestListingsShippingProfilesGet200Response
+    ): \ck\Model\RestListingsShippingProfilesGet200Response
     {
         list($response) = $this->restListingsShippingProfilesGetWithHttpInfo($page, $items_per_page, $id, $referrer_id, $credentials_id, $contentType);
         return $response;
@@ -13166,7 +13166,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsShippingProfilesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsShippingProfilesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsShippingProfilesGetWithHttpInfo(
         ?int $page = null,
@@ -13216,23 +13216,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsShippingProfilesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsShippingProfilesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsShippingProfilesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsShippingProfilesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsShippingProfilesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsShippingProfilesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsShippingProfilesGet200Response';
+            $returnType = '\ck\Model\RestListingsShippingProfilesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13253,7 +13253,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsShippingProfilesGet200Response',
+                        '\ck\Model\RestListingsShippingProfilesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13319,7 +13319,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsShippingProfilesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsShippingProfilesGet200Response';
+        $returnType = '\ck\Model\RestListingsShippingProfilesGet200Response';
         $request = $this->restListingsShippingProfilesGetRequest($page, $items_per_page, $id, $referrer_id, $credentials_id, $contentType);
 
         return $this->client
@@ -13511,13 +13511,13 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ShippingProfile
+     * @return \ck\Model\ShippingProfile
      */
     public function restListingsShippingProfilesIdGet(
         int $id,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsShippingProfilesIdGet'][0]
-    ): \ck/plenty-client\Model\ShippingProfile
+    ): \ck\Model\ShippingProfile
     {
         list($response) = $this->restListingsShippingProfilesIdGetWithHttpInfo($id, $with, $contentType);
         return $response;
@@ -13534,7 +13534,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ShippingProfile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ShippingProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsShippingProfilesIdGetWithHttpInfo(
         int $id,
@@ -13581,23 +13581,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ShippingProfile' === '\SplFileObject') {
+                    if ('\ck\Model\ShippingProfile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ShippingProfile' !== 'string') {
+                        if ('\ck\Model\ShippingProfile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ShippingProfile', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ShippingProfile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ShippingProfile';
+            $returnType = '\ck\Model\ShippingProfile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13618,7 +13618,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ShippingProfile',
+                        '\ck\Model\ShippingProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13672,7 +13672,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsShippingProfilesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ShippingProfile';
+        $returnType = '\ck\Model\ShippingProfile';
         $request = $this->restListingsShippingProfilesIdGetRequest($id, $with, $contentType);
 
         return $this->client
@@ -13834,14 +13834,14 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response
+     * @return \ck\Model\RestListingsStockDependenceTypesGet200Response
      */
     public function restListingsStockDependenceTypesGet(
         ?int $page = null,
         ?int $items_per_page = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsStockDependenceTypesGet'][0]
-    ): \ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response
+    ): \ck\Model\RestListingsStockDependenceTypesGet200Response
     {
         list($response) = $this->restListingsStockDependenceTypesGetWithHttpInfo($page, $items_per_page, $with, $contentType);
         return $response;
@@ -13859,7 +13859,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsStockDependenceTypesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsStockDependenceTypesGetWithHttpInfo(
         ?int $page = null,
@@ -13907,23 +13907,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsStockDependenceTypesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsStockDependenceTypesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsStockDependenceTypesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response';
+            $returnType = '\ck\Model\RestListingsStockDependenceTypesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13944,7 +13944,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response',
+                        '\ck\Model\RestListingsStockDependenceTypesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14002,7 +14002,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsStockDependenceTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsStockDependenceTypesGet200Response';
+        $returnType = '\ck\Model\RestListingsStockDependenceTypesGet200Response';
         $request = $this->restListingsStockDependenceTypesGetRequest($page, $items_per_page, $with, $contentType);
 
         return $this->client
@@ -14170,13 +14170,13 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StockDependenceType
+     * @return \ck\Model\StockDependenceType
      */
     public function restListingsStockDependenceTypesIdGet(
         int $id,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsStockDependenceTypesIdGet'][0]
-    ): \ck/plenty-client\Model\StockDependenceType
+    ): \ck\Model\StockDependenceType
     {
         list($response) = $this->restListingsStockDependenceTypesIdGetWithHttpInfo($id, $with, $contentType);
         return $response;
@@ -14193,7 +14193,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StockDependenceType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StockDependenceType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsStockDependenceTypesIdGetWithHttpInfo(
         int $id,
@@ -14240,23 +14240,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StockDependenceType' === '\SplFileObject') {
+                    if ('\ck\Model\StockDependenceType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StockDependenceType' !== 'string') {
+                        if ('\ck\Model\StockDependenceType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StockDependenceType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StockDependenceType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StockDependenceType';
+            $returnType = '\ck\Model\StockDependenceType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14277,7 +14277,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StockDependenceType',
+                        '\ck\Model\StockDependenceType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14331,7 +14331,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsStockDependenceTypesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StockDependenceType';
+        $returnType = '\ck\Model\StockDependenceType';
         $request = $this->restListingsStockDependenceTypesIdGetRequest($id, $with, $contentType);
 
         return $this->client
@@ -14492,13 +14492,13 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestListingsTypesGet200Response
+     * @return \ck\Model\RestListingsTypesGet200Response
      */
     public function restListingsTypesGet(
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restListingsTypesGet'][0]
-    ): \ck/plenty-client\Model\RestListingsTypesGet200Response
+    ): \ck\Model\RestListingsTypesGet200Response
     {
         list($response) = $this->restListingsTypesGetWithHttpInfo($page, $items_per_page, $contentType);
         return $response;
@@ -14515,7 +14515,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestListingsTypesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestListingsTypesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsTypesGetWithHttpInfo(
         ?int $page = null,
@@ -14562,23 +14562,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestListingsTypesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestListingsTypesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestListingsTypesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestListingsTypesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestListingsTypesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestListingsTypesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestListingsTypesGet200Response';
+            $returnType = '\ck\Model\RestListingsTypesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14599,7 +14599,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestListingsTypesGet200Response',
+                        '\ck\Model\RestListingsTypesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14653,7 +14653,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestListingsTypesGet200Response';
+        $returnType = '\ck\Model\RestListingsTypesGet200Response';
         $request = $this->restListingsTypesGetRequest($page, $items_per_page, $contentType);
 
         return $this->client
@@ -14809,13 +14809,13 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ListingType
+     * @return \ck\Model\ListingType
      */
     public function restListingsTypesIdGet(
         int $id,
         ?int $with = null,
         string $contentType = self::contentTypes['restListingsTypesIdGet'][0]
-    ): \ck/plenty-client\Model\ListingType
+    ): \ck\Model\ListingType
     {
         list($response) = $this->restListingsTypesIdGetWithHttpInfo($id, $with, $contentType);
         return $response;
@@ -14832,7 +14832,7 @@ class ListingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ListingType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ListingType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restListingsTypesIdGetWithHttpInfo(
         int $id,
@@ -14879,23 +14879,23 @@ class ListingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ListingType' === '\SplFileObject') {
+                    if ('\ck\Model\ListingType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ListingType' !== 'string') {
+                        if ('\ck\Model\ListingType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ListingType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ListingType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ListingType';
+            $returnType = '\ck\Model\ListingType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14916,7 +14916,7 @@ class ListingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ListingType',
+                        '\ck\Model\ListingType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14970,7 +14970,7 @@ class ListingApi
         string $contentType = self::contentTypes['restListingsTypesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ListingType';
+        $returnType = '\ck\Model\ListingType';
         $request = $this->restListingsTypesIdGetRequest($id, $with, $contentType);
 
         return $this->client

@@ -3,7 +3,7 @@
  * OrderSummaryApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * OrderSummaryApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -150,12 +150,12 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderSummary
+     * @return \ck\Model\OrderSummary
      */
     public function restAccountsOrderSummariesContactsContactIdGet(
         int $contact_id,
         string $contentType = self::contentTypes['restAccountsOrderSummariesContactsContactIdGet'][0]
-    ): \ck/plenty-client\Model\OrderSummary
+    ): \ck\Model\OrderSummary
     {
         list($response) = $this->restAccountsOrderSummariesContactsContactIdGetWithHttpInfo($contact_id, $contentType);
         return $response;
@@ -171,7 +171,7 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesContactsContactIdGetWithHttpInfo(
         int $contact_id,
@@ -217,23 +217,23 @@ class OrderSummaryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderSummary' === '\SplFileObject') {
+                    if ('\ck\Model\OrderSummary' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderSummary' !== 'string') {
+                        if ('\ck\Model\OrderSummary' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderSummary', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderSummary', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderSummary';
+            $returnType = '\ck\Model\OrderSummary';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -254,7 +254,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderSummary',
+                        '\ck\Model\OrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -304,7 +304,7 @@ class OrderSummaryApi
         string $contentType = self::contentTypes['restAccountsOrderSummariesContactsContactIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderSummary';
+        $returnType = '\ck\Model\OrderSummary';
         $request = $this->restAccountsOrderSummariesContactsContactIdGetRequest($contact_id, $contentType);
 
         return $this->client
@@ -451,7 +451,7 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderSummary[]
+     * @return \ck\Model\OrderSummary[]
      */
     public function restAccountsOrderSummariesGet(
         string $contentType = self::contentTypes['restAccountsOrderSummariesGet'][0]
@@ -470,7 +470,7 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderSummary[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderSummary[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsOrderSummariesGet'][0]
@@ -515,23 +515,23 @@ class OrderSummaryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderSummary[]' === '\SplFileObject') {
+                    if ('\ck\Model\OrderSummary[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderSummary[]' !== 'string') {
+                        if ('\ck\Model\OrderSummary[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderSummary[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderSummary[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderSummary[]';
+            $returnType = '\ck\Model\OrderSummary[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -552,7 +552,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderSummary[]',
+                        '\ck\Model\OrderSummary[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class OrderSummaryApi
         string $contentType = self::contentTypes['restAccountsOrderSummariesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderSummary[]';
+        $returnType = '\ck\Model\OrderSummary[]';
         $request = $this->restAccountsOrderSummariesGetRequest($contentType);
 
         return $this->client
@@ -977,12 +977,12 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderSummary
+     * @return \ck\Model\OrderSummary
      */
     public function restAccountsOrderSummariesOrderSummaryIdGet(
         int $order_summary_id,
         string $contentType = self::contentTypes['restAccountsOrderSummariesOrderSummaryIdGet'][0]
-    ): \ck/plenty-client\Model\OrderSummary
+    ): \ck\Model\OrderSummary
     {
         list($response) = $this->restAccountsOrderSummariesOrderSummaryIdGetWithHttpInfo($order_summary_id, $contentType);
         return $response;
@@ -998,7 +998,7 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesOrderSummaryIdGetWithHttpInfo(
         int $order_summary_id,
@@ -1044,23 +1044,23 @@ class OrderSummaryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderSummary' === '\SplFileObject') {
+                    if ('\ck\Model\OrderSummary' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderSummary' !== 'string') {
+                        if ('\ck\Model\OrderSummary' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderSummary', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderSummary', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderSummary';
+            $returnType = '\ck\Model\OrderSummary';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1081,7 +1081,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderSummary',
+                        '\ck\Model\OrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1131,7 +1131,7 @@ class OrderSummaryApi
         string $contentType = self::contentTypes['restAccountsOrderSummariesOrderSummaryIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderSummary';
+        $returnType = '\ck\Model\OrderSummary';
         $request = $this->restAccountsOrderSummariesOrderSummaryIdGetRequest($order_summary_id, $contentType);
 
         return $this->client
@@ -1279,12 +1279,12 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderSummary
+     * @return \ck\Model\OrderSummary
      */
     public function restAccountsOrderSummariesOrderSummaryIdPut(
         int $order_summary_id,
         string $contentType = self::contentTypes['restAccountsOrderSummariesOrderSummaryIdPut'][0]
-    ): \ck/plenty-client\Model\OrderSummary
+    ): \ck\Model\OrderSummary
     {
         list($response) = $this->restAccountsOrderSummariesOrderSummaryIdPutWithHttpInfo($order_summary_id, $contentType);
         return $response;
@@ -1300,7 +1300,7 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesOrderSummaryIdPutWithHttpInfo(
         int $order_summary_id,
@@ -1346,23 +1346,23 @@ class OrderSummaryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderSummary' === '\SplFileObject') {
+                    if ('\ck\Model\OrderSummary' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderSummary' !== 'string') {
+                        if ('\ck\Model\OrderSummary' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderSummary', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderSummary', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderSummary';
+            $returnType = '\ck\Model\OrderSummary';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1383,7 +1383,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderSummary',
+                        '\ck\Model\OrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1433,7 +1433,7 @@ class OrderSummaryApi
         string $contentType = self::contentTypes['restAccountsOrderSummariesOrderSummaryIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderSummary';
+        $returnType = '\ck\Model\OrderSummary';
         $request = $this->restAccountsOrderSummariesOrderSummaryIdPutRequest($order_summary_id, $contentType);
 
         return $this->client
@@ -1581,12 +1581,12 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderSummary
+     * @return \ck\Model\OrderSummary
      */
     public function restAccountsOrderSummariesOrdersAddressIdGet(
         int $address_id,
         string $contentType = self::contentTypes['restAccountsOrderSummariesOrdersAddressIdGet'][0]
-    ): \ck/plenty-client\Model\OrderSummary
+    ): \ck\Model\OrderSummary
     {
         list($response) = $this->restAccountsOrderSummariesOrdersAddressIdGetWithHttpInfo($address_id, $contentType);
         return $response;
@@ -1602,7 +1602,7 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesOrdersAddressIdGetWithHttpInfo(
         int $address_id,
@@ -1648,23 +1648,23 @@ class OrderSummaryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderSummary' === '\SplFileObject') {
+                    if ('\ck\Model\OrderSummary' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderSummary' !== 'string') {
+                        if ('\ck\Model\OrderSummary' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderSummary', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderSummary', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderSummary';
+            $returnType = '\ck\Model\OrderSummary';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1685,7 +1685,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderSummary',
+                        '\ck\Model\OrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1735,7 +1735,7 @@ class OrderSummaryApi
         string $contentType = self::contentTypes['restAccountsOrderSummariesOrdersAddressIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderSummary';
+        $returnType = '\ck\Model\OrderSummary';
         $request = $this->restAccountsOrderSummariesOrdersAddressIdGetRequest($address_id, $contentType);
 
         return $this->client
@@ -1882,11 +1882,11 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderSummary
+     * @return \ck\Model\OrderSummary
      */
     public function restAccountsOrderSummariesPost(
         string $contentType = self::contentTypes['restAccountsOrderSummariesPost'][0]
-    ): \ck/plenty-client\Model\OrderSummary
+    ): \ck\Model\OrderSummary
     {
         list($response) = $this->restAccountsOrderSummariesPostWithHttpInfo($contentType);
         return $response;
@@ -1901,7 +1901,7 @@ class OrderSummaryApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsOrderSummariesPostWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsOrderSummariesPost'][0]
@@ -1946,23 +1946,23 @@ class OrderSummaryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderSummary' === '\SplFileObject') {
+                    if ('\ck\Model\OrderSummary' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderSummary' !== 'string') {
+                        if ('\ck\Model\OrderSummary' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderSummary', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderSummary', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderSummary';
+            $returnType = '\ck\Model\OrderSummary';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1983,7 +1983,7 @@ class OrderSummaryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderSummary',
+                        '\ck\Model\OrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2029,7 +2029,7 @@ class OrderSummaryApi
         string $contentType = self::contentTypes['restAccountsOrderSummariesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderSummary';
+        $returnType = '\ck\Model\OrderSummary';
         $request = $this->restAccountsOrderSummariesPostRequest($contentType);
 
         return $this->client

@@ -3,7 +3,7 @@
  * StockManagementApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * StockManagementApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -206,7 +206,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestStockmanagementStockGet200Response
+     * @return \ck\Model\RestStockmanagementStockGet200Response
      */
     public function restStockmanagementStockGet(
         ?string $updated_at_from = null,
@@ -216,7 +216,7 @@ class StockManagementApi
         ?int $items_per_page = null,
         ?int $columns = null,
         string $contentType = self::contentTypes['restStockmanagementStockGet'][0]
-    ): \ck/plenty-client\Model\RestStockmanagementStockGet200Response
+    ): \ck\Model\RestStockmanagementStockGet200Response
     {
         list($response) = $this->restStockmanagementStockGetWithHttpInfo($updated_at_from, $updated_at_to, $variation_id, $page, $items_per_page, $columns, $contentType);
         return $response;
@@ -237,7 +237,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestStockmanagementStockGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestStockmanagementStockGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementStockGetWithHttpInfo(
         ?string $updated_at_from = null,
@@ -288,23 +288,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestStockmanagementStockGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestStockmanagementStockGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestStockmanagementStockGet200Response' !== 'string') {
+                        if ('\ck\Model\RestStockmanagementStockGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestStockmanagementStockGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestStockmanagementStockGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestStockmanagementStockGet200Response';
+            $returnType = '\ck\Model\RestStockmanagementStockGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -325,7 +325,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestStockmanagementStockGet200Response',
+                        '\ck\Model\RestStockmanagementStockGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -395,7 +395,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementStockGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestStockmanagementStockGet200Response';
+        $returnType = '\ck\Model\RestStockmanagementStockGet200Response';
         $request = $this->restStockmanagementStockGetRequest($updated_at_from, $updated_at_to, $variation_id, $page, $items_per_page, $columns, $contentType);
 
         return $this->client
@@ -593,7 +593,7 @@ class StockManagementApi
      *
      * Redistribute stock
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute _rest_stockmanagement_stock_redistribute (optional)
+     * @param  \ck\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute _rest_stockmanagement_stock_redistribute (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementStockRedistributePut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -601,7 +601,7 @@ class StockManagementApi
      * @return void
      */
     public function restStockmanagementStockRedistributePut(
-        ?\ck/plenty-client\Model\RestStockmanagementStockRedistributePutRequest $_rest_stockmanagement_stock_redistribute = null,
+        ?\ck\Model\RestStockmanagementStockRedistributePutRequest $_rest_stockmanagement_stock_redistribute = null,
         string $contentType = self::contentTypes['restStockmanagementStockRedistributePut'][0]
     ): void
     {
@@ -613,7 +613,7 @@ class StockManagementApi
      *
      * Redistribute stock
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute (optional)
+     * @param  \ck\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementStockRedistributePut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -621,7 +621,7 @@ class StockManagementApi
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementStockRedistributePutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestStockmanagementStockRedistributePutRequest $_rest_stockmanagement_stock_redistribute = null,
+        ?\ck\Model\RestStockmanagementStockRedistributePutRequest $_rest_stockmanagement_stock_redistribute = null,
         string $contentType = self::contentTypes['restStockmanagementStockRedistributePut'][0]
     ): array
     {
@@ -676,14 +676,14 @@ class StockManagementApi
      *
      * Redistribute stock
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute (optional)
+     * @param  \ck\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementStockRedistributePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restStockmanagementStockRedistributePutAsync(
-        ?\ck/plenty-client\Model\RestStockmanagementStockRedistributePutRequest $_rest_stockmanagement_stock_redistribute = null,
+        ?\ck\Model\RestStockmanagementStockRedistributePutRequest $_rest_stockmanagement_stock_redistribute = null,
         string $contentType = self::contentTypes['restStockmanagementStockRedistributePut'][0]
     ): PromiseInterface
     {
@@ -700,7 +700,7 @@ class StockManagementApi
      *
      * Redistribute stock
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute (optional)
+     * @param  \ck\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementStockRedistributePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -740,7 +740,7 @@ class StockManagementApi
     /**
      * Create request for operation 'restStockmanagementStockRedistributePut'
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute (optional)
+     * @param  \ck\Model\RestStockmanagementStockRedistributePutRequest|null $_rest_stockmanagement_stock_redistribute (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementStockRedistributePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -845,7 +845,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestStockmanagementStockGet200Response
+     * @return \ck\Model\RestStockmanagementStockGet200Response
      */
     public function restStockmanagementStockTypesTypeGet(
         string $type,
@@ -856,7 +856,7 @@ class StockManagementApi
         ?string $updated_at_to = null,
         ?int $variation_id = null,
         string $contentType = self::contentTypes['restStockmanagementStockTypesTypeGet'][0]
-    ): \ck/plenty-client\Model\RestStockmanagementStockGet200Response
+    ): \ck\Model\RestStockmanagementStockGet200Response
     {
         list($response) = $this->restStockmanagementStockTypesTypeGetWithHttpInfo($type, $page, $items_per_page, $columns, $updated_at_from, $updated_at_to, $variation_id, $contentType);
         return $response;
@@ -878,7 +878,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestStockmanagementStockGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestStockmanagementStockGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementStockTypesTypeGetWithHttpInfo(
         string $type,
@@ -930,23 +930,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestStockmanagementStockGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestStockmanagementStockGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestStockmanagementStockGet200Response' !== 'string') {
+                        if ('\ck\Model\RestStockmanagementStockGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestStockmanagementStockGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestStockmanagementStockGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestStockmanagementStockGet200Response';
+            $returnType = '\ck\Model\RestStockmanagementStockGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -967,7 +967,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestStockmanagementStockGet200Response',
+                        '\ck\Model\RestStockmanagementStockGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1041,7 +1041,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementStockTypesTypeGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestStockmanagementStockGet200Response';
+        $returnType = '\ck\Model\RestStockmanagementStockGet200Response';
         $request = $this->restStockmanagementStockTypesTypeGetRequest($type, $page, $items_per_page, $columns, $updated_at_from, $updated_at_to, $variation_id, $contentType);
 
         return $this->client
@@ -1553,17 +1553,17 @@ class StockManagementApi
      *
      * Create a warehouse
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses _rest_stockmanagement_warehouses (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses _rest_stockmanagement_warehouses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Warehouse
+     * @return \ck\Model\Warehouse
      */
     public function restStockmanagementWarehousesPost(
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesPostRequest $_rest_stockmanagement_warehouses = null,
+        ?\ck\Model\RestStockmanagementWarehousesPostRequest $_rest_stockmanagement_warehouses = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesPost'][0]
-    ): \ck/plenty-client\Model\Warehouse
+    ): \ck\Model\Warehouse
     {
         list($response) = $this->restStockmanagementWarehousesPostWithHttpInfo($_rest_stockmanagement_warehouses, $contentType);
         return $response;
@@ -1574,15 +1574,15 @@ class StockManagementApi
      *
      * Create a warehouse
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Warehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Warehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesPostRequest $_rest_stockmanagement_warehouses = null,
+        ?\ck\Model\RestStockmanagementWarehousesPostRequest $_rest_stockmanagement_warehouses = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesPost'][0]
     ): array
     {
@@ -1625,23 +1625,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Warehouse' === '\SplFileObject') {
+                    if ('\ck\Model\Warehouse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Warehouse' !== 'string') {
+                        if ('\ck\Model\Warehouse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Warehouse', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Warehouse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Warehouse';
+            $returnType = '\ck\Model\Warehouse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1662,7 +1662,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Warehouse',
+                        '\ck\Model\Warehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1677,14 +1677,14 @@ class StockManagementApi
      *
      * Create a warehouse
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restStockmanagementWarehousesPostAsync(
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesPostRequest $_rest_stockmanagement_warehouses = null,
+        ?\ck\Model\RestStockmanagementWarehousesPostRequest $_rest_stockmanagement_warehouses = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesPost'][0]
     ): PromiseInterface
     {
@@ -1701,7 +1701,7 @@ class StockManagementApi
      *
      * Create a warehouse
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1712,7 +1712,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Warehouse';
+        $returnType = '\ck\Model\Warehouse';
         $request = $this->restStockmanagementWarehousesPostRequest($_rest_stockmanagement_warehouses, $contentType);
 
         return $this->client
@@ -1754,7 +1754,7 @@ class StockManagementApi
     /**
      * Create request for operation 'restStockmanagementWarehousesPost'
      *
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesPostRequest|null $_rest_stockmanagement_warehouses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1854,13 +1854,13 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Warehouse
+     * @return \ck\Model\Warehouse
      */
     public function restStockmanagementWarehousesWarehouseIdGet(
         int $warehouse_id,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdGet'][0]
-    ): \ck/plenty-client\Model\Warehouse
+    ): \ck\Model\Warehouse
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdGetWithHttpInfo($warehouse_id, $with, $contentType);
         return $response;
@@ -1877,7 +1877,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Warehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Warehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdGetWithHttpInfo(
         int $warehouse_id,
@@ -1924,23 +1924,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Warehouse' === '\SplFileObject') {
+                    if ('\ck\Model\Warehouse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Warehouse' !== 'string') {
+                        if ('\ck\Model\Warehouse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Warehouse', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Warehouse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Warehouse';
+            $returnType = '\ck\Model\Warehouse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1961,7 +1961,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Warehouse',
+                        '\ck\Model\Warehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2015,7 +2015,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Warehouse';
+        $returnType = '\ck\Model\Warehouse';
         $request = $this->restStockmanagementWarehousesWarehouseIdGetRequest($warehouse_id, $with, $contentType);
 
         return $this->client
@@ -2179,7 +2179,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response
+     * @return \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksGet(
         int $warehouse_id,
@@ -2188,7 +2188,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksGet'][0]
-    ): \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response
+    ): \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksGetWithHttpInfo($warehouse_id, $page, $items_per_page, $columns, $with, $contentType);
         return $response;
@@ -2208,7 +2208,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksGetWithHttpInfo(
         int $warehouse_id,
@@ -2258,23 +2258,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response' !== 'string') {
+                        if ('\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response';
+            $returnType = '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2295,7 +2295,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response',
+                        '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2361,7 +2361,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response';
+        $returnType = '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksGet200Response';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksGetRequest($warehouse_id, $page, $items_per_page, $columns, $with, $contentType);
 
         return $this->client
@@ -2557,12 +2557,12 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Rack
+     * @return \ck\Model\Rack
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksPost(
         int $warehouse_id,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksPost'][0]
-    ): \ck/plenty-client\Model\Rack
+    ): \ck\Model\Rack
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksPostWithHttpInfo($warehouse_id, $contentType);
         return $response;
@@ -2578,7 +2578,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Rack, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Rack, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksPostWithHttpInfo(
         int $warehouse_id,
@@ -2624,23 +2624,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Rack' === '\SplFileObject') {
+                    if ('\ck\Model\Rack' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Rack' !== 'string') {
+                        if ('\ck\Model\Rack' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Rack', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Rack', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Rack';
+            $returnType = '\ck\Model\Rack';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2661,7 +2661,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Rack',
+                        '\ck\Model\Rack',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2711,7 +2711,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Rack';
+        $returnType = '\ck\Model\Rack';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksPostRequest($warehouse_id, $contentType);
 
         return $this->client
@@ -2862,7 +2862,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Rack
+     * @return \ck\Model\Rack
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGet(
         int $warehouse_id,
@@ -2870,7 +2870,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGet'][0]
-    ): \ck/plenty-client\Model\Rack
+    ): \ck\Model\Rack
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGetWithHttpInfo($warehouse_id, $rack_id, $columns, $with, $contentType);
         return $response;
@@ -2889,7 +2889,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Rack, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Rack, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGetWithHttpInfo(
         int $warehouse_id,
@@ -2938,23 +2938,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Rack' === '\SplFileObject') {
+                    if ('\ck\Model\Rack' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Rack' !== 'string') {
+                        if ('\ck\Model\Rack' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Rack', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Rack', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Rack';
+            $returnType = '\ck\Model\Rack';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2975,7 +2975,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Rack',
+                        '\ck\Model\Rack',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3037,7 +3037,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Rack';
+        $returnType = '\ck\Model\Rack';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdGetRequest($warehouse_id, $rack_id, $columns, $with, $contentType);
 
         return $this->client
@@ -3231,7 +3231,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response
+     * @return \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet(
         int $warehouse_id,
@@ -3241,7 +3241,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet'][0]
-    ): \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response
+    ): \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGetWithHttpInfo($warehouse_id, $rack_id, $page, $items_per_page, $columns, $with, $contentType);
         return $response;
@@ -3262,7 +3262,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGetWithHttpInfo(
         int $warehouse_id,
@@ -3313,23 +3313,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response';
+            $returnType = '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3350,7 +3350,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response',
+                        '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3420,7 +3420,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response';
+        $returnType = '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGet200Response';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesGetRequest($warehouse_id, $rack_id, $page, $items_per_page, $columns, $with, $contentType);
 
         return $this->client
@@ -3634,13 +3634,13 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Shelf
+     * @return \ck\Model\Shelf
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPost(
         int $warehouse_id,
         int $rack_id,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPost'][0]
-    ): \ck/plenty-client\Model\Shelf
+    ): \ck\Model\Shelf
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPostWithHttpInfo($warehouse_id, $rack_id, $contentType);
         return $response;
@@ -3657,7 +3657,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Shelf, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Shelf, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPostWithHttpInfo(
         int $warehouse_id,
@@ -3704,23 +3704,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Shelf' === '\SplFileObject') {
+                    if ('\ck\Model\Shelf' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Shelf' !== 'string') {
+                        if ('\ck\Model\Shelf' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Shelf', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Shelf', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Shelf';
+            $returnType = '\ck\Model\Shelf';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3741,7 +3741,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Shelf',
+                        '\ck\Model\Shelf',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3795,7 +3795,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Shelf';
+        $returnType = '\ck\Model\Shelf';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesPostRequest($warehouse_id, $rack_id, $contentType);
 
         return $this->client
@@ -3964,7 +3964,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Shelf
+     * @return \ck\Model\Shelf
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGet(
         int $warehouse_id,
@@ -3973,7 +3973,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGet'][0]
-    ): \ck/plenty-client\Model\Shelf
+    ): \ck\Model\Shelf
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGetWithHttpInfo($warehouse_id, $rack_id, $shelf_id, $columns, $with, $contentType);
         return $response;
@@ -3993,7 +3993,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Shelf, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Shelf, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGetWithHttpInfo(
         int $warehouse_id,
@@ -4043,23 +4043,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Shelf' === '\SplFileObject') {
+                    if ('\ck\Model\Shelf' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Shelf' !== 'string') {
+                        if ('\ck\Model\Shelf' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Shelf', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Shelf', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Shelf';
+            $returnType = '\ck\Model\Shelf';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4080,7 +4080,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Shelf',
+                        '\ck\Model\Shelf',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4146,7 +4146,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Shelf';
+        $returnType = '\ck\Model\Shelf';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdGetRequest($warehouse_id, $rack_id, $shelf_id, $columns, $with, $contentType);
 
         return $this->client
@@ -4358,7 +4358,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response
+     * @return \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet(
         int $warehouse_id,
@@ -4369,7 +4369,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet'][0]
-    ): \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response
+    ): \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGetWithHttpInfo($warehouse_id, $rack_id, $shelf_id, $page, $items_per_page, $columns, $with, $contentType);
         return $response;
@@ -4391,7 +4391,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGetWithHttpInfo(
         int $warehouse_id,
@@ -4443,23 +4443,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response';
+            $returnType = '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4480,7 +4480,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response',
+                        '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4554,7 +4554,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response';
+        $returnType = '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGetRequest($warehouse_id, $rack_id, $shelf_id, $page, $items_per_page, $columns, $with, $contentType);
 
         return $this->client
@@ -4786,14 +4786,14 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageLocation
+     * @return \ck\Model\StorageLocation
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPost(
         int $warehouse_id,
         int $rack_id,
         int $shelf_id,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPost'][0]
-    ): \ck/plenty-client\Model\StorageLocation
+    ): \ck\Model\StorageLocation
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPostWithHttpInfo($warehouse_id, $rack_id, $shelf_id, $contentType);
         return $response;
@@ -4811,7 +4811,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPostWithHttpInfo(
         int $warehouse_id,
@@ -4859,23 +4859,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageLocation' === '\SplFileObject') {
+                    if ('\ck\Model\StorageLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageLocation' !== 'string') {
+                        if ('\ck\Model\StorageLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageLocation';
+            $returnType = '\ck\Model\StorageLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4896,7 +4896,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageLocation',
+                        '\ck\Model\StorageLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4954,7 +4954,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageLocation';
+        $returnType = '\ck\Model\StorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsPostRequest($warehouse_id, $rack_id, $shelf_id, $contentType);
 
         return $this->client
@@ -5141,7 +5141,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageLocation
+     * @return \ck\Model\StorageLocation
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGet(
         int $warehouse_id,
@@ -5151,7 +5151,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGet'][0]
-    ): \ck/plenty-client\Model\StorageLocation
+    ): \ck\Model\StorageLocation
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGetWithHttpInfo($warehouse_id, $rack_id, $shelf_id, $storage_location_id, $columns, $with, $contentType);
         return $response;
@@ -5172,7 +5172,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGetWithHttpInfo(
         int $warehouse_id,
@@ -5223,23 +5223,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageLocation' === '\SplFileObject') {
+                    if ('\ck\Model\StorageLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageLocation' !== 'string') {
+                        if ('\ck\Model\StorageLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageLocation';
+            $returnType = '\ck\Model\StorageLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5260,7 +5260,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageLocation',
+                        '\ck\Model\StorageLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5330,7 +5330,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageLocation';
+        $returnType = '\ck\Model\StorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsStorageLocationIdGetRequest($warehouse_id, $rack_id, $shelf_id, $storage_location_id, $columns, $with, $contentType);
 
         return $this->client
@@ -5557,7 +5557,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response
+     * @return \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response
      */
     public function restStockmanagementWarehousesWarehouseIdManagementStorageLocationsGet(
         int $warehouse_id,
@@ -5566,7 +5566,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementStorageLocationsGet'][0]
-    ): \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response
+    ): \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementStorageLocationsGetWithHttpInfo($warehouse_id, $page, $items_per_page, $columns, $with, $contentType);
         return $response;
@@ -5586,7 +5586,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementStorageLocationsGetWithHttpInfo(
         int $warehouse_id,
@@ -5636,23 +5636,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response';
+            $returnType = '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5673,7 +5673,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response',
+                        '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5739,7 +5739,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementStorageLocationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response';
+        $returnType = '\ck\Model\RestStockmanagementWarehousesWarehouseIdManagementRacksRackIdShelvesShelfIdStorageLocationsGet200Response';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementStorageLocationsGetRequest($warehouse_id, $page, $items_per_page, $columns, $with, $contentType);
 
         return $this->client
@@ -5938,7 +5938,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageLocation
+     * @return \ck\Model\StorageLocation
      */
     public function restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGet(
         int $warehouse_id,
@@ -5946,7 +5946,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGet'][0]
-    ): \ck/plenty-client\Model\StorageLocation
+    ): \ck\Model\StorageLocation
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGetWithHttpInfo($warehouse_id, $storage_location_id, $columns, $with, $contentType);
         return $response;
@@ -5965,7 +5965,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGetWithHttpInfo(
         int $warehouse_id,
@@ -6014,23 +6014,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageLocation' === '\SplFileObject') {
+                    if ('\ck\Model\StorageLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageLocation' !== 'string') {
+                        if ('\ck\Model\StorageLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageLocation';
+            $returnType = '\ck\Model\StorageLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6051,7 +6051,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageLocation',
+                        '\ck\Model\StorageLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6113,7 +6113,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageLocation';
+        $returnType = '\ck\Model\StorageLocation';
         $request = $this->restStockmanagementWarehousesWarehouseIdManagementStorageLocationsStorageLocationIdGetRequest($warehouse_id, $storage_location_id, $columns, $with, $contentType);
 
         return $this->client
@@ -6298,7 +6298,7 @@ class StockManagementApi
      * Book incoming stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items _rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items _rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -6307,7 +6307,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'][0]
     ): void
     {
@@ -6320,7 +6320,7 @@ class StockManagementApi
      * Book incoming stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -6329,7 +6329,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutWithHttpInfo(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'][0]
     ): array
     {
@@ -6385,7 +6385,7 @@ class StockManagementApi
      * Book incoming stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6393,7 +6393,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutAsync(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'][0]
     ): PromiseInterface
     {
@@ -6411,7 +6411,7 @@ class StockManagementApi
      * Book incoming stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6453,7 +6453,7 @@ class StockManagementApi
      * Create request for operation 'restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_incoming_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookIncomingItemsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6564,7 +6564,7 @@ class StockManagementApi
      * Book outgoing stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items _rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items _rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -6573,7 +6573,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'][0]
     ): void
     {
@@ -6586,7 +6586,7 @@ class StockManagementApi
      * Book outgoing stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -6595,7 +6595,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutWithHttpInfo(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'][0]
     ): array
     {
@@ -6651,7 +6651,7 @@ class StockManagementApi
      * Book outgoing stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6659,7 +6659,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutAsync(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'][0]
     ): PromiseInterface
     {
@@ -6677,7 +6677,7 @@ class StockManagementApi
      * Book outgoing stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6719,7 +6719,7 @@ class StockManagementApi
      * Create request for operation 'restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_book_outgoing_items (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockBookOutgoingItemsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6830,7 +6830,7 @@ class StockManagementApi
      * Correct stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction _rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction _rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockCorrectionPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -6839,7 +6839,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockCorrectionPut(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_correction = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_correction = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockCorrectionPut'][0]
     ): void
     {
@@ -6852,7 +6852,7 @@ class StockManagementApi
      * Correct stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockCorrectionPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -6861,7 +6861,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockCorrectionPutWithHttpInfo(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_correction = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_correction = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockCorrectionPut'][0]
     ): array
     {
@@ -6917,7 +6917,7 @@ class StockManagementApi
      * Correct stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockCorrectionPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6925,7 +6925,7 @@ class StockManagementApi
      */
     public function restStockmanagementWarehousesWarehouseIdStockCorrectionPutAsync(
         int $warehouse_id,
-        ?\ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_correction = null,
+        ?\ck\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest $_rest_stockmanagement_warehouses_warehouse_id_stock_correction = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockCorrectionPut'][0]
     ): PromiseInterface
     {
@@ -6943,7 +6943,7 @@ class StockManagementApi
      * Correct stock
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockCorrectionPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6985,7 +6985,7 @@ class StockManagementApi
      * Create request for operation 'restStockmanagementWarehousesWarehouseIdStockCorrectionPut'
      *
      * @param  int $warehouse_id The ID of the warehouse. (required)
-     * @param  \ck/plenty-client\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
+     * @param  \ck\Model\RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest|null $_rest_stockmanagement_warehouses_warehouse_id_stock_correction (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restStockmanagementWarehousesWarehouseIdStockCorrectionPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7106,7 +7106,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestStockmanagementStockGet200Response
+     * @return \ck\Model\RestStockmanagementStockGet200Response
      */
     public function restStockmanagementWarehousesWarehouseIdStockGet(
         int $warehouse_id,
@@ -7117,7 +7117,7 @@ class StockManagementApi
         ?int $items_per_page = null,
         ?int $columns = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockGet'][0]
-    ): \ck/plenty-client\Model\RestStockmanagementStockGet200Response
+    ): \ck\Model\RestStockmanagementStockGet200Response
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdStockGetWithHttpInfo($warehouse_id, $updated_at_from, $updated_at_to, $variation_id, $page, $items_per_page, $columns, $contentType);
         return $response;
@@ -7139,7 +7139,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestStockmanagementStockGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestStockmanagementStockGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdStockGetWithHttpInfo(
         int $warehouse_id,
@@ -7191,23 +7191,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestStockmanagementStockGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestStockmanagementStockGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestStockmanagementStockGet200Response' !== 'string') {
+                        if ('\ck\Model\RestStockmanagementStockGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestStockmanagementStockGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestStockmanagementStockGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestStockmanagementStockGet200Response';
+            $returnType = '\ck\Model\RestStockmanagementStockGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7228,7 +7228,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestStockmanagementStockGet200Response',
+                        '\ck\Model\RestStockmanagementStockGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7302,7 +7302,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestStockmanagementStockGet200Response';
+        $returnType = '\ck\Model\RestStockmanagementStockGet200Response';
         $request = $this->restStockmanagementWarehousesWarehouseIdStockGetRequest($warehouse_id, $updated_at_from, $updated_at_to, $variation_id, $page, $items_per_page, $columns, $contentType);
 
         return $this->client
@@ -7530,7 +7530,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response
+     * @return \ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response
      */
     public function restStockmanagementWarehousesWarehouseIdStockMovementsGet(
         int $warehouse_id,
@@ -7543,7 +7543,7 @@ class StockManagementApi
         ?int $year = null,
         ?int $columns = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockMovementsGet'][0]
-    ): \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response
+    ): \ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdStockMovementsGetWithHttpInfo($warehouse_id, $page, $items_per_page, $variation_id, $item_id, $created_at_from, $created_at_to, $year, $columns, $contentType);
         return $response;
@@ -7567,7 +7567,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdStockMovementsGetWithHttpInfo(
         int $warehouse_id,
@@ -7621,23 +7621,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response';
+            $returnType = '\ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7658,7 +7658,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response',
+                        '\ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7740,7 +7740,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockMovementsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response';
+        $returnType = '\ck\Model\RestItemsIdVariationsVariationIdStockMovementsGet200Response';
         $request = $this->restStockmanagementWarehousesWarehouseIdStockMovementsGetRequest($warehouse_id, $page, $items_per_page, $variation_id, $item_id, $created_at_from, $created_at_to, $year, $columns, $contentType);
 
         return $this->client
@@ -8004,7 +8004,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response
+     * @return \ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response
      */
     public function restStockmanagementWarehousesWarehouseIdStockStorageLocationsGet(
         int $warehouse_id,
@@ -8017,7 +8017,7 @@ class StockManagementApi
         ?int $columns = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockStorageLocationsGet'][0]
-    ): \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response
+    ): \ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdStockStorageLocationsGetWithHttpInfo($warehouse_id, $updated_at_from, $updated_at_to, $variation_id, $storage_location_id, $page, $items_per_page, $columns, $with, $contentType);
         return $response;
@@ -8041,7 +8041,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdStockStorageLocationsGetWithHttpInfo(
         int $warehouse_id,
@@ -8095,23 +8095,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response' !== 'string') {
+                        if ('\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response';
+            $returnType = '\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8132,7 +8132,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response',
+                        '\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8214,7 +8214,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockStorageLocationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response';
+        $returnType = '\ck\Model\RestItemsIdVariationsVariationIdStockRedistributePut200Response';
         $request = $this->restStockmanagementWarehousesWarehouseIdStockStorageLocationsGetRequest($warehouse_id, $updated_at_from, $updated_at_to, $variation_id, $storage_location_id, $page, $items_per_page, $columns, $with, $contentType);
 
         return $this->client
@@ -8460,14 +8460,14 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Warehouse
+     * @return \ck\Model\Warehouse
      */
     public function restStockmanagementWarehousesWarehouseIdStockUnpackVariationPut(
         int $variation_stock_intake,
         int $variation_stock_correction,
         int $warehouse_id,
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockUnpackVariationPut'][0]
-    ): \ck/plenty-client\Model\Warehouse
+    ): \ck\Model\Warehouse
     {
         list($response) = $this->restStockmanagementWarehousesWarehouseIdStockUnpackVariationPutWithHttpInfo($variation_stock_intake, $variation_stock_correction, $warehouse_id, $contentType);
         return $response;
@@ -8485,7 +8485,7 @@ class StockManagementApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Warehouse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Warehouse, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesWarehouseIdStockUnpackVariationPutWithHttpInfo(
         int $variation_stock_intake,
@@ -8533,23 +8533,23 @@ class StockManagementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Warehouse' === '\SplFileObject') {
+                    if ('\ck\Model\Warehouse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Warehouse' !== 'string') {
+                        if ('\ck\Model\Warehouse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Warehouse', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Warehouse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Warehouse';
+            $returnType = '\ck\Model\Warehouse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8570,7 +8570,7 @@ class StockManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Warehouse',
+                        '\ck\Model\Warehouse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8628,7 +8628,7 @@ class StockManagementApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesWarehouseIdStockUnpackVariationPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Warehouse';
+        $returnType = '\ck\Model\Warehouse';
         $request = $this->restStockmanagementWarehousesWarehouseIdStockUnpackVariationPutRequest($variation_stock_intake, $variation_stock_correction, $warehouse_id, $contentType);
 
         return $this->client

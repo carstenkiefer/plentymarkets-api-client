@@ -3,7 +3,7 @@
  * PaymentApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * PaymentApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -259,13 +259,13 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentContactRelation
+     * @return \ck\Model\PaymentContactRelation
      */
     public function restPaymentPaymentIdContactContactIdPost(
         int $payment_id,
         int $contact_id,
         string $contentType = self::contentTypes['restPaymentPaymentIdContactContactIdPost'][0]
-    ): \ck/plenty-client\Model\PaymentContactRelation
+    ): \ck\Model\PaymentContactRelation
     {
         list($response) = $this->restPaymentPaymentIdContactContactIdPostWithHttpInfo($payment_id, $contact_id, $contentType);
         return $response;
@@ -282,7 +282,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPaymentIdContactContactIdPostWithHttpInfo(
         int $payment_id,
@@ -329,23 +329,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentContactRelation' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentContactRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentContactRelation' !== 'string') {
+                        if ('\ck\Model\PaymentContactRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentContactRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentContactRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentContactRelation';
+            $returnType = '\ck\Model\PaymentContactRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -366,7 +366,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentContactRelation',
+                        '\ck\Model\PaymentContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -420,7 +420,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentPaymentIdContactContactIdPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentContactRelation';
+        $returnType = '\ck\Model\PaymentContactRelation';
         $request = $this->restPaymentPaymentIdContactContactIdPostRequest($payment_id, $contact_id, $contentType);
 
         return $this->client
@@ -1082,13 +1082,13 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentOrderRelation
+     * @return \ck\Model\PaymentOrderRelation
      */
     public function restPaymentPaymentIdOrderOrderIdPost(
         int $payment_id,
         int $order_id,
         string $contentType = self::contentTypes['restPaymentPaymentIdOrderOrderIdPost'][0]
-    ): \ck/plenty-client\Model\PaymentOrderRelation
+    ): \ck\Model\PaymentOrderRelation
     {
         list($response) = $this->restPaymentPaymentIdOrderOrderIdPostWithHttpInfo($payment_id, $order_id, $contentType);
         return $response;
@@ -1105,7 +1105,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentOrderRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentOrderRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPaymentIdOrderOrderIdPostWithHttpInfo(
         int $payment_id,
@@ -1152,23 +1152,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentOrderRelation' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentOrderRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentOrderRelation' !== 'string') {
+                        if ('\ck\Model\PaymentOrderRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentOrderRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentOrderRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentOrderRelation';
+            $returnType = '\ck\Model\PaymentOrderRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1189,7 +1189,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentOrderRelation',
+                        '\ck\Model\PaymentOrderRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1243,7 +1243,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentPaymentIdOrderOrderIdPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentOrderRelation';
+        $returnType = '\ck\Model\PaymentOrderRelation';
         $request = $this->restPaymentPaymentIdOrderOrderIdPostRequest($payment_id, $order_id, $contentType);
 
         return $this->client
@@ -1408,7 +1408,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentPropertyTypeName[]
+     * @return \ck\Model\PaymentPropertyTypeName[]
      */
     public function restPaymentPropertiesTypesNamesNameIdGet(
         int $name_id,
@@ -1429,7 +1429,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentPropertyTypeName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentPropertyTypeName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPropertiesTypesNamesNameIdGetWithHttpInfo(
         int $name_id,
@@ -1475,23 +1475,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentPropertyTypeName[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentPropertyTypeName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentPropertyTypeName[]' !== 'string') {
+                        if ('\ck\Model\PaymentPropertyTypeName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentPropertyTypeName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentPropertyTypeName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentPropertyTypeName[]';
+            $returnType = '\ck\Model\PaymentPropertyTypeName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1512,7 +1512,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentPropertyTypeName[]',
+                        '\ck\Model\PaymentPropertyTypeName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1562,7 +1562,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesNameIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentPropertyTypeName[]';
+        $returnType = '\ck\Model\PaymentPropertyTypeName[]';
         $request = $this->restPaymentPropertiesTypesNamesNameIdGetRequest($name_id, $contentType);
 
         return $this->client
@@ -1705,17 +1705,17 @@ class PaymentApi
      *
      * Create a name of a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names _rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names _rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentPropertyTypeName
+     * @return \ck\Model\PaymentPropertyTypeName
      */
     public function restPaymentPropertiesTypesNamesPost(
-        ?\ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
+        ?\ck\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesPost'][0]
-    ): \ck/plenty-client\Model\PaymentPropertyTypeName
+    ): \ck\Model\PaymentPropertyTypeName
     {
         list($response) = $this->restPaymentPropertiesTypesNamesPostWithHttpInfo($_rest_payment_properties_types_names, $contentType);
         return $response;
@@ -1726,15 +1726,15 @@ class PaymentApi
      *
      * Create a name of a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentPropertyTypeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentPropertyTypeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPropertiesTypesNamesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
+        ?\ck\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesPost'][0]
     ): array
     {
@@ -1777,23 +1777,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentPropertyTypeName' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentPropertyTypeName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentPropertyTypeName' !== 'string') {
+                        if ('\ck\Model\PaymentPropertyTypeName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentPropertyTypeName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentPropertyTypeName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentPropertyTypeName';
+            $returnType = '\ck\Model\PaymentPropertyTypeName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1814,7 +1814,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentPropertyTypeName',
+                        '\ck\Model\PaymentPropertyTypeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1829,14 +1829,14 @@ class PaymentApi
      *
      * Create a name of a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentPropertiesTypesNamesPostAsync(
-        ?\ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
+        ?\ck\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesPost'][0]
     ): PromiseInterface
     {
@@ -1853,7 +1853,7 @@ class PaymentApi
      *
      * Create a name of a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1864,7 +1864,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentPropertyTypeName';
+        $returnType = '\ck\Model\PaymentPropertyTypeName';
         $request = $this->restPaymentPropertiesTypesNamesPostRequest($_rest_payment_properties_types_names, $contentType);
 
         return $this->client
@@ -1906,7 +1906,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentPropertiesTypesNamesPost'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2000,17 +2000,17 @@ class PaymentApi
      *
      * Update a name of a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names _rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names _rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentPropertyTypeName
+     * @return \ck\Model\PaymentPropertyTypeName
      */
     public function restPaymentPropertiesTypesNamesPut(
-        ?\ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
+        ?\ck\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesPut'][0]
-    ): \ck/plenty-client\Model\PaymentPropertyTypeName
+    ): \ck\Model\PaymentPropertyTypeName
     {
         list($response) = $this->restPaymentPropertiesTypesNamesPutWithHttpInfo($_rest_payment_properties_types_names, $contentType);
         return $response;
@@ -2021,15 +2021,15 @@ class PaymentApi
      *
      * Update a name of a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentPropertyTypeName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentPropertyTypeName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentPropertiesTypesNamesPutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
+        ?\ck\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesPut'][0]
     ): array
     {
@@ -2072,23 +2072,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentPropertyTypeName' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentPropertyTypeName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentPropertyTypeName' !== 'string') {
+                        if ('\ck\Model\PaymentPropertyTypeName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentPropertyTypeName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentPropertyTypeName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentPropertyTypeName';
+            $returnType = '\ck\Model\PaymentPropertyTypeName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2109,7 +2109,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentPropertyTypeName',
+                        '\ck\Model\PaymentPropertyTypeName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2124,14 +2124,14 @@ class PaymentApi
      *
      * Update a name of a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentPropertiesTypesNamesPutAsync(
-        ?\ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
+        ?\ck\Model\RestPaymentPropertiesTypesNamesPutRequest $_rest_payment_properties_types_names = null,
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesPut'][0]
     ): PromiseInterface
     {
@@ -2148,7 +2148,7 @@ class PaymentApi
      *
      * Update a name of a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2159,7 +2159,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentPropertiesTypesNamesPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentPropertyTypeName';
+        $returnType = '\ck\Model\PaymentPropertyTypeName';
         $request = $this->restPaymentPropertiesTypesNamesPutRequest($_rest_payment_properties_types_names, $contentType);
 
         return $this->client
@@ -2201,7 +2201,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentPropertiesTypesNamesPut'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
+     * @param  \ck\Model\RestPaymentPropertiesTypesNamesPutRequest|null $_rest_payment_properties_types_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentPropertiesTypesNamesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2303,7 +2303,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment[]
+     * @return \ck\Model\Payment[]
      */
     public function restPaymentsEntrydateGet(
         ?string $start_date = null,
@@ -2330,7 +2330,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsEntrydateGetWithHttpInfo(
         ?string $start_date = null,
@@ -2379,23 +2379,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment[]' !== 'string') {
+                        if ('\ck\Model\Payment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment[]';
+            $returnType = '\ck\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2416,7 +2416,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment[]',
+                        '\ck\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2478,7 +2478,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsEntrydateGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment[]';
+        $returnType = '\ck\Model\Payment[]';
         $request = $this->restPaymentsEntrydateGetRequest($start_date, $end_date, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -2658,7 +2658,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment[]
+     * @return \ck\Model\Payment[]
      */
     public function restPaymentsGet(
         ?int $items_per_page = null,
@@ -2681,7 +2681,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsGetWithHttpInfo(
         ?int $items_per_page = null,
@@ -2728,23 +2728,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment[]' !== 'string') {
+                        if ('\ck\Model\Payment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment[]';
+            $returnType = '\ck\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2765,7 +2765,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment[]',
+                        '\ck\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2819,7 +2819,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment[]';
+        $returnType = '\ck\Model\Payment[]';
         $request = $this->restPaymentsGetRequest($items_per_page, $page, $contentType);
 
         return $this->client
@@ -2977,7 +2977,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment[]
+     * @return \ck\Model\Payment[]
      */
     public function restPaymentsImportdateGet(
         ?string $start_date = null,
@@ -3004,7 +3004,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsImportdateGetWithHttpInfo(
         ?string $start_date = null,
@@ -3053,23 +3053,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment[]' !== 'string') {
+                        if ('\ck\Model\Payment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment[]';
+            $returnType = '\ck\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3090,7 +3090,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment[]',
+                        '\ck\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3152,7 +3152,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsImportdateGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment[]';
+        $returnType = '\ck\Model\Payment[]';
         $request = $this->restPaymentsImportdateGetRequest($start_date, $end_date, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -3332,7 +3332,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentMethodName[]
+     * @return \ck\Model\PaymentMethodName[]
      */
     public function restPaymentsMethodNamesGet(
         ?int $items_per_page = null,
@@ -3355,7 +3355,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentMethodName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentMethodName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodNamesGetWithHttpInfo(
         ?int $items_per_page = null,
@@ -3402,23 +3402,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentMethodName[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentMethodName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentMethodName[]' !== 'string') {
+                        if ('\ck\Model\PaymentMethodName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentMethodName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentMethodName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentMethodName[]';
+            $returnType = '\ck\Model\PaymentMethodName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3439,7 +3439,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentMethodName[]',
+                        '\ck\Model\PaymentMethodName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3493,7 +3493,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsMethodNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentMethodName[]';
+        $returnType = '\ck\Model\PaymentMethodName[]';
         $request = $this->restPaymentsMethodNamesGetRequest($items_per_page, $page, $contentType);
 
         return $this->client
@@ -3646,7 +3646,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentMethodName[]
+     * @return \ck\Model\PaymentMethodName[]
      */
     public function restPaymentsMethodNamesPaymentMethodIdGet(
         int $payment_method_id,
@@ -3671,7 +3671,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentMethodName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentMethodName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodNamesPaymentMethodIdGetWithHttpInfo(
         int $payment_method_id,
@@ -3719,23 +3719,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentMethodName[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentMethodName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentMethodName[]' !== 'string') {
+                        if ('\ck\Model\PaymentMethodName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentMethodName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentMethodName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentMethodName[]';
+            $returnType = '\ck\Model\PaymentMethodName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3756,7 +3756,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentMethodName[]',
+                        '\ck\Model\PaymentMethodName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3814,7 +3814,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsMethodNamesPaymentMethodIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentMethodName[]';
+        $returnType = '\ck\Model\PaymentMethodName[]';
         $request = $this->restPaymentsMethodNamesPaymentMethodIdGetRequest($payment_method_id, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -3983,13 +3983,13 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentMethodName
+     * @return \ck\Model\PaymentMethodName
      */
     public function restPaymentsMethodNamesPaymentMethodIdLangGet(
         int $payment_method_id,
         int $lang,
         string $contentType = self::contentTypes['restPaymentsMethodNamesPaymentMethodIdLangGet'][0]
-    ): \ck/plenty-client\Model\PaymentMethodName
+    ): \ck\Model\PaymentMethodName
     {
         list($response) = $this->restPaymentsMethodNamesPaymentMethodIdLangGetWithHttpInfo($payment_method_id, $lang, $contentType);
         return $response;
@@ -4006,7 +4006,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentMethodName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentMethodName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodNamesPaymentMethodIdLangGetWithHttpInfo(
         int $payment_method_id,
@@ -4053,23 +4053,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentMethodName' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentMethodName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentMethodName' !== 'string') {
+                        if ('\ck\Model\PaymentMethodName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentMethodName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentMethodName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentMethodName';
+            $returnType = '\ck\Model\PaymentMethodName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4090,7 +4090,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentMethodName',
+                        '\ck\Model\PaymentMethodName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4144,7 +4144,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsMethodNamesPaymentMethodIdLangGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentMethodName';
+        $returnType = '\ck\Model\PaymentMethodName';
         $request = $this->restPaymentsMethodNamesPaymentMethodIdLangGetRequest($payment_method_id, $lang, $contentType);
 
         return $this->client
@@ -4880,7 +4880,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentMethod[]
+     * @return \ck\Model\PaymentMethod[]
      */
     public function restPaymentsMethodsGet(
         ?int $items_per_page = null,
@@ -4903,7 +4903,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentMethod[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentMethod[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsGetWithHttpInfo(
         ?int $items_per_page = null,
@@ -4950,23 +4950,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentMethod[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentMethod[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentMethod[]' !== 'string') {
+                        if ('\ck\Model\PaymentMethod[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentMethod[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentMethod[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentMethod[]';
+            $returnType = '\ck\Model\PaymentMethod[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4987,7 +4987,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentMethod[]',
+                        '\ck\Model\PaymentMethod[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5041,7 +5041,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsMethodsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentMethod[]';
+        $returnType = '\ck\Model\PaymentMethod[]';
         $request = $this->restPaymentsMethodsGetRequest($items_per_page, $page, $contentType);
 
         return $this->client
@@ -6873,7 +6873,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment[]
+     * @return \ck\Model\Payment[]
      */
     public function restPaymentsMethodsMethodIdGet(
         int $method_id,
@@ -6898,7 +6898,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsMethodIdGetWithHttpInfo(
         int $method_id,
@@ -6946,23 +6946,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment[]' !== 'string') {
+                        if ('\ck\Model\Payment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment[]';
+            $returnType = '\ck\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6983,7 +6983,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment[]',
+                        '\ck\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7041,7 +7041,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsMethodsMethodIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment[]';
+        $returnType = '\ck\Model\Payment[]';
         $request = $this->restPaymentsMethodsMethodIdGetRequest($method_id, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -7215,7 +7215,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentMethod[]
+     * @return \ck\Model\PaymentMethod[]
      */
     public function restPaymentsMethodsPluginsPluginKeyGet(
         int $plugin_key,
@@ -7240,7 +7240,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentMethod[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentMethod[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsPluginsPluginKeyGetWithHttpInfo(
         int $plugin_key,
@@ -7288,23 +7288,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentMethod[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentMethod[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentMethod[]' !== 'string') {
+                        if ('\ck\Model\PaymentMethod[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentMethod[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentMethod[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentMethod[]';
+            $returnType = '\ck\Model\PaymentMethod[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7325,7 +7325,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentMethod[]',
+                        '\ck\Model\PaymentMethod[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7383,7 +7383,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsMethodsPluginsPluginKeyGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentMethod[]';
+        $returnType = '\ck\Model\PaymentMethod[]';
         $request = $this->restPaymentsMethodsPluginsPluginKeyGetRequest($plugin_key, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -7550,17 +7550,17 @@ class PaymentApi
      *
      * Create a payment method
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods _rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods _rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentMethod
+     * @return \ck\Model\PaymentMethod
      */
     public function restPaymentsMethodsPost(
-        ?\ck/plenty-client\Model\RestPaymentsMethodsPostRequest $_rest_payments_methods = null,
+        ?\ck\Model\RestPaymentsMethodsPostRequest $_rest_payments_methods = null,
         string $contentType = self::contentTypes['restPaymentsMethodsPost'][0]
-    ): \ck/plenty-client\Model\PaymentMethod
+    ): \ck\Model\PaymentMethod
     {
         list($response) = $this->restPaymentsMethodsPostWithHttpInfo($_rest_payments_methods, $contentType);
         return $response;
@@ -7571,15 +7571,15 @@ class PaymentApi
      *
      * Create a payment method
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentMethod, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentMethod, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentsMethodsPostRequest $_rest_payments_methods = null,
+        ?\ck\Model\RestPaymentsMethodsPostRequest $_rest_payments_methods = null,
         string $contentType = self::contentTypes['restPaymentsMethodsPost'][0]
     ): array
     {
@@ -7622,23 +7622,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentMethod' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentMethod' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentMethod' !== 'string') {
+                        if ('\ck\Model\PaymentMethod' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentMethod', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentMethod', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentMethod';
+            $returnType = '\ck\Model\PaymentMethod';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7659,7 +7659,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentMethod',
+                        '\ck\Model\PaymentMethod',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7674,14 +7674,14 @@ class PaymentApi
      *
      * Create a payment method
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentsMethodsPostAsync(
-        ?\ck/plenty-client\Model\RestPaymentsMethodsPostRequest $_rest_payments_methods = null,
+        ?\ck\Model\RestPaymentsMethodsPostRequest $_rest_payments_methods = null,
         string $contentType = self::contentTypes['restPaymentsMethodsPost'][0]
     ): PromiseInterface
     {
@@ -7698,7 +7698,7 @@ class PaymentApi
      *
      * Create a payment method
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7709,7 +7709,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsMethodsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentMethod';
+        $returnType = '\ck\Model\PaymentMethod';
         $request = $this->restPaymentsMethodsPostRequest($_rest_payments_methods, $contentType);
 
         return $this->client
@@ -7751,7 +7751,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentsMethodsPost'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPostRequest|null $_rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7845,17 +7845,17 @@ class PaymentApi
      *
      * Update a payment method
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods _rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods _rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentMethod
+     * @return \ck\Model\PaymentMethod
      */
     public function restPaymentsMethodsPut(
-        ?\ck/plenty-client\Model\RestPaymentsMethodsPutRequest $_rest_payments_methods = null,
+        ?\ck\Model\RestPaymentsMethodsPutRequest $_rest_payments_methods = null,
         string $contentType = self::contentTypes['restPaymentsMethodsPut'][0]
-    ): \ck/plenty-client\Model\PaymentMethod
+    ): \ck\Model\PaymentMethod
     {
         list($response) = $this->restPaymentsMethodsPutWithHttpInfo($_rest_payments_methods, $contentType);
         return $response;
@@ -7866,15 +7866,15 @@ class PaymentApi
      *
      * Update a payment method
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentMethod, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentMethod, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsMethodsPutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentsMethodsPutRequest $_rest_payments_methods = null,
+        ?\ck\Model\RestPaymentsMethodsPutRequest $_rest_payments_methods = null,
         string $contentType = self::contentTypes['restPaymentsMethodsPut'][0]
     ): array
     {
@@ -7917,23 +7917,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentMethod' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentMethod' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentMethod' !== 'string') {
+                        if ('\ck\Model\PaymentMethod' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentMethod', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentMethod', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentMethod';
+            $returnType = '\ck\Model\PaymentMethod';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7954,7 +7954,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentMethod',
+                        '\ck\Model\PaymentMethod',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7969,14 +7969,14 @@ class PaymentApi
      *
      * Update a payment method
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentsMethodsPutAsync(
-        ?\ck/plenty-client\Model\RestPaymentsMethodsPutRequest $_rest_payments_methods = null,
+        ?\ck\Model\RestPaymentsMethodsPutRequest $_rest_payments_methods = null,
         string $contentType = self::contentTypes['restPaymentsMethodsPut'][0]
     ): PromiseInterface
     {
@@ -7993,7 +7993,7 @@ class PaymentApi
      *
      * Update a payment method
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8004,7 +8004,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsMethodsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentMethod';
+        $returnType = '\ck\Model\PaymentMethod';
         $request = $this->restPaymentsMethodsPutRequest($_rest_payments_methods, $contentType);
 
         return $this->client
@@ -8046,7 +8046,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentsMethodsPut'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods (optional)
+     * @param  \ck\Model\RestPaymentsMethodsPutRequest|null $_rest_payments_methods (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsMethodsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8147,7 +8147,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment[]
+     * @return \ck\Model\Payment[]
      */
     public function restPaymentsOrdersOrderIdGet(
         int $order_id,
@@ -8172,7 +8172,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsOrdersOrderIdGetWithHttpInfo(
         int $order_id,
@@ -8220,23 +8220,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment[]' !== 'string') {
+                        if ('\ck\Model\Payment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment[]';
+            $returnType = '\ck\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8257,7 +8257,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment[]',
+                        '\ck\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8315,7 +8315,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsOrdersOrderIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment[]';
+        $returnType = '\ck\Model\Payment[]';
         $request = $this->restPaymentsOrdersOrderIdGetRequest($order_id, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -8487,12 +8487,12 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment
+     * @return \ck\Model\Payment
      */
     public function restPaymentsPaymentIdGet(
         int $payment_id,
         string $contentType = self::contentTypes['restPaymentsPaymentIdGet'][0]
-    ): \ck/plenty-client\Model\Payment
+    ): \ck\Model\Payment
     {
         list($response) = $this->restPaymentsPaymentIdGetWithHttpInfo($payment_id, $contentType);
         return $response;
@@ -8508,7 +8508,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPaymentIdGetWithHttpInfo(
         int $payment_id,
@@ -8554,23 +8554,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment' === '\SplFileObject') {
+                    if ('\ck\Model\Payment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment' !== 'string') {
+                        if ('\ck\Model\Payment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment';
+            $returnType = '\ck\Model\Payment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8591,7 +8591,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment',
+                        '\ck\Model\Payment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8641,7 +8641,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPaymentIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment';
+        $returnType = '\ck\Model\Payment';
         $request = $this->restPaymentsPaymentIdGetRequest($payment_id, $contentType);
 
         return $this->client
@@ -8791,7 +8791,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentProperty[]
+     * @return \ck\Model\PaymentProperty[]
      */
     public function restPaymentsPaymentIdPropertiesGet(
         int $payment_id,
@@ -8816,7 +8816,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPaymentIdPropertiesGetWithHttpInfo(
         int $payment_id,
@@ -8864,23 +8864,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentProperty[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentProperty[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentProperty[]' !== 'string') {
+                        if ('\ck\Model\PaymentProperty[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentProperty[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentProperty[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentProperty[]';
+            $returnType = '\ck\Model\PaymentProperty[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8901,7 +8901,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentProperty[]',
+                        '\ck\Model\PaymentProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8959,7 +8959,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPaymentIdPropertiesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentProperty[]';
+        $returnType = '\ck\Model\PaymentProperty[]';
         $request = $this->restPaymentsPaymentIdPropertiesGetRequest($payment_id, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -9126,17 +9126,17 @@ class PaymentApi
      *
      * Create a payment
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPostRequest|null $_rest_payments _rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPostRequest|null $_rest_payments _rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment
+     * @return \ck\Model\Payment
      */
     public function restPaymentsPost(
-        ?\ck/plenty-client\Model\RestPaymentsPostRequest $_rest_payments = null,
+        ?\ck\Model\RestPaymentsPostRequest $_rest_payments = null,
         string $contentType = self::contentTypes['restPaymentsPost'][0]
-    ): \ck/plenty-client\Model\Payment
+    ): \ck\Model\Payment
     {
         list($response) = $this->restPaymentsPostWithHttpInfo($_rest_payments, $contentType);
         return $response;
@@ -9147,15 +9147,15 @@ class PaymentApi
      *
      * Create a payment
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPostRequest|null $_rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPostRequest|null $_rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentsPostRequest $_rest_payments = null,
+        ?\ck\Model\RestPaymentsPostRequest $_rest_payments = null,
         string $contentType = self::contentTypes['restPaymentsPost'][0]
     ): array
     {
@@ -9198,23 +9198,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment' === '\SplFileObject') {
+                    if ('\ck\Model\Payment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment' !== 'string') {
+                        if ('\ck\Model\Payment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment';
+            $returnType = '\ck\Model\Payment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9235,7 +9235,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment',
+                        '\ck\Model\Payment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9250,14 +9250,14 @@ class PaymentApi
      *
      * Create a payment
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPostRequest|null $_rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPostRequest|null $_rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentsPostAsync(
-        ?\ck/plenty-client\Model\RestPaymentsPostRequest $_rest_payments = null,
+        ?\ck\Model\RestPaymentsPostRequest $_rest_payments = null,
         string $contentType = self::contentTypes['restPaymentsPost'][0]
     ): PromiseInterface
     {
@@ -9274,7 +9274,7 @@ class PaymentApi
      *
      * Create a payment
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPostRequest|null $_rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPostRequest|null $_rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9285,7 +9285,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment';
+        $returnType = '\ck\Model\Payment';
         $request = $this->restPaymentsPostRequest($_rest_payments, $contentType);
 
         return $this->client
@@ -9327,7 +9327,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentsPost'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPostRequest|null $_rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPostRequest|null $_rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9429,7 +9429,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentProperty[]
+     * @return \ck\Model\PaymentProperty[]
      */
     public function restPaymentsPropertiesDateGet(
         ?string $start_date = null,
@@ -9456,7 +9456,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesDateGetWithHttpInfo(
         ?string $start_date = null,
@@ -9505,23 +9505,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentProperty[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentProperty[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentProperty[]' !== 'string') {
+                        if ('\ck\Model\PaymentProperty[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentProperty[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentProperty[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentProperty[]';
+            $returnType = '\ck\Model\PaymentProperty[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9542,7 +9542,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentProperty[]',
+                        '\ck\Model\PaymentProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9604,7 +9604,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesDateGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentProperty[]';
+        $returnType = '\ck\Model\PaymentProperty[]';
         $request = $this->restPaymentsPropertiesDateGetRequest($start_date, $end_date, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -9784,7 +9784,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentProperty[]
+     * @return \ck\Model\PaymentProperty[]
      */
     public function restPaymentsPropertiesGet(
         ?int $items_per_page = null,
@@ -9807,7 +9807,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentProperty[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentProperty[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesGetWithHttpInfo(
         ?int $items_per_page = null,
@@ -9854,23 +9854,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentProperty[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentProperty[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentProperty[]' !== 'string') {
+                        if ('\ck\Model\PaymentProperty[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentProperty[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentProperty[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentProperty[]';
+            $returnType = '\ck\Model\PaymentProperty[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9891,7 +9891,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentProperty[]',
+                        '\ck\Model\PaymentProperty[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9945,7 +9945,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentProperty[]';
+        $returnType = '\ck\Model\PaymentProperty[]';
         $request = $this->restPaymentsPropertiesGetRequest($items_per_page, $page, $contentType);
 
         return $this->client
@@ -10095,17 +10095,17 @@ class PaymentApi
      *
      * Create a payment property
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties _rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties _rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentProperty
+     * @return \ck\Model\PaymentProperty
      */
     public function restPaymentsPropertiesPost(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
+        ?\ck\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesPost'][0]
-    ): \ck/plenty-client\Model\PaymentProperty
+    ): \ck\Model\PaymentProperty
     {
         list($response) = $this->restPaymentsPropertiesPostWithHttpInfo($_rest_payments_properties, $contentType);
         return $response;
@@ -10116,15 +10116,15 @@ class PaymentApi
      *
      * Create a payment property
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
+        ?\ck\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesPost'][0]
     ): array
     {
@@ -10167,23 +10167,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentProperty' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentProperty' !== 'string') {
+                        if ('\ck\Model\PaymentProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentProperty';
+            $returnType = '\ck\Model\PaymentProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10204,7 +10204,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentProperty',
+                        '\ck\Model\PaymentProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10219,14 +10219,14 @@ class PaymentApi
      *
      * Create a payment property
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentsPropertiesPostAsync(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
+        ?\ck\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesPost'][0]
     ): PromiseInterface
     {
@@ -10243,7 +10243,7 @@ class PaymentApi
      *
      * Create a payment property
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10254,7 +10254,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentProperty';
+        $returnType = '\ck\Model\PaymentProperty';
         $request = $this->restPaymentsPropertiesPostRequest($_rest_payments_properties, $contentType);
 
         return $this->client
@@ -10296,7 +10296,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentsPropertiesPost'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10395,12 +10395,12 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentProperty
+     * @return \ck\Model\PaymentProperty
      */
     public function restPaymentsPropertiesPropertyIdGet(
         int $property_id,
         string $contentType = self::contentTypes['restPaymentsPropertiesPropertyIdGet'][0]
-    ): \ck/plenty-client\Model\PaymentProperty
+    ): \ck\Model\PaymentProperty
     {
         list($response) = $this->restPaymentsPropertiesPropertyIdGetWithHttpInfo($property_id, $contentType);
         return $response;
@@ -10416,7 +10416,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesPropertyIdGetWithHttpInfo(
         int $property_id,
@@ -10462,23 +10462,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentProperty' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentProperty' !== 'string') {
+                        if ('\ck\Model\PaymentProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentProperty';
+            $returnType = '\ck\Model\PaymentProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10499,7 +10499,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentProperty',
+                        '\ck\Model\PaymentProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10549,7 +10549,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesPropertyIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentProperty';
+        $returnType = '\ck\Model\PaymentProperty';
         $request = $this->restPaymentsPropertiesPropertyIdGetRequest($property_id, $contentType);
 
         return $this->client
@@ -10692,17 +10692,17 @@ class PaymentApi
      *
      * Update a payment property
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties _rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties _rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentProperty
+     * @return \ck\Model\PaymentProperty
      */
     public function restPaymentsPropertiesPut(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
+        ?\ck\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesPut'][0]
-    ): \ck/plenty-client\Model\PaymentProperty
+    ): \ck\Model\PaymentProperty
     {
         list($response) = $this->restPaymentsPropertiesPutWithHttpInfo($_rest_payments_properties, $contentType);
         return $response;
@@ -10713,15 +10713,15 @@ class PaymentApi
      *
      * Update a payment property
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentProperty, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentProperty, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesPutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
+        ?\ck\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesPut'][0]
     ): array
     {
@@ -10764,23 +10764,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentProperty' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentProperty' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentProperty' !== 'string') {
+                        if ('\ck\Model\PaymentProperty' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentProperty', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentProperty', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentProperty';
+            $returnType = '\ck\Model\PaymentProperty';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10801,7 +10801,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentProperty',
+                        '\ck\Model\PaymentProperty',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10816,14 +10816,14 @@ class PaymentApi
      *
      * Update a payment property
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentsPropertiesPutAsync(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
+        ?\ck\Model\RestPaymentsPropertiesPutRequest $_rest_payments_properties = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesPut'][0]
     ): PromiseInterface
     {
@@ -10840,7 +10840,7 @@ class PaymentApi
      *
      * Update a payment property
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10851,7 +10851,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentProperty';
+        $returnType = '\ck\Model\PaymentProperty';
         $request = $this->restPaymentsPropertiesPutRequest($_rest_payments_properties, $contentType);
 
         return $this->client
@@ -10893,7 +10893,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentsPropertiesPut'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesPutRequest|null $_rest_payments_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10993,7 +10993,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentPropertyType[]
+     * @return \ck\Model\PaymentPropertyType[]
      */
     public function restPaymentsPropertiesTypesGet(
         ?int $items_per_page = null,
@@ -11016,7 +11016,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentPropertyType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentPropertyType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesTypesGetWithHttpInfo(
         ?int $items_per_page = null,
@@ -11063,23 +11063,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentPropertyType[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentPropertyType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentPropertyType[]' !== 'string') {
+                        if ('\ck\Model\PaymentPropertyType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentPropertyType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentPropertyType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentPropertyType[]';
+            $returnType = '\ck\Model\PaymentPropertyType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11100,7 +11100,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentPropertyType[]',
+                        '\ck\Model\PaymentPropertyType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11154,7 +11154,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentPropertyType[]';
+        $returnType = '\ck\Model\PaymentPropertyType[]';
         $request = $this->restPaymentsPropertiesTypesGetRequest($items_per_page, $page, $contentType);
 
         return $this->client
@@ -11304,17 +11304,17 @@ class PaymentApi
      *
      * Create a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types _rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types _rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentPropertyType
+     * @return \ck\Model\PaymentPropertyType
      */
     public function restPaymentsPropertiesTypesPost(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
+        ?\ck\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesPost'][0]
-    ): \ck/plenty-client\Model\PaymentPropertyType
+    ): \ck\Model\PaymentPropertyType
     {
         list($response) = $this->restPaymentsPropertiesTypesPostWithHttpInfo($_rest_payments_properties_types, $contentType);
         return $response;
@@ -11325,15 +11325,15 @@ class PaymentApi
      *
      * Create a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesTypesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
+        ?\ck\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesPost'][0]
     ): array
     {
@@ -11376,23 +11376,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentPropertyType' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentPropertyType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentPropertyType' !== 'string') {
+                        if ('\ck\Model\PaymentPropertyType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentPropertyType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentPropertyType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentPropertyType';
+            $returnType = '\ck\Model\PaymentPropertyType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11413,7 +11413,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentPropertyType',
+                        '\ck\Model\PaymentPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11428,14 +11428,14 @@ class PaymentApi
      *
      * Create a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentsPropertiesTypesPostAsync(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
+        ?\ck\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesPost'][0]
     ): PromiseInterface
     {
@@ -11452,7 +11452,7 @@ class PaymentApi
      *
      * Create a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11463,7 +11463,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentPropertyType';
+        $returnType = '\ck\Model\PaymentPropertyType';
         $request = $this->restPaymentsPropertiesTypesPostRequest($_rest_payments_properties_types, $contentType);
 
         return $this->client
@@ -11505,7 +11505,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentsPropertiesTypesPost'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11599,17 +11599,17 @@ class PaymentApi
      *
      * Update a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types _rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types _rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentPropertyType
+     * @return \ck\Model\PaymentPropertyType
      */
     public function restPaymentsPropertiesTypesPut(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
+        ?\ck\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesPut'][0]
-    ): \ck/plenty-client\Model\PaymentPropertyType
+    ): \ck\Model\PaymentPropertyType
     {
         list($response) = $this->restPaymentsPropertiesTypesPutWithHttpInfo($_rest_payments_properties_types, $contentType);
         return $response;
@@ -11620,15 +11620,15 @@ class PaymentApi
      *
      * Update a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentPropertyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentPropertyType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesTypesPutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
+        ?\ck\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesPut'][0]
     ): array
     {
@@ -11671,23 +11671,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentPropertyType' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentPropertyType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentPropertyType' !== 'string') {
+                        if ('\ck\Model\PaymentPropertyType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentPropertyType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentPropertyType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentPropertyType';
+            $returnType = '\ck\Model\PaymentPropertyType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11708,7 +11708,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentPropertyType',
+                        '\ck\Model\PaymentPropertyType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11723,14 +11723,14 @@ class PaymentApi
      *
      * Update a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentsPropertiesTypesPutAsync(
-        ?\ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
+        ?\ck\Model\RestPaymentsPropertiesTypesPutRequest $_rest_payments_properties_types = null,
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesPut'][0]
     ): PromiseInterface
     {
@@ -11747,7 +11747,7 @@ class PaymentApi
      *
      * Update a property type
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11758,7 +11758,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentPropertyType';
+        $returnType = '\ck\Model\PaymentPropertyType';
         $request = $this->restPaymentsPropertiesTypesPutRequest($_rest_payments_properties_types, $contentType);
 
         return $this->client
@@ -11800,7 +11800,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentsPropertiesTypesPut'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
+     * @param  \ck\Model\RestPaymentsPropertiesTypesPutRequest|null $_rest_payments_properties_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPropertiesTypesPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11899,7 +11899,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentPropertyType[]
+     * @return \ck\Model\PaymentPropertyType[]
      */
     public function restPaymentsPropertiesTypesTypeIdGet(
         int $type_id,
@@ -11920,7 +11920,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentPropertyType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentPropertyType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertiesTypesTypeIdGetWithHttpInfo(
         int $type_id,
@@ -11966,23 +11966,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentPropertyType[]' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentPropertyType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentPropertyType[]' !== 'string') {
+                        if ('\ck\Model\PaymentPropertyType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentPropertyType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentPropertyType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentPropertyType[]';
+            $returnType = '\ck\Model\PaymentPropertyType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12003,7 +12003,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentPropertyType[]',
+                        '\ck\Model\PaymentPropertyType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12053,7 +12053,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertiesTypesTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentPropertyType[]';
+        $returnType = '\ck\Model\PaymentPropertyType[]';
         $request = $this->restPaymentsPropertiesTypesTypeIdGetRequest($type_id, $contentType);
 
         return $this->client
@@ -12204,7 +12204,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment[]
+     * @return \ck\Model\Payment[]
      */
     public function restPaymentsPropertyPropertyTypeIdPropertyValueGet(
         int $property_type_id,
@@ -12231,7 +12231,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPropertyPropertyTypeIdPropertyValueGetWithHttpInfo(
         int $property_type_id,
@@ -12280,23 +12280,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment[]' !== 'string') {
+                        if ('\ck\Model\Payment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment[]';
+            $returnType = '\ck\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12317,7 +12317,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment[]',
+                        '\ck\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12379,7 +12379,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPropertyPropertyTypeIdPropertyValueGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment[]';
+        $returnType = '\ck\Model\Payment[]';
         $request = $this->restPaymentsPropertyPropertyTypeIdPropertyValueGetRequest($property_type_id, $property_value, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -12563,17 +12563,17 @@ class PaymentApi
      *
      * Update a payment
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPutRequest|null $_rest_payments _rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPutRequest|null $_rest_payments _rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment
+     * @return \ck\Model\Payment
      */
     public function restPaymentsPut(
-        ?\ck/plenty-client\Model\RestPaymentsPutRequest $_rest_payments = null,
+        ?\ck\Model\RestPaymentsPutRequest $_rest_payments = null,
         string $contentType = self::contentTypes['restPaymentsPut'][0]
-    ): \ck/plenty-client\Model\Payment
+    ): \ck\Model\Payment
     {
         list($response) = $this->restPaymentsPutWithHttpInfo($_rest_payments, $contentType);
         return $response;
@@ -12584,15 +12584,15 @@ class PaymentApi
      *
      * Update a payment
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPutRequest|null $_rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPutRequest|null $_rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsPutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestPaymentsPutRequest $_rest_payments = null,
+        ?\ck\Model\RestPaymentsPutRequest $_rest_payments = null,
         string $contentType = self::contentTypes['restPaymentsPut'][0]
     ): array
     {
@@ -12635,23 +12635,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment' === '\SplFileObject') {
+                    if ('\ck\Model\Payment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment' !== 'string') {
+                        if ('\ck\Model\Payment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment';
+            $returnType = '\ck\Model\Payment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12672,7 +12672,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment',
+                        '\ck\Model\Payment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12687,14 +12687,14 @@ class PaymentApi
      *
      * Update a payment
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPutRequest|null $_rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPutRequest|null $_rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restPaymentsPutAsync(
-        ?\ck/plenty-client\Model\RestPaymentsPutRequest $_rest_payments = null,
+        ?\ck\Model\RestPaymentsPutRequest $_rest_payments = null,
         string $contentType = self::contentTypes['restPaymentsPut'][0]
     ): PromiseInterface
     {
@@ -12711,7 +12711,7 @@ class PaymentApi
      *
      * Update a payment
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPutRequest|null $_rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPutRequest|null $_rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12722,7 +12722,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment';
+        $returnType = '\ck\Model\Payment';
         $request = $this->restPaymentsPutRequest($_rest_payments, $contentType);
 
         return $this->client
@@ -12764,7 +12764,7 @@ class PaymentApi
     /**
      * Create request for operation 'restPaymentsPut'
      *
-     * @param  \ck/plenty-client\Model\RestPaymentsPutRequest|null $_rest_payments (optional)
+     * @param  \ck\Model\RestPaymentsPutRequest|null $_rest_payments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPaymentsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -12865,7 +12865,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment[]
+     * @return \ck\Model\Payment[]
      */
     public function restPaymentsStatusStatusIdGet(
         int $status_id,
@@ -12890,7 +12890,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsStatusStatusIdGetWithHttpInfo(
         int $status_id,
@@ -12938,23 +12938,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment[]' !== 'string') {
+                        if ('\ck\Model\Payment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment[]';
+            $returnType = '\ck\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12975,7 +12975,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment[]',
+                        '\ck\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13033,7 +13033,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsStatusStatusIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment[]';
+        $returnType = '\ck\Model\Payment[]';
         $request = $this->restPaymentsStatusStatusIdGetRequest($status_id, $items_per_page, $page, $contentType);
 
         return $this->client
@@ -13207,7 +13207,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Payment[]
+     * @return \ck\Model\Payment[]
      */
     public function restPaymentsTransactionsTransactionTypeIdGet(
         int $transaction_type_id,
@@ -13232,7 +13232,7 @@ class PaymentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPaymentsTransactionsTransactionTypeIdGetWithHttpInfo(
         int $transaction_type_id,
@@ -13280,23 +13280,23 @@ class PaymentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Payment[]' !== 'string') {
+                        if ('\ck\Model\Payment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Payment[]';
+            $returnType = '\ck\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13317,7 +13317,7 @@ class PaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Payment[]',
+                        '\ck\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13375,7 +13375,7 @@ class PaymentApi
         string $contentType = self::contentTypes['restPaymentsTransactionsTransactionTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Payment[]';
+        $returnType = '\ck\Model\Payment[]';
         $request = $this->restPaymentsTransactionsTransactionTypeIdGetRequest($transaction_type_id, $items_per_page, $page, $contentType);
 
         return $this->client

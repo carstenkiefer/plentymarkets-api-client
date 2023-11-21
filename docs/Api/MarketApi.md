@@ -1,4 +1,4 @@
-# ck/plenty-client\MarketApi
+# ck\MarketApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -56,10 +56,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +103,7 @@ try {
 ## `restMarketsCredentialsCredentialsIdGet()`
 
 ```php
-restMarketsCredentialsCredentialsIdGet($id, $credentials_id): \ck/plenty-client\Model\Credentials
+restMarketsCredentialsCredentialsIdGet($id, $credentials_id): \ck\Model\Credentials
 ```
 
 Get a credential
@@ -118,10 +118,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -147,7 +147,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Credentials**](../Model/Credentials.md)
+[**\ck\Model\Credentials**](../Model/Credentials.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ try {
 ## `restMarketsCredentialsCredentialsIdPut()`
 
 ```php
-restMarketsCredentialsCredentialsIdPut($credentials_id, $_rest_markets_credentials_credentials_id): \ck/plenty-client\Model\Credentials
+restMarketsCredentialsCredentialsIdPut($credentials_id, $_rest_markets_credentials_credentials_id): \ck\Model\Credentials
 ```
 
 Update a credential
@@ -180,17 +180,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $credentials_id = 56; // int
-$_rest_markets_credentials_credentials_id = new \ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest(); // \ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest
+$_rest_markets_credentials_credentials_id = new \ck\Model\RestMarketsCredentialsCredentialsIdPutRequest(); // \ck\Model\RestMarketsCredentialsCredentialsIdPutRequest
 
 try {
     $result = $apiInstance->restMarketsCredentialsCredentialsIdPut($credentials_id, $_rest_markets_credentials_credentials_id);
@@ -205,11 +205,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **credentials_id** | **int**|  | |
-| **_rest_markets_credentials_credentials_id** | [**\ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest**](../Model/RestMarketsCredentialsCredentialsIdPutRequest.md)|  | [optional] |
+| **_rest_markets_credentials_credentials_id** | [**\ck\Model\RestMarketsCredentialsCredentialsIdPutRequest**](../Model/RestMarketsCredentialsCredentialsIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Credentials**](../Model/Credentials.md)
+[**\ck\Model\Credentials**](../Model/Credentials.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ try {
 ## `restMarketsCredentialsGet()`
 
 ```php
-restMarketsCredentialsGet($page, $items_per_page): \ck/plenty-client\Model\RestMarketsCredentialsGet200Response
+restMarketsCredentialsGet($page, $items_per_page): \ck\Model\RestMarketsCredentialsGet200Response
 ```
 
 List credentials
@@ -242,10 +242,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -271,7 +271,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestMarketsCredentialsGet200Response**](../Model/RestMarketsCredentialsGet200Response.md)
+[**\ck\Model\RestMarketsCredentialsGet200Response**](../Model/RestMarketsCredentialsGet200Response.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ try {
 ## `restMarketsCredentialsPost()`
 
 ```php
-restMarketsCredentialsPost($_rest_markets_credentials): \ck/plenty-client\Model\Credentials
+restMarketsCredentialsPost($_rest_markets_credentials): \ck\Model\Credentials
 ```
 
 Create a credential
@@ -304,16 +304,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_markets_credentials = new \ck/plenty-client\Model\RestMarketsCredentialsPostRequest(); // \ck/plenty-client\Model\RestMarketsCredentialsPostRequest
+$_rest_markets_credentials = new \ck\Model\RestMarketsCredentialsPostRequest(); // \ck\Model\RestMarketsCredentialsPostRequest
 
 try {
     $result = $apiInstance->restMarketsCredentialsPost($_rest_markets_credentials);
@@ -327,11 +327,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_markets_credentials** | [**\ck/plenty-client\Model\RestMarketsCredentialsPostRequest**](../Model/RestMarketsCredentialsPostRequest.md)|  | [optional] |
+| **_rest_markets_credentials** | [**\ck\Model\RestMarketsCredentialsPostRequest**](../Model/RestMarketsCredentialsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Credentials**](../Model/Credentials.md)
+[**\ck\Model\Credentials**](../Model/Credentials.md)
 
 ### Authorization
 
@@ -364,10 +364,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -421,10 +421,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -463,7 +463,7 @@ This endpoint does not need any parameter.
 ## `restMarketsEbayCategoriesGet()`
 
 ```php
-restMarketsEbayCategoriesGet($marketplace_id, $category_id): \ck/plenty-client\Model\Category[]
+restMarketsEbayCategoriesGet($marketplace_id, $category_id): \ck\Model\Category[]
 ```
 
 List categories
@@ -478,10 +478,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -507,7 +507,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Category[]**](../Model/Category.md)
+[**\ck\Model\Category[]**](../Model/Category.md)
 
 ### Authorization
 
@@ -525,7 +525,7 @@ try {
 ## `restMarketsEbayCategoriesIdGet()`
 
 ```php
-restMarketsEbayCategoriesIdGet($id): \ck/plenty-client\Model\Category
+restMarketsEbayCategoriesIdGet($id): \ck\Model\Category
 ```
 
 Get category
@@ -540,10 +540,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -567,7 +567,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Category**](../Model/Category.md)
+[**\ck\Model\Category**](../Model/Category.md)
 
 ### Authorization
 
@@ -585,7 +585,7 @@ try {
 ## `restMarketsEbayFulfillmentPoliciesIdGet()`
 
 ```php
-restMarketsEbayFulfillmentPoliciesIdGet($marketplace_id, $credentials_id, $id): \ck/plenty-client\Model\FulfillmentPolicy
+restMarketsEbayFulfillmentPoliciesIdGet($marketplace_id, $credentials_id, $id): \ck\Model\FulfillmentPolicy
 ```
 
 Get fulfillment policy
@@ -600,10 +600,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -631,7 +631,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\FulfillmentPolicy**](../Model/FulfillmentPolicy.md)
+[**\ck\Model\FulfillmentPolicy**](../Model/FulfillmentPolicy.md)
 
 ### Authorization
 
@@ -649,7 +649,7 @@ try {
 ## `restMarketsEbayItemSpecificsGet()`
 
 ```php
-restMarketsEbayItemSpecificsGet($category_id, $marketplace_id): \ck/plenty-client\Model\ItemSpecific[]
+restMarketsEbayItemSpecificsGet($category_id, $marketplace_id): \ck\Model\ItemSpecific[]
 ```
 
 List item specifics
@@ -664,10 +664,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -693,7 +693,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ItemSpecific[]**](../Model/ItemSpecific.md)
+[**\ck\Model\ItemSpecific[]**](../Model/ItemSpecific.md)
 
 ### Authorization
 
@@ -711,7 +711,7 @@ try {
 ## `restMarketsEbayMarketplacesGet()`
 
 ```php
-restMarketsEbayMarketplacesGet($referrer_id, $marketplace_id, $market_id, $site_id): \ck/plenty-client\Model\Marketplace[]
+restMarketsEbayMarketplacesGet($referrer_id, $marketplace_id, $market_id, $site_id): \ck\Model\Marketplace[]
 ```
 
 Get all eBay marketplaces.
@@ -726,10 +726,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -759,7 +759,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Marketplace[]**](../Model/Marketplace.md)
+[**\ck\Model\Marketplace[]**](../Model/Marketplace.md)
 
 ### Authorization
 
@@ -792,10 +792,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -839,7 +839,7 @@ try {
 ## `restMarketsEbayPartsFitmentsFitmentIdGet()`
 
 ```php
-restMarketsEbayPartsFitmentsFitmentIdGet($id, $fitment_id): \ck/plenty-client\Model\Fitment
+restMarketsEbayPartsFitmentsFitmentIdGet($id, $fitment_id): \ck\Model\Fitment
 ```
 
 Get a fitment
@@ -854,10 +854,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -883,7 +883,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Fitment**](../Model/Fitment.md)
+[**\ck\Model\Fitment**](../Model/Fitment.md)
 
 ### Authorization
 
@@ -901,7 +901,7 @@ try {
 ## `restMarketsEbayPartsFitmentsFitmentIdPut()`
 
 ```php
-restMarketsEbayPartsFitmentsFitmentIdPut($id, $fitment_id, $_rest_markets_ebay_parts_fitments_fitment_id): \ck/plenty-client\Model\Fitment
+restMarketsEbayPartsFitmentsFitmentIdPut($id, $fitment_id, $_rest_markets_ebay_parts_fitments_fitment_id): \ck\Model\Fitment
 ```
 
 Update fitment.
@@ -916,10 +916,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -927,7 +927,7 @@ $apiInstance = new ck/plenty-client\Api\MarketApi(
 );
 $id = 56; // int | The ID of the fitment list.
 $fitment_id = 56; // int
-$_rest_markets_ebay_parts_fitments_fitment_id = new \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest(); // \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest
+$_rest_markets_ebay_parts_fitments_fitment_id = new \ck\Model\RestMarketsEbayPartsFitmentsPostRequest(); // \ck\Model\RestMarketsEbayPartsFitmentsPostRequest
 
 try {
     $result = $apiInstance->restMarketsEbayPartsFitmentsFitmentIdPut($id, $fitment_id, $_rest_markets_ebay_parts_fitments_fitment_id);
@@ -943,11 +943,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| The ID of the fitment list. | |
 | **fitment_id** | **int**|  | |
-| **_rest_markets_ebay_parts_fitments_fitment_id** | [**\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest**](../Model/RestMarketsEbayPartsFitmentsPostRequest.md)|  | [optional] |
+| **_rest_markets_ebay_parts_fitments_fitment_id** | [**\ck\Model\RestMarketsEbayPartsFitmentsPostRequest**](../Model/RestMarketsEbayPartsFitmentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Fitment**](../Model/Fitment.md)
+[**\ck\Model\Fitment**](../Model/Fitment.md)
 
 ### Authorization
 
@@ -965,7 +965,7 @@ try {
 ## `restMarketsEbayPartsFitmentsGet()`
 
 ```php
-restMarketsEbayPartsFitmentsGet(): \ck/plenty-client\Model\Fitment[]
+restMarketsEbayPartsFitmentsGet(): \ck\Model\Fitment[]
 ```
 
 List fitments
@@ -980,10 +980,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1004,7 +1004,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Fitment[]**](../Model/Fitment.md)
+[**\ck\Model\Fitment[]**](../Model/Fitment.md)
 
 ### Authorization
 
@@ -1022,7 +1022,7 @@ This endpoint does not need any parameter.
 ## `restMarketsEbayPartsFitmentsPost()`
 
 ```php
-restMarketsEbayPartsFitmentsPost($_rest_markets_ebay_parts_fitments): \ck/plenty-client\Model\Fitment
+restMarketsEbayPartsFitmentsPost($_rest_markets_ebay_parts_fitments): \ck\Model\Fitment
 ```
 
 Create a fitment
@@ -1037,16 +1037,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_markets_ebay_parts_fitments = new \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest(); // \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest
+$_rest_markets_ebay_parts_fitments = new \ck\Model\RestMarketsEbayPartsFitmentsPostRequest(); // \ck\Model\RestMarketsEbayPartsFitmentsPostRequest
 
 try {
     $result = $apiInstance->restMarketsEbayPartsFitmentsPost($_rest_markets_ebay_parts_fitments);
@@ -1060,11 +1060,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_markets_ebay_parts_fitments** | [**\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest**](../Model/RestMarketsEbayPartsFitmentsPostRequest.md)|  | [optional] |
+| **_rest_markets_ebay_parts_fitments** | [**\ck\Model\RestMarketsEbayPartsFitmentsPostRequest**](../Model/RestMarketsEbayPartsFitmentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Fitment**](../Model/Fitment.md)
+[**\ck\Model\Fitment**](../Model/Fitment.md)
 
 ### Authorization
 
@@ -1082,7 +1082,7 @@ try {
 ## `restMarketsEbayPartsFitmentsSearchGet()`
 
 ```php
-restMarketsEbayPartsFitmentsSearchGet($category_id, $id, $market_id, $name, $property_name, $property_value, $page, $items_per_page, $with): \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response
+restMarketsEbayPartsFitmentsSearchGet($category_id, $id, $market_id, $name, $property_name, $property_value, $page, $items_per_page, $with): \ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response
 ```
 
 Search fitments
@@ -1097,10 +1097,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1140,7 +1140,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response**](../Model/RestMarketsEbayPartsFitmentsSearchGet200Response.md)
+[**\ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response**](../Model/RestMarketsEbayPartsFitmentsSearchGet200Response.md)
 
 ### Authorization
 
@@ -1158,7 +1158,7 @@ try {
 ## `restMarketsEbayPaymentPoliciesIdGet()`
 
 ```php
-restMarketsEbayPaymentPoliciesIdGet($marketplace_id, $credentials_id, $id): \ck/plenty-client\Model\PaymentPolicy
+restMarketsEbayPaymentPoliciesIdGet($marketplace_id, $credentials_id, $id): \ck\Model\PaymentPolicy
 ```
 
 Get payment policy
@@ -1173,10 +1173,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1204,7 +1204,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\PaymentPolicy**](../Model/PaymentPolicy.md)
+[**\ck\Model\PaymentPolicy**](../Model/PaymentPolicy.md)
 
 ### Authorization
 
@@ -1222,7 +1222,7 @@ try {
 ## `restMarketsEbayReturnPoliciesIdGet()`
 
 ```php
-restMarketsEbayReturnPoliciesIdGet($marketplace_id, $credentials_id, $id): \ck/plenty-client\Model\ReturnPolicy
+restMarketsEbayReturnPoliciesIdGet($marketplace_id, $credentials_id, $id): \ck\Model\ReturnPolicy
 ```
 
 Get return policy
@@ -1237,10 +1237,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1268,7 +1268,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ReturnPolicy**](../Model/ReturnPolicy.md)
+[**\ck\Model\ReturnPolicy**](../Model/ReturnPolicy.md)
 
 ### Authorization
 
@@ -1301,10 +1301,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1348,7 +1348,7 @@ try {
 ## `restMarketsListingsMarketplacesGet()`
 
 ```php
-restMarketsListingsMarketplacesGet($referrer_id, $marketplace_id, $market_id, $site_id): \ck/plenty-client\Model\Marketplace[]
+restMarketsListingsMarketplacesGet($referrer_id, $marketplace_id, $market_id, $site_id): \ck\Model\Marketplace[]
 ```
 
 Get all listing marketplaces.
@@ -1363,10 +1363,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1396,7 +1396,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Marketplace[]**](../Model/Marketplace.md)
+[**\ck\Model\Marketplace[]**](../Model/Marketplace.md)
 
 ### Authorization
 
@@ -1414,7 +1414,7 @@ try {
 ## `restMarketsSettingsBulkPost()`
 
 ```php
-restMarketsSettingsBulkPost(): \ck/plenty-client\Model\Settings[]
+restMarketsSettingsBulkPost(): \ck\Model\Settings[]
 ```
 
 Create market settings
@@ -1429,10 +1429,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1453,7 +1453,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Settings[]**](../Model/Settings.md)
+[**\ck\Model\Settings[]**](../Model/Settings.md)
 
 ### Authorization
 
@@ -1471,7 +1471,7 @@ This endpoint does not need any parameter.
 ## `restMarketsSettingsBulkPut()`
 
 ```php
-restMarketsSettingsBulkPut(): \ck/plenty-client\Model\Settings[]
+restMarketsSettingsBulkPut(): \ck\Model\Settings[]
 ```
 
 Update market settings
@@ -1486,10 +1486,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1510,7 +1510,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Settings[]**](../Model/Settings.md)
+[**\ck\Model\Settings[]**](../Model/Settings.md)
 
 ### Authorization
 
@@ -1543,10 +1543,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1585,7 +1585,7 @@ This endpoint does not need any parameter.
 ## `restMarketsSettingsCorrelationsGet()`
 
 ```php
-restMarketsSettingsCorrelationsGet(): \ck/plenty-client\Model\Settings
+restMarketsSettingsCorrelationsGet(): \ck\Model\Settings
 ```
 
 List correlation
@@ -1600,10 +1600,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1624,7 +1624,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Settings**](../Model/Settings.md)
+[**\ck\Model\Settings**](../Model/Settings.md)
 
 ### Authorization
 
@@ -1657,10 +1657,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1698,7 +1698,7 @@ void (empty response body)
 ## `restMarketsSettingsGet()`
 
 ```php
-restMarketsSettingsGet(): \ck/plenty-client\Model\Settings[]
+restMarketsSettingsGet(): \ck\Model\Settings[]
 ```
 
 List market settings
@@ -1713,10 +1713,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1737,7 +1737,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Settings[]**](../Model/Settings.md)
+[**\ck\Model\Settings[]**](../Model/Settings.md)
 
 ### Authorization
 
@@ -1755,7 +1755,7 @@ This endpoint does not need any parameter.
 ## `restMarketsSettingsPost()`
 
 ```php
-restMarketsSettingsPost(): \ck/plenty-client\Model\Settings
+restMarketsSettingsPost(): \ck\Model\Settings
 ```
 
 Create market settings
@@ -1770,10 +1770,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1794,7 +1794,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Settings**](../Model/Settings.md)
+[**\ck\Model\Settings**](../Model/Settings.md)
 
 ### Authorization
 
@@ -1827,10 +1827,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1872,7 +1872,7 @@ try {
 ## `restMarketsSettingsSettingIdGet()`
 
 ```php
-restMarketsSettingsSettingIdGet($setting_id): \ck/plenty-client\Model\Settings
+restMarketsSettingsSettingIdGet($setting_id): \ck\Model\Settings
 ```
 
 Get market settings
@@ -1887,10 +1887,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1914,7 +1914,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Settings**](../Model/Settings.md)
+[**\ck\Model\Settings**](../Model/Settings.md)
 
 ### Authorization
 
@@ -1932,7 +1932,7 @@ try {
 ## `restMarketsSettingsSettingIdPut()`
 
 ```php
-restMarketsSettingsSettingIdPut($setting_id): \ck/plenty-client\Model\Settings
+restMarketsSettingsSettingIdPut($setting_id): \ck\Model\Settings
 ```
 
 Update market settings
@@ -1947,10 +1947,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\MarketApi(
+$apiInstance = new ck\Api\MarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1974,7 +1974,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Settings**](../Model/Settings.md)
+[**\ck\Model\Settings**](../Model/Settings.md)
 
 ### Authorization
 

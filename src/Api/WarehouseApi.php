@@ -3,7 +3,7 @@
  * WarehouseApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * WarehouseApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -228,7 +228,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationDimension
+     * @return \ck\Model\WarehouseLocationDimension
      */
     public function restWarehousesLayoutsPost(
         int $parent_id,
@@ -245,7 +245,7 @@ class WarehouseApi
         string $purpose_key,
         string $status_key,
         string $contentType = self::contentTypes['restWarehousesLayoutsPost'][0]
-    ): \ck/plenty-client\Model\WarehouseLocationDimension
+    ): \ck\Model\WarehouseLocationDimension
     {
         list($response) = $this->restWarehousesLayoutsPostWithHttpInfo($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $dimension_id, $position, $level_id, $label, $purpose_key, $status_key, $contentType);
         return $response;
@@ -273,7 +273,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLayoutsPostWithHttpInfo(
         int $parent_id,
@@ -331,23 +331,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationDimension' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationDimension' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationDimension' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationDimension' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationDimension', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationDimension', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+            $returnType = '\ck\Model\WarehouseLocationDimension';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -368,7 +368,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationDimension',
+                        '\ck\Model\WarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -466,7 +466,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLayoutsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+        $returnType = '\ck\Model\WarehouseLocationDimension';
         $request = $this->restWarehousesLayoutsPostRequest($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $dimension_id, $position, $level_id, $label, $purpose_key, $status_key, $contentType);
 
         return $this->client
@@ -1665,7 +1665,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationDimension
+     * @return \ck\Model\WarehouseLocationDimension
      */
     public function restWarehousesLocationsDimensionsPost(
         int $parent_id,
@@ -1676,7 +1676,7 @@ class WarehouseApi
         string $separator,
         int $is_active_for_pickup_path,
         string $contentType = self::contentTypes['restWarehousesLocationsDimensionsPost'][0]
-    ): \ck/plenty-client\Model\WarehouseLocationDimension
+    ): \ck\Model\WarehouseLocationDimension
     {
         list($response) = $this->restWarehousesLocationsDimensionsPostWithHttpInfo($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $contentType);
         return $response;
@@ -1698,7 +1698,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsDimensionsPostWithHttpInfo(
         int $parent_id,
@@ -1750,23 +1750,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationDimension' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationDimension' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationDimension' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationDimension' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationDimension', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationDimension', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+            $returnType = '\ck\Model\WarehouseLocationDimension';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1787,7 +1787,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationDimension',
+                        '\ck\Model\WarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1861,7 +1861,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsDimensionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+        $returnType = '\ck\Model\WarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsPostRequest($parent_id, $warehouse_id, $level, $name, $shortcut, $separator, $is_active_for_pickup_path, $contentType);
 
         return $this->client
@@ -2366,12 +2366,12 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationDimension
+     * @return \ck\Model\WarehouseLocationDimension
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGet(
         int $warehouse_location_dimension_id,
         string $contentType = self::contentTypes['restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGet'][0]
-    ): \ck/plenty-client\Model\WarehouseLocationDimension
+    ): \ck\Model\WarehouseLocationDimension
     {
         list($response) = $this->restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGetWithHttpInfo($warehouse_location_dimension_id, $contentType);
         return $response;
@@ -2387,7 +2387,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGetWithHttpInfo(
         int $warehouse_location_dimension_id,
@@ -2433,23 +2433,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationDimension' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationDimension' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationDimension' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationDimension' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationDimension', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationDimension', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+            $returnType = '\ck\Model\WarehouseLocationDimension';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2470,7 +2470,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationDimension',
+                        '\ck\Model\WarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2520,7 +2520,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+        $returnType = '\ck\Model\WarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsWarehouseLocationDimensionIdGetRequest($warehouse_location_dimension_id, $contentType);
 
         return $this->client
@@ -2668,12 +2668,12 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationDimension
+     * @return \ck\Model\WarehouseLocationDimension
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPut(
         int $warehouse_location_dimension_id,
         string $contentType = self::contentTypes['restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPut'][0]
-    ): \ck/plenty-client\Model\WarehouseLocationDimension
+    ): \ck\Model\WarehouseLocationDimension
     {
         list($response) = $this->restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPutWithHttpInfo($warehouse_location_dimension_id, $contentType);
         return $response;
@@ -2689,7 +2689,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPutWithHttpInfo(
         int $warehouse_location_dimension_id,
@@ -2735,23 +2735,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationDimension' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationDimension' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationDimension' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationDimension' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationDimension', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationDimension', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+            $returnType = '\ck\Model\WarehouseLocationDimension';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2772,7 +2772,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationDimension',
+                        '\ck\Model\WarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2822,7 +2822,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+        $returnType = '\ck\Model\WarehouseLocationDimension';
         $request = $this->restWarehousesLocationsDimensionsWarehouseLocationDimensionIdPutRequest($warehouse_location_dimension_id, $contentType);
 
         return $this->client
@@ -2971,7 +2971,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocation[]
+     * @return \ck\Model\WarehouseLocation[]
      */
     public function restWarehousesLocationsGroupPut(
         string $purpose,
@@ -2994,7 +2994,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsGroupPutWithHttpInfo(
         string $purpose,
@@ -3041,23 +3041,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocation[]' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocation[]' !== 'string') {
+                        if ('\ck\Model\WarehouseLocation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocation[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocation[]';
+            $returnType = '\ck\Model\WarehouseLocation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3078,7 +3078,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocation[]',
+                        '\ck\Model\WarehouseLocation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3132,7 +3132,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsGroupPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocation[]';
+        $returnType = '\ck\Model\WarehouseLocation[]';
         $request = $this->restWarehousesLocationsGroupPutRequest($purpose, $status, $contentType);
 
         return $this->client
@@ -3603,7 +3603,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationLevel
+     * @return \ck\Model\WarehouseLocationLevel
      */
     public function restWarehousesLocationsLevelsPost(
         int $parent_id,
@@ -3611,7 +3611,7 @@ class WarehouseApi
         int $position,
         string $name,
         string $contentType = self::contentTypes['restWarehousesLocationsLevelsPost'][0]
-    ): \ck/plenty-client\Model\WarehouseLocationLevel
+    ): \ck\Model\WarehouseLocationLevel
     {
         list($response) = $this->restWarehousesLocationsLevelsPostWithHttpInfo($parent_id, $dimension_id, $position, $name, $contentType);
         return $response;
@@ -3630,7 +3630,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsLevelsPostWithHttpInfo(
         int $parent_id,
@@ -3679,23 +3679,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationLevel' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationLevel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationLevel' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationLevel' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationLevel', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationLevel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationLevel';
+            $returnType = '\ck\Model\WarehouseLocationLevel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3716,7 +3716,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationLevel',
+                        '\ck\Model\WarehouseLocationLevel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3778,7 +3778,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsLevelsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationLevel';
+        $returnType = '\ck\Model\WarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsPostRequest($parent_id, $dimension_id, $position, $name, $contentType);
 
         return $this->client
@@ -4229,12 +4229,12 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationLevel
+     * @return \ck\Model\WarehouseLocationLevel
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdGet(
         int $warehouse_location_level_id,
         string $contentType = self::contentTypes['restWarehousesLocationsLevelsWarehouseLocationLevelIdGet'][0]
-    ): \ck/plenty-client\Model\WarehouseLocationLevel
+    ): \ck\Model\WarehouseLocationLevel
     {
         list($response) = $this->restWarehousesLocationsLevelsWarehouseLocationLevelIdGetWithHttpInfo($warehouse_location_level_id, $contentType);
         return $response;
@@ -4250,7 +4250,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdGetWithHttpInfo(
         int $warehouse_location_level_id,
@@ -4296,23 +4296,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationLevel' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationLevel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationLevel' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationLevel' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationLevel', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationLevel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationLevel';
+            $returnType = '\ck\Model\WarehouseLocationLevel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4333,7 +4333,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationLevel',
+                        '\ck\Model\WarehouseLocationLevel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4383,7 +4383,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsLevelsWarehouseLocationLevelIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationLevel';
+        $returnType = '\ck\Model\WarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsWarehouseLocationLevelIdGetRequest($warehouse_location_level_id, $contentType);
 
         return $this->client
@@ -4531,12 +4531,12 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationLevel
+     * @return \ck\Model\WarehouseLocationLevel
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdPut(
         int $warehouse_location_level_id,
         string $contentType = self::contentTypes['restWarehousesLocationsLevelsWarehouseLocationLevelIdPut'][0]
-    ): \ck/plenty-client\Model\WarehouseLocationLevel
+    ): \ck\Model\WarehouseLocationLevel
     {
         list($response) = $this->restWarehousesLocationsLevelsWarehouseLocationLevelIdPutWithHttpInfo($warehouse_location_level_id, $contentType);
         return $response;
@@ -4552,7 +4552,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationLevel, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsLevelsWarehouseLocationLevelIdPutWithHttpInfo(
         int $warehouse_location_level_id,
@@ -4598,23 +4598,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationLevel' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationLevel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationLevel' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationLevel' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationLevel', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationLevel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationLevel';
+            $returnType = '\ck\Model\WarehouseLocationLevel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4635,7 +4635,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationLevel',
+                        '\ck\Model\WarehouseLocationLevel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4685,7 +4685,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsLevelsWarehouseLocationLevelIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationLevel';
+        $returnType = '\ck\Model\WarehouseLocationLevel';
         $request = $this->restWarehousesLocationsLevelsWarehouseLocationLevelIdPutRequest($warehouse_location_level_id, $contentType);
 
         return $this->client
@@ -4833,7 +4833,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationDimension[]
+     * @return \ck\Model\WarehouseLocationDimension[]
      */
     public function restWarehousesLocationsMultipleDimensionsPost(
         int $dimensions,
@@ -4854,7 +4854,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationDimension[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationDimension[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsMultipleDimensionsPostWithHttpInfo(
         int $dimensions,
@@ -4900,23 +4900,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationDimension[]' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationDimension[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationDimension[]' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationDimension[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationDimension[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationDimension[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension[]';
+            $returnType = '\ck\Model\WarehouseLocationDimension[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4937,7 +4937,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationDimension[]',
+                        '\ck\Model\WarehouseLocationDimension[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4987,7 +4987,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsMultipleDimensionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension[]';
+        $returnType = '\ck\Model\WarehouseLocationDimension[]';
         $request = $this->restWarehousesLocationsMultipleDimensionsPostRequest($dimensions, $contentType);
 
         return $this->client
@@ -5441,7 +5441,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocation
+     * @return \ck\Model\WarehouseLocation
      */
     public function restWarehousesLocationsPost(
         int $level_id,
@@ -5450,7 +5450,7 @@ class WarehouseApi
         string $status_key,
         int $position,
         string $contentType = self::contentTypes['restWarehousesLocationsPost'][0]
-    ): \ck/plenty-client\Model\WarehouseLocation
+    ): \ck\Model\WarehouseLocation
     {
         list($response) = $this->restWarehousesLocationsPostWithHttpInfo($level_id, $label, $purpose_key, $status_key, $position, $contentType);
         return $response;
@@ -5470,7 +5470,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsPostWithHttpInfo(
         int $level_id,
@@ -5520,23 +5520,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocation' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocation' !== 'string') {
+                        if ('\ck\Model\WarehouseLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocation';
+            $returnType = '\ck\Model\WarehouseLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5557,7 +5557,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocation',
+                        '\ck\Model\WarehouseLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5623,7 +5623,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocation';
+        $returnType = '\ck\Model\WarehouseLocation';
         $request = $this->restWarehousesLocationsPostRequest($level_id, $label, $purpose_key, $status_key, $position, $contentType);
 
         return $this->client
@@ -6226,13 +6226,13 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
+     * @return \ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
      */
     public function restWarehousesLocationsStockWarehouseLocationIdGet(
         int $warehouse_location_id,
         int $warehouse_location_id2,
         string $contentType = self::contentTypes['restWarehousesLocationsStockWarehouseLocationIdGet'][0]
-    ): \ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
+    ): \ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
     {
         list($response) = $this->restWarehousesLocationsStockWarehouseLocationIdGetWithHttpInfo($warehouse_location_id, $warehouse_location_id2, $contentType);
         return $response;
@@ -6249,7 +6249,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsStockWarehouseLocationIdGetWithHttpInfo(
         int $warehouse_location_id,
@@ -6296,23 +6296,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response' !== 'string') {
+                        if ('\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response';
+            $returnType = '\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6333,7 +6333,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response',
+                        '\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6387,7 +6387,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsStockWarehouseLocationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response';
+        $returnType = '\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response';
         $request = $this->restWarehousesLocationsStockWarehouseLocationIdGetRequest($warehouse_location_id, $warehouse_location_id2, $contentType);
 
         return $this->client
@@ -7129,12 +7129,12 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocation
+     * @return \ck\Model\WarehouseLocation
      */
     public function restWarehousesLocationsWarehouseLocationIdGet(
         int $warehouse_location_id,
         string $contentType = self::contentTypes['restWarehousesLocationsWarehouseLocationIdGet'][0]
-    ): \ck/plenty-client\Model\WarehouseLocation
+    ): \ck\Model\WarehouseLocation
     {
         list($response) = $this->restWarehousesLocationsWarehouseLocationIdGetWithHttpInfo($warehouse_location_id, $contentType);
         return $response;
@@ -7150,7 +7150,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsWarehouseLocationIdGetWithHttpInfo(
         int $warehouse_location_id,
@@ -7196,23 +7196,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocation' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocation' !== 'string') {
+                        if ('\ck\Model\WarehouseLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocation';
+            $returnType = '\ck\Model\WarehouseLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7233,7 +7233,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocation',
+                        '\ck\Model\WarehouseLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7283,7 +7283,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsWarehouseLocationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocation';
+        $returnType = '\ck\Model\WarehouseLocation';
         $request = $this->restWarehousesLocationsWarehouseLocationIdGetRequest($warehouse_location_id, $contentType);
 
         return $this->client
@@ -7431,12 +7431,12 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocation
+     * @return \ck\Model\WarehouseLocation
      */
     public function restWarehousesLocationsWarehouseLocationIdPut(
         int $warehouse_location_id,
         string $contentType = self::contentTypes['restWarehousesLocationsWarehouseLocationIdPut'][0]
-    ): \ck/plenty-client\Model\WarehouseLocation
+    ): \ck\Model\WarehouseLocation
     {
         list($response) = $this->restWarehousesLocationsWarehouseLocationIdPutWithHttpInfo($warehouse_location_id, $contentType);
         return $response;
@@ -7452,7 +7452,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesLocationsWarehouseLocationIdPutWithHttpInfo(
         int $warehouse_location_id,
@@ -7498,23 +7498,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocation' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocation' !== 'string') {
+                        if ('\ck\Model\WarehouseLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocation';
+            $returnType = '\ck\Model\WarehouseLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7535,7 +7535,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocation',
+                        '\ck\Model\WarehouseLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7585,7 +7585,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesLocationsWarehouseLocationIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocation';
+        $returnType = '\ck\Model\WarehouseLocation';
         $request = $this->restWarehousesLocationsWarehouseLocationIdPutRequest($warehouse_location_id, $contentType);
 
         return $this->client
@@ -8337,12 +8337,12 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationDimension
+     * @return \ck\Model\WarehouseLocationDimension
      */
     public function restWarehousesWarehouseIdLocationsDimensionsGet(
         int $warehouse_id,
         string $contentType = self::contentTypes['restWarehousesWarehouseIdLocationsDimensionsGet'][0]
-    ): \ck/plenty-client\Model\WarehouseLocationDimension
+    ): \ck\Model\WarehouseLocationDimension
     {
         list($response) = $this->restWarehousesWarehouseIdLocationsDimensionsGetWithHttpInfo($warehouse_id, $contentType);
         return $response;
@@ -8358,7 +8358,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationDimension, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesWarehouseIdLocationsDimensionsGetWithHttpInfo(
         int $warehouse_id,
@@ -8404,23 +8404,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationDimension' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationDimension' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationDimension' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationDimension' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationDimension', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationDimension', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+            $returnType = '\ck\Model\WarehouseLocationDimension';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8441,7 +8441,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationDimension',
+                        '\ck\Model\WarehouseLocationDimension',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8491,7 +8491,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesWarehouseIdLocationsDimensionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationDimension';
+        $returnType = '\ck\Model\WarehouseLocationDimension';
         $request = $this->restWarehousesWarehouseIdLocationsDimensionsGetRequest($warehouse_id, $contentType);
 
         return $this->client
@@ -8639,12 +8639,12 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
+     * @return \ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
      */
     public function restWarehousesWarehouseIdLocationsGet(
         int $warehouse_id,
         string $contentType = self::contentTypes['restWarehousesWarehouseIdLocationsGet'][0]
-    ): \ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
+    ): \ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response
     {
         list($response) = $this->restWarehousesWarehouseIdLocationsGetWithHttpInfo($warehouse_id, $contentType);
         return $response;
@@ -8660,7 +8660,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesWarehouseIdLocationsGetWithHttpInfo(
         int $warehouse_id,
@@ -8706,23 +8706,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response' !== 'string') {
+                        if ('\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response';
+            $returnType = '\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8743,7 +8743,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response',
+                        '\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8793,7 +8793,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesWarehouseIdLocationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response';
+        $returnType = '\ck\Model\RestWarehousesLocationsStockWarehouseLocationIdGet200Response';
         $request = $this->restWarehousesWarehouseIdLocationsGetRequest($warehouse_id, $contentType);
 
         return $this->client
@@ -9294,7 +9294,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\WarehouseLocationLevel[]
+     * @return \ck\Model\WarehouseLocationLevel[]
      */
     public function restWarehousesWarehouseIdLocationsLevelsGet(
         int $warehouse_id,
@@ -9315,7 +9315,7 @@ class WarehouseApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\WarehouseLocationLevel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\WarehouseLocationLevel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWarehousesWarehouseIdLocationsLevelsGetWithHttpInfo(
         int $warehouse_id,
@@ -9361,23 +9361,23 @@ class WarehouseApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\WarehouseLocationLevel[]' === '\SplFileObject') {
+                    if ('\ck\Model\WarehouseLocationLevel[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\WarehouseLocationLevel[]' !== 'string') {
+                        if ('\ck\Model\WarehouseLocationLevel[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\WarehouseLocationLevel[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\WarehouseLocationLevel[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\WarehouseLocationLevel[]';
+            $returnType = '\ck\Model\WarehouseLocationLevel[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9398,7 +9398,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\WarehouseLocationLevel[]',
+                        '\ck\Model\WarehouseLocationLevel[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9448,7 +9448,7 @@ class WarehouseApi
         string $contentType = self::contentTypes['restWarehousesWarehouseIdLocationsLevelsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\WarehouseLocationLevel[]';
+        $returnType = '\ck\Model\WarehouseLocationLevel[]';
         $request = $this->restWarehousesWarehouseIdLocationsLevelsGetRequest($warehouse_id, $contentType);
 
         return $this->client

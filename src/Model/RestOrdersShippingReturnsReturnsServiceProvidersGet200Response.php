@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestOrdersShippingReturnsReturnsServiceProvidersGet200Response Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class RestOrdersShippingReturnsReturnsServiceProvidersGet200Response implements 
         'first_on_page' => 'int',
         'last_on_page' => 'int',
         'items_per_page' => 'int',
-        'entries' => '\ck/plenty-client\Model\ReturnsServiceProvider[]'
+        'entries' => '\ck\Model\ReturnsServiceProvider[]'
     ];
 
     /**
@@ -528,7 +528,7 @@ class RestOrdersShippingReturnsReturnsServiceProvidersGet200Response implements 
     /**
      * Gets entries
      *
-     * @return \ck/plenty-client\Model\ReturnsServiceProvider[]|null
+     * @return \ck\Model\ReturnsServiceProvider[]|null
      */
     public function getEntries(): ?array
     {
@@ -538,7 +538,7 @@ class RestOrdersShippingReturnsReturnsServiceProvidersGet200Response implements 
     /**
      * Sets entries
      *
-     * @param \ck/plenty-client\Model\ReturnsServiceProvider[]|null $entries List of ReturnsServiceProvider
+     * @param \ck\Model\ReturnsServiceProvider[]|null $entries List of ReturnsServiceProvider
      *
      * @return $this
      */

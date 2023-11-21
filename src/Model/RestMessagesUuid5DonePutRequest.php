@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestMessagesUuid5DonePutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class RestMessagesUuid5DonePutRequest implements ModelInterface, ArrayAccess, Js
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'to' => '\ck/plenty-client\Model\MessageTo[]',
-        'linked_to' => '\ck/plenty-client\Model\MessageLinkedTo[]',
+        'to' => '\ck\Model\MessageTo[]',
+        'linked_to' => '\ck\Model\MessageLinkedTo[]',
         'tags' => 'object[]'
     ];
 
@@ -304,7 +304,7 @@ class RestMessagesUuid5DonePutRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets to
      *
-     * @return \ck/plenty-client\Model\MessageTo[]|null
+     * @return \ck\Model\MessageTo[]|null
      */
     public function getTo(): ?array
     {
@@ -314,7 +314,7 @@ class RestMessagesUuid5DonePutRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets to
      *
-     * @param \ck/plenty-client\Model\MessageTo[]|null $to to
+     * @param \ck\Model\MessageTo[]|null $to to
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class RestMessagesUuid5DonePutRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets linked_to
      *
-     * @return \ck/plenty-client\Model\MessageLinkedTo[]|null
+     * @return \ck\Model\MessageLinkedTo[]|null
      */
     public function getLinkedTo(): ?array
     {
@@ -341,7 +341,7 @@ class RestMessagesUuid5DonePutRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets linked_to
      *
-     * @param \ck/plenty-client\Model\MessageLinkedTo[]|null $linked_to linked_to
+     * @param \ck\Model\MessageLinkedTo[]|null $linked_to linked_to
      *
      * @return $this
      */

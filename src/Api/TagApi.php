@@ -3,7 +3,7 @@
  * TagApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * TagApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -163,7 +163,7 @@ class TagApi
      *
      * Create up to 50 tags
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk _rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk _rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -171,7 +171,7 @@ class TagApi
      * @return object[]
      */
     public function restTagsBulkPost(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_bulk = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_bulk = null,
         string $contentType = self::contentTypes['restTagsBulkPost'][0]
     ): array
     {
@@ -184,7 +184,7 @@ class TagApi
      *
      * Create up to 50 tags
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -192,7 +192,7 @@ class TagApi
      * @return array of object[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsBulkPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_bulk = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_bulk = null,
         string $contentType = self::contentTypes['restTagsBulkPost'][0]
     ): array
     {
@@ -287,14 +287,14 @@ class TagApi
      *
      * Create up to 50 tags
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restTagsBulkPostAsync(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_bulk = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_bulk = null,
         string $contentType = self::contentTypes['restTagsBulkPost'][0]
     ): PromiseInterface
     {
@@ -311,7 +311,7 @@ class TagApi
      *
      * Create up to 50 tags
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -364,7 +364,7 @@ class TagApi
     /**
      * Create request for operation 'restTagsBulkPost'
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -458,7 +458,7 @@ class TagApi
      *
      * Update up to 50 tags
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk _rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk _rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -466,7 +466,7 @@ class TagApi
      * @return object[]
      */
     public function restTagsBulkPut(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_bulk = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_bulk = null,
         string $contentType = self::contentTypes['restTagsBulkPut'][0]
     ): array
     {
@@ -479,7 +479,7 @@ class TagApi
      *
      * Update up to 50 tags
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -487,7 +487,7 @@ class TagApi
      * @return array of object[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsBulkPutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_bulk = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_bulk = null,
         string $contentType = self::contentTypes['restTagsBulkPut'][0]
     ): array
     {
@@ -582,14 +582,14 @@ class TagApi
      *
      * Update up to 50 tags
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restTagsBulkPutAsync(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_bulk = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_bulk = null,
         string $contentType = self::contentTypes['restTagsBulkPut'][0]
     ): PromiseInterface
     {
@@ -606,7 +606,7 @@ class TagApi
      *
      * Update up to 50 tags
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -659,7 +659,7 @@ class TagApi
     /**
      * Create request for operation 'restTagsBulkPut'
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_bulk (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsBulkPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1383,12 +1383,12 @@ class TagApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Tag
+     * @return \ck\Model\Tag
      */
     public function restTagsIdGet(
         int $id,
         string $contentType = self::contentTypes['restTagsIdGet'][0]
-    ): \ck/plenty-client\Model\Tag
+    ): \ck\Model\Tag
     {
         list($response) = $this->restTagsIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -1404,7 +1404,7 @@ class TagApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsIdGetWithHttpInfo(
         int $id,
@@ -1450,23 +1450,23 @@ class TagApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Tag' === '\SplFileObject') {
+                    if ('\ck\Model\Tag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Tag' !== 'string') {
+                        if ('\ck\Model\Tag' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Tag', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Tag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Tag';
+            $returnType = '\ck\Model\Tag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1487,7 +1487,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Tag',
+                        '\ck\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1537,7 +1537,7 @@ class TagApi
         string $contentType = self::contentTypes['restTagsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Tag';
+        $returnType = '\ck\Model\Tag';
         $request = $this->restTagsIdGetRequest($id, $contentType);
 
         return $this->client
@@ -1681,18 +1681,18 @@ class TagApi
      * Update tag
      *
      * @param  int $id The ID of the tag (required)
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_id _rest_tags_id (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_id _rest_tags_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Tag
+     * @return \ck\Model\Tag
      */
     public function restTagsIdPut(
         int $id,
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_id = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_id = null,
         string $contentType = self::contentTypes['restTagsIdPut'][0]
-    ): \ck/plenty-client\Model\Tag
+    ): \ck\Model\Tag
     {
         list($response) = $this->restTagsIdPutWithHttpInfo($id, $_rest_tags_id, $contentType);
         return $response;
@@ -1704,16 +1704,16 @@ class TagApi
      * Update tag
      *
      * @param  int $id The ID of the tag (required)
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_id (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsIdPutWithHttpInfo(
         int $id,
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_id = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_id = null,
         string $contentType = self::contentTypes['restTagsIdPut'][0]
     ): array
     {
@@ -1756,23 +1756,23 @@ class TagApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Tag' === '\SplFileObject') {
+                    if ('\ck\Model\Tag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Tag' !== 'string') {
+                        if ('\ck\Model\Tag' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Tag', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Tag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Tag';
+            $returnType = '\ck\Model\Tag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1793,7 +1793,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Tag',
+                        '\ck\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1809,7 +1809,7 @@ class TagApi
      * Update tag
      *
      * @param  int $id The ID of the tag (required)
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_id (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1817,7 +1817,7 @@ class TagApi
      */
     public function restTagsIdPutAsync(
         int $id,
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags_id = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags_id = null,
         string $contentType = self::contentTypes['restTagsIdPut'][0]
     ): PromiseInterface
     {
@@ -1835,7 +1835,7 @@ class TagApi
      * Update tag
      *
      * @param  int $id The ID of the tag (required)
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_id (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1847,7 +1847,7 @@ class TagApi
         string $contentType = self::contentTypes['restTagsIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Tag';
+        $returnType = '\ck\Model\Tag';
         $request = $this->restTagsIdPutRequest($id, $_rest_tags_id, $contentType);
 
         return $this->client
@@ -1890,7 +1890,7 @@ class TagApi
      * Create request for operation 'restTagsIdPut'
      *
      * @param  int $id The ID of the tag (required)
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags_id (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2352,17 +2352,17 @@ class TagApi
      *
      * Create a tag
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags _rest_tags (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags _rest_tags (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Tag
+     * @return \ck\Model\Tag
      */
     public function restTagsPost(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags = null,
         string $contentType = self::contentTypes['restTagsPost'][0]
-    ): \ck/plenty-client\Model\Tag
+    ): \ck\Model\Tag
     {
         list($response) = $this->restTagsPostWithHttpInfo($_rest_tags, $contentType);
         return $response;
@@ -2373,15 +2373,15 @@ class TagApi
      *
      * Create a tag
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags = null,
         string $contentType = self::contentTypes['restTagsPost'][0]
     ): array
     {
@@ -2424,23 +2424,23 @@ class TagApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Tag' === '\SplFileObject') {
+                    if ('\ck\Model\Tag' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Tag' !== 'string') {
+                        if ('\ck\Model\Tag' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Tag', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Tag', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Tag';
+            $returnType = '\ck\Model\Tag';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2461,7 +2461,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Tag',
+                        '\ck\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2476,14 +2476,14 @@ class TagApi
      *
      * Create a tag
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restTagsPostAsync(
-        ?\ck/plenty-client\Model\RestTagsPostRequest $_rest_tags = null,
+        ?\ck\Model\RestTagsPostRequest $_rest_tags = null,
         string $contentType = self::contentTypes['restTagsPost'][0]
     ): PromiseInterface
     {
@@ -2500,7 +2500,7 @@ class TagApi
      *
      * Create a tag
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2511,7 +2511,7 @@ class TagApi
         string $contentType = self::contentTypes['restTagsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Tag';
+        $returnType = '\ck\Model\Tag';
         $request = $this->restTagsPostRequest($_rest_tags, $contentType);
 
         return $this->client
@@ -2553,7 +2553,7 @@ class TagApi
     /**
      * Create request for operation 'restTagsPost'
      *
-     * @param  \ck/plenty-client\Model\RestTagsPostRequest|null $_rest_tags (optional)
+     * @param  \ck\Model\RestTagsPostRequest|null $_rest_tags (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3285,21 +3285,21 @@ class TagApi
      * @param  string|null $tag_type The type of tag. Allowed values are category, ticket, variation, board, contact. (optional)
      * @param  int|null $relationship_value The ID of the data record for which a tag relationship is created. (optional)
      * @param  string|null $relatonship_uuid5 The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key. (optional)
-     * @param  \ck/plenty-client\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships _rest_tags_relationships (optional)
+     * @param  \ck\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships _rest_tags_relationships (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsRelationshipsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TagRelationship
+     * @return \ck\Model\TagRelationship
      */
     public function restTagsRelationshipsPost(
         ?int $tag_id = null,
         ?string $tag_type = null,
         ?int $relationship_value = null,
         ?string $relatonship_uuid5 = null,
-        ?\ck/plenty-client\Model\RestTagsRelationshipsPostRequest $_rest_tags_relationships = null,
+        ?\ck\Model\RestTagsRelationshipsPostRequest $_rest_tags_relationships = null,
         string $contentType = self::contentTypes['restTagsRelationshipsPost'][0]
-    ): \ck/plenty-client\Model\TagRelationship
+    ): \ck\Model\TagRelationship
     {
         list($response) = $this->restTagsRelationshipsPostWithHttpInfo($tag_id, $tag_type, $relationship_value, $relatonship_uuid5, $_rest_tags_relationships, $contentType);
         return $response;
@@ -3314,19 +3314,19 @@ class TagApi
      * @param  string|null $tag_type The type of tag. Allowed values are category, ticket, variation, board, contact. (optional)
      * @param  int|null $relationship_value The ID of the data record for which a tag relationship is created. (optional)
      * @param  string|null $relatonship_uuid5 The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key. (optional)
-     * @param  \ck/plenty-client\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships (optional)
+     * @param  \ck\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsRelationshipsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TagRelationship, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TagRelationship, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsRelationshipsPostWithHttpInfo(
         ?int $tag_id = null,
         ?string $tag_type = null,
         ?int $relationship_value = null,
         ?string $relatonship_uuid5 = null,
-        ?\ck/plenty-client\Model\RestTagsRelationshipsPostRequest $_rest_tags_relationships = null,
+        ?\ck\Model\RestTagsRelationshipsPostRequest $_rest_tags_relationships = null,
         string $contentType = self::contentTypes['restTagsRelationshipsPost'][0]
     ): array
     {
@@ -3369,23 +3369,23 @@ class TagApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TagRelationship' === '\SplFileObject') {
+                    if ('\ck\Model\TagRelationship' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TagRelationship' !== 'string') {
+                        if ('\ck\Model\TagRelationship' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TagRelationship', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TagRelationship', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TagRelationship';
+            $returnType = '\ck\Model\TagRelationship';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3406,7 +3406,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TagRelationship',
+                        '\ck\Model\TagRelationship',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3425,7 +3425,7 @@ class TagApi
      * @param  string|null $tag_type The type of tag. Allowed values are category, ticket, variation, board, contact. (optional)
      * @param  int|null $relationship_value The ID of the data record for which a tag relationship is created. (optional)
      * @param  string|null $relatonship_uuid5 The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key. (optional)
-     * @param  \ck/plenty-client\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships (optional)
+     * @param  \ck\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsRelationshipsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3436,7 +3436,7 @@ class TagApi
         ?string $tag_type = null,
         ?int $relationship_value = null,
         ?string $relatonship_uuid5 = null,
-        ?\ck/plenty-client\Model\RestTagsRelationshipsPostRequest $_rest_tags_relationships = null,
+        ?\ck\Model\RestTagsRelationshipsPostRequest $_rest_tags_relationships = null,
         string $contentType = self::contentTypes['restTagsRelationshipsPost'][0]
     ): PromiseInterface
     {
@@ -3457,7 +3457,7 @@ class TagApi
      * @param  string|null $tag_type The type of tag. Allowed values are category, ticket, variation, board, contact. (optional)
      * @param  int|null $relationship_value The ID of the data record for which a tag relationship is created. (optional)
      * @param  string|null $relatonship_uuid5 The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key. (optional)
-     * @param  \ck/plenty-client\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships (optional)
+     * @param  \ck\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsRelationshipsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3472,7 +3472,7 @@ class TagApi
         string $contentType = self::contentTypes['restTagsRelationshipsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TagRelationship';
+        $returnType = '\ck\Model\TagRelationship';
         $request = $this->restTagsRelationshipsPostRequest($tag_id, $tag_type, $relationship_value, $relatonship_uuid5, $_rest_tags_relationships, $contentType);
 
         return $this->client
@@ -3518,7 +3518,7 @@ class TagApi
      * @param  string|null $tag_type The type of tag. Allowed values are category, ticket, variation, board, contact. (optional)
      * @param  int|null $relationship_value The ID of the data record for which a tag relationship is created. (optional)
      * @param  string|null $relatonship_uuid5 The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key. (optional)
-     * @param  \ck/plenty-client\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships (optional)
+     * @param  \ck\Model\RestTagsRelationshipsPostRequest|null $_rest_tags_relationships (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restTagsRelationshipsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3987,14 +3987,14 @@ class TagApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TagRelationship
+     * @return \ck\Model\TagRelationship
      */
     public function restTagsRelationshipsRelationshipValueTagTypeIdPut(
         int $relationship_value,
         int $tag_type,
         int $id,
         string $contentType = self::contentTypes['restTagsRelationshipsRelationshipValueTagTypeIdPut'][0]
-    ): \ck/plenty-client\Model\TagRelationship
+    ): \ck\Model\TagRelationship
     {
         list($response) = $this->restTagsRelationshipsRelationshipValueTagTypeIdPutWithHttpInfo($relationship_value, $tag_type, $id, $contentType);
         return $response;
@@ -4012,7 +4012,7 @@ class TagApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TagRelationship, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TagRelationship, HTTP status code, HTTP response headers (array of strings)
      */
     public function restTagsRelationshipsRelationshipValueTagTypeIdPutWithHttpInfo(
         int $relationship_value,
@@ -4060,23 +4060,23 @@ class TagApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TagRelationship' === '\SplFileObject') {
+                    if ('\ck\Model\TagRelationship' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TagRelationship' !== 'string') {
+                        if ('\ck\Model\TagRelationship' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TagRelationship', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TagRelationship', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TagRelationship';
+            $returnType = '\ck\Model\TagRelationship';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4097,7 +4097,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TagRelationship',
+                        '\ck\Model\TagRelationship',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4155,7 +4155,7 @@ class TagApi
         string $contentType = self::contentTypes['restTagsRelationshipsRelationshipValueTagTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TagRelationship';
+        $returnType = '\ck\Model\TagRelationship';
         $request = $this->restTagsRelationshipsRelationshipValueTagTypeIdPutRequest($relationship_value, $tag_type, $id, $contentType);
 
         return $this->client

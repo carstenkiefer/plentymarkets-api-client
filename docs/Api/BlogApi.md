@@ -1,4 +1,4 @@
-# ck/plenty-client\BlogApi
+# ck\BlogApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restBlogsPostPost()`
 
 ```php
-restBlogsPostPost(): \ck/plenty-client\Model\BlogPost
+restBlogsPostPost(): \ck\Model\BlogPost
 ```
 
 Create a blog post
@@ -29,10 +29,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BlogApi(
+$apiInstance = new ck\Api\BlogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\BlogPost**](../Model/BlogPost.md)
+[**\ck\Model\BlogPost**](../Model/BlogPost.md)
 
 ### Authorization
 
@@ -86,10 +86,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BlogApi(
+$apiInstance = new ck\Api\BlogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -130,7 +130,7 @@ void (empty response body)
 ## `restBlogsPostPostIdGet()`
 
 ```php
-restBlogsPostPostIdGet($post_id): \ck/plenty-client\Model\BlogPost
+restBlogsPostPostIdGet($post_id): \ck\Model\BlogPost
 ```
 
 Get a blog post
@@ -145,10 +145,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BlogApi(
+$apiInstance = new ck\Api\BlogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +172,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BlogPost**](../Model/BlogPost.md)
+[**\ck\Model\BlogPost**](../Model/BlogPost.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ try {
 ## `restBlogsPostPostIdPut()`
 
 ```php
-restBlogsPostPostIdPut($post_id): \ck/plenty-client\Model\BlogPost
+restBlogsPostPostIdPut($post_id): \ck\Model\BlogPost
 ```
 
 Update a blog post
@@ -205,10 +205,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BlogApi(
+$apiInstance = new ck\Api\BlogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -232,7 +232,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\BlogPost**](../Model/BlogPost.md)
+[**\ck\Model\BlogPost**](../Model/BlogPost.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ try {
 ## `restBlogsPostsGet()`
 
 ```php
-restBlogsPostsGet(): \ck/plenty-client\Model\BlogPost[]
+restBlogsPostsGet(): \ck\Model\BlogPost[]
 ```
 
 List blog posts
@@ -265,10 +265,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BlogApi(
+$apiInstance = new ck\Api\BlogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -289,7 +289,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\BlogPost[]**](../Model/BlogPost.md)
+[**\ck\Model\BlogPost[]**](../Model/BlogPost.md)
 
 ### Authorization
 

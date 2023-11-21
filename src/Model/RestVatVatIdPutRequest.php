@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestVatVatIdPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class RestVatVatIdPutRequest implements ModelInterface, ArrayAccess, JsonSeriali
         'invalid_from' => 'string',
         'is_restricted_to_digital_items' => 'bool',
         'margin_scheme' => 'string',
-        'vat_rates' => '\ck/plenty-client\Model\VatRate[]',
+        'vat_rates' => '\ck\Model\VatRate[]',
         'id' => 'int',
         'name' => 'string',
         'vat_rate' => 'float'
@@ -552,7 +552,7 @@ class RestVatVatIdPutRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets vat_rates
      *
-     * @return \ck/plenty-client\Model\VatRate[]|null
+     * @return \ck\Model\VatRate[]|null
      */
     public function getVatRates(): ?array
     {
@@ -562,7 +562,7 @@ class RestVatVatIdPutRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets vat_rates
      *
-     * @param \ck/plenty-client\Model\VatRate[]|null $vat_rates vat_rates
+     * @param \ck\Model\VatRate[]|null $vat_rates vat_rates
      *
      * @return $this
      */

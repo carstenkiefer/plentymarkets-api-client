@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestMarketsEbayPartsFitmentsPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class RestMarketsEbayPartsFitmentsPostRequest implements ModelInterface, ArrayAc
         'market_id' => 'int',
         'name' => 'string',
         'category_id' => 'int',
-        'items' => '\ck/plenty-client\Model\FitmentItem[]',
+        'items' => '\ck\Model\FitmentItem[]',
         'properties' => 'object[]'
     ];
 
@@ -411,7 +411,7 @@ class RestMarketsEbayPartsFitmentsPostRequest implements ModelInterface, ArrayAc
     /**
      * Gets items
      *
-     * @return \ck/plenty-client\Model\FitmentItem[]|null
+     * @return \ck\Model\FitmentItem[]|null
      */
     public function getItems(): ?array
     {
@@ -421,7 +421,7 @@ class RestMarketsEbayPartsFitmentsPostRequest implements ModelInterface, ArrayAc
     /**
      * Sets items
      *
-     * @param \ck/plenty-client\Model\FitmentItem[]|null $items items
+     * @param \ck\Model\FitmentItem[]|null $items items
      *
      * @return $this
      */

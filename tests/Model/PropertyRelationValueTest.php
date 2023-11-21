@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace ck/plenty-client\Test\Model;
+namespace ck\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -33,7 +33,7 @@ use PHPUnit\Framework\TestCase;
  * PropertyRelationValueTest Class Doc Comment
  *
  * @description PropertyRelationValue
- * @package     ck/plenty-client
+ * @package     ck
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

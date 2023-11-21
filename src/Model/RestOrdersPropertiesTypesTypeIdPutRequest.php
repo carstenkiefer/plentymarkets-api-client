@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestOrdersPropertiesTypesTypeIdPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class RestOrdersPropertiesTypesTypeIdPutRequest implements ModelInterface, Array
       */
     protected static array $openAPITypes = [
         'position' => 'int',
-        'names' => '\ck/plenty-client\Model\OrderPropertyTypeName[]',
+        'names' => '\ck\Model\OrderPropertyTypeName[]',
         'lang' => 'string',
         'name' => 'string'
     ];
@@ -344,7 +344,7 @@ class RestOrdersPropertiesTypesTypeIdPutRequest implements ModelInterface, Array
     /**
      * Gets names
      *
-     * @return \ck/plenty-client\Model\OrderPropertyTypeName[]|null
+     * @return \ck\Model\OrderPropertyTypeName[]|null
      */
     public function getNames(): ?array
     {
@@ -354,7 +354,7 @@ class RestOrdersPropertiesTypesTypeIdPutRequest implements ModelInterface, Array
     /**
      * Sets names
      *
-     * @param \ck/plenty-client\Model\OrderPropertyTypeName[]|null $names names
+     * @param \ck\Model\OrderPropertyTypeName[]|null $names names
      *
      * @return $this
      */

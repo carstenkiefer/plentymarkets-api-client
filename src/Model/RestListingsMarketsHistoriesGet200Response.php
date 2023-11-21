@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestListingsMarketsHistoriesGet200Response Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class RestListingsMarketsHistoriesGet200Response implements ModelInterface, Arra
         'first_on_page' => 'int',
         'last_on_page' => 'int',
         'items_per_page' => 'int',
-        'entries' => '\ck/plenty-client\Model\ListingMarketHistory[]'
+        'entries' => '\ck\Model\ListingMarketHistory[]'
     ];
 
     /**
@@ -528,7 +528,7 @@ class RestListingsMarketsHistoriesGet200Response implements ModelInterface, Arra
     /**
      * Gets entries
      *
-     * @return \ck/plenty-client\Model\ListingMarketHistory[]|null
+     * @return \ck\Model\ListingMarketHistory[]|null
      */
     public function getEntries(): ?array
     {
@@ -538,7 +538,7 @@ class RestListingsMarketsHistoriesGet200Response implements ModelInterface, Arra
     /**
      * Sets entries
      *
-     * @param \ck/plenty-client\Model\ListingMarketHistory[]|null $entries List of ListingMarketHistory
+     * @param \ck\Model\ListingMarketHistory[]|null $entries List of ListingMarketHistory
      *
      * @return $this
      */

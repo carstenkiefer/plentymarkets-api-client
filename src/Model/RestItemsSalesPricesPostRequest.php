@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestItemsSalesPricesPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,20 +65,20 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
         'is_displayed_by_default' => 'bool',
         'is_live_conversion' => 'bool',
         'interval' => 'string',
-        'names' => '\ck/plenty-client\Model\SalesPriceName[]',
+        'names' => '\ck\Model\SalesPriceName[]',
         'lang' => 'string',
         'name_internal' => 'string',
         'name_external' => 'string',
-        'countries' => '\ck/plenty-client\Model\SalesPriceCountry[]',
+        'countries' => '\ck\Model\SalesPriceCountry[]',
         'country_id' => 'int',
-        'currencies' => '\ck/plenty-client\Model\SalesPriceCurrency[]',
+        'currencies' => '\ck\Model\SalesPriceCurrency[]',
         'currency' => 'string',
-        'customer_classes' => '\ck/plenty-client\Model\SalesPriceCustomerClass[]',
-        'referrers' => '\ck/plenty-client\Model\SalesPriceReferrer[]',
+        'customer_classes' => '\ck\Model\SalesPriceCustomerClass[]',
+        'referrers' => '\ck\Model\SalesPriceReferrer[]',
         'referrer_id' => 'int',
-        'clients' => '\ck/plenty-client\Model\SalesPriceOnlineStore[]',
+        'clients' => '\ck\Model\SalesPriceOnlineStore[]',
         'plenty_id' => 'int',
-        'accounts' => '\ck/plenty-client\Model\SalesPriceAccount[]',
+        'accounts' => '\ck\Model\SalesPriceAccount[]',
         'account_id' => 'int'
     ];
 
@@ -686,7 +686,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets names
      *
-     * @return \ck/plenty-client\Model\SalesPriceName[]
+     * @return \ck\Model\SalesPriceName[]
      */
     public function getNames(): array
     {
@@ -696,7 +696,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets names
      *
-     * @param \ck/plenty-client\Model\SalesPriceName[] $names names
+     * @param \ck\Model\SalesPriceName[] $names names
      *
      * @return $this
      */
@@ -794,7 +794,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets countries
      *
-     * @return \ck/plenty-client\Model\SalesPriceCountry[]
+     * @return \ck\Model\SalesPriceCountry[]
      */
     public function getCountries(): array
     {
@@ -804,7 +804,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets countries
      *
-     * @param \ck/plenty-client\Model\SalesPriceCountry[] $countries countries
+     * @param \ck\Model\SalesPriceCountry[] $countries countries
      *
      * @return $this
      */
@@ -848,7 +848,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets currencies
      *
-     * @return \ck/plenty-client\Model\SalesPriceCurrency[]
+     * @return \ck\Model\SalesPriceCurrency[]
      */
     public function getCurrencies(): array
     {
@@ -858,7 +858,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets currencies
      *
-     * @param \ck/plenty-client\Model\SalesPriceCurrency[] $currencies currencies
+     * @param \ck\Model\SalesPriceCurrency[] $currencies currencies
      *
      * @return $this
      */
@@ -902,7 +902,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets customer_classes
      *
-     * @return \ck/plenty-client\Model\SalesPriceCustomerClass[]
+     * @return \ck\Model\SalesPriceCustomerClass[]
      */
     public function getCustomerClasses(): array
     {
@@ -912,7 +912,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets customer_classes
      *
-     * @param \ck/plenty-client\Model\SalesPriceCustomerClass[] $customer_classes customer_classes
+     * @param \ck\Model\SalesPriceCustomerClass[] $customer_classes customer_classes
      *
      * @return $this
      */
@@ -929,7 +929,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets referrers
      *
-     * @return \ck/plenty-client\Model\SalesPriceReferrer[]
+     * @return \ck\Model\SalesPriceReferrer[]
      */
     public function getReferrers(): array
     {
@@ -939,7 +939,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets referrers
      *
-     * @param \ck/plenty-client\Model\SalesPriceReferrer[] $referrers referrers
+     * @param \ck\Model\SalesPriceReferrer[] $referrers referrers
      *
      * @return $this
      */
@@ -983,7 +983,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets clients
      *
-     * @return \ck/plenty-client\Model\SalesPriceOnlineStore[]
+     * @return \ck\Model\SalesPriceOnlineStore[]
      */
     public function getClients(): array
     {
@@ -993,7 +993,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets clients
      *
-     * @param \ck/plenty-client\Model\SalesPriceOnlineStore[] $clients clients
+     * @param \ck\Model\SalesPriceOnlineStore[] $clients clients
      *
      * @return $this
      */
@@ -1037,7 +1037,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets accounts
      *
-     * @return \ck/plenty-client\Model\SalesPriceAccount[]|null
+     * @return \ck\Model\SalesPriceAccount[]|null
      */
     public function getAccounts(): ?array
     {
@@ -1047,7 +1047,7 @@ class RestItemsSalesPricesPostRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets accounts
      *
-     * @param \ck/plenty-client\Model\SalesPriceAccount[]|null $accounts accounts
+     * @param \ck\Model\SalesPriceAccount[]|null $accounts accounts
      *
      * @return $this
      */

@@ -3,7 +3,7 @@
  * LegalInformationApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * LegalInformationApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,14 +137,14 @@ class LegalInformationApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\LegalInformation
+     * @return \ck\Model\LegalInformation
      */
     public function restLegalinformationPlentyIdLangTypeGet(
         int $plenty_id,
         string $lang,
         int $type,
         string $contentType = self::contentTypes['restLegalinformationPlentyIdLangTypeGet'][0]
-    ): \ck/plenty-client\Model\LegalInformation
+    ): \ck\Model\LegalInformation
     {
         list($response) = $this->restLegalinformationPlentyIdLangTypeGetWithHttpInfo($plenty_id, $lang, $type, $contentType);
         return $response;
@@ -162,7 +162,7 @@ class LegalInformationApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\LegalInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\LegalInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLegalinformationPlentyIdLangTypeGetWithHttpInfo(
         int $plenty_id,
@@ -210,23 +210,23 @@ class LegalInformationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\LegalInformation' === '\SplFileObject') {
+                    if ('\ck\Model\LegalInformation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\LegalInformation' !== 'string') {
+                        if ('\ck\Model\LegalInformation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\LegalInformation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\LegalInformation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\LegalInformation';
+            $returnType = '\ck\Model\LegalInformation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -247,7 +247,7 @@ class LegalInformationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\LegalInformation',
+                        '\ck\Model\LegalInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -305,7 +305,7 @@ class LegalInformationApi
         string $contentType = self::contentTypes['restLegalinformationPlentyIdLangTypeGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\LegalInformation';
+        $returnType = '\ck\Model\LegalInformation';
         $request = $this->restLegalinformationPlentyIdLangTypeGetRequest($plenty_id, $lang, $type, $contentType);
 
         return $this->client
@@ -485,20 +485,20 @@ class LegalInformationApi
      * @param  int $plenty_id The plenty ID of the online store (required)
      * @param  string $lang The language of the legal information text. The language must be specified as ISO 639-1 code, e.g. en for English (required)
      * @param  int $type type (required)
-     * @param  \ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type _rest_legalinformation_plenty_id_lang_type (optional)
+     * @param  \ck\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type _rest_legalinformation_plenty_id_lang_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLegalinformationPlentyIdLangTypePut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\LegalInformation
+     * @return \ck\Model\LegalInformation
      */
     public function restLegalinformationPlentyIdLangTypePut(
         int $plenty_id,
         string $lang,
         int $type,
-        ?\ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest $_rest_legalinformation_plenty_id_lang_type = null,
+        ?\ck\Model\RestLegalinformationPlentyIdLangTypePutRequest $_rest_legalinformation_plenty_id_lang_type = null,
         string $contentType = self::contentTypes['restLegalinformationPlentyIdLangTypePut'][0]
-    ): \ck/plenty-client\Model\LegalInformation
+    ): \ck\Model\LegalInformation
     {
         list($response) = $this->restLegalinformationPlentyIdLangTypePutWithHttpInfo($plenty_id, $lang, $type, $_rest_legalinformation_plenty_id_lang_type, $contentType);
         return $response;
@@ -512,18 +512,18 @@ class LegalInformationApi
      * @param  int $plenty_id The plenty ID of the online store (required)
      * @param  string $lang The language of the legal information text. The language must be specified as ISO 639-1 code, e.g. en for English (required)
      * @param  int $type (required)
-     * @param  \ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type (optional)
+     * @param  \ck\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLegalinformationPlentyIdLangTypePut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\LegalInformation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\LegalInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLegalinformationPlentyIdLangTypePutWithHttpInfo(
         int $plenty_id,
         string $lang,
         int $type,
-        ?\ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest $_rest_legalinformation_plenty_id_lang_type = null,
+        ?\ck\Model\RestLegalinformationPlentyIdLangTypePutRequest $_rest_legalinformation_plenty_id_lang_type = null,
         string $contentType = self::contentTypes['restLegalinformationPlentyIdLangTypePut'][0]
     ): array
     {
@@ -566,23 +566,23 @@ class LegalInformationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\LegalInformation' === '\SplFileObject') {
+                    if ('\ck\Model\LegalInformation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\LegalInformation' !== 'string') {
+                        if ('\ck\Model\LegalInformation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\LegalInformation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\LegalInformation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\LegalInformation';
+            $returnType = '\ck\Model\LegalInformation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -603,7 +603,7 @@ class LegalInformationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\LegalInformation',
+                        '\ck\Model\LegalInformation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -621,7 +621,7 @@ class LegalInformationApi
      * @param  int $plenty_id The plenty ID of the online store (required)
      * @param  string $lang The language of the legal information text. The language must be specified as ISO 639-1 code, e.g. en for English (required)
      * @param  int $type (required)
-     * @param  \ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type (optional)
+     * @param  \ck\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLegalinformationPlentyIdLangTypePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -631,7 +631,7 @@ class LegalInformationApi
         int $plenty_id,
         string $lang,
         int $type,
-        ?\ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest $_rest_legalinformation_plenty_id_lang_type = null,
+        ?\ck\Model\RestLegalinformationPlentyIdLangTypePutRequest $_rest_legalinformation_plenty_id_lang_type = null,
         string $contentType = self::contentTypes['restLegalinformationPlentyIdLangTypePut'][0]
     ): PromiseInterface
     {
@@ -651,7 +651,7 @@ class LegalInformationApi
      * @param  int $plenty_id The plenty ID of the online store (required)
      * @param  string $lang The language of the legal information text. The language must be specified as ISO 639-1 code, e.g. en for English (required)
      * @param  int $type (required)
-     * @param  \ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type (optional)
+     * @param  \ck\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLegalinformationPlentyIdLangTypePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -665,7 +665,7 @@ class LegalInformationApi
         string $contentType = self::contentTypes['restLegalinformationPlentyIdLangTypePut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\LegalInformation';
+        $returnType = '\ck\Model\LegalInformation';
         $request = $this->restLegalinformationPlentyIdLangTypePutRequest($plenty_id, $lang, $type, $_rest_legalinformation_plenty_id_lang_type, $contentType);
 
         return $this->client
@@ -710,7 +710,7 @@ class LegalInformationApi
      * @param  int $plenty_id The plenty ID of the online store (required)
      * @param  string $lang The language of the legal information text. The language must be specified as ISO 639-1 code, e.g. en for English (required)
      * @param  int $type (required)
-     * @param  \ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type (optional)
+     * @param  \ck\Model\RestLegalinformationPlentyIdLangTypePutRequest|null $_rest_legalinformation_plenty_id_lang_type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLegalinformationPlentyIdLangTypePut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

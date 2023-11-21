@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestPluginsPluginIdPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class RestPluginsPluginIdPutRequest implements ModelInterface, ArrayAccess, Json
         'position' => 'int',
         'active_stage' => 'bool',
         'active_productive' => 'bool',
-        'webstores' => '\ck/plenty-client\Model\Webstore[]'
+        'webstores' => '\ck\Model\Webstore[]'
     ];
 
     /**
@@ -392,7 +392,7 @@ class RestPluginsPluginIdPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Gets webstores
      *
-     * @return \ck/plenty-client\Model\Webstore[]|null
+     * @return \ck\Model\Webstore[]|null
      */
     public function getWebstores(): ?array
     {
@@ -402,7 +402,7 @@ class RestPluginsPluginIdPutRequest implements ModelInterface, ArrayAccess, Json
     /**
      * Sets webstores
      *
-     * @param \ck/plenty-client\Model\Webstore[]|null $webstores webstores
+     * @param \ck\Model\Webstore[]|null $webstores webstores
      *
      * @return $this
      */

@@ -3,7 +3,7 @@
  * AccountApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * AccountApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -469,17 +469,17 @@ class AccountApi
      *
      * Login
      *
-     * @param  \ck/plenty-client\Model\RestAccountLoginPostRequest|null $_rest_account_login _rest_account_login (optional)
+     * @param  \ck\Model\RestAccountLoginPostRequest|null $_rest_account_login _rest_account_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountLoginPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TokenData
+     * @return \ck\Model\TokenData
      */
     public function restAccountLoginPost(
-        ?\ck/plenty-client\Model\RestAccountLoginPostRequest $_rest_account_login = null,
+        ?\ck\Model\RestAccountLoginPostRequest $_rest_account_login = null,
         string $contentType = self::contentTypes['restAccountLoginPost'][0]
-    ): \ck/plenty-client\Model\TokenData
+    ): \ck\Model\TokenData
     {
         list($response) = $this->restAccountLoginPostWithHttpInfo($_rest_account_login, $contentType);
         return $response;
@@ -490,15 +490,15 @@ class AccountApi
      *
      * Login
      *
-     * @param  \ck/plenty-client\Model\RestAccountLoginPostRequest|null $_rest_account_login (optional)
+     * @param  \ck\Model\RestAccountLoginPostRequest|null $_rest_account_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountLoginPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TokenData, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TokenData, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountLoginPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountLoginPostRequest $_rest_account_login = null,
+        ?\ck\Model\RestAccountLoginPostRequest $_rest_account_login = null,
         string $contentType = self::contentTypes['restAccountLoginPost'][0]
     ): array
     {
@@ -541,23 +541,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TokenData' === '\SplFileObject') {
+                    if ('\ck\Model\TokenData' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TokenData' !== 'string') {
+                        if ('\ck\Model\TokenData' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TokenData', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TokenData', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TokenData';
+            $returnType = '\ck\Model\TokenData';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -578,7 +578,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TokenData',
+                        '\ck\Model\TokenData',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -593,14 +593,14 @@ class AccountApi
      *
      * Login
      *
-     * @param  \ck/plenty-client\Model\RestAccountLoginPostRequest|null $_rest_account_login (optional)
+     * @param  \ck\Model\RestAccountLoginPostRequest|null $_rest_account_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountLoginPostAsync(
-        ?\ck/plenty-client\Model\RestAccountLoginPostRequest $_rest_account_login = null,
+        ?\ck\Model\RestAccountLoginPostRequest $_rest_account_login = null,
         string $contentType = self::contentTypes['restAccountLoginPost'][0]
     ): PromiseInterface
     {
@@ -617,7 +617,7 @@ class AccountApi
      *
      * Login
      *
-     * @param  \ck/plenty-client\Model\RestAccountLoginPostRequest|null $_rest_account_login (optional)
+     * @param  \ck\Model\RestAccountLoginPostRequest|null $_rest_account_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -628,7 +628,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountLoginPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TokenData';
+        $returnType = '\ck\Model\TokenData';
         $request = $this->restAccountLoginPostRequest($_rest_account_login, $contentType);
 
         return $this->client
@@ -670,7 +670,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountLoginPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountLoginPostRequest|null $_rest_account_login (optional)
+     * @param  \ck\Model\RestAccountLoginPostRequest|null $_rest_account_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1203,7 +1203,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Contact[]
+     * @return \ck\Model\Contact[]
      */
     public function restAccountsAccountIdContactsGet(
         int $account_id,
@@ -1224,7 +1224,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Contact[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Contact[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdContactsGetWithHttpInfo(
         int $account_id,
@@ -1270,23 +1270,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Contact[]' === '\SplFileObject') {
+                    if ('\ck\Model\Contact[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Contact[]' !== 'string') {
+                        if ('\ck\Model\Contact[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Contact[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Contact[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Contact[]';
+            $returnType = '\ck\Model\Contact[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1307,7 +1307,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Contact[]',
+                        '\ck\Model\Contact[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1357,7 +1357,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAccountIdContactsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Contact[]';
+        $returnType = '\ck\Model\Contact[]';
         $request = $this->restAccountsAccountIdContactsGetRequest($account_id, $contentType);
 
         return $this->client
@@ -1753,12 +1753,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Account
+     * @return \ck\Model\Account
      */
     public function restAccountsAccountIdGet(
         int $account_id,
         string $contentType = self::contentTypes['restAccountsAccountIdGet'][0]
-    ): \ck/plenty-client\Model\Account
+    ): \ck\Model\Account
     {
         list($response) = $this->restAccountsAccountIdGetWithHttpInfo($account_id, $contentType);
         return $response;
@@ -1774,7 +1774,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdGetWithHttpInfo(
         int $account_id,
@@ -1820,23 +1820,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Account' === '\SplFileObject') {
+                    if ('\ck\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Account' !== 'string') {
+                        if ('\ck\Model\Account' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Account';
+            $returnType = '\ck\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1857,7 +1857,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Account',
+                        '\ck\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1907,7 +1907,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAccountIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Account';
+        $returnType = '\ck\Model\Account';
         $request = $this->restAccountsAccountIdGetRequest($account_id, $contentType);
 
         return $this->client
@@ -2051,18 +2051,18 @@ class AccountApi
      * Update account
      *
      * @param  int $account_id The ID of the account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_account_id _rest_accounts_account_id (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_account_id _rest_accounts_account_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAccountIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Account
+     * @return \ck\Model\Account
      */
     public function restAccountsAccountIdPut(
         int $account_id,
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts_account_id = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts_account_id = null,
         string $contentType = self::contentTypes['restAccountsAccountIdPut'][0]
-    ): \ck/plenty-client\Model\Account
+    ): \ck\Model\Account
     {
         list($response) = $this->restAccountsAccountIdPutWithHttpInfo($account_id, $_rest_accounts_account_id, $contentType);
         return $response;
@@ -2074,16 +2074,16 @@ class AccountApi
      * Update account
      *
      * @param  int $account_id The ID of the account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_account_id (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_account_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAccountIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAccountIdPutWithHttpInfo(
         int $account_id,
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts_account_id = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts_account_id = null,
         string $contentType = self::contentTypes['restAccountsAccountIdPut'][0]
     ): array
     {
@@ -2126,23 +2126,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Account' === '\SplFileObject') {
+                    if ('\ck\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Account' !== 'string') {
+                        if ('\ck\Model\Account' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Account';
+            $returnType = '\ck\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2163,7 +2163,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Account',
+                        '\ck\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2179,7 +2179,7 @@ class AccountApi
      * Update account
      *
      * @param  int $account_id The ID of the account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_account_id (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_account_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAccountIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2187,7 +2187,7 @@ class AccountApi
      */
     public function restAccountsAccountIdPutAsync(
         int $account_id,
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts_account_id = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts_account_id = null,
         string $contentType = self::contentTypes['restAccountsAccountIdPut'][0]
     ): PromiseInterface
     {
@@ -2205,7 +2205,7 @@ class AccountApi
      * Update account
      *
      * @param  int $account_id The ID of the account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_account_id (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_account_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAccountIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2217,7 +2217,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAccountIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Account';
+        $returnType = '\ck\Model\Account';
         $request = $this->restAccountsAccountIdPutRequest($account_id, $_rest_accounts_account_id, $contentType);
 
         return $this->client
@@ -2260,7 +2260,7 @@ class AccountApi
      * Create request for operation 'restAccountsAccountIdPut'
      *
      * @param  int $account_id The ID of the account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_account_id (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_account_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAccountIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2623,12 +2623,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Address
+     * @return \ck\Model\Address
      */
     public function restAccountsAddressesAddressIdGet(
         int $address_id,
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdGet'][0]
-    ): \ck/plenty-client\Model\Address
+    ): \ck\Model\Address
     {
         list($response) = $this->restAccountsAddressesAddressIdGetWithHttpInfo($address_id, $contentType);
         return $response;
@@ -2644,7 +2644,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Address, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Address, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdGetWithHttpInfo(
         int $address_id,
@@ -2690,23 +2690,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Address' === '\SplFileObject') {
+                    if ('\ck\Model\Address' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Address' !== 'string') {
+                        if ('\ck\Model\Address' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Address', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Address', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Address';
+            $returnType = '\ck\Model\Address';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2727,7 +2727,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Address',
+                        '\ck\Model\Address',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2777,7 +2777,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Address';
+        $returnType = '\ck\Model\Address';
         $request = $this->restAccountsAddressesAddressIdGetRequest($address_id, $contentType);
 
         return $this->client
@@ -3173,7 +3173,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOption[]
+     * @return \ck\Model\AddressOption[]
      */
     public function restAccountsAddressesAddressIdOptionsGet(
         int $address_id,
@@ -3194,7 +3194,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdOptionsGetWithHttpInfo(
         int $address_id,
@@ -3240,23 +3240,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOption[]' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOption[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOption[]' !== 'string') {
+                        if ('\ck\Model\AddressOption[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOption[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOption[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOption[]';
+            $returnType = '\ck\Model\AddressOption[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3277,7 +3277,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOption[]',
+                        '\ck\Model\AddressOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3327,7 +3327,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdOptionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOption[]';
+        $returnType = '\ck\Model\AddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsGetRequest($address_id, $contentType);
 
         return $this->client
@@ -3471,16 +3471,16 @@ class AccountApi
      * Create address option
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options _rest_accounts_addresses_address_id_options (optional)
+     * @param  \ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options _rest_accounts_addresses_address_id_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdOptionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOption[]
+     * @return \ck\Model\AddressOption[]
      */
     public function restAccountsAddressesAddressIdOptionsPost(
         int $address_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest $_rest_accounts_addresses_address_id_options = null,
+        ?\ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest $_rest_accounts_addresses_address_id_options = null,
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdOptionsPost'][0]
     ): array
     {
@@ -3494,16 +3494,16 @@ class AccountApi
      * Create address option
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options (optional)
+     * @param  \ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdOptionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdOptionsPostWithHttpInfo(
         int $address_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest $_rest_accounts_addresses_address_id_options = null,
+        ?\ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest $_rest_accounts_addresses_address_id_options = null,
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdOptionsPost'][0]
     ): array
     {
@@ -3546,23 +3546,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOption[]' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOption[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOption[]' !== 'string') {
+                        if ('\ck\Model\AddressOption[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOption[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOption[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOption[]';
+            $returnType = '\ck\Model\AddressOption[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3583,7 +3583,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOption[]',
+                        '\ck\Model\AddressOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3599,7 +3599,7 @@ class AccountApi
      * Create address option
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options (optional)
+     * @param  \ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3607,7 +3607,7 @@ class AccountApi
      */
     public function restAccountsAddressesAddressIdOptionsPostAsync(
         int $address_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest $_rest_accounts_addresses_address_id_options = null,
+        ?\ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest $_rest_accounts_addresses_address_id_options = null,
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdOptionsPost'][0]
     ): PromiseInterface
     {
@@ -3625,7 +3625,7 @@ class AccountApi
      * Create address option
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options (optional)
+     * @param  \ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3637,7 +3637,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdOptionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOption[]';
+        $returnType = '\ck\Model\AddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsPostRequest($address_id, $_rest_accounts_addresses_address_id_options, $contentType);
 
         return $this->client
@@ -3680,7 +3680,7 @@ class AccountApi
      * Create request for operation 'restAccountsAddressesAddressIdOptionsPost'
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options (optional)
+     * @param  \ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest|null $_rest_accounts_addresses_address_id_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3795,7 +3795,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOption[]
+     * @return \ck\Model\AddressOption[]
      */
     public function restAccountsAddressesAddressIdOptionsPut(
         int $address_id,
@@ -3816,7 +3816,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdOptionsPutWithHttpInfo(
         int $address_id,
@@ -3862,23 +3862,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOption[]' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOption[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOption[]' !== 'string') {
+                        if ('\ck\Model\AddressOption[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOption[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOption[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOption[]';
+            $returnType = '\ck\Model\AddressOption[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3899,7 +3899,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOption[]',
+                        '\ck\Model\AddressOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3949,7 +3949,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdOptionsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOption[]';
+        $returnType = '\ck\Model\AddressOption[]';
         $request = $this->restAccountsAddressesAddressIdOptionsPutRequest($address_id, $contentType);
 
         return $this->client
@@ -4093,18 +4093,18 @@ class AccountApi
      * Update address
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id _rest_accounts_addresses_address_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id _rest_accounts_addresses_address_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Address
+     * @return \ck\Model\Address
      */
     public function restAccountsAddressesAddressIdPut(
         int $address_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses_address_id = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses_address_id = null,
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdPut'][0]
-    ): \ck/plenty-client\Model\Address
+    ): \ck\Model\Address
     {
         list($response) = $this->restAccountsAddressesAddressIdPutWithHttpInfo($address_id, $_rest_accounts_addresses_address_id, $contentType);
         return $response;
@@ -4116,16 +4116,16 @@ class AccountApi
      * Update address
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Address, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Address, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdPutWithHttpInfo(
         int $address_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses_address_id = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses_address_id = null,
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdPut'][0]
     ): array
     {
@@ -4168,23 +4168,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Address' === '\SplFileObject') {
+                    if ('\ck\Model\Address' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Address' !== 'string') {
+                        if ('\ck\Model\Address' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Address', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Address', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Address';
+            $returnType = '\ck\Model\Address';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4205,7 +4205,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Address',
+                        '\ck\Model\Address',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4221,7 +4221,7 @@ class AccountApi
      * Update address
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4229,7 +4229,7 @@ class AccountApi
      */
     public function restAccountsAddressesAddressIdPutAsync(
         int $address_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses_address_id = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses_address_id = null,
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdPut'][0]
     ): PromiseInterface
     {
@@ -4247,7 +4247,7 @@ class AccountApi
      * Update address
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4259,7 +4259,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Address';
+        $returnType = '\ck\Model\Address';
         $request = $this->restAccountsAddressesAddressIdPutRequest($address_id, $_rest_accounts_addresses_address_id, $contentType);
 
         return $this->client
@@ -4302,7 +4302,7 @@ class AccountApi
      * Create request for operation 'restAccountsAddressesAddressIdPut'
      *
      * @param  int $address_id The ID of the address (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses_address_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesAddressIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4418,13 +4418,13 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Address
+     * @return \ck\Model\Address
      */
     public function restAccountsAddressesAddressIdRelatedDataGet(
         int $address_id,
         ?string $order_ids = null,
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdRelatedDataGet'][0]
-    ): \ck/plenty-client\Model\Address
+    ): \ck\Model\Address
     {
         list($response) = $this->restAccountsAddressesAddressIdRelatedDataGetWithHttpInfo($address_id, $order_ids, $contentType);
         return $response;
@@ -4441,7 +4441,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Address, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Address, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesAddressIdRelatedDataGetWithHttpInfo(
         int $address_id,
@@ -4488,23 +4488,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Address' === '\SplFileObject') {
+                    if ('\ck\Model\Address' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Address' !== 'string') {
+                        if ('\ck\Model\Address' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Address', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Address', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Address';
+            $returnType = '\ck\Model\Address';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4525,7 +4525,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Address',
+                        '\ck\Model\Address',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4579,7 +4579,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesAddressIdRelatedDataGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Address';
+        $returnType = '\ck\Model\Address';
         $request = $this->restAccountsAddressesAddressIdRelatedDataGetRequest($address_id, $order_ids, $contentType);
 
         return $this->client
@@ -4987,12 +4987,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressContactRelation
+     * @return \ck\Model\AddressContactRelation
      */
     public function restAccountsAddressesContactRelationsAddressContactRelationIdGet(
         int $address_contact_relation_id,
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsAddressContactRelationIdGet'][0]
-    ): \ck/plenty-client\Model\AddressContactRelation
+    ): \ck\Model\AddressContactRelation
     {
         list($response) = $this->restAccountsAddressesContactRelationsAddressContactRelationIdGetWithHttpInfo($address_contact_relation_id, $contentType);
         return $response;
@@ -5008,7 +5008,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesContactRelationsAddressContactRelationIdGetWithHttpInfo(
         int $address_contact_relation_id,
@@ -5054,23 +5054,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressContactRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressContactRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressContactRelation' !== 'string') {
+                        if ('\ck\Model\AddressContactRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressContactRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressContactRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressContactRelation';
+            $returnType = '\ck\Model\AddressContactRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5091,7 +5091,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressContactRelation',
+                        '\ck\Model\AddressContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5141,7 +5141,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsAddressContactRelationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressContactRelation';
+        $returnType = '\ck\Model\AddressContactRelation';
         $request = $this->restAccountsAddressesContactRelationsAddressContactRelationIdGetRequest($address_contact_relation_id, $contentType);
 
         return $this->client
@@ -5296,7 +5296,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response
+     * @return \ck\Model\RestAccountsAddressesContactRelationsGet200Response
      */
     public function restAccountsAddressesContactRelationsGet(
         ?int $id = null,
@@ -5308,7 +5308,7 @@ class AccountApi
         ?int $items_per_page = null,
         ?string $with = null,
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsGet'][0]
-    ): \ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response
+    ): \ck\Model\RestAccountsAddressesContactRelationsGet200Response
     {
         list($response) = $this->restAccountsAddressesContactRelationsGetWithHttpInfo($id, $contact_id, $type_id, $address_id, $is_primary, $page, $items_per_page, $with, $contentType);
         return $response;
@@ -5331,7 +5331,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountsAddressesContactRelationsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesContactRelationsGetWithHttpInfo(
         ?int $id = null,
@@ -5384,23 +5384,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountsAddressesContactRelationsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountsAddressesContactRelationsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountsAddressesContactRelationsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response';
+            $returnType = '\ck\Model\RestAccountsAddressesContactRelationsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5421,7 +5421,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response',
+                        '\ck\Model\RestAccountsAddressesContactRelationsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5499,7 +5499,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response';
+        $returnType = '\ck\Model\RestAccountsAddressesContactRelationsGet200Response';
         $request = $this->restAccountsAddressesContactRelationsGetRequest($id, $contact_id, $type_id, $address_id, $is_primary, $page, $items_per_page, $with, $contentType);
 
         return $this->client
@@ -5721,15 +5721,15 @@ class AccountApi
      *
      * Create address contact relations
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations _rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations _rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressContactRelation[]
+     * @return \ck\Model\AddressContactRelation[]
      */
     public function restAccountsAddressesContactRelationsPost(
-        ?\ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest $_rest_accounts_addresses_contact_relations = null,
+        ?\ck\Model\RestAccountsAddressesContactRelationsPostRequest $_rest_accounts_addresses_contact_relations = null,
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsPost'][0]
     ): array
     {
@@ -5742,15 +5742,15 @@ class AccountApi
      *
      * Create address contact relations
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressContactRelation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressContactRelation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesContactRelationsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest $_rest_accounts_addresses_contact_relations = null,
+        ?\ck\Model\RestAccountsAddressesContactRelationsPostRequest $_rest_accounts_addresses_contact_relations = null,
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsPost'][0]
     ): array
     {
@@ -5793,23 +5793,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressContactRelation[]' === '\SplFileObject') {
+                    if ('\ck\Model\AddressContactRelation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressContactRelation[]' !== 'string') {
+                        if ('\ck\Model\AddressContactRelation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressContactRelation[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressContactRelation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressContactRelation[]';
+            $returnType = '\ck\Model\AddressContactRelation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5830,7 +5830,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressContactRelation[]',
+                        '\ck\Model\AddressContactRelation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5845,14 +5845,14 @@ class AccountApi
      *
      * Create address contact relations
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsAddressesContactRelationsPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest $_rest_accounts_addresses_contact_relations = null,
+        ?\ck\Model\RestAccountsAddressesContactRelationsPostRequest $_rest_accounts_addresses_contact_relations = null,
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsPost'][0]
     ): PromiseInterface
     {
@@ -5869,7 +5869,7 @@ class AccountApi
      *
      * Create address contact relations
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5880,7 +5880,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressContactRelation[]';
+        $returnType = '\ck\Model\AddressContactRelation[]';
         $request = $this->restAccountsAddressesContactRelationsPostRequest($_rest_accounts_addresses_contact_relations, $contentType);
 
         return $this->client
@@ -5922,7 +5922,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsAddressesContactRelationsPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPostRequest|null $_rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6016,15 +6016,15 @@ class AccountApi
      *
      * Update address contact relations
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations _rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations _rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressContactRelation[]
+     * @return \ck\Model\AddressContactRelation[]
      */
     public function restAccountsAddressesContactRelationsPut(
-        ?\ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest $_rest_accounts_addresses_contact_relations = null,
+        ?\ck\Model\RestAccountsAddressesContactRelationsPutRequest $_rest_accounts_addresses_contact_relations = null,
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsPut'][0]
     ): array
     {
@@ -6037,15 +6037,15 @@ class AccountApi
      *
      * Update address contact relations
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressContactRelation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressContactRelation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesContactRelationsPutWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest $_rest_accounts_addresses_contact_relations = null,
+        ?\ck\Model\RestAccountsAddressesContactRelationsPutRequest $_rest_accounts_addresses_contact_relations = null,
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsPut'][0]
     ): array
     {
@@ -6088,23 +6088,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressContactRelation[]' === '\SplFileObject') {
+                    if ('\ck\Model\AddressContactRelation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressContactRelation[]' !== 'string') {
+                        if ('\ck\Model\AddressContactRelation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressContactRelation[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressContactRelation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressContactRelation[]';
+            $returnType = '\ck\Model\AddressContactRelation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6125,7 +6125,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressContactRelation[]',
+                        '\ck\Model\AddressContactRelation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6140,14 +6140,14 @@ class AccountApi
      *
      * Update address contact relations
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsAddressesContactRelationsPutAsync(
-        ?\ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest $_rest_accounts_addresses_contact_relations = null,
+        ?\ck\Model\RestAccountsAddressesContactRelationsPutRequest $_rest_accounts_addresses_contact_relations = null,
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsPut'][0]
     ): PromiseInterface
     {
@@ -6164,7 +6164,7 @@ class AccountApi
      *
      * Update address contact relations
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6175,7 +6175,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesContactRelationsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressContactRelation[]';
+        $returnType = '\ck\Model\AddressContactRelation[]';
         $request = $this->restAccountsAddressesContactRelationsPutRequest($_rest_accounts_addresses_contact_relations, $contentType);
 
         return $this->client
@@ -6217,7 +6217,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsAddressesContactRelationsPut'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations (optional)
+     * @param  \ck\Model\RestAccountsAddressesContactRelationsPutRequest|null $_rest_accounts_addresses_contact_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesContactRelationsPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -6322,7 +6322,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Address
+     * @return \ck\Model\Address
      */
     public function restAccountsAddressesGet(
         ?string $updated_to = null,
@@ -6333,7 +6333,7 @@ class AccountApi
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restAccountsAddressesGet'][0]
-    ): \ck/plenty-client\Model\Address
+    ): \ck\Model\Address
     {
         list($response) = $this->restAccountsAddressesGetWithHttpInfo($updated_to, $updated_from, $created_to, $created_from, $with, $page, $items_per_page, $contentType);
         return $response;
@@ -6355,7 +6355,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Address, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Address, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesGetWithHttpInfo(
         ?string $updated_to = null,
@@ -6407,23 +6407,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Address' === '\SplFileObject') {
+                    if ('\ck\Model\Address' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Address' !== 'string') {
+                        if ('\ck\Model\Address' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Address', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Address', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Address';
+            $returnType = '\ck\Model\Address';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6444,7 +6444,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Address',
+                        '\ck\Model\Address',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6518,7 +6518,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Address';
+        $returnType = '\ck\Model\Address';
         $request = $this->restAccountsAddressesGetRequest($updated_to, $updated_from, $created_to, $created_from, $with, $page, $items_per_page, $contentType);
 
         return $this->client
@@ -6732,7 +6732,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOptionType[]
+     * @return \ck\Model\AddressOptionType[]
      */
     public function restAccountsAddressesOptionTypesGet(
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesGet'][0]
@@ -6751,7 +6751,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOptionType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOptionType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionTypesGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesGet'][0]
@@ -6796,23 +6796,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOptionType[]' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOptionType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOptionType[]' !== 'string') {
+                        if ('\ck\Model\AddressOptionType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOptionType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOptionType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOptionType[]';
+            $returnType = '\ck\Model\AddressOptionType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6833,7 +6833,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOptionType[]',
+                        '\ck\Model\AddressOptionType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6879,7 +6879,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOptionType[]';
+        $returnType = '\ck\Model\AddressOptionType[]';
         $request = $this->restAccountsAddressesOptionTypesGetRequest($contentType);
 
         return $this->client
@@ -7258,12 +7258,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOptionType
+     * @return \ck\Model\AddressOptionType
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdGet(
         int $option_type_id,
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdGet'][0]
-    ): \ck/plenty-client\Model\AddressOptionType
+    ): \ck\Model\AddressOptionType
     {
         list($response) = $this->restAccountsAddressesOptionTypesOptionTypeIdGetWithHttpInfo($option_type_id, $contentType);
         return $response;
@@ -7279,7 +7279,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdGetWithHttpInfo(
         int $option_type_id,
@@ -7325,23 +7325,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOptionType' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOptionType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOptionType' !== 'string') {
+                        if ('\ck\Model\AddressOptionType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOptionType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOptionType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOptionType';
+            $returnType = '\ck\Model\AddressOptionType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7362,7 +7362,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOptionType',
+                        '\ck\Model\AddressOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7412,7 +7412,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOptionType';
+        $returnType = '\ck\Model\AddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesOptionTypeIdGetRequest($option_type_id, $contentType);
 
         return $this->client
@@ -7556,18 +7556,18 @@ class AccountApi
      * Update address option type
      *
      * @param  int $option_type_id The ID of the address option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id _rest_accounts_addresses_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id _rest_accounts_addresses_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOptionType
+     * @return \ck\Model\AddressOptionType
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdPut(
         int $option_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types_option_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types_option_type_id = null,
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'][0]
-    ): \ck/plenty-client\Model\AddressOptionType
+    ): \ck\Model\AddressOptionType
     {
         list($response) = $this->restAccountsAddressesOptionTypesOptionTypeIdPutWithHttpInfo($option_type_id, $_rest_accounts_addresses_option_types_option_type_id, $contentType);
         return $response;
@@ -7579,16 +7579,16 @@ class AccountApi
      * Update address option type
      *
      * @param  int $option_type_id The ID of the address option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdPutWithHttpInfo(
         int $option_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types_option_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types_option_type_id = null,
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'][0]
     ): array
     {
@@ -7631,23 +7631,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOptionType' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOptionType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOptionType' !== 'string') {
+                        if ('\ck\Model\AddressOptionType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOptionType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOptionType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOptionType';
+            $returnType = '\ck\Model\AddressOptionType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7668,7 +7668,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOptionType',
+                        '\ck\Model\AddressOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7684,7 +7684,7 @@ class AccountApi
      * Update address option type
      *
      * @param  int $option_type_id The ID of the address option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7692,7 +7692,7 @@ class AccountApi
      */
     public function restAccountsAddressesOptionTypesOptionTypeIdPutAsync(
         int $option_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types_option_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types_option_type_id = null,
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'][0]
     ): PromiseInterface
     {
@@ -7710,7 +7710,7 @@ class AccountApi
      * Update address option type
      *
      * @param  int $option_type_id The ID of the address option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7722,7 +7722,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOptionType';
+        $returnType = '\ck\Model\AddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesOptionTypeIdPutRequest($option_type_id, $_rest_accounts_addresses_option_types_option_type_id, $contentType);
 
         return $this->client
@@ -7765,7 +7765,7 @@ class AccountApi
      * Create request for operation 'restAccountsAddressesOptionTypesOptionTypeIdPut'
      *
      * @param  int $option_type_id The ID of the address option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7875,17 +7875,17 @@ class AccountApi
      *
      * Create address option type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types _rest_accounts_addresses_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types _rest_accounts_addresses_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOptionType
+     * @return \ck\Model\AddressOptionType
      */
     public function restAccountsAddressesOptionTypesPost(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types = null,
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesPost'][0]
-    ): \ck/plenty-client\Model\AddressOptionType
+    ): \ck\Model\AddressOptionType
     {
         list($response) = $this->restAccountsAddressesOptionTypesPostWithHttpInfo($_rest_accounts_addresses_option_types, $contentType);
         return $response;
@@ -7896,15 +7896,15 @@ class AccountApi
      *
      * Create address option type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionTypesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types = null,
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesPost'][0]
     ): array
     {
@@ -7947,23 +7947,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOptionType' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOptionType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOptionType' !== 'string') {
+                        if ('\ck\Model\AddressOptionType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOptionType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOptionType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOptionType';
+            $returnType = '\ck\Model\AddressOptionType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7984,7 +7984,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOptionType',
+                        '\ck\Model\AddressOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7999,14 +7999,14 @@ class AccountApi
      *
      * Create address option type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsAddressesOptionTypesPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_addresses_option_types = null,
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesPost'][0]
     ): PromiseInterface
     {
@@ -8023,7 +8023,7 @@ class AccountApi
      *
      * Create address option type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8034,7 +8034,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesOptionTypesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOptionType';
+        $returnType = '\ck\Model\AddressOptionType';
         $request = $this->restAccountsAddressesOptionTypesPostRequest($_rest_accounts_addresses_option_types, $contentType);
 
         return $this->client
@@ -8076,7 +8076,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsAddressesOptionTypesPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_addresses_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesOptionTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8423,12 +8423,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOption
+     * @return \ck\Model\AddressOption
      */
     public function restAccountsAddressesOptionsOptionIdGet(
         int $option_id,
         string $contentType = self::contentTypes['restAccountsAddressesOptionsOptionIdGet'][0]
-    ): \ck/plenty-client\Model\AddressOption
+    ): \ck\Model\AddressOption
     {
         list($response) = $this->restAccountsAddressesOptionsOptionIdGetWithHttpInfo($option_id, $contentType);
         return $response;
@@ -8444,7 +8444,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionsOptionIdGetWithHttpInfo(
         int $option_id,
@@ -8490,23 +8490,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOption' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOption' !== 'string') {
+                        if ('\ck\Model\AddressOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOption';
+            $returnType = '\ck\Model\AddressOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8527,7 +8527,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOption',
+                        '\ck\Model\AddressOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8577,7 +8577,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesOptionsOptionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOption';
+        $returnType = '\ck\Model\AddressOption';
         $request = $this->restAccountsAddressesOptionsOptionIdGetRequest($option_id, $contentType);
 
         return $this->client
@@ -8725,12 +8725,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOption
+     * @return \ck\Model\AddressOption
      */
     public function restAccountsAddressesOptionsOptionIdPut(
         int $option_id,
         string $contentType = self::contentTypes['restAccountsAddressesOptionsOptionIdPut'][0]
-    ): \ck/plenty-client\Model\AddressOption
+    ): \ck\Model\AddressOption
     {
         list($response) = $this->restAccountsAddressesOptionsOptionIdPutWithHttpInfo($option_id, $contentType);
         return $response;
@@ -8746,7 +8746,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesOptionsOptionIdPutWithHttpInfo(
         int $option_id,
@@ -8792,23 +8792,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOption' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOption' !== 'string') {
+                        if ('\ck\Model\AddressOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOption';
+            $returnType = '\ck\Model\AddressOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8829,7 +8829,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOption',
+                        '\ck\Model\AddressOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8879,7 +8879,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesOptionsOptionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOption';
+        $returnType = '\ck\Model\AddressOption';
         $request = $this->restAccountsAddressesOptionsOptionIdPutRequest($option_id, $contentType);
 
         return $this->client
@@ -9275,12 +9275,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressPosRelation
+     * @return \ck\Model\AddressPosRelation
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdGet(
         int $address_pos_relation_id,
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsAddressPosRelationIdGet'][0]
-    ): \ck/plenty-client\Model\AddressPosRelation
+    ): \ck\Model\AddressPosRelation
     {
         list($response) = $this->restAccountsAddressesPosRelationsAddressPosRelationIdGetWithHttpInfo($address_pos_relation_id, $contentType);
         return $response;
@@ -9296,7 +9296,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressPosRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressPosRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdGetWithHttpInfo(
         int $address_pos_relation_id,
@@ -9342,23 +9342,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressPosRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressPosRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressPosRelation' !== 'string') {
+                        if ('\ck\Model\AddressPosRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressPosRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressPosRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressPosRelation';
+            $returnType = '\ck\Model\AddressPosRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9379,7 +9379,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressPosRelation',
+                        '\ck\Model\AddressPosRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9429,7 +9429,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsAddressPosRelationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressPosRelation';
+        $returnType = '\ck\Model\AddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsAddressPosRelationIdGetRequest($address_pos_relation_id, $contentType);
 
         return $this->client
@@ -9577,12 +9577,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressPosRelation
+     * @return \ck\Model\AddressPosRelation
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdPut(
         int $address_pos_relation_id,
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsAddressPosRelationIdPut'][0]
-    ): \ck/plenty-client\Model\AddressPosRelation
+    ): \ck\Model\AddressPosRelation
     {
         list($response) = $this->restAccountsAddressesPosRelationsAddressPosRelationIdPutWithHttpInfo($address_pos_relation_id, $contentType);
         return $response;
@@ -9598,7 +9598,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressPosRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressPosRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPosRelationsAddressPosRelationIdPutWithHttpInfo(
         int $address_pos_relation_id,
@@ -9644,23 +9644,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressPosRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressPosRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressPosRelation' !== 'string') {
+                        if ('\ck\Model\AddressPosRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressPosRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressPosRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressPosRelation';
+            $returnType = '\ck\Model\AddressPosRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9681,7 +9681,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressPosRelation',
+                        '\ck\Model\AddressPosRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9731,7 +9731,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsAddressPosRelationIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressPosRelation';
+        $returnType = '\ck\Model\AddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsAddressPosRelationIdPutRequest($address_pos_relation_id, $contentType);
 
         return $this->client
@@ -9881,14 +9881,14 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response
+     * @return \ck\Model\RestAccountsAddressesPosRelationsGet200Response
      */
     public function restAccountsAddressesPosRelationsGet(
         ?int $page = null,
         ?int $items_per_page = null,
         ?string $with = null,
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsGet'][0]
-    ): \ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response
+    ): \ck\Model\RestAccountsAddressesPosRelationsGet200Response
     {
         list($response) = $this->restAccountsAddressesPosRelationsGetWithHttpInfo($page, $items_per_page, $with, $contentType);
         return $response;
@@ -9906,7 +9906,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountsAddressesPosRelationsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPosRelationsGetWithHttpInfo(
         ?int $page = null,
@@ -9954,23 +9954,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountsAddressesPosRelationsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountsAddressesPosRelationsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountsAddressesPosRelationsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response';
+            $returnType = '\ck\Model\RestAccountsAddressesPosRelationsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9991,7 +9991,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response',
+                        '\ck\Model\RestAccountsAddressesPosRelationsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10049,7 +10049,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response';
+        $returnType = '\ck\Model\RestAccountsAddressesPosRelationsGet200Response';
         $request = $this->restAccountsAddressesPosRelationsGetRequest($page, $items_per_page, $with, $contentType);
 
         return $this->client
@@ -10215,11 +10215,11 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressPosRelation
+     * @return \ck\Model\AddressPosRelation
      */
     public function restAccountsAddressesPosRelationsPost(
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsPost'][0]
-    ): \ck/plenty-client\Model\AddressPosRelation
+    ): \ck\Model\AddressPosRelation
     {
         list($response) = $this->restAccountsAddressesPosRelationsPostWithHttpInfo($contentType);
         return $response;
@@ -10234,7 +10234,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressPosRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressPosRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPosRelationsPostWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsPost'][0]
@@ -10279,23 +10279,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressPosRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressPosRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressPosRelation' !== 'string') {
+                        if ('\ck\Model\AddressPosRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressPosRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressPosRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressPosRelation';
+            $returnType = '\ck\Model\AddressPosRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10316,7 +10316,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressPosRelation',
+                        '\ck\Model\AddressPosRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10362,7 +10362,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesPosRelationsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressPosRelation';
+        $returnType = '\ck\Model\AddressPosRelation';
         $request = $this->restAccountsAddressesPosRelationsPostRequest($contentType);
 
         return $this->client
@@ -10488,17 +10488,17 @@ class AccountApi
      *
      * Create address
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses _rest_accounts_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses _rest_accounts_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Address
+     * @return \ck\Model\Address
      */
     public function restAccountsAddressesPost(
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses = null,
         string $contentType = self::contentTypes['restAccountsAddressesPost'][0]
-    ): \ck/plenty-client\Model\Address
+    ): \ck\Model\Address
     {
         list($response) = $this->restAccountsAddressesPostWithHttpInfo($_rest_accounts_addresses, $contentType);
         return $response;
@@ -10509,15 +10509,15 @@ class AccountApi
      *
      * Create address
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Address, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Address, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses = null,
         string $contentType = self::contentTypes['restAccountsAddressesPost'][0]
     ): array
     {
@@ -10560,23 +10560,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Address' === '\SplFileObject') {
+                    if ('\ck\Model\Address' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Address' !== 'string') {
+                        if ('\ck\Model\Address' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Address', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Address', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Address';
+            $returnType = '\ck\Model\Address';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10597,7 +10597,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Address',
+                        '\ck\Model\Address',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10612,14 +10612,14 @@ class AccountApi
      *
      * Create address
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsAddressesPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_addresses = null,
         string $contentType = self::contentTypes['restAccountsAddressesPost'][0]
     ): PromiseInterface
     {
@@ -10636,7 +10636,7 @@ class AccountApi
      *
      * Create address
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10647,7 +10647,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Address';
+        $returnType = '\ck\Model\Address';
         $request = $this->restAccountsAddressesPostRequest($_rest_accounts_addresses, $contentType);
 
         return $this->client
@@ -10689,7 +10689,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsAddressesPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsAddressesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10787,7 +10787,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressRelationType[]
+     * @return \ck\Model\AddressRelationType[]
      */
     public function restAccountsAddressesRelationTypesGet(
         string $contentType = self::contentTypes['restAccountsAddressesRelationTypesGet'][0]
@@ -10806,7 +10806,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressRelationType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressRelationType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesRelationTypesGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsAddressesRelationTypesGet'][0]
@@ -10851,23 +10851,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressRelationType[]' === '\SplFileObject') {
+                    if ('\ck\Model\AddressRelationType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressRelationType[]' !== 'string') {
+                        if ('\ck\Model\AddressRelationType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressRelationType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressRelationType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressRelationType[]';
+            $returnType = '\ck\Model\AddressRelationType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10888,7 +10888,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressRelationType[]',
+                        '\ck\Model\AddressRelationType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10934,7 +10934,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesRelationTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressRelationType[]';
+        $returnType = '\ck\Model\AddressRelationType[]';
         $request = $this->restAccountsAddressesRelationTypesGetRequest($contentType);
 
         return $this->client
@@ -11391,11 +11391,11 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressWarehouseRelation
+     * @return \ck\Model\AddressWarehouseRelation
      */
     public function restAccountsAddressesWarehouseRelationsPost(
         string $contentType = self::contentTypes['restAccountsAddressesWarehouseRelationsPost'][0]
-    ): \ck/plenty-client\Model\AddressWarehouseRelation
+    ): \ck\Model\AddressWarehouseRelation
     {
         list($response) = $this->restAccountsAddressesWarehouseRelationsPostWithHttpInfo($contentType);
         return $response;
@@ -11410,7 +11410,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesWarehouseRelationsPostWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsAddressesWarehouseRelationsPost'][0]
@@ -11455,23 +11455,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressWarehouseRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressWarehouseRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressWarehouseRelation' !== 'string') {
+                        if ('\ck\Model\AddressWarehouseRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressWarehouseRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressWarehouseRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressWarehouseRelation';
+            $returnType = '\ck\Model\AddressWarehouseRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11492,7 +11492,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressWarehouseRelation',
+                        '\ck\Model\AddressWarehouseRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11538,7 +11538,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesWarehouseRelationsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressWarehouseRelation';
+        $returnType = '\ck\Model\AddressWarehouseRelation';
         $request = $this->restAccountsAddressesWarehouseRelationsPostRequest($contentType);
 
         return $this->client
@@ -11917,12 +11917,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressWarehouseRelation
+     * @return \ck\Model\AddressWarehouseRelation
      */
     public function restAccountsAddressesWarehouseRelationsRelationIdPut(
         int $relation_id,
         string $contentType = self::contentTypes['restAccountsAddressesWarehouseRelationsRelationIdPut'][0]
-    ): \ck/plenty-client\Model\AddressWarehouseRelation
+    ): \ck\Model\AddressWarehouseRelation
     {
         list($response) = $this->restAccountsAddressesWarehouseRelationsRelationIdPutWithHttpInfo($relation_id, $contentType);
         return $response;
@@ -11938,7 +11938,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsAddressesWarehouseRelationsRelationIdPutWithHttpInfo(
         int $relation_id,
@@ -11984,23 +11984,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressWarehouseRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressWarehouseRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressWarehouseRelation' !== 'string') {
+                        if ('\ck\Model\AddressWarehouseRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressWarehouseRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressWarehouseRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressWarehouseRelation';
+            $returnType = '\ck\Model\AddressWarehouseRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12021,7 +12021,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressWarehouseRelation',
+                        '\ck\Model\AddressWarehouseRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12071,7 +12071,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsAddressesWarehouseRelationsRelationIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressWarehouseRelation';
+        $returnType = '\ck\Model\AddressWarehouseRelation';
         $request = $this->restAccountsAddressesWarehouseRelationsRelationIdPutRequest($relation_id, $contentType);
 
         return $this->client
@@ -12467,12 +12467,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AccountContactRelation
+     * @return \ck\Model\AccountContactRelation
      */
     public function restAccountsContactRelationsAccountContactRelationIdGet(
         int $account_contact_relation_id,
         string $contentType = self::contentTypes['restAccountsContactRelationsAccountContactRelationIdGet'][0]
-    ): \ck/plenty-client\Model\AccountContactRelation
+    ): \ck\Model\AccountContactRelation
     {
         list($response) = $this->restAccountsContactRelationsAccountContactRelationIdGetWithHttpInfo($account_contact_relation_id, $contentType);
         return $response;
@@ -12488,7 +12488,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AccountContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AccountContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactRelationsAccountContactRelationIdGetWithHttpInfo(
         int $account_contact_relation_id,
@@ -12534,23 +12534,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AccountContactRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AccountContactRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AccountContactRelation' !== 'string') {
+                        if ('\ck\Model\AccountContactRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AccountContactRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AccountContactRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AccountContactRelation';
+            $returnType = '\ck\Model\AccountContactRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12571,7 +12571,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AccountContactRelation',
+                        '\ck\Model\AccountContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12621,7 +12621,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactRelationsAccountContactRelationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AccountContactRelation';
+        $returnType = '\ck\Model\AccountContactRelation';
         $request = $this->restAccountsContactRelationsAccountContactRelationIdGetRequest($account_contact_relation_id, $contentType);
 
         return $this->client
@@ -13017,12 +13017,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactBank
+     * @return \ck\Model\ContactBank
      */
     public function restAccountsContactsBanksContactBankIdGet(
         int $contact_bank_id,
         string $contentType = self::contentTypes['restAccountsContactsBanksContactBankIdGet'][0]
-    ): \ck/plenty-client\Model\ContactBank
+    ): \ck\Model\ContactBank
     {
         list($response) = $this->restAccountsContactsBanksContactBankIdGetWithHttpInfo($contact_bank_id, $contentType);
         return $response;
@@ -13038,7 +13038,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactBank, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactBank, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsBanksContactBankIdGetWithHttpInfo(
         int $contact_bank_id,
@@ -13084,23 +13084,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactBank' === '\SplFileObject') {
+                    if ('\ck\Model\ContactBank' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactBank' !== 'string') {
+                        if ('\ck\Model\ContactBank' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactBank', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactBank', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactBank';
+            $returnType = '\ck\Model\ContactBank';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13121,7 +13121,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactBank',
+                        '\ck\Model\ContactBank',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13171,7 +13171,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsBanksContactBankIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactBank';
+        $returnType = '\ck\Model\ContactBank';
         $request = $this->restAccountsContactsBanksContactBankIdGetRequest($contact_bank_id, $contentType);
 
         return $this->client
@@ -13315,18 +13315,18 @@ class AccountApi
      * Update bank account
      *
      * @param  int $contact_bank_id The ID of the bank account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id _rest_accounts_contacts_banks_contact_bank_id (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id _rest_accounts_contacts_banks_contact_bank_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksContactBankIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactBank
+     * @return \ck\Model\ContactBank
      */
     public function restAccountsContactsBanksContactBankIdPut(
         int $contact_bank_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks_contact_bank_id = null,
+        ?\ck\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks_contact_bank_id = null,
         string $contentType = self::contentTypes['restAccountsContactsBanksContactBankIdPut'][0]
-    ): \ck/plenty-client\Model\ContactBank
+    ): \ck\Model\ContactBank
     {
         list($response) = $this->restAccountsContactsBanksContactBankIdPutWithHttpInfo($contact_bank_id, $_rest_accounts_contacts_banks_contact_bank_id, $contentType);
         return $response;
@@ -13338,16 +13338,16 @@ class AccountApi
      * Update bank account
      *
      * @param  int $contact_bank_id The ID of the bank account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksContactBankIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactBank, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactBank, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsBanksContactBankIdPutWithHttpInfo(
         int $contact_bank_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks_contact_bank_id = null,
+        ?\ck\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks_contact_bank_id = null,
         string $contentType = self::contentTypes['restAccountsContactsBanksContactBankIdPut'][0]
     ): array
     {
@@ -13390,23 +13390,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactBank' === '\SplFileObject') {
+                    if ('\ck\Model\ContactBank' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactBank' !== 'string') {
+                        if ('\ck\Model\ContactBank' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactBank', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactBank', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactBank';
+            $returnType = '\ck\Model\ContactBank';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13427,7 +13427,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactBank',
+                        '\ck\Model\ContactBank',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13443,7 +13443,7 @@ class AccountApi
      * Update bank account
      *
      * @param  int $contact_bank_id The ID of the bank account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksContactBankIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13451,7 +13451,7 @@ class AccountApi
      */
     public function restAccountsContactsBanksContactBankIdPutAsync(
         int $contact_bank_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks_contact_bank_id = null,
+        ?\ck\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks_contact_bank_id = null,
         string $contentType = self::contentTypes['restAccountsContactsBanksContactBankIdPut'][0]
     ): PromiseInterface
     {
@@ -13469,7 +13469,7 @@ class AccountApi
      * Update bank account
      *
      * @param  int $contact_bank_id The ID of the bank account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksContactBankIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13481,7 +13481,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsBanksContactBankIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactBank';
+        $returnType = '\ck\Model\ContactBank';
         $request = $this->restAccountsContactsBanksContactBankIdPutRequest($contact_bank_id, $_rest_accounts_contacts_banks_contact_bank_id, $contentType);
 
         return $this->client
@@ -13524,7 +13524,7 @@ class AccountApi
      * Create request for operation 'restAccountsContactsBanksContactBankIdPut'
      *
      * @param  int $contact_bank_id The ID of the bank account (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks_contact_bank_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksContactBankIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13634,17 +13634,17 @@ class AccountApi
      *
      * Create bank account
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks _rest_accounts_contacts_banks (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks _rest_accounts_contacts_banks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactBank
+     * @return \ck\Model\ContactBank
      */
     public function restAccountsContactsBanksPost(
-        ?\ck/plenty-client\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks = null,
+        ?\ck\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks = null,
         string $contentType = self::contentTypes['restAccountsContactsBanksPost'][0]
-    ): \ck/plenty-client\Model\ContactBank
+    ): \ck\Model\ContactBank
     {
         list($response) = $this->restAccountsContactsBanksPostWithHttpInfo($_rest_accounts_contacts_banks, $contentType);
         return $response;
@@ -13655,15 +13655,15 @@ class AccountApi
      *
      * Create bank account
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactBank, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactBank, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsBanksPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks = null,
+        ?\ck\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks = null,
         string $contentType = self::contentTypes['restAccountsContactsBanksPost'][0]
     ): array
     {
@@ -13706,23 +13706,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactBank' === '\SplFileObject') {
+                    if ('\ck\Model\ContactBank' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactBank' !== 'string') {
+                        if ('\ck\Model\ContactBank' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactBank', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactBank', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactBank';
+            $returnType = '\ck\Model\ContactBank';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13743,7 +13743,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactBank',
+                        '\ck\Model\ContactBank',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13758,14 +13758,14 @@ class AccountApi
      *
      * Create bank account
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsContactsBanksPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks = null,
+        ?\ck\Model\RestAccountsContactsBanksPostRequest $_rest_accounts_contacts_banks = null,
         string $contentType = self::contentTypes['restAccountsContactsBanksPost'][0]
     ): PromiseInterface
     {
@@ -13782,7 +13782,7 @@ class AccountApi
      *
      * Create bank account
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13793,7 +13793,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsBanksPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactBank';
+        $returnType = '\ck\Model\ContactBank';
         $request = $this->restAccountsContactsBanksPostRequest($_rest_accounts_contacts_banks, $contentType);
 
         return $this->client
@@ -13835,7 +13835,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsContactsBanksPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks (optional)
+     * @param  \ck\Model\RestAccountsContactsBanksPostRequest|null $_rest_accounts_contacts_banks (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsBanksPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14757,18 +14757,18 @@ class AccountApi
      * Update contact event
      *
      * @param  int $contact_event_id The ID of the contact event (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id _rest_accounts_contacts_contact_events_contact_event_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id _rest_accounts_contacts_contact_events_contact_event_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactEvent
+     * @return \ck\Model\ContactEvent
      */
     public function restAccountsContactsContactEventsContactEventIdPut(
         int $contact_event_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events_contact_event_id = null,
+        ?\ck\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events_contact_event_id = null,
         string $contentType = self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'][0]
-    ): \ck/plenty-client\Model\ContactEvent
+    ): \ck\Model\ContactEvent
     {
         list($response) = $this->restAccountsContactsContactEventsContactEventIdPutWithHttpInfo($contact_event_id, $_rest_accounts_contacts_contact_events_contact_event_id, $contentType);
         return $response;
@@ -14780,16 +14780,16 @@ class AccountApi
      * Update contact event
      *
      * @param  int $contact_event_id The ID of the contact event (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactEvent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactEvent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactEventsContactEventIdPutWithHttpInfo(
         int $contact_event_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events_contact_event_id = null,
+        ?\ck\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events_contact_event_id = null,
         string $contentType = self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'][0]
     ): array
     {
@@ -14832,23 +14832,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactEvent' === '\SplFileObject') {
+                    if ('\ck\Model\ContactEvent' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactEvent' !== 'string') {
+                        if ('\ck\Model\ContactEvent' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactEvent', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactEvent', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactEvent';
+            $returnType = '\ck\Model\ContactEvent';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14869,7 +14869,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactEvent',
+                        '\ck\Model\ContactEvent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14885,7 +14885,7 @@ class AccountApi
      * Update contact event
      *
      * @param  int $contact_event_id The ID of the contact event (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14893,7 +14893,7 @@ class AccountApi
      */
     public function restAccountsContactsContactEventsContactEventIdPutAsync(
         int $contact_event_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events_contact_event_id = null,
+        ?\ck\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events_contact_event_id = null,
         string $contentType = self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'][0]
     ): PromiseInterface
     {
@@ -14911,7 +14911,7 @@ class AccountApi
      * Update contact event
      *
      * @param  int $contact_event_id The ID of the contact event (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14923,7 +14923,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactEvent';
+        $returnType = '\ck\Model\ContactEvent';
         $request = $this->restAccountsContactsContactEventsContactEventIdPutRequest($contact_event_id, $_rest_accounts_contacts_contact_events_contact_event_id, $contentType);
 
         return $this->client
@@ -14966,7 +14966,7 @@ class AccountApi
      * Create request for operation 'restAccountsContactsContactEventsContactEventIdPut'
      *
      * @param  int $contact_event_id The ID of the contact event (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events_contact_event_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsContactEventIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15082,13 +15082,13 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response
+     * @return \ck\Model\RestAccountsContactsContactEventsGet200Response
      */
     public function restAccountsContactsContactEventsGet(
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restAccountsContactsContactEventsGet'][0]
-    ): \ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response
+    ): \ck\Model\RestAccountsContactsContactEventsGet200Response
     {
         list($response) = $this->restAccountsContactsContactEventsGetWithHttpInfo($page, $items_per_page, $contentType);
         return $response;
@@ -15105,7 +15105,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountsContactsContactEventsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactEventsGetWithHttpInfo(
         ?int $page = null,
@@ -15152,23 +15152,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountsContactsContactEventsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountsContactsContactEventsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountsContactsContactEventsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response';
+            $returnType = '\ck\Model\RestAccountsContactsContactEventsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15189,7 +15189,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response',
+                        '\ck\Model\RestAccountsContactsContactEventsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15243,7 +15243,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactEventsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response';
+        $returnType = '\ck\Model\RestAccountsContactsContactEventsGet200Response';
         $request = $this->restAccountsContactsContactEventsGetRequest($page, $items_per_page, $contentType);
 
         return $this->client
@@ -15395,19 +15395,19 @@ class AccountApi
      *
      * @param  int|null $page The page of results to search for (optional)
      * @param  int|null $items_per_page The number of items to list per page (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events _rest_accounts_contacts_contact_events (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events _rest_accounts_contacts_contact_events (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactEvent
+     * @return \ck\Model\ContactEvent
      */
     public function restAccountsContactsContactEventsPost(
         ?int $page = null,
         ?int $items_per_page = null,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events = null,
+        ?\ck\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events = null,
         string $contentType = self::contentTypes['restAccountsContactsContactEventsPost'][0]
-    ): \ck/plenty-client\Model\ContactEvent
+    ): \ck\Model\ContactEvent
     {
         list($response) = $this->restAccountsContactsContactEventsPostWithHttpInfo($page, $items_per_page, $_rest_accounts_contacts_contact_events, $contentType);
         return $response;
@@ -15420,17 +15420,17 @@ class AccountApi
      *
      * @param  int|null $page The page of results to search for (optional)
      * @param  int|null $items_per_page The number of items to list per page (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactEvent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactEvent, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactEventsPostWithHttpInfo(
         ?int $page = null,
         ?int $items_per_page = null,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events = null,
+        ?\ck\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events = null,
         string $contentType = self::contentTypes['restAccountsContactsContactEventsPost'][0]
     ): array
     {
@@ -15473,23 +15473,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactEvent' === '\SplFileObject') {
+                    if ('\ck\Model\ContactEvent' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactEvent' !== 'string') {
+                        if ('\ck\Model\ContactEvent' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactEvent', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactEvent', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactEvent';
+            $returnType = '\ck\Model\ContactEvent';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15510,7 +15510,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactEvent',
+                        '\ck\Model\ContactEvent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15527,7 +15527,7 @@ class AccountApi
      *
      * @param  int|null $page The page of results to search for (optional)
      * @param  int|null $items_per_page The number of items to list per page (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15536,7 +15536,7 @@ class AccountApi
     public function restAccountsContactsContactEventsPostAsync(
         ?int $page = null,
         ?int $items_per_page = null,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events = null,
+        ?\ck\Model\RestAccountsContactsContactEventsPostRequest $_rest_accounts_contacts_contact_events = null,
         string $contentType = self::contentTypes['restAccountsContactsContactEventsPost'][0]
     ): PromiseInterface
     {
@@ -15555,7 +15555,7 @@ class AccountApi
      *
      * @param  int|null $page The page of results to search for (optional)
      * @param  int|null $items_per_page The number of items to list per page (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15568,7 +15568,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactEventsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactEvent';
+        $returnType = '\ck\Model\ContactEvent';
         $request = $this->restAccountsContactsContactEventsPostRequest($page, $items_per_page, $_rest_accounts_contacts_contact_events, $contentType);
 
         return $this->client
@@ -15612,7 +15612,7 @@ class AccountApi
      *
      * @param  int|null $page The page of results to search for (optional)
      * @param  int|null $items_per_page The number of items to list per page (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events (optional)
+     * @param  \ck\Model\RestAccountsContactsContactEventsPostRequest|null $_rest_accounts_contacts_contact_events (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactEventsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -17490,13 +17490,13 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Account
+     * @return \ck\Model\Account
      */
     public function restAccountsContactsContactIdAccountsAccountIdGet(
         int $contact_id,
         int $account_id,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAccountsAccountIdGet'][0]
-    ): \ck/plenty-client\Model\Account
+    ): \ck\Model\Account
     {
         list($response) = $this->restAccountsContactsContactIdAccountsAccountIdGetWithHttpInfo($contact_id, $account_id, $contentType);
         return $response;
@@ -17513,7 +17513,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccountsAccountIdGetWithHttpInfo(
         int $contact_id,
@@ -17560,23 +17560,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Account' === '\SplFileObject') {
+                    if ('\ck\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Account' !== 'string') {
+                        if ('\ck\Model\Account' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Account';
+            $returnType = '\ck\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17597,7 +17597,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Account',
+                        '\ck\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17651,7 +17651,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdAccountsAccountIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Account';
+        $returnType = '\ck\Model\Account';
         $request = $this->restAccountsContactsContactIdAccountsAccountIdGetRequest($contact_id, $account_id, $contentType);
 
         return $this->client
@@ -17817,13 +17817,13 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Account
+     * @return \ck\Model\Account
      */
     public function restAccountsContactsContactIdAccountsAccountIdPut(
         int $contact_id,
         int $account_id,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAccountsAccountIdPut'][0]
-    ): \ck/plenty-client\Model\Account
+    ): \ck\Model\Account
     {
         list($response) = $this->restAccountsContactsContactIdAccountsAccountIdPutWithHttpInfo($contact_id, $account_id, $contentType);
         return $response;
@@ -17840,7 +17840,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccountsAccountIdPutWithHttpInfo(
         int $contact_id,
@@ -17887,23 +17887,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Account' === '\SplFileObject') {
+                    if ('\ck\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Account' !== 'string') {
+                        if ('\ck\Model\Account' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Account';
+            $returnType = '\ck\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17924,7 +17924,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Account',
+                        '\ck\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17978,7 +17978,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdAccountsAccountIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Account';
+        $returnType = '\ck\Model\Account';
         $request = $this->restAccountsContactsContactIdAccountsAccountIdPutRequest($contact_id, $account_id, $contentType);
 
         return $this->client
@@ -18139,18 +18139,18 @@ class AccountApi
      * Create account for existing contact
      *
      * @param  int $contact_id The ID of the contact (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts _rest_accounts_contacts_contact_id_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts _rest_accounts_contacts_contact_id_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAccountsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Account
+     * @return \ck\Model\Account
      */
     public function restAccountsContactsContactIdAccountsPost(
         int $contact_id,
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts_contacts_contact_id_accounts = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts_contacts_contact_id_accounts = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAccountsPost'][0]
-    ): \ck/plenty-client\Model\Account
+    ): \ck\Model\Account
     {
         list($response) = $this->restAccountsContactsContactIdAccountsPostWithHttpInfo($contact_id, $_rest_accounts_contacts_contact_id_accounts, $contentType);
         return $response;
@@ -18162,16 +18162,16 @@ class AccountApi
      * Create account for existing contact
      *
      * @param  int $contact_id The ID of the contact (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAccountsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAccountsPostWithHttpInfo(
         int $contact_id,
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts_contacts_contact_id_accounts = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts_contacts_contact_id_accounts = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAccountsPost'][0]
     ): array
     {
@@ -18214,23 +18214,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Account' === '\SplFileObject') {
+                    if ('\ck\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Account' !== 'string') {
+                        if ('\ck\Model\Account' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Account';
+            $returnType = '\ck\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18251,7 +18251,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Account',
+                        '\ck\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18267,7 +18267,7 @@ class AccountApi
      * Create account for existing contact
      *
      * @param  int $contact_id The ID of the contact (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAccountsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18275,7 +18275,7 @@ class AccountApi
      */
     public function restAccountsContactsContactIdAccountsPostAsync(
         int $contact_id,
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts_contacts_contact_id_accounts = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts_contacts_contact_id_accounts = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAccountsPost'][0]
     ): PromiseInterface
     {
@@ -18293,7 +18293,7 @@ class AccountApi
      * Create account for existing contact
      *
      * @param  int $contact_id The ID of the contact (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAccountsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18305,7 +18305,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdAccountsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Account';
+        $returnType = '\ck\Model\Account';
         $request = $this->restAccountsContactsContactIdAccountsPostRequest($contact_id, $_rest_accounts_contacts_contact_id_accounts, $contentType);
 
         return $this->client
@@ -18348,7 +18348,7 @@ class AccountApi
      * Create request for operation 'restAccountsContactsContactIdAccountsPost'
      *
      * @param  int $contact_id The ID of the contact (required)
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts_contacts_contact_id_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAccountsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18759,7 +18759,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Address
+     * @return \ck\Model\Address
      */
     public function restAccountsContactsContactIdAddressesAddressIdPut(
         int $contact_id,
@@ -18767,7 +18767,7 @@ class AccountApi
         ?bool $is_primary = null,
         ?int $type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesAddressIdPut'][0]
-    ): \ck/plenty-client\Model\Address
+    ): \ck\Model\Address
     {
         list($response) = $this->restAccountsContactsContactIdAddressesAddressIdPutWithHttpInfo($contact_id, $address_id, $is_primary, $type_id, $contentType);
         return $response;
@@ -18786,7 +18786,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Address, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Address, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesAddressIdPutWithHttpInfo(
         int $contact_id,
@@ -18835,23 +18835,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Address' === '\SplFileObject') {
+                    if ('\ck\Model\Address' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Address' !== 'string') {
+                        if ('\ck\Model\Address' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Address', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Address', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Address';
+            $returnType = '\ck\Model\Address';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18872,7 +18872,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Address',
+                        '\ck\Model\Address',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18934,7 +18934,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesAddressIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Address';
+        $returnType = '\ck\Model\Address';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdPutRequest($contact_id, $address_id, $is_primary, $type_id, $contentType);
 
         return $this->client
@@ -19125,14 +19125,14 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressContactRelation
+     * @return \ck\Model\AddressContactRelation
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPut(
         int $contact_id,
         int $address_id,
         int $address_type_id,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPut'][0]
-    ): \ck/plenty-client\Model\AddressContactRelation
+    ): \ck\Model\AddressContactRelation
     {
         list($response) = $this->restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPutWithHttpInfo($contact_id, $address_id, $address_type_id, $contentType);
         return $response;
@@ -19150,7 +19150,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPutWithHttpInfo(
         int $contact_id,
@@ -19198,23 +19198,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressContactRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressContactRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressContactRelation' !== 'string') {
+                        if ('\ck\Model\AddressContactRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressContactRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressContactRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressContactRelation';
+            $returnType = '\ck\Model\AddressContactRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19235,7 +19235,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressContactRelation',
+                        '\ck\Model\AddressContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19293,7 +19293,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressContactRelation';
+        $returnType = '\ck\Model\AddressContactRelation';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPutRequest($contact_id, $address_id, $address_type_id, $contentType);
 
         return $this->client
@@ -19477,14 +19477,14 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressContactRelation
+     * @return \ck\Model\AddressContactRelation
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPut(
         int $contact_id,
         int $address_id,
         int $address_type_id,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPut'][0]
-    ): \ck/plenty-client\Model\AddressContactRelation
+    ): \ck\Model\AddressContactRelation
     {
         list($response) = $this->restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPutWithHttpInfo($contact_id, $address_id, $address_type_id, $contentType);
         return $response;
@@ -19502,7 +19502,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressContactRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressContactRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPutWithHttpInfo(
         int $contact_id,
@@ -19550,23 +19550,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressContactRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressContactRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressContactRelation' !== 'string') {
+                        if ('\ck\Model\AddressContactRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressContactRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressContactRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressContactRelation';
+            $returnType = '\ck\Model\AddressContactRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19587,7 +19587,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressContactRelation',
+                        '\ck\Model\AddressContactRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19645,7 +19645,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressContactRelation';
+        $returnType = '\ck\Model\AddressContactRelation';
         $request = $this->restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPutRequest($contact_id, $address_id, $address_type_id, $contentType);
 
         return $this->client
@@ -19825,20 +19825,20 @@ class AccountApi
      * @param  int $contact_id The ID of the contact (required)
      * @param  bool|null $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int|null $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses _rest_accounts_contacts_contact_id_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses _rest_accounts_contacts_contact_id_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAddressesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Address
+     * @return \ck\Model\Address
      */
     public function restAccountsContactsContactIdAddressesPost(
         int $contact_id,
         ?bool $is_primary = null,
         ?int $type_id = null,
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_contacts_contact_id_addresses = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_contacts_contact_id_addresses = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesPost'][0]
-    ): \ck/plenty-client\Model\Address
+    ): \ck\Model\Address
     {
         list($response) = $this->restAccountsContactsContactIdAddressesPostWithHttpInfo($contact_id, $is_primary, $type_id, $_rest_accounts_contacts_contact_id_addresses, $contentType);
         return $response;
@@ -19852,18 +19852,18 @@ class AccountApi
      * @param  int $contact_id The ID of the contact (required)
      * @param  bool|null $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int|null $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAddressesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Address, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Address, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdAddressesPostWithHttpInfo(
         int $contact_id,
         ?bool $is_primary = null,
         ?int $type_id = null,
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_contacts_contact_id_addresses = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_contacts_contact_id_addresses = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesPost'][0]
     ): array
     {
@@ -19906,23 +19906,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Address' === '\SplFileObject') {
+                    if ('\ck\Model\Address' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Address' !== 'string') {
+                        if ('\ck\Model\Address' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Address', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Address', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Address';
+            $returnType = '\ck\Model\Address';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19943,7 +19943,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Address',
+                        '\ck\Model\Address',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19961,7 +19961,7 @@ class AccountApi
      * @param  int $contact_id The ID of the contact (required)
      * @param  bool|null $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int|null $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAddressesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -19971,7 +19971,7 @@ class AccountApi
         int $contact_id,
         ?bool $is_primary = null,
         ?int $type_id = null,
-        ?\ck/plenty-client\Model\RestAccountsAddressesPostRequest $_rest_accounts_contacts_contact_id_addresses = null,
+        ?\ck\Model\RestAccountsAddressesPostRequest $_rest_accounts_contacts_contact_id_addresses = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesPost'][0]
     ): PromiseInterface
     {
@@ -19991,7 +19991,7 @@ class AccountApi
      * @param  int $contact_id The ID of the contact (required)
      * @param  bool|null $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int|null $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAddressesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -20005,7 +20005,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdAddressesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Address';
+        $returnType = '\ck\Model\Address';
         $request = $this->restAccountsContactsContactIdAddressesPostRequest($contact_id, $is_primary, $type_id, $_rest_accounts_contacts_contact_id_addresses, $contentType);
 
         return $this->client
@@ -20050,7 +20050,7 @@ class AccountApi
      * @param  int $contact_id The ID of the contact (required)
      * @param  bool|null $is_primary Sets a contact address per address type as the primary address. (optional)
      * @param  int|null $type_id The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses (optional)
+     * @param  \ck\Model\RestAccountsAddressesPostRequest|null $_rest_accounts_contacts_contact_id_addresses (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdAddressesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -20490,7 +20490,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactBank[]
+     * @return \ck\Model\ContactBank[]
      */
     public function restAccountsContactsContactIdBanksGet(
         int $contact_id,
@@ -20513,7 +20513,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactBank[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactBank[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdBanksGetWithHttpInfo(
         int $contact_id,
@@ -20560,23 +20560,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactBank[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactBank[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactBank[]' !== 'string') {
+                        if ('\ck\Model\ContactBank[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactBank[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactBank[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactBank[]';
+            $returnType = '\ck\Model\ContactBank[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20597,7 +20597,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactBank[]',
+                        '\ck\Model\ContactBank[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20651,7 +20651,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdBanksGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactBank[]';
+        $returnType = '\ck\Model\ContactBank[]';
         $request = $this->restAccountsContactsContactIdBanksGetRequest($contact_id, $items_per_page, $contentType);
 
         return $this->client
@@ -20813,14 +20813,14 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response
+     * @return \ck\Model\RestAccountsContactsContactEventsGet200Response
      */
     public function restAccountsContactsContactIdContactEventsGet(
         int $contact_id,
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdContactEventsGet'][0]
-    ): \ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response
+    ): \ck\Model\RestAccountsContactsContactEventsGet200Response
     {
         list($response) = $this->restAccountsContactsContactIdContactEventsGetWithHttpInfo($contact_id, $page, $items_per_page, $contentType);
         return $response;
@@ -20838,7 +20838,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountsContactsContactEventsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdContactEventsGetWithHttpInfo(
         int $contact_id,
@@ -20886,23 +20886,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountsContactsContactEventsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountsContactsContactEventsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountsContactsContactEventsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response';
+            $returnType = '\ck\Model\RestAccountsContactsContactEventsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20923,7 +20923,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response',
+                        '\ck\Model\RestAccountsContactsContactEventsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20981,7 +20981,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdContactEventsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response';
+        $returnType = '\ck\Model\RestAccountsContactsContactEventsGet200Response';
         $request = $this->restAccountsContactsContactIdContactEventsGetRequest($contact_id, $page, $items_per_page, $contentType);
 
         return $this->client
@@ -21422,13 +21422,13 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Contact
+     * @return \ck\Model\Contact
      */
     public function restAccountsContactsContactIdGet(
         int $contact_id,
         ?string $with = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdGet'][0]
-    ): \ck/plenty-client\Model\Contact
+    ): \ck\Model\Contact
     {
         list($response) = $this->restAccountsContactsContactIdGetWithHttpInfo($contact_id, $with, $contentType);
         return $response;
@@ -21445,7 +21445,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdGetWithHttpInfo(
         int $contact_id,
@@ -21492,23 +21492,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Contact' === '\SplFileObject') {
+                    if ('\ck\Model\Contact' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Contact' !== 'string') {
+                        if ('\ck\Model\Contact' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Contact', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Contact', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Contact';
+            $returnType = '\ck\Model\Contact';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -21529,7 +21529,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Contact',
+                        '\ck\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21583,7 +21583,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Contact';
+        $returnType = '\ck\Model\Contact';
         $request = $this->restAccountsContactsContactIdGetRequest($contact_id, $with, $contentType);
 
         return $this->client
@@ -21993,7 +21993,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOption[]
+     * @return \ck\Model\ContactOption[]
      */
     public function restAccountsContactsContactIdOptionsGet(
         int $contact_id,
@@ -22018,7 +22018,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdOptionsGetWithHttpInfo(
         int $contact_id,
@@ -22066,23 +22066,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOption[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOption[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOption[]' !== 'string') {
+                        if ('\ck\Model\ContactOption[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOption[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOption[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOption[]';
+            $returnType = '\ck\Model\ContactOption[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22103,7 +22103,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOption[]',
+                        '\ck\Model\ContactOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22161,7 +22161,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdOptionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOption[]';
+        $returnType = '\ck\Model\ContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsGetRequest($contact_id, $type_id, $sub_type_id, $contentType);
 
         return $this->client
@@ -22333,7 +22333,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOption[]
+     * @return \ck\Model\ContactOption[]
      */
     public function restAccountsContactsContactIdOptionsPost(
         int $contact_id,
@@ -22354,7 +22354,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdOptionsPostWithHttpInfo(
         int $contact_id,
@@ -22400,23 +22400,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOption[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOption[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOption[]' !== 'string') {
+                        if ('\ck\Model\ContactOption[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOption[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOption[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOption[]';
+            $returnType = '\ck\Model\ContactOption[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22437,7 +22437,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOption[]',
+                        '\ck\Model\ContactOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22487,7 +22487,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdOptionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOption[]';
+        $returnType = '\ck\Model\ContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsPostRequest($contact_id, $contentType);
 
         return $this->client
@@ -22635,7 +22635,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOption[]
+     * @return \ck\Model\ContactOption[]
      */
     public function restAccountsContactsContactIdOptionsPut(
         int $contact_id,
@@ -22656,7 +22656,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdOptionsPutWithHttpInfo(
         int $contact_id,
@@ -22702,23 +22702,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOption[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOption[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOption[]' !== 'string') {
+                        if ('\ck\Model\ContactOption[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOption[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOption[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOption[]';
+            $returnType = '\ck\Model\ContactOption[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22739,7 +22739,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOption[]',
+                        '\ck\Model\ContactOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22789,7 +22789,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdOptionsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOption[]';
+        $returnType = '\ck\Model\ContactOption[]';
         $request = $this->restAccountsContactsContactIdOptionsPutRequest($contact_id, $contentType);
 
         return $this->client
@@ -23236,19 +23236,19 @@ class AccountApi
      *
      * @param  int $contact_id The ID of the contact (required)
      * @param  int|null $tag_relationships When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain. (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id _rest_accounts_contacts_contact_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id _rest_accounts_contacts_contact_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Contact
+     * @return \ck\Model\Contact
      */
     public function restAccountsContactsContactIdPut(
         int $contact_id,
         ?int $tag_relationships = null,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest $_rest_accounts_contacts_contact_id = null,
+        ?\ck\Model\RestAccountsContactsContactIdPutRequest $_rest_accounts_contacts_contact_id = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdPut'][0]
-    ): \ck/plenty-client\Model\Contact
+    ): \ck\Model\Contact
     {
         list($response) = $this->restAccountsContactsContactIdPutWithHttpInfo($contact_id, $tag_relationships, $_rest_accounts_contacts_contact_id, $contentType);
         return $response;
@@ -23261,17 +23261,17 @@ class AccountApi
      *
      * @param  int $contact_id The ID of the contact (required)
      * @param  int|null $tag_relationships When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain. (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdPutWithHttpInfo(
         int $contact_id,
         ?int $tag_relationships = null,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest $_rest_accounts_contacts_contact_id = null,
+        ?\ck\Model\RestAccountsContactsContactIdPutRequest $_rest_accounts_contacts_contact_id = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdPut'][0]
     ): array
     {
@@ -23314,23 +23314,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Contact' === '\SplFileObject') {
+                    if ('\ck\Model\Contact' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Contact' !== 'string') {
+                        if ('\ck\Model\Contact' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Contact', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Contact', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Contact';
+            $returnType = '\ck\Model\Contact';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -23351,7 +23351,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Contact',
+                        '\ck\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23368,7 +23368,7 @@ class AccountApi
      *
      * @param  int $contact_id The ID of the contact (required)
      * @param  int|null $tag_relationships When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain. (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23377,7 +23377,7 @@ class AccountApi
     public function restAccountsContactsContactIdPutAsync(
         int $contact_id,
         ?int $tag_relationships = null,
-        ?\ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest $_rest_accounts_contacts_contact_id = null,
+        ?\ck\Model\RestAccountsContactsContactIdPutRequest $_rest_accounts_contacts_contact_id = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdPut'][0]
     ): PromiseInterface
     {
@@ -23396,7 +23396,7 @@ class AccountApi
      *
      * @param  int $contact_id The ID of the contact (required)
      * @param  int|null $tag_relationships When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain. (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23409,7 +23409,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Contact';
+        $returnType = '\ck\Model\Contact';
         $request = $this->restAccountsContactsContactIdPutRequest($contact_id, $tag_relationships, $_rest_accounts_contacts_contact_id, $contentType);
 
         return $this->client
@@ -23453,7 +23453,7 @@ class AccountApi
      *
      * @param  int $contact_id The ID of the contact (required)
      * @param  int|null $tag_relationships When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain. (optional)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id (optional)
+     * @param  \ck\Model\RestAccountsContactsContactIdPutRequest|null $_rest_accounts_contacts_contact_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsContactIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23579,12 +23579,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Contact
+     * @return \ck\Model\Contact
      */
     public function restAccountsContactsContactIdRelatedDataGet(
         int $contact_id,
         string $contentType = self::contentTypes['restAccountsContactsContactIdRelatedDataGet'][0]
-    ): \ck/plenty-client\Model\Contact
+    ): \ck\Model\Contact
     {
         list($response) = $this->restAccountsContactsContactIdRelatedDataGetWithHttpInfo($contact_id, $contentType);
         return $response;
@@ -23600,7 +23600,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdRelatedDataGetWithHttpInfo(
         int $contact_id,
@@ -23646,23 +23646,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Contact' === '\SplFileObject') {
+                    if ('\ck\Model\Contact' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Contact' !== 'string') {
+                        if ('\ck\Model\Contact' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Contact', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Contact', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Contact';
+            $returnType = '\ck\Model\Contact';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -23683,7 +23683,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Contact',
+                        '\ck\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23733,7 +23733,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdRelatedDataGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Contact';
+        $returnType = '\ck\Model\Contact';
         $request = $this->restAccountsContactsContactIdRelatedDataGetRequest($contact_id, $contentType);
 
         return $this->client
@@ -24431,12 +24431,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactDepartment
+     * @return \ck\Model\ContactDepartment
      */
     public function restAccountsContactsDepartmentsDepartmentIdGet(
         int $department_id,
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsDepartmentIdGet'][0]
-    ): \ck/plenty-client\Model\ContactDepartment
+    ): \ck\Model\ContactDepartment
     {
         list($response) = $this->restAccountsContactsDepartmentsDepartmentIdGetWithHttpInfo($department_id, $contentType);
         return $response;
@@ -24452,7 +24452,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactDepartment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactDepartment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsDepartmentsDepartmentIdGetWithHttpInfo(
         int $department_id,
@@ -24498,23 +24498,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactDepartment' === '\SplFileObject') {
+                    if ('\ck\Model\ContactDepartment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactDepartment' !== 'string') {
+                        if ('\ck\Model\ContactDepartment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactDepartment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactDepartment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactDepartment';
+            $returnType = '\ck\Model\ContactDepartment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -24535,7 +24535,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactDepartment',
+                        '\ck\Model\ContactDepartment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24585,7 +24585,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsDepartmentIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactDepartment';
+        $returnType = '\ck\Model\ContactDepartment';
         $request = $this->restAccountsContactsDepartmentsDepartmentIdGetRequest($department_id, $contentType);
 
         return $this->client
@@ -24729,18 +24729,18 @@ class AccountApi
      * Update contact department
      *
      * @param  int $department_id The ID of the department (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id _rest_accounts_contacts_departments_department_id (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id _rest_accounts_contacts_departments_department_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactDepartment
+     * @return \ck\Model\ContactDepartment
      */
     public function restAccountsContactsDepartmentsDepartmentIdPut(
         int $department_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments_department_id = null,
+        ?\ck\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments_department_id = null,
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'][0]
-    ): \ck/plenty-client\Model\ContactDepartment
+    ): \ck\Model\ContactDepartment
     {
         list($response) = $this->restAccountsContactsDepartmentsDepartmentIdPutWithHttpInfo($department_id, $_rest_accounts_contacts_departments_department_id, $contentType);
         return $response;
@@ -24752,16 +24752,16 @@ class AccountApi
      * Update contact department
      *
      * @param  int $department_id The ID of the department (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactDepartment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactDepartment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsDepartmentsDepartmentIdPutWithHttpInfo(
         int $department_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments_department_id = null,
+        ?\ck\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments_department_id = null,
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'][0]
     ): array
     {
@@ -24804,23 +24804,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactDepartment' === '\SplFileObject') {
+                    if ('\ck\Model\ContactDepartment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactDepartment' !== 'string') {
+                        if ('\ck\Model\ContactDepartment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactDepartment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactDepartment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactDepartment';
+            $returnType = '\ck\Model\ContactDepartment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -24841,7 +24841,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactDepartment',
+                        '\ck\Model\ContactDepartment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -24857,7 +24857,7 @@ class AccountApi
      * Update contact department
      *
      * @param  int $department_id The ID of the department (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -24865,7 +24865,7 @@ class AccountApi
      */
     public function restAccountsContactsDepartmentsDepartmentIdPutAsync(
         int $department_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments_department_id = null,
+        ?\ck\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments_department_id = null,
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'][0]
     ): PromiseInterface
     {
@@ -24883,7 +24883,7 @@ class AccountApi
      * Update contact department
      *
      * @param  int $department_id The ID of the department (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -24895,7 +24895,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactDepartment';
+        $returnType = '\ck\Model\ContactDepartment';
         $request = $this->restAccountsContactsDepartmentsDepartmentIdPutRequest($department_id, $_rest_accounts_contacts_departments_department_id, $contentType);
 
         return $this->client
@@ -24938,7 +24938,7 @@ class AccountApi
      * Create request for operation 'restAccountsContactsDepartmentsDepartmentIdPut'
      *
      * @param  int $department_id The ID of the department (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments_department_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsDepartmentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -25052,7 +25052,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactDepartment[]
+     * @return \ck\Model\ContactDepartment[]
      */
     public function restAccountsContactsDepartmentsGet(
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsGet'][0]
@@ -25071,7 +25071,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactDepartment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactDepartment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsDepartmentsGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsGet'][0]
@@ -25116,23 +25116,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactDepartment[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactDepartment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactDepartment[]' !== 'string') {
+                        if ('\ck\Model\ContactDepartment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactDepartment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactDepartment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactDepartment[]';
+            $returnType = '\ck\Model\ContactDepartment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -25153,7 +25153,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactDepartment[]',
+                        '\ck\Model\ContactDepartment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25199,7 +25199,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactDepartment[]';
+        $returnType = '\ck\Model\ContactDepartment[]';
         $request = $this->restAccountsContactsDepartmentsGetRequest($contentType);
 
         return $this->client
@@ -25325,17 +25325,17 @@ class AccountApi
      *
      * Create contact department
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments _rest_accounts_contacts_departments (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments _rest_accounts_contacts_departments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactDepartment
+     * @return \ck\Model\ContactDepartment
      */
     public function restAccountsContactsDepartmentsPost(
-        ?\ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments = null,
+        ?\ck\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments = null,
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsPost'][0]
-    ): \ck/plenty-client\Model\ContactDepartment
+    ): \ck\Model\ContactDepartment
     {
         list($response) = $this->restAccountsContactsDepartmentsPostWithHttpInfo($_rest_accounts_contacts_departments, $contentType);
         return $response;
@@ -25346,15 +25346,15 @@ class AccountApi
      *
      * Create contact department
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactDepartment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactDepartment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsDepartmentsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments = null,
+        ?\ck\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments = null,
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsPost'][0]
     ): array
     {
@@ -25397,23 +25397,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactDepartment' === '\SplFileObject') {
+                    if ('\ck\Model\ContactDepartment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactDepartment' !== 'string') {
+                        if ('\ck\Model\ContactDepartment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactDepartment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactDepartment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactDepartment';
+            $returnType = '\ck\Model\ContactDepartment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -25434,7 +25434,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactDepartment',
+                        '\ck\Model\ContactDepartment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -25449,14 +25449,14 @@ class AccountApi
      *
      * Create contact department
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsContactsDepartmentsPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments = null,
+        ?\ck\Model\RestAccountsContactsDepartmentsPostRequest $_rest_accounts_contacts_departments = null,
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsPost'][0]
     ): PromiseInterface
     {
@@ -25473,7 +25473,7 @@ class AccountApi
      *
      * Create contact department
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -25484,7 +25484,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsDepartmentsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactDepartment';
+        $returnType = '\ck\Model\ContactDepartment';
         $request = $this->restAccountsContactsDepartmentsPostRequest($_rest_accounts_contacts_departments, $contentType);
 
         return $this->client
@@ -25526,7 +25526,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsContactsDepartmentsPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments (optional)
+     * @param  \ck\Model\RestAccountsContactsDepartmentsPostRequest|null $_rest_accounts_contacts_departments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsDepartmentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -25657,7 +25657,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountsContactsGet200Response
+     * @return \ck\Model\RestAccountsContactsGet200Response
      */
     public function restAccountsContactsGet(
         ?string $full_text = null,
@@ -25694,7 +25694,7 @@ class AccountApi
         ?string $delivery_address_id = null,
         ?int $tag_ids = null,
         string $contentType = self::contentTypes['restAccountsContactsGet'][0]
-    ): \ck/plenty-client\Model\RestAccountsContactsGet200Response
+    ): \ck\Model\RestAccountsContactsGet200Response
     {
         list($response) = $this->restAccountsContactsGetWithHttpInfo($full_text, $contact_email, $email, $postal_code, $plenty_id, $external_id, $number, $type_id, $rating, $created_at_before, $created_at_after, $updated_at_before, $updated_at_after, $last_order_at_before, $last_order_at_after, $with, $page, $items_per_page, $newsletter_allowance_after, $newsletter_allowance_before, $newsletter_allowance, $contact_id, $contact_address, $country_id, $user_id, $referrer_id, $name, $name_or_id, $town, $private_phone, $billing_address_id, $delivery_address_id, $tag_ids, $contentType);
         return $response;
@@ -25742,7 +25742,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountsContactsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountsContactsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsGetWithHttpInfo(
         ?string $full_text = null,
@@ -25820,23 +25820,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountsContactsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountsContactsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountsContactsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountsContactsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountsContactsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountsContactsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountsContactsGet200Response';
+            $returnType = '\ck\Model\RestAccountsContactsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -25857,7 +25857,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountsContactsGet200Response',
+                        '\ck\Model\RestAccountsContactsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -26035,7 +26035,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountsContactsGet200Response';
+        $returnType = '\ck\Model\RestAccountsContactsGet200Response';
         $request = $this->restAccountsContactsGetRequest($full_text, $contact_email, $email, $postal_code, $plenty_id, $external_id, $number, $type_id, $rating, $created_at_before, $created_at_after, $updated_at_before, $updated_at_after, $last_order_at_before, $last_order_at_after, $with, $page, $items_per_page, $newsletter_allowance_after, $newsletter_allowance_before, $newsletter_allowance, $contact_id, $contact_address, $country_id, $user_id, $referrer_id, $name, $name_or_id, $town, $private_phone, $billing_address_id, $delivery_address_id, $tag_ids, $contentType);
 
         return $this->client
@@ -27195,7 +27195,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOptionSubType[]
+     * @return \ck\Model\ContactOptionSubType[]
      */
     public function restAccountsContactsOptionSubTypesGet(
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesGet'][0]
@@ -27214,7 +27214,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOptionSubType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOptionSubType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionSubTypesGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesGet'][0]
@@ -27259,23 +27259,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOptionSubType[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOptionSubType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOptionSubType[]' !== 'string') {
+                        if ('\ck\Model\ContactOptionSubType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOptionSubType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOptionSubType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOptionSubType[]';
+            $returnType = '\ck\Model\ContactOptionSubType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -27296,7 +27296,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOptionSubType[]',
+                        '\ck\Model\ContactOptionSubType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27342,7 +27342,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOptionSubType[]';
+        $returnType = '\ck\Model\ContactOptionSubType[]';
         $request = $this->restAccountsContactsOptionSubTypesGetRequest($contentType);
 
         return $this->client
@@ -27721,12 +27721,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOptionSubType
+     * @return \ck\Model\ContactOptionSubType
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdGet(
         int $option_sub_type_id,
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdGet'][0]
-    ): \ck/plenty-client\Model\ContactOptionSubType
+    ): \ck\Model\ContactOptionSubType
     {
         list($response) = $this->restAccountsContactsOptionSubTypesOptionSubTypeIdGetWithHttpInfo($option_sub_type_id, $contentType);
         return $response;
@@ -27742,7 +27742,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdGetWithHttpInfo(
         int $option_sub_type_id,
@@ -27788,23 +27788,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOptionSubType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOptionSubType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOptionSubType' !== 'string') {
+                        if ('\ck\Model\ContactOptionSubType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOptionSubType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOptionSubType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOptionSubType';
+            $returnType = '\ck\Model\ContactOptionSubType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -27825,7 +27825,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOptionSubType',
+                        '\ck\Model\ContactOptionSubType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -27875,7 +27875,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOptionSubType';
+        $returnType = '\ck\Model\ContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesOptionSubTypeIdGetRequest($option_sub_type_id, $contentType);
 
         return $this->client
@@ -28019,18 +28019,18 @@ class AccountApi
      * Update contact option sub-type
      *
      * @param  int $option_sub_type_id The ID of the contact option sub-type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id _rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id _rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOptionSubType
+     * @return \ck\Model\ContactOptionSubType
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdPut(
         int $option_sub_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types_option_sub_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types_option_sub_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'][0]
-    ): \ck/plenty-client\Model\ContactOptionSubType
+    ): \ck\Model\ContactOptionSubType
     {
         list($response) = $this->restAccountsContactsOptionSubTypesOptionSubTypeIdPutWithHttpInfo($option_sub_type_id, $_rest_accounts_contacts_option_sub_types_option_sub_type_id, $contentType);
         return $response;
@@ -28042,16 +28042,16 @@ class AccountApi
      * Update contact option sub-type
      *
      * @param  int $option_sub_type_id The ID of the contact option sub-type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdPutWithHttpInfo(
         int $option_sub_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types_option_sub_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types_option_sub_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'][0]
     ): array
     {
@@ -28094,23 +28094,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOptionSubType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOptionSubType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOptionSubType' !== 'string') {
+                        if ('\ck\Model\ContactOptionSubType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOptionSubType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOptionSubType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOptionSubType';
+            $returnType = '\ck\Model\ContactOptionSubType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -28131,7 +28131,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOptionSubType',
+                        '\ck\Model\ContactOptionSubType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28147,7 +28147,7 @@ class AccountApi
      * Update contact option sub-type
      *
      * @param  int $option_sub_type_id The ID of the contact option sub-type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -28155,7 +28155,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionSubTypesOptionSubTypeIdPutAsync(
         int $option_sub_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types_option_sub_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types_option_sub_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'][0]
     ): PromiseInterface
     {
@@ -28173,7 +28173,7 @@ class AccountApi
      * Update contact option sub-type
      *
      * @param  int $option_sub_type_id The ID of the contact option sub-type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -28185,7 +28185,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOptionSubType';
+        $returnType = '\ck\Model\ContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesOptionSubTypeIdPutRequest($option_sub_type_id, $_rest_accounts_contacts_option_sub_types_option_sub_type_id, $contentType);
 
         return $this->client
@@ -28228,7 +28228,7 @@ class AccountApi
      * Create request for operation 'restAccountsContactsOptionSubTypesOptionSubTypeIdPut'
      *
      * @param  int $option_sub_type_id The ID of the contact option sub-type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types_option_sub_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesOptionSubTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -28338,17 +28338,17 @@ class AccountApi
      *
      * Create contact option sub-type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types _rest_accounts_contacts_option_sub_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types _rest_accounts_contacts_option_sub_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOptionSubType
+     * @return \ck\Model\ContactOptionSubType
      */
     public function restAccountsContactsOptionSubTypesPost(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesPost'][0]
-    ): \ck/plenty-client\Model\ContactOptionSubType
+    ): \ck\Model\ContactOptionSubType
     {
         list($response) = $this->restAccountsContactsOptionSubTypesPostWithHttpInfo($_rest_accounts_contacts_option_sub_types, $contentType);
         return $response;
@@ -28359,15 +28359,15 @@ class AccountApi
      *
      * Create contact option sub-type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOptionSubType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionSubTypesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesPost'][0]
     ): array
     {
@@ -28410,23 +28410,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOptionSubType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOptionSubType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOptionSubType' !== 'string') {
+                        if ('\ck\Model\ContactOptionSubType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOptionSubType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOptionSubType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOptionSubType';
+            $returnType = '\ck\Model\ContactOptionSubType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -28447,7 +28447,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOptionSubType',
+                        '\ck\Model\ContactOptionSubType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28462,14 +28462,14 @@ class AccountApi
      *
      * Create contact option sub-type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsContactsOptionSubTypesPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_sub_types = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesPost'][0]
     ): PromiseInterface
     {
@@ -28486,7 +28486,7 @@ class AccountApi
      *
      * Create contact option sub-type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -28497,7 +28497,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionSubTypesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOptionSubType';
+        $returnType = '\ck\Model\ContactOptionSubType';
         $request = $this->restAccountsContactsOptionSubTypesPostRequest($_rest_accounts_contacts_option_sub_types, $contentType);
 
         return $this->client
@@ -28539,7 +28539,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsContactsOptionSubTypesPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_sub_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionSubTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -28638,7 +28638,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOptionType[]
+     * @return \ck\Model\ContactOptionType[]
      */
     public function restAccountsContactsOptionTypesGet(
         ?string $with = null,
@@ -28659,7 +28659,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOptionType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOptionType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionTypesGetWithHttpInfo(
         ?string $with = null,
@@ -28705,23 +28705,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOptionType[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOptionType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOptionType[]' !== 'string') {
+                        if ('\ck\Model\ContactOptionType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOptionType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOptionType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOptionType[]';
+            $returnType = '\ck\Model\ContactOptionType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -28742,7 +28742,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOptionType[]',
+                        '\ck\Model\ContactOptionType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -28792,7 +28792,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOptionType[]';
+        $returnType = '\ck\Model\ContactOptionType[]';
         $request = $this->restAccountsContactsOptionTypesGetRequest($with, $contentType);
 
         return $this->client
@@ -29183,12 +29183,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOptionType
+     * @return \ck\Model\ContactOptionType
      */
     public function restAccountsContactsOptionTypesOptionTypeIdGet(
         int $option_type_id,
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdGet'][0]
-    ): \ck/plenty-client\Model\ContactOptionType
+    ): \ck\Model\ContactOptionType
     {
         list($response) = $this->restAccountsContactsOptionTypesOptionTypeIdGetWithHttpInfo($option_type_id, $contentType);
         return $response;
@@ -29204,7 +29204,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionTypesOptionTypeIdGetWithHttpInfo(
         int $option_type_id,
@@ -29250,23 +29250,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOptionType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOptionType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOptionType' !== 'string') {
+                        if ('\ck\Model\ContactOptionType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOptionType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOptionType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOptionType';
+            $returnType = '\ck\Model\ContactOptionType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29287,7 +29287,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOptionType',
+                        '\ck\Model\ContactOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29337,7 +29337,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOptionType';
+        $returnType = '\ck\Model\ContactOptionType';
         $request = $this->restAccountsContactsOptionTypesOptionTypeIdGetRequest($option_type_id, $contentType);
 
         return $this->client
@@ -29481,18 +29481,18 @@ class AccountApi
      * Update contact option type
      *
      * @param  int $option_type_id The ID of the contact option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id _rest_accounts_contacts_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id _rest_accounts_contacts_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOptionType
+     * @return \ck\Model\ContactOptionType
      */
     public function restAccountsContactsOptionTypesOptionTypeIdPut(
         int $option_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types_option_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types_option_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'][0]
-    ): \ck/plenty-client\Model\ContactOptionType
+    ): \ck\Model\ContactOptionType
     {
         list($response) = $this->restAccountsContactsOptionTypesOptionTypeIdPutWithHttpInfo($option_type_id, $_rest_accounts_contacts_option_types_option_type_id, $contentType);
         return $response;
@@ -29504,16 +29504,16 @@ class AccountApi
      * Update contact option type
      *
      * @param  int $option_type_id The ID of the contact option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionTypesOptionTypeIdPutWithHttpInfo(
         int $option_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types_option_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types_option_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'][0]
     ): array
     {
@@ -29556,23 +29556,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOptionType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOptionType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOptionType' !== 'string') {
+                        if ('\ck\Model\ContactOptionType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOptionType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOptionType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOptionType';
+            $returnType = '\ck\Model\ContactOptionType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29593,7 +29593,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOptionType',
+                        '\ck\Model\ContactOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29609,7 +29609,7 @@ class AccountApi
      * Update contact option type
      *
      * @param  int $option_type_id The ID of the contact option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -29617,7 +29617,7 @@ class AccountApi
      */
     public function restAccountsContactsOptionTypesOptionTypeIdPutAsync(
         int $option_type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types_option_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types_option_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'][0]
     ): PromiseInterface
     {
@@ -29635,7 +29635,7 @@ class AccountApi
      * Update contact option type
      *
      * @param  int $option_type_id The ID of the contact option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -29647,7 +29647,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOptionType';
+        $returnType = '\ck\Model\ContactOptionType';
         $request = $this->restAccountsContactsOptionTypesOptionTypeIdPutRequest($option_type_id, $_rest_accounts_contacts_option_types_option_type_id, $contentType);
 
         return $this->client
@@ -29690,7 +29690,7 @@ class AccountApi
      * Create request for operation 'restAccountsContactsOptionTypesOptionTypeIdPut'
      *
      * @param  int $option_type_id The ID of the contact option type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types_option_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesOptionTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -29800,17 +29800,17 @@ class AccountApi
      *
      * Create contact option type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types _rest_accounts_contacts_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types _rest_accounts_contacts_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOptionType
+     * @return \ck\Model\ContactOptionType
      */
     public function restAccountsContactsOptionTypesPost(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesPost'][0]
-    ): \ck/plenty-client\Model\ContactOptionType
+    ): \ck\Model\ContactOptionType
     {
         list($response) = $this->restAccountsContactsOptionTypesPostWithHttpInfo($_rest_accounts_contacts_option_types, $contentType);
         return $response;
@@ -29821,15 +29821,15 @@ class AccountApi
      *
      * Create contact option type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOptionType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOptionType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionTypesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesPost'][0]
     ): array
     {
@@ -29872,23 +29872,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOptionType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOptionType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOptionType' !== 'string') {
+                        if ('\ck\Model\ContactOptionType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOptionType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOptionType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOptionType';
+            $returnType = '\ck\Model\ContactOptionType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -29909,7 +29909,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOptionType',
+                        '\ck\Model\ContactOptionType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -29924,14 +29924,14 @@ class AccountApi
      *
      * Create contact option type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsContactsOptionTypesPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_option_types = null,
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesPost'][0]
     ): PromiseInterface
     {
@@ -29948,7 +29948,7 @@ class AccountApi
      *
      * Create contact option type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -29959,7 +29959,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionTypesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOptionType';
+        $returnType = '\ck\Model\ContactOptionType';
         $request = $this->restAccountsContactsOptionTypesPostRequest($_rest_accounts_contacts_option_types, $contentType);
 
         return $this->client
@@ -30001,7 +30001,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsContactsOptionTypesPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_option_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsOptionTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -30348,12 +30348,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOption
+     * @return \ck\Model\ContactOption
      */
     public function restAccountsContactsOptionsOptionIdGet(
         int $option_id,
         string $contentType = self::contentTypes['restAccountsContactsOptionsOptionIdGet'][0]
-    ): \ck/plenty-client\Model\ContactOption
+    ): \ck\Model\ContactOption
     {
         list($response) = $this->restAccountsContactsOptionsOptionIdGetWithHttpInfo($option_id, $contentType);
         return $response;
@@ -30369,7 +30369,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionsOptionIdGetWithHttpInfo(
         int $option_id,
@@ -30415,23 +30415,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOption' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOption' !== 'string') {
+                        if ('\ck\Model\ContactOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOption';
+            $returnType = '\ck\Model\ContactOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -30452,7 +30452,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOption',
+                        '\ck\Model\ContactOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30502,7 +30502,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionsOptionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOption';
+        $returnType = '\ck\Model\ContactOption';
         $request = $this->restAccountsContactsOptionsOptionIdGetRequest($option_id, $contentType);
 
         return $this->client
@@ -30650,12 +30650,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactOption
+     * @return \ck\Model\ContactOption
      */
     public function restAccountsContactsOptionsOptionIdPut(
         int $option_id,
         string $contentType = self::contentTypes['restAccountsContactsOptionsOptionIdPut'][0]
-    ): \ck/plenty-client\Model\ContactOption
+    ): \ck\Model\ContactOption
     {
         list($response) = $this->restAccountsContactsOptionsOptionIdPutWithHttpInfo($option_id, $contentType);
         return $response;
@@ -30671,7 +30671,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsOptionsOptionIdPutWithHttpInfo(
         int $option_id,
@@ -30717,23 +30717,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactOption' === '\SplFileObject') {
+                    if ('\ck\Model\ContactOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactOption' !== 'string') {
+                        if ('\ck\Model\ContactOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactOption';
+            $returnType = '\ck\Model\ContactOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -30754,7 +30754,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactOption',
+                        '\ck\Model\ContactOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -30804,7 +30804,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsOptionsOptionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactOption';
+        $returnType = '\ck\Model\ContactOption';
         $request = $this->restAccountsContactsOptionsOptionIdPutRequest($option_id, $contentType);
 
         return $this->client
@@ -30951,7 +30951,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactPosition[]
+     * @return \ck\Model\ContactPosition[]
      */
     public function restAccountsContactsPositionsGet(
         string $contentType = self::contentTypes['restAccountsContactsPositionsGet'][0]
@@ -30970,7 +30970,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactPosition[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactPosition[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPositionsGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsContactsPositionsGet'][0]
@@ -31015,23 +31015,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactPosition[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactPosition[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactPosition[]' !== 'string') {
+                        if ('\ck\Model\ContactPosition[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactPosition[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactPosition[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactPosition[]';
+            $returnType = '\ck\Model\ContactPosition[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -31052,7 +31052,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactPosition[]',
+                        '\ck\Model\ContactPosition[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31098,7 +31098,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsPositionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactPosition[]';
+        $returnType = '\ck\Model\ContactPosition[]';
         $request = $this->restAccountsContactsPositionsGetRequest($contentType);
 
         return $this->client
@@ -31477,12 +31477,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactPosition
+     * @return \ck\Model\ContactPosition
      */
     public function restAccountsContactsPositionsPositionIdGet(
         int $position_id,
         string $contentType = self::contentTypes['restAccountsContactsPositionsPositionIdGet'][0]
-    ): \ck/plenty-client\Model\ContactPosition
+    ): \ck\Model\ContactPosition
     {
         list($response) = $this->restAccountsContactsPositionsPositionIdGetWithHttpInfo($position_id, $contentType);
         return $response;
@@ -31498,7 +31498,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactPosition, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactPosition, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPositionsPositionIdGetWithHttpInfo(
         int $position_id,
@@ -31544,23 +31544,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactPosition' === '\SplFileObject') {
+                    if ('\ck\Model\ContactPosition' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactPosition' !== 'string') {
+                        if ('\ck\Model\ContactPosition' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactPosition', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactPosition', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactPosition';
+            $returnType = '\ck\Model\ContactPosition';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -31581,7 +31581,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactPosition',
+                        '\ck\Model\ContactPosition',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31631,7 +31631,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsPositionsPositionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactPosition';
+        $returnType = '\ck\Model\ContactPosition';
         $request = $this->restAccountsContactsPositionsPositionIdGetRequest($position_id, $contentType);
 
         return $this->client
@@ -31775,18 +31775,18 @@ class AccountApi
      * Update contact position
      *
      * @param  int $position_id The ID of the position (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id _rest_accounts_contacts_positions_position_id (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id _rest_accounts_contacts_positions_position_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPositionIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactPosition
+     * @return \ck\Model\ContactPosition
      */
     public function restAccountsContactsPositionsPositionIdPut(
         int $position_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions_position_id = null,
+        ?\ck\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions_position_id = null,
         string $contentType = self::contentTypes['restAccountsContactsPositionsPositionIdPut'][0]
-    ): \ck/plenty-client\Model\ContactPosition
+    ): \ck\Model\ContactPosition
     {
         list($response) = $this->restAccountsContactsPositionsPositionIdPutWithHttpInfo($position_id, $_rest_accounts_contacts_positions_position_id, $contentType);
         return $response;
@@ -31798,16 +31798,16 @@ class AccountApi
      * Update contact position
      *
      * @param  int $position_id The ID of the position (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPositionIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactPosition, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactPosition, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPositionsPositionIdPutWithHttpInfo(
         int $position_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions_position_id = null,
+        ?\ck\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions_position_id = null,
         string $contentType = self::contentTypes['restAccountsContactsPositionsPositionIdPut'][0]
     ): array
     {
@@ -31850,23 +31850,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactPosition' === '\SplFileObject') {
+                    if ('\ck\Model\ContactPosition' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactPosition' !== 'string') {
+                        if ('\ck\Model\ContactPosition' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactPosition', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactPosition', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactPosition';
+            $returnType = '\ck\Model\ContactPosition';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -31887,7 +31887,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactPosition',
+                        '\ck\Model\ContactPosition',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -31903,7 +31903,7 @@ class AccountApi
      * Update contact position
      *
      * @param  int $position_id The ID of the position (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPositionIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -31911,7 +31911,7 @@ class AccountApi
      */
     public function restAccountsContactsPositionsPositionIdPutAsync(
         int $position_id,
-        ?\ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions_position_id = null,
+        ?\ck\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions_position_id = null,
         string $contentType = self::contentTypes['restAccountsContactsPositionsPositionIdPut'][0]
     ): PromiseInterface
     {
@@ -31929,7 +31929,7 @@ class AccountApi
      * Update contact position
      *
      * @param  int $position_id The ID of the position (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPositionIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -31941,7 +31941,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsPositionsPositionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactPosition';
+        $returnType = '\ck\Model\ContactPosition';
         $request = $this->restAccountsContactsPositionsPositionIdPutRequest($position_id, $_rest_accounts_contacts_positions_position_id, $contentType);
 
         return $this->client
@@ -31984,7 +31984,7 @@ class AccountApi
      * Create request for operation 'restAccountsContactsPositionsPositionIdPut'
      *
      * @param  int $position_id The ID of the position (required)
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions_position_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPositionIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32094,17 +32094,17 @@ class AccountApi
      *
      * Create contact position
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions _rest_accounts_contacts_positions (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions _rest_accounts_contacts_positions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactPosition
+     * @return \ck\Model\ContactPosition
      */
     public function restAccountsContactsPositionsPost(
-        ?\ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions = null,
+        ?\ck\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions = null,
         string $contentType = self::contentTypes['restAccountsContactsPositionsPost'][0]
-    ): \ck/plenty-client\Model\ContactPosition
+    ): \ck\Model\ContactPosition
     {
         list($response) = $this->restAccountsContactsPositionsPostWithHttpInfo($_rest_accounts_contacts_positions, $contentType);
         return $response;
@@ -32115,15 +32115,15 @@ class AccountApi
      *
      * Create contact position
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactPosition, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactPosition, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPositionsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions = null,
+        ?\ck\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions = null,
         string $contentType = self::contentTypes['restAccountsContactsPositionsPost'][0]
     ): array
     {
@@ -32166,23 +32166,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactPosition' === '\SplFileObject') {
+                    if ('\ck\Model\ContactPosition' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactPosition' !== 'string') {
+                        if ('\ck\Model\ContactPosition' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactPosition', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactPosition', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactPosition';
+            $returnType = '\ck\Model\ContactPosition';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32203,7 +32203,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactPosition',
+                        '\ck\Model\ContactPosition',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32218,14 +32218,14 @@ class AccountApi
      *
      * Create contact position
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsContactsPositionsPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions = null,
+        ?\ck\Model\RestAccountsContactsPositionsPostRequest $_rest_accounts_contacts_positions = null,
         string $contentType = self::contentTypes['restAccountsContactsPositionsPost'][0]
     ): PromiseInterface
     {
@@ -32242,7 +32242,7 @@ class AccountApi
      *
      * Create contact position
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32253,7 +32253,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsPositionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactPosition';
+        $returnType = '\ck\Model\ContactPosition';
         $request = $this->restAccountsContactsPositionsPostRequest($_rest_accounts_contacts_positions, $contentType);
 
         return $this->client
@@ -32295,7 +32295,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsContactsPositionsPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions (optional)
+     * @param  \ck\Model\RestAccountsContactsPositionsPostRequest|null $_rest_accounts_contacts_positions (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPositionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32389,17 +32389,17 @@ class AccountApi
      *
      * Create contact
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts _rest_accounts_contacts (optional)
+     * @param  \ck\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts _rest_accounts_contacts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Contact
+     * @return \ck\Model\Contact
      */
     public function restAccountsContactsPost(
-        ?\ck/plenty-client\Model\RestAccountsContactsPostRequest $_rest_accounts_contacts = null,
+        ?\ck\Model\RestAccountsContactsPostRequest $_rest_accounts_contacts = null,
         string $contentType = self::contentTypes['restAccountsContactsPost'][0]
-    ): \ck/plenty-client\Model\Contact
+    ): \ck\Model\Contact
     {
         list($response) = $this->restAccountsContactsPostWithHttpInfo($_rest_accounts_contacts, $contentType);
         return $response;
@@ -32410,15 +32410,15 @@ class AccountApi
      *
      * Create contact
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts (optional)
+     * @param  \ck\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsContactsPostRequest $_rest_accounts_contacts = null,
+        ?\ck\Model\RestAccountsContactsPostRequest $_rest_accounts_contacts = null,
         string $contentType = self::contentTypes['restAccountsContactsPost'][0]
     ): array
     {
@@ -32461,23 +32461,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Contact' === '\SplFileObject') {
+                    if ('\ck\Model\Contact' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Contact' !== 'string') {
+                        if ('\ck\Model\Contact' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Contact', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Contact', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Contact';
+            $returnType = '\ck\Model\Contact';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32498,7 +32498,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Contact',
+                        '\ck\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32513,14 +32513,14 @@ class AccountApi
      *
      * Create contact
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts (optional)
+     * @param  \ck\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsContactsPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsContactsPostRequest $_rest_accounts_contacts = null,
+        ?\ck\Model\RestAccountsContactsPostRequest $_rest_accounts_contacts = null,
         string $contentType = self::contentTypes['restAccountsContactsPost'][0]
     ): PromiseInterface
     {
@@ -32537,7 +32537,7 @@ class AccountApi
      *
      * Create contact
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts (optional)
+     * @param  \ck\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32548,7 +32548,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Contact';
+        $returnType = '\ck\Model\Contact';
         $request = $this->restAccountsContactsPostRequest($_rest_accounts_contacts, $contentType);
 
         return $this->client
@@ -32590,7 +32590,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsContactsPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts (optional)
+     * @param  \ck\Model\RestAccountsContactsPostRequest|null $_rest_accounts_contacts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -32688,7 +32688,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactType[]
+     * @return \ck\Model\ContactType[]
      */
     public function restAccountsContactsTypesGet(
         string $contentType = self::contentTypes['restAccountsContactsTypesGet'][0]
@@ -32707,7 +32707,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsTypesGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountsContactsTypesGet'][0]
@@ -32752,23 +32752,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactType[]' === '\SplFileObject') {
+                    if ('\ck\Model\ContactType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactType[]' !== 'string') {
+                        if ('\ck\Model\ContactType[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactType[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactType[]';
+            $returnType = '\ck\Model\ContactType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -32789,7 +32789,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactType[]',
+                        '\ck\Model\ContactType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -32835,7 +32835,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsTypesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactType[]';
+        $returnType = '\ck\Model\ContactType[]';
         $request = $this->restAccountsContactsTypesGetRequest($contentType);
 
         return $this->client
@@ -32961,17 +32961,17 @@ class AccountApi
      *
      * Create contact type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types _rest_accounts_contacts_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types _rest_accounts_contacts_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactType
+     * @return \ck\Model\ContactType
      */
     public function restAccountsContactsTypesPost(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types = null,
         string $contentType = self::contentTypes['restAccountsContactsTypesPost'][0]
-    ): \ck/plenty-client\Model\ContactType
+    ): \ck\Model\ContactType
     {
         list($response) = $this->restAccountsContactsTypesPostWithHttpInfo($_rest_accounts_contacts_types, $contentType);
         return $response;
@@ -32982,15 +32982,15 @@ class AccountApi
      *
      * Create contact type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsTypesPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types = null,
         string $contentType = self::contentTypes['restAccountsContactsTypesPost'][0]
     ): array
     {
@@ -33033,23 +33033,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactType' !== 'string') {
+                        if ('\ck\Model\ContactType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactType';
+            $returnType = '\ck\Model\ContactType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -33070,7 +33070,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactType',
+                        '\ck\Model\ContactType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33085,14 +33085,14 @@ class AccountApi
      *
      * Create contact type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsContactsTypesPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types = null,
         string $contentType = self::contentTypes['restAccountsContactsTypesPost'][0]
     ): PromiseInterface
     {
@@ -33109,7 +33109,7 @@ class AccountApi
      *
      * Create contact type
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -33120,7 +33120,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsTypesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactType';
+        $returnType = '\ck\Model\ContactType';
         $request = $this->restAccountsContactsTypesPostRequest($_rest_accounts_contacts_types, $contentType);
 
         return $this->client
@@ -33162,7 +33162,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsContactsTypesPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -33509,12 +33509,12 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactType
+     * @return \ck\Model\ContactType
      */
     public function restAccountsContactsTypesTypeIdGet(
         int $type_id,
         string $contentType = self::contentTypes['restAccountsContactsTypesTypeIdGet'][0]
-    ): \ck/plenty-client\Model\ContactType
+    ): \ck\Model\ContactType
     {
         list($response) = $this->restAccountsContactsTypesTypeIdGetWithHttpInfo($type_id, $contentType);
         return $response;
@@ -33530,7 +33530,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsTypesTypeIdGetWithHttpInfo(
         int $type_id,
@@ -33576,23 +33576,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactType' !== 'string') {
+                        if ('\ck\Model\ContactType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactType';
+            $returnType = '\ck\Model\ContactType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -33613,7 +33613,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactType',
+                        '\ck\Model\ContactType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33663,7 +33663,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsTypesTypeIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactType';
+        $returnType = '\ck\Model\ContactType';
         $request = $this->restAccountsContactsTypesTypeIdGetRequest($type_id, $contentType);
 
         return $this->client
@@ -33807,18 +33807,18 @@ class AccountApi
      * Update contact type
      *
      * @param  int $type_id The ID of the contact type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id _rest_accounts_contacts_types_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id _rest_accounts_contacts_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ContactType
+     * @return \ck\Model\ContactType
      */
     public function restAccountsContactsTypesTypeIdPut(
         int $type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsTypesTypeIdPut'][0]
-    ): \ck/plenty-client\Model\ContactType
+    ): \ck\Model\ContactType
     {
         list($response) = $this->restAccountsContactsTypesTypeIdPutWithHttpInfo($type_id, $_rest_accounts_contacts_types_type_id, $contentType);
         return $response;
@@ -33830,16 +33830,16 @@ class AccountApi
      * Update contact type
      *
      * @param  int $type_id The ID of the contact type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ContactType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ContactType, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsTypesTypeIdPutWithHttpInfo(
         int $type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsTypesTypeIdPut'][0]
     ): array
     {
@@ -33882,23 +33882,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ContactType' === '\SplFileObject') {
+                    if ('\ck\Model\ContactType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ContactType' !== 'string') {
+                        if ('\ck\Model\ContactType' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ContactType', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ContactType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ContactType';
+            $returnType = '\ck\Model\ContactType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -33919,7 +33919,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ContactType',
+                        '\ck\Model\ContactType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -33935,7 +33935,7 @@ class AccountApi
      * Update contact type
      *
      * @param  int $type_id The ID of the contact type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -33943,7 +33943,7 @@ class AccountApi
      */
     public function restAccountsContactsTypesTypeIdPutAsync(
         int $type_id,
-        ?\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types_type_id = null,
+        ?\ck\Model\RestAccountsAddressesOptionTypesPostRequest $_rest_accounts_contacts_types_type_id = null,
         string $contentType = self::contentTypes['restAccountsContactsTypesTypeIdPut'][0]
     ): PromiseInterface
     {
@@ -33961,7 +33961,7 @@ class AccountApi
      * Update contact type
      *
      * @param  int $type_id The ID of the contact type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -33973,7 +33973,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsContactsTypesTypeIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ContactType';
+        $returnType = '\ck\Model\ContactType';
         $request = $this->restAccountsContactsTypesTypeIdPutRequest($type_id, $_rest_accounts_contacts_types_type_id, $contentType);
 
         return $this->client
@@ -34016,7 +34016,7 @@ class AccountApi
      * Create request for operation 'restAccountsContactsTypesTypeIdPut'
      *
      * @param  int $type_id The ID of the contact type (required)
-     * @param  \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id (optional)
+     * @param  \ck\Model\RestAccountsAddressesOptionTypesPostRequest|null $_rest_accounts_contacts_types_type_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsContactsTypesTypeIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -34463,17 +34463,17 @@ class AccountApi
      *
      * Create account
      *
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts _rest_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts _rest_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Account
+     * @return \ck\Model\Account
      */
     public function restAccountsPost(
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts = null,
         string $contentType = self::contentTypes['restAccountsPost'][0]
-    ): \ck/plenty-client\Model\Account
+    ): \ck\Model\Account
     {
         list($response) = $this->restAccountsPostWithHttpInfo($_rest_accounts, $contentType);
         return $response;
@@ -34484,15 +34484,15 @@ class AccountApi
      *
      * Create account
      *
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts = null,
         string $contentType = self::contentTypes['restAccountsPost'][0]
     ): array
     {
@@ -34535,23 +34535,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Account' === '\SplFileObject') {
+                    if ('\ck\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Account' !== 'string') {
+                        if ('\ck\Model\Account' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Account';
+            $returnType = '\ck\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -34572,7 +34572,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Account',
+                        '\ck\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34587,14 +34587,14 @@ class AccountApi
      *
      * Create account
      *
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountsPostAsync(
-        ?\ck/plenty-client\Model\RestAccountsPostRequest $_rest_accounts = null,
+        ?\ck\Model\RestAccountsPostRequest $_rest_accounts = null,
         string $contentType = self::contentTypes['restAccountsPost'][0]
     ): PromiseInterface
     {
@@ -34611,7 +34611,7 @@ class AccountApi
      *
      * Create account
      *
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -34622,7 +34622,7 @@ class AccountApi
         string $contentType = self::contentTypes['restAccountsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Account';
+        $returnType = '\ck\Model\Account';
         $request = $this->restAccountsPostRequest($_rest_accounts, $contentType);
 
         return $this->client
@@ -34664,7 +34664,7 @@ class AccountApi
     /**
      * Create request for operation 'restAccountsPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountsPostRequest|null $_rest_accounts (optional)
+     * @param  \ck\Model\RestAccountsPostRequest|null $_rest_accounts (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -34762,11 +34762,11 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressOrderRelation
+     * @return \ck\Model\AddressOrderRelation
      */
     public function restOrdersAddressesPost(
         string $contentType = self::contentTypes['restOrdersAddressesPost'][0]
-    ): \ck/plenty-client\Model\AddressOrderRelation
+    ): \ck\Model\AddressOrderRelation
     {
         list($response) = $this->restOrdersAddressesPostWithHttpInfo($contentType);
         return $response;
@@ -34781,7 +34781,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressOrderRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressOrderRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersAddressesPostWithHttpInfo(
         string $contentType = self::contentTypes['restOrdersAddressesPost'][0]
@@ -34826,23 +34826,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressOrderRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressOrderRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressOrderRelation' !== 'string') {
+                        if ('\ck\Model\AddressOrderRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressOrderRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressOrderRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressOrderRelation';
+            $returnType = '\ck\Model\AddressOrderRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -34863,7 +34863,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressOrderRelation',
+                        '\ck\Model\AddressOrderRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -34909,7 +34909,7 @@ class AccountApi
         string $contentType = self::contentTypes['restOrdersAddressesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressOrderRelation';
+        $returnType = '\ck\Model\AddressOrderRelation';
         $request = $this->restOrdersAddressesPostRequest($contentType);
 
         return $this->client
@@ -35039,11 +35039,11 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AddressWarehouseRelation
+     * @return \ck\Model\AddressWarehouseRelation
      */
     public function restStockmanagementWarehousesAddressesPost(
         string $contentType = self::contentTypes['restStockmanagementWarehousesAddressesPost'][0]
-    ): \ck/plenty-client\Model\AddressWarehouseRelation
+    ): \ck\Model\AddressWarehouseRelation
     {
         list($response) = $this->restStockmanagementWarehousesAddressesPostWithHttpInfo($contentType);
         return $response;
@@ -35058,7 +35058,7 @@ class AccountApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AddressWarehouseRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStockmanagementWarehousesAddressesPostWithHttpInfo(
         string $contentType = self::contentTypes['restStockmanagementWarehousesAddressesPost'][0]
@@ -35103,23 +35103,23 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AddressWarehouseRelation' === '\SplFileObject') {
+                    if ('\ck\Model\AddressWarehouseRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AddressWarehouseRelation' !== 'string') {
+                        if ('\ck\Model\AddressWarehouseRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AddressWarehouseRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AddressWarehouseRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AddressWarehouseRelation';
+            $returnType = '\ck\Model\AddressWarehouseRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -35140,7 +35140,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AddressWarehouseRelation',
+                        '\ck\Model\AddressWarehouseRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -35186,7 +35186,7 @@ class AccountApi
         string $contentType = self::contentTypes['restStockmanagementWarehousesAddressesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AddressWarehouseRelation';
+        $returnType = '\ck\Model\AddressWarehouseRelation';
         $request = $this->restStockmanagementWarehousesAddressesPostRequest($contentType);
 
         return $this->client

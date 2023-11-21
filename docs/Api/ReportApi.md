@@ -1,4 +1,4 @@
-# ck/plenty-client\ReportApi
+# ck\ReportApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -27,7 +27,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restReportsKeyFiguresConfigGet()`
 
 ```php
-restReportsKeyFiguresConfigGet(): \ck/plenty-client\Model\KeyFigureConfigSearchResult
+restReportsKeyFiguresConfigGet(): \ck\Model\KeyFigureConfigSearchResult
 ```
 
 Returns all key figure configs
@@ -40,10 +40,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\KeyFigureConfigSearchResult**](../Model/KeyFigureConfigSearchResult.md)
+[**\ck\Model\KeyFigureConfigSearchResult**](../Model/KeyFigureConfigSearchResult.md)
 
 ### Authorization
 
@@ -95,10 +95,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -140,7 +140,7 @@ try {
 ## `restReportsKeyFiguresConfigKeyFigureConfigIdGet()`
 
 ```php
-restReportsKeyFiguresConfigKeyFigureConfigIdGet($key_figure_config_id): \ck/plenty-client\Model\KeyFigureConfig
+restReportsKeyFiguresConfigKeyFigureConfigIdGet($key_figure_config_id): \ck\Model\KeyFigureConfig
 ```
 
 Get key figure config
@@ -153,10 +153,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -180,7 +180,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\KeyFigureConfig**](../Model/KeyFigureConfig.md)
+[**\ck\Model\KeyFigureConfig**](../Model/KeyFigureConfig.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ try {
 ## `restReportsKeyFiguresConfigKeyFigureConfigIdPut()`
 
 ```php
-restReportsKeyFiguresConfigKeyFigureConfigIdPut($key_figure_config_id): \ck/plenty-client\Model\KeyFigureConfig
+restReportsKeyFiguresConfigKeyFigureConfigIdPut($key_figure_config_id): \ck\Model\KeyFigureConfig
 ```
 
 Update key figure configuration
@@ -211,10 +211,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -238,7 +238,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\KeyFigureConfig**](../Model/KeyFigureConfig.md)
+[**\ck\Model\KeyFigureConfig**](../Model/KeyFigureConfig.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ try {
 ## `restReportsKeyFiguresConfigPost()`
 
 ```php
-restReportsKeyFiguresConfigPost(): \ck/plenty-client\Model\KeyFigureConfig
+restReportsKeyFiguresConfigPost(): \ck\Model\KeyFigureConfig
 ```
 
 Add a key figure configuration
@@ -269,10 +269,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -293,7 +293,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\KeyFigureConfig**](../Model/KeyFigureConfig.md)
+[**\ck\Model\KeyFigureConfig**](../Model/KeyFigureConfig.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ This endpoint does not need any parameter.
 ## `restReportsKeyFiguresConfigTemplatePost()`
 
 ```php
-restReportsKeyFiguresConfigTemplatePost($key_figure_class): \ck/plenty-client\Model\KeyFigureConfig
+restReportsKeyFiguresConfigTemplatePost($key_figure_class): \ck\Model\KeyFigureConfig
 ```
 
 Generate key figure config from template class
@@ -324,10 +324,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -351,7 +351,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\KeyFigureConfig**](../Model/KeyFigureConfig.md)
+[**\ck\Model\KeyFigureConfig**](../Model/KeyFigureConfig.md)
 
 ### Authorization
 
@@ -382,10 +382,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -437,10 +437,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -479,7 +479,7 @@ This endpoint does not need any parameter.
 ## `restReportsKeyFiguresDetailsKeyFigureNameGet()`
 
 ```php
-restReportsKeyFiguresDetailsKeyFigureNameGet($key_figure_name): \ck/plenty-client\Model\KeyFigure
+restReportsKeyFiguresDetailsKeyFigureNameGet($key_figure_name): \ck\Model\KeyFigure
 ```
 
 Return key figure calculation details
@@ -492,10 +492,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -519,7 +519,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\KeyFigure**](../Model/KeyFigure.md)
+[**\ck\Model\KeyFigure**](../Model/KeyFigure.md)
 
 ### Authorization
 
@@ -550,10 +550,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -605,10 +605,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -660,10 +660,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -702,7 +702,7 @@ This endpoint does not need any parameter.
 ## `restReportsRawDataConfigGet()`
 
 ```php
-restReportsRawDataConfigGet(): \ck/plenty-client\Model\RawDataConfigs
+restReportsRawDataConfigGet(): \ck\Model\RawDataConfigs
 ```
 
 Returns list of all saved configurations
@@ -715,10 +715,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -739,7 +739,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\RawDataConfigs**](../Model/RawDataConfigs.md)
+[**\ck\Model\RawDataConfigs**](../Model/RawDataConfigs.md)
 
 ### Authorization
 
@@ -757,7 +757,7 @@ This endpoint does not need any parameter.
 ## `restReportsRawDataConfigPut()`
 
 ```php
-restReportsRawDataConfigPut($configs): \ck/plenty-client\Model\RawDataConfigs
+restReportsRawDataConfigPut($configs): \ck\Model\RawDataConfigs
 ```
 
 Resets all saved raw data configurations with given data
@@ -770,10 +770,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -797,7 +797,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RawDataConfigs**](../Model/RawDataConfigs.md)
+[**\ck\Model\RawDataConfigs**](../Model/RawDataConfigs.md)
 
 ### Authorization
 
@@ -828,10 +828,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -883,10 +883,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -938,10 +938,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -983,7 +983,7 @@ try {
 ## `restReportsRawDataGet()`
 
 ```php
-restReportsRawDataGet($data_name, $process_status, $created_at_timestamp, $items_per_page, $sort_order, $page): \ck/plenty-client\Model\RawDataSearchResult
+restReportsRawDataGet($data_name, $process_status, $created_at_timestamp, $items_per_page, $sort_order, $page): \ck\Model\RawDataSearchResult
 ```
 
 Get list of raw data files. Valid filter combinations: (dataName), (dataName & processStatus), (createdAtTimestamp)
@@ -996,10 +996,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ReportApi(
+$apiInstance = new ck\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1033,7 +1033,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RawDataSearchResult**](../Model/RawDataSearchResult.md)
+[**\ck\Model\RawDataSearchResult**](../Model/RawDataSearchResult.md)
 
 ### Authorization
 

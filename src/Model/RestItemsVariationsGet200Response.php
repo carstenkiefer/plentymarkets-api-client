@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestItemsVariationsGet200Response Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class RestItemsVariationsGet200Response implements ModelInterface, ArrayAccess, 
         'first_on_page' => 'int',
         'last_on_page' => 'int',
         'items_per_page' => 'int',
-        'entries' => '\ck/plenty-client\Model\Variation[]'
+        'entries' => '\ck\Model\Variation[]'
     ];
 
     /**
@@ -528,7 +528,7 @@ class RestItemsVariationsGet200Response implements ModelInterface, ArrayAccess, 
     /**
      * Gets entries
      *
-     * @return \ck/plenty-client\Model\Variation[]|null
+     * @return \ck\Model\Variation[]|null
      */
     public function getEntries(): ?array
     {
@@ -538,7 +538,7 @@ class RestItemsVariationsGet200Response implements ModelInterface, ArrayAccess, 
     /**
      * Sets entries
      *
-     * @param \ck/plenty-client\Model\Variation[]|null $entries List of Variation
+     * @param \ck\Model\Variation[]|null $entries List of Variation
      *
      * @return $this
      */

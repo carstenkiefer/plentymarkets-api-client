@@ -1,4 +1,4 @@
-# ck/plenty-client\PluginsApi
+# ck\PluginsApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -19,7 +19,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restPluginsGet()`
 
 ```php
-restPluginsGet(): \ck/plenty-client\Model\Plugin[]
+restPluginsGet(): \ck\Model\Plugin[]
 ```
 
 List plugins
@@ -34,10 +34,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Plugin[]**](../Model/Plugin.md)
+[**\ck\Model\Plugin[]**](../Model/Plugin.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -144,10 +144,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ void (empty response body)
 ## `restPluginsPluginIdGet()`
 
 ```php
-restPluginsPluginIdGet($plugin_id): \ck/plenty-client\Model\Plugin
+restPluginsPluginIdGet($plugin_id): \ck\Model\Plugin
 ```
 
 Get a plugin
@@ -203,10 +203,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -230,7 +230,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Plugin**](../Model/Plugin.md)
+[**\ck\Model\Plugin**](../Model/Plugin.md)
 
 ### Authorization
 
@@ -263,10 +263,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -309,7 +309,7 @@ void (empty response body)
 ## `restPluginsPluginIdPut()`
 
 ```php
-restPluginsPluginIdPut($plugin_id, $_rest_plugins_plugin_id): \ck/plenty-client\Model\Plugin
+restPluginsPluginIdPut($plugin_id, $_rest_plugins_plugin_id): \ck\Model\Plugin
 ```
 
 Update a plugin
@@ -324,17 +324,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $plugin_id = 56; // int
-$_rest_plugins_plugin_id = new \ck/plenty-client\Model\RestPluginsPluginIdPutRequest(); // \ck/plenty-client\Model\RestPluginsPluginIdPutRequest
+$_rest_plugins_plugin_id = new \ck\Model\RestPluginsPluginIdPutRequest(); // \ck\Model\RestPluginsPluginIdPutRequest
 
 try {
     $result = $apiInstance->restPluginsPluginIdPut($plugin_id, $_rest_plugins_plugin_id);
@@ -349,11 +349,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **plugin_id** | **int**|  | |
-| **_rest_plugins_plugin_id** | [**\ck/plenty-client\Model\RestPluginsPluginIdPutRequest**](../Model/RestPluginsPluginIdPutRequest.md)|  | [optional] |
+| **_rest_plugins_plugin_id** | [**\ck\Model\RestPluginsPluginIdPutRequest**](../Model/RestPluginsPluginIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Plugin**](../Model/Plugin.md)
+[**\ck\Model\Plugin**](../Model/Plugin.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ try {
 ## `restPluginsPost()`
 
 ```php
-restPluginsPost($_rest_plugins): \ck/plenty-client\Model\Plugin
+restPluginsPost($_rest_plugins): \ck\Model\Plugin
 ```
 
 Create a plugin
@@ -386,16 +386,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_plugins = new \ck/plenty-client\Model\RestPluginsPostRequest(); // \ck/plenty-client\Model\RestPluginsPostRequest
+$_rest_plugins = new \ck\Model\RestPluginsPostRequest(); // \ck\Model\RestPluginsPostRequest
 
 try {
     $result = $apiInstance->restPluginsPost($_rest_plugins);
@@ -409,11 +409,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_plugins** | [**\ck/plenty-client\Model\RestPluginsPostRequest**](../Model/RestPluginsPostRequest.md)|  | [optional] |
+| **_rest_plugins** | [**\ck\Model\RestPluginsPostRequest**](../Model/RestPluginsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Plugin**](../Model/Plugin.md)
+[**\ck\Model\Plugin**](../Model/Plugin.md)
 
 ### Authorization
 
@@ -431,7 +431,7 @@ try {
 ## `restPluginsSearchGet()`
 
 ```php
-restPluginsSearchGet($name, $type, $webstore_id, $page, $items_per_page): \ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response
+restPluginsSearchGet($name, $type, $webstore_id, $page, $items_per_page): \ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response
 ```
 
 List plugins
@@ -446,10 +446,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -481,7 +481,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestPluginSetsSetIdPluginsSearchGet200Response**](../Model/RestPluginSetsSetIdPluginsSearchGet200Response.md)
+[**\ck\Model\RestPluginSetsSetIdPluginsSearchGet200Response**](../Model/RestPluginSetsSetIdPluginsSearchGet200Response.md)
 
 ### Authorization
 
@@ -514,7 +514,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -552,7 +552,7 @@ No authorization required
 ## `restPluginsUiGet()`
 
 ```php
-restPluginsUiGet(): \ck/plenty-client\Model\Plugin[]
+restPluginsUiGet(): \ck\Model\Plugin[]
 ```
 
 List plugins for backend UI
@@ -567,10 +567,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\PluginsApi(
+$apiInstance = new ck\Api\PluginsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -591,7 +591,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\Plugin[]**](../Model/Plugin.md)
+[**\ck\Model\Plugin[]**](../Model/Plugin.md)
 
 ### Authorization
 

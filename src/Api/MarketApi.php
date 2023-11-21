@@ -3,7 +3,7 @@
  * MarketApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * MarketApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -554,13 +554,13 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Credentials
+     * @return \ck\Model\Credentials
      */
     public function restMarketsCredentialsCredentialsIdGet(
         int $id,
         int $credentials_id,
         string $contentType = self::contentTypes['restMarketsCredentialsCredentialsIdGet'][0]
-    ): \ck/plenty-client\Model\Credentials
+    ): \ck\Model\Credentials
     {
         list($response) = $this->restMarketsCredentialsCredentialsIdGetWithHttpInfo($id, $credentials_id, $contentType);
         return $response;
@@ -577,7 +577,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Credentials, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Credentials, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsCredentialsCredentialsIdGetWithHttpInfo(
         int $id,
@@ -624,23 +624,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Credentials' === '\SplFileObject') {
+                    if ('\ck\Model\Credentials' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Credentials' !== 'string') {
+                        if ('\ck\Model\Credentials' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Credentials', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Credentials', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Credentials';
+            $returnType = '\ck\Model\Credentials';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -661,7 +661,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Credentials',
+                        '\ck\Model\Credentials',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -715,7 +715,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsCredentialsCredentialsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Credentials';
+        $returnType = '\ck\Model\Credentials';
         $request = $this->restMarketsCredentialsCredentialsIdGetRequest($id, $credentials_id, $contentType);
 
         return $this->client
@@ -877,18 +877,18 @@ class MarketApi
      * Update a credential
      *
      * @param  int $credentials_id credentials_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id _rest_markets_credentials_credentials_id (optional)
+     * @param  \ck\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id _rest_markets_credentials_credentials_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsCredentialsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Credentials
+     * @return \ck\Model\Credentials
      */
     public function restMarketsCredentialsCredentialsIdPut(
         int $credentials_id,
-        ?\ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest $_rest_markets_credentials_credentials_id = null,
+        ?\ck\Model\RestMarketsCredentialsCredentialsIdPutRequest $_rest_markets_credentials_credentials_id = null,
         string $contentType = self::contentTypes['restMarketsCredentialsCredentialsIdPut'][0]
-    ): \ck/plenty-client\Model\Credentials
+    ): \ck\Model\Credentials
     {
         list($response) = $this->restMarketsCredentialsCredentialsIdPutWithHttpInfo($credentials_id, $_rest_markets_credentials_credentials_id, $contentType);
         return $response;
@@ -900,16 +900,16 @@ class MarketApi
      * Update a credential
      *
      * @param  int $credentials_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id (optional)
+     * @param  \ck\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsCredentialsIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Credentials, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Credentials, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsCredentialsCredentialsIdPutWithHttpInfo(
         int $credentials_id,
-        ?\ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest $_rest_markets_credentials_credentials_id = null,
+        ?\ck\Model\RestMarketsCredentialsCredentialsIdPutRequest $_rest_markets_credentials_credentials_id = null,
         string $contentType = self::contentTypes['restMarketsCredentialsCredentialsIdPut'][0]
     ): array
     {
@@ -952,23 +952,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Credentials' === '\SplFileObject') {
+                    if ('\ck\Model\Credentials' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Credentials' !== 'string') {
+                        if ('\ck\Model\Credentials' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Credentials', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Credentials', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Credentials';
+            $returnType = '\ck\Model\Credentials';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -989,7 +989,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Credentials',
+                        '\ck\Model\Credentials',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1005,7 +1005,7 @@ class MarketApi
      * Update a credential
      *
      * @param  int $credentials_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id (optional)
+     * @param  \ck\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsCredentialsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1013,7 +1013,7 @@ class MarketApi
      */
     public function restMarketsCredentialsCredentialsIdPutAsync(
         int $credentials_id,
-        ?\ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest $_rest_markets_credentials_credentials_id = null,
+        ?\ck\Model\RestMarketsCredentialsCredentialsIdPutRequest $_rest_markets_credentials_credentials_id = null,
         string $contentType = self::contentTypes['restMarketsCredentialsCredentialsIdPut'][0]
     ): PromiseInterface
     {
@@ -1031,7 +1031,7 @@ class MarketApi
      * Update a credential
      *
      * @param  int $credentials_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id (optional)
+     * @param  \ck\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsCredentialsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1043,7 +1043,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsCredentialsCredentialsIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Credentials';
+        $returnType = '\ck\Model\Credentials';
         $request = $this->restMarketsCredentialsCredentialsIdPutRequest($credentials_id, $_rest_markets_credentials_credentials_id, $contentType);
 
         return $this->client
@@ -1086,7 +1086,7 @@ class MarketApi
      * Create request for operation 'restMarketsCredentialsCredentialsIdPut'
      *
      * @param  int $credentials_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id (optional)
+     * @param  \ck\Model\RestMarketsCredentialsCredentialsIdPutRequest|null $_rest_markets_credentials_credentials_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsCredentialsIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1202,13 +1202,13 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestMarketsCredentialsGet200Response
+     * @return \ck\Model\RestMarketsCredentialsGet200Response
      */
     public function restMarketsCredentialsGet(
         int $page,
         int $items_per_page,
         string $contentType = self::contentTypes['restMarketsCredentialsGet'][0]
-    ): \ck/plenty-client\Model\RestMarketsCredentialsGet200Response
+    ): \ck\Model\RestMarketsCredentialsGet200Response
     {
         list($response) = $this->restMarketsCredentialsGetWithHttpInfo($page, $items_per_page, $contentType);
         return $response;
@@ -1225,7 +1225,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestMarketsCredentialsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestMarketsCredentialsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsCredentialsGetWithHttpInfo(
         int $page,
@@ -1272,23 +1272,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestMarketsCredentialsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestMarketsCredentialsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestMarketsCredentialsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestMarketsCredentialsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestMarketsCredentialsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestMarketsCredentialsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestMarketsCredentialsGet200Response';
+            $returnType = '\ck\Model\RestMarketsCredentialsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1309,7 +1309,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestMarketsCredentialsGet200Response',
+                        '\ck\Model\RestMarketsCredentialsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1363,7 +1363,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsCredentialsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestMarketsCredentialsGet200Response';
+        $returnType = '\ck\Model\RestMarketsCredentialsGet200Response';
         $request = $this->restMarketsCredentialsGetRequest($page, $items_per_page, $contentType);
 
         return $this->client
@@ -1525,17 +1525,17 @@ class MarketApi
      *
      * Create a credential
      *
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials _rest_markets_credentials (optional)
+     * @param  \ck\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials _rest_markets_credentials (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Credentials
+     * @return \ck\Model\Credentials
      */
     public function restMarketsCredentialsPost(
-        ?\ck/plenty-client\Model\RestMarketsCredentialsPostRequest $_rest_markets_credentials = null,
+        ?\ck\Model\RestMarketsCredentialsPostRequest $_rest_markets_credentials = null,
         string $contentType = self::contentTypes['restMarketsCredentialsPost'][0]
-    ): \ck/plenty-client\Model\Credentials
+    ): \ck\Model\Credentials
     {
         list($response) = $this->restMarketsCredentialsPostWithHttpInfo($_rest_markets_credentials, $contentType);
         return $response;
@@ -1546,15 +1546,15 @@ class MarketApi
      *
      * Create a credential
      *
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials (optional)
+     * @param  \ck\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Credentials, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Credentials, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsCredentialsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestMarketsCredentialsPostRequest $_rest_markets_credentials = null,
+        ?\ck\Model\RestMarketsCredentialsPostRequest $_rest_markets_credentials = null,
         string $contentType = self::contentTypes['restMarketsCredentialsPost'][0]
     ): array
     {
@@ -1597,23 +1597,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Credentials' === '\SplFileObject') {
+                    if ('\ck\Model\Credentials' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Credentials' !== 'string') {
+                        if ('\ck\Model\Credentials' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Credentials', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Credentials', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Credentials';
+            $returnType = '\ck\Model\Credentials';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1634,7 +1634,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Credentials',
+                        '\ck\Model\Credentials',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1649,14 +1649,14 @@ class MarketApi
      *
      * Create a credential
      *
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials (optional)
+     * @param  \ck\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restMarketsCredentialsPostAsync(
-        ?\ck/plenty-client\Model\RestMarketsCredentialsPostRequest $_rest_markets_credentials = null,
+        ?\ck\Model\RestMarketsCredentialsPostRequest $_rest_markets_credentials = null,
         string $contentType = self::contentTypes['restMarketsCredentialsPost'][0]
     ): PromiseInterface
     {
@@ -1673,7 +1673,7 @@ class MarketApi
      *
      * Create a credential
      *
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials (optional)
+     * @param  \ck\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1684,7 +1684,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsCredentialsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Credentials';
+        $returnType = '\ck\Model\Credentials';
         $request = $this->restMarketsCredentialsPostRequest($_rest_markets_credentials, $contentType);
 
         return $this->client
@@ -1726,7 +1726,7 @@ class MarketApi
     /**
      * Create request for operation 'restMarketsCredentialsPost'
      *
-     * @param  \ck/plenty-client\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials (optional)
+     * @param  \ck\Model\RestMarketsCredentialsPostRequest|null $_rest_markets_credentials (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsCredentialsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2380,7 +2380,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Category[]
+     * @return \ck\Model\Category[]
      */
     public function restMarketsEbayCategoriesGet(
         string $marketplace_id,
@@ -2403,7 +2403,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Category[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Category[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayCategoriesGetWithHttpInfo(
         string $marketplace_id,
@@ -2450,23 +2450,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Category[]' === '\SplFileObject') {
+                    if ('\ck\Model\Category[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Category[]' !== 'string') {
+                        if ('\ck\Model\Category[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Category[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Category[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Category[]';
+            $returnType = '\ck\Model\Category[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2487,7 +2487,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Category[]',
+                        '\ck\Model\Category[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2541,7 +2541,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayCategoriesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Category[]';
+        $returnType = '\ck\Model\Category[]';
         $request = $this->restMarketsEbayCategoriesGetRequest($marketplace_id, $category_id, $contentType);
 
         return $this->client
@@ -2702,12 +2702,12 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Category
+     * @return \ck\Model\Category
      */
     public function restMarketsEbayCategoriesIdGet(
         int $id,
         string $contentType = self::contentTypes['restMarketsEbayCategoriesIdGet'][0]
-    ): \ck/plenty-client\Model\Category
+    ): \ck\Model\Category
     {
         list($response) = $this->restMarketsEbayCategoriesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -2723,7 +2723,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Category, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Category, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayCategoriesIdGetWithHttpInfo(
         int $id,
@@ -2769,23 +2769,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Category' === '\SplFileObject') {
+                    if ('\ck\Model\Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Category' !== 'string') {
+                        if ('\ck\Model\Category' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Category', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Category';
+            $returnType = '\ck\Model\Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2806,7 +2806,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Category',
+                        '\ck\Model\Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2856,7 +2856,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayCategoriesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Category';
+        $returnType = '\ck\Model\Category';
         $request = $this->restMarketsEbayCategoriesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -3006,14 +3006,14 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\FulfillmentPolicy
+     * @return \ck\Model\FulfillmentPolicy
      */
     public function restMarketsEbayFulfillmentPoliciesIdGet(
         string $marketplace_id,
         int $credentials_id,
         int $id,
         string $contentType = self::contentTypes['restMarketsEbayFulfillmentPoliciesIdGet'][0]
-    ): \ck/plenty-client\Model\FulfillmentPolicy
+    ): \ck\Model\FulfillmentPolicy
     {
         list($response) = $this->restMarketsEbayFulfillmentPoliciesIdGetWithHttpInfo($marketplace_id, $credentials_id, $id, $contentType);
         return $response;
@@ -3031,7 +3031,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\FulfillmentPolicy, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\FulfillmentPolicy, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayFulfillmentPoliciesIdGetWithHttpInfo(
         string $marketplace_id,
@@ -3079,23 +3079,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\FulfillmentPolicy' === '\SplFileObject') {
+                    if ('\ck\Model\FulfillmentPolicy' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\FulfillmentPolicy' !== 'string') {
+                        if ('\ck\Model\FulfillmentPolicy' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\FulfillmentPolicy', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\FulfillmentPolicy', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\FulfillmentPolicy';
+            $returnType = '\ck\Model\FulfillmentPolicy';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3116,7 +3116,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\FulfillmentPolicy',
+                        '\ck\Model\FulfillmentPolicy',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3174,7 +3174,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayFulfillmentPoliciesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\FulfillmentPolicy';
+        $returnType = '\ck\Model\FulfillmentPolicy';
         $request = $this->restMarketsEbayFulfillmentPoliciesIdGetRequest($marketplace_id, $credentials_id, $id, $contentType);
 
         return $this->client
@@ -3359,7 +3359,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ItemSpecific[]
+     * @return \ck\Model\ItemSpecific[]
      */
     public function restMarketsEbayItemSpecificsGet(
         int $category_id,
@@ -3382,7 +3382,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ItemSpecific[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ItemSpecific[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayItemSpecificsGetWithHttpInfo(
         int $category_id,
@@ -3429,23 +3429,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ItemSpecific[]' === '\SplFileObject') {
+                    if ('\ck\Model\ItemSpecific[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ItemSpecific[]' !== 'string') {
+                        if ('\ck\Model\ItemSpecific[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ItemSpecific[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ItemSpecific[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ItemSpecific[]';
+            $returnType = '\ck\Model\ItemSpecific[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3466,7 +3466,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ItemSpecific[]',
+                        '\ck\Model\ItemSpecific[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3520,7 +3520,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayItemSpecificsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ItemSpecific[]';
+        $returnType = '\ck\Model\ItemSpecific[]';
         $request = $this->restMarketsEbayItemSpecificsGetRequest($category_id, $marketplace_id, $contentType);
 
         return $this->client
@@ -3690,7 +3690,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Marketplace[]
+     * @return \ck\Model\Marketplace[]
      */
     public function restMarketsEbayMarketplacesGet(
         ?float $referrer_id = null,
@@ -3717,7 +3717,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Marketplace[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Marketplace[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayMarketplacesGetWithHttpInfo(
         ?float $referrer_id = null,
@@ -3766,23 +3766,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Marketplace[]' === '\SplFileObject') {
+                    if ('\ck\Model\Marketplace[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Marketplace[]' !== 'string') {
+                        if ('\ck\Model\Marketplace[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Marketplace[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Marketplace[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Marketplace[]';
+            $returnType = '\ck\Model\Marketplace[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3803,7 +3803,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Marketplace[]',
+                        '\ck\Model\Marketplace[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3865,7 +3865,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayMarketplacesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Marketplace[]';
+        $returnType = '\ck\Model\Marketplace[]';
         $request = $this->restMarketsEbayMarketplacesGetRequest($referrer_id, $marketplace_id, $market_id, $site_id, $contentType);
 
         return $this->client
@@ -4373,13 +4373,13 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Fitment
+     * @return \ck\Model\Fitment
      */
     public function restMarketsEbayPartsFitmentsFitmentIdGet(
         int $id,
         int $fitment_id,
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdGet'][0]
-    ): \ck/plenty-client\Model\Fitment
+    ): \ck\Model\Fitment
     {
         list($response) = $this->restMarketsEbayPartsFitmentsFitmentIdGetWithHttpInfo($id, $fitment_id, $contentType);
         return $response;
@@ -4396,7 +4396,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Fitment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Fitment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayPartsFitmentsFitmentIdGetWithHttpInfo(
         int $id,
@@ -4443,23 +4443,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Fitment' === '\SplFileObject') {
+                    if ('\ck\Model\Fitment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Fitment' !== 'string') {
+                        if ('\ck\Model\Fitment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Fitment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Fitment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Fitment';
+            $returnType = '\ck\Model\Fitment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4480,7 +4480,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Fitment',
+                        '\ck\Model\Fitment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4534,7 +4534,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Fitment';
+        $returnType = '\ck\Model\Fitment';
         $request = $this->restMarketsEbayPartsFitmentsFitmentIdGetRequest($id, $fitment_id, $contentType);
 
         return $this->client
@@ -4697,19 +4697,19 @@ class MarketApi
      *
      * @param  int $id The ID of the fitment list. (required)
      * @param  int $fitment_id fitment_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id _rest_markets_ebay_parts_fitments_fitment_id (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id _rest_markets_ebay_parts_fitments_fitment_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Fitment
+     * @return \ck\Model\Fitment
      */
     public function restMarketsEbayPartsFitmentsFitmentIdPut(
         int $id,
         int $fitment_id,
-        ?\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments_fitment_id = null,
+        ?\ck\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments_fitment_id = null,
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'][0]
-    ): \ck/plenty-client\Model\Fitment
+    ): \ck\Model\Fitment
     {
         list($response) = $this->restMarketsEbayPartsFitmentsFitmentIdPutWithHttpInfo($id, $fitment_id, $_rest_markets_ebay_parts_fitments_fitment_id, $contentType);
         return $response;
@@ -4722,17 +4722,17 @@ class MarketApi
      *
      * @param  int $id The ID of the fitment list. (required)
      * @param  int $fitment_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Fitment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Fitment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayPartsFitmentsFitmentIdPutWithHttpInfo(
         int $id,
         int $fitment_id,
-        ?\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments_fitment_id = null,
+        ?\ck\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments_fitment_id = null,
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'][0]
     ): array
     {
@@ -4775,23 +4775,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Fitment' === '\SplFileObject') {
+                    if ('\ck\Model\Fitment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Fitment' !== 'string') {
+                        if ('\ck\Model\Fitment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Fitment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Fitment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Fitment';
+            $returnType = '\ck\Model\Fitment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4812,7 +4812,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Fitment',
+                        '\ck\Model\Fitment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4829,7 +4829,7 @@ class MarketApi
      *
      * @param  int $id The ID of the fitment list. (required)
      * @param  int $fitment_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4838,7 +4838,7 @@ class MarketApi
     public function restMarketsEbayPartsFitmentsFitmentIdPutAsync(
         int $id,
         int $fitment_id,
-        ?\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments_fitment_id = null,
+        ?\ck\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments_fitment_id = null,
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'][0]
     ): PromiseInterface
     {
@@ -4857,7 +4857,7 @@ class MarketApi
      *
      * @param  int $id The ID of the fitment list. (required)
      * @param  int $fitment_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4870,7 +4870,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Fitment';
+        $returnType = '\ck\Model\Fitment';
         $request = $this->restMarketsEbayPartsFitmentsFitmentIdPutRequest($id, $fitment_id, $_rest_markets_ebay_parts_fitments_fitment_id, $contentType);
 
         return $this->client
@@ -4914,7 +4914,7 @@ class MarketApi
      *
      * @param  int $id The ID of the fitment list. (required)
      * @param  int $fitment_id (required)
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments_fitment_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsFitmentIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5045,7 +5045,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Fitment[]
+     * @return \ck\Model\Fitment[]
      */
     public function restMarketsEbayPartsFitmentsGet(
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsGet'][0]
@@ -5064,7 +5064,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Fitment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Fitment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayPartsFitmentsGetWithHttpInfo(
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsGet'][0]
@@ -5109,23 +5109,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Fitment[]' === '\SplFileObject') {
+                    if ('\ck\Model\Fitment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Fitment[]' !== 'string') {
+                        if ('\ck\Model\Fitment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Fitment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Fitment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Fitment[]';
+            $returnType = '\ck\Model\Fitment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5146,7 +5146,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Fitment[]',
+                        '\ck\Model\Fitment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5192,7 +5192,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Fitment[]';
+        $returnType = '\ck\Model\Fitment[]';
         $request = $this->restMarketsEbayPartsFitmentsGetRequest($contentType);
 
         return $this->client
@@ -5318,17 +5318,17 @@ class MarketApi
      *
      * Create a fitment
      *
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments _rest_markets_ebay_parts_fitments (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments _rest_markets_ebay_parts_fitments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Fitment
+     * @return \ck\Model\Fitment
      */
     public function restMarketsEbayPartsFitmentsPost(
-        ?\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments = null,
+        ?\ck\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments = null,
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsPost'][0]
-    ): \ck/plenty-client\Model\Fitment
+    ): \ck\Model\Fitment
     {
         list($response) = $this->restMarketsEbayPartsFitmentsPostWithHttpInfo($_rest_markets_ebay_parts_fitments, $contentType);
         return $response;
@@ -5339,15 +5339,15 @@ class MarketApi
      *
      * Create a fitment
      *
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Fitment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Fitment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayPartsFitmentsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments = null,
+        ?\ck\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments = null,
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsPost'][0]
     ): array
     {
@@ -5390,23 +5390,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Fitment' === '\SplFileObject') {
+                    if ('\ck\Model\Fitment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Fitment' !== 'string') {
+                        if ('\ck\Model\Fitment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Fitment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Fitment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Fitment';
+            $returnType = '\ck\Model\Fitment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5427,7 +5427,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Fitment',
+                        '\ck\Model\Fitment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5442,14 +5442,14 @@ class MarketApi
      *
      * Create a fitment
      *
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restMarketsEbayPartsFitmentsPostAsync(
-        ?\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments = null,
+        ?\ck\Model\RestMarketsEbayPartsFitmentsPostRequest $_rest_markets_ebay_parts_fitments = null,
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsPost'][0]
     ): PromiseInterface
     {
@@ -5466,7 +5466,7 @@ class MarketApi
      *
      * Create a fitment
      *
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5477,7 +5477,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Fitment';
+        $returnType = '\ck\Model\Fitment';
         $request = $this->restMarketsEbayPartsFitmentsPostRequest($_rest_markets_ebay_parts_fitments, $contentType);
 
         return $this->client
@@ -5519,7 +5519,7 @@ class MarketApi
     /**
      * Create request for operation 'restMarketsEbayPartsFitmentsPost'
      *
-     * @param  \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments (optional)
+     * @param  \ck\Model\RestMarketsEbayPartsFitmentsPostRequest|null $_rest_markets_ebay_parts_fitments (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restMarketsEbayPartsFitmentsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5626,7 +5626,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response
+     * @return \ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response
      */
     public function restMarketsEbayPartsFitmentsSearchGet(
         ?int $category_id = null,
@@ -5639,7 +5639,7 @@ class MarketApi
         ?int $items_per_page = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsSearchGet'][0]
-    ): \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response
+    ): \ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response
     {
         list($response) = $this->restMarketsEbayPartsFitmentsSearchGetWithHttpInfo($category_id, $id, $market_id, $name, $property_name, $property_value, $page, $items_per_page, $with, $contentType);
         return $response;
@@ -5663,7 +5663,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayPartsFitmentsSearchGetWithHttpInfo(
         ?int $category_id = null,
@@ -5717,23 +5717,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response' !== 'string') {
+                        if ('\ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response';
+            $returnType = '\ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5754,7 +5754,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response',
+                        '\ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5836,7 +5836,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayPartsFitmentsSearchGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestMarketsEbayPartsFitmentsSearchGet200Response';
+        $returnType = '\ck\Model\RestMarketsEbayPartsFitmentsSearchGet200Response';
         $request = $this->restMarketsEbayPartsFitmentsSearchGetRequest($category_id, $id, $market_id, $name, $property_name, $property_value, $page, $items_per_page, $with, $contentType);
 
         return $this->client
@@ -6077,14 +6077,14 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PaymentPolicy
+     * @return \ck\Model\PaymentPolicy
      */
     public function restMarketsEbayPaymentPoliciesIdGet(
         string $marketplace_id,
         int $credentials_id,
         int $id,
         string $contentType = self::contentTypes['restMarketsEbayPaymentPoliciesIdGet'][0]
-    ): \ck/plenty-client\Model\PaymentPolicy
+    ): \ck\Model\PaymentPolicy
     {
         list($response) = $this->restMarketsEbayPaymentPoliciesIdGetWithHttpInfo($marketplace_id, $credentials_id, $id, $contentType);
         return $response;
@@ -6102,7 +6102,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PaymentPolicy, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PaymentPolicy, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayPaymentPoliciesIdGetWithHttpInfo(
         string $marketplace_id,
@@ -6150,23 +6150,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PaymentPolicy' === '\SplFileObject') {
+                    if ('\ck\Model\PaymentPolicy' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PaymentPolicy' !== 'string') {
+                        if ('\ck\Model\PaymentPolicy' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PaymentPolicy', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PaymentPolicy', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PaymentPolicy';
+            $returnType = '\ck\Model\PaymentPolicy';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6187,7 +6187,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PaymentPolicy',
+                        '\ck\Model\PaymentPolicy',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6245,7 +6245,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayPaymentPoliciesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PaymentPolicy';
+        $returnType = '\ck\Model\PaymentPolicy';
         $request = $this->restMarketsEbayPaymentPoliciesIdGetRequest($marketplace_id, $credentials_id, $id, $contentType);
 
         return $this->client
@@ -6431,14 +6431,14 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\ReturnPolicy
+     * @return \ck\Model\ReturnPolicy
      */
     public function restMarketsEbayReturnPoliciesIdGet(
         string $marketplace_id,
         int $credentials_id,
         int $id,
         string $contentType = self::contentTypes['restMarketsEbayReturnPoliciesIdGet'][0]
-    ): \ck/plenty-client\Model\ReturnPolicy
+    ): \ck\Model\ReturnPolicy
     {
         list($response) = $this->restMarketsEbayReturnPoliciesIdGetWithHttpInfo($marketplace_id, $credentials_id, $id, $contentType);
         return $response;
@@ -6456,7 +6456,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\ReturnPolicy, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\ReturnPolicy, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsEbayReturnPoliciesIdGetWithHttpInfo(
         string $marketplace_id,
@@ -6504,23 +6504,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\ReturnPolicy' === '\SplFileObject') {
+                    if ('\ck\Model\ReturnPolicy' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\ReturnPolicy' !== 'string') {
+                        if ('\ck\Model\ReturnPolicy' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\ReturnPolicy', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\ReturnPolicy', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\ReturnPolicy';
+            $returnType = '\ck\Model\ReturnPolicy';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6541,7 +6541,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\ReturnPolicy',
+                        '\ck\Model\ReturnPolicy',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6599,7 +6599,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsEbayReturnPoliciesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\ReturnPolicy';
+        $returnType = '\ck\Model\ReturnPolicy';
         $request = $this->restMarketsEbayReturnPoliciesIdGetRequest($marketplace_id, $credentials_id, $id, $contentType);
 
         return $this->client
@@ -7109,7 +7109,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Marketplace[]
+     * @return \ck\Model\Marketplace[]
      */
     public function restMarketsListingsMarketplacesGet(
         ?float $referrer_id = null,
@@ -7136,7 +7136,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Marketplace[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Marketplace[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsListingsMarketplacesGetWithHttpInfo(
         ?float $referrer_id = null,
@@ -7185,23 +7185,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Marketplace[]' === '\SplFileObject') {
+                    if ('\ck\Model\Marketplace[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Marketplace[]' !== 'string') {
+                        if ('\ck\Model\Marketplace[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Marketplace[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Marketplace[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Marketplace[]';
+            $returnType = '\ck\Model\Marketplace[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7222,7 +7222,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Marketplace[]',
+                        '\ck\Model\Marketplace[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7284,7 +7284,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsListingsMarketplacesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Marketplace[]';
+        $returnType = '\ck\Model\Marketplace[]';
         $request = $this->restMarketsListingsMarketplacesGetRequest($referrer_id, $marketplace_id, $market_id, $site_id, $contentType);
 
         return $this->client
@@ -7462,7 +7462,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Settings[]
+     * @return \ck\Model\Settings[]
      */
     public function restMarketsSettingsBulkPost(
         string $contentType = self::contentTypes['restMarketsSettingsBulkPost'][0]
@@ -7481,7 +7481,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Settings[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Settings[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsSettingsBulkPostWithHttpInfo(
         string $contentType = self::contentTypes['restMarketsSettingsBulkPost'][0]
@@ -7526,23 +7526,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Settings[]' === '\SplFileObject') {
+                    if ('\ck\Model\Settings[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Settings[]' !== 'string') {
+                        if ('\ck\Model\Settings[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Settings[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Settings[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Settings[]';
+            $returnType = '\ck\Model\Settings[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7563,7 +7563,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Settings[]',
+                        '\ck\Model\Settings[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7609,7 +7609,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsSettingsBulkPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Settings[]';
+        $returnType = '\ck\Model\Settings[]';
         $request = $this->restMarketsSettingsBulkPostRequest($contentType);
 
         return $this->client
@@ -7739,7 +7739,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Settings[]
+     * @return \ck\Model\Settings[]
      */
     public function restMarketsSettingsBulkPut(
         string $contentType = self::contentTypes['restMarketsSettingsBulkPut'][0]
@@ -7758,7 +7758,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Settings[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Settings[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsSettingsBulkPutWithHttpInfo(
         string $contentType = self::contentTypes['restMarketsSettingsBulkPut'][0]
@@ -7803,23 +7803,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Settings[]' === '\SplFileObject') {
+                    if ('\ck\Model\Settings[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Settings[]' !== 'string') {
+                        if ('\ck\Model\Settings[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Settings[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Settings[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Settings[]';
+            $returnType = '\ck\Model\Settings[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7840,7 +7840,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Settings[]',
+                        '\ck\Model\Settings[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7886,7 +7886,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsSettingsBulkPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Settings[]';
+        $returnType = '\ck\Model\Settings[]';
         $request = $this->restMarketsSettingsBulkPutRequest($contentType);
 
         return $this->client
@@ -8293,11 +8293,11 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Settings
+     * @return \ck\Model\Settings
      */
     public function restMarketsSettingsCorrelationsGet(
         string $contentType = self::contentTypes['restMarketsSettingsCorrelationsGet'][0]
-    ): \ck/plenty-client\Model\Settings
+    ): \ck\Model\Settings
     {
         list($response) = $this->restMarketsSettingsCorrelationsGetWithHttpInfo($contentType);
         return $response;
@@ -8312,7 +8312,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Settings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Settings, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsSettingsCorrelationsGetWithHttpInfo(
         string $contentType = self::contentTypes['restMarketsSettingsCorrelationsGet'][0]
@@ -8357,23 +8357,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Settings' === '\SplFileObject') {
+                    if ('\ck\Model\Settings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Settings' !== 'string') {
+                        if ('\ck\Model\Settings' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Settings', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Settings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Settings';
+            $returnType = '\ck\Model\Settings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8394,7 +8394,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Settings',
+                        '\ck\Model\Settings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8440,7 +8440,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsSettingsCorrelationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Settings';
+        $returnType = '\ck\Model\Settings';
         $request = $this->restMarketsSettingsCorrelationsGetRequest($contentType);
 
         return $this->client
@@ -8793,7 +8793,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Settings[]
+     * @return \ck\Model\Settings[]
      */
     public function restMarketsSettingsGet(
         string $contentType = self::contentTypes['restMarketsSettingsGet'][0]
@@ -8812,7 +8812,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Settings[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Settings[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsSettingsGetWithHttpInfo(
         string $contentType = self::contentTypes['restMarketsSettingsGet'][0]
@@ -8857,23 +8857,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Settings[]' === '\SplFileObject') {
+                    if ('\ck\Model\Settings[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Settings[]' !== 'string') {
+                        if ('\ck\Model\Settings[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Settings[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Settings[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Settings[]';
+            $returnType = '\ck\Model\Settings[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8894,7 +8894,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Settings[]',
+                        '\ck\Model\Settings[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8940,7 +8940,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsSettingsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Settings[]';
+        $returnType = '\ck\Model\Settings[]';
         $request = $this->restMarketsSettingsGetRequest($contentType);
 
         return $this->client
@@ -9070,11 +9070,11 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Settings
+     * @return \ck\Model\Settings
      */
     public function restMarketsSettingsPost(
         string $contentType = self::contentTypes['restMarketsSettingsPost'][0]
-    ): \ck/plenty-client\Model\Settings
+    ): \ck\Model\Settings
     {
         list($response) = $this->restMarketsSettingsPostWithHttpInfo($contentType);
         return $response;
@@ -9089,7 +9089,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Settings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Settings, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsSettingsPostWithHttpInfo(
         string $contentType = self::contentTypes['restMarketsSettingsPost'][0]
@@ -9134,23 +9134,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Settings' === '\SplFileObject') {
+                    if ('\ck\Model\Settings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Settings' !== 'string') {
+                        if ('\ck\Model\Settings' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Settings', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Settings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Settings';
+            $returnType = '\ck\Model\Settings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9171,7 +9171,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Settings',
+                        '\ck\Model\Settings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9217,7 +9217,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsSettingsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Settings';
+        $returnType = '\ck\Model\Settings';
         $request = $this->restMarketsSettingsPostRequest($contentType);
 
         return $this->client
@@ -9650,12 +9650,12 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Settings
+     * @return \ck\Model\Settings
      */
     public function restMarketsSettingsSettingIdGet(
         int $setting_id,
         string $contentType = self::contentTypes['restMarketsSettingsSettingIdGet'][0]
-    ): \ck/plenty-client\Model\Settings
+    ): \ck\Model\Settings
     {
         list($response) = $this->restMarketsSettingsSettingIdGetWithHttpInfo($setting_id, $contentType);
         return $response;
@@ -9671,7 +9671,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Settings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Settings, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsSettingsSettingIdGetWithHttpInfo(
         int $setting_id,
@@ -9717,23 +9717,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Settings' === '\SplFileObject') {
+                    if ('\ck\Model\Settings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Settings' !== 'string') {
+                        if ('\ck\Model\Settings' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Settings', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Settings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Settings';
+            $returnType = '\ck\Model\Settings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9754,7 +9754,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Settings',
+                        '\ck\Model\Settings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9804,7 +9804,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsSettingsSettingIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Settings';
+        $returnType = '\ck\Model\Settings';
         $request = $this->restMarketsSettingsSettingIdGetRequest($setting_id, $contentType);
 
         return $this->client
@@ -9952,12 +9952,12 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Settings
+     * @return \ck\Model\Settings
      */
     public function restMarketsSettingsSettingIdPut(
         int $setting_id,
         string $contentType = self::contentTypes['restMarketsSettingsSettingIdPut'][0]
-    ): \ck/plenty-client\Model\Settings
+    ): \ck\Model\Settings
     {
         list($response) = $this->restMarketsSettingsSettingIdPutWithHttpInfo($setting_id, $contentType);
         return $response;
@@ -9973,7 +9973,7 @@ class MarketApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Settings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Settings, HTTP status code, HTTP response headers (array of strings)
      */
     public function restMarketsSettingsSettingIdPutWithHttpInfo(
         int $setting_id,
@@ -10019,23 +10019,23 @@ class MarketApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Settings' === '\SplFileObject') {
+                    if ('\ck\Model\Settings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Settings' !== 'string') {
+                        if ('\ck\Model\Settings' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Settings', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Settings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Settings';
+            $returnType = '\ck\Model\Settings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10056,7 +10056,7 @@ class MarketApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Settings',
+                        '\ck\Model\Settings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10106,7 +10106,7 @@ class MarketApi
         string $contentType = self::contentTypes['restMarketsSettingsSettingIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Settings';
+        $returnType = '\ck\Model\Settings';
         $request = $this->restMarketsSettingsSettingIdPutRequest($setting_id, $contentType);
 
         return $this->client

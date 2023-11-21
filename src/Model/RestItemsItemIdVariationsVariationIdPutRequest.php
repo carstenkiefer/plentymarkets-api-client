@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestItemsItemIdVariationsVariationIdPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -119,29 +119,29 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
         'sales_price_variation_id' => 'int',
         'supplier_variation_id' => 'int',
         'warehouse_variation_id' => 'int',
-        'variation_barcodes' => '\ck/plenty-client\Model\VariationBarcode[]',
+        'variation_barcodes' => '\ck\Model\VariationBarcode[]',
         'barcode_id' => 'int',
         'code' => 'string',
-        'variation_sales_prices' => '\ck/plenty-client\Model\VariationSalesPrice[]',
+        'variation_sales_prices' => '\ck\Model\VariationSalesPrice[]',
         'sales_price_id' => 'int',
         'price' => 'float',
-        'variation_categories' => '\ck/plenty-client\Model\VariationCategory[]',
+        'variation_categories' => '\ck\Model\VariationCategory[]',
         'category_id' => 'int',
         'is_neckermann_primary' => 'string',
-        'variation_clients' => '\ck/plenty-client\Model\VariationClient[]',
+        'variation_clients' => '\ck\Model\VariationClient[]',
         'plenty_id' => 'int',
-        'variation_markets' => '\ck/plenty-client\Model\VariationMarket[]',
+        'variation_markets' => '\ck\Model\VariationMarket[]',
         'market_id' => 'float',
-        'variation_default_category' => '\ck/plenty-client\Model\VariationDefaultCategory[]',
+        'variation_default_category' => '\ck\Model\VariationDefaultCategory[]',
         'branch_id' => 'int',
-        'variation_suppliers' => '\ck/plenty-client\Model\VariationSupplier[]',
+        'variation_suppliers' => '\ck\Model\VariationSupplier[]',
         'supplier_id' => 'int',
         'item_number' => 'string',
         'last_price_query' => 'string',
         'discount' => 'float',
         'is_discountable' => 'string',
         'packaging_unit' => 'float',
-        'variation_warehouses' => '\ck/plenty-client\Model\VariationWarehouse[]',
+        'variation_warehouses' => '\ck\Model\VariationWarehouse[]',
         'warehouse_id' => 'int',
         'warehouse_zone_id' => 'int',
         'storage_location_type' => 'string',
@@ -150,19 +150,19 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
         'stock_turnover_in_days' => 'int',
         'storage_location' => 'int',
         'stock_buffer' => 'int',
-        'variation_attribute_values' => '\ck/plenty-client\Model\AttributeValueSet[]',
+        'variation_attribute_values' => '\ck\Model\AttributeValueSet[]',
         'value_id' => 'int',
-        'unit' => '\ck/plenty-client\Model\UnitCombination[]',
+        'unit' => '\ck\Model\UnitCombination[]',
         'parent_variation_id' => 'int',
         'parent_variation_quantity' => 'float',
         'item' => 'object[]',
-        'item_cross_selling' => '\ck/plenty-client\Model\ItemCrossSelling[]',
+        'item_cross_selling' => '\ck\Model\ItemCrossSelling[]',
         'cross_item_id' => 'int',
         'relationship' => 'string',
         'is_dynamic' => 'bool',
-        'item_shipping_profiles' => '\ck/plenty-client\Model\ItemShippingProfiles[]',
+        'item_shipping_profiles' => '\ck\Model\ItemShippingProfiles[]',
         'profile_id' => 'int',
-        'variation_texts' => '\ck/plenty-client\Model\VariationDescription[]',
+        'variation_texts' => '\ck\Model\VariationDescription[]',
         'lang' => 'string',
         'name2' => 'string',
         'name3' => 'string',
@@ -174,32 +174,32 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
         'meta_keywords' => 'string',
         'images' => 'object[]',
         'item_images' => 'object[]',
-        'variation_bundle_components' => '\ck/plenty-client\Model\VariationBundle[]',
+        'variation_bundle_components' => '\ck\Model\VariationBundle[]',
         'component_variation_id' => 'int',
         'component_quantity' => 'int',
-        'market_item_numbers' => '\ck/plenty-client\Model\VariationMarketIdentNumber[]',
+        'market_item_numbers' => '\ck\Model\VariationMarketIdentNumber[]',
         'country_id' => 'int',
         'type' => 'string',
         'value' => 'string',
-        'variation_skus' => '\ck/plenty-client\Model\VariationSku[]',
+        'variation_skus' => '\ck\Model\VariationSku[]',
         'account_id' => 'int',
         'sku' => 'string',
         'initial_sku' => 'string',
         'parent_sku' => 'string',
         'status' => 'string',
         'additional_information' => 'string',
-        'variation_additional_skus' => '\ck/plenty-client\Model\VariationAdditionalSku[]',
+        'variation_additional_skus' => '\ck\Model\VariationAdditionalSku[]',
         'market_account_id' => 'int',
-        'properties' => '\ck/plenty-client\Model\PropertyRelation[]',
+        'properties' => '\ck\Model\PropertyRelation[]',
         'property_id' => 'int',
         'selection_relation_id' => 'int',
-        'variation_properties' => '\ck/plenty-client\Model\VariationPropertyValue[]',
+        'variation_properties' => '\ck\Model\VariationPropertyValue[]',
         'property_selection_id' => 'int',
         'value_int' => 'int',
         'value_float' => 'float',
         'value_file' => 'string',
-        'tags' => '\ck/plenty-client\Model\Tag[]',
-        'comments' => '\ck/plenty-client\Model\Comment[]',
+        'tags' => '\ck\Model\Tag[]',
+        'comments' => '\ck\Model\Comment[]',
         'user_id' => 'int',
         'text' => 'string',
         'is_visible_for_contact' => 'bool'
@@ -3014,7 +3014,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_barcodes
      *
-     * @return \ck/plenty-client\Model\VariationBarcode[]|null
+     * @return \ck\Model\VariationBarcode[]|null
      */
     public function getVariationBarcodes(): ?array
     {
@@ -3024,7 +3024,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_barcodes
      *
-     * @param \ck/plenty-client\Model\VariationBarcode[]|null $variation_barcodes variation_barcodes
+     * @param \ck\Model\VariationBarcode[]|null $variation_barcodes variation_barcodes
      *
      * @return $this
      */
@@ -3095,7 +3095,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_sales_prices
      *
-     * @return \ck/plenty-client\Model\VariationSalesPrice[]|null
+     * @return \ck\Model\VariationSalesPrice[]|null
      */
     public function getVariationSalesPrices(): ?array
     {
@@ -3105,7 +3105,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_sales_prices
      *
-     * @param \ck/plenty-client\Model\VariationSalesPrice[]|null $variation_sales_prices variation_sales_prices
+     * @param \ck\Model\VariationSalesPrice[]|null $variation_sales_prices variation_sales_prices
      *
      * @return $this
      */
@@ -3176,7 +3176,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_categories
      *
-     * @return \ck/plenty-client\Model\VariationCategory[]|null
+     * @return \ck\Model\VariationCategory[]|null
      */
     public function getVariationCategories(): ?array
     {
@@ -3186,7 +3186,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_categories
      *
-     * @param \ck/plenty-client\Model\VariationCategory[]|null $variation_categories variation_categories
+     * @param \ck\Model\VariationCategory[]|null $variation_categories variation_categories
      *
      * @return $this
      */
@@ -3257,7 +3257,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_clients
      *
-     * @return \ck/plenty-client\Model\VariationClient[]|null
+     * @return \ck\Model\VariationClient[]|null
      */
     public function getVariationClients(): ?array
     {
@@ -3267,7 +3267,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_clients
      *
-     * @param \ck/plenty-client\Model\VariationClient[]|null $variation_clients variation_clients
+     * @param \ck\Model\VariationClient[]|null $variation_clients variation_clients
      *
      * @return $this
      */
@@ -3311,7 +3311,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_markets
      *
-     * @return \ck/plenty-client\Model\VariationMarket[]|null
+     * @return \ck\Model\VariationMarket[]|null
      */
     public function getVariationMarkets(): ?array
     {
@@ -3321,7 +3321,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_markets
      *
-     * @param \ck/plenty-client\Model\VariationMarket[]|null $variation_markets variation_markets
+     * @param \ck\Model\VariationMarket[]|null $variation_markets variation_markets
      *
      * @return $this
      */
@@ -3365,7 +3365,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_default_category
      *
-     * @return \ck/plenty-client\Model\VariationDefaultCategory[]|null
+     * @return \ck\Model\VariationDefaultCategory[]|null
      */
     public function getVariationDefaultCategory(): ?array
     {
@@ -3375,7 +3375,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_default_category
      *
-     * @param \ck/plenty-client\Model\VariationDefaultCategory[]|null $variation_default_category variation_default_category
+     * @param \ck\Model\VariationDefaultCategory[]|null $variation_default_category variation_default_category
      *
      * @return $this
      */
@@ -3419,7 +3419,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_suppliers
      *
-     * @return \ck/plenty-client\Model\VariationSupplier[]|null
+     * @return \ck\Model\VariationSupplier[]|null
      */
     public function getVariationSuppliers(): ?array
     {
@@ -3429,7 +3429,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_suppliers
      *
-     * @param \ck/plenty-client\Model\VariationSupplier[]|null $variation_suppliers variation_suppliers
+     * @param \ck\Model\VariationSupplier[]|null $variation_suppliers variation_suppliers
      *
      * @return $this
      */
@@ -3608,7 +3608,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_warehouses
      *
-     * @return \ck/plenty-client\Model\VariationWarehouse[]|null
+     * @return \ck\Model\VariationWarehouse[]|null
      */
     public function getVariationWarehouses(): ?array
     {
@@ -3618,7 +3618,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_warehouses
      *
-     * @param \ck/plenty-client\Model\VariationWarehouse[]|null $variation_warehouses variation_warehouses
+     * @param \ck\Model\VariationWarehouse[]|null $variation_warehouses variation_warehouses
      *
      * @return $this
      */
@@ -3851,7 +3851,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_attribute_values
      *
-     * @return \ck/plenty-client\Model\AttributeValueSet[]|null
+     * @return \ck\Model\AttributeValueSet[]|null
      */
     public function getVariationAttributeValues(): ?array
     {
@@ -3861,7 +3861,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_attribute_values
      *
-     * @param \ck/plenty-client\Model\AttributeValueSet[]|null $variation_attribute_values variation_attribute_values
+     * @param \ck\Model\AttributeValueSet[]|null $variation_attribute_values variation_attribute_values
      *
      * @return $this
      */
@@ -3905,7 +3905,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets unit
      *
-     * @return \ck/plenty-client\Model\UnitCombination[]
+     * @return \ck\Model\UnitCombination[]
      */
     public function getUnit(): array
     {
@@ -3915,7 +3915,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets unit
      *
-     * @param \ck/plenty-client\Model\UnitCombination[] $unit unit
+     * @param \ck\Model\UnitCombination[] $unit unit
      *
      * @return $this
      */
@@ -4013,7 +4013,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets item_cross_selling
      *
-     * @return \ck/plenty-client\Model\ItemCrossSelling[]|null
+     * @return \ck\Model\ItemCrossSelling[]|null
      */
     public function getItemCrossSelling(): ?array
     {
@@ -4023,7 +4023,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets item_cross_selling
      *
-     * @param \ck/plenty-client\Model\ItemCrossSelling[]|null $item_cross_selling item_cross_selling
+     * @param \ck\Model\ItemCrossSelling[]|null $item_cross_selling item_cross_selling
      *
      * @return $this
      */
@@ -4121,7 +4121,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets item_shipping_profiles
      *
-     * @return \ck/plenty-client\Model\ItemShippingProfiles[]|null
+     * @return \ck\Model\ItemShippingProfiles[]|null
      */
     public function getItemShippingProfiles(): ?array
     {
@@ -4131,7 +4131,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets item_shipping_profiles
      *
-     * @param \ck/plenty-client\Model\ItemShippingProfiles[]|null $item_shipping_profiles item_shipping_profiles
+     * @param \ck\Model\ItemShippingProfiles[]|null $item_shipping_profiles item_shipping_profiles
      *
      * @return $this
      */
@@ -4175,7 +4175,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_texts
      *
-     * @return \ck/plenty-client\Model\VariationDescription[]|null
+     * @return \ck\Model\VariationDescription[]|null
      */
     public function getVariationTexts(): ?array
     {
@@ -4185,7 +4185,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_texts
      *
-     * @param \ck/plenty-client\Model\VariationDescription[]|null $variation_texts variation_texts
+     * @param \ck\Model\VariationDescription[]|null $variation_texts variation_texts
      *
      * @return $this
      */
@@ -4499,7 +4499,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_bundle_components
      *
-     * @return \ck/plenty-client\Model\VariationBundle[]|null
+     * @return \ck\Model\VariationBundle[]|null
      */
     public function getVariationBundleComponents(): ?array
     {
@@ -4509,7 +4509,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_bundle_components
      *
-     * @param \ck/plenty-client\Model\VariationBundle[]|null $variation_bundle_components variation_bundle_components
+     * @param \ck\Model\VariationBundle[]|null $variation_bundle_components variation_bundle_components
      *
      * @return $this
      */
@@ -4580,7 +4580,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets market_item_numbers
      *
-     * @return \ck/plenty-client\Model\VariationMarketIdentNumber[]|null
+     * @return \ck\Model\VariationMarketIdentNumber[]|null
      */
     public function getMarketItemNumbers(): ?array
     {
@@ -4590,7 +4590,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets market_item_numbers
      *
-     * @param \ck/plenty-client\Model\VariationMarketIdentNumber[]|null $market_item_numbers market_item_numbers
+     * @param \ck\Model\VariationMarketIdentNumber[]|null $market_item_numbers market_item_numbers
      *
      * @return $this
      */
@@ -4688,7 +4688,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_skus
      *
-     * @return \ck/plenty-client\Model\VariationSku[]|null
+     * @return \ck\Model\VariationSku[]|null
      */
     public function getVariationSkus(): ?array
     {
@@ -4698,7 +4698,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_skus
      *
-     * @param \ck/plenty-client\Model\VariationSku[]|null $variation_skus variation_skus
+     * @param \ck\Model\VariationSku[]|null $variation_skus variation_skus
      *
      * @return $this
      */
@@ -4877,7 +4877,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_additional_skus
      *
-     * @return \ck/plenty-client\Model\VariationAdditionalSku[]|null
+     * @return \ck\Model\VariationAdditionalSku[]|null
      */
     public function getVariationAdditionalSkus(): ?array
     {
@@ -4887,7 +4887,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_additional_skus
      *
-     * @param \ck/plenty-client\Model\VariationAdditionalSku[]|null $variation_additional_skus variation_additional_skus
+     * @param \ck\Model\VariationAdditionalSku[]|null $variation_additional_skus variation_additional_skus
      *
      * @return $this
      */
@@ -4931,7 +4931,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets properties
      *
-     * @return \ck/plenty-client\Model\PropertyRelation[]|null
+     * @return \ck\Model\PropertyRelation[]|null
      */
     public function getProperties(): ?array
     {
@@ -4941,7 +4941,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets properties
      *
-     * @param \ck/plenty-client\Model\PropertyRelation[]|null $properties properties
+     * @param \ck\Model\PropertyRelation[]|null $properties properties
      *
      * @return $this
      */
@@ -5012,7 +5012,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets variation_properties
      *
-     * @return \ck/plenty-client\Model\VariationPropertyValue[]|null
+     * @return \ck\Model\VariationPropertyValue[]|null
      */
     public function getVariationProperties(): ?array
     {
@@ -5022,7 +5022,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets variation_properties
      *
-     * @param \ck/plenty-client\Model\VariationPropertyValue[]|null $variation_properties variation_properties
+     * @param \ck\Model\VariationPropertyValue[]|null $variation_properties variation_properties
      *
      * @return $this
      */
@@ -5147,7 +5147,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets tags
      *
-     * @return \ck/plenty-client\Model\Tag[]|null
+     * @return \ck\Model\Tag[]|null
      */
     public function getTags(): ?array
     {
@@ -5157,7 +5157,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets tags
      *
-     * @param \ck/plenty-client\Model\Tag[]|null $tags tags
+     * @param \ck\Model\Tag[]|null $tags tags
      *
      * @return $this
      */
@@ -5174,7 +5174,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Gets comments
      *
-     * @return \ck/plenty-client\Model\Comment[]|null
+     * @return \ck\Model\Comment[]|null
      */
     public function getComments(): ?array
     {
@@ -5184,7 +5184,7 @@ class RestItemsItemIdVariationsVariationIdPutRequest implements ModelInterface, 
     /**
      * Sets comments
      *
-     * @param \ck/plenty-client\Model\Comment[]|null $comments comments
+     * @param \ck\Model\Comment[]|null $comments comments
      *
      * @return $this
      */

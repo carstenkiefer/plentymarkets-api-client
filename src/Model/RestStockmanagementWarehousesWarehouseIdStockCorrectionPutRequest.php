@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest implemen
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'corrections' => '\ck/plenty-client\Model\VariationStockCorrection[]',
+        'corrections' => '\ck\Model\VariationStockCorrection[]',
         'variation_id' => 'int',
         'quantity' => 'float',
         'storage_location_id' => 'int',
@@ -341,7 +341,7 @@ class RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest implemen
     /**
      * Gets corrections
      *
-     * @return \ck/plenty-client\Model\VariationStockCorrection[]|null
+     * @return \ck\Model\VariationStockCorrection[]|null
      */
     public function getCorrections(): ?array
     {
@@ -351,7 +351,7 @@ class RestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest implemen
     /**
      * Sets corrections
      *
-     * @param \ck/plenty-client\Model\VariationStockCorrection[]|null $corrections corrections
+     * @param \ck\Model\VariationStockCorrection[]|null $corrections corrections
      *
      * @return $this
      */

@@ -3,7 +3,7 @@
  * UserApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * UserApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -145,12 +145,12 @@ class UserApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\User
+     * @return \ck\Model\User
      */
     public function restBackendUserUserIdGet(
         int $user_id,
         string $contentType = self::contentTypes['restBackendUserUserIdGet'][0]
-    ): \ck/plenty-client\Model\User
+    ): \ck\Model\User
     {
         list($response) = $this->restBackendUserUserIdGetWithHttpInfo($user_id, $contentType);
         return $response;
@@ -164,7 +164,7 @@ class UserApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function restBackendUserUserIdGetWithHttpInfo(
         int $user_id,
@@ -210,23 +210,23 @@ class UserApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\User' === '\SplFileObject') {
+                    if ('\ck\Model\User' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\User' !== 'string') {
+                        if ('\ck\Model\User' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\User', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\User', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\User';
+            $returnType = '\ck\Model\User';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -247,7 +247,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\User',
+                        '\ck\Model\User',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -293,7 +293,7 @@ class UserApi
         string $contentType = self::contentTypes['restBackendUserUserIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\User';
+        $returnType = '\ck\Model\User';
         $request = $this->restBackendUserUserIdGetRequest($user_id, $contentType);
 
         return $this->client
@@ -438,7 +438,7 @@ class UserApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\User[]
+     * @return \ck\Model\User[]
      */
     public function restBackendUsersGet(
         string $contentType = self::contentTypes['restBackendUsersGet'][0]
@@ -455,7 +455,7 @@ class UserApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBackendUsersGetWithHttpInfo(
         string $contentType = self::contentTypes['restBackendUsersGet'][0]
@@ -500,23 +500,23 @@ class UserApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\User[]' === '\SplFileObject') {
+                    if ('\ck\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\User[]' !== 'string') {
+                        if ('\ck\Model\User[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\User[]';
+            $returnType = '\ck\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -537,7 +537,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\User[]',
+                        '\ck\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -579,7 +579,7 @@ class UserApi
         string $contentType = self::contentTypes['restBackendUsersGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\User[]';
+        $returnType = '\ck\Model\User[]';
         $request = $this->restBackendUsersGetRequest($contentType);
 
         return $this->client
@@ -710,7 +710,7 @@ class UserApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\User[]
+     * @return \ck\Model\User[]
      */
     public function restBackendUsersSearchNameNameGet(
         string $name,
@@ -731,7 +731,7 @@ class UserApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\User[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restBackendUsersSearchNameNameGetWithHttpInfo(
         string $name,
@@ -777,23 +777,23 @@ class UserApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\User[]' === '\SplFileObject') {
+                    if ('\ck\Model\User[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\User[]' !== 'string') {
+                        if ('\ck\Model\User[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\User[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\User[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\User[]';
+            $returnType = '\ck\Model\User[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -814,7 +814,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\User[]',
+                        '\ck\Model\User[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -864,7 +864,7 @@ class UserApi
         string $contentType = self::contentTypes['restBackendUsersSearchNameNameGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\User[]';
+        $returnType = '\ck\Model\User[]';
         $request = $this->restBackendUsersSearchNameNameGetRequest($name, $contentType);
 
         return $this->client
@@ -1011,11 +1011,11 @@ class UserApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PluginSet
+     * @return \ck\Model\PluginSet
      */
     public function restUserBackendPluginsetGet(
         string $contentType = self::contentTypes['restUserBackendPluginsetGet'][0]
-    ): \ck/plenty-client\Model\PluginSet
+    ): \ck\Model\PluginSet
     {
         list($response) = $this->restUserBackendPluginsetGetWithHttpInfo($contentType);
         return $response;
@@ -1030,7 +1030,7 @@ class UserApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PluginSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PluginSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restUserBackendPluginsetGetWithHttpInfo(
         string $contentType = self::contentTypes['restUserBackendPluginsetGet'][0]
@@ -1075,23 +1075,23 @@ class UserApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PluginSet' === '\SplFileObject') {
+                    if ('\ck\Model\PluginSet' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PluginSet' !== 'string') {
+                        if ('\ck\Model\PluginSet' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PluginSet', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PluginSet', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PluginSet';
+            $returnType = '\ck\Model\PluginSet';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1112,7 +1112,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PluginSet',
+                        '\ck\Model\PluginSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1158,7 +1158,7 @@ class UserApi
         string $contentType = self::contentTypes['restUserBackendPluginsetGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PluginSet';
+        $returnType = '\ck\Model\PluginSet';
         $request = $this->restUserBackendPluginsetGetRequest($contentType);
 
         return $this->client

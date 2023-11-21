@@ -1,4 +1,4 @@
-# ck/plenty-client\ElasticSyncApi
+# ck\ElasticSyncApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -95,10 +95,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -155,10 +155,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -215,10 +215,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -272,10 +272,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -332,10 +332,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -389,10 +389,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -449,10 +449,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -511,10 +511,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -553,7 +553,7 @@ This endpoint does not need any parameter.
 ## `restElasticSyncSyncChangeCsvPut()`
 
 ```php
-restElasticSyncSyncChangeCsvPut(): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncChangeCsvPut(): \ck\Model\ElasticSyncSync
 ```
 
 Update the Csv of a Sync.
@@ -568,10 +568,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -592,7 +592,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -625,10 +625,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -684,10 +684,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -743,10 +743,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -802,10 +802,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -861,10 +861,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -903,7 +903,7 @@ This endpoint does not need any parameter.
 ## `restElasticSyncSyncMappingFilterFilterIdDelete()`
 
 ```php
-restElasticSyncSyncMappingFilterFilterIdDelete($filter_id): \ck/plenty-client\Model\ElasticSyncMappingFilter
+restElasticSyncSyncMappingFilterFilterIdDelete($filter_id): \ck\Model\ElasticSyncMappingFilter
 ```
 
 Delete a sync mapping.
@@ -918,10 +918,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -945,7 +945,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
+[**\ck\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
 
 ### Authorization
 
@@ -963,7 +963,7 @@ try {
 ## `restElasticSyncSyncMappingFilterFilterIdGet()`
 
 ```php
-restElasticSyncSyncMappingFilterFilterIdGet($filter_id): \ck/plenty-client\Model\ElasticSyncMappingFilter
+restElasticSyncSyncMappingFilterFilterIdGet($filter_id): \ck\Model\ElasticSyncMappingFilter
 ```
 
 Get a sync mapping.
@@ -978,10 +978,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1005,7 +1005,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
+[**\ck\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
 
 ### Authorization
 
@@ -1023,7 +1023,7 @@ try {
 ## `restElasticSyncSyncMappingFilterFilterIdPut()`
 
 ```php
-restElasticSyncSyncMappingFilterFilterIdPut($filter_id): \ck/plenty-client\Model\ElasticSyncMappingFilter
+restElasticSyncSyncMappingFilterFilterIdPut($filter_id): \ck\Model\ElasticSyncMappingFilter
 ```
 
 Update a sync mapping filter.
@@ -1038,10 +1038,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1065,7 +1065,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
+[**\ck\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
 
 ### Authorization
 
@@ -1083,7 +1083,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdDelete()`
 
 ```php
-restElasticSyncSyncMappingMappingIdDelete($mapping_id): \ck/plenty-client\Model\ElasticSyncMapping
+restElasticSyncSyncMappingMappingIdDelete($mapping_id): \ck\Model\ElasticSyncMapping
 ```
 
 Delete a sync mapping.
@@ -1098,10 +1098,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1125,7 +1125,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMapping**](../Model/ElasticSyncMapping.md)
+[**\ck\Model\ElasticSyncMapping**](../Model/ElasticSyncMapping.md)
 
 ### Authorization
 
@@ -1143,7 +1143,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdFilterPost()`
 
 ```php
-restElasticSyncSyncMappingMappingIdFilterPost($mapping_id): \ck/plenty-client\Model\ElasticSyncMappingFilter
+restElasticSyncSyncMappingMappingIdFilterPost($mapping_id): \ck\Model\ElasticSyncMappingFilter
 ```
 
 Create a sync mapping filter.
@@ -1158,10 +1158,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1185,7 +1185,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
+[**\ck\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
 
 ### Authorization
 
@@ -1218,10 +1218,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1263,7 +1263,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdFiltersPost()`
 
 ```php
-restElasticSyncSyncMappingMappingIdFiltersPost($mapping_id): \ck/plenty-client\Model\ElasticSyncMappingFilter
+restElasticSyncSyncMappingMappingIdFiltersPost($mapping_id): \ck\Model\ElasticSyncMappingFilter
 ```
 
 Create sync mapping filters.
@@ -1278,10 +1278,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1305,7 +1305,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
+[**\ck\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
 
 ### Authorization
 
@@ -1323,7 +1323,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdFiltersPut()`
 
 ```php
-restElasticSyncSyncMappingMappingIdFiltersPut($mapping_id): \ck/plenty-client\Model\ElasticSyncMappingFilter
+restElasticSyncSyncMappingMappingIdFiltersPut($mapping_id): \ck\Model\ElasticSyncMappingFilter
 ```
 
 Update sync mapping filters.
@@ -1338,10 +1338,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1365,7 +1365,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
+[**\ck\Model\ElasticSyncMappingFilter**](../Model/ElasticSyncMappingFilter.md)
 
 ### Authorization
 
@@ -1383,7 +1383,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdGet()`
 
 ```php
-restElasticSyncSyncMappingMappingIdGet($mapping_id): \ck/plenty-client\Model\ElasticSyncMapping
+restElasticSyncSyncMappingMappingIdGet($mapping_id): \ck\Model\ElasticSyncMapping
 ```
 
 Get a sync mapping.
@@ -1398,10 +1398,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1425,7 +1425,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMapping**](../Model/ElasticSyncMapping.md)
+[**\ck\Model\ElasticSyncMapping**](../Model/ElasticSyncMapping.md)
 
 ### Authorization
 
@@ -1443,7 +1443,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdPut()`
 
 ```php
-restElasticSyncSyncMappingMappingIdPut($mapping_id): \ck/plenty-client\Model\ElasticSyncMapping
+restElasticSyncSyncMappingMappingIdPut($mapping_id): \ck\Model\ElasticSyncMapping
 ```
 
 Update a sync mapping.
@@ -1458,10 +1458,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1485,7 +1485,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMapping**](../Model/ElasticSyncMapping.md)
+[**\ck\Model\ElasticSyncMapping**](../Model/ElasticSyncMapping.md)
 
 ### Authorization
 
@@ -1503,7 +1503,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdRowPost()`
 
 ```php
-restElasticSyncSyncMappingMappingIdRowPost($mapping_id): \ck/plenty-client\Model\ElasticSyncMappingRow
+restElasticSyncSyncMappingMappingIdRowPost($mapping_id): \ck\Model\ElasticSyncMappingRow
 ```
 
 Create a sync mapping row.
@@ -1518,10 +1518,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1545,7 +1545,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
+[**\ck\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
 
 ### Authorization
 
@@ -1578,10 +1578,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1623,7 +1623,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdRowsPost()`
 
 ```php
-restElasticSyncSyncMappingMappingIdRowsPost($mapping_id): \ck/plenty-client\Model\ElasticSyncMappingRow
+restElasticSyncSyncMappingMappingIdRowsPost($mapping_id): \ck\Model\ElasticSyncMappingRow
 ```
 
 Create sync mapping rows.
@@ -1638,10 +1638,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1665,7 +1665,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
+[**\ck\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
 
 ### Authorization
 
@@ -1683,7 +1683,7 @@ try {
 ## `restElasticSyncSyncMappingMappingIdRowsPut()`
 
 ```php
-restElasticSyncSyncMappingMappingIdRowsPut($mapping_id): \ck/plenty-client\Model\ElasticSyncMappingRow
+restElasticSyncSyncMappingMappingIdRowsPut($mapping_id): \ck\Model\ElasticSyncMappingRow
 ```
 
 Update sync mapping rows.
@@ -1698,10 +1698,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1725,7 +1725,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
+[**\ck\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
 
 ### Authorization
 
@@ -1743,7 +1743,7 @@ try {
 ## `restElasticSyncSyncMappingRowRowIdDelete()`
 
 ```php
-restElasticSyncSyncMappingRowRowIdDelete($row_id): \ck/plenty-client\Model\ElasticSyncMappingRow
+restElasticSyncSyncMappingRowRowIdDelete($row_id): \ck\Model\ElasticSyncMappingRow
 ```
 
 Delete a sync mapping row.
@@ -1758,10 +1758,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1785,7 +1785,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
+[**\ck\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
 
 ### Authorization
 
@@ -1803,7 +1803,7 @@ try {
 ## `restElasticSyncSyncMappingRowRowIdGet()`
 
 ```php
-restElasticSyncSyncMappingRowRowIdGet($row_id): \ck/plenty-client\Model\ElasticSyncMappingRow
+restElasticSyncSyncMappingRowRowIdGet($row_id): \ck\Model\ElasticSyncMappingRow
 ```
 
 Get a sync mapping row.
@@ -1818,10 +1818,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1845,7 +1845,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
+[**\ck\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
 
 ### Authorization
 
@@ -1863,7 +1863,7 @@ try {
 ## `restElasticSyncSyncMappingRowRowIdPut()`
 
 ```php
-restElasticSyncSyncMappingRowRowIdPut($row_id): \ck/plenty-client\Model\ElasticSyncMappingRow
+restElasticSyncSyncMappingRowRowIdPut($row_id): \ck\Model\ElasticSyncMappingRow
 ```
 
 Update a sync mapping row.
@@ -1878,10 +1878,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1905,7 +1905,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
+[**\ck\Model\ElasticSyncMappingRow**](../Model/ElasticSyncMappingRow.md)
 
 ### Authorization
 
@@ -1938,10 +1938,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1995,10 +1995,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2051,10 +2051,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2093,7 +2093,7 @@ This endpoint does not need any parameter.
 ## `restElasticSyncSyncMatchingMatchingIdDelete()`
 
 ```php
-restElasticSyncSyncMatchingMatchingIdDelete($matching_id): \ck/plenty-client\Model\ElasticSyncMatching
+restElasticSyncSyncMatchingMatchingIdDelete($matching_id): \ck\Model\ElasticSyncMatching
 ```
 
 Delete a sync matching.
@@ -2108,10 +2108,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2135,7 +2135,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
+[**\ck\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
 
 ### Authorization
 
@@ -2153,7 +2153,7 @@ try {
 ## `restElasticSyncSyncMatchingMatchingIdGet()`
 
 ```php
-restElasticSyncSyncMatchingMatchingIdGet($matching_id): \ck/plenty-client\Model\ElasticSyncMatching
+restElasticSyncSyncMatchingMatchingIdGet($matching_id): \ck\Model\ElasticSyncMatching
 ```
 
 Get a sync matching.
@@ -2168,10 +2168,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2195,7 +2195,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
+[**\ck\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
 
 ### Authorization
 
@@ -2213,7 +2213,7 @@ try {
 ## `restElasticSyncSyncMatchingMatchingIdPut()`
 
 ```php
-restElasticSyncSyncMatchingMatchingIdPut($matching_id): \ck/plenty-client\Model\ElasticSyncMatching
+restElasticSyncSyncMatchingMatchingIdPut($matching_id): \ck\Model\ElasticSyncMatching
 ```
 
 Update a sync matching.
@@ -2228,10 +2228,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2255,7 +2255,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
+[**\ck\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
 
 ### Authorization
 
@@ -2273,7 +2273,7 @@ try {
 ## `restElasticSyncSyncOptionOptionIdDelete()`
 
 ```php
-restElasticSyncSyncOptionOptionIdDelete($option_id): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncOptionOptionIdDelete($option_id): \ck\Model\ElasticSyncSync
 ```
 
 Delete a sync.
@@ -2288,10 +2288,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2315,7 +2315,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -2333,7 +2333,7 @@ try {
 ## `restElasticSyncSyncOptionOptionIdGet()`
 
 ```php
-restElasticSyncSyncOptionOptionIdGet($option_id): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncOptionOptionIdGet($option_id): \ck\Model\ElasticSyncSync
 ```
 
 Get a sync.
@@ -2348,10 +2348,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2375,7 +2375,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -2393,7 +2393,7 @@ try {
 ## `restElasticSyncSyncOptionOptionIdPut()`
 
 ```php
-restElasticSyncSyncOptionOptionIdPut($option_id): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncOptionOptionIdPut($option_id): \ck\Model\ElasticSyncSync
 ```
 
 Update a sync option.
@@ -2408,10 +2408,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2435,7 +2435,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -2453,7 +2453,7 @@ try {
 ## `restElasticSyncSyncPost()`
 
 ```php
-restElasticSyncSyncPost(): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncPost(): \ck\Model\ElasticSyncSync
 ```
 
 Create a sync.
@@ -2468,10 +2468,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2492,7 +2492,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -2525,10 +2525,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2585,10 +2585,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2627,7 +2627,7 @@ This endpoint does not need any parameter.
 ## `restElasticSyncSyncReportsGet()`
 
 ```php
-restElasticSyncSyncReportsGet(): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restElasticSyncSyncReportsGet(): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 Check Report Log.
@@ -2642,10 +2642,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2666,7 +2666,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 
@@ -2699,10 +2699,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2756,10 +2756,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2813,10 +2813,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2855,7 +2855,7 @@ This endpoint does not need any parameter.
 ## `restElasticSyncSyncSyncIdDelete()`
 
 ```php
-restElasticSyncSyncSyncIdDelete($sync_id): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncSyncIdDelete($sync_id): \ck\Model\ElasticSyncSync
 ```
 
 Delete a sync.
@@ -2870,10 +2870,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2897,7 +2897,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -2930,10 +2930,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2975,7 +2975,7 @@ try {
 ## `restElasticSyncSyncSyncIdMappingPost()`
 
 ```php
-restElasticSyncSyncSyncIdMappingPost($sync_id): \ck/plenty-client\Model\ElasticSyncMapping
+restElasticSyncSyncSyncIdMappingPost($sync_id): \ck\Model\ElasticSyncMapping
 ```
 
 Create a sync mapping.
@@ -2990,10 +2990,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3017,7 +3017,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMapping**](../Model/ElasticSyncMapping.md)
+[**\ck\Model\ElasticSyncMapping**](../Model/ElasticSyncMapping.md)
 
 ### Authorization
 
@@ -3035,7 +3035,7 @@ try {
 ## `restElasticSyncSyncSyncIdMappingsGet()`
 
 ```php
-restElasticSyncSyncSyncIdMappingsGet($sync_id): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restElasticSyncSyncSyncIdMappingsGet($sync_id): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 List sync mappings.
@@ -3050,10 +3050,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3077,7 +3077,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 
@@ -3110,10 +3110,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3155,7 +3155,7 @@ try {
 ## `restElasticSyncSyncSyncIdMatchesPost()`
 
 ```php
-restElasticSyncSyncSyncIdMatchesPost($sync_id): \ck/plenty-client\Model\ElasticSyncMatching
+restElasticSyncSyncSyncIdMatchesPost($sync_id): \ck\Model\ElasticSyncMatching
 ```
 
 Create sync matches.
@@ -3170,10 +3170,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3197,7 +3197,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
+[**\ck\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
 
 ### Authorization
 
@@ -3215,7 +3215,7 @@ try {
 ## `restElasticSyncSyncSyncIdMatchesPut()`
 
 ```php
-restElasticSyncSyncSyncIdMatchesPut($sync_id): \ck/plenty-client\Model\ElasticSyncMatching
+restElasticSyncSyncSyncIdMatchesPut($sync_id): \ck\Model\ElasticSyncMatching
 ```
 
 Update sync matches.
@@ -3230,10 +3230,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3257,7 +3257,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
+[**\ck\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
 
 ### Authorization
 
@@ -3290,10 +3290,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3335,7 +3335,7 @@ try {
 ## `restElasticSyncSyncSyncIdMatchingPost()`
 
 ```php
-restElasticSyncSyncSyncIdMatchingPost($sync_id): \ck/plenty-client\Model\ElasticSyncMatching
+restElasticSyncSyncSyncIdMatchingPost($sync_id): \ck\Model\ElasticSyncMatching
 ```
 
 Create a sync matching.
@@ -3350,10 +3350,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3377,7 +3377,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
+[**\ck\Model\ElasticSyncMatching**](../Model/ElasticSyncMatching.md)
 
 ### Authorization
 
@@ -3395,7 +3395,7 @@ try {
 ## `restElasticSyncSyncSyncIdOptionPost()`
 
 ```php
-restElasticSyncSyncSyncIdOptionPost($sync_id): \ck/plenty-client\Model\ElasticSyncOption
+restElasticSyncSyncSyncIdOptionPost($sync_id): \ck\Model\ElasticSyncOption
 ```
 
 Create a sync option.
@@ -3410,10 +3410,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3437,7 +3437,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncOption**](../Model/ElasticSyncOption.md)
+[**\ck\Model\ElasticSyncOption**](../Model/ElasticSyncOption.md)
 
 ### Authorization
 
@@ -3470,10 +3470,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3515,7 +3515,7 @@ try {
 ## `restElasticSyncSyncSyncIdOptionsPost()`
 
 ```php
-restElasticSyncSyncSyncIdOptionsPost($sync_id): \ck/plenty-client\Model\ElasticSyncOption
+restElasticSyncSyncSyncIdOptionsPost($sync_id): \ck\Model\ElasticSyncOption
 ```
 
 Create sync options.
@@ -3530,10 +3530,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3557,7 +3557,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncOption**](../Model/ElasticSyncOption.md)
+[**\ck\Model\ElasticSyncOption**](../Model/ElasticSyncOption.md)
 
 ### Authorization
 
@@ -3575,7 +3575,7 @@ try {
 ## `restElasticSyncSyncSyncIdOptionsPut()`
 
 ```php
-restElasticSyncSyncSyncIdOptionsPut($sync_id): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncSyncIdOptionsPut($sync_id): \ck\Model\ElasticSyncSync
 ```
 
 Update sync options.
@@ -3590,10 +3590,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3617,7 +3617,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -3650,10 +3650,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3695,7 +3695,7 @@ try {
 ## `restElasticSyncSyncSyncIdPut()`
 
 ```php
-restElasticSyncSyncSyncIdPut($sync_id): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncSyncIdPut($sync_id): \ck\Model\ElasticSyncSync
 ```
 
 Update a sync.
@@ -3710,10 +3710,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3737,7 +3737,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -3770,10 +3770,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3831,10 +3831,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3891,10 +3891,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3953,10 +3953,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4010,10 +4010,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4052,7 +4052,7 @@ This endpoint does not need any parameter.
 ## `restElasticSyncSyncsDelete()`
 
 ```php
-restElasticSyncSyncsDelete(): \ck/plenty-client\Model\ElasticSyncSync
+restElasticSyncSyncsDelete(): \ck\Model\ElasticSyncSync
 ```
 
 Delete syncs.
@@ -4067,10 +4067,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4091,7 +4091,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
+[**\ck\Model\ElasticSyncSync**](../Model/ElasticSyncSync.md)
 
 ### Authorization
 
@@ -4124,10 +4124,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4184,10 +4184,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4231,7 +4231,7 @@ try {
 ## `restElasticSyncSyncsGet()`
 
 ```php
-restElasticSyncSyncsGet(): \ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
+restElasticSyncSyncsGet(): \ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response
 ```
 
 Get all Syncs
@@ -4246,10 +4246,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\ElasticSyncApi(
+$apiInstance = new ck\Api\ElasticSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4270,7 +4270,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
+[**\ck\Model\RestAccountsContactsSalesRepresentativeRegionsGet200Response**](../Model/RestAccountsContactsSalesRepresentativeRegionsGet200Response.md)
 
 ### Authorization
 

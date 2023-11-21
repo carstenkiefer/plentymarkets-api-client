@@ -1,4 +1,4 @@
-# ck/plenty-client\CommentApi
+# ck\CommentApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -29,10 +29,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CommentApi(
+$apiInstance = new ck\Api\CommentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -73,7 +73,7 @@ void (empty response body)
 ## `restCommentsCommentIdGet()`
 
 ```php
-restCommentsCommentIdGet($comment_id): \ck/plenty-client\Model\Comment
+restCommentsCommentIdGet($comment_id): \ck\Model\Comment
 ```
 
 Get a comment
@@ -88,10 +88,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CommentApi(
+$apiInstance = new ck\Api\CommentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Comment**](../Model/Comment.md)
+[**\ck\Model\Comment**](../Model/Comment.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ try {
 ## `restCommentsCommentIdPut()`
 
 ```php
-restCommentsCommentIdPut($comment_id, $reference_type, $reference_value, $user_id, $is_visible_for_contact): \ck/plenty-client\Model\Comment
+restCommentsCommentIdPut($comment_id, $reference_type, $reference_value, $user_id, $is_visible_for_contact): \ck\Model\Comment
 ```
 
 
@@ -146,10 +146,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CommentApi(
+$apiInstance = new ck\Api\CommentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -181,7 +181,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Comment**](../Model/Comment.md)
+[**\ck\Model\Comment**](../Model/Comment.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ try {
 ## `restCommentsPost()`
 
 ```php
-restCommentsPost($_rest_comments): \ck/plenty-client\Model\Comment
+restCommentsPost($_rest_comments): \ck\Model\Comment
 ```
 
 Create a comment
@@ -214,16 +214,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CommentApi(
+$apiInstance = new ck\Api\CommentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_comments = new \ck/plenty-client\Model\RestCommentsPostRequest(); // \ck/plenty-client\Model\RestCommentsPostRequest
+$_rest_comments = new \ck\Model\RestCommentsPostRequest(); // \ck\Model\RestCommentsPostRequest
 
 try {
     $result = $apiInstance->restCommentsPost($_rest_comments);
@@ -237,11 +237,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_comments** | [**\ck/plenty-client\Model\RestCommentsPostRequest**](../Model/RestCommentsPostRequest.md)|  | [optional] |
+| **_rest_comments** | [**\ck\Model\RestCommentsPostRequest**](../Model/RestCommentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Comment**](../Model/Comment.md)
+[**\ck\Model\Comment**](../Model/Comment.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ try {
 ## `restCommentsReferenceTypeReferenceValueGet()`
 
 ```php
-restCommentsReferenceTypeReferenceValueGet($reference_type, $reference_value, $user_id, $is_visible_for_contact): \ck/plenty-client\Model\Comment[]
+restCommentsReferenceTypeReferenceValueGet($reference_type, $reference_value, $user_id, $is_visible_for_contact): \ck\Model\Comment[]
 ```
 
 List comments
@@ -274,10 +274,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\CommentApi(
+$apiInstance = new ck\Api\CommentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -307,7 +307,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Comment[]**](../Model/Comment.md)
+[**\ck\Model\Comment[]**](../Model/Comment.md)
 
 ### Authorization
 

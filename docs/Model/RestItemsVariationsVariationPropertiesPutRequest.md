@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **value_int** | **int** | The int value of the property value of the variation optional | [optional]
 **value_float** | **float** | The float value of the property value of the variation optional | [optional]
 **value_file** | **string** | The file value of the property value of the variation optional | [optional]
-**value_texts** | [**\ck/plenty-client\Model\VariationPropertyValueText[]**](VariationPropertyValueText.md) |  | [optional]
+**value_texts** | [**\ck\Model\VariationPropertyValueText[]**](VariationPropertyValueText.md) |  | [optional]
 **lang** | **string** | The language of the property value text |
 **value** | **string** | The text saved for the property of the type Text optional | [optional]
 

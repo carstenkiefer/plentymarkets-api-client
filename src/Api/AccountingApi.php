@@ -3,7 +3,7 @@
  * AccountingApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * AccountingApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -218,7 +218,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PostingAccounts[]
+     * @return \ck\Model\PostingAccounts[]
      */
     public function restAccountingLocationsExistingAccountsGet(
         string $contentType = self::contentTypes['restAccountingLocationsExistingAccountsGet'][0]
@@ -237,7 +237,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsExistingAccountsGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountingLocationsExistingAccountsGet'][0]
@@ -282,23 +282,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PostingAccounts[]' === '\SplFileObject') {
+                    if ('\ck\Model\PostingAccounts[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PostingAccounts[]' !== 'string') {
+                        if ('\ck\Model\PostingAccounts[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PostingAccounts[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PostingAccounts[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+            $returnType = '\ck\Model\PostingAccounts[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -319,7 +319,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PostingAccounts[]',
+                        '\ck\Model\PostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -365,7 +365,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsExistingAccountsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+        $returnType = '\ck\Model\PostingAccounts[]';
         $request = $this->restAccountingLocationsExistingAccountsGetRequest($contentType);
 
         return $this->client
@@ -497,13 +497,13 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RevenueAccountCountryConfiguration
+     * @return \ck\Model\RevenueAccountCountryConfiguration
      */
     public function restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGet(
         int $location_id,
         int $country_id,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGet'][0]
-    ): \ck/plenty-client\Model\RevenueAccountCountryConfiguration
+    ): \ck\Model\RevenueAccountCountryConfiguration
     {
         list($response) = $this->restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGetWithHttpInfo($location_id, $country_id, $contentType);
         return $response;
@@ -520,7 +520,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RevenueAccountCountryConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RevenueAccountCountryConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGetWithHttpInfo(
         int $location_id,
@@ -567,23 +567,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RevenueAccountCountryConfiguration' === '\SplFileObject') {
+                    if ('\ck\Model\RevenueAccountCountryConfiguration' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RevenueAccountCountryConfiguration' !== 'string') {
+                        if ('\ck\Model\RevenueAccountCountryConfiguration' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RevenueAccountCountryConfiguration', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RevenueAccountCountryConfiguration', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RevenueAccountCountryConfiguration';
+            $returnType = '\ck\Model\RevenueAccountCountryConfiguration';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -604,7 +604,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RevenueAccountCountryConfiguration',
+                        '\ck\Model\RevenueAccountCountryConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -658,7 +658,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RevenueAccountCountryConfiguration';
+        $returnType = '\ck\Model\RevenueAccountCountryConfiguration';
         $request = $this->restAccountingLocationsLocationIdCountriesCountryIdRevenueAccountsGetRequest($location_id, $country_id, $contentType);
 
         return $this->client
@@ -823,12 +823,12 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\DebtorAccountConfiguration
+     * @return \ck\Model\DebtorAccountConfiguration
      */
     public function restAccountingLocationsLocationIdDebtorAccountConfigurationsGet(
         int $location_id,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdDebtorAccountConfigurationsGet'][0]
-    ): \ck/plenty-client\Model\DebtorAccountConfiguration
+    ): \ck\Model\DebtorAccountConfiguration
     {
         list($response) = $this->restAccountingLocationsLocationIdDebtorAccountConfigurationsGetWithHttpInfo($location_id, $contentType);
         return $response;
@@ -844,7 +844,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\DebtorAccountConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\DebtorAccountConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdDebtorAccountConfigurationsGetWithHttpInfo(
         int $location_id,
@@ -890,23 +890,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\DebtorAccountConfiguration' === '\SplFileObject') {
+                    if ('\ck\Model\DebtorAccountConfiguration' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\DebtorAccountConfiguration' !== 'string') {
+                        if ('\ck\Model\DebtorAccountConfiguration' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\DebtorAccountConfiguration', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\DebtorAccountConfiguration', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\DebtorAccountConfiguration';
+            $returnType = '\ck\Model\DebtorAccountConfiguration';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -927,7 +927,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\DebtorAccountConfiguration',
+                        '\ck\Model\DebtorAccountConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -977,7 +977,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdDebtorAccountConfigurationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\DebtorAccountConfiguration';
+        $returnType = '\ck\Model\DebtorAccountConfiguration';
         $request = $this->restAccountingLocationsLocationIdDebtorAccountConfigurationsGetRequest($location_id, $contentType);
 
         return $this->client
@@ -1700,12 +1700,12 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AccountingLocation
+     * @return \ck\Model\AccountingLocation
      */
     public function restAccountingLocationsLocationIdGet(
         int $location_id,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdGet'][0]
-    ): \ck/plenty-client\Model\AccountingLocation
+    ): \ck\Model\AccountingLocation
     {
         list($response) = $this->restAccountingLocationsLocationIdGetWithHttpInfo($location_id, $contentType);
         return $response;
@@ -1721,7 +1721,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AccountingLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AccountingLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdGetWithHttpInfo(
         int $location_id,
@@ -1767,23 +1767,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AccountingLocation' === '\SplFileObject') {
+                    if ('\ck\Model\AccountingLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AccountingLocation' !== 'string') {
+                        if ('\ck\Model\AccountingLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AccountingLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AccountingLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AccountingLocation';
+            $returnType = '\ck\Model\AccountingLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1804,7 +1804,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AccountingLocation',
+                        '\ck\Model\AccountingLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1854,7 +1854,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AccountingLocation';
+        $returnType = '\ck\Model\AccountingLocation';
         $request = $this->restAccountingLocationsLocationIdGetRequest($location_id, $contentType);
 
         return $this->client
@@ -2002,7 +2002,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PostingAccounts[]
+     * @return \ck\Model\PostingAccounts[]
      */
     public function restAccountingLocationsLocationIdPostingAccountsGet(
         int $location_id,
@@ -2023,7 +2023,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdPostingAccountsGetWithHttpInfo(
         int $location_id,
@@ -2069,23 +2069,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PostingAccounts[]' === '\SplFileObject') {
+                    if ('\ck\Model\PostingAccounts[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PostingAccounts[]' !== 'string') {
+                        if ('\ck\Model\PostingAccounts[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PostingAccounts[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PostingAccounts[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+            $returnType = '\ck\Model\PostingAccounts[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2106,7 +2106,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PostingAccounts[]',
+                        '\ck\Model\PostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2156,7 +2156,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdPostingAccountsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+        $returnType = '\ck\Model\PostingAccounts[]';
         $request = $this->restAccountingLocationsLocationIdPostingAccountsGetRequest($location_id, $contentType);
 
         return $this->client
@@ -2304,12 +2304,12 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PostingKeyConfiguration
+     * @return \ck\Model\PostingKeyConfiguration
      */
     public function restAccountingLocationsLocationIdPostingKeyConfigurationsGet(
         int $location_id,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdPostingKeyConfigurationsGet'][0]
-    ): \ck/plenty-client\Model\PostingKeyConfiguration
+    ): \ck\Model\PostingKeyConfiguration
     {
         list($response) = $this->restAccountingLocationsLocationIdPostingKeyConfigurationsGetWithHttpInfo($location_id, $contentType);
         return $response;
@@ -2325,7 +2325,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PostingKeyConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PostingKeyConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdPostingKeyConfigurationsGetWithHttpInfo(
         int $location_id,
@@ -2371,23 +2371,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PostingKeyConfiguration' === '\SplFileObject') {
+                    if ('\ck\Model\PostingKeyConfiguration' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PostingKeyConfiguration' !== 'string') {
+                        if ('\ck\Model\PostingKeyConfiguration' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PostingKeyConfiguration', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PostingKeyConfiguration', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PostingKeyConfiguration';
+            $returnType = '\ck\Model\PostingKeyConfiguration';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2408,7 +2408,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PostingKeyConfiguration',
+                        '\ck\Model\PostingKeyConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2458,7 +2458,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdPostingKeyConfigurationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PostingKeyConfiguration';
+        $returnType = '\ck\Model\PostingKeyConfiguration';
         $request = $this->restAccountingLocationsLocationIdPostingKeyConfigurationsGetRequest($location_id, $contentType);
 
         return $this->client
@@ -2602,18 +2602,18 @@ class AccountingApi
      * Update an accounting location
      *
      * @param  int $location_id The ID of the accounting location (required)
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id _rest_accounting_locations_location_id (optional)
+     * @param  \ck\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id _rest_accounting_locations_location_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsLocationIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AccountingLocation
+     * @return \ck\Model\AccountingLocation
      */
     public function restAccountingLocationsLocationIdPut(
         int $location_id,
-        ?\ck/plenty-client\Model\RestAccountingLocationsLocationIdPutRequest $_rest_accounting_locations_location_id = null,
+        ?\ck\Model\RestAccountingLocationsLocationIdPutRequest $_rest_accounting_locations_location_id = null,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdPut'][0]
-    ): \ck/plenty-client\Model\AccountingLocation
+    ): \ck\Model\AccountingLocation
     {
         list($response) = $this->restAccountingLocationsLocationIdPutWithHttpInfo($location_id, $_rest_accounting_locations_location_id, $contentType);
         return $response;
@@ -2625,16 +2625,16 @@ class AccountingApi
      * Update an accounting location
      *
      * @param  int $location_id The ID of the accounting location (required)
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id (optional)
+     * @param  \ck\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsLocationIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AccountingLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AccountingLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdPutWithHttpInfo(
         int $location_id,
-        ?\ck/plenty-client\Model\RestAccountingLocationsLocationIdPutRequest $_rest_accounting_locations_location_id = null,
+        ?\ck\Model\RestAccountingLocationsLocationIdPutRequest $_rest_accounting_locations_location_id = null,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdPut'][0]
     ): array
     {
@@ -2677,23 +2677,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AccountingLocation' === '\SplFileObject') {
+                    if ('\ck\Model\AccountingLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AccountingLocation' !== 'string') {
+                        if ('\ck\Model\AccountingLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AccountingLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AccountingLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AccountingLocation';
+            $returnType = '\ck\Model\AccountingLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2714,7 +2714,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AccountingLocation',
+                        '\ck\Model\AccountingLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2730,7 +2730,7 @@ class AccountingApi
      * Update an accounting location
      *
      * @param  int $location_id The ID of the accounting location (required)
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id (optional)
+     * @param  \ck\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsLocationIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2738,7 +2738,7 @@ class AccountingApi
      */
     public function restAccountingLocationsLocationIdPutAsync(
         int $location_id,
-        ?\ck/plenty-client\Model\RestAccountingLocationsLocationIdPutRequest $_rest_accounting_locations_location_id = null,
+        ?\ck\Model\RestAccountingLocationsLocationIdPutRequest $_rest_accounting_locations_location_id = null,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdPut'][0]
     ): PromiseInterface
     {
@@ -2756,7 +2756,7 @@ class AccountingApi
      * Update an accounting location
      *
      * @param  int $location_id The ID of the accounting location (required)
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id (optional)
+     * @param  \ck\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsLocationIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2768,7 +2768,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AccountingLocation';
+        $returnType = '\ck\Model\AccountingLocation';
         $request = $this->restAccountingLocationsLocationIdPutRequest($location_id, $_rest_accounting_locations_location_id, $contentType);
 
         return $this->client
@@ -2811,7 +2811,7 @@ class AccountingApi
      * Create request for operation 'restAccountingLocationsLocationIdPut'
      *
      * @param  int $location_id The ID of the accounting location (required)
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id (optional)
+     * @param  \ck\Model\RestAccountingLocationsLocationIdPutRequest|null $_rest_accounting_locations_location_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsLocationIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2926,12 +2926,12 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RevenueAccountLocationConfiguration
+     * @return \ck\Model\RevenueAccountLocationConfiguration
      */
     public function restAccountingLocationsLocationIdRevenueAccountConfigurationsGet(
         int $location_id,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdRevenueAccountConfigurationsGet'][0]
-    ): \ck/plenty-client\Model\RevenueAccountLocationConfiguration
+    ): \ck\Model\RevenueAccountLocationConfiguration
     {
         list($response) = $this->restAccountingLocationsLocationIdRevenueAccountConfigurationsGetWithHttpInfo($location_id, $contentType);
         return $response;
@@ -2947,7 +2947,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RevenueAccountLocationConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RevenueAccountLocationConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdRevenueAccountConfigurationsGetWithHttpInfo(
         int $location_id,
@@ -2993,23 +2993,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RevenueAccountLocationConfiguration' === '\SplFileObject') {
+                    if ('\ck\Model\RevenueAccountLocationConfiguration' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RevenueAccountLocationConfiguration' !== 'string') {
+                        if ('\ck\Model\RevenueAccountLocationConfiguration' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RevenueAccountLocationConfiguration', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RevenueAccountLocationConfiguration', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RevenueAccountLocationConfiguration';
+            $returnType = '\ck\Model\RevenueAccountLocationConfiguration';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3030,7 +3030,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RevenueAccountLocationConfiguration',
+                        '\ck\Model\RevenueAccountLocationConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3080,7 +3080,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdRevenueAccountConfigurationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RevenueAccountLocationConfiguration';
+        $returnType = '\ck\Model\RevenueAccountLocationConfiguration';
         $request = $this->restAccountingLocationsLocationIdRevenueAccountConfigurationsGetRequest($location_id, $contentType);
 
         return $this->client
@@ -3228,12 +3228,12 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AccountingLocationSettings
+     * @return \ck\Model\AccountingLocationSettings
      */
     public function restAccountingLocationsLocationIdSettingsGet(
         int $location_id,
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdSettingsGet'][0]
-    ): \ck/plenty-client\Model\AccountingLocationSettings
+    ): \ck\Model\AccountingLocationSettings
     {
         list($response) = $this->restAccountingLocationsLocationIdSettingsGetWithHttpInfo($location_id, $contentType);
         return $response;
@@ -3249,7 +3249,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AccountingLocationSettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AccountingLocationSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdSettingsGetWithHttpInfo(
         int $location_id,
@@ -3295,23 +3295,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AccountingLocationSettings' === '\SplFileObject') {
+                    if ('\ck\Model\AccountingLocationSettings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AccountingLocationSettings' !== 'string') {
+                        if ('\ck\Model\AccountingLocationSettings' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AccountingLocationSettings', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AccountingLocationSettings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AccountingLocationSettings';
+            $returnType = '\ck\Model\AccountingLocationSettings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3332,7 +3332,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AccountingLocationSettings',
+                        '\ck\Model\AccountingLocationSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3382,7 +3382,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdSettingsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AccountingLocationSettings';
+        $returnType = '\ck\Model\AccountingLocationSettings';
         $request = $this->restAccountingLocationsLocationIdSettingsGetRequest($location_id, $contentType);
 
         return $this->client
@@ -3531,7 +3531,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PostingAccounts[]
+     * @return \ck\Model\PostingAccounts[]
      */
     public function restAccountingLocationsLocationIdTypePostingAccountsGet(
         int $location_id,
@@ -3554,7 +3554,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsLocationIdTypePostingAccountsGetWithHttpInfo(
         int $location_id,
@@ -3601,23 +3601,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PostingAccounts[]' === '\SplFileObject') {
+                    if ('\ck\Model\PostingAccounts[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PostingAccounts[]' !== 'string') {
+                        if ('\ck\Model\PostingAccounts[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PostingAccounts[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PostingAccounts[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+            $returnType = '\ck\Model\PostingAccounts[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3638,7 +3638,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PostingAccounts[]',
+                        '\ck\Model\PostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3692,7 +3692,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsLocationIdTypePostingAccountsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+        $returnType = '\ck\Model\PostingAccounts[]';
         $request = $this->restAccountingLocationsLocationIdTypePostingAccountsGetRequest($location_id, $type, $contentType);
 
         return $this->client
@@ -3852,17 +3852,17 @@ class AccountingApi
      *
      * Create an accounting location
      *
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations _rest_accounting_locations (optional)
+     * @param  \ck\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations _rest_accounting_locations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AccountingLocation
+     * @return \ck\Model\AccountingLocation
      */
     public function restAccountingLocationsPost(
-        ?\ck/plenty-client\Model\RestAccountingLocationsPostRequest $_rest_accounting_locations = null,
+        ?\ck\Model\RestAccountingLocationsPostRequest $_rest_accounting_locations = null,
         string $contentType = self::contentTypes['restAccountingLocationsPost'][0]
-    ): \ck/plenty-client\Model\AccountingLocation
+    ): \ck\Model\AccountingLocation
     {
         list($response) = $this->restAccountingLocationsPostWithHttpInfo($_rest_accounting_locations, $contentType);
         return $response;
@@ -3873,15 +3873,15 @@ class AccountingApi
      *
      * Create an accounting location
      *
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations (optional)
+     * @param  \ck\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AccountingLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AccountingLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestAccountingLocationsPostRequest $_rest_accounting_locations = null,
+        ?\ck\Model\RestAccountingLocationsPostRequest $_rest_accounting_locations = null,
         string $contentType = self::contentTypes['restAccountingLocationsPost'][0]
     ): array
     {
@@ -3924,23 +3924,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AccountingLocation' === '\SplFileObject') {
+                    if ('\ck\Model\AccountingLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AccountingLocation' !== 'string') {
+                        if ('\ck\Model\AccountingLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AccountingLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AccountingLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AccountingLocation';
+            $returnType = '\ck\Model\AccountingLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3961,7 +3961,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AccountingLocation',
+                        '\ck\Model\AccountingLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3976,14 +3976,14 @@ class AccountingApi
      *
      * Create an accounting location
      *
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations (optional)
+     * @param  \ck\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restAccountingLocationsPostAsync(
-        ?\ck/plenty-client\Model\RestAccountingLocationsPostRequest $_rest_accounting_locations = null,
+        ?\ck\Model\RestAccountingLocationsPostRequest $_rest_accounting_locations = null,
         string $contentType = self::contentTypes['restAccountingLocationsPost'][0]
     ): PromiseInterface
     {
@@ -4000,7 +4000,7 @@ class AccountingApi
      *
      * Create an accounting location
      *
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations (optional)
+     * @param  \ck\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4011,7 +4011,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AccountingLocation';
+        $returnType = '\ck\Model\AccountingLocation';
         $request = $this->restAccountingLocationsPostRequest($_rest_accounting_locations, $contentType);
 
         return $this->client
@@ -4053,7 +4053,7 @@ class AccountingApi
     /**
      * Create request for operation 'restAccountingLocationsPost'
      *
-     * @param  \ck/plenty-client\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations (optional)
+     * @param  \ck\Model\RestAccountingLocationsPostRequest|null $_rest_accounting_locations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restAccountingLocationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4151,7 +4151,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PostingAccounts[]
+     * @return \ck\Model\PostingAccounts[]
      */
     public function restAccountingLocationsPostingAccountsGet(
         string $contentType = self::contentTypes['restAccountingLocationsPostingAccountsGet'][0]
@@ -4170,7 +4170,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsPostingAccountsGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountingLocationsPostingAccountsGet'][0]
@@ -4215,23 +4215,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PostingAccounts[]' === '\SplFileObject') {
+                    if ('\ck\Model\PostingAccounts[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PostingAccounts[]' !== 'string') {
+                        if ('\ck\Model\PostingAccounts[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PostingAccounts[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PostingAccounts[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+            $returnType = '\ck\Model\PostingAccounts[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4252,7 +4252,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PostingAccounts[]',
+                        '\ck\Model\PostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4298,7 +4298,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsPostingAccountsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+        $returnType = '\ck\Model\PostingAccounts[]';
         $request = $this->restAccountingLocationsPostingAccountsGetRequest($contentType);
 
         return $this->client
@@ -4677,12 +4677,12 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PostingAccounts
+     * @return \ck\Model\PostingAccounts
      */
     public function restAccountingLocationsPostingAccountsIdGet(
         int $id,
         string $contentType = self::contentTypes['restAccountingLocationsPostingAccountsIdGet'][0]
-    ): \ck/plenty-client\Model\PostingAccounts
+    ): \ck\Model\PostingAccounts
     {
         list($response) = $this->restAccountingLocationsPostingAccountsIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -4698,7 +4698,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PostingAccounts, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PostingAccounts, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsPostingAccountsIdGetWithHttpInfo(
         int $id,
@@ -4744,23 +4744,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PostingAccounts' === '\SplFileObject') {
+                    if ('\ck\Model\PostingAccounts' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PostingAccounts' !== 'string') {
+                        if ('\ck\Model\PostingAccounts' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PostingAccounts', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PostingAccounts', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PostingAccounts';
+            $returnType = '\ck\Model\PostingAccounts';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4781,7 +4781,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PostingAccounts',
+                        '\ck\Model\PostingAccounts',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4831,7 +4831,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsPostingAccountsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PostingAccounts';
+        $returnType = '\ck\Model\PostingAccounts';
         $request = $this->restAccountingLocationsPostingAccountsIdGetRequest($id, $contentType);
 
         return $this->client
@@ -4978,7 +4978,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PostingAccounts[]
+     * @return \ck\Model\PostingAccounts[]
      */
     public function restAccountingLocationsPostingAccountsPost(
         string $contentType = self::contentTypes['restAccountingLocationsPostingAccountsPost'][0]
@@ -4997,7 +4997,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsPostingAccountsPostWithHttpInfo(
         string $contentType = self::contentTypes['restAccountingLocationsPostingAccountsPost'][0]
@@ -5042,23 +5042,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PostingAccounts[]' === '\SplFileObject') {
+                    if ('\ck\Model\PostingAccounts[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PostingAccounts[]' !== 'string') {
+                        if ('\ck\Model\PostingAccounts[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PostingAccounts[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PostingAccounts[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+            $returnType = '\ck\Model\PostingAccounts[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5079,7 +5079,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PostingAccounts[]',
+                        '\ck\Model\PostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5125,7 +5125,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsPostingAccountsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+        $returnType = '\ck\Model\PostingAccounts[]';
         $request = $this->restAccountingLocationsPostingAccountsPostRequest($contentType);
 
         return $this->client
@@ -5257,13 +5257,13 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response
+     * @return \ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response
      */
     public function restAccountingLocationsRevenueAccountConfigurationsGet(
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restAccountingLocationsRevenueAccountConfigurationsGet'][0]
-    ): \ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response
+    ): \ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response
     {
         list($response) = $this->restAccountingLocationsRevenueAccountConfigurationsGetWithHttpInfo($page, $items_per_page, $contentType);
         return $response;
@@ -5280,7 +5280,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsRevenueAccountConfigurationsGetWithHttpInfo(
         ?int $page = null,
@@ -5327,23 +5327,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response';
+            $returnType = '\ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5364,7 +5364,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response',
+                        '\ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5418,7 +5418,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsRevenueAccountConfigurationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response';
+        $returnType = '\ck\Model\RestAccountingLocationsRevenueAccountConfigurationsGet200Response';
         $request = $this->restAccountingLocationsRevenueAccountConfigurationsGetRequest($page, $items_per_page, $contentType);
 
         return $this->client
@@ -5575,7 +5575,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PostingAccounts[]
+     * @return \ck\Model\PostingAccounts[]
      */
     public function restAccountingLocationsWebstoreIdCountryIdPostingAccountsGet(
         int $country_id,
@@ -5600,7 +5600,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PostingAccounts[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingLocationsWebstoreIdCountryIdPostingAccountsGetWithHttpInfo(
         int $country_id,
@@ -5648,23 +5648,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PostingAccounts[]' === '\SplFileObject') {
+                    if ('\ck\Model\PostingAccounts[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PostingAccounts[]' !== 'string') {
+                        if ('\ck\Model\PostingAccounts[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PostingAccounts[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PostingAccounts[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+            $returnType = '\ck\Model\PostingAccounts[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5685,7 +5685,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PostingAccounts[]',
+                        '\ck\Model\PostingAccounts[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5743,7 +5743,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingLocationsWebstoreIdCountryIdPostingAccountsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PostingAccounts[]';
+        $returnType = '\ck\Model\PostingAccounts[]';
         $request = $this->restAccountingLocationsWebstoreIdCountryIdPostingAccountsGetRequest($country_id, $webstore_id, $webstore_id2, $contentType);
 
         return $this->client
@@ -5925,7 +5925,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AccountingLocation[]
+     * @return \ck\Model\AccountingLocation[]
      */
     public function restAccountingStoresLocationsGet(
         string $contentType = self::contentTypes['restAccountingStoresLocationsGet'][0]
@@ -5944,7 +5944,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AccountingLocation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AccountingLocation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingStoresLocationsGetWithHttpInfo(
         string $contentType = self::contentTypes['restAccountingStoresLocationsGet'][0]
@@ -5989,23 +5989,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AccountingLocation[]' === '\SplFileObject') {
+                    if ('\ck\Model\AccountingLocation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AccountingLocation[]' !== 'string') {
+                        if ('\ck\Model\AccountingLocation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AccountingLocation[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AccountingLocation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AccountingLocation[]';
+            $returnType = '\ck\Model\AccountingLocation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6026,7 +6026,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AccountingLocation[]',
+                        '\ck\Model\AccountingLocation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6072,7 +6072,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingStoresLocationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AccountingLocation[]';
+        $returnType = '\ck\Model\AccountingLocation[]';
         $request = $this->restAccountingStoresLocationsGetRequest($contentType);
 
         return $this->client
@@ -6203,7 +6203,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AccountingLocation[]
+     * @return \ck\Model\AccountingLocation[]
      */
     public function restAccountingStoresPlentyIdLocationsGet(
         int $plenty_id,
@@ -6224,7 +6224,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AccountingLocation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AccountingLocation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountingStoresPlentyIdLocationsGetWithHttpInfo(
         int $plenty_id,
@@ -6270,23 +6270,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AccountingLocation[]' === '\SplFileObject') {
+                    if ('\ck\Model\AccountingLocation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AccountingLocation[]' !== 'string') {
+                        if ('\ck\Model\AccountingLocation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AccountingLocation[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AccountingLocation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AccountingLocation[]';
+            $returnType = '\ck\Model\AccountingLocation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6307,7 +6307,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AccountingLocation[]',
+                        '\ck\Model\AccountingLocation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6357,7 +6357,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restAccountingStoresPlentyIdLocationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AccountingLocation[]';
+        $returnType = '\ck\Model\AccountingLocation[]';
         $request = $this->restAccountingStoresPlentyIdLocationsGetRequest($plenty_id, $contentType);
 
         return $this->client
@@ -6506,13 +6506,13 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AccountingLocation
+     * @return \ck\Model\AccountingLocation
      */
     public function restStoresPlentyIdLocationsGet(
         int $plenty_id,
         ?int $country_id = null,
         string $contentType = self::contentTypes['restStoresPlentyIdLocationsGet'][0]
-    ): \ck/plenty-client\Model\AccountingLocation
+    ): \ck\Model\AccountingLocation
     {
         list($response) = $this->restStoresPlentyIdLocationsGetWithHttpInfo($plenty_id, $country_id, $contentType);
         return $response;
@@ -6529,7 +6529,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AccountingLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AccountingLocation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restStoresPlentyIdLocationsGetWithHttpInfo(
         int $plenty_id,
@@ -6576,23 +6576,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AccountingLocation' === '\SplFileObject') {
+                    if ('\ck\Model\AccountingLocation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AccountingLocation' !== 'string') {
+                        if ('\ck\Model\AccountingLocation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AccountingLocation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AccountingLocation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AccountingLocation';
+            $returnType = '\ck\Model\AccountingLocation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6613,7 +6613,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AccountingLocation',
+                        '\ck\Model\AccountingLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6667,7 +6667,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restStoresPlentyIdLocationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AccountingLocation';
+        $returnType = '\ck\Model\AccountingLocation';
         $request = $this->restStoresPlentyIdLocationsGetRequest($plenty_id, $country_id, $contentType);
 
         return $this->client
@@ -6830,7 +6830,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestVatGet200Response
+     * @return \ck\Model\RestVatGet200Response
      */
     public function restVatGet(
         ?int $page = null,
@@ -6838,7 +6838,7 @@ class AccountingApi
         ?int $with = null,
         ?int $columns = null,
         string $contentType = self::contentTypes['restVatGet'][0]
-    ): \ck/plenty-client\Model\RestVatGet200Response
+    ): \ck\Model\RestVatGet200Response
     {
         list($response) = $this->restVatGetWithHttpInfo($page, $items_per_page, $with, $columns, $contentType);
         return $response;
@@ -6857,7 +6857,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestVatGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestVatGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatGetWithHttpInfo(
         ?int $page = null,
@@ -6906,23 +6906,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestVatGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestVatGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestVatGet200Response' !== 'string') {
+                        if ('\ck\Model\RestVatGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestVatGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestVatGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestVatGet200Response';
+            $returnType = '\ck\Model\RestVatGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6943,7 +6943,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestVatGet200Response',
+                        '\ck\Model\RestVatGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7005,7 +7005,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restVatGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestVatGet200Response';
+        $returnType = '\ck\Model\RestVatGet200Response';
         $request = $this->restVatGetRequest($page, $items_per_page, $with, $columns, $contentType);
 
         return $this->client
@@ -7189,7 +7189,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Vat
+     * @return \ck\Model\Vat
      */
     public function restVatLocationsLocationIdCountriesCountryIdDateDateGet(
         int $location_id,
@@ -7199,7 +7199,7 @@ class AccountingApi
         ?int $with = null,
         ?int $columns = null,
         string $contentType = self::contentTypes['restVatLocationsLocationIdCountriesCountryIdDateDateGet'][0]
-    ): \ck/plenty-client\Model\Vat
+    ): \ck\Model\Vat
     {
         list($response) = $this->restVatLocationsLocationIdCountriesCountryIdDateDateGetWithHttpInfo($location_id, $country_id, $start_date, $date, $with, $columns, $contentType);
         return $response;
@@ -7220,7 +7220,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Vat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Vat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatLocationsLocationIdCountriesCountryIdDateDateGetWithHttpInfo(
         int $location_id,
@@ -7271,23 +7271,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Vat' === '\SplFileObject') {
+                    if ('\ck\Model\Vat' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Vat' !== 'string') {
+                        if ('\ck\Model\Vat' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Vat', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Vat', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Vat';
+            $returnType = '\ck\Model\Vat';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7308,7 +7308,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Vat',
+                        '\ck\Model\Vat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7378,7 +7378,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restVatLocationsLocationIdCountriesCountryIdDateDateGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Vat';
+        $returnType = '\ck\Model\Vat';
         $request = $this->restVatLocationsLocationIdCountriesCountryIdDateDateGetRequest($location_id, $country_id, $start_date, $date, $with, $columns, $contentType);
 
         return $this->client
@@ -7605,7 +7605,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Vat[]
+     * @return \ck\Model\Vat[]
      */
     public function restVatLocationsLocationIdCountriesCountryIdGet(
         int $location_id,
@@ -7632,7 +7632,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Vat[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Vat[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatLocationsLocationIdCountriesCountryIdGetWithHttpInfo(
         int $location_id,
@@ -7681,23 +7681,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Vat[]' === '\SplFileObject') {
+                    if ('\ck\Model\Vat[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Vat[]' !== 'string') {
+                        if ('\ck\Model\Vat[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Vat[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Vat[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Vat[]';
+            $returnType = '\ck\Model\Vat[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7718,7 +7718,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Vat[]',
+                        '\ck\Model\Vat[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7780,7 +7780,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restVatLocationsLocationIdCountriesCountryIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Vat[]';
+        $returnType = '\ck\Model\Vat[]';
         $request = $this->restVatLocationsLocationIdCountriesCountryIdGetRequest($location_id, $country_id, $with, $columns, $contentType);
 
         return $this->client
@@ -8306,17 +8306,17 @@ class AccountingApi
      *
      * Create a VAT configuration
      *
-     * @param  \ck/plenty-client\Model\RestVatPostRequest|null $_rest_vat _rest_vat (optional)
+     * @param  \ck\Model\RestVatPostRequest|null $_rest_vat _rest_vat (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Vat
+     * @return \ck\Model\Vat
      */
     public function restVatPost(
-        ?\ck/plenty-client\Model\RestVatPostRequest $_rest_vat = null,
+        ?\ck\Model\RestVatPostRequest $_rest_vat = null,
         string $contentType = self::contentTypes['restVatPost'][0]
-    ): \ck/plenty-client\Model\Vat
+    ): \ck\Model\Vat
     {
         list($response) = $this->restVatPostWithHttpInfo($_rest_vat, $contentType);
         return $response;
@@ -8327,15 +8327,15 @@ class AccountingApi
      *
      * Create a VAT configuration
      *
-     * @param  \ck/plenty-client\Model\RestVatPostRequest|null $_rest_vat (optional)
+     * @param  \ck\Model\RestVatPostRequest|null $_rest_vat (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Vat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Vat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestVatPostRequest $_rest_vat = null,
+        ?\ck\Model\RestVatPostRequest $_rest_vat = null,
         string $contentType = self::contentTypes['restVatPost'][0]
     ): array
     {
@@ -8378,23 +8378,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Vat' === '\SplFileObject') {
+                    if ('\ck\Model\Vat' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Vat' !== 'string') {
+                        if ('\ck\Model\Vat' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Vat', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Vat', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Vat';
+            $returnType = '\ck\Model\Vat';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8415,7 +8415,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Vat',
+                        '\ck\Model\Vat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8430,14 +8430,14 @@ class AccountingApi
      *
      * Create a VAT configuration
      *
-     * @param  \ck/plenty-client\Model\RestVatPostRequest|null $_rest_vat (optional)
+     * @param  \ck\Model\RestVatPostRequest|null $_rest_vat (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restVatPostAsync(
-        ?\ck/plenty-client\Model\RestVatPostRequest $_rest_vat = null,
+        ?\ck\Model\RestVatPostRequest $_rest_vat = null,
         string $contentType = self::contentTypes['restVatPost'][0]
     ): PromiseInterface
     {
@@ -8454,7 +8454,7 @@ class AccountingApi
      *
      * Create a VAT configuration
      *
-     * @param  \ck/plenty-client\Model\RestVatPostRequest|null $_rest_vat (optional)
+     * @param  \ck\Model\RestVatPostRequest|null $_rest_vat (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8465,7 +8465,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restVatPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Vat';
+        $returnType = '\ck\Model\Vat';
         $request = $this->restVatPostRequest($_rest_vat, $contentType);
 
         return $this->client
@@ -8507,7 +8507,7 @@ class AccountingApi
     /**
      * Create request for operation 'restVatPost'
      *
-     * @param  \ck/plenty-client\Model\RestVatPostRequest|null $_rest_vat (optional)
+     * @param  \ck\Model\RestVatPostRequest|null $_rest_vat (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8607,13 +8607,13 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Vat
+     * @return \ck\Model\Vat
      */
     public function restVatStandardGet(
         ?int $plenty_id = null,
         ?string $started_at = null,
         string $contentType = self::contentTypes['restVatStandardGet'][0]
-    ): \ck/plenty-client\Model\Vat
+    ): \ck\Model\Vat
     {
         list($response) = $this->restVatStandardGetWithHttpInfo($plenty_id, $started_at, $contentType);
         return $response;
@@ -8630,7 +8630,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Vat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Vat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatStandardGetWithHttpInfo(
         ?int $plenty_id = null,
@@ -8677,23 +8677,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Vat' === '\SplFileObject') {
+                    if ('\ck\Model\Vat' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Vat' !== 'string') {
+                        if ('\ck\Model\Vat' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Vat', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Vat', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Vat';
+            $returnType = '\ck\Model\Vat';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8714,7 +8714,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Vat',
+                        '\ck\Model\Vat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8768,7 +8768,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restVatStandardGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Vat';
+        $returnType = '\ck\Model\Vat';
         $request = $this->restVatStandardGetRequest($plenty_id, $started_at, $contentType);
 
         return $this->client
@@ -8923,12 +8923,12 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Vat
+     * @return \ck\Model\Vat
      */
     public function restVatVatIdGet(
         int $vat_id,
         string $contentType = self::contentTypes['restVatVatIdGet'][0]
-    ): \ck/plenty-client\Model\Vat
+    ): \ck\Model\Vat
     {
         list($response) = $this->restVatVatIdGetWithHttpInfo($vat_id, $contentType);
         return $response;
@@ -8944,7 +8944,7 @@ class AccountingApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Vat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Vat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatVatIdGetWithHttpInfo(
         int $vat_id,
@@ -8990,23 +8990,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Vat' === '\SplFileObject') {
+                    if ('\ck\Model\Vat' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Vat' !== 'string') {
+                        if ('\ck\Model\Vat' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Vat', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Vat', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Vat';
+            $returnType = '\ck\Model\Vat';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9027,7 +9027,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Vat',
+                        '\ck\Model\Vat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9077,7 +9077,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restVatVatIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Vat';
+        $returnType = '\ck\Model\Vat';
         $request = $this->restVatVatIdGetRequest($vat_id, $contentType);
 
         return $this->client
@@ -9221,18 +9221,18 @@ class AccountingApi
      * Update a VAT configuration
      *
      * @param  int $vat_id vat_id (required)
-     * @param  \ck/plenty-client\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id _rest_vat_vat_id (optional)
+     * @param  \ck\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id _rest_vat_vat_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatVatIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Vat
+     * @return \ck\Model\Vat
      */
     public function restVatVatIdPut(
         int $vat_id,
-        ?\ck/plenty-client\Model\RestVatVatIdPutRequest $_rest_vat_vat_id = null,
+        ?\ck\Model\RestVatVatIdPutRequest $_rest_vat_vat_id = null,
         string $contentType = self::contentTypes['restVatVatIdPut'][0]
-    ): \ck/plenty-client\Model\Vat
+    ): \ck\Model\Vat
     {
         list($response) = $this->restVatVatIdPutWithHttpInfo($vat_id, $_rest_vat_vat_id, $contentType);
         return $response;
@@ -9244,16 +9244,16 @@ class AccountingApi
      * Update a VAT configuration
      *
      * @param  int $vat_id (required)
-     * @param  \ck/plenty-client\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id (optional)
+     * @param  \ck\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatVatIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Vat, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Vat, HTTP status code, HTTP response headers (array of strings)
      */
     public function restVatVatIdPutWithHttpInfo(
         int $vat_id,
-        ?\ck/plenty-client\Model\RestVatVatIdPutRequest $_rest_vat_vat_id = null,
+        ?\ck\Model\RestVatVatIdPutRequest $_rest_vat_vat_id = null,
         string $contentType = self::contentTypes['restVatVatIdPut'][0]
     ): array
     {
@@ -9296,23 +9296,23 @@ class AccountingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Vat' === '\SplFileObject') {
+                    if ('\ck\Model\Vat' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Vat' !== 'string') {
+                        if ('\ck\Model\Vat' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Vat', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Vat', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Vat';
+            $returnType = '\ck\Model\Vat';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9333,7 +9333,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Vat',
+                        '\ck\Model\Vat',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9349,7 +9349,7 @@ class AccountingApi
      * Update a VAT configuration
      *
      * @param  int $vat_id (required)
-     * @param  \ck/plenty-client\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id (optional)
+     * @param  \ck\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatVatIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9357,7 +9357,7 @@ class AccountingApi
      */
     public function restVatVatIdPutAsync(
         int $vat_id,
-        ?\ck/plenty-client\Model\RestVatVatIdPutRequest $_rest_vat_vat_id = null,
+        ?\ck\Model\RestVatVatIdPutRequest $_rest_vat_vat_id = null,
         string $contentType = self::contentTypes['restVatVatIdPut'][0]
     ): PromiseInterface
     {
@@ -9375,7 +9375,7 @@ class AccountingApi
      * Update a VAT configuration
      *
      * @param  int $vat_id (required)
-     * @param  \ck/plenty-client\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id (optional)
+     * @param  \ck\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatVatIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9387,7 +9387,7 @@ class AccountingApi
         string $contentType = self::contentTypes['restVatVatIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Vat';
+        $returnType = '\ck\Model\Vat';
         $request = $this->restVatVatIdPutRequest($vat_id, $_rest_vat_vat_id, $contentType);
 
         return $this->client
@@ -9430,7 +9430,7 @@ class AccountingApi
      * Create request for operation 'restVatVatIdPut'
      *
      * @param  int $vat_id (required)
-     * @param  \ck/plenty-client\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id (optional)
+     * @param  \ck\Model\RestVatVatIdPutRequest|null $_rest_vat_vat_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restVatVatIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

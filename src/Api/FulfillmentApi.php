@@ -3,7 +3,7 @@
  * FulfillmentApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * FulfillmentApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -132,7 +132,7 @@ class FulfillmentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PickingOrderItem[]
+     * @return \ck\Model\PickingOrderItem[]
      */
     public function restFulfillmentPicklistPickingOrderItemGet(
         string $contentType = self::contentTypes['restFulfillmentPicklistPickingOrderItemGet'][0]
@@ -149,7 +149,7 @@ class FulfillmentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PickingOrderItem[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PickingOrderItem[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFulfillmentPicklistPickingOrderItemGetWithHttpInfo(
         string $contentType = self::contentTypes['restFulfillmentPicklistPickingOrderItemGet'][0]
@@ -194,23 +194,23 @@ class FulfillmentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PickingOrderItem[]' === '\SplFileObject') {
+                    if ('\ck\Model\PickingOrderItem[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PickingOrderItem[]' !== 'string') {
+                        if ('\ck\Model\PickingOrderItem[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PickingOrderItem[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PickingOrderItem[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PickingOrderItem[]';
+            $returnType = '\ck\Model\PickingOrderItem[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -231,7 +231,7 @@ class FulfillmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PickingOrderItem[]',
+                        '\ck\Model\PickingOrderItem[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class FulfillmentApi
         string $contentType = self::contentTypes['restFulfillmentPicklistPickingOrderItemGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PickingOrderItem[]';
+        $returnType = '\ck\Model\PickingOrderItem[]';
         $request = $this->restFulfillmentPicklistPickingOrderItemGetRequest($contentType);
 
         return $this->client
@@ -402,12 +402,12 @@ class FulfillmentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PickingOrderItem
+     * @return \ck\Model\PickingOrderItem
      */
     public function restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGet(
         int $picking_order_item_id,
         string $contentType = self::contentTypes['restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGet'][0]
-    ): \ck/plenty-client\Model\PickingOrderItem
+    ): \ck\Model\PickingOrderItem
     {
         list($response) = $this->restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGetWithHttpInfo($picking_order_item_id, $contentType);
         return $response;
@@ -421,7 +421,7 @@ class FulfillmentApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PickingOrderItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PickingOrderItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGetWithHttpInfo(
         int $picking_order_item_id,
@@ -467,23 +467,23 @@ class FulfillmentApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PickingOrderItem' === '\SplFileObject') {
+                    if ('\ck\Model\PickingOrderItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PickingOrderItem' !== 'string') {
+                        if ('\ck\Model\PickingOrderItem' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PickingOrderItem', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PickingOrderItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PickingOrderItem';
+            $returnType = '\ck\Model\PickingOrderItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -504,7 +504,7 @@ class FulfillmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PickingOrderItem',
+                        '\ck\Model\PickingOrderItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class FulfillmentApi
         string $contentType = self::contentTypes['restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PickingOrderItem';
+        $returnType = '\ck\Model\PickingOrderItem';
         $request = $this->restFulfillmentPicklistPickingOrderItemPickingOrderItemIdGetRequest($picking_order_item_id, $contentType);
 
         return $this->client

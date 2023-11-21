@@ -3,7 +3,7 @@
  * PlentyMarketplaceApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * PlentyMarketplaceApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,7 +130,7 @@ class PlentyMarketplaceApi
      *
      * plentyMarketplace login
      *
-     * @param  \ck/plenty-client\Model\RestIoCustomerLoginPostRequest $body body (required)
+     * @param  \ck\Model\RestIoCustomerLoginPostRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restIoCustomerLoginPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -138,7 +138,7 @@ class PlentyMarketplaceApi
      * @return void
      */
     public function restIoCustomerLoginPost(
-        \ck/plenty-client\Model\RestIoCustomerLoginPostRequest $body,
+        \ck\Model\RestIoCustomerLoginPostRequest $body,
         string $contentType = self::contentTypes['restIoCustomerLoginPost'][0]
     ): void
     {
@@ -150,7 +150,7 @@ class PlentyMarketplaceApi
      *
      * plentyMarketplace login
      *
-     * @param  \ck/plenty-client\Model\RestIoCustomerLoginPostRequest $body (required)
+     * @param  \ck\Model\RestIoCustomerLoginPostRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restIoCustomerLoginPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -158,7 +158,7 @@ class PlentyMarketplaceApi
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function restIoCustomerLoginPostWithHttpInfo(
-        \ck/plenty-client\Model\RestIoCustomerLoginPostRequest $body,
+        \ck\Model\RestIoCustomerLoginPostRequest $body,
         string $contentType = self::contentTypes['restIoCustomerLoginPost'][0]
     ): array
     {
@@ -213,14 +213,14 @@ class PlentyMarketplaceApi
      *
      * plentyMarketplace login
      *
-     * @param  \ck/plenty-client\Model\RestIoCustomerLoginPostRequest $body (required)
+     * @param  \ck\Model\RestIoCustomerLoginPostRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restIoCustomerLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restIoCustomerLoginPostAsync(
-        \ck/plenty-client\Model\RestIoCustomerLoginPostRequest $body,
+        \ck\Model\RestIoCustomerLoginPostRequest $body,
         string $contentType = self::contentTypes['restIoCustomerLoginPost'][0]
     ): PromiseInterface
     {
@@ -237,7 +237,7 @@ class PlentyMarketplaceApi
      *
      * plentyMarketplace login
      *
-     * @param  \ck/plenty-client\Model\RestIoCustomerLoginPostRequest $body (required)
+     * @param  \ck\Model\RestIoCustomerLoginPostRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restIoCustomerLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -277,7 +277,7 @@ class PlentyMarketplaceApi
     /**
      * Create request for operation 'restIoCustomerLoginPost'
      *
-     * @param  \ck/plenty-client\Model\RestIoCustomerLoginPostRequest $body (required)
+     * @param  \ck\Model\RestIoCustomerLoginPostRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restIoCustomerLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -374,7 +374,7 @@ class PlentyMarketplaceApi
      * Change plugin visibility
      *
      * @param  string $plenty_id Cookie from a successful login. (required)
-     * @param  \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body body (required)
+     * @param  \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPartnerPortalPartnerPluginVisibilityPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -383,7 +383,7 @@ class PlentyMarketplaceApi
      */
     public function restPartnerPortalPartnerPluginVisibilityPost(
         string $plenty_id,
-        \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body,
+        \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body,
         string $contentType = self::contentTypes['restPartnerPortalPartnerPluginVisibilityPost'][0]
     ): void
     {
@@ -396,7 +396,7 @@ class PlentyMarketplaceApi
      * Change plugin visibility
      *
      * @param  string $plenty_id Cookie from a successful login. (required)
-     * @param  \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body (required)
+     * @param  \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPartnerPortalPartnerPluginVisibilityPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -405,7 +405,7 @@ class PlentyMarketplaceApi
      */
     public function restPartnerPortalPartnerPluginVisibilityPostWithHttpInfo(
         string $plenty_id,
-        \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body,
+        \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body,
         string $contentType = self::contentTypes['restPartnerPortalPartnerPluginVisibilityPost'][0]
     ): array
     {
@@ -461,7 +461,7 @@ class PlentyMarketplaceApi
      * Change plugin visibility
      *
      * @param  string $plenty_id Cookie from a successful login. (required)
-     * @param  \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body (required)
+     * @param  \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPartnerPortalPartnerPluginVisibilityPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -469,7 +469,7 @@ class PlentyMarketplaceApi
      */
     public function restPartnerPortalPartnerPluginVisibilityPostAsync(
         string $plenty_id,
-        \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body,
+        \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body,
         string $contentType = self::contentTypes['restPartnerPortalPartnerPluginVisibilityPost'][0]
     ): PromiseInterface
     {
@@ -487,7 +487,7 @@ class PlentyMarketplaceApi
      * Change plugin visibility
      *
      * @param  string $plenty_id Cookie from a successful login. (required)
-     * @param  \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body (required)
+     * @param  \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPartnerPortalPartnerPluginVisibilityPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -529,7 +529,7 @@ class PlentyMarketplaceApi
      * Create request for operation 'restPartnerPortalPartnerPluginVisibilityPost'
      *
      * @param  string $plenty_id Cookie from a successful login. (required)
-     * @param  \ck/plenty-client\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body (required)
+     * @param  \ck\Model\RestPartnerPortalPartnerPluginVisibilityPostRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPartnerPortalPartnerPluginVisibilityPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

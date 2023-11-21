@@ -1,4 +1,4 @@
-# ck/plenty-client\BatchApi
+# ck\BatchApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -25,16 +25,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\BatchApi(
+$apiInstance = new ck\Api\BatchApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_batch = new \ck/plenty-client\Model\RestBatchGetRequest(); // \ck/plenty-client\Model\RestBatchGetRequest
+$_rest_batch = new \ck\Model\RestBatchGetRequest(); // \ck\Model\RestBatchGetRequest
 
 try {
     $result = $apiInstance->restBatchGet($_rest_batch);
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_batch** | [**\ck/plenty-client\Model\RestBatchGetRequest**](../Model/RestBatchGetRequest.md)|  | [optional] |
+| **_rest_batch** | [**\ck\Model\RestBatchGetRequest**](../Model/RestBatchGetRequest.md)|  | [optional] |
 
 ### Return type
 

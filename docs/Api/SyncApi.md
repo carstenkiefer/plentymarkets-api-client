@@ -1,4 +1,4 @@
-# ck/plenty-client\SyncApi
+# ck\SyncApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restElasticSyncDocumentGet()`
 
 ```php
-restElasticSyncDocumentGet($key): \ck/plenty-client\Model\StorageObject
+restElasticSyncDocumentGet($key): \ck\Model\StorageObject
 ```
 
 Get a single storage object from sync documents
@@ -29,10 +29,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SyncApi(
+$apiInstance = new ck\Api\SyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -56,7 +56,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\StorageObject**](../Model/StorageObject.md)
+[**\ck\Model\StorageObject**](../Model/StorageObject.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ try {
 ## `restElasticSyncDocumentPost()`
 
 ```php
-restElasticSyncDocumentPost($key): \ck/plenty-client\Model\StorageObject
+restElasticSyncDocumentPost($key): \ck\Model\StorageObject
 ```
 
 Upload a document to sync directory
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SyncApi(
+$apiInstance = new ck\Api\SyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\StorageObject**](../Model/StorageObject.md)
+[**\ck\Model\StorageObject**](../Model/StorageObject.md)
 
 ### Authorization
 
@@ -149,10 +149,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SyncApi(
+$apiInstance = new ck\Api\SyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -209,10 +209,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SyncApi(
+$apiInstance = new ck\Api\SyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -254,7 +254,7 @@ try {
 ## `restElasticSyncDocumentsGet()`
 
 ```php
-restElasticSyncDocumentsGet($continuation_token): \ck/plenty-client\Model\StorageObjectList
+restElasticSyncDocumentsGet($continuation_token): \ck\Model\StorageObjectList
 ```
 
 List documents for a single sync
@@ -269,10 +269,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\SyncApi(
+$apiInstance = new ck\Api\SyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -296,7 +296,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\StorageObjectList**](../Model/StorageObjectList.md)
+[**\ck\Model\StorageObjectList**](../Model/StorageObjectList.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# ck/plenty-client\UserApi
+# ck\UserApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restBackendUserUserIdGet()`
 
 ```php
-restBackendUserUserIdGet($user_id): \ck/plenty-client\Model\User
+restBackendUserUserIdGet($user_id): \ck\Model\User
 ```
 
 
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\UserApi(
+$apiInstance = new ck\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\User**](../Model/User.md)
+[**\ck\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `restBackendUsersGet()`
 
 ```php
-restBackendUsersGet(): \ck/plenty-client\Model\User[]
+restBackendUsersGet(): \ck\Model\User[]
 ```
 
 
@@ -86,10 +86,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\UserApi(
+$apiInstance = new ck\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -110,7 +110,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\User[]**](../Model/User.md)
+[**\ck\Model\User[]**](../Model/User.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ This endpoint does not need any parameter.
 ## `restBackendUsersSearchNameNameGet()`
 
 ```php
-restBackendUsersSearchNameNameGet($name): \ck/plenty-client\Model\User[]
+restBackendUsersSearchNameNameGet($name): \ck\Model\User[]
 ```
 
 Find all users having a name or username like the given one.
@@ -141,10 +141,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\UserApi(
+$apiInstance = new ck\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -168,7 +168,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\User[]**](../Model/User.md)
+[**\ck\Model\User[]**](../Model/User.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ try {
 ## `restUserBackendPluginsetGet()`
 
 ```php
-restUserBackendPluginsetGet(): \ck/plenty-client\Model\PluginSet
+restUserBackendPluginsetGet(): \ck\Model\PluginSet
 ```
 
 get the backend plugin set for user
@@ -199,10 +199,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\UserApi(
+$apiInstance = new ck\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -223,7 +223,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\PluginSet**](../Model/PluginSet.md)
+[**\ck\Model\PluginSet**](../Model/PluginSet.md)
 
 ### Authorization
 
@@ -254,10 +254,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\UserApi(
+$apiInstance = new ck\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -309,10 +309,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\UserApi(
+$apiInstance = new ck\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

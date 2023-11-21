@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestTagsPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,9 +60,9 @@ class RestTagsPostRequest implements ModelInterface, ArrayAccess, JsonSerializab
     protected static array $openAPITypes = [
         'tag_name' => 'string',
         'color' => 'string',
-        'availabilities' => '\ck/plenty-client\Model\TagAvailability[]',
+        'availabilities' => '\ck\Model\TagAvailability[]',
         'tag_type' => 'string',
-        'names' => '\ck/plenty-client\Model\TagName[]',
+        'names' => '\ck\Model\TagName[]',
         'tag_lang' => 'string'
     ];
 
@@ -391,7 +391,7 @@ class RestTagsPostRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Gets availabilities
      *
-     * @return \ck/plenty-client\Model\TagAvailability[]|null
+     * @return \ck\Model\TagAvailability[]|null
      */
     public function getAvailabilities(): ?array
     {
@@ -401,7 +401,7 @@ class RestTagsPostRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Sets availabilities
      *
-     * @param \ck/plenty-client\Model\TagAvailability[]|null $availabilities availabilities
+     * @param \ck\Model\TagAvailability[]|null $availabilities availabilities
      *
      * @return $this
      */
@@ -445,7 +445,7 @@ class RestTagsPostRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Gets names
      *
-     * @return \ck/plenty-client\Model\TagName[]
+     * @return \ck\Model\TagName[]
      */
     public function getNames(): array
     {
@@ -455,7 +455,7 @@ class RestTagsPostRequest implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Sets names
      *
-     * @param \ck/plenty-client\Model\TagName[] $names names
+     * @param \ck\Model\TagName[] $names names
      *
      * @return $this
      */

@@ -3,7 +3,7 @@
  * FeedbackApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * FeedbackApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -455,13 +455,13 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\FeedbackComment
+     * @return \ck\Model\FeedbackComment
      */
     public function restFeedbacksCommentCommentIdGet(
         int $feedback_comment_id,
         int $comment_id,
         string $contentType = self::contentTypes['restFeedbacksCommentCommentIdGet'][0]
-    ): \ck/plenty-client\Model\FeedbackComment
+    ): \ck\Model\FeedbackComment
     {
         list($response) = $this->restFeedbacksCommentCommentIdGetWithHttpInfo($feedback_comment_id, $comment_id, $contentType);
         return $response;
@@ -478,7 +478,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\FeedbackComment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\FeedbackComment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksCommentCommentIdGetWithHttpInfo(
         int $feedback_comment_id,
@@ -525,23 +525,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\FeedbackComment' === '\SplFileObject') {
+                    if ('\ck\Model\FeedbackComment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\FeedbackComment' !== 'string') {
+                        if ('\ck\Model\FeedbackComment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\FeedbackComment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\FeedbackComment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\FeedbackComment';
+            $returnType = '\ck\Model\FeedbackComment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -562,7 +562,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\FeedbackComment',
+                        '\ck\Model\FeedbackComment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -616,7 +616,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksCommentCommentIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\FeedbackComment';
+        $returnType = '\ck\Model\FeedbackComment';
         $request = $this->restFeedbacksCommentCommentIdGetRequest($feedback_comment_id, $comment_id, $contentType);
 
         return $this->client
@@ -784,14 +784,14 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\FeedbackComment
+     * @return \ck\Model\FeedbackComment
      */
     public function restFeedbacksCommentPost(
         string $message,
         int $comment_relation_target_type_id,
         int $comment_relation_target_id,
         string $contentType = self::contentTypes['restFeedbacksCommentPost'][0]
-    ): \ck/plenty-client\Model\FeedbackComment
+    ): \ck\Model\FeedbackComment
     {
         list($response) = $this->restFeedbacksCommentPostWithHttpInfo($message, $comment_relation_target_type_id, $comment_relation_target_id, $contentType);
         return $response;
@@ -809,7 +809,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\FeedbackComment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\FeedbackComment, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksCommentPostWithHttpInfo(
         string $message,
@@ -857,23 +857,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\FeedbackComment' === '\SplFileObject') {
+                    if ('\ck\Model\FeedbackComment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\FeedbackComment' !== 'string') {
+                        if ('\ck\Model\FeedbackComment' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\FeedbackComment', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\FeedbackComment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\FeedbackComment';
+            $returnType = '\ck\Model\FeedbackComment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -894,7 +894,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\FeedbackComment',
+                        '\ck\Model\FeedbackComment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -952,7 +952,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksCommentPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\FeedbackComment';
+        $returnType = '\ck\Model\FeedbackComment';
         $request = $this->restFeedbacksCommentPostRequest($message, $comment_relation_target_type_id, $comment_relation_target_id, $contentType);
 
         return $this->client
@@ -1136,7 +1136,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\FeedbackComment[]
+     * @return \ck\Model\FeedbackComment[]
      */
     public function restFeedbacksCommentsGet(
         string $contentType = self::contentTypes['restFeedbacksCommentsGet'][0]
@@ -1155,7 +1155,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\FeedbackComment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\FeedbackComment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksCommentsGetWithHttpInfo(
         string $contentType = self::contentTypes['restFeedbacksCommentsGet'][0]
@@ -1200,23 +1200,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\FeedbackComment[]' === '\SplFileObject') {
+                    if ('\ck\Model\FeedbackComment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\FeedbackComment[]' !== 'string') {
+                        if ('\ck\Model\FeedbackComment[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\FeedbackComment[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\FeedbackComment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\FeedbackComment[]';
+            $returnType = '\ck\Model\FeedbackComment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1237,7 +1237,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\FeedbackComment[]',
+                        '\ck\Model\FeedbackComment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1283,7 +1283,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksCommentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\FeedbackComment[]';
+        $returnType = '\ck\Model\FeedbackComment[]';
         $request = $this->restFeedbacksCommentsGetRequest($contentType);
 
         return $this->client
@@ -1910,12 +1910,12 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Feedback
+     * @return \ck\Model\Feedback
      */
     public function restFeedbacksFeedbackFeedbackIdGet(
         int $feedback_id,
         string $contentType = self::contentTypes['restFeedbacksFeedbackFeedbackIdGet'][0]
-    ): \ck/plenty-client\Model\Feedback
+    ): \ck\Model\Feedback
     {
         list($response) = $this->restFeedbacksFeedbackFeedbackIdGetWithHttpInfo($feedback_id, $contentType);
         return $response;
@@ -1931,7 +1931,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Feedback, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Feedback, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbackFeedbackIdGetWithHttpInfo(
         int $feedback_id,
@@ -1977,23 +1977,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Feedback' === '\SplFileObject') {
+                    if ('\ck\Model\Feedback' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Feedback' !== 'string') {
+                        if ('\ck\Model\Feedback' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Feedback', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Feedback', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Feedback';
+            $returnType = '\ck\Model\Feedback';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2014,7 +2014,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Feedback',
+                        '\ck\Model\Feedback',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2064,7 +2064,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksFeedbackFeedbackIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Feedback';
+        $returnType = '\ck\Model\Feedback';
         $request = $this->restFeedbacksFeedbackFeedbackIdGetRequest($feedback_id, $contentType);
 
         return $this->client
@@ -2212,12 +2212,12 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Feedback
+     * @return \ck\Model\Feedback
      */
     public function restFeedbacksFeedbackFeedbackIdPut(
         int $feedback_id,
         string $contentType = self::contentTypes['restFeedbacksFeedbackFeedbackIdPut'][0]
-    ): \ck/plenty-client\Model\Feedback
+    ): \ck\Model\Feedback
     {
         list($response) = $this->restFeedbacksFeedbackFeedbackIdPutWithHttpInfo($feedback_id, $contentType);
         return $response;
@@ -2233,7 +2233,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Feedback, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Feedback, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbackFeedbackIdPutWithHttpInfo(
         int $feedback_id,
@@ -2279,23 +2279,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Feedback' === '\SplFileObject') {
+                    if ('\ck\Model\Feedback' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Feedback' !== 'string') {
+                        if ('\ck\Model\Feedback' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Feedback', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Feedback', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Feedback';
+            $returnType = '\ck\Model\Feedback';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2316,7 +2316,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Feedback',
+                        '\ck\Model\Feedback',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2366,7 +2366,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksFeedbackFeedbackIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Feedback';
+        $returnType = '\ck\Model\Feedback';
         $request = $this->restFeedbacksFeedbackFeedbackIdPutRequest($feedback_id, $contentType);
 
         return $this->client
@@ -2517,7 +2517,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Feedback
+     * @return \ck\Model\Feedback
      */
     public function restFeedbacksFeedbackPost(
         ?string $title = null,
@@ -2525,7 +2525,7 @@ class FeedbackApi
         ?string $feedback_relation_target_type_id = null,
         ?string $feedback_relation_source_type_id = null,
         string $contentType = self::contentTypes['restFeedbacksFeedbackPost'][0]
-    ): \ck/plenty-client\Model\Feedback
+    ): \ck\Model\Feedback
     {
         list($response) = $this->restFeedbacksFeedbackPostWithHttpInfo($title, $feedback_relation_target_id, $feedback_relation_target_type_id, $feedback_relation_source_type_id, $contentType);
         return $response;
@@ -2544,7 +2544,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Feedback, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Feedback, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbackPostWithHttpInfo(
         ?string $title = null,
@@ -2593,23 +2593,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Feedback' === '\SplFileObject') {
+                    if ('\ck\Model\Feedback' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Feedback' !== 'string') {
+                        if ('\ck\Model\Feedback' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Feedback', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Feedback', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Feedback';
+            $returnType = '\ck\Model\Feedback';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2630,7 +2630,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Feedback',
+                        '\ck\Model\Feedback',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2692,7 +2692,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksFeedbackPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Feedback';
+        $returnType = '\ck\Model\Feedback';
         $request = $this->restFeedbacksFeedbackPostRequest($title, $feedback_relation_target_id, $feedback_relation_target_type_id, $feedback_relation_source_type_id, $contentType);
 
         return $this->client
@@ -2871,12 +2871,12 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Feedback
+     * @return \ck\Model\Feedback
      */
     public function restFeedbacksFeedbackRepliesFeedbackIdGet(
         int $feedback_id,
         string $contentType = self::contentTypes['restFeedbacksFeedbackRepliesFeedbackIdGet'][0]
-    ): \ck/plenty-client\Model\Feedback
+    ): \ck\Model\Feedback
     {
         list($response) = $this->restFeedbacksFeedbackRepliesFeedbackIdGetWithHttpInfo($feedback_id, $contentType);
         return $response;
@@ -2892,7 +2892,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Feedback, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Feedback, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbackRepliesFeedbackIdGetWithHttpInfo(
         int $feedback_id,
@@ -2938,23 +2938,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Feedback' === '\SplFileObject') {
+                    if ('\ck\Model\Feedback' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Feedback' !== 'string') {
+                        if ('\ck\Model\Feedback' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Feedback', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Feedback', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Feedback';
+            $returnType = '\ck\Model\Feedback';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2975,7 +2975,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Feedback',
+                        '\ck\Model\Feedback',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3025,7 +3025,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksFeedbackRepliesFeedbackIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Feedback';
+        $returnType = '\ck\Model\Feedback';
         $request = $this->restFeedbacksFeedbackRepliesFeedbackIdGetRequest($feedback_id, $contentType);
 
         return $this->client
@@ -3172,7 +3172,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Feedback[]
+     * @return \ck\Model\Feedback[]
      */
     public function restFeedbacksFeedbacksGet(
         string $contentType = self::contentTypes['restFeedbacksFeedbacksGet'][0]
@@ -3191,7 +3191,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Feedback[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Feedback[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbacksGetWithHttpInfo(
         string $contentType = self::contentTypes['restFeedbacksFeedbacksGet'][0]
@@ -3236,23 +3236,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Feedback[]' === '\SplFileObject') {
+                    if ('\ck\Model\Feedback[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Feedback[]' !== 'string') {
+                        if ('\ck\Model\Feedback[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Feedback[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Feedback[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Feedback[]';
+            $returnType = '\ck\Model\Feedback[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3273,7 +3273,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Feedback[]',
+                        '\ck\Model\Feedback[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3319,7 +3319,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksFeedbacksGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Feedback[]';
+        $returnType = '\ck\Model\Feedback[]';
         $request = $this->restFeedbacksFeedbacksGetRequest($contentType);
 
         return $this->client
@@ -3451,7 +3451,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Feedback[]
+     * @return \ck\Model\Feedback[]
      */
     public function restFeedbacksFeedbacksVisibilityPut(
         string $feedback_ids,
@@ -3474,7 +3474,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Feedback[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Feedback[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksFeedbacksVisibilityPutWithHttpInfo(
         string $feedback_ids,
@@ -3521,23 +3521,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Feedback[]' === '\SplFileObject') {
+                    if ('\ck\Model\Feedback[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Feedback[]' !== 'string') {
+                        if ('\ck\Model\Feedback[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Feedback[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Feedback[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Feedback[]';
+            $returnType = '\ck\Model\Feedback[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3558,7 +3558,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Feedback[]',
+                        '\ck\Model\Feedback[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3612,7 +3612,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksFeedbacksVisibilityPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Feedback[]';
+        $returnType = '\ck\Model\Feedback[]';
         $request = $this->restFeedbacksFeedbacksVisibilityPutRequest($feedback_ids, $is_visible, $contentType);
 
         return $this->client
@@ -4004,14 +4004,14 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\FeedbackRating
+     * @return \ck\Model\FeedbackRating
      */
     public function restFeedbacksRatingPost(
         int $rating_value,
         int $rating_relation_target_type_id,
         int $rating_relation_target_id,
         string $contentType = self::contentTypes['restFeedbacksRatingPost'][0]
-    ): \ck/plenty-client\Model\FeedbackRating
+    ): \ck\Model\FeedbackRating
     {
         list($response) = $this->restFeedbacksRatingPostWithHttpInfo($rating_value, $rating_relation_target_type_id, $rating_relation_target_id, $contentType);
         return $response;
@@ -4029,7 +4029,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\FeedbackRating, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\FeedbackRating, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksRatingPostWithHttpInfo(
         int $rating_value,
@@ -4077,23 +4077,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\FeedbackRating' === '\SplFileObject') {
+                    if ('\ck\Model\FeedbackRating' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\FeedbackRating' !== 'string') {
+                        if ('\ck\Model\FeedbackRating' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\FeedbackRating', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\FeedbackRating', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\FeedbackRating';
+            $returnType = '\ck\Model\FeedbackRating';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4114,7 +4114,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\FeedbackRating',
+                        '\ck\Model\FeedbackRating',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4172,7 +4172,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksRatingPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\FeedbackRating';
+        $returnType = '\ck\Model\FeedbackRating';
         $request = $this->restFeedbacksRatingPostRequest($rating_value, $rating_relation_target_type_id, $rating_relation_target_id, $contentType);
 
         return $this->client
@@ -4632,13 +4632,13 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\FeedbackRating
+     * @return \ck\Model\FeedbackRating
      */
     public function restFeedbacksRatingRatingIdGet(
         int $feedback_rating_id,
         int $rating_id,
         string $contentType = self::contentTypes['restFeedbacksRatingRatingIdGet'][0]
-    ): \ck/plenty-client\Model\FeedbackRating
+    ): \ck\Model\FeedbackRating
     {
         list($response) = $this->restFeedbacksRatingRatingIdGetWithHttpInfo($feedback_rating_id, $rating_id, $contentType);
         return $response;
@@ -4655,7 +4655,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\FeedbackRating, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\FeedbackRating, HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksRatingRatingIdGetWithHttpInfo(
         int $feedback_rating_id,
@@ -4702,23 +4702,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\FeedbackRating' === '\SplFileObject') {
+                    if ('\ck\Model\FeedbackRating' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\FeedbackRating' !== 'string') {
+                        if ('\ck\Model\FeedbackRating' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\FeedbackRating', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\FeedbackRating', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\FeedbackRating';
+            $returnType = '\ck\Model\FeedbackRating';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4739,7 +4739,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\FeedbackRating',
+                        '\ck\Model\FeedbackRating',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4793,7 +4793,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksRatingRatingIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\FeedbackRating';
+        $returnType = '\ck\Model\FeedbackRating';
         $request = $this->restFeedbacksRatingRatingIdGetRequest($feedback_rating_id, $rating_id, $contentType);
 
         return $this->client
@@ -4958,7 +4958,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\FeedbackRating[]
+     * @return \ck\Model\FeedbackRating[]
      */
     public function restFeedbacksRatingsGet(
         string $contentType = self::contentTypes['restFeedbacksRatingsGet'][0]
@@ -4977,7 +4977,7 @@ class FeedbackApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\FeedbackRating[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\FeedbackRating[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restFeedbacksRatingsGetWithHttpInfo(
         string $contentType = self::contentTypes['restFeedbacksRatingsGet'][0]
@@ -5022,23 +5022,23 @@ class FeedbackApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\FeedbackRating[]' === '\SplFileObject') {
+                    if ('\ck\Model\FeedbackRating[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\FeedbackRating[]' !== 'string') {
+                        if ('\ck\Model\FeedbackRating[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\FeedbackRating[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\FeedbackRating[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\FeedbackRating[]';
+            $returnType = '\ck\Model\FeedbackRating[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5059,7 +5059,7 @@ class FeedbackApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\FeedbackRating[]',
+                        '\ck\Model\FeedbackRating[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5105,7 +5105,7 @@ class FeedbackApi
         string $contentType = self::contentTypes['restFeedbacksRatingsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\FeedbackRating[]';
+        $returnType = '\ck\Model\FeedbackRating[]';
         $request = $this->restFeedbacksRatingsGetRequest($contentType);
 
         return $this->client

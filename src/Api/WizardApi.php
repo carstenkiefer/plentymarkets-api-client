@@ -3,7 +3,7 @@
  * WizardApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * WizardApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -3787,12 +3787,12 @@ class WizardApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Wizard
+     * @return \ck\Model\Wizard
      */
     public function restWizardsWizardKeyGet(
         int $wizard_key,
         string $contentType = self::contentTypes['restWizardsWizardKeyGet'][0]
-    ): \ck/plenty-client\Model\Wizard
+    ): \ck\Model\Wizard
     {
         list($response) = $this->restWizardsWizardKeyGetWithHttpInfo($wizard_key, $contentType);
         return $response;
@@ -3808,7 +3808,7 @@ class WizardApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Wizard, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Wizard, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWizardsWizardKeyGetWithHttpInfo(
         int $wizard_key,
@@ -3854,23 +3854,23 @@ class WizardApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Wizard' === '\SplFileObject') {
+                    if ('\ck\Model\Wizard' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Wizard' !== 'string') {
+                        if ('\ck\Model\Wizard' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Wizard', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Wizard', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Wizard';
+            $returnType = '\ck\Model\Wizard';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3891,7 +3891,7 @@ class WizardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Wizard',
+                        '\ck\Model\Wizard',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3941,7 +3941,7 @@ class WizardApi
         string $contentType = self::contentTypes['restWizardsWizardKeyGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Wizard';
+        $returnType = '\ck\Model\Wizard';
         $request = $this->restWizardsWizardKeyGetRequest($wizard_key, $contentType);
 
         return $this->client

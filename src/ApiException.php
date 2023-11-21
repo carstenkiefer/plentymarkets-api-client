@@ -3,7 +3,7 @@
  * ApiException
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client;
+namespace ck;
 
 use Exception;
 use stdClass;
@@ -32,7 +32,7 @@ use stdClass;
 /**
  * ApiException Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **linklist** | **string** | Flag that indicates if the category will be displayed in the online store&#39;s navigation. optional allowed values are Y, N | [optional]
 **right** | **string** | Flag that indicates who can see this category. all &#x3D; Category is visible to all visitors of the online store.customer &#x3D; Category and all of its subcategories are visible to visitors of the online store that have logged in only. Visitors that are not logged in are redirected to the login page. optional allowed values are all, customer | [optional]
 **sitemap** | **string** | Flag that indicates if the category will be included in the sitemap. optional allowed values are Y, N | [optional]
-**details** | [**\ck/plenty-client\Model\CategoryDetails[]**](CategoryDetails.md) |  |
+**details** | [**\ck\Model\CategoryDetails[]**](CategoryDetails.md) |  |
 **plenty_id** | **int** | The unique plenty ID of the client (store) |
 **name** | **string** | The name of the category. The same category name can be used more than once in different categories or on different category levels. However, category names must be unique within the same category or level. |
 **lang** | **string** | The language of the category  allowed values are LANG, de, en, bg, fr, it, es, tr, nl, pl, pt, nn, ro, da, se, cz, ru, sk, cn, vn |
@@ -27,8 +27,8 @@ Name | Type | Description | Notes
 **page_view** | **string** | optional allowed values are PageDesignContent, PageDesignCheckout, PageDesignCustom, PageDesignCustom2, PageDesignCustom3 | [optional]
 **fulltext** | **bool** | Flag that indicates if the complete category text, i.e. the complete description, will be searched.Y &#x3D; Complete text will be searched.N &#x3D; Text will not be searched completely. optional allowed values are Y, N | [optional]
 **meta_robots** | **string** | Values from the meta element Robots are analyzed by Web crawlers. These values tell the crawler what it should do with the page and with the links on the page.all &#x3D; Include this category in the search engine index and follow the links on the page.index &#x3D; Include in the search engine index.nofollow &#x3D; Do not follow the links on the page.noindex &#x3D; Do not include in the search engine index.nofollow, noindex &#x3D; Do not follow the links and do not include the category in the search engine index. optional allowed values are ALL, INDEX, NOFOLLOW, NOINDEX, NOINDEX_NOFOLLOW | [optional]
-**clients** | [**\ck/plenty-client\Model\CategoryClient[]**](CategoryClient.md) |  | [optional]
-**elmar_categories** | [**\ck/plenty-client\Model\CategoryProperty[]**](CategoryProperty.md) |  | [optional]
+**clients** | [**\ck\Model\CategoryClient[]**](CategoryClient.md) |  | [optional]
+**elmar_categories** | [**\ck\Model\CategoryProperty[]**](CategoryProperty.md) |  | [optional]
 **category_id** | **int** | The unique ID of the category optional | [optional]
 **market_id** | **float** | The unique ID of the referrer optional | [optional]
 **value** | **string** | The category of the referrer |

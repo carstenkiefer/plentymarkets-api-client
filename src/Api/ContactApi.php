@@ -3,7 +3,7 @@
  * ContactApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ContactApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -145,13 +145,13 @@ class ContactApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageObject
+     * @return \ck\Model\StorageObject
      */
     public function restAccountsContactsContactIdDocumentGet(
         string $key,
         int $contact_id,
         string $contentType = self::contentTypes['restAccountsContactsContactIdDocumentGet'][0]
-    ): \ck/plenty-client\Model\StorageObject
+    ): \ck\Model\StorageObject
     {
         list($response) = $this->restAccountsContactsContactIdDocumentGetWithHttpInfo($key, $contact_id, $contentType);
         return $response;
@@ -168,7 +168,7 @@ class ContactApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdDocumentGetWithHttpInfo(
         string $key,
@@ -215,23 +215,23 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageObject' === '\SplFileObject') {
+                    if ('\ck\Model\StorageObject' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageObject' !== 'string') {
+                        if ('\ck\Model\StorageObject' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageObject', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageObject', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageObject';
+            $returnType = '\ck\Model\StorageObject';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -252,7 +252,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageObject',
+                        '\ck\Model\StorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -306,7 +306,7 @@ class ContactApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdDocumentGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageObject';
+        $returnType = '\ck\Model\StorageObject';
         $request = $this->restAccountsContactsContactIdDocumentGetRequest($key, $contact_id, $contentType);
 
         return $this->client
@@ -473,13 +473,13 @@ class ContactApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageObject
+     * @return \ck\Model\StorageObject
      */
     public function restAccountsContactsContactIdDocumentPost(
         string $key,
         int $contact_id,
         string $contentType = self::contentTypes['restAccountsContactsContactIdDocumentPost'][0]
-    ): \ck/plenty-client\Model\StorageObject
+    ): \ck\Model\StorageObject
     {
         list($response) = $this->restAccountsContactsContactIdDocumentPostWithHttpInfo($key, $contact_id, $contentType);
         return $response;
@@ -496,7 +496,7 @@ class ContactApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdDocumentPostWithHttpInfo(
         string $key,
@@ -543,23 +543,23 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageObject' === '\SplFileObject') {
+                    if ('\ck\Model\StorageObject' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageObject' !== 'string') {
+                        if ('\ck\Model\StorageObject' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageObject', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageObject', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageObject';
+            $returnType = '\ck\Model\StorageObject';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -580,7 +580,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageObject',
+                        '\ck\Model\StorageObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -634,7 +634,7 @@ class ContactApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdDocumentPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageObject';
+        $returnType = '\ck\Model\StorageObject';
         $request = $this->restAccountsContactsContactIdDocumentPostRequest($key, $contact_id, $contentType);
 
         return $this->client
@@ -1457,13 +1457,13 @@ class ContactApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\StorageObjectList
+     * @return \ck\Model\StorageObjectList
      */
     public function restAccountsContactsContactIdDocumentsGet(
         int $contact_id,
         ?string $continuation_token = null,
         string $contentType = self::contentTypes['restAccountsContactsContactIdDocumentsGet'][0]
-    ): \ck/plenty-client\Model\StorageObjectList
+    ): \ck\Model\StorageObjectList
     {
         list($response) = $this->restAccountsContactsContactIdDocumentsGetWithHttpInfo($contact_id, $continuation_token, $contentType);
         return $response;
@@ -1480,7 +1480,7 @@ class ContactApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\StorageObjectList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\StorageObjectList, HTTP status code, HTTP response headers (array of strings)
      */
     public function restAccountsContactsContactIdDocumentsGetWithHttpInfo(
         int $contact_id,
@@ -1527,23 +1527,23 @@ class ContactApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\StorageObjectList' === '\SplFileObject') {
+                    if ('\ck\Model\StorageObjectList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\StorageObjectList' !== 'string') {
+                        if ('\ck\Model\StorageObjectList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\StorageObjectList', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\StorageObjectList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\StorageObjectList';
+            $returnType = '\ck\Model\StorageObjectList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1564,7 +1564,7 @@ class ContactApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\StorageObjectList',
+                        '\ck\Model\StorageObjectList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1618,7 +1618,7 @@ class ContactApi
         string $contentType = self::contentTypes['restAccountsContactsContactIdDocumentsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\StorageObjectList';
+        $returnType = '\ck\Model\StorageObjectList';
         $request = $this->restAccountsContactsContactIdDocumentsGetRequest($contact_id, $continuation_token, $contentType);
 
         return $this->client

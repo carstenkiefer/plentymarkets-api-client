@@ -3,7 +3,7 @@
  * ReportApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ReportApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -182,11 +182,11 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\KeyFigureConfigSearchResult
+     * @return \ck\Model\KeyFigureConfigSearchResult
      */
     public function restReportsKeyFiguresConfigGet(
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigGet'][0]
-    ): \ck/plenty-client\Model\KeyFigureConfigSearchResult
+    ): \ck\Model\KeyFigureConfigSearchResult
     {
         list($response) = $this->restReportsKeyFiguresConfigGetWithHttpInfo($contentType);
         return $response;
@@ -201,7 +201,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\KeyFigureConfigSearchResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\KeyFigureConfigSearchResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsKeyFiguresConfigGetWithHttpInfo(
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigGet'][0]
@@ -246,23 +246,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\KeyFigureConfigSearchResult' === '\SplFileObject') {
+                    if ('\ck\Model\KeyFigureConfigSearchResult' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\KeyFigureConfigSearchResult' !== 'string') {
+                        if ('\ck\Model\KeyFigureConfigSearchResult' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\KeyFigureConfigSearchResult', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\KeyFigureConfigSearchResult', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\KeyFigureConfigSearchResult';
+            $returnType = '\ck\Model\KeyFigureConfigSearchResult';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -283,7 +283,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\KeyFigureConfigSearchResult',
+                        '\ck\Model\KeyFigureConfigSearchResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -329,7 +329,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\KeyFigureConfigSearchResult';
+        $returnType = '\ck\Model\KeyFigureConfigSearchResult';
         $request = $this->restReportsKeyFiguresConfigGetRequest($contentType);
 
         return $this->client
@@ -762,12 +762,12 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\KeyFigureConfig
+     * @return \ck\Model\KeyFigureConfig
      */
     public function restReportsKeyFiguresConfigKeyFigureConfigIdGet(
         int $key_figure_config_id,
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigKeyFigureConfigIdGet'][0]
-    ): \ck/plenty-client\Model\KeyFigureConfig
+    ): \ck\Model\KeyFigureConfig
     {
         list($response) = $this->restReportsKeyFiguresConfigKeyFigureConfigIdGetWithHttpInfo($key_figure_config_id, $contentType);
         return $response;
@@ -783,7 +783,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\KeyFigureConfig, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\KeyFigureConfig, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsKeyFiguresConfigKeyFigureConfigIdGetWithHttpInfo(
         int $key_figure_config_id,
@@ -829,23 +829,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\KeyFigureConfig' === '\SplFileObject') {
+                    if ('\ck\Model\KeyFigureConfig' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\KeyFigureConfig' !== 'string') {
+                        if ('\ck\Model\KeyFigureConfig' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\KeyFigureConfig', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\KeyFigureConfig', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\KeyFigureConfig';
+            $returnType = '\ck\Model\KeyFigureConfig';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -866,7 +866,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\KeyFigureConfig',
+                        '\ck\Model\KeyFigureConfig',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -916,7 +916,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigKeyFigureConfigIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\KeyFigureConfig';
+        $returnType = '\ck\Model\KeyFigureConfig';
         $request = $this->restReportsKeyFiguresConfigKeyFigureConfigIdGetRequest($key_figure_config_id, $contentType);
 
         return $this->client
@@ -1064,12 +1064,12 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\KeyFigureConfig
+     * @return \ck\Model\KeyFigureConfig
      */
     public function restReportsKeyFiguresConfigKeyFigureConfigIdPut(
         int $key_figure_config_id,
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigKeyFigureConfigIdPut'][0]
-    ): \ck/plenty-client\Model\KeyFigureConfig
+    ): \ck\Model\KeyFigureConfig
     {
         list($response) = $this->restReportsKeyFiguresConfigKeyFigureConfigIdPutWithHttpInfo($key_figure_config_id, $contentType);
         return $response;
@@ -1085,7 +1085,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\KeyFigureConfig, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\KeyFigureConfig, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsKeyFiguresConfigKeyFigureConfigIdPutWithHttpInfo(
         int $key_figure_config_id,
@@ -1131,23 +1131,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\KeyFigureConfig' === '\SplFileObject') {
+                    if ('\ck\Model\KeyFigureConfig' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\KeyFigureConfig' !== 'string') {
+                        if ('\ck\Model\KeyFigureConfig' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\KeyFigureConfig', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\KeyFigureConfig', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\KeyFigureConfig';
+            $returnType = '\ck\Model\KeyFigureConfig';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1168,7 +1168,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\KeyFigureConfig',
+                        '\ck\Model\KeyFigureConfig',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1218,7 +1218,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigKeyFigureConfigIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\KeyFigureConfig';
+        $returnType = '\ck\Model\KeyFigureConfig';
         $request = $this->restReportsKeyFiguresConfigKeyFigureConfigIdPutRequest($key_figure_config_id, $contentType);
 
         return $this->client
@@ -1365,11 +1365,11 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\KeyFigureConfig
+     * @return \ck\Model\KeyFigureConfig
      */
     public function restReportsKeyFiguresConfigPost(
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigPost'][0]
-    ): \ck/plenty-client\Model\KeyFigureConfig
+    ): \ck\Model\KeyFigureConfig
     {
         list($response) = $this->restReportsKeyFiguresConfigPostWithHttpInfo($contentType);
         return $response;
@@ -1384,7 +1384,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\KeyFigureConfig, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\KeyFigureConfig, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsKeyFiguresConfigPostWithHttpInfo(
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigPost'][0]
@@ -1429,23 +1429,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\KeyFigureConfig' === '\SplFileObject') {
+                    if ('\ck\Model\KeyFigureConfig' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\KeyFigureConfig' !== 'string') {
+                        if ('\ck\Model\KeyFigureConfig' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\KeyFigureConfig', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\KeyFigureConfig', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\KeyFigureConfig';
+            $returnType = '\ck\Model\KeyFigureConfig';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1466,7 +1466,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\KeyFigureConfig',
+                        '\ck\Model\KeyFigureConfig',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1512,7 +1512,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\KeyFigureConfig';
+        $returnType = '\ck\Model\KeyFigureConfig';
         $request = $this->restReportsKeyFiguresConfigPostRequest($contentType);
 
         return $this->client
@@ -1643,12 +1643,12 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\KeyFigureConfig
+     * @return \ck\Model\KeyFigureConfig
      */
     public function restReportsKeyFiguresConfigTemplatePost(
         string $key_figure_class,
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigTemplatePost'][0]
-    ): \ck/plenty-client\Model\KeyFigureConfig
+    ): \ck\Model\KeyFigureConfig
     {
         list($response) = $this->restReportsKeyFiguresConfigTemplatePostWithHttpInfo($key_figure_class, $contentType);
         return $response;
@@ -1664,7 +1664,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\KeyFigureConfig, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\KeyFigureConfig, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsKeyFiguresConfigTemplatePostWithHttpInfo(
         string $key_figure_class,
@@ -1710,23 +1710,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\KeyFigureConfig' === '\SplFileObject') {
+                    if ('\ck\Model\KeyFigureConfig' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\KeyFigureConfig' !== 'string') {
+                        if ('\ck\Model\KeyFigureConfig' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\KeyFigureConfig', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\KeyFigureConfig', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\KeyFigureConfig';
+            $returnType = '\ck\Model\KeyFigureConfig';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1747,7 +1747,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\KeyFigureConfig',
+                        '\ck\Model\KeyFigureConfig',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1797,7 +1797,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsKeyFiguresConfigTemplatePost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\KeyFigureConfig';
+        $returnType = '\ck\Model\KeyFigureConfig';
         $request = $this->restReportsKeyFiguresConfigTemplatePostRequest($key_figure_class, $contentType);
 
         return $this->client
@@ -2500,12 +2500,12 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\KeyFigure
+     * @return \ck\Model\KeyFigure
      */
     public function restReportsKeyFiguresDetailsKeyFigureNameGet(
         int $key_figure_name,
         string $contentType = self::contentTypes['restReportsKeyFiguresDetailsKeyFigureNameGet'][0]
-    ): \ck/plenty-client\Model\KeyFigure
+    ): \ck\Model\KeyFigure
     {
         list($response) = $this->restReportsKeyFiguresDetailsKeyFigureNameGetWithHttpInfo($key_figure_name, $contentType);
         return $response;
@@ -2521,7 +2521,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\KeyFigure, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\KeyFigure, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsKeyFiguresDetailsKeyFigureNameGetWithHttpInfo(
         int $key_figure_name,
@@ -2567,23 +2567,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\KeyFigure' === '\SplFileObject') {
+                    if ('\ck\Model\KeyFigure' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\KeyFigure' !== 'string') {
+                        if ('\ck\Model\KeyFigure' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\KeyFigure', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\KeyFigure', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\KeyFigure';
+            $returnType = '\ck\Model\KeyFigure';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2604,7 +2604,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\KeyFigure',
+                        '\ck\Model\KeyFigure',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2654,7 +2654,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsKeyFiguresDetailsKeyFigureNameGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\KeyFigure';
+        $returnType = '\ck\Model\KeyFigure';
         $request = $this->restReportsKeyFiguresDetailsKeyFigureNameGetRequest($key_figure_name, $contentType);
 
         return $this->client
@@ -3632,11 +3632,11 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RawDataConfigs
+     * @return \ck\Model\RawDataConfigs
      */
     public function restReportsRawDataConfigGet(
         string $contentType = self::contentTypes['restReportsRawDataConfigGet'][0]
-    ): \ck/plenty-client\Model\RawDataConfigs
+    ): \ck\Model\RawDataConfigs
     {
         list($response) = $this->restReportsRawDataConfigGetWithHttpInfo($contentType);
         return $response;
@@ -3651,7 +3651,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RawDataConfigs, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RawDataConfigs, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsRawDataConfigGetWithHttpInfo(
         string $contentType = self::contentTypes['restReportsRawDataConfigGet'][0]
@@ -3696,23 +3696,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RawDataConfigs' === '\SplFileObject') {
+                    if ('\ck\Model\RawDataConfigs' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RawDataConfigs' !== 'string') {
+                        if ('\ck\Model\RawDataConfigs' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RawDataConfigs', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RawDataConfigs', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RawDataConfigs';
+            $returnType = '\ck\Model\RawDataConfigs';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3733,7 +3733,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RawDataConfigs',
+                        '\ck\Model\RawDataConfigs',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3779,7 +3779,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsRawDataConfigGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RawDataConfigs';
+        $returnType = '\ck\Model\RawDataConfigs';
         $request = $this->restReportsRawDataConfigGetRequest($contentType);
 
         return $this->client
@@ -3910,12 +3910,12 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RawDataConfigs
+     * @return \ck\Model\RawDataConfigs
      */
     public function restReportsRawDataConfigPut(
         int $configs,
         string $contentType = self::contentTypes['restReportsRawDataConfigPut'][0]
-    ): \ck/plenty-client\Model\RawDataConfigs
+    ): \ck\Model\RawDataConfigs
     {
         list($response) = $this->restReportsRawDataConfigPutWithHttpInfo($configs, $contentType);
         return $response;
@@ -3931,7 +3931,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RawDataConfigs, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RawDataConfigs, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsRawDataConfigPutWithHttpInfo(
         int $configs,
@@ -3977,23 +3977,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RawDataConfigs' === '\SplFileObject') {
+                    if ('\ck\Model\RawDataConfigs' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RawDataConfigs' !== 'string') {
+                        if ('\ck\Model\RawDataConfigs' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RawDataConfigs', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RawDataConfigs', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RawDataConfigs';
+            $returnType = '\ck\Model\RawDataConfigs';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4014,7 +4014,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RawDataConfigs',
+                        '\ck\Model\RawDataConfigs',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4064,7 +4064,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsRawDataConfigPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RawDataConfigs';
+        $returnType = '\ck\Model\RawDataConfigs';
         $request = $this->restReportsRawDataConfigPutRequest($configs, $contentType);
 
         return $this->client
@@ -5075,7 +5075,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RawDataSearchResult
+     * @return \ck\Model\RawDataSearchResult
      */
     public function restReportsRawDataGet(
         ?string $data_name = null,
@@ -5085,7 +5085,7 @@ class ReportApi
         ?string $sort_order = null,
         ?int $page = null,
         string $contentType = self::contentTypes['restReportsRawDataGet'][0]
-    ): \ck/plenty-client\Model\RawDataSearchResult
+    ): \ck\Model\RawDataSearchResult
     {
         list($response) = $this->restReportsRawDataGetWithHttpInfo($data_name, $process_status, $created_at_timestamp, $items_per_page, $sort_order, $page, $contentType);
         return $response;
@@ -5106,7 +5106,7 @@ class ReportApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RawDataSearchResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RawDataSearchResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function restReportsRawDataGetWithHttpInfo(
         ?string $data_name = null,
@@ -5157,23 +5157,23 @@ class ReportApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RawDataSearchResult' === '\SplFileObject') {
+                    if ('\ck\Model\RawDataSearchResult' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RawDataSearchResult' !== 'string') {
+                        if ('\ck\Model\RawDataSearchResult' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RawDataSearchResult', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RawDataSearchResult', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RawDataSearchResult';
+            $returnType = '\ck\Model\RawDataSearchResult';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5194,7 +5194,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RawDataSearchResult',
+                        '\ck\Model\RawDataSearchResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5264,7 +5264,7 @@ class ReportApi
         string $contentType = self::contentTypes['restReportsRawDataGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RawDataSearchResult';
+        $returnType = '\ck\Model\RawDataSearchResult';
         $request = $this->restReportsRawDataGetRequest($data_name, $process_status, $created_at_timestamp, $items_per_page, $sort_order, $page, $contentType);
 
         return $this->client

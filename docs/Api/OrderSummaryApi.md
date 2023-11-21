@@ -1,4 +1,4 @@
-# ck/plenty-client\OrderSummaryApi
+# ck\OrderSummaryApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restAccountsOrderSummariesContactsContactIdGet()`
 
 ```php
-restAccountsOrderSummariesContactsContactIdGet($contact_id): \ck/plenty-client\Model\OrderSummary
+restAccountsOrderSummariesContactsContactIdGet($contact_id): \ck\Model\OrderSummary
 ```
 
 Get order summary by contact ID
@@ -31,10 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\OrderSummaryApi(
+$apiInstance = new ck\Api\OrderSummaryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\OrderSummary**](../Model/OrderSummary.md)
+[**\ck\Model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `restAccountsOrderSummariesGet()`
 
 ```php
-restAccountsOrderSummariesGet(): \ck/plenty-client\Model\OrderSummary[]
+restAccountsOrderSummariesGet(): \ck\Model\OrderSummary[]
 ```
 
 List order summaries
@@ -91,10 +91,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\OrderSummaryApi(
+$apiInstance = new ck\Api\OrderSummaryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\OrderSummary[]**](../Model/OrderSummary.md)
+[**\ck\Model\OrderSummary[]**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\OrderSummaryApi(
+$apiInstance = new ck\Api\OrderSummaryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -192,7 +192,7 @@ void (empty response body)
 ## `restAccountsOrderSummariesOrderSummaryIdGet()`
 
 ```php
-restAccountsOrderSummariesOrderSummaryIdGet($order_summary_id): \ck/plenty-client\Model\OrderSummary
+restAccountsOrderSummariesOrderSummaryIdGet($order_summary_id): \ck\Model\OrderSummary
 ```
 
 Get order summary by order summary ID
@@ -207,10 +207,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\OrderSummaryApi(
+$apiInstance = new ck\Api\OrderSummaryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -234,7 +234,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\OrderSummary**](../Model/OrderSummary.md)
+[**\ck\Model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -252,7 +252,7 @@ try {
 ## `restAccountsOrderSummariesOrderSummaryIdPut()`
 
 ```php
-restAccountsOrderSummariesOrderSummaryIdPut($order_summary_id): \ck/plenty-client\Model\OrderSummary
+restAccountsOrderSummariesOrderSummaryIdPut($order_summary_id): \ck\Model\OrderSummary
 ```
 
 Update order summary
@@ -267,10 +267,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\OrderSummaryApi(
+$apiInstance = new ck\Api\OrderSummaryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -294,7 +294,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\OrderSummary**](../Model/OrderSummary.md)
+[**\ck\Model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ try {
 ## `restAccountsOrderSummariesOrdersAddressIdGet()`
 
 ```php
-restAccountsOrderSummariesOrdersAddressIdGet($address_id): \ck/plenty-client\Model\OrderSummary
+restAccountsOrderSummariesOrdersAddressIdGet($address_id): \ck\Model\OrderSummary
 ```
 
 Get order summary by address ID
@@ -327,10 +327,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\OrderSummaryApi(
+$apiInstance = new ck\Api\OrderSummaryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -354,7 +354,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\OrderSummary**](../Model/OrderSummary.md)
+[**\ck\Model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ try {
 ## `restAccountsOrderSummariesPost()`
 
 ```php
-restAccountsOrderSummariesPost(): \ck/plenty-client\Model\OrderSummary
+restAccountsOrderSummariesPost(): \ck\Model\OrderSummary
 ```
 
 Create order summary
@@ -387,10 +387,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\OrderSummaryApi(
+$apiInstance = new ck\Api\OrderSummaryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -411,7 +411,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\OrderSummary**](../Model/OrderSummary.md)
+[**\ck\Model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 

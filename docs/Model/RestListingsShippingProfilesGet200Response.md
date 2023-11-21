@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **first_on_page** | **int** | The index of the first item of the current page result | [optional]
 **last_on_page** | **int** | The index of the last item of the current page result | [optional]
 **items_per_page** | **int** | The requested amount of items per result page | [optional]
-**entries** | [**\ck/plenty-client\Model\ShippingProfile[]**](ShippingProfile.md) | List of ShippingProfile | [optional]
+**entries** | [**\ck\Model\ShippingProfile[]**](ShippingProfile.md) | List of ShippingProfile | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

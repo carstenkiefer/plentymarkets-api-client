@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **order_id** | **int** | The ID of the order linked with the ticket optional | [optional]
 **has_documents** | **int** | Displays 1 if the ticket has one or more documents. Displays 0 if the ticket has no document. optional | [optional]
 **resubmission_at** | **string** | The date the ticket should be resubmitted optional | [optional]
-**owners** | [**\ck/plenty-client\Model\TicketOwner[]**](TicketOwner.md) |  |
+**owners** | [**\ck\Model\TicketOwner[]**](TicketOwner.md) |  |
 **user_id** | **int** | The user ID of the owner |
 **role_id** | **int** | The role ID of the owner |
 

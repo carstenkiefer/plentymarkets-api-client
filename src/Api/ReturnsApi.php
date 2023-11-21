@@ -3,7 +3,7 @@
  * ReturnsApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ReturnsApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,13 +137,13 @@ class ReturnsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\OrderReturns
+     * @return \ck\Model\OrderReturns
      */
     public function restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPut(
         int $returns_id,
         int $order_id,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPut'][0]
-    ): \ck/plenty-client\Model\OrderReturns
+    ): \ck\Model\OrderReturns
     {
         list($response) = $this->restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPutWithHttpInfo($returns_id, $order_id, $contentType);
         return $response;
@@ -158,7 +158,7 @@ class ReturnsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\OrderReturns, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\OrderReturns, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPutWithHttpInfo(
         int $returns_id,
@@ -205,23 +205,23 @@ class ReturnsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\OrderReturns' === '\SplFileObject') {
+                    if ('\ck\Model\OrderReturns' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\OrderReturns' !== 'string') {
+                        if ('\ck\Model\OrderReturns' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\OrderReturns', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\OrderReturns', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\OrderReturns';
+            $returnType = '\ck\Model\OrderReturns';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -242,7 +242,7 @@ class ReturnsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\OrderReturns',
+                        '\ck\Model\OrderReturns',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -292,7 +292,7 @@ class ReturnsApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\OrderReturns';
+        $returnType = '\ck\Model\OrderReturns';
         $request = $this->restOrdersOrderIdShippingReturnsAssignLabelReturnsIdPutRequest($returns_id, $order_id, $contentType);
 
         return $this->client
@@ -458,7 +458,7 @@ class ReturnsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response
+     * @return \ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response
      */
     public function restOrdersOrderIdShippingReturnsGet(
         int $order_id,
@@ -466,7 +466,7 @@ class ReturnsApi
         ?int $items_per_page = null,
         ?int $with = null,
         string $contentType = self::contentTypes['restOrdersOrderIdShippingReturnsGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response
+    ): \ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response
     {
         list($response) = $this->restOrdersOrderIdShippingReturnsGetWithHttpInfo($order_id, $page, $items_per_page, $with, $contentType);
         return $response;
@@ -483,7 +483,7 @@ class ReturnsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersOrderIdShippingReturnsGetWithHttpInfo(
         int $order_id,
@@ -532,23 +532,23 @@ class ReturnsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response';
+            $returnType = '\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -569,7 +569,7 @@ class ReturnsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response',
+                        '\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -627,7 +627,7 @@ class ReturnsApi
         string $contentType = self::contentTypes['restOrdersOrderIdShippingReturnsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response';
+        $returnType = '\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response';
         $request = $this->restOrdersOrderIdShippingReturnsGetRequest($order_id, $page, $items_per_page, $with, $contentType);
 
         return $this->client
@@ -810,13 +810,13 @@ class ReturnsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response
+     * @return \ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response
      */
     public function restOrdersShippingReturnsReturnsIdGet(
         int $returns_id,
         ?int $with = null,
         string $contentType = self::contentTypes['restOrdersShippingReturnsReturnsIdGet'][0]
-    ): \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response
+    ): \ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response
     {
         list($response) = $this->restOrdersShippingReturnsReturnsIdGetWithHttpInfo($returns_id, $with, $contentType);
         return $response;
@@ -831,7 +831,7 @@ class ReturnsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restOrdersShippingReturnsReturnsIdGetWithHttpInfo(
         int $returns_id,
@@ -878,23 +878,23 @@ class ReturnsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response' !== 'string') {
+                        if ('\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response';
+            $returnType = '\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -915,7 +915,7 @@ class ReturnsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response',
+                        '\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -965,7 +965,7 @@ class ReturnsApi
         string $contentType = self::contentTypes['restOrdersShippingReturnsReturnsIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestOrdersShippingReturnsReturnsIdGet200Response';
+        $returnType = '\ck\Model\RestOrdersShippingReturnsReturnsIdGet200Response';
         $request = $this->restOrdersShippingReturnsReturnsIdGetRequest($returns_id, $with, $contentType);
 
         return $this->client

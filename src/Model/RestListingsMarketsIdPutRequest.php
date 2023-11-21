@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestListingsMarketsIdPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class RestListingsMarketsIdPutRequest implements ModelInterface, ArrayAccess, Js
         'listing_id' => 'int',
         'option_template_id' => 'int',
         'referrer_id' => 'int',
-        'listing' => '\ck/plenty-client\Model\ListingMarketHistory[]',
+        'listing' => '\ck\Model\ListingMarketHistory[]',
         'properties' => 'object[]',
         'prices' => 'object[]',
         'texts' => 'object[]',
@@ -470,7 +470,7 @@ class RestListingsMarketsIdPutRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Gets listing
      *
-     * @return \ck/plenty-client\Model\ListingMarketHistory[]
+     * @return \ck\Model\ListingMarketHistory[]
      */
     public function getListing(): array
     {
@@ -480,7 +480,7 @@ class RestListingsMarketsIdPutRequest implements ModelInterface, ArrayAccess, Js
     /**
      * Sets listing
      *
-     * @param \ck/plenty-client\Model\ListingMarketHistory[] $listing listing
+     * @param \ck\Model\ListingMarketHistory[] $listing listing
      *
      * @return $this
      */

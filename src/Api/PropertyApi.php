@@ -3,7 +3,7 @@
  * PropertyApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * PropertyApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -365,7 +365,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyAmazon[]
+     * @return \ck\Model\PropertyAmazon[]
      */
     public function restPropertiesAmazonsGet(
         string $contentType = self::contentTypes['restPropertiesAmazonsGet'][0]
@@ -384,7 +384,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyAmazon[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyAmazon[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAmazonsGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesAmazonsGet'][0]
@@ -429,23 +429,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyAmazon[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyAmazon[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyAmazon[]' !== 'string') {
+                        if ('\ck\Model\PropertyAmazon[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyAmazon[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyAmazon[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyAmazon[]';
+            $returnType = '\ck\Model\PropertyAmazon[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -466,7 +466,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyAmazon[]',
+                        '\ck\Model\PropertyAmazon[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -512,7 +512,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesAmazonsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyAmazon[]';
+        $returnType = '\ck\Model\PropertyAmazon[]';
         $request = $this->restPropertiesAmazonsGetRequest($contentType);
 
         return $this->client
@@ -642,21 +642,21 @@ class PropertyApi
      * @param  string $platform The platform of the property amazon (required)
      * @param  string $category The category of the property amazon (required)
      * @param  string $field The field of the property amazon (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons _rest_properties_amazons (optional)
+     * @param  \ck\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons _rest_properties_amazons (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAmazonsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyAmazon
+     * @return \ck\Model\PropertyAmazon
      */
     public function restPropertiesAmazonsPost(
         int $property_id,
         string $platform,
         string $category,
         string $field,
-        ?\ck/plenty-client\Model\RestPropertiesAmazonsPostRequest $_rest_properties_amazons = null,
+        ?\ck\Model\RestPropertiesAmazonsPostRequest $_rest_properties_amazons = null,
         string $contentType = self::contentTypes['restPropertiesAmazonsPost'][0]
-    ): \ck/plenty-client\Model\PropertyAmazon
+    ): \ck\Model\PropertyAmazon
     {
         list($response) = $this->restPropertiesAmazonsPostWithHttpInfo($property_id, $platform, $category, $field, $_rest_properties_amazons, $contentType);
         return $response;
@@ -671,19 +671,19 @@ class PropertyApi
      * @param  string $platform The platform of the property amazon (required)
      * @param  string $category The category of the property amazon (required)
      * @param  string $field The field of the property amazon (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons (optional)
+     * @param  \ck\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAmazonsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyAmazon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyAmazon, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAmazonsPostWithHttpInfo(
         int $property_id,
         string $platform,
         string $category,
         string $field,
-        ?\ck/plenty-client\Model\RestPropertiesAmazonsPostRequest $_rest_properties_amazons = null,
+        ?\ck\Model\RestPropertiesAmazonsPostRequest $_rest_properties_amazons = null,
         string $contentType = self::contentTypes['restPropertiesAmazonsPost'][0]
     ): array
     {
@@ -726,23 +726,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyAmazon' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyAmazon' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyAmazon' !== 'string') {
+                        if ('\ck\Model\PropertyAmazon' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyAmazon', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyAmazon', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyAmazon';
+            $returnType = '\ck\Model\PropertyAmazon';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -763,7 +763,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyAmazon',
+                        '\ck\Model\PropertyAmazon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -782,7 +782,7 @@ class PropertyApi
      * @param  string $platform The platform of the property amazon (required)
      * @param  string $category The category of the property amazon (required)
      * @param  string $field The field of the property amazon (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons (optional)
+     * @param  \ck\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAmazonsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -793,7 +793,7 @@ class PropertyApi
         string $platform,
         string $category,
         string $field,
-        ?\ck/plenty-client\Model\RestPropertiesAmazonsPostRequest $_rest_properties_amazons = null,
+        ?\ck\Model\RestPropertiesAmazonsPostRequest $_rest_properties_amazons = null,
         string $contentType = self::contentTypes['restPropertiesAmazonsPost'][0]
     ): PromiseInterface
     {
@@ -814,7 +814,7 @@ class PropertyApi
      * @param  string $platform The platform of the property amazon (required)
      * @param  string $category The category of the property amazon (required)
      * @param  string $field The field of the property amazon (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons (optional)
+     * @param  \ck\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAmazonsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -829,7 +829,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesAmazonsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyAmazon';
+        $returnType = '\ck\Model\PropertyAmazon';
         $request = $this->restPropertiesAmazonsPostRequest($property_id, $platform, $category, $field, $_rest_properties_amazons, $contentType);
 
         return $this->client
@@ -875,7 +875,7 @@ class PropertyApi
      * @param  string $platform The platform of the property amazon (required)
      * @param  string $category The category of the property amazon (required)
      * @param  string $field The field of the property amazon (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons (optional)
+     * @param  \ck\Model\RestPropertiesAmazonsPostRequest|null $_rest_properties_amazons (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAmazonsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1290,12 +1290,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyAmazon
+     * @return \ck\Model\PropertyAmazon
      */
     public function restPropertiesAmazonsPropertyAmazonIdGet(
         int $property_amazon_id,
         string $contentType = self::contentTypes['restPropertiesAmazonsPropertyAmazonIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyAmazon
+    ): \ck\Model\PropertyAmazon
     {
         list($response) = $this->restPropertiesAmazonsPropertyAmazonIdGetWithHttpInfo($property_amazon_id, $contentType);
         return $response;
@@ -1311,7 +1311,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyAmazon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyAmazon, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAmazonsPropertyAmazonIdGetWithHttpInfo(
         int $property_amazon_id,
@@ -1357,23 +1357,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyAmazon' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyAmazon' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyAmazon' !== 'string') {
+                        if ('\ck\Model\PropertyAmazon' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyAmazon', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyAmazon', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyAmazon';
+            $returnType = '\ck\Model\PropertyAmazon';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1394,7 +1394,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyAmazon',
+                        '\ck\Model\PropertyAmazon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1444,7 +1444,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesAmazonsPropertyAmazonIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyAmazon';
+        $returnType = '\ck\Model\PropertyAmazon';
         $request = $this->restPropertiesAmazonsPropertyAmazonIdGetRequest($property_amazon_id, $contentType);
 
         return $this->client
@@ -1591,11 +1591,11 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyAmazon
+     * @return \ck\Model\PropertyAmazon
      */
     public function restPropertiesAmazonsPut(
         string $contentType = self::contentTypes['restPropertiesAmazonsPut'][0]
-    ): \ck/plenty-client\Model\PropertyAmazon
+    ): \ck\Model\PropertyAmazon
     {
         list($response) = $this->restPropertiesAmazonsPutWithHttpInfo($contentType);
         return $response;
@@ -1610,7 +1610,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyAmazon, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyAmazon, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAmazonsPutWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesAmazonsPut'][0]
@@ -1655,23 +1655,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyAmazon' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyAmazon' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyAmazon' !== 'string') {
+                        if ('\ck\Model\PropertyAmazon' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyAmazon', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyAmazon', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyAmazon';
+            $returnType = '\ck\Model\PropertyAmazon';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1692,7 +1692,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyAmazon',
+                        '\ck\Model\PropertyAmazon',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1738,7 +1738,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesAmazonsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyAmazon';
+        $returnType = '\ck\Model\PropertyAmazon';
         $request = $this->restPropertiesAmazonsPutRequest($contentType);
 
         return $this->client
@@ -2117,12 +2117,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyAvailability
+     * @return \ck\Model\PropertyAvailability
      */
     public function restPropertiesAvailabilitiesAvailabilityIdGet(
         int $availability_id,
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesAvailabilityIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyAvailability
+    ): \ck\Model\PropertyAvailability
     {
         list($response) = $this->restPropertiesAvailabilitiesAvailabilityIdGetWithHttpInfo($availability_id, $contentType);
         return $response;
@@ -2138,7 +2138,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAvailabilitiesAvailabilityIdGetWithHttpInfo(
         int $availability_id,
@@ -2184,23 +2184,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyAvailability' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyAvailability' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyAvailability' !== 'string') {
+                        if ('\ck\Model\PropertyAvailability' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyAvailability', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyAvailability', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyAvailability';
+            $returnType = '\ck\Model\PropertyAvailability';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2221,7 +2221,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyAvailability',
+                        '\ck\Model\PropertyAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2271,7 +2271,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesAvailabilityIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyAvailability';
+        $returnType = '\ck\Model\PropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesAvailabilityIdGetRequest($availability_id, $contentType);
 
         return $this->client
@@ -2419,12 +2419,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyAvailability
+     * @return \ck\Model\PropertyAvailability
      */
     public function restPropertiesAvailabilitiesAvailabilityIdPut(
         int $availability_id,
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesAvailabilityIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyAvailability
+    ): \ck\Model\PropertyAvailability
     {
         list($response) = $this->restPropertiesAvailabilitiesAvailabilityIdPutWithHttpInfo($availability_id, $contentType);
         return $response;
@@ -2440,7 +2440,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAvailabilitiesAvailabilityIdPutWithHttpInfo(
         int $availability_id,
@@ -2486,23 +2486,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyAvailability' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyAvailability' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyAvailability' !== 'string') {
+                        if ('\ck\Model\PropertyAvailability' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyAvailability', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyAvailability', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyAvailability';
+            $returnType = '\ck\Model\PropertyAvailability';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2523,7 +2523,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyAvailability',
+                        '\ck\Model\PropertyAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2573,7 +2573,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesAvailabilityIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyAvailability';
+        $returnType = '\ck\Model\PropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesAvailabilityIdPutRequest($availability_id, $contentType);
 
         return $this->client
@@ -2720,7 +2720,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyAvailability[]
+     * @return \ck\Model\PropertyAvailability[]
      */
     public function restPropertiesAvailabilitiesGet(
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesGet'][0]
@@ -2739,7 +2739,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyAvailability[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyAvailability[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAvailabilitiesGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesGet'][0]
@@ -2784,23 +2784,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyAvailability[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyAvailability[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyAvailability[]' !== 'string') {
+                        if ('\ck\Model\PropertyAvailability[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyAvailability[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyAvailability[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyAvailability[]';
+            $returnType = '\ck\Model\PropertyAvailability[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2821,7 +2821,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyAvailability[]',
+                        '\ck\Model\PropertyAvailability[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2867,7 +2867,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyAvailability[]';
+        $returnType = '\ck\Model\PropertyAvailability[]';
         $request = $this->restPropertiesAvailabilitiesGetRequest($contentType);
 
         return $this->client
@@ -2996,20 +2996,20 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  int $type The type of the availability (required)
      * @param  int $value The value of the availability (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities _rest_properties_availabilities (optional)
+     * @param  \ck\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities _rest_properties_availabilities (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAvailabilitiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyAvailability
+     * @return \ck\Model\PropertyAvailability
      */
     public function restPropertiesAvailabilitiesPost(
         int $property_id,
         int $type,
         int $value,
-        ?\ck/plenty-client\Model\RestPropertiesAvailabilitiesPostRequest $_rest_properties_availabilities = null,
+        ?\ck\Model\RestPropertiesAvailabilitiesPostRequest $_rest_properties_availabilities = null,
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesPost'][0]
-    ): \ck/plenty-client\Model\PropertyAvailability
+    ): \ck\Model\PropertyAvailability
     {
         list($response) = $this->restPropertiesAvailabilitiesPostWithHttpInfo($property_id, $type, $value, $_rest_properties_availabilities, $contentType);
         return $response;
@@ -3023,18 +3023,18 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  int $type The type of the availability (required)
      * @param  int $value The value of the availability (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities (optional)
+     * @param  \ck\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAvailabilitiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyAvailability, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyAvailability, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesAvailabilitiesPostWithHttpInfo(
         int $property_id,
         int $type,
         int $value,
-        ?\ck/plenty-client\Model\RestPropertiesAvailabilitiesPostRequest $_rest_properties_availabilities = null,
+        ?\ck\Model\RestPropertiesAvailabilitiesPostRequest $_rest_properties_availabilities = null,
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesPost'][0]
     ): array
     {
@@ -3077,23 +3077,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyAvailability' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyAvailability' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyAvailability' !== 'string') {
+                        if ('\ck\Model\PropertyAvailability' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyAvailability', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyAvailability', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyAvailability';
+            $returnType = '\ck\Model\PropertyAvailability';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3114,7 +3114,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyAvailability',
+                        '\ck\Model\PropertyAvailability',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3132,7 +3132,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  int $type The type of the availability (required)
      * @param  int $value The value of the availability (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities (optional)
+     * @param  \ck\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAvailabilitiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3142,7 +3142,7 @@ class PropertyApi
         int $property_id,
         int $type,
         int $value,
-        ?\ck/plenty-client\Model\RestPropertiesAvailabilitiesPostRequest $_rest_properties_availabilities = null,
+        ?\ck\Model\RestPropertiesAvailabilitiesPostRequest $_rest_properties_availabilities = null,
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesPost'][0]
     ): PromiseInterface
     {
@@ -3162,7 +3162,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  int $type The type of the availability (required)
      * @param  int $value The value of the availability (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities (optional)
+     * @param  \ck\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAvailabilitiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3176,7 +3176,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesAvailabilitiesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyAvailability';
+        $returnType = '\ck\Model\PropertyAvailability';
         $request = $this->restPropertiesAvailabilitiesPostRequest($property_id, $type, $value, $_rest_properties_availabilities, $contentType);
 
         return $this->client
@@ -3221,7 +3221,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  int $type The type of the availability (required)
      * @param  int $value The value of the availability (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities (optional)
+     * @param  \ck\Model\RestPropertiesAvailabilitiesPostRequest|null $_rest_properties_availabilities (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesAvailabilitiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -3647,7 +3647,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Property[]
+     * @return \ck\Model\Property[]
      */
     public function restPropertiesGet(
         string $contentType = self::contentTypes['restPropertiesGet'][0]
@@ -3666,7 +3666,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Property[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Property[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesGet'][0]
@@ -3711,23 +3711,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Property[]' === '\SplFileObject') {
+                    if ('\ck\Model\Property[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Property[]' !== 'string') {
+                        if ('\ck\Model\Property[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Property[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Property[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Property[]';
+            $returnType = '\ck\Model\Property[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3748,7 +3748,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Property[]',
+                        '\ck\Model\Property[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3794,7 +3794,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Property[]';
+        $returnType = '\ck\Model\Property[]';
         $request = $this->restPropertiesGetRequest($contentType);
 
         return $this->client
@@ -3925,7 +3925,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroup[]
+     * @return \ck\Model\PropertyGroup[]
      */
     public function restPropertiesGroupsGet(
         int $group_id,
@@ -3946,7 +3946,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroup[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroup[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsGetWithHttpInfo(
         int $group_id,
@@ -3992,23 +3992,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroup[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroup[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroup[]' !== 'string') {
+                        if ('\ck\Model\PropertyGroup[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroup[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroup[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroup[]';
+            $returnType = '\ck\Model\PropertyGroup[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4029,7 +4029,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroup[]',
+                        '\ck\Model\PropertyGroup[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4079,7 +4079,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroup[]';
+        $returnType = '\ck\Model\PropertyGroup[]';
         $request = $this->restPropertiesGroupsGetRequest($group_id, $contentType);
 
         return $this->client
@@ -4228,12 +4228,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroup
+     * @return \ck\Model\PropertyGroup
      */
     public function restPropertiesGroupsGroupIdGet(
         int $group_id,
         string $contentType = self::contentTypes['restPropertiesGroupsGroupIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyGroup
+    ): \ck\Model\PropertyGroup
     {
         list($response) = $this->restPropertiesGroupsGroupIdGetWithHttpInfo($group_id, $contentType);
         return $response;
@@ -4249,7 +4249,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsGroupIdGetWithHttpInfo(
         int $group_id,
@@ -4295,23 +4295,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroup' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroup' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroup' !== 'string') {
+                        if ('\ck\Model\PropertyGroup' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroup', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroup', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroup';
+            $returnType = '\ck\Model\PropertyGroup';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4332,7 +4332,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroup',
+                        '\ck\Model\PropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4382,7 +4382,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsGroupIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroup';
+        $returnType = '\ck\Model\PropertyGroup';
         $request = $this->restPropertiesGroupsGroupIdGetRequest($group_id, $contentType);
 
         return $this->client
@@ -5485,21 +5485,21 @@ class PropertyApi
      * @param  int|null $position The position  of the group (optional)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id _rest_properties_groups_group_id (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id _rest_properties_groups_group_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsGroupIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroup
+     * @return \ck\Model\PropertyGroup
      */
     public function restPropertiesGroupsGroupIdPut(
         int $group_id,
         ?int $position = null,
         ?int $names = null,
         ?int $options = null,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups_group_id = null,
+        ?\ck\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups_group_id = null,
         string $contentType = self::contentTypes['restPropertiesGroupsGroupIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyGroup
+    ): \ck\Model\PropertyGroup
     {
         list($response) = $this->restPropertiesGroupsGroupIdPutWithHttpInfo($group_id, $position, $names, $options, $_rest_properties_groups_group_id, $contentType);
         return $response;
@@ -5514,19 +5514,19 @@ class PropertyApi
      * @param  int|null $position The position  of the group (optional)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsGroupIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsGroupIdPutWithHttpInfo(
         int $group_id,
         ?int $position = null,
         ?int $names = null,
         ?int $options = null,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups_group_id = null,
+        ?\ck\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups_group_id = null,
         string $contentType = self::contentTypes['restPropertiesGroupsGroupIdPut'][0]
     ): array
     {
@@ -5569,23 +5569,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroup' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroup' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroup' !== 'string') {
+                        if ('\ck\Model\PropertyGroup' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroup', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroup', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroup';
+            $returnType = '\ck\Model\PropertyGroup';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5606,7 +5606,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroup',
+                        '\ck\Model\PropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5625,7 +5625,7 @@ class PropertyApi
      * @param  int|null $position The position  of the group (optional)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsGroupIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5636,7 +5636,7 @@ class PropertyApi
         ?int $position = null,
         ?int $names = null,
         ?int $options = null,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups_group_id = null,
+        ?\ck\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups_group_id = null,
         string $contentType = self::contentTypes['restPropertiesGroupsGroupIdPut'][0]
     ): PromiseInterface
     {
@@ -5657,7 +5657,7 @@ class PropertyApi
      * @param  int|null $position The position  of the group (optional)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsGroupIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5672,7 +5672,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsGroupIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroup';
+        $returnType = '\ck\Model\PropertyGroup';
         $request = $this->restPropertiesGroupsGroupIdPutRequest($group_id, $position, $names, $options, $_rest_properties_groups_group_id, $contentType);
 
         return $this->client
@@ -5718,7 +5718,7 @@ class PropertyApi
      * @param  int|null $position The position  of the group (optional)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups_group_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsGroupIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5865,7 +5865,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroupName[]
+     * @return \ck\Model\PropertyGroupName[]
      */
     public function restPropertiesGroupsNamesGet(
         string $contentType = self::contentTypes['restPropertiesGroupsNamesGet'][0]
@@ -5884,7 +5884,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroupName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroupName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsNamesGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesGroupsNamesGet'][0]
@@ -5929,23 +5929,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroupName[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroupName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroupName[]' !== 'string') {
+                        if ('\ck\Model\PropertyGroupName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroupName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroupName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroupName[]';
+            $returnType = '\ck\Model\PropertyGroupName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5966,7 +5966,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroupName[]',
+                        '\ck\Model\PropertyGroupName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6012,7 +6012,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroupName[]';
+        $returnType = '\ck\Model\PropertyGroupName[]';
         $request = $this->restPropertiesGroupsNamesGetRequest($contentType);
 
         return $this->client
@@ -6391,12 +6391,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroupName
+     * @return \ck\Model\PropertyGroupName
      */
     public function restPropertiesGroupsNamesGroupNameIdGet(
         int $group_name_id,
         string $contentType = self::contentTypes['restPropertiesGroupsNamesGroupNameIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyGroupName
+    ): \ck\Model\PropertyGroupName
     {
         list($response) = $this->restPropertiesGroupsNamesGroupNameIdGetWithHttpInfo($group_name_id, $contentType);
         return $response;
@@ -6412,7 +6412,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsNamesGroupNameIdGetWithHttpInfo(
         int $group_name_id,
@@ -6458,23 +6458,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroupName' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroupName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroupName' !== 'string') {
+                        if ('\ck\Model\PropertyGroupName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroupName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroupName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroupName';
+            $returnType = '\ck\Model\PropertyGroupName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6495,7 +6495,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroupName',
+                        '\ck\Model\PropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6545,7 +6545,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsNamesGroupNameIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroupName';
+        $returnType = '\ck\Model\PropertyGroupName';
         $request = $this->restPropertiesGroupsNamesGroupNameIdGetRequest($group_name_id, $contentType);
 
         return $this->client
@@ -6693,12 +6693,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroupName
+     * @return \ck\Model\PropertyGroupName
      */
     public function restPropertiesGroupsNamesGroupNameIdPut(
         int $group_name_id,
         string $contentType = self::contentTypes['restPropertiesGroupsNamesGroupNameIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyGroupName
+    ): \ck\Model\PropertyGroupName
     {
         list($response) = $this->restPropertiesGroupsNamesGroupNameIdPutWithHttpInfo($group_name_id, $contentType);
         return $response;
@@ -6714,7 +6714,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsNamesGroupNameIdPutWithHttpInfo(
         int $group_name_id,
@@ -6760,23 +6760,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroupName' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroupName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroupName' !== 'string') {
+                        if ('\ck\Model\PropertyGroupName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroupName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroupName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroupName';
+            $returnType = '\ck\Model\PropertyGroupName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6797,7 +6797,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroupName',
+                        '\ck\Model\PropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6847,7 +6847,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsNamesGroupNameIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroupName';
+        $returnType = '\ck\Model\PropertyGroupName';
         $request = $this->restPropertiesGroupsNamesGroupNameIdPutRequest($group_name_id, $contentType);
 
         return $this->client
@@ -6993,20 +6993,20 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the group name (required)
      * @param  string $name The name of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names _rest_properties_groups_names (optional)
+     * @param  \ck\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names _rest_properties_groups_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsNamesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroupName
+     * @return \ck\Model\PropertyGroupName
      */
     public function restPropertiesGroupsNamesPost(
         int $property_id,
         string $lang,
         string $name,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsNamesPostRequest $_rest_properties_groups_names = null,
+        ?\ck\Model\RestPropertiesGroupsNamesPostRequest $_rest_properties_groups_names = null,
         string $contentType = self::contentTypes['restPropertiesGroupsNamesPost'][0]
-    ): \ck/plenty-client\Model\PropertyGroupName
+    ): \ck\Model\PropertyGroupName
     {
         list($response) = $this->restPropertiesGroupsNamesPostWithHttpInfo($property_id, $lang, $name, $_rest_properties_groups_names, $contentType);
         return $response;
@@ -7020,18 +7020,18 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the group name (required)
      * @param  string $name The name of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names (optional)
+     * @param  \ck\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsNamesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroupName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroupName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsNamesPostWithHttpInfo(
         int $property_id,
         string $lang,
         string $name,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsNamesPostRequest $_rest_properties_groups_names = null,
+        ?\ck\Model\RestPropertiesGroupsNamesPostRequest $_rest_properties_groups_names = null,
         string $contentType = self::contentTypes['restPropertiesGroupsNamesPost'][0]
     ): array
     {
@@ -7074,23 +7074,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroupName' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroupName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroupName' !== 'string') {
+                        if ('\ck\Model\PropertyGroupName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroupName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroupName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroupName';
+            $returnType = '\ck\Model\PropertyGroupName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7111,7 +7111,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroupName',
+                        '\ck\Model\PropertyGroupName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7129,7 +7129,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the group name (required)
      * @param  string $name The name of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names (optional)
+     * @param  \ck\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7139,7 +7139,7 @@ class PropertyApi
         int $property_id,
         string $lang,
         string $name,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsNamesPostRequest $_rest_properties_groups_names = null,
+        ?\ck\Model\RestPropertiesGroupsNamesPostRequest $_rest_properties_groups_names = null,
         string $contentType = self::contentTypes['restPropertiesGroupsNamesPost'][0]
     ): PromiseInterface
     {
@@ -7159,7 +7159,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the group name (required)
      * @param  string $name The name of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names (optional)
+     * @param  \ck\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7173,7 +7173,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsNamesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroupName';
+        $returnType = '\ck\Model\PropertyGroupName';
         $request = $this->restPropertiesGroupsNamesPostRequest($property_id, $lang, $name, $_rest_properties_groups_names, $contentType);
 
         return $this->client
@@ -7218,7 +7218,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the group name (required)
      * @param  string $name The name of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names (optional)
+     * @param  \ck\Model\RestPropertiesGroupsNamesPostRequest|null $_rest_properties_groups_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -7367,7 +7367,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroupOption[]
+     * @return \ck\Model\PropertyGroupOption[]
      */
     public function restPropertiesGroupsOptionsGet(
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsGet'][0]
@@ -7386,7 +7386,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroupOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroupOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsOptionsGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsGet'][0]
@@ -7431,23 +7431,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroupOption[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroupOption[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroupOption[]' !== 'string') {
+                        if ('\ck\Model\PropertyGroupOption[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroupOption[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroupOption[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroupOption[]';
+            $returnType = '\ck\Model\PropertyGroupOption[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7468,7 +7468,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroupOption[]',
+                        '\ck\Model\PropertyGroupOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7514,7 +7514,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroupOption[]';
+        $returnType = '\ck\Model\PropertyGroupOption[]';
         $request = $this->restPropertiesGroupsOptionsGetRequest($contentType);
 
         return $this->client
@@ -7893,12 +7893,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroupOption
+     * @return \ck\Model\PropertyGroupOption
      */
     public function restPropertiesGroupsOptionsGroupOptionIdGet(
         int $group_option_id,
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsGroupOptionIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyGroupOption
+    ): \ck\Model\PropertyGroupOption
     {
         list($response) = $this->restPropertiesGroupsOptionsGroupOptionIdGetWithHttpInfo($group_option_id, $contentType);
         return $response;
@@ -7914,7 +7914,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsOptionsGroupOptionIdGetWithHttpInfo(
         int $group_option_id,
@@ -7960,23 +7960,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroupOption' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroupOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroupOption' !== 'string') {
+                        if ('\ck\Model\PropertyGroupOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroupOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroupOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroupOption';
+            $returnType = '\ck\Model\PropertyGroupOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7997,7 +7997,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroupOption',
+                        '\ck\Model\PropertyGroupOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8047,7 +8047,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsGroupOptionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroupOption';
+        $returnType = '\ck\Model\PropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsGroupOptionIdGetRequest($group_option_id, $contentType);
 
         return $this->client
@@ -8195,12 +8195,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroupOption
+     * @return \ck\Model\PropertyGroupOption
      */
     public function restPropertiesGroupsOptionsGroupOptionIdPut(
         int $group_option_id,
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsGroupOptionIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyGroupOption
+    ): \ck\Model\PropertyGroupOption
     {
         list($response) = $this->restPropertiesGroupsOptionsGroupOptionIdPutWithHttpInfo($group_option_id, $contentType);
         return $response;
@@ -8216,7 +8216,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsOptionsGroupOptionIdPutWithHttpInfo(
         int $group_option_id,
@@ -8262,23 +8262,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroupOption' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroupOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroupOption' !== 'string') {
+                        if ('\ck\Model\PropertyGroupOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroupOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroupOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroupOption';
+            $returnType = '\ck\Model\PropertyGroupOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8299,7 +8299,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroupOption',
+                        '\ck\Model\PropertyGroupOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8349,7 +8349,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsGroupOptionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroupOption';
+        $returnType = '\ck\Model\PropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsGroupOptionIdPutRequest($group_option_id, $contentType);
 
         return $this->client
@@ -8495,20 +8495,20 @@ class PropertyApi
      * @param  int $property_group_id The ID of the property group (required)
      * @param  string $group_option_identifier The groupOptionIdentifier of the group name (required)
      * @param  string $value The value of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options _rest_properties_groups_options (optional)
+     * @param  \ck\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options _rest_properties_groups_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsOptionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroupOption
+     * @return \ck\Model\PropertyGroupOption
      */
     public function restPropertiesGroupsOptionsPost(
         int $property_group_id,
         string $group_option_identifier,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsOptionsPostRequest $_rest_properties_groups_options = null,
+        ?\ck\Model\RestPropertiesGroupsOptionsPostRequest $_rest_properties_groups_options = null,
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsPost'][0]
-    ): \ck/plenty-client\Model\PropertyGroupOption
+    ): \ck\Model\PropertyGroupOption
     {
         list($response) = $this->restPropertiesGroupsOptionsPostWithHttpInfo($property_group_id, $group_option_identifier, $value, $_rest_properties_groups_options, $contentType);
         return $response;
@@ -8522,18 +8522,18 @@ class PropertyApi
      * @param  int $property_group_id The ID of the property group (required)
      * @param  string $group_option_identifier The groupOptionIdentifier of the group name (required)
      * @param  string $value The value of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options (optional)
+     * @param  \ck\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsOptionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroupOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsOptionsPostWithHttpInfo(
         int $property_group_id,
         string $group_option_identifier,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsOptionsPostRequest $_rest_properties_groups_options = null,
+        ?\ck\Model\RestPropertiesGroupsOptionsPostRequest $_rest_properties_groups_options = null,
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsPost'][0]
     ): array
     {
@@ -8576,23 +8576,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroupOption' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroupOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroupOption' !== 'string') {
+                        if ('\ck\Model\PropertyGroupOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroupOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroupOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroupOption';
+            $returnType = '\ck\Model\PropertyGroupOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8613,7 +8613,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroupOption',
+                        '\ck\Model\PropertyGroupOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8631,7 +8631,7 @@ class PropertyApi
      * @param  int $property_group_id The ID of the property group (required)
      * @param  string $group_option_identifier The groupOptionIdentifier of the group name (required)
      * @param  string $value The value of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options (optional)
+     * @param  \ck\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8641,7 +8641,7 @@ class PropertyApi
         int $property_group_id,
         string $group_option_identifier,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsOptionsPostRequest $_rest_properties_groups_options = null,
+        ?\ck\Model\RestPropertiesGroupsOptionsPostRequest $_rest_properties_groups_options = null,
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsPost'][0]
     ): PromiseInterface
     {
@@ -8661,7 +8661,7 @@ class PropertyApi
      * @param  int $property_group_id The ID of the property group (required)
      * @param  string $group_option_identifier The groupOptionIdentifier of the group name (required)
      * @param  string $value The value of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options (optional)
+     * @param  \ck\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8675,7 +8675,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsOptionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroupOption';
+        $returnType = '\ck\Model\PropertyGroupOption';
         $request = $this->restPropertiesGroupsOptionsPostRequest($property_group_id, $group_option_identifier, $value, $_rest_properties_groups_options, $contentType);
 
         return $this->client
@@ -8720,7 +8720,7 @@ class PropertyApi
      * @param  int $property_group_id The ID of the property group (required)
      * @param  string $group_option_identifier The groupOptionIdentifier of the group name (required)
      * @param  string $value The value of the group name (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options (optional)
+     * @param  \ck\Model\RestPropertiesGroupsOptionsPostRequest|null $_rest_properties_groups_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -8868,20 +8868,20 @@ class PropertyApi
      * @param  int $position The position  of the group (required)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups _rest_properties_groups (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups _rest_properties_groups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyGroup
+     * @return \ck\Model\PropertyGroup
      */
     public function restPropertiesGroupsPost(
         int $position,
         ?int $names = null,
         ?int $options = null,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups = null,
+        ?\ck\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups = null,
         string $contentType = self::contentTypes['restPropertiesGroupsPost'][0]
-    ): \ck/plenty-client\Model\PropertyGroup
+    ): \ck\Model\PropertyGroup
     {
         list($response) = $this->restPropertiesGroupsPostWithHttpInfo($position, $names, $options, $_rest_properties_groups, $contentType);
         return $response;
@@ -8895,18 +8895,18 @@ class PropertyApi
      * @param  int $position The position  of the group (required)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesGroupsPostWithHttpInfo(
         int $position,
         ?int $names = null,
         ?int $options = null,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups = null,
+        ?\ck\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups = null,
         string $contentType = self::contentTypes['restPropertiesGroupsPost'][0]
     ): array
     {
@@ -8949,23 +8949,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyGroup' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyGroup' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyGroup' !== 'string') {
+                        if ('\ck\Model\PropertyGroup' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyGroup', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyGroup', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyGroup';
+            $returnType = '\ck\Model\PropertyGroup';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8986,7 +8986,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyGroup',
+                        '\ck\Model\PropertyGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9004,7 +9004,7 @@ class PropertyApi
      * @param  int $position The position  of the group (required)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9014,7 +9014,7 @@ class PropertyApi
         int $position,
         ?int $names = null,
         ?int $options = null,
-        ?\ck/plenty-client\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups = null,
+        ?\ck\Model\RestPropertiesGroupsPostRequest $_rest_properties_groups = null,
         string $contentType = self::contentTypes['restPropertiesGroupsPost'][0]
     ): PromiseInterface
     {
@@ -9034,7 +9034,7 @@ class PropertyApi
      * @param  int $position The position  of the group (required)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9048,7 +9048,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesGroupsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyGroup';
+        $returnType = '\ck\Model\PropertyGroup';
         $request = $this->restPropertiesGroupsPostRequest($position, $names, $options, $_rest_properties_groups, $contentType);
 
         return $this->client
@@ -9093,7 +9093,7 @@ class PropertyApi
      * @param  int $position The position  of the group (required)
      * @param  int|null $names The names of the group. (optional)
      * @param  int|null $options The options of the group (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups (optional)
+     * @param  \ck\Model\RestPropertiesGroupsPostRequest|null $_rest_properties_groups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesGroupsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -9950,7 +9950,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyMarket[]
+     * @return \ck\Model\PropertyMarket[]
      */
     public function restPropertiesMarketsGet(
         string $contentType = self::contentTypes['restPropertiesMarketsGet'][0]
@@ -9969,7 +9969,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyMarket[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyMarket[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMarketsGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesMarketsGet'][0]
@@ -10014,23 +10014,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyMarket[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyMarket[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyMarket[]' !== 'string') {
+                        if ('\ck\Model\PropertyMarket[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyMarket[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyMarket[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyMarket[]';
+            $returnType = '\ck\Model\PropertyMarket[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10051,7 +10051,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyMarket[]',
+                        '\ck\Model\PropertyMarket[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10097,7 +10097,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesMarketsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyMarket[]';
+        $returnType = '\ck\Model\PropertyMarket[]';
         $request = $this->restPropertiesMarketsGetRequest($contentType);
 
         return $this->client
@@ -10227,21 +10227,21 @@ class PropertyApi
      * @param  float $referrer_id The referrer id of the property market (required)
      * @param  int $referrer_sub_id The referrer sub id of the property market (required)
      * @param  string $value The value of the property market (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets _rest_properties_markets (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets _rest_properties_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyMarket
+     * @return \ck\Model\PropertyMarket
      */
     public function restPropertiesMarketsPost(
         int $property_id,
         float $referrer_id,
         int $referrer_sub_id,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesMarketsPostRequest $_rest_properties_markets = null,
+        ?\ck\Model\RestPropertiesMarketsPostRequest $_rest_properties_markets = null,
         string $contentType = self::contentTypes['restPropertiesMarketsPost'][0]
-    ): \ck/plenty-client\Model\PropertyMarket
+    ): \ck\Model\PropertyMarket
     {
         list($response) = $this->restPropertiesMarketsPostWithHttpInfo($property_id, $referrer_id, $referrer_sub_id, $value, $_rest_properties_markets, $contentType);
         return $response;
@@ -10256,19 +10256,19 @@ class PropertyApi
      * @param  float $referrer_id The referrer id of the property market (required)
      * @param  int $referrer_sub_id The referrer sub id of the property market (required)
      * @param  string $value The value of the property market (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMarketsPostWithHttpInfo(
         int $property_id,
         float $referrer_id,
         int $referrer_sub_id,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesMarketsPostRequest $_rest_properties_markets = null,
+        ?\ck\Model\RestPropertiesMarketsPostRequest $_rest_properties_markets = null,
         string $contentType = self::contentTypes['restPropertiesMarketsPost'][0]
     ): array
     {
@@ -10311,23 +10311,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyMarket' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyMarket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyMarket' !== 'string') {
+                        if ('\ck\Model\PropertyMarket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyMarket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyMarket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyMarket';
+            $returnType = '\ck\Model\PropertyMarket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10348,7 +10348,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyMarket',
+                        '\ck\Model\PropertyMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10367,7 +10367,7 @@ class PropertyApi
      * @param  float $referrer_id The referrer id of the property market (required)
      * @param  int $referrer_sub_id The referrer sub id of the property market (required)
      * @param  string $value The value of the property market (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10378,7 +10378,7 @@ class PropertyApi
         float $referrer_id,
         int $referrer_sub_id,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesMarketsPostRequest $_rest_properties_markets = null,
+        ?\ck\Model\RestPropertiesMarketsPostRequest $_rest_properties_markets = null,
         string $contentType = self::contentTypes['restPropertiesMarketsPost'][0]
     ): PromiseInterface
     {
@@ -10399,7 +10399,7 @@ class PropertyApi
      * @param  float $referrer_id The referrer id of the property market (required)
      * @param  int $referrer_sub_id The referrer sub id of the property market (required)
      * @param  string $value The value of the property market (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10414,7 +10414,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesMarketsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyMarket';
+        $returnType = '\ck\Model\PropertyMarket';
         $request = $this->restPropertiesMarketsPostRequest($property_id, $referrer_id, $referrer_sub_id, $value, $_rest_properties_markets, $contentType);
 
         return $this->client
@@ -10460,7 +10460,7 @@ class PropertyApi
      * @param  float $referrer_id The referrer id of the property market (required)
      * @param  int $referrer_sub_id The referrer sub id of the property market (required)
      * @param  string $value The value of the property market (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPostRequest|null $_rest_properties_markets (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -10902,13 +10902,13 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyMarket
+     * @return \ck\Model\PropertyMarket
      */
     public function restPropertiesMarketsPropertiesMarketIdGet(
         int $property_market_id,
         int $properties_market_id,
         string $contentType = self::contentTypes['restPropertiesMarketsPropertiesMarketIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyMarket
+    ): \ck\Model\PropertyMarket
     {
         list($response) = $this->restPropertiesMarketsPropertiesMarketIdGetWithHttpInfo($property_market_id, $properties_market_id, $contentType);
         return $response;
@@ -10925,7 +10925,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMarketsPropertiesMarketIdGetWithHttpInfo(
         int $property_market_id,
@@ -10972,23 +10972,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyMarket' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyMarket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyMarket' !== 'string') {
+                        if ('\ck\Model\PropertyMarket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyMarket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyMarket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyMarket';
+            $returnType = '\ck\Model\PropertyMarket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11009,7 +11009,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyMarket',
+                        '\ck\Model\PropertyMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11063,7 +11063,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesMarketsPropertiesMarketIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyMarket';
+        $returnType = '\ck\Model\PropertyMarket';
         $request = $this->restPropertiesMarketsPropertiesMarketIdGetRequest($property_market_id, $properties_market_id, $contentType);
 
         return $this->client
@@ -11225,18 +11225,18 @@ class PropertyApi
      * Update a property market
      *
      * @param  int $properties_market_id properties_market_id (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id _rest_properties_markets_properties_market_id (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id _rest_properties_markets_properties_market_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyMarket
+     * @return \ck\Model\PropertyMarket
      */
     public function restPropertiesMarketsPropertiesMarketIdPut(
         int $properties_market_id,
-        ?\ck/plenty-client\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest $_rest_properties_markets_properties_market_id = null,
+        ?\ck\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest $_rest_properties_markets_properties_market_id = null,
         string $contentType = self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyMarket
+    ): \ck\Model\PropertyMarket
     {
         list($response) = $this->restPropertiesMarketsPropertiesMarketIdPutWithHttpInfo($properties_market_id, $_rest_properties_markets_properties_market_id, $contentType);
         return $response;
@@ -11248,16 +11248,16 @@ class PropertyApi
      * Update a property market
      *
      * @param  int $properties_market_id (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyMarket, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyMarket, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMarketsPropertiesMarketIdPutWithHttpInfo(
         int $properties_market_id,
-        ?\ck/plenty-client\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest $_rest_properties_markets_properties_market_id = null,
+        ?\ck\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest $_rest_properties_markets_properties_market_id = null,
         string $contentType = self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'][0]
     ): array
     {
@@ -11300,23 +11300,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyMarket' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyMarket' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyMarket' !== 'string') {
+                        if ('\ck\Model\PropertyMarket' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyMarket', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyMarket', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyMarket';
+            $returnType = '\ck\Model\PropertyMarket';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11337,7 +11337,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyMarket',
+                        '\ck\Model\PropertyMarket',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11353,7 +11353,7 @@ class PropertyApi
      * Update a property market
      *
      * @param  int $properties_market_id (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11361,7 +11361,7 @@ class PropertyApi
      */
     public function restPropertiesMarketsPropertiesMarketIdPutAsync(
         int $properties_market_id,
-        ?\ck/plenty-client\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest $_rest_properties_markets_properties_market_id = null,
+        ?\ck\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest $_rest_properties_markets_properties_market_id = null,
         string $contentType = self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'][0]
     ): PromiseInterface
     {
@@ -11379,7 +11379,7 @@ class PropertyApi
      * Update a property market
      *
      * @param  int $properties_market_id (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11391,7 +11391,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyMarket';
+        $returnType = '\ck\Model\PropertyMarket';
         $request = $this->restPropertiesMarketsPropertiesMarketIdPutRequest($properties_market_id, $_rest_properties_markets_properties_market_id, $contentType);
 
         return $this->client
@@ -11434,7 +11434,7 @@ class PropertyApi
      * Create request for operation 'restPropertiesMarketsPropertiesMarketIdPut'
      *
      * @param  int $properties_market_id (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id (optional)
+     * @param  \ck\Model\RestPropertiesMarketsPropertiesMarketIdPutRequest|null $_rest_properties_markets_properties_market_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesMarketsPropertiesMarketIdPut'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -11773,13 +11773,13 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyOption
+     * @return \ck\Model\PropertyOption
      */
     public function restPropertiesMultipleOptionsPost(
         int $property_id,
         string $type_option_identifier,
         string $contentType = self::contentTypes['restPropertiesMultipleOptionsPost'][0]
-    ): \ck/plenty-client\Model\PropertyOption
+    ): \ck\Model\PropertyOption
     {
         list($response) = $this->restPropertiesMultipleOptionsPostWithHttpInfo($property_id, $type_option_identifier, $contentType);
         return $response;
@@ -11796,7 +11796,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesMultipleOptionsPostWithHttpInfo(
         int $property_id,
@@ -11843,23 +11843,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyOption' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyOption' !== 'string') {
+                        if ('\ck\Model\PropertyOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyOption';
+            $returnType = '\ck\Model\PropertyOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11880,7 +11880,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyOption',
+                        '\ck\Model\PropertyOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11934,7 +11934,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesMultipleOptionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyOption';
+        $returnType = '\ck\Model\PropertyOption';
         $request = $this->restPropertiesMultipleOptionsPostRequest($property_id, $type_option_identifier, $contentType);
 
         return $this->client
@@ -12100,7 +12100,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyName[]
+     * @return \ck\Model\PropertyName[]
      */
     public function restPropertiesNamesGet(
         string $contentType = self::contentTypes['restPropertiesNamesGet'][0]
@@ -12119,7 +12119,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesNamesGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesNamesGet'][0]
@@ -12164,23 +12164,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyName[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyName[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyName[]' !== 'string') {
+                        if ('\ck\Model\PropertyName[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyName[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyName[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyName[]';
+            $returnType = '\ck\Model\PropertyName[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12201,7 +12201,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyName[]',
+                        '\ck\Model\PropertyName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12247,7 +12247,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyName[]';
+        $returnType = '\ck\Model\PropertyName[]';
         $request = $this->restPropertiesNamesGetRequest($contentType);
 
         return $this->client
@@ -12626,12 +12626,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyName
+     * @return \ck\Model\PropertyName
      */
     public function restPropertiesNamesNameIdGet(
         int $name_id,
         string $contentType = self::contentTypes['restPropertiesNamesNameIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyName
+    ): \ck\Model\PropertyName
     {
         list($response) = $this->restPropertiesNamesNameIdGetWithHttpInfo($name_id, $contentType);
         return $response;
@@ -12647,7 +12647,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesNamesNameIdGetWithHttpInfo(
         int $name_id,
@@ -12693,23 +12693,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyName' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyName' !== 'string') {
+                        if ('\ck\Model\PropertyName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyName';
+            $returnType = '\ck\Model\PropertyName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12730,7 +12730,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyName',
+                        '\ck\Model\PropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12780,7 +12780,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesNamesNameIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyName';
+        $returnType = '\ck\Model\PropertyName';
         $request = $this->restPropertiesNamesNameIdGetRequest($name_id, $contentType);
 
         return $this->client
@@ -12928,12 +12928,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyName
+     * @return \ck\Model\PropertyName
      */
     public function restPropertiesNamesNameIdPut(
         int $name_id,
         string $contentType = self::contentTypes['restPropertiesNamesNameIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyName
+    ): \ck\Model\PropertyName
     {
         list($response) = $this->restPropertiesNamesNameIdPutWithHttpInfo($name_id, $contentType);
         return $response;
@@ -12949,7 +12949,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesNamesNameIdPutWithHttpInfo(
         int $name_id,
@@ -12995,23 +12995,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyName' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyName' !== 'string') {
+                        if ('\ck\Model\PropertyName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyName';
+            $returnType = '\ck\Model\PropertyName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13032,7 +13032,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyName',
+                        '\ck\Model\PropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13082,7 +13082,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesNamesNameIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyName';
+        $returnType = '\ck\Model\PropertyName';
         $request = $this->restPropertiesNamesNameIdPutRequest($name_id, $contentType);
 
         return $this->client
@@ -13229,21 +13229,21 @@ class PropertyApi
      * @param  string $lang The lang of the property name (required)
      * @param  string $name The name of the property name (required)
      * @param  string|null $description The description of the property name (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names _rest_properties_names (optional)
+     * @param  \ck\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names _rest_properties_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesNamesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyName
+     * @return \ck\Model\PropertyName
      */
     public function restPropertiesNamesPost(
         int $property_id,
         string $lang,
         string $name,
         ?string $description = null,
-        ?\ck/plenty-client\Model\RestPropertiesNamesPostRequest $_rest_properties_names = null,
+        ?\ck\Model\RestPropertiesNamesPostRequest $_rest_properties_names = null,
         string $contentType = self::contentTypes['restPropertiesNamesPost'][0]
-    ): \ck/plenty-client\Model\PropertyName
+    ): \ck\Model\PropertyName
     {
         list($response) = $this->restPropertiesNamesPostWithHttpInfo($property_id, $lang, $name, $description, $_rest_properties_names, $contentType);
         return $response;
@@ -13258,19 +13258,19 @@ class PropertyApi
      * @param  string $lang The lang of the property name (required)
      * @param  string $name The name of the property name (required)
      * @param  string|null $description The description of the property name (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names (optional)
+     * @param  \ck\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesNamesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyName, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyName, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesNamesPostWithHttpInfo(
         int $property_id,
         string $lang,
         string $name,
         ?string $description = null,
-        ?\ck/plenty-client\Model\RestPropertiesNamesPostRequest $_rest_properties_names = null,
+        ?\ck\Model\RestPropertiesNamesPostRequest $_rest_properties_names = null,
         string $contentType = self::contentTypes['restPropertiesNamesPost'][0]
     ): array
     {
@@ -13313,23 +13313,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyName' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyName' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyName' !== 'string') {
+                        if ('\ck\Model\PropertyName' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyName', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyName', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyName';
+            $returnType = '\ck\Model\PropertyName';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13350,7 +13350,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyName',
+                        '\ck\Model\PropertyName',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13369,7 +13369,7 @@ class PropertyApi
      * @param  string $lang The lang of the property name (required)
      * @param  string $name The name of the property name (required)
      * @param  string|null $description The description of the property name (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names (optional)
+     * @param  \ck\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13380,7 +13380,7 @@ class PropertyApi
         string $lang,
         string $name,
         ?string $description = null,
-        ?\ck/plenty-client\Model\RestPropertiesNamesPostRequest $_rest_properties_names = null,
+        ?\ck\Model\RestPropertiesNamesPostRequest $_rest_properties_names = null,
         string $contentType = self::contentTypes['restPropertiesNamesPost'][0]
     ): PromiseInterface
     {
@@ -13401,7 +13401,7 @@ class PropertyApi
      * @param  string $lang The lang of the property name (required)
      * @param  string $name The name of the property name (required)
      * @param  string|null $description The description of the property name (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names (optional)
+     * @param  \ck\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13416,7 +13416,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesNamesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyName';
+        $returnType = '\ck\Model\PropertyName';
         $request = $this->restPropertiesNamesPostRequest($property_id, $lang, $name, $description, $_rest_properties_names, $contentType);
 
         return $this->client
@@ -13462,7 +13462,7 @@ class PropertyApi
      * @param  string $lang The lang of the property name (required)
      * @param  string $name The name of the property name (required)
      * @param  string|null $description The description of the property name (optional)
-     * @param  \ck/plenty-client\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names (optional)
+     * @param  \ck\Model\RestPropertiesNamesPostRequest|null $_rest_properties_names (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesNamesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -13622,7 +13622,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyOption[]
+     * @return \ck\Model\PropertyOption[]
      */
     public function restPropertiesOptionsGet(
         string $contentType = self::contentTypes['restPropertiesOptionsGet'][0]
@@ -13641,7 +13641,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyOption[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyOption[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesOptionsGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesOptionsGet'][0]
@@ -13686,23 +13686,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyOption[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyOption[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyOption[]' !== 'string') {
+                        if ('\ck\Model\PropertyOption[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyOption[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyOption[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyOption[]';
+            $returnType = '\ck\Model\PropertyOption[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13723,7 +13723,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyOption[]',
+                        '\ck\Model\PropertyOption[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13769,7 +13769,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesOptionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyOption[]';
+        $returnType = '\ck\Model\PropertyOption[]';
         $request = $this->restPropertiesOptionsGetRequest($contentType);
 
         return $this->client
@@ -13897,19 +13897,19 @@ class PropertyApi
      *
      * @param  int $property_id ID of the property (required)
      * @param  string $type_option_identifier The identifier of the property option type (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options _rest_properties_options (optional)
+     * @param  \ck\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options _rest_properties_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesOptionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyOption
+     * @return \ck\Model\PropertyOption
      */
     public function restPropertiesOptionsPost(
         int $property_id,
         string $type_option_identifier,
-        ?\ck/plenty-client\Model\RestPropertiesOptionsPostRequest $_rest_properties_options = null,
+        ?\ck\Model\RestPropertiesOptionsPostRequest $_rest_properties_options = null,
         string $contentType = self::contentTypes['restPropertiesOptionsPost'][0]
-    ): \ck/plenty-client\Model\PropertyOption
+    ): \ck\Model\PropertyOption
     {
         list($response) = $this->restPropertiesOptionsPostWithHttpInfo($property_id, $type_option_identifier, $_rest_properties_options, $contentType);
         return $response;
@@ -13922,17 +13922,17 @@ class PropertyApi
      *
      * @param  int $property_id ID of the property (required)
      * @param  string $type_option_identifier The identifier of the property option type (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options (optional)
+     * @param  \ck\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesOptionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesOptionsPostWithHttpInfo(
         int $property_id,
         string $type_option_identifier,
-        ?\ck/plenty-client\Model\RestPropertiesOptionsPostRequest $_rest_properties_options = null,
+        ?\ck\Model\RestPropertiesOptionsPostRequest $_rest_properties_options = null,
         string $contentType = self::contentTypes['restPropertiesOptionsPost'][0]
     ): array
     {
@@ -13975,23 +13975,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyOption' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyOption' !== 'string') {
+                        if ('\ck\Model\PropertyOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyOption';
+            $returnType = '\ck\Model\PropertyOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14012,7 +14012,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyOption',
+                        '\ck\Model\PropertyOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14029,7 +14029,7 @@ class PropertyApi
      *
      * @param  int $property_id ID of the property (required)
      * @param  string $type_option_identifier The identifier of the property option type (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options (optional)
+     * @param  \ck\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14038,7 +14038,7 @@ class PropertyApi
     public function restPropertiesOptionsPostAsync(
         int $property_id,
         string $type_option_identifier,
-        ?\ck/plenty-client\Model\RestPropertiesOptionsPostRequest $_rest_properties_options = null,
+        ?\ck\Model\RestPropertiesOptionsPostRequest $_rest_properties_options = null,
         string $contentType = self::contentTypes['restPropertiesOptionsPost'][0]
     ): PromiseInterface
     {
@@ -14057,7 +14057,7 @@ class PropertyApi
      *
      * @param  int $property_id ID of the property (required)
      * @param  string $type_option_identifier The identifier of the property option type (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options (optional)
+     * @param  \ck\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14070,7 +14070,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesOptionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyOption';
+        $returnType = '\ck\Model\PropertyOption';
         $request = $this->restPropertiesOptionsPostRequest($property_id, $type_option_identifier, $_rest_properties_options, $contentType);
 
         return $this->client
@@ -14114,7 +14114,7 @@ class PropertyApi
      *
      * @param  int $property_id ID of the property (required)
      * @param  string $type_option_identifier The identifier of the property option type (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options (optional)
+     * @param  \ck\Model\RestPropertiesOptionsPostRequest|null $_rest_properties_options (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesOptionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -14495,12 +14495,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyOption
+     * @return \ck\Model\PropertyOption
      */
     public function restPropertiesOptionsPropertyOptionIdGet(
         int $property_option_id,
         string $contentType = self::contentTypes['restPropertiesOptionsPropertyOptionIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyOption
+    ): \ck\Model\PropertyOption
     {
         list($response) = $this->restPropertiesOptionsPropertyOptionIdGetWithHttpInfo($property_option_id, $contentType);
         return $response;
@@ -14516,7 +14516,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesOptionsPropertyOptionIdGetWithHttpInfo(
         int $property_option_id,
@@ -14562,23 +14562,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyOption' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyOption' !== 'string') {
+                        if ('\ck\Model\PropertyOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyOption';
+            $returnType = '\ck\Model\PropertyOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14599,7 +14599,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyOption',
+                        '\ck\Model\PropertyOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14649,7 +14649,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesOptionsPropertyOptionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyOption';
+        $returnType = '\ck\Model\PropertyOption';
         $request = $this->restPropertiesOptionsPropertyOptionIdGetRequest($property_option_id, $contentType);
 
         return $this->client
@@ -14798,13 +14798,13 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyOption
+     * @return \ck\Model\PropertyOption
      */
     public function restPropertiesOptionsPropertyOptionIdPut(
         int $property_option_id,
         int $property_option_id2,
         string $contentType = self::contentTypes['restPropertiesOptionsPropertyOptionIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyOption
+    ): \ck\Model\PropertyOption
     {
         list($response) = $this->restPropertiesOptionsPropertyOptionIdPutWithHttpInfo($property_option_id, $property_option_id2, $contentType);
         return $response;
@@ -14821,7 +14821,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyOption, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyOption, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesOptionsPropertyOptionIdPutWithHttpInfo(
         int $property_option_id,
@@ -14868,23 +14868,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyOption' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyOption' !== 'string') {
+                        if ('\ck\Model\PropertyOption' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyOption', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyOption';
+            $returnType = '\ck\Model\PropertyOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14905,7 +14905,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyOption',
+                        '\ck\Model\PropertyOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14959,7 +14959,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesOptionsPropertyOptionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyOption';
+        $returnType = '\ck\Model\PropertyOption';
         $request = $this->restPropertiesOptionsPropertyOptionIdPutRequest($property_option_id, $property_option_id2, $contentType);
 
         return $this->client
@@ -15123,20 +15123,20 @@ class PropertyApi
      * @param  string $cast The cast of the property (required)
      * @param  string $type_identifier The identifier of the property type (required)
      * @param  int $position The position of the property (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesPostRequest|null $_rest_properties _rest_properties (optional)
+     * @param  \ck\Model\RestPropertiesPostRequest|null $_rest_properties _rest_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Property
+     * @return \ck\Model\Property
      */
     public function restPropertiesPost(
         string $cast,
         string $type_identifier,
         int $position,
-        ?\ck/plenty-client\Model\RestPropertiesPostRequest $_rest_properties = null,
+        ?\ck\Model\RestPropertiesPostRequest $_rest_properties = null,
         string $contentType = self::contentTypes['restPropertiesPost'][0]
-    ): \ck/plenty-client\Model\Property
+    ): \ck\Model\Property
     {
         list($response) = $this->restPropertiesPostWithHttpInfo($cast, $type_identifier, $position, $_rest_properties, $contentType);
         return $response;
@@ -15150,18 +15150,18 @@ class PropertyApi
      * @param  string $cast The cast of the property (required)
      * @param  string $type_identifier The identifier of the property type (required)
      * @param  int $position The position of the property (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesPostRequest|null $_rest_properties (optional)
+     * @param  \ck\Model\RestPropertiesPostRequest|null $_rest_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Property, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Property, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesPostWithHttpInfo(
         string $cast,
         string $type_identifier,
         int $position,
-        ?\ck/plenty-client\Model\RestPropertiesPostRequest $_rest_properties = null,
+        ?\ck\Model\RestPropertiesPostRequest $_rest_properties = null,
         string $contentType = self::contentTypes['restPropertiesPost'][0]
     ): array
     {
@@ -15204,23 +15204,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Property' === '\SplFileObject') {
+                    if ('\ck\Model\Property' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Property' !== 'string') {
+                        if ('\ck\Model\Property' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Property', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Property', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Property';
+            $returnType = '\ck\Model\Property';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15241,7 +15241,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Property',
+                        '\ck\Model\Property',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15259,7 +15259,7 @@ class PropertyApi
      * @param  string $cast The cast of the property (required)
      * @param  string $type_identifier The identifier of the property type (required)
      * @param  int $position The position of the property (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesPostRequest|null $_rest_properties (optional)
+     * @param  \ck\Model\RestPropertiesPostRequest|null $_rest_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15269,7 +15269,7 @@ class PropertyApi
         string $cast,
         string $type_identifier,
         int $position,
-        ?\ck/plenty-client\Model\RestPropertiesPostRequest $_rest_properties = null,
+        ?\ck\Model\RestPropertiesPostRequest $_rest_properties = null,
         string $contentType = self::contentTypes['restPropertiesPost'][0]
     ): PromiseInterface
     {
@@ -15289,7 +15289,7 @@ class PropertyApi
      * @param  string $cast The cast of the property (required)
      * @param  string $type_identifier The identifier of the property type (required)
      * @param  int $position The position of the property (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesPostRequest|null $_rest_properties (optional)
+     * @param  \ck\Model\RestPropertiesPostRequest|null $_rest_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15303,7 +15303,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Property';
+        $returnType = '\ck\Model\Property';
         $request = $this->restPropertiesPostRequest($cast, $type_identifier, $position, $_rest_properties, $contentType);
 
         return $this->client
@@ -15348,7 +15348,7 @@ class PropertyApi
      * @param  string $cast The cast of the property (required)
      * @param  string $type_identifier The identifier of the property type (required)
      * @param  int $position The position of the property (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesPostRequest|null $_rest_properties (optional)
+     * @param  \ck\Model\RestPropertiesPostRequest|null $_rest_properties (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -15746,12 +15746,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Property
+     * @return \ck\Model\Property
      */
     public function restPropertiesPropertyIdGet(
         int $property_id,
         string $contentType = self::contentTypes['restPropertiesPropertyIdGet'][0]
-    ): \ck/plenty-client\Model\Property
+    ): \ck\Model\Property
     {
         list($response) = $this->restPropertiesPropertyIdGetWithHttpInfo($property_id, $contentType);
         return $response;
@@ -15767,7 +15767,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Property, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Property, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesPropertyIdGetWithHttpInfo(
         int $property_id,
@@ -15813,23 +15813,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Property' === '\SplFileObject') {
+                    if ('\ck\Model\Property' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Property' !== 'string') {
+                        if ('\ck\Model\Property' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Property', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Property', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Property';
+            $returnType = '\ck\Model\Property';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15850,7 +15850,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Property',
+                        '\ck\Model\Property',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15900,7 +15900,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesPropertyIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Property';
+        $returnType = '\ck\Model\Property';
         $request = $this->restPropertiesPropertyIdGetRequest($property_id, $contentType);
 
         return $this->client
@@ -16048,12 +16048,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Property
+     * @return \ck\Model\Property
      */
     public function restPropertiesPropertyIdPut(
         int $property_id,
         string $contentType = self::contentTypes['restPropertiesPropertyIdPut'][0]
-    ): \ck/plenty-client\Model\Property
+    ): \ck\Model\Property
     {
         list($response) = $this->restPropertiesPropertyIdPutWithHttpInfo($property_id, $contentType);
         return $response;
@@ -16069,7 +16069,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Property, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Property, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesPropertyIdPutWithHttpInfo(
         int $property_id,
@@ -16115,23 +16115,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Property' === '\SplFileObject') {
+                    if ('\ck\Model\Property' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Property' !== 'string') {
+                        if ('\ck\Model\Property' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Property', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Property', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Property';
+            $returnType = '\ck\Model\Property';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -16152,7 +16152,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Property',
+                        '\ck\Model\Property',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16202,7 +16202,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesPropertyIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Property';
+        $returnType = '\ck\Model\Property';
         $request = $this->restPropertiesPropertyIdPutRequest($property_id, $contentType);
 
         return $this->client
@@ -16603,7 +16603,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelation[]
+     * @return \ck\Model\PropertyRelation[]
      */
     public function restPropertiesRelationsGet(
         ?int $page = null,
@@ -16632,7 +16632,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsGetWithHttpInfo(
         ?int $page = null,
@@ -16682,23 +16682,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelation[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelation[]' !== 'string') {
+                        if ('\ck\Model\PropertyRelation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelation[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelation[]';
+            $returnType = '\ck\Model\PropertyRelation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -16719,7 +16719,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelation[]',
+                        '\ck\Model\PropertyRelation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -16785,7 +16785,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelation[]';
+        $returnType = '\ck\Model\PropertyRelation[]';
         $request = $this->restPropertiesRelationsGetRequest($page, $items_per_page, $paginate, $relation_type_identifier, $relation_target_id, $contentType);
 
         return $this->client
@@ -16975,7 +16975,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationMarkup[]
+     * @return \ck\Model\PropertyRelationMarkup[]
      */
     public function restPropertiesRelationsMarkupsGet(
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsGet'][0]
@@ -16994,7 +16994,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationMarkup[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationMarkup[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsMarkupsGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsGet'][0]
@@ -17039,23 +17039,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationMarkup[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationMarkup[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationMarkup[]' !== 'string') {
+                        if ('\ck\Model\PropertyRelationMarkup[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationMarkup[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationMarkup[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationMarkup[]';
+            $returnType = '\ck\Model\PropertyRelationMarkup[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17076,7 +17076,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationMarkup[]',
+                        '\ck\Model\PropertyRelationMarkup[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17122,7 +17122,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationMarkup[]';
+        $returnType = '\ck\Model\PropertyRelationMarkup[]';
         $request = $this->restPropertiesRelationsMarkupsGetRequest($contentType);
 
         return $this->client
@@ -17251,20 +17251,20 @@ class PropertyApi
      * @param  int $property_relation_id The ID of the property elation (required)
      * @param  int $variation_sales_price_id The ID of a variation&#39;s sales price (required)
      * @param  float $markup The property relation markup (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups _rest_properties_relations_markups (optional)
+     * @param  \ck\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups _rest_properties_relations_markups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsMarkupsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationMarkup
+     * @return \ck\Model\PropertyRelationMarkup
      */
     public function restPropertiesRelationsMarkupsPost(
         int $property_relation_id,
         int $variation_sales_price_id,
         float $markup,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsMarkupsPostRequest $_rest_properties_relations_markups = null,
+        ?\ck\Model\RestPropertiesRelationsMarkupsPostRequest $_rest_properties_relations_markups = null,
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsPost'][0]
-    ): \ck/plenty-client\Model\PropertyRelationMarkup
+    ): \ck\Model\PropertyRelationMarkup
     {
         list($response) = $this->restPropertiesRelationsMarkupsPostWithHttpInfo($property_relation_id, $variation_sales_price_id, $markup, $_rest_properties_relations_markups, $contentType);
         return $response;
@@ -17278,18 +17278,18 @@ class PropertyApi
      * @param  int $property_relation_id The ID of the property elation (required)
      * @param  int $variation_sales_price_id The ID of a variation&#39;s sales price (required)
      * @param  float $markup The property relation markup (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups (optional)
+     * @param  \ck\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsMarkupsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsMarkupsPostWithHttpInfo(
         int $property_relation_id,
         int $variation_sales_price_id,
         float $markup,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsMarkupsPostRequest $_rest_properties_relations_markups = null,
+        ?\ck\Model\RestPropertiesRelationsMarkupsPostRequest $_rest_properties_relations_markups = null,
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsPost'][0]
     ): array
     {
@@ -17332,23 +17332,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationMarkup' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationMarkup' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationMarkup' !== 'string') {
+                        if ('\ck\Model\PropertyRelationMarkup' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationMarkup', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationMarkup', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationMarkup';
+            $returnType = '\ck\Model\PropertyRelationMarkup';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17369,7 +17369,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationMarkup',
+                        '\ck\Model\PropertyRelationMarkup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17387,7 +17387,7 @@ class PropertyApi
      * @param  int $property_relation_id The ID of the property elation (required)
      * @param  int $variation_sales_price_id The ID of a variation&#39;s sales price (required)
      * @param  float $markup The property relation markup (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups (optional)
+     * @param  \ck\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsMarkupsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -17397,7 +17397,7 @@ class PropertyApi
         int $property_relation_id,
         int $variation_sales_price_id,
         float $markup,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsMarkupsPostRequest $_rest_properties_relations_markups = null,
+        ?\ck\Model\RestPropertiesRelationsMarkupsPostRequest $_rest_properties_relations_markups = null,
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsPost'][0]
     ): PromiseInterface
     {
@@ -17417,7 +17417,7 @@ class PropertyApi
      * @param  int $property_relation_id The ID of the property elation (required)
      * @param  int $variation_sales_price_id The ID of a variation&#39;s sales price (required)
      * @param  float $markup The property relation markup (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups (optional)
+     * @param  \ck\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsMarkupsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -17431,7 +17431,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationMarkup';
+        $returnType = '\ck\Model\PropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsPostRequest($property_relation_id, $variation_sales_price_id, $markup, $_rest_properties_relations_markups, $contentType);
 
         return $this->client
@@ -17476,7 +17476,7 @@ class PropertyApi
      * @param  int $property_relation_id The ID of the property elation (required)
      * @param  int $variation_sales_price_id The ID of a variation&#39;s sales price (required)
      * @param  float $markup The property relation markup (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups (optional)
+     * @param  \ck\Model\RestPropertiesRelationsMarkupsPostRequest|null $_rest_properties_relations_markups (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsMarkupsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -17874,12 +17874,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationMarkup
+     * @return \ck\Model\PropertyRelationMarkup
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdGet(
         int $relation_markup_id,
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsRelationMarkupIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyRelationMarkup
+    ): \ck\Model\PropertyRelationMarkup
     {
         list($response) = $this->restPropertiesRelationsMarkupsRelationMarkupIdGetWithHttpInfo($relation_markup_id, $contentType);
         return $response;
@@ -17895,7 +17895,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdGetWithHttpInfo(
         int $relation_markup_id,
@@ -17941,23 +17941,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationMarkup' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationMarkup' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationMarkup' !== 'string') {
+                        if ('\ck\Model\PropertyRelationMarkup' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationMarkup', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationMarkup', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationMarkup';
+            $returnType = '\ck\Model\PropertyRelationMarkup';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -17978,7 +17978,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationMarkup',
+                        '\ck\Model\PropertyRelationMarkup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18028,7 +18028,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsRelationMarkupIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationMarkup';
+        $returnType = '\ck\Model\PropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsRelationMarkupIdGetRequest($relation_markup_id, $contentType);
 
         return $this->client
@@ -18176,12 +18176,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationMarkup
+     * @return \ck\Model\PropertyRelationMarkup
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdPut(
         int $relation_markup_id,
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsRelationMarkupIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyRelationMarkup
+    ): \ck\Model\PropertyRelationMarkup
     {
         list($response) = $this->restPropertiesRelationsMarkupsRelationMarkupIdPutWithHttpInfo($relation_markup_id, $contentType);
         return $response;
@@ -18197,7 +18197,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationMarkup, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsMarkupsRelationMarkupIdPutWithHttpInfo(
         int $relation_markup_id,
@@ -18243,23 +18243,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationMarkup' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationMarkup' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationMarkup' !== 'string') {
+                        if ('\ck\Model\PropertyRelationMarkup' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationMarkup', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationMarkup', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationMarkup';
+            $returnType = '\ck\Model\PropertyRelationMarkup';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18280,7 +18280,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationMarkup',
+                        '\ck\Model\PropertyRelationMarkup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18330,7 +18330,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsMarkupsRelationMarkupIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationMarkup';
+        $returnType = '\ck\Model\PropertyRelationMarkup';
         $request = $this->restPropertiesRelationsMarkupsRelationMarkupIdPutRequest($relation_markup_id, $contentType);
 
         return $this->client
@@ -18477,21 +18477,21 @@ class PropertyApi
      * @param  string $relation_type_identifier The identifier of the property relation type (required)
      * @param  int $relation_target_id The ID of the property relation target (required)
      * @param  int $selection_relation_id The ID of the property selection relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations _rest_properties_relations (optional)
+     * @param  \ck\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations _rest_properties_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelation
+     * @return \ck\Model\PropertyRelation
      */
     public function restPropertiesRelationsPost(
         int $property_id,
         string $relation_type_identifier,
         int $relation_target_id,
         int $selection_relation_id,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsPostRequest $_rest_properties_relations = null,
+        ?\ck\Model\RestPropertiesRelationsPostRequest $_rest_properties_relations = null,
         string $contentType = self::contentTypes['restPropertiesRelationsPost'][0]
-    ): \ck/plenty-client\Model\PropertyRelation
+    ): \ck\Model\PropertyRelation
     {
         list($response) = $this->restPropertiesRelationsPostWithHttpInfo($property_id, $relation_type_identifier, $relation_target_id, $selection_relation_id, $_rest_properties_relations, $contentType);
         return $response;
@@ -18506,19 +18506,19 @@ class PropertyApi
      * @param  string $relation_type_identifier The identifier of the property relation type (required)
      * @param  int $relation_target_id The ID of the property relation target (required)
      * @param  int $selection_relation_id The ID of the property selection relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations (optional)
+     * @param  \ck\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsPostWithHttpInfo(
         int $property_id,
         string $relation_type_identifier,
         int $relation_target_id,
         int $selection_relation_id,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsPostRequest $_rest_properties_relations = null,
+        ?\ck\Model\RestPropertiesRelationsPostRequest $_rest_properties_relations = null,
         string $contentType = self::contentTypes['restPropertiesRelationsPost'][0]
     ): array
     {
@@ -18561,23 +18561,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelation' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelation' !== 'string') {
+                        if ('\ck\Model\PropertyRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelation';
+            $returnType = '\ck\Model\PropertyRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18598,7 +18598,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelation',
+                        '\ck\Model\PropertyRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18617,7 +18617,7 @@ class PropertyApi
      * @param  string $relation_type_identifier The identifier of the property relation type (required)
      * @param  int $relation_target_id The ID of the property relation target (required)
      * @param  int $selection_relation_id The ID of the property selection relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations (optional)
+     * @param  \ck\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18628,7 +18628,7 @@ class PropertyApi
         string $relation_type_identifier,
         int $relation_target_id,
         int $selection_relation_id,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsPostRequest $_rest_properties_relations = null,
+        ?\ck\Model\RestPropertiesRelationsPostRequest $_rest_properties_relations = null,
         string $contentType = self::contentTypes['restPropertiesRelationsPost'][0]
     ): PromiseInterface
     {
@@ -18649,7 +18649,7 @@ class PropertyApi
      * @param  string $relation_type_identifier The identifier of the property relation type (required)
      * @param  int $relation_target_id The ID of the property relation target (required)
      * @param  int $selection_relation_id The ID of the property selection relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations (optional)
+     * @param  \ck\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18664,7 +18664,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelation';
+        $returnType = '\ck\Model\PropertyRelation';
         $request = $this->restPropertiesRelationsPostRequest($property_id, $relation_type_identifier, $relation_target_id, $selection_relation_id, $_rest_properties_relations, $contentType);
 
         return $this->client
@@ -18710,7 +18710,7 @@ class PropertyApi
      * @param  string $relation_type_identifier The identifier of the property relation type (required)
      * @param  int $relation_target_id The ID of the property relation target (required)
      * @param  int $selection_relation_id The ID of the property selection relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations (optional)
+     * @param  \ck\Model\RestPropertiesRelationsPostRequest|null $_rest_properties_relations (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -18877,7 +18877,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelation[]
+     * @return \ck\Model\PropertyRelation[]
      */
     public function restPropertiesRelationsPut(
         int $relation_id,
@@ -18898,7 +18898,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsPutWithHttpInfo(
         int $relation_id,
@@ -18944,23 +18944,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelation[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelation[]' !== 'string') {
+                        if ('\ck\Model\PropertyRelation[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelation[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelation[]';
+            $returnType = '\ck\Model\PropertyRelation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -18981,7 +18981,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelation[]',
+                        '\ck\Model\PropertyRelation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19031,7 +19031,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelation[]';
+        $returnType = '\ck\Model\PropertyRelation[]';
         $request = $this->restPropertiesRelationsPutRequest($relation_id, $contentType);
 
         return $this->client
@@ -19808,12 +19808,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelation
+     * @return \ck\Model\PropertyRelation
      */
     public function restPropertiesRelationsRelationIdGet(
         int $relation_id,
         string $contentType = self::contentTypes['restPropertiesRelationsRelationIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyRelation
+    ): \ck\Model\PropertyRelation
     {
         list($response) = $this->restPropertiesRelationsRelationIdGetWithHttpInfo($relation_id, $contentType);
         return $response;
@@ -19829,7 +19829,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsRelationIdGetWithHttpInfo(
         int $relation_id,
@@ -19875,23 +19875,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelation' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelation' !== 'string') {
+                        if ('\ck\Model\PropertyRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelation';
+            $returnType = '\ck\Model\PropertyRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -19912,7 +19912,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelation',
+                        '\ck\Model\PropertyRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -19962,7 +19962,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsRelationIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelation';
+        $returnType = '\ck\Model\PropertyRelation';
         $request = $this->restPropertiesRelationsRelationIdGetRequest($relation_id, $contentType);
 
         return $this->client
@@ -20110,12 +20110,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelation
+     * @return \ck\Model\PropertyRelation
      */
     public function restPropertiesRelationsRelationIdPut(
         int $relation_id,
         string $contentType = self::contentTypes['restPropertiesRelationsRelationIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyRelation
+    ): \ck\Model\PropertyRelation
     {
         list($response) = $this->restPropertiesRelationsRelationIdPutWithHttpInfo($relation_id, $contentType);
         return $response;
@@ -20131,7 +20131,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelation, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsRelationIdPutWithHttpInfo(
         int $relation_id,
@@ -20177,23 +20177,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelation' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelation' !== 'string') {
+                        if ('\ck\Model\PropertyRelation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelation', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelation';
+            $returnType = '\ck\Model\PropertyRelation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20214,7 +20214,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelation',
+                        '\ck\Model\PropertyRelation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20264,7 +20264,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsRelationIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelation';
+        $returnType = '\ck\Model\PropertyRelation';
         $request = $this->restPropertiesRelationsRelationIdPutRequest($relation_id, $contentType);
 
         return $this->client
@@ -20659,7 +20659,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationValue[]
+     * @return \ck\Model\PropertyRelationValue[]
      */
     public function restPropertiesRelationsValuesGet(
         string $contentType = self::contentTypes['restPropertiesRelationsValuesGet'][0]
@@ -20678,7 +20678,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationValue[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationValue[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesRelationsValuesGet'][0]
@@ -20723,23 +20723,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationValue[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationValue[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationValue[]' !== 'string') {
+                        if ('\ck\Model\PropertyRelationValue[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationValue[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationValue[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationValue[]';
+            $returnType = '\ck\Model\PropertyRelationValue[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -20760,7 +20760,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationValue[]',
+                        '\ck\Model\PropertyRelationValue[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -20806,7 +20806,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsValuesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationValue[]';
+        $returnType = '\ck\Model\PropertyRelationValue[]';
         $request = $this->restPropertiesRelationsValuesGetRequest($contentType);
 
         return $this->client
@@ -20935,20 +20935,20 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the property relation value (required)
      * @param  string $value The value of the property relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values _rest_properties_relations_values (optional)
+     * @param  \ck\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values _rest_properties_relations_values (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsValuesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationValue
+     * @return \ck\Model\PropertyRelationValue
      */
     public function restPropertiesRelationsValuesPost(
         int $property_id,
         string $lang,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsValuesPostRequest $_rest_properties_relations_values = null,
+        ?\ck\Model\RestPropertiesRelationsValuesPostRequest $_rest_properties_relations_values = null,
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPost'][0]
-    ): \ck/plenty-client\Model\PropertyRelationValue
+    ): \ck\Model\PropertyRelationValue
     {
         list($response) = $this->restPropertiesRelationsValuesPostWithHttpInfo($property_id, $lang, $value, $_rest_properties_relations_values, $contentType);
         return $response;
@@ -20962,18 +20962,18 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the property relation value (required)
      * @param  string $value The value of the property relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values (optional)
+     * @param  \ck\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsValuesPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesPostWithHttpInfo(
         int $property_id,
         string $lang,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsValuesPostRequest $_rest_properties_relations_values = null,
+        ?\ck\Model\RestPropertiesRelationsValuesPostRequest $_rest_properties_relations_values = null,
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPost'][0]
     ): array
     {
@@ -21016,23 +21016,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationValue' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationValue' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationValue' !== 'string') {
+                        if ('\ck\Model\PropertyRelationValue' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationValue', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationValue', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationValue';
+            $returnType = '\ck\Model\PropertyRelationValue';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -21053,7 +21053,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationValue',
+                        '\ck\Model\PropertyRelationValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21071,7 +21071,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the property relation value (required)
      * @param  string $value The value of the property relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values (optional)
+     * @param  \ck\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsValuesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -21081,7 +21081,7 @@ class PropertyApi
         int $property_id,
         string $lang,
         string $value,
-        ?\ck/plenty-client\Model\RestPropertiesRelationsValuesPostRequest $_rest_properties_relations_values = null,
+        ?\ck\Model\RestPropertiesRelationsValuesPostRequest $_rest_properties_relations_values = null,
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPost'][0]
     ): PromiseInterface
     {
@@ -21101,7 +21101,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the property relation value (required)
      * @param  string $value The value of the property relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values (optional)
+     * @param  \ck\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsValuesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -21115,7 +21115,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationValue';
+        $returnType = '\ck\Model\PropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPostRequest($property_id, $lang, $value, $_rest_properties_relations_values, $contentType);
 
         return $this->client
@@ -21160,7 +21160,7 @@ class PropertyApi
      * @param  int $property_id The ID of the property (required)
      * @param  string $lang The lang of the property relation value (required)
      * @param  string $value The value of the property relation (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values (optional)
+     * @param  \ck\Model\RestPropertiesRelationsValuesPostRequest|null $_rest_properties_relations_values (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesRelationsValuesPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -21585,13 +21585,13 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationValue
+     * @return \ck\Model\PropertyRelationValue
      */
     public function restPropertiesRelationsValuesPropertiesRelationValueIdPut(
         int $property_relation_value_id,
         int $properties_relation_value_id,
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPropertiesRelationValueIdPut'][0]
-    ): \ck/plenty-client\Model\PropertyRelationValue
+    ): \ck\Model\PropertyRelationValue
     {
         list($response) = $this->restPropertiesRelationsValuesPropertiesRelationValueIdPutWithHttpInfo($property_relation_value_id, $properties_relation_value_id, $contentType);
         return $response;
@@ -21608,7 +21608,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesPropertiesRelationValueIdPutWithHttpInfo(
         int $property_relation_value_id,
@@ -21655,23 +21655,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationValue' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationValue' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationValue' !== 'string') {
+                        if ('\ck\Model\PropertyRelationValue' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationValue', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationValue', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationValue';
+            $returnType = '\ck\Model\PropertyRelationValue';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -21692,7 +21692,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationValue',
+                        '\ck\Model\PropertyRelationValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -21746,7 +21746,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPropertiesRelationValueIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationValue';
+        $returnType = '\ck\Model\PropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPropertiesRelationValueIdPutRequest($property_relation_value_id, $properties_relation_value_id, $contentType);
 
         return $this->client
@@ -21911,11 +21911,11 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationValue
+     * @return \ck\Model\PropertyRelationValue
      */
     public function restPropertiesRelationsValuesPut(
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPut'][0]
-    ): \ck/plenty-client\Model\PropertyRelationValue
+    ): \ck\Model\PropertyRelationValue
     {
         list($response) = $this->restPropertiesRelationsValuesPutWithHttpInfo($contentType);
         return $response;
@@ -21930,7 +21930,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesPutWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPut'][0]
@@ -21975,23 +21975,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationValue' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationValue' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationValue' !== 'string') {
+                        if ('\ck\Model\PropertyRelationValue' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationValue', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationValue', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationValue';
+            $returnType = '\ck\Model\PropertyRelationValue';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22012,7 +22012,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationValue',
+                        '\ck\Model\PropertyRelationValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22058,7 +22058,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsValuesPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationValue';
+        $returnType = '\ck\Model\PropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesPutRequest($contentType);
 
         return $this->client
@@ -22190,13 +22190,13 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertyRelationValue
+     * @return \ck\Model\PropertyRelationValue
      */
     public function restPropertiesRelationsValuesRelationMarkupIdGet(
         int $property_relation_id,
         int $relation_markup_id,
         string $contentType = self::contentTypes['restPropertiesRelationsValuesRelationMarkupIdGet'][0]
-    ): \ck/plenty-client\Model\PropertyRelationValue
+    ): \ck\Model\PropertyRelationValue
     {
         list($response) = $this->restPropertiesRelationsValuesRelationMarkupIdGetWithHttpInfo($property_relation_id, $relation_markup_id, $contentType);
         return $response;
@@ -22213,7 +22213,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertyRelationValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesRelationsValuesRelationMarkupIdGetWithHttpInfo(
         int $property_relation_id,
@@ -22260,23 +22260,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertyRelationValue' === '\SplFileObject') {
+                    if ('\ck\Model\PropertyRelationValue' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertyRelationValue' !== 'string') {
+                        if ('\ck\Model\PropertyRelationValue' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertyRelationValue', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertyRelationValue', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertyRelationValue';
+            $returnType = '\ck\Model\PropertyRelationValue';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22297,7 +22297,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertyRelationValue',
+                        '\ck\Model\PropertyRelationValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22351,7 +22351,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesRelationsValuesRelationMarkupIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertyRelationValue';
+        $returnType = '\ck\Model\PropertyRelationValue';
         $request = $this->restPropertiesRelationsValuesRelationMarkupIdGetRequest($property_relation_id, $relation_markup_id, $contentType);
 
         return $this->client
@@ -22516,7 +22516,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertySelection[]
+     * @return \ck\Model\PropertySelection[]
      */
     public function restPropertiesSelectionsGet(
         string $contentType = self::contentTypes['restPropertiesSelectionsGet'][0]
@@ -22535,7 +22535,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertySelection[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertySelection[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesSelectionsGetWithHttpInfo(
         string $contentType = self::contentTypes['restPropertiesSelectionsGet'][0]
@@ -22580,23 +22580,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertySelection[]' === '\SplFileObject') {
+                    if ('\ck\Model\PropertySelection[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertySelection[]' !== 'string') {
+                        if ('\ck\Model\PropertySelection[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertySelection[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertySelection[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertySelection[]';
+            $returnType = '\ck\Model\PropertySelection[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22617,7 +22617,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertySelection[]',
+                        '\ck\Model\PropertySelection[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22663,7 +22663,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesSelectionsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertySelection[]';
+        $returnType = '\ck\Model\PropertySelection[]';
         $request = $this->restPropertiesSelectionsGetRequest($contentType);
 
         return $this->client
@@ -22791,19 +22791,19 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      * @param  int $position The position of the property selection (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections _rest_properties_selections (optional)
+     * @param  \ck\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections _rest_properties_selections (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesSelectionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertySelection
+     * @return \ck\Model\PropertySelection
      */
     public function restPropertiesSelectionsPost(
         int $property_id,
         int $position,
-        ?\ck/plenty-client\Model\RestPropertiesSelectionsPostRequest $_rest_properties_selections = null,
+        ?\ck\Model\RestPropertiesSelectionsPostRequest $_rest_properties_selections = null,
         string $contentType = self::contentTypes['restPropertiesSelectionsPost'][0]
-    ): \ck/plenty-client\Model\PropertySelection
+    ): \ck\Model\PropertySelection
     {
         list($response) = $this->restPropertiesSelectionsPostWithHttpInfo($property_id, $position, $_rest_properties_selections, $contentType);
         return $response;
@@ -22816,17 +22816,17 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      * @param  int $position The position of the property selection (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections (optional)
+     * @param  \ck\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesSelectionsPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesSelectionsPostWithHttpInfo(
         int $property_id,
         int $position,
-        ?\ck/plenty-client\Model\RestPropertiesSelectionsPostRequest $_rest_properties_selections = null,
+        ?\ck\Model\RestPropertiesSelectionsPostRequest $_rest_properties_selections = null,
         string $contentType = self::contentTypes['restPropertiesSelectionsPost'][0]
     ): array
     {
@@ -22869,23 +22869,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertySelection' === '\SplFileObject') {
+                    if ('\ck\Model\PropertySelection' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertySelection' !== 'string') {
+                        if ('\ck\Model\PropertySelection' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertySelection', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertySelection', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertySelection';
+            $returnType = '\ck\Model\PropertySelection';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -22906,7 +22906,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertySelection',
+                        '\ck\Model\PropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -22923,7 +22923,7 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      * @param  int $position The position of the property selection (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections (optional)
+     * @param  \ck\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesSelectionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -22932,7 +22932,7 @@ class PropertyApi
     public function restPropertiesSelectionsPostAsync(
         int $property_id,
         int $position,
-        ?\ck/plenty-client\Model\RestPropertiesSelectionsPostRequest $_rest_properties_selections = null,
+        ?\ck\Model\RestPropertiesSelectionsPostRequest $_rest_properties_selections = null,
         string $contentType = self::contentTypes['restPropertiesSelectionsPost'][0]
     ): PromiseInterface
     {
@@ -22951,7 +22951,7 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      * @param  int $position The position of the property selection (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections (optional)
+     * @param  \ck\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesSelectionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -22964,7 +22964,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesSelectionsPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertySelection';
+        $returnType = '\ck\Model\PropertySelection';
         $request = $this->restPropertiesSelectionsPostRequest($property_id, $position, $_rest_properties_selections, $contentType);
 
         return $this->client
@@ -23008,7 +23008,7 @@ class PropertyApi
      *
      * @param  int $property_id The ID of the property (required)
      * @param  int $position The position of the property selection (required)
-     * @param  \ck/plenty-client\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections (optional)
+     * @param  \ck\Model\RestPropertiesSelectionsPostRequest|null $_rest_properties_selections (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restPropertiesSelectionsPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -23389,12 +23389,12 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertySelection
+     * @return \ck\Model\PropertySelection
      */
     public function restPropertiesSelectionsPropertySelectionIdGet(
         int $property_selection_id,
         string $contentType = self::contentTypes['restPropertiesSelectionsPropertySelectionIdGet'][0]
-    ): \ck/plenty-client\Model\PropertySelection
+    ): \ck\Model\PropertySelection
     {
         list($response) = $this->restPropertiesSelectionsPropertySelectionIdGetWithHttpInfo($property_selection_id, $contentType);
         return $response;
@@ -23410,7 +23410,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesSelectionsPropertySelectionIdGetWithHttpInfo(
         int $property_selection_id,
@@ -23456,23 +23456,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertySelection' === '\SplFileObject') {
+                    if ('\ck\Model\PropertySelection' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertySelection' !== 'string') {
+                        if ('\ck\Model\PropertySelection' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertySelection', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertySelection', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertySelection';
+            $returnType = '\ck\Model\PropertySelection';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -23493,7 +23493,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertySelection',
+                        '\ck\Model\PropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23543,7 +23543,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesSelectionsPropertySelectionIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertySelection';
+        $returnType = '\ck\Model\PropertySelection';
         $request = $this->restPropertiesSelectionsPropertySelectionIdGetRequest($property_selection_id, $contentType);
 
         return $this->client
@@ -23692,13 +23692,13 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PropertySelection
+     * @return \ck\Model\PropertySelection
      */
     public function restPropertiesSelectionsPropertySelectionIdPut(
         int $property_selection_id,
         int $property_selection_id2,
         string $contentType = self::contentTypes['restPropertiesSelectionsPropertySelectionIdPut'][0]
-    ): \ck/plenty-client\Model\PropertySelection
+    ): \ck\Model\PropertySelection
     {
         list($response) = $this->restPropertiesSelectionsPropertySelectionIdPutWithHttpInfo($property_selection_id, $property_selection_id2, $contentType);
         return $response;
@@ -23715,7 +23715,7 @@ class PropertyApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PropertySelection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PropertySelection, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPropertiesSelectionsPropertySelectionIdPutWithHttpInfo(
         int $property_selection_id,
@@ -23762,23 +23762,23 @@ class PropertyApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PropertySelection' === '\SplFileObject') {
+                    if ('\ck\Model\PropertySelection' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PropertySelection' !== 'string') {
+                        if ('\ck\Model\PropertySelection' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PropertySelection', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PropertySelection', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PropertySelection';
+            $returnType = '\ck\Model\PropertySelection';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -23799,7 +23799,7 @@ class PropertyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PropertySelection',
+                        '\ck\Model\PropertySelection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -23853,7 +23853,7 @@ class PropertyApi
         string $contentType = self::contentTypes['restPropertiesSelectionsPropertySelectionIdPut'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PropertySelection';
+        $returnType = '\ck\Model\PropertySelection';
         $request = $this->restPropertiesSelectionsPropertySelectionIdPutRequest($property_selection_id, $property_selection_id2, $contentType);
 
         return $this->client

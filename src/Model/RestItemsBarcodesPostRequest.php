@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestItemsBarcodesPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class RestItemsBarcodesPostRequest implements ModelInterface, ArrayAccess, JsonS
     protected static array $openAPITypes = [
         'name' => 'string',
         'type' => 'string',
-        'referrers' => '\ck/plenty-client\Model\BarcodeLinkReferrer[]',
+        'referrers' => '\ck\Model\BarcodeLinkReferrer[]',
         'referrer_id' => 'float'
     ];
 
@@ -374,7 +374,7 @@ class RestItemsBarcodesPostRequest implements ModelInterface, ArrayAccess, JsonS
     /**
      * Gets referrers
      *
-     * @return \ck/plenty-client\Model\BarcodeLinkReferrer[]|null
+     * @return \ck\Model\BarcodeLinkReferrer[]|null
      */
     public function getReferrers(): ?array
     {
@@ -384,7 +384,7 @@ class RestItemsBarcodesPostRequest implements ModelInterface, ArrayAccess, JsonS
     /**
      * Sets referrers
      *
-     * @param \ck/plenty-client\Model\BarcodeLinkReferrer[]|null $referrers referrers
+     * @param \ck\Model\BarcodeLinkReferrer[]|null $referrers referrers
      *
      * @return $this
      */

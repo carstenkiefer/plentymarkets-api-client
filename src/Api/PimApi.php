@@ -3,7 +3,7 @@
  * PimApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * PimApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -486,7 +486,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestItemsAttributesGet200Response
+     * @return \ck\Model\RestItemsAttributesGet200Response
      */
     public function restPimAttributesGet(
         ?string $with = null,
@@ -496,7 +496,7 @@ class PimApi
         ?int $position = null,
         ?string $updated_at = null,
         string $contentType = self::contentTypes['restPimAttributesGet'][0]
-    ): \ck/plenty-client\Model\RestItemsAttributesGet200Response
+    ): \ck\Model\RestItemsAttributesGet200Response
     {
         list($response) = $this->restPimAttributesGetWithHttpInfo($with, $ids, $backend_name, $name, $position, $updated_at, $contentType);
         return $response;
@@ -517,7 +517,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestItemsAttributesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestItemsAttributesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimAttributesGetWithHttpInfo(
         ?string $with = null,
@@ -568,23 +568,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestItemsAttributesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestItemsAttributesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestItemsAttributesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestItemsAttributesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestItemsAttributesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestItemsAttributesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestItemsAttributesGet200Response';
+            $returnType = '\ck\Model\RestItemsAttributesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -605,7 +605,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestItemsAttributesGet200Response',
+                        '\ck\Model\RestItemsAttributesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -675,7 +675,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimAttributesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestItemsAttributesGet200Response';
+        $returnType = '\ck\Model\RestItemsAttributesGet200Response';
         $request = $this->restPimAttributesGetRequest($with, $ids, $backend_name, $name, $position, $updated_at, $contentType);
 
         return $this->client
@@ -878,12 +878,12 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Attribute
+     * @return \ck\Model\Attribute
      */
     public function restPimAttributesIdGet(
         int $id,
         string $contentType = self::contentTypes['restPimAttributesIdGet'][0]
-    ): \ck/plenty-client\Model\Attribute
+    ): \ck\Model\Attribute
     {
         list($response) = $this->restPimAttributesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -899,7 +899,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Attribute, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Attribute, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimAttributesIdGetWithHttpInfo(
         int $id,
@@ -945,23 +945,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Attribute' === '\SplFileObject') {
+                    if ('\ck\Model\Attribute' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Attribute' !== 'string') {
+                        if ('\ck\Model\Attribute' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Attribute', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Attribute', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Attribute';
+            $returnType = '\ck\Model\Attribute';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -982,7 +982,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Attribute',
+                        '\ck\Model\Attribute',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1032,7 +1032,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimAttributesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Attribute';
+        $returnType = '\ck\Model\Attribute';
         $request = $this->restPimAttributesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -1460,7 +1460,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestPimAttributesNamesGet200Response
+     * @return \ck\Model\RestPimAttributesNamesGet200Response
      */
     public function restPimAttributesNamesGet(
         ?string $with = null,
@@ -1468,7 +1468,7 @@ class PimApi
         ?string $lang = null,
         ?string $name = null,
         string $contentType = self::contentTypes['restPimAttributesNamesGet'][0]
-    ): \ck/plenty-client\Model\RestPimAttributesNamesGet200Response
+    ): \ck\Model\RestPimAttributesNamesGet200Response
     {
         list($response) = $this->restPimAttributesNamesGetWithHttpInfo($with, $attribute_id, $lang, $name, $contentType);
         return $response;
@@ -1487,7 +1487,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestPimAttributesNamesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestPimAttributesNamesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimAttributesNamesGetWithHttpInfo(
         ?string $with = null,
@@ -1536,23 +1536,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestPimAttributesNamesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestPimAttributesNamesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestPimAttributesNamesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestPimAttributesNamesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestPimAttributesNamesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestPimAttributesNamesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestPimAttributesNamesGet200Response';
+            $returnType = '\ck\Model\RestPimAttributesNamesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1573,7 +1573,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestPimAttributesNamesGet200Response',
+                        '\ck\Model\RestPimAttributesNamesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1635,7 +1635,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimAttributesNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestPimAttributesNamesGet200Response';
+        $returnType = '\ck\Model\RestPimAttributesNamesGet200Response';
         $request = $this->restPimAttributesNamesGetRequest($with, $attribute_id, $lang, $name, $contentType);
 
         return $this->client
@@ -3205,7 +3205,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response
+     * @return \ck\Model\RestItemsAttributesAttributeIdValuesGet200Response
      */
     public function restPimAttributesValuesGet(
         ?string $with = null,
@@ -3216,7 +3216,7 @@ class PimApi
         ?string $position = null,
         ?string $updated_at = null,
         string $contentType = self::contentTypes['restPimAttributesValuesGet'][0]
-    ): \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response
+    ): \ck\Model\RestItemsAttributesAttributeIdValuesGet200Response
     {
         list($response) = $this->restPimAttributesValuesGetWithHttpInfo($with, $ids, $attribute_id, $backend_name, $name, $position, $updated_at, $contentType);
         return $response;
@@ -3238,7 +3238,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestItemsAttributesAttributeIdValuesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimAttributesValuesGetWithHttpInfo(
         ?string $with = null,
@@ -3290,23 +3290,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestItemsAttributesAttributeIdValuesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestItemsAttributesAttributeIdValuesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestItemsAttributesAttributeIdValuesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response';
+            $returnType = '\ck\Model\RestItemsAttributesAttributeIdValuesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3327,7 +3327,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response',
+                        '\ck\Model\RestItemsAttributesAttributeIdValuesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3401,7 +3401,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimAttributesValuesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestItemsAttributesAttributeIdValuesGet200Response';
+        $returnType = '\ck\Model\RestItemsAttributesAttributeIdValuesGet200Response';
         $request = $this->restPimAttributesValuesGetRequest($with, $ids, $attribute_id, $backend_name, $name, $position, $updated_at, $contentType);
 
         return $this->client
@@ -3616,12 +3616,12 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\AttributeValue
+     * @return \ck\Model\AttributeValue
      */
     public function restPimAttributesValuesIdGet(
         int $id,
         string $contentType = self::contentTypes['restPimAttributesValuesIdGet'][0]
-    ): \ck/plenty-client\Model\AttributeValue
+    ): \ck\Model\AttributeValue
     {
         list($response) = $this->restPimAttributesValuesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -3637,7 +3637,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\AttributeValue, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\AttributeValue, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimAttributesValuesIdGetWithHttpInfo(
         int $id,
@@ -3683,23 +3683,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\AttributeValue' === '\SplFileObject') {
+                    if ('\ck\Model\AttributeValue' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\AttributeValue' !== 'string') {
+                        if ('\ck\Model\AttributeValue' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\AttributeValue', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\AttributeValue', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\AttributeValue';
+            $returnType = '\ck\Model\AttributeValue';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3720,7 +3720,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\AttributeValue',
+                        '\ck\Model\AttributeValue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3770,7 +3770,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimAttributesValuesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\AttributeValue';
+        $returnType = '\ck\Model\AttributeValue';
         $request = $this->restPimAttributesValuesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -4198,7 +4198,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response
+     * @return \ck\Model\RestPimAttributesValuesNamesGet200Response
      */
     public function restPimAttributesValuesNamesGet(
         ?string $with = null,
@@ -4206,7 +4206,7 @@ class PimApi
         ?string $lang = null,
         ?string $name = null,
         string $contentType = self::contentTypes['restPimAttributesValuesNamesGet'][0]
-    ): \ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response
+    ): \ck\Model\RestPimAttributesValuesNamesGet200Response
     {
         list($response) = $this->restPimAttributesValuesNamesGetWithHttpInfo($with, $value_id, $lang, $name, $contentType);
         return $response;
@@ -4225,7 +4225,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestPimAttributesValuesNamesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimAttributesValuesNamesGetWithHttpInfo(
         ?string $with = null,
@@ -4274,23 +4274,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestPimAttributesValuesNamesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestPimAttributesValuesNamesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestPimAttributesValuesNamesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response';
+            $returnType = '\ck\Model\RestPimAttributesValuesNamesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4311,7 +4311,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response',
+                        '\ck\Model\RestPimAttributesValuesNamesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4373,7 +4373,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimAttributesValuesNamesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestPimAttributesValuesNamesGet200Response';
+        $returnType = '\ck\Model\RestPimAttributesValuesNamesGet200Response';
         $request = $this->restPimAttributesValuesNamesGetRequest($with, $value_id, $lang, $name, $contentType);
 
         return $this->client
@@ -5660,12 +5660,12 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response
+     * @return \ck\Model\RestPimCategoriesBranchesGet200Response
      */
     public function restPimCategoriesBranchesGet(
         ?string $with = null,
         string $contentType = self::contentTypes['restPimCategoriesBranchesGet'][0]
-    ): \ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response
+    ): \ck\Model\RestPimCategoriesBranchesGet200Response
     {
         list($response) = $this->restPimCategoriesBranchesGetWithHttpInfo($with, $contentType);
         return $response;
@@ -5681,7 +5681,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestPimCategoriesBranchesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimCategoriesBranchesGetWithHttpInfo(
         ?string $with = null,
@@ -5727,23 +5727,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestPimCategoriesBranchesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestPimCategoriesBranchesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestPimCategoriesBranchesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response';
+            $returnType = '\ck\Model\RestPimCategoriesBranchesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5764,7 +5764,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response',
+                        '\ck\Model\RestPimCategoriesBranchesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5814,7 +5814,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimCategoriesBranchesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestPimCategoriesBranchesGet200Response';
+        $returnType = '\ck\Model\RestPimCategoriesBranchesGet200Response';
         $request = $this->restPimCategoriesBranchesGetRequest($with, $contentType);
 
         return $this->client
@@ -5959,14 +5959,14 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestPimCategoriesClientsGet200Response
+     * @return \ck\Model\RestPimCategoriesClientsGet200Response
      */
     public function restPimCategoriesClientsGet(
         ?string $with = null,
         ?string $category_id = null,
         ?int $plenty_id = null,
         string $contentType = self::contentTypes['restPimCategoriesClientsGet'][0]
-    ): \ck/plenty-client\Model\RestPimCategoriesClientsGet200Response
+    ): \ck\Model\RestPimCategoriesClientsGet200Response
     {
         list($response) = $this->restPimCategoriesClientsGetWithHttpInfo($with, $category_id, $plenty_id, $contentType);
         return $response;
@@ -5984,7 +5984,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestPimCategoriesClientsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestPimCategoriesClientsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimCategoriesClientsGetWithHttpInfo(
         ?string $with = null,
@@ -6032,23 +6032,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestPimCategoriesClientsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestPimCategoriesClientsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestPimCategoriesClientsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestPimCategoriesClientsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestPimCategoriesClientsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestPimCategoriesClientsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestPimCategoriesClientsGet200Response';
+            $returnType = '\ck\Model\RestPimCategoriesClientsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6069,7 +6069,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestPimCategoriesClientsGet200Response',
+                        '\ck\Model\RestPimCategoriesClientsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6127,7 +6127,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimCategoriesClientsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestPimCategoriesClientsGet200Response';
+        $returnType = '\ck\Model\RestPimCategoriesClientsGet200Response';
         $request = $this->restPimCategoriesClientsGetRequest($with, $category_id, $plenty_id, $contentType);
 
         return $this->client
@@ -6299,7 +6299,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response
+     * @return \ck\Model\RestPimCategoriesDetailsGet200Response
      */
     public function restPimCategoriesDetailsGet(
         ?string $with = null,
@@ -6309,7 +6309,7 @@ class PimApi
         ?string $name = null,
         ?string $position = null,
         string $contentType = self::contentTypes['restPimCategoriesDetailsGet'][0]
-    ): \ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response
+    ): \ck\Model\RestPimCategoriesDetailsGet200Response
     {
         list($response) = $this->restPimCategoriesDetailsGetWithHttpInfo($with, $category_id, $plenty_id, $lang, $name, $position, $contentType);
         return $response;
@@ -6330,7 +6330,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestPimCategoriesDetailsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimCategoriesDetailsGetWithHttpInfo(
         ?string $with = null,
@@ -6381,23 +6381,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestPimCategoriesDetailsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestPimCategoriesDetailsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestPimCategoriesDetailsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response';
+            $returnType = '\ck\Model\RestPimCategoriesDetailsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6418,7 +6418,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response',
+                        '\ck\Model\RestPimCategoriesDetailsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6488,7 +6488,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimCategoriesDetailsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestPimCategoriesDetailsGet200Response';
+        $returnType = '\ck\Model\RestPimCategoriesDetailsGet200Response';
         $request = $this->restPimCategoriesDetailsGetRequest($with, $category_id, $plenty_id, $lang, $name, $position, $contentType);
 
         return $this->client
@@ -6701,7 +6701,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestCategoriesGet200Response
+     * @return \ck\Model\RestCategoriesGet200Response
      */
     public function restPimCategoriesGet(
         ?string $with = null,
@@ -6716,7 +6716,7 @@ class PimApi
         ?string $tag_id = null,
         ?string $updated_at = null,
         string $contentType = self::contentTypes['restPimCategoriesGet'][0]
-    ): \ck/plenty-client\Model\RestCategoriesGet200Response
+    ): \ck\Model\RestCategoriesGet200Response
     {
         list($response) = $this->restPimCategoriesGetWithHttpInfo($with, $ids, $type, $level, $name, $lang, $parent_id, $plenty_id, $linklist, $tag_id, $updated_at, $contentType);
         return $response;
@@ -6742,7 +6742,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestCategoriesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestCategoriesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimCategoriesGetWithHttpInfo(
         ?string $with = null,
@@ -6798,23 +6798,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestCategoriesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestCategoriesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestCategoriesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestCategoriesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestCategoriesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestCategoriesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestCategoriesGet200Response';
+            $returnType = '\ck\Model\RestCategoriesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6835,7 +6835,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestCategoriesGet200Response',
+                        '\ck\Model\RestCategoriesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6925,7 +6925,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimCategoriesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestCategoriesGet200Response';
+        $returnType = '\ck\Model\RestCategoriesGet200Response';
         $request = $this->restPimCategoriesGetRequest($with, $ids, $type, $level, $name, $lang, $parent_id, $plenty_id, $linklist, $tag_id, $updated_at, $contentType);
 
         return $this->client
@@ -7188,12 +7188,12 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Category
+     * @return \ck\Model\Category
      */
     public function restPimCategoriesIdGet(
         int $id,
         string $contentType = self::contentTypes['restPimCategoriesIdGet'][0]
-    ): \ck/plenty-client\Model\Category
+    ): \ck\Model\Category
     {
         list($response) = $this->restPimCategoriesIdGetWithHttpInfo($id, $contentType);
         return $response;
@@ -7209,7 +7209,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Category, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Category, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimCategoriesIdGetWithHttpInfo(
         int $id,
@@ -7255,23 +7255,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Category' === '\SplFileObject') {
+                    if ('\ck\Model\Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Category' !== 'string') {
+                        if ('\ck\Model\Category' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Category', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Category';
+            $returnType = '\ck\Model\Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7292,7 +7292,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Category',
+                        '\ck\Model\Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7342,7 +7342,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimCategoriesIdGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Category';
+        $returnType = '\ck\Model\Category';
         $request = $this->restPimCategoriesIdGetRequest($id, $contentType);
 
         return $this->client
@@ -7493,7 +7493,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response
+     * @return \ck\Model\RestPimCategoriesPropertiesGet200Response
      */
     public function restPimCategoriesPropertiesGet(
         ?string $with = null,
@@ -7501,7 +7501,7 @@ class PimApi
         ?int $plenty_id = null,
         ?string $value = null,
         string $contentType = self::contentTypes['restPimCategoriesPropertiesGet'][0]
-    ): \ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response
+    ): \ck\Model\RestPimCategoriesPropertiesGet200Response
     {
         list($response) = $this->restPimCategoriesPropertiesGetWithHttpInfo($with, $category_id, $plenty_id, $value, $contentType);
         return $response;
@@ -7520,7 +7520,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestPimCategoriesPropertiesGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimCategoriesPropertiesGetWithHttpInfo(
         ?string $with = null,
@@ -7569,23 +7569,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestPimCategoriesPropertiesGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response' !== 'string') {
+                        if ('\ck\Model\RestPimCategoriesPropertiesGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestPimCategoriesPropertiesGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response';
+            $returnType = '\ck\Model\RestPimCategoriesPropertiesGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7606,7 +7606,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response',
+                        '\ck\Model\RestPimCategoriesPropertiesGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7668,7 +7668,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimCategoriesPropertiesGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestPimCategoriesPropertiesGet200Response';
+        $returnType = '\ck\Model\RestPimCategoriesPropertiesGet200Response';
         $request = $this->restPimCategoriesPropertiesGetRequest($with, $category_id, $plenty_id, $value, $contentType);
 
         return $this->client
@@ -7901,7 +7901,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\RestItemsVariationsGet200Response
+     * @return \ck\Model\RestItemsVariationsGet200Response
      */
     public function restPimVariationsGet(
         ?string $with = null,
@@ -7960,7 +7960,7 @@ class PimApi
         ?int $page = null,
         ?int $items_per_page = null,
         string $contentType = self::contentTypes['restPimVariationsGet'][0]
-    ): \ck/plenty-client\Model\RestItemsVariationsGet200Response
+    ): \ck\Model\RestItemsVariationsGet200Response
     {
         list($response) = $this->restPimVariationsGetWithHttpInfo($with, $sort_by, $group_by, $ids, $item_id, $item_ids, $is_active, $is_main, $is_salable, $supplier_id, $availability_ids, $has_children, $has_active_children, $attribute_id, $any_attribute_id, $all_attribute_ids, $attribute_value_id, $any_attribute_value_id, $all_attribute_value_ids, $barcode_code, $barcode_id, $bundle_type, $category_id, $any_category_id, $all_category_ids, $any_characteristic_id, $all_characteristic_ids, $client_id, $any_client_id, $all_client_ids, $automatic_client_visibilities, $image_has_market_id, $flag1, $flag2, $manufacturer_id, $any_manufacturer_id, $item_type, $market_id, $any_market_id, $all_market_ids, $price_between, $price_between_by_id, $any_sales_price_id, $property_selection_id, $any_property_selection_id, $all_property_selection_ids, $has_name_in_language, $created_at, $updated_at, $item_created_at, $item_updated_at, $availability_updated_at, $stock_updated_at, $page, $items_per_page, $contentType);
         return $response;
@@ -8030,7 +8030,7 @@ class PimApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\RestItemsVariationsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\RestItemsVariationsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function restPimVariationsGetWithHttpInfo(
         ?string $with = null,
@@ -8130,23 +8130,23 @@ class PimApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\RestItemsVariationsGet200Response' === '\SplFileObject') {
+                    if ('\ck\Model\RestItemsVariationsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\RestItemsVariationsGet200Response' !== 'string') {
+                        if ('\ck\Model\RestItemsVariationsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\RestItemsVariationsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\RestItemsVariationsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\RestItemsVariationsGet200Response';
+            $returnType = '\ck\Model\RestItemsVariationsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8167,7 +8167,7 @@ class PimApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\RestItemsVariationsGet200Response',
+                        '\ck\Model\RestItemsVariationsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8433,7 +8433,7 @@ class PimApi
         string $contentType = self::contentTypes['restPimVariationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\RestItemsVariationsGet200Response';
+        $returnType = '\ck\Model\RestItemsVariationsGet200Response';
         $request = $this->restPimVariationsGetRequest($with, $sort_by, $group_by, $ids, $item_id, $item_ids, $is_active, $is_main, $is_salable, $supplier_id, $availability_ids, $has_children, $has_active_children, $attribute_id, $any_attribute_id, $all_attribute_ids, $attribute_value_id, $any_attribute_value_id, $all_attribute_value_ids, $barcode_code, $barcode_id, $bundle_type, $category_id, $any_category_id, $all_category_ids, $any_characteristic_id, $all_characteristic_ids, $client_id, $any_client_id, $all_client_ids, $automatic_client_visibilities, $image_has_market_id, $flag1, $flag2, $manufacturer_id, $any_manufacturer_id, $item_type, $market_id, $any_market_id, $all_market_ids, $price_between, $price_between_by_id, $any_sales_price_id, $property_selection_id, $any_property_selection_id, $all_property_selection_ids, $has_name_in_language, $created_at, $updated_at, $item_created_at, $item_updated_at, $availability_updated_at, $stock_updated_at, $page, $items_per_page, $contentType);
 
         return $this->client

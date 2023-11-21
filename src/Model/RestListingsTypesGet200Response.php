@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestListingsTypesGet200Response Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class RestListingsTypesGet200Response implements ModelInterface, ArrayAccess, Js
         'first_on_page' => 'int',
         'last_on_page' => 'int',
         'items_per_page' => 'int',
-        'entries' => '\ck/plenty-client\Model\ListingType[]'
+        'entries' => '\ck\Model\ListingType[]'
     ];
 
     /**
@@ -528,7 +528,7 @@ class RestListingsTypesGet200Response implements ModelInterface, ArrayAccess, Js
     /**
      * Gets entries
      *
-     * @return \ck/plenty-client\Model\ListingType[]|null
+     * @return \ck\Model\ListingType[]|null
      */
     public function getEntries(): ?array
     {
@@ -538,7 +538,7 @@ class RestListingsTypesGet200Response implements ModelInterface, ArrayAccess, Js
     /**
      * Sets entries
      *
-     * @param \ck/plenty-client\Model\ListingType[]|null $entries List of ListingType
+     * @param \ck\Model\ListingType[]|null $entries List of ListingType
      *
      * @return $this
      */

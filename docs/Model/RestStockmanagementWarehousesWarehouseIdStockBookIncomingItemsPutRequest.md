@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**incoming_items** | [**\ck/plenty-client\Model\VariationStockIntake[]**](VariationStockIntake.md) |  | [optional]
+**incoming_items** | [**\ck\Model\VariationStockIntake[]**](VariationStockIntake.md) |  | [optional]
 **variation_id** | **int** | The ID of the variation |
 **delivered_at** | **string** | The date when stock was booked in. The date is given in W3C format. |
 **order_number** | **string** | The order number optional | [optional]

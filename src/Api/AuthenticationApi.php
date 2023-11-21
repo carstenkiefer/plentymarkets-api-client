@@ -3,7 +3,7 @@
  * AuthenticationApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * AuthenticationApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -678,7 +678,7 @@ class AuthenticationApi
      *
      * Login
      *
-     * @param  \ck/plenty-client\Model\RestLoginPostRequest|null $_rest_login _rest_login (optional)
+     * @param  \ck\Model\RestLoginPostRequest|null $_rest_login _rest_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLoginPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -686,7 +686,7 @@ class AuthenticationApi
      * @return object
      */
     public function restLoginPost(
-        ?\ck/plenty-client\Model\RestLoginPostRequest $_rest_login = null,
+        ?\ck\Model\RestLoginPostRequest $_rest_login = null,
         string $contentType = self::contentTypes['restLoginPost'][0]
     ): object
     {
@@ -699,7 +699,7 @@ class AuthenticationApi
      *
      * Login
      *
-     * @param  \ck/plenty-client\Model\RestLoginPostRequest|null $_rest_login (optional)
+     * @param  \ck\Model\RestLoginPostRequest|null $_rest_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLoginPost'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response
@@ -707,7 +707,7 @@ class AuthenticationApi
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLoginPostWithHttpInfo(
-        ?\ck/plenty-client\Model\RestLoginPostRequest $_rest_login = null,
+        ?\ck\Model\RestLoginPostRequest $_rest_login = null,
         string $contentType = self::contentTypes['restLoginPost'][0]
     ): array
     {
@@ -802,14 +802,14 @@ class AuthenticationApi
      *
      * Login
      *
-     * @param  \ck/plenty-client\Model\RestLoginPostRequest|null $_rest_login (optional)
+     * @param  \ck\Model\RestLoginPostRequest|null $_rest_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function restLoginPostAsync(
-        ?\ck/plenty-client\Model\RestLoginPostRequest $_rest_login = null,
+        ?\ck\Model\RestLoginPostRequest $_rest_login = null,
         string $contentType = self::contentTypes['restLoginPost'][0]
     ): PromiseInterface
     {
@@ -826,7 +826,7 @@ class AuthenticationApi
      *
      * Login
      *
-     * @param  \ck/plenty-client\Model\RestLoginPostRequest|null $_rest_login (optional)
+     * @param  \ck\Model\RestLoginPostRequest|null $_rest_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -879,7 +879,7 @@ class AuthenticationApi
     /**
      * Create request for operation 'restLoginPost'
      *
-     * @param  \ck/plenty-client\Model\RestLoginPostRequest|null $_rest_login (optional)
+     * @param  \ck\Model\RestLoginPostRequest|null $_rest_login (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restLoginPost'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -973,11 +973,11 @@ class AuthenticationApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\TokenData
+     * @return \ck\Model\TokenData
      */
     public function restLoginRefreshPost(
         string $contentType = self::contentTypes['restLoginRefreshPost'][0]
-    ): \ck/plenty-client\Model\TokenData
+    ): \ck\Model\TokenData
     {
         list($response) = $this->restLoginRefreshPostWithHttpInfo($contentType);
         return $response;
@@ -992,7 +992,7 @@ class AuthenticationApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\TokenData, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\TokenData, HTTP status code, HTTP response headers (array of strings)
      */
     public function restLoginRefreshPostWithHttpInfo(
         string $contentType = self::contentTypes['restLoginRefreshPost'][0]
@@ -1037,23 +1037,23 @@ class AuthenticationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\TokenData' === '\SplFileObject') {
+                    if ('\ck\Model\TokenData' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\TokenData' !== 'string') {
+                        if ('\ck\Model\TokenData' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\TokenData', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\TokenData', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\TokenData';
+            $returnType = '\ck\Model\TokenData';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1074,7 +1074,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\TokenData',
+                        '\ck\Model\TokenData',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1120,7 +1120,7 @@ class AuthenticationApi
         string $contentType = self::contentTypes['restLoginRefreshPost'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\TokenData';
+        $returnType = '\ck\Model\TokenData';
         $request = $this->restLoginRefreshPostRequest($contentType);
 
         return $this->client
@@ -2003,11 +2003,11 @@ class AuthenticationApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\User
+     * @return \ck\Model\User
      */
     public function restUserGet(
         string $contentType = self::contentTypes['restUserGet'][0]
-    ): \ck/plenty-client\Model\User
+    ): \ck\Model\User
     {
         list($response) = $this->restUserGetWithHttpInfo($contentType);
         return $response;
@@ -2022,7 +2022,7 @@ class AuthenticationApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function restUserGetWithHttpInfo(
         string $contentType = self::contentTypes['restUserGet'][0]
@@ -2067,23 +2067,23 @@ class AuthenticationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\User' === '\SplFileObject') {
+                    if ('\ck\Model\User' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\User' !== 'string') {
+                        if ('\ck\Model\User' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\User', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\User', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\User';
+            $returnType = '\ck\Model\User';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2104,7 +2104,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\User',
+                        '\ck\Model\User',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2150,7 +2150,7 @@ class AuthenticationApi
         string $contentType = self::contentTypes['restUserGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\User';
+        $returnType = '\ck\Model\User';
         $request = $this->restUserGetRequest($contentType);
 
         return $this->client

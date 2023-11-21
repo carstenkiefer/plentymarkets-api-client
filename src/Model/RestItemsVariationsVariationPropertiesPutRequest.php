@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestItemsVariationsVariationPropertiesPutRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class RestItemsVariationsVariationPropertiesPutRequest implements ModelInterface
         'value_int' => 'int',
         'value_float' => 'float',
         'value_file' => 'string',
-        'value_texts' => '\ck/plenty-client\Model\VariationPropertyValueText[]',
+        'value_texts' => '\ck\Model\VariationPropertyValueText[]',
         'lang' => 'string',
         'value' => 'string'
     ];
@@ -551,7 +551,7 @@ class RestItemsVariationsVariationPropertiesPutRequest implements ModelInterface
     /**
      * Gets value_texts
      *
-     * @return \ck/plenty-client\Model\VariationPropertyValueText[]|null
+     * @return \ck\Model\VariationPropertyValueText[]|null
      */
     public function getValueTexts(): ?array
     {
@@ -561,7 +561,7 @@ class RestItemsVariationsVariationPropertiesPutRequest implements ModelInterface
     /**
      * Sets value_texts
      *
-     * @param \ck/plenty-client\Model\VariationPropertyValueText[]|null $value_texts value_texts
+     * @param \ck\Model\VariationPropertyValueText[]|null $value_texts value_texts
      *
      * @return $this
      */

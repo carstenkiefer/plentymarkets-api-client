@@ -32,11 +32,11 @@ Name | Type | Description | Notes
 **flag_two** | **int** | Flag 2 of the item. Flags can be used to organise and filter items. Each item can be assigned up to two flags. Possible values: 1 to 11, 0 &#x3D; no flag optional allowed values are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 | [optional]
 **age_restriction** | **int** | The age customers must be to purchase the item. Items with an age rating of 18+ must be linked to a shipping profile for which the PostIdent option is activated.0 &#x3D; None available3 &#x3D; Released for ages 3 and up6 &#x3D; Ages 6 and up9 &#x3D; Ages 9 and up12 &#x3D; Ages 12 and up14 &#x3D; Ages 14 and up16 &#x3D; Ages 16 and up18 &#x3D; Ages 18 and up50 &#x3D; Not marked88 &#x3D; Not 99 &#x3D; Unknown optional allowed values are 0, 3, 6, 9, 12, 14, 16, 18, 50, 88, 99 |
 **feedback** | **int** | The feedback, i.e. rating, that this item received. Possible values are 1 to 5 or 1 to 10 depending on the maximum rating setting. An initial feedback can be saved for items. The saved value will then be displayed as the initial feedback. Every time new feedback is submitted, the average value will be recalculated automatically. optional | [optional]
-**ebay_titles** | [**\ck/plenty-client\Model\ItemEbayTitle[]**](ItemEbayTitle.md) |  | [optional]
+**ebay_titles** | [**\ck\Model\ItemEbayTitle[]**](ItemEbayTitle.md) |  | [optional]
 **title** | **string** | The title. |
-**item_shipping_profiles** | [**\ck/plenty-client\Model\ItemShippingProfiles[]**](ItemShippingProfiles.md) |  | [optional]
+**item_shipping_profiles** | [**\ck\Model\ItemShippingProfiles[]**](ItemShippingProfiles.md) |  | [optional]
 **profile_id** | **int** | The unique ID of the shipping profile |
-**item_properties** | [**\ck/plenty-client\Model\ItemProperty[]**](ItemProperty.md) |  | [optional]
+**item_properties** | [**\ck\Model\ItemProperty[]**](ItemProperty.md) |  | [optional]
 **property_id** | **int** | The id of the property item |
 **property_selection_id** | **int** | The id of the property selection optional | [optional]
 

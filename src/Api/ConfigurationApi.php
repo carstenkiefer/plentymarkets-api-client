@@ -3,7 +3,7 @@
  * ConfigurationApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * ConfigurationApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -462,7 +462,7 @@ class ConfigurationApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Configuration[]
+     * @return \ck\Model\Configuration[]
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGet(
         int $plugin_id,
@@ -483,7 +483,7 @@ class ConfigurationApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Configuration[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Configuration[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGetWithHttpInfo(
         int $plugin_id,
@@ -530,23 +530,23 @@ class ConfigurationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Configuration[]' === '\SplFileObject') {
+                    if ('\ck\Model\Configuration[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Configuration[]' !== 'string') {
+                        if ('\ck\Model\Configuration[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Configuration[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Configuration[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Configuration[]';
+            $returnType = '\ck\Model\Configuration[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -567,7 +567,7 @@ class ConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Configuration[]',
+                        '\ck\Model\Configuration[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -617,7 +617,7 @@ class ConfigurationApi
         string $contentType = self::contentTypes['restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Configuration[]';
+        $returnType = '\ck\Model\Configuration[]';
         $request = $this->restPluginsPluginIdPluginSetsPluginSetIdConfigurationsGetRequest($plugin_id, $plugin_set_id, $contentType);
 
         return $this->client

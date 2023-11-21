@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestOrdersOrderIdDocumentsTypePostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RestOrdersOrderIdDocumentsTypePostRequest implements ModelInterface, Array
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'documents' => '\ck/plenty-client\Model\DocumentData[]',
+        'documents' => '\ck\Model\DocumentData[]',
         'content' => 'string',
         'number' => 'int',
         'number_with_prefix' => 'string',
@@ -334,7 +334,7 @@ class RestOrdersOrderIdDocumentsTypePostRequest implements ModelInterface, Array
     /**
      * Gets documents
      *
-     * @return \ck/plenty-client\Model\DocumentData[]
+     * @return \ck\Model\DocumentData[]
      */
     public function getDocuments(): array
     {
@@ -344,7 +344,7 @@ class RestOrdersOrderIdDocumentsTypePostRequest implements ModelInterface, Array
     /**
      * Sets documents
      *
-     * @param \ck/plenty-client\Model\DocumentData[] $documents documents
+     * @param \ck\Model\DocumentData[] $documents documents
      *
      * @return $this
      */

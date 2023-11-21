@@ -1,4 +1,4 @@
-# ck/plenty-client\AccountApi
+# ck\AccountApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -124,7 +124,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restAccountLoginPost()`
 
 ```php
-restAccountLoginPost($_rest_account_login): \ck/plenty-client\Model\TokenData
+restAccountLoginPost($_rest_account_login): \ck\Model\TokenData
 ```
 
 Login
@@ -139,12 +139,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$_rest_account_login = new \ck/plenty-client\Model\RestAccountLoginPostRequest(); // \ck/plenty-client\Model\RestAccountLoginPostRequest
+$_rest_account_login = new \ck\Model\RestAccountLoginPostRequest(); // \ck\Model\RestAccountLoginPostRequest
 
 try {
     $result = $apiInstance->restAccountLoginPost($_rest_account_login);
@@ -158,11 +158,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_account_login** | [**\ck/plenty-client\Model\RestAccountLoginPostRequest**](../Model/RestAccountLoginPostRequest.md)|  | [optional] |
+| **_rest_account_login** | [**\ck\Model\RestAccountLoginPostRequest**](../Model/RestAccountLoginPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\TokenData**](../Model/TokenData.md)
+[**\ck\Model\TokenData**](../Model/TokenData.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -247,7 +247,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -284,7 +284,7 @@ No authorization required
 ## `restAccountsAccountIdContactsGet()`
 
 ```php
-restAccountsAccountIdContactsGet($account_id): \ck/plenty-client\Model\Contact[]
+restAccountsAccountIdContactsGet($account_id): \ck\Model\Contact[]
 ```
 
 List contacts
@@ -299,10 +299,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -326,7 +326,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Contact[]**](../Model/Contact.md)
+[**\ck\Model\Contact[]**](../Model/Contact.md)
 
 ### Authorization
 
@@ -359,10 +359,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -403,7 +403,7 @@ void (empty response body)
 ## `restAccountsAccountIdGet()`
 
 ```php
-restAccountsAccountIdGet($account_id): \ck/plenty-client\Model\Account
+restAccountsAccountIdGet($account_id): \ck\Model\Account
 ```
 
 Get account
@@ -418,10 +418,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -445,7 +445,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Account**](../Model/Account.md)
+[**\ck\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -463,7 +463,7 @@ try {
 ## `restAccountsAccountIdPut()`
 
 ```php
-restAccountsAccountIdPut($account_id, $_rest_accounts_account_id): \ck/plenty-client\Model\Account
+restAccountsAccountIdPut($account_id, $_rest_accounts_account_id): \ck\Model\Account
 ```
 
 Update account
@@ -478,17 +478,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = 56; // int | The ID of the account
-$_rest_accounts_account_id = new \ck/plenty-client\Model\RestAccountsPostRequest(); // \ck/plenty-client\Model\RestAccountsPostRequest
+$_rest_accounts_account_id = new \ck\Model\RestAccountsPostRequest(); // \ck\Model\RestAccountsPostRequest
 
 try {
     $result = $apiInstance->restAccountsAccountIdPut($account_id, $_rest_accounts_account_id);
@@ -503,11 +503,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **int**| The ID of the account | |
-| **_rest_accounts_account_id** | [**\ck/plenty-client\Model\RestAccountsPostRequest**](../Model/RestAccountsPostRequest.md)|  | [optional] |
+| **_rest_accounts_account_id** | [**\ck\Model\RestAccountsPostRequest**](../Model/RestAccountsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Account**](../Model/Account.md)
+[**\ck\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -540,10 +540,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -584,7 +584,7 @@ void (empty response body)
 ## `restAccountsAddressesAddressIdGet()`
 
 ```php
-restAccountsAddressesAddressIdGet($address_id): \ck/plenty-client\Model\Address
+restAccountsAddressesAddressIdGet($address_id): \ck\Model\Address
 ```
 
 Get address
@@ -599,10 +599,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -626,7 +626,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Address**](../Model/Address.md)
+[**\ck\Model\Address**](../Model/Address.md)
 
 ### Authorization
 
@@ -659,10 +659,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -703,7 +703,7 @@ void (empty response body)
 ## `restAccountsAddressesAddressIdOptionsGet()`
 
 ```php
-restAccountsAddressesAddressIdOptionsGet($address_id): \ck/plenty-client\Model\AddressOption[]
+restAccountsAddressesAddressIdOptionsGet($address_id): \ck\Model\AddressOption[]
 ```
 
 List address options
@@ -718,10 +718,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -745,7 +745,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOption[]**](../Model/AddressOption.md)
+[**\ck\Model\AddressOption[]**](../Model/AddressOption.md)
 
 ### Authorization
 
@@ -763,7 +763,7 @@ try {
 ## `restAccountsAddressesAddressIdOptionsPost()`
 
 ```php
-restAccountsAddressesAddressIdOptionsPost($address_id, $_rest_accounts_addresses_address_id_options): \ck/plenty-client\Model\AddressOption[]
+restAccountsAddressesAddressIdOptionsPost($address_id, $_rest_accounts_addresses_address_id_options): \ck\Model\AddressOption[]
 ```
 
 Create address option
@@ -778,17 +778,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $address_id = 56; // int | The ID of the address
-$_rest_accounts_addresses_address_id_options = new \ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest
+$_rest_accounts_addresses_address_id_options = new \ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest(); // \ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest
 
 try {
     $result = $apiInstance->restAccountsAddressesAddressIdOptionsPost($address_id, $_rest_accounts_addresses_address_id_options);
@@ -803,11 +803,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **address_id** | **int**| The ID of the address | |
-| **_rest_accounts_addresses_address_id_options** | [**\ck/plenty-client\Model\RestAccountsAddressesAddressIdOptionsPostRequest**](../Model/RestAccountsAddressesAddressIdOptionsPostRequest.md)|  | [optional] |
+| **_rest_accounts_addresses_address_id_options** | [**\ck\Model\RestAccountsAddressesAddressIdOptionsPostRequest**](../Model/RestAccountsAddressesAddressIdOptionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOption[]**](../Model/AddressOption.md)
+[**\ck\Model\AddressOption[]**](../Model/AddressOption.md)
 
 ### Authorization
 
@@ -825,7 +825,7 @@ try {
 ## `restAccountsAddressesAddressIdOptionsPut()`
 
 ```php
-restAccountsAddressesAddressIdOptionsPut($address_id): \ck/plenty-client\Model\AddressOption[]
+restAccountsAddressesAddressIdOptionsPut($address_id): \ck\Model\AddressOption[]
 ```
 
 Update address option by addressId
@@ -840,10 +840,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -867,7 +867,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOption[]**](../Model/AddressOption.md)
+[**\ck\Model\AddressOption[]**](../Model/AddressOption.md)
 
 ### Authorization
 
@@ -885,7 +885,7 @@ try {
 ## `restAccountsAddressesAddressIdPut()`
 
 ```php
-restAccountsAddressesAddressIdPut($address_id, $_rest_accounts_addresses_address_id): \ck/plenty-client\Model\Address
+restAccountsAddressesAddressIdPut($address_id, $_rest_accounts_addresses_address_id): \ck\Model\Address
 ```
 
 Update address
@@ -900,17 +900,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $address_id = 56; // int | The ID of the address
-$_rest_accounts_addresses_address_id = new \ck/plenty-client\Model\RestAccountsAddressesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesPostRequest
+$_rest_accounts_addresses_address_id = new \ck\Model\RestAccountsAddressesPostRequest(); // \ck\Model\RestAccountsAddressesPostRequest
 
 try {
     $result = $apiInstance->restAccountsAddressesAddressIdPut($address_id, $_rest_accounts_addresses_address_id);
@@ -925,11 +925,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **address_id** | **int**| The ID of the address | |
-| **_rest_accounts_addresses_address_id** | [**\ck/plenty-client\Model\RestAccountsAddressesPostRequest**](../Model/RestAccountsAddressesPostRequest.md)|  | [optional] |
+| **_rest_accounts_addresses_address_id** | [**\ck\Model\RestAccountsAddressesPostRequest**](../Model/RestAccountsAddressesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Address**](../Model/Address.md)
+[**\ck\Model\Address**](../Model/Address.md)
 
 ### Authorization
 
@@ -947,7 +947,7 @@ try {
 ## `restAccountsAddressesAddressIdRelatedDataGet()`
 
 ```php
-restAccountsAddressesAddressIdRelatedDataGet($address_id, $order_ids): \ck/plenty-client\Model\Address
+restAccountsAddressesAddressIdRelatedDataGet($address_id, $order_ids): \ck\Model\Address
 ```
 
 Get address data by addressId
@@ -962,10 +962,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -991,7 +991,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Address**](../Model/Address.md)
+[**\ck\Model\Address**](../Model/Address.md)
 
 ### Authorization
 
@@ -1024,10 +1024,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1068,7 +1068,7 @@ void (empty response body)
 ## `restAccountsAddressesContactRelationsAddressContactRelationIdGet()`
 
 ```php
-restAccountsAddressesContactRelationsAddressContactRelationIdGet($address_contact_relation_id): \ck/plenty-client\Model\AddressContactRelation
+restAccountsAddressesContactRelationsAddressContactRelationIdGet($address_contact_relation_id): \ck\Model\AddressContactRelation
 ```
 
 Get address contact relation
@@ -1083,10 +1083,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1110,7 +1110,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressContactRelation**](../Model/AddressContactRelation.md)
+[**\ck\Model\AddressContactRelation**](../Model/AddressContactRelation.md)
 
 ### Authorization
 
@@ -1128,7 +1128,7 @@ try {
 ## `restAccountsAddressesContactRelationsGet()`
 
 ```php
-restAccountsAddressesContactRelationsGet($id, $contact_id, $type_id, $address_id, $is_primary, $page, $items_per_page, $with): \ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response
+restAccountsAddressesContactRelationsGet($id, $contact_id, $type_id, $address_id, $is_primary, $page, $items_per_page, $with): \ck\Model\RestAccountsAddressesContactRelationsGet200Response
 ```
 
 List address contact relations
@@ -1143,10 +1143,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1184,7 +1184,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsAddressesContactRelationsGet200Response**](../Model/RestAccountsAddressesContactRelationsGet200Response.md)
+[**\ck\Model\RestAccountsAddressesContactRelationsGet200Response**](../Model/RestAccountsAddressesContactRelationsGet200Response.md)
 
 ### Authorization
 
@@ -1202,7 +1202,7 @@ try {
 ## `restAccountsAddressesContactRelationsPost()`
 
 ```php
-restAccountsAddressesContactRelationsPost($_rest_accounts_addresses_contact_relations): \ck/plenty-client\Model\AddressContactRelation[]
+restAccountsAddressesContactRelationsPost($_rest_accounts_addresses_contact_relations): \ck\Model\AddressContactRelation[]
 ```
 
 Create address contact relations
@@ -1217,16 +1217,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_addresses_contact_relations = new \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest
+$_rest_accounts_addresses_contact_relations = new \ck\Model\RestAccountsAddressesContactRelationsPostRequest(); // \ck\Model\RestAccountsAddressesContactRelationsPostRequest
 
 try {
     $result = $apiInstance->restAccountsAddressesContactRelationsPost($_rest_accounts_addresses_contact_relations);
@@ -1240,11 +1240,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_addresses_contact_relations** | [**\ck/plenty-client\Model\RestAccountsAddressesContactRelationsPostRequest**](../Model/RestAccountsAddressesContactRelationsPostRequest.md)|  | [optional] |
+| **_rest_accounts_addresses_contact_relations** | [**\ck\Model\RestAccountsAddressesContactRelationsPostRequest**](../Model/RestAccountsAddressesContactRelationsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressContactRelation[]**](../Model/AddressContactRelation.md)
+[**\ck\Model\AddressContactRelation[]**](../Model/AddressContactRelation.md)
 
 ### Authorization
 
@@ -1262,7 +1262,7 @@ try {
 ## `restAccountsAddressesContactRelationsPut()`
 
 ```php
-restAccountsAddressesContactRelationsPut($_rest_accounts_addresses_contact_relations): \ck/plenty-client\Model\AddressContactRelation[]
+restAccountsAddressesContactRelationsPut($_rest_accounts_addresses_contact_relations): \ck\Model\AddressContactRelation[]
 ```
 
 Update address contact relations
@@ -1277,16 +1277,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_addresses_contact_relations = new \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest(); // \ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest
+$_rest_accounts_addresses_contact_relations = new \ck\Model\RestAccountsAddressesContactRelationsPutRequest(); // \ck\Model\RestAccountsAddressesContactRelationsPutRequest
 
 try {
     $result = $apiInstance->restAccountsAddressesContactRelationsPut($_rest_accounts_addresses_contact_relations);
@@ -1300,11 +1300,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_addresses_contact_relations** | [**\ck/plenty-client\Model\RestAccountsAddressesContactRelationsPutRequest**](../Model/RestAccountsAddressesContactRelationsPutRequest.md)|  | [optional] |
+| **_rest_accounts_addresses_contact_relations** | [**\ck\Model\RestAccountsAddressesContactRelationsPutRequest**](../Model/RestAccountsAddressesContactRelationsPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressContactRelation[]**](../Model/AddressContactRelation.md)
+[**\ck\Model\AddressContactRelation[]**](../Model/AddressContactRelation.md)
 
 ### Authorization
 
@@ -1322,7 +1322,7 @@ try {
 ## `restAccountsAddressesGet()`
 
 ```php
-restAccountsAddressesGet($updated_to, $updated_from, $created_to, $created_from, $with, $page, $items_per_page): \ck/plenty-client\Model\Address
+restAccountsAddressesGet($updated_to, $updated_from, $created_to, $created_from, $with, $page, $items_per_page): \ck\Model\Address
 ```
 
 Get all available addresses
@@ -1335,10 +1335,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1374,7 +1374,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Address**](../Model/Address.md)
+[**\ck\Model\Address**](../Model/Address.md)
 
 ### Authorization
 
@@ -1392,7 +1392,7 @@ try {
 ## `restAccountsAddressesOptionTypesGet()`
 
 ```php
-restAccountsAddressesOptionTypesGet(): \ck/plenty-client\Model\AddressOptionType[]
+restAccountsAddressesOptionTypesGet(): \ck\Model\AddressOptionType[]
 ```
 
 List address option types
@@ -1407,10 +1407,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1431,7 +1431,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOptionType[]**](../Model/AddressOptionType.md)
+[**\ck\Model\AddressOptionType[]**](../Model/AddressOptionType.md)
 
 ### Authorization
 
@@ -1464,10 +1464,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1508,7 +1508,7 @@ void (empty response body)
 ## `restAccountsAddressesOptionTypesOptionTypeIdGet()`
 
 ```php
-restAccountsAddressesOptionTypesOptionTypeIdGet($option_type_id): \ck/plenty-client\Model\AddressOptionType
+restAccountsAddressesOptionTypesOptionTypeIdGet($option_type_id): \ck\Model\AddressOptionType
 ```
 
 Get address option type
@@ -1523,10 +1523,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1550,7 +1550,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOptionType**](../Model/AddressOptionType.md)
+[**\ck\Model\AddressOptionType**](../Model/AddressOptionType.md)
 
 ### Authorization
 
@@ -1568,7 +1568,7 @@ try {
 ## `restAccountsAddressesOptionTypesOptionTypeIdPut()`
 
 ```php
-restAccountsAddressesOptionTypesOptionTypeIdPut($option_type_id, $_rest_accounts_addresses_option_types_option_type_id): \ck/plenty-client\Model\AddressOptionType
+restAccountsAddressesOptionTypesOptionTypeIdPut($option_type_id, $_rest_accounts_addresses_option_types_option_type_id): \ck\Model\AddressOptionType
 ```
 
 Update address option type
@@ -1583,17 +1583,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $option_type_id = 56; // int | The ID of the address option type
-$_rest_accounts_addresses_option_types_option_type_id = new \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest
+$_rest_accounts_addresses_option_types_option_type_id = new \ck\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck\Model\RestAccountsAddressesOptionTypesPostRequest
 
 try {
     $result = $apiInstance->restAccountsAddressesOptionTypesOptionTypeIdPut($option_type_id, $_rest_accounts_addresses_option_types_option_type_id);
@@ -1608,11 +1608,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **option_type_id** | **int**| The ID of the address option type | |
-| **_rest_accounts_addresses_option_types_option_type_id** | [**\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
+| **_rest_accounts_addresses_option_types_option_type_id** | [**\ck\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOptionType**](../Model/AddressOptionType.md)
+[**\ck\Model\AddressOptionType**](../Model/AddressOptionType.md)
 
 ### Authorization
 
@@ -1630,7 +1630,7 @@ try {
 ## `restAccountsAddressesOptionTypesPost()`
 
 ```php
-restAccountsAddressesOptionTypesPost($_rest_accounts_addresses_option_types): \ck/plenty-client\Model\AddressOptionType
+restAccountsAddressesOptionTypesPost($_rest_accounts_addresses_option_types): \ck\Model\AddressOptionType
 ```
 
 Create address option type
@@ -1645,16 +1645,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_addresses_option_types = new \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest
+$_rest_accounts_addresses_option_types = new \ck\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck\Model\RestAccountsAddressesOptionTypesPostRequest
 
 try {
     $result = $apiInstance->restAccountsAddressesOptionTypesPost($_rest_accounts_addresses_option_types);
@@ -1668,11 +1668,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_addresses_option_types** | [**\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
+| **_rest_accounts_addresses_option_types** | [**\ck\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOptionType**](../Model/AddressOptionType.md)
+[**\ck\Model\AddressOptionType**](../Model/AddressOptionType.md)
 
 ### Authorization
 
@@ -1705,10 +1705,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1749,7 +1749,7 @@ void (empty response body)
 ## `restAccountsAddressesOptionsOptionIdGet()`
 
 ```php
-restAccountsAddressesOptionsOptionIdGet($option_id): \ck/plenty-client\Model\AddressOption
+restAccountsAddressesOptionsOptionIdGet($option_id): \ck\Model\AddressOption
 ```
 
 Get address option
@@ -1764,10 +1764,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1791,7 +1791,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOption**](../Model/AddressOption.md)
+[**\ck\Model\AddressOption**](../Model/AddressOption.md)
 
 ### Authorization
 
@@ -1809,7 +1809,7 @@ try {
 ## `restAccountsAddressesOptionsOptionIdPut()`
 
 ```php
-restAccountsAddressesOptionsOptionIdPut($option_id): \ck/plenty-client\Model\AddressOption
+restAccountsAddressesOptionsOptionIdPut($option_id): \ck\Model\AddressOption
 ```
 
 Update address option
@@ -1824,10 +1824,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1851,7 +1851,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOption**](../Model/AddressOption.md)
+[**\ck\Model\AddressOption**](../Model/AddressOption.md)
 
 ### Authorization
 
@@ -1884,10 +1884,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1928,7 +1928,7 @@ void (empty response body)
 ## `restAccountsAddressesPosRelationsAddressPosRelationIdGet()`
 
 ```php
-restAccountsAddressesPosRelationsAddressPosRelationIdGet($address_pos_relation_id): \ck/plenty-client\Model\AddressPosRelation
+restAccountsAddressesPosRelationsAddressPosRelationIdGet($address_pos_relation_id): \ck\Model\AddressPosRelation
 ```
 
 Get address POS relation
@@ -1943,10 +1943,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1970,7 +1970,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressPosRelation**](../Model/AddressPosRelation.md)
+[**\ck\Model\AddressPosRelation**](../Model/AddressPosRelation.md)
 
 ### Authorization
 
@@ -1988,7 +1988,7 @@ try {
 ## `restAccountsAddressesPosRelationsAddressPosRelationIdPut()`
 
 ```php
-restAccountsAddressesPosRelationsAddressPosRelationIdPut($address_pos_relation_id): \ck/plenty-client\Model\AddressPosRelation
+restAccountsAddressesPosRelationsAddressPosRelationIdPut($address_pos_relation_id): \ck\Model\AddressPosRelation
 ```
 
 Update address POS relation
@@ -2003,10 +2003,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2030,7 +2030,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressPosRelation**](../Model/AddressPosRelation.md)
+[**\ck\Model\AddressPosRelation**](../Model/AddressPosRelation.md)
 
 ### Authorization
 
@@ -2048,7 +2048,7 @@ try {
 ## `restAccountsAddressesPosRelationsGet()`
 
 ```php
-restAccountsAddressesPosRelationsGet($page, $items_per_page, $with): \ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response
+restAccountsAddressesPosRelationsGet($page, $items_per_page, $with): \ck\Model\RestAccountsAddressesPosRelationsGet200Response
 ```
 
 List address POS relations
@@ -2063,10 +2063,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2094,7 +2094,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsAddressesPosRelationsGet200Response**](../Model/RestAccountsAddressesPosRelationsGet200Response.md)
+[**\ck\Model\RestAccountsAddressesPosRelationsGet200Response**](../Model/RestAccountsAddressesPosRelationsGet200Response.md)
 
 ### Authorization
 
@@ -2112,7 +2112,7 @@ try {
 ## `restAccountsAddressesPosRelationsPost()`
 
 ```php
-restAccountsAddressesPosRelationsPost(): \ck/plenty-client\Model\AddressPosRelation
+restAccountsAddressesPosRelationsPost(): \ck\Model\AddressPosRelation
 ```
 
 Create address POS relation
@@ -2127,10 +2127,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2151,7 +2151,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressPosRelation**](../Model/AddressPosRelation.md)
+[**\ck\Model\AddressPosRelation**](../Model/AddressPosRelation.md)
 
 ### Authorization
 
@@ -2169,7 +2169,7 @@ This endpoint does not need any parameter.
 ## `restAccountsAddressesPost()`
 
 ```php
-restAccountsAddressesPost($_rest_accounts_addresses): \ck/plenty-client\Model\Address
+restAccountsAddressesPost($_rest_accounts_addresses): \ck\Model\Address
 ```
 
 Create address
@@ -2184,16 +2184,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_addresses = new \ck/plenty-client\Model\RestAccountsAddressesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesPostRequest
+$_rest_accounts_addresses = new \ck\Model\RestAccountsAddressesPostRequest(); // \ck\Model\RestAccountsAddressesPostRequest
 
 try {
     $result = $apiInstance->restAccountsAddressesPost($_rest_accounts_addresses);
@@ -2207,11 +2207,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_addresses** | [**\ck/plenty-client\Model\RestAccountsAddressesPostRequest**](../Model/RestAccountsAddressesPostRequest.md)|  | [optional] |
+| **_rest_accounts_addresses** | [**\ck\Model\RestAccountsAddressesPostRequest**](../Model/RestAccountsAddressesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Address**](../Model/Address.md)
+[**\ck\Model\Address**](../Model/Address.md)
 
 ### Authorization
 
@@ -2229,7 +2229,7 @@ try {
 ## `restAccountsAddressesRelationTypesGet()`
 
 ```php
-restAccountsAddressesRelationTypesGet(): \ck/plenty-client\Model\AddressRelationType[]
+restAccountsAddressesRelationTypesGet(): \ck\Model\AddressRelationType[]
 ```
 
 List address relation types
@@ -2244,10 +2244,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2268,7 +2268,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressRelationType[]**](../Model/AddressRelationType.md)
+[**\ck\Model\AddressRelationType[]**](../Model/AddressRelationType.md)
 
 ### Authorization
 
@@ -2301,10 +2301,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2348,7 +2348,7 @@ try {
 ## `restAccountsAddressesWarehouseRelationsPost()`
 
 ```php
-restAccountsAddressesWarehouseRelationsPost(): \ck/plenty-client\Model\AddressWarehouseRelation
+restAccountsAddressesWarehouseRelationsPost(): \ck\Model\AddressWarehouseRelation
 ```
 
 Create address warehouse relation
@@ -2363,10 +2363,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2387,7 +2387,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressWarehouseRelation**](../Model/AddressWarehouseRelation.md)
+[**\ck\Model\AddressWarehouseRelation**](../Model/AddressWarehouseRelation.md)
 
 ### Authorization
 
@@ -2420,10 +2420,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2464,7 +2464,7 @@ void (empty response body)
 ## `restAccountsAddressesWarehouseRelationsRelationIdPut()`
 
 ```php
-restAccountsAddressesWarehouseRelationsRelationIdPut($relation_id): \ck/plenty-client\Model\AddressWarehouseRelation
+restAccountsAddressesWarehouseRelationsRelationIdPut($relation_id): \ck\Model\AddressWarehouseRelation
 ```
 
 Update address warehouse relation
@@ -2479,10 +2479,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2506,7 +2506,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressWarehouseRelation**](../Model/AddressWarehouseRelation.md)
+[**\ck\Model\AddressWarehouseRelation**](../Model/AddressWarehouseRelation.md)
 
 ### Authorization
 
@@ -2539,10 +2539,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2583,7 +2583,7 @@ void (empty response body)
 ## `restAccountsContactRelationsAccountContactRelationIdGet()`
 
 ```php
-restAccountsContactRelationsAccountContactRelationIdGet($account_contact_relation_id): \ck/plenty-client\Model\AccountContactRelation
+restAccountsContactRelationsAccountContactRelationIdGet($account_contact_relation_id): \ck\Model\AccountContactRelation
 ```
 
 Get account contact relation
@@ -2598,10 +2598,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2625,7 +2625,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AccountContactRelation**](../Model/AccountContactRelation.md)
+[**\ck\Model\AccountContactRelation**](../Model/AccountContactRelation.md)
 
 ### Authorization
 
@@ -2658,10 +2658,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2702,7 +2702,7 @@ void (empty response body)
 ## `restAccountsContactsBanksContactBankIdGet()`
 
 ```php
-restAccountsContactsBanksContactBankIdGet($contact_bank_id): \ck/plenty-client\Model\ContactBank
+restAccountsContactsBanksContactBankIdGet($contact_bank_id): \ck\Model\ContactBank
 ```
 
 Get bank account
@@ -2717,10 +2717,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2744,7 +2744,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactBank**](../Model/ContactBank.md)
+[**\ck\Model\ContactBank**](../Model/ContactBank.md)
 
 ### Authorization
 
@@ -2762,7 +2762,7 @@ try {
 ## `restAccountsContactsBanksContactBankIdPut()`
 
 ```php
-restAccountsContactsBanksContactBankIdPut($contact_bank_id, $_rest_accounts_contacts_banks_contact_bank_id): \ck/plenty-client\Model\ContactBank
+restAccountsContactsBanksContactBankIdPut($contact_bank_id, $_rest_accounts_contacts_banks_contact_bank_id): \ck\Model\ContactBank
 ```
 
 Update bank account
@@ -2777,17 +2777,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $contact_bank_id = 56; // int | The ID of the bank account
-$_rest_accounts_contacts_banks_contact_bank_id = new \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest
+$_rest_accounts_contacts_banks_contact_bank_id = new \ck\Model\RestAccountsContactsBanksPostRequest(); // \ck\Model\RestAccountsContactsBanksPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsBanksContactBankIdPut($contact_bank_id, $_rest_accounts_contacts_banks_contact_bank_id);
@@ -2802,11 +2802,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_bank_id** | **int**| The ID of the bank account | |
-| **_rest_accounts_contacts_banks_contact_bank_id** | [**\ck/plenty-client\Model\RestAccountsContactsBanksPostRequest**](../Model/RestAccountsContactsBanksPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_banks_contact_bank_id** | [**\ck\Model\RestAccountsContactsBanksPostRequest**](../Model/RestAccountsContactsBanksPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactBank**](../Model/ContactBank.md)
+[**\ck\Model\ContactBank**](../Model/ContactBank.md)
 
 ### Authorization
 
@@ -2824,7 +2824,7 @@ try {
 ## `restAccountsContactsBanksPost()`
 
 ```php
-restAccountsContactsBanksPost($_rest_accounts_contacts_banks): \ck/plenty-client\Model\ContactBank
+restAccountsContactsBanksPost($_rest_accounts_contacts_banks): \ck\Model\ContactBank
 ```
 
 Create bank account
@@ -2839,16 +2839,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_contacts_banks = new \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsBanksPostRequest
+$_rest_accounts_contacts_banks = new \ck\Model\RestAccountsContactsBanksPostRequest(); // \ck\Model\RestAccountsContactsBanksPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsBanksPost($_rest_accounts_contacts_banks);
@@ -2862,11 +2862,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_contacts_banks** | [**\ck/plenty-client\Model\RestAccountsContactsBanksPostRequest**](../Model/RestAccountsContactsBanksPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_banks** | [**\ck\Model\RestAccountsContactsBanksPostRequest**](../Model/RestAccountsContactsBanksPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactBank**](../Model/ContactBank.md)
+[**\ck\Model\ContactBank**](../Model/ContactBank.md)
 
 ### Authorization
 
@@ -2899,10 +2899,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2959,10 +2959,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3016,10 +3016,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3060,7 +3060,7 @@ void (empty response body)
 ## `restAccountsContactsContactEventsContactEventIdPut()`
 
 ```php
-restAccountsContactsContactEventsContactEventIdPut($contact_event_id, $_rest_accounts_contacts_contact_events_contact_event_id): \ck/plenty-client\Model\ContactEvent
+restAccountsContactsContactEventsContactEventIdPut($contact_event_id, $_rest_accounts_contacts_contact_events_contact_event_id): \ck\Model\ContactEvent
 ```
 
 Update contact event
@@ -3075,17 +3075,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $contact_event_id = 56; // int | The ID of the contact event
-$_rest_accounts_contacts_contact_events_contact_event_id = new \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest
+$_rest_accounts_contacts_contact_events_contact_event_id = new \ck\Model\RestAccountsContactsContactEventsPostRequest(); // \ck\Model\RestAccountsContactsContactEventsPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsContactEventsContactEventIdPut($contact_event_id, $_rest_accounts_contacts_contact_events_contact_event_id);
@@ -3100,11 +3100,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_event_id** | **int**| The ID of the contact event | |
-| **_rest_accounts_contacts_contact_events_contact_event_id** | [**\ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest**](../Model/RestAccountsContactsContactEventsPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_contact_events_contact_event_id** | [**\ck\Model\RestAccountsContactsContactEventsPostRequest**](../Model/RestAccountsContactsContactEventsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactEvent**](../Model/ContactEvent.md)
+[**\ck\Model\ContactEvent**](../Model/ContactEvent.md)
 
 ### Authorization
 
@@ -3122,7 +3122,7 @@ try {
 ## `restAccountsContactsContactEventsGet()`
 
 ```php
-restAccountsContactsContactEventsGet($page, $items_per_page): \ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response
+restAccountsContactsContactEventsGet($page, $items_per_page): \ck\Model\RestAccountsContactsContactEventsGet200Response
 ```
 
 List contact events
@@ -3137,10 +3137,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3166,7 +3166,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response**](../Model/RestAccountsContactsContactEventsGet200Response.md)
+[**\ck\Model\RestAccountsContactsContactEventsGet200Response**](../Model/RestAccountsContactsContactEventsGet200Response.md)
 
 ### Authorization
 
@@ -3184,7 +3184,7 @@ try {
 ## `restAccountsContactsContactEventsPost()`
 
 ```php
-restAccountsContactsContactEventsPost($page, $items_per_page, $_rest_accounts_contacts_contact_events): \ck/plenty-client\Model\ContactEvent
+restAccountsContactsContactEventsPost($page, $items_per_page, $_rest_accounts_contacts_contact_events): \ck\Model\ContactEvent
 ```
 
 Create contact event
@@ -3199,10 +3199,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3210,7 +3210,7 @@ $apiInstance = new ck/plenty-client\Api\AccountApi(
 );
 $page = 56; // int | The page of results to search for
 $items_per_page = 56; // int | The number of items to list per page
-$_rest_accounts_contacts_contact_events = new \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest
+$_rest_accounts_contacts_contact_events = new \ck\Model\RestAccountsContactsContactEventsPostRequest(); // \ck\Model\RestAccountsContactsContactEventsPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsContactEventsPost($page, $items_per_page, $_rest_accounts_contacts_contact_events);
@@ -3226,11 +3226,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **page** | **int**| The page of results to search for | [optional] |
 | **items_per_page** | **int**| The number of items to list per page | [optional] |
-| **_rest_accounts_contacts_contact_events** | [**\ck/plenty-client\Model\RestAccountsContactsContactEventsPostRequest**](../Model/RestAccountsContactsContactEventsPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_contact_events** | [**\ck\Model\RestAccountsContactsContactEventsPostRequest**](../Model/RestAccountsContactsContactEventsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactEvent**](../Model/ContactEvent.md)
+[**\ck\Model\ContactEvent**](../Model/ContactEvent.md)
 
 ### Authorization
 
@@ -3263,10 +3263,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3320,10 +3320,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3379,10 +3379,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3441,10 +3441,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3503,10 +3503,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3563,10 +3563,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3609,7 +3609,7 @@ void (empty response body)
 ## `restAccountsContactsContactIdAccountsAccountIdGet()`
 
 ```php
-restAccountsContactsContactIdAccountsAccountIdGet($contact_id, $account_id): \ck/plenty-client\Model\Account
+restAccountsContactsContactIdAccountsAccountIdGet($contact_id, $account_id): \ck\Model\Account
 ```
 
 Get account of the contact
@@ -3624,10 +3624,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3653,7 +3653,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Account**](../Model/Account.md)
+[**\ck\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -3671,7 +3671,7 @@ try {
 ## `restAccountsContactsContactIdAccountsAccountIdPut()`
 
 ```php
-restAccountsContactsContactIdAccountsAccountIdPut($contact_id, $account_id): \ck/plenty-client\Model\Account
+restAccountsContactsContactIdAccountsAccountIdPut($contact_id, $account_id): \ck\Model\Account
 ```
 
 Update account
@@ -3686,10 +3686,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3715,7 +3715,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Account**](../Model/Account.md)
+[**\ck\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -3733,7 +3733,7 @@ try {
 ## `restAccountsContactsContactIdAccountsPost()`
 
 ```php
-restAccountsContactsContactIdAccountsPost($contact_id, $_rest_accounts_contacts_contact_id_accounts): \ck/plenty-client\Model\Account
+restAccountsContactsContactIdAccountsPost($contact_id, $_rest_accounts_contacts_contact_id_accounts): \ck\Model\Account
 ```
 
 Create account for existing contact
@@ -3748,17 +3748,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $contact_id = 56; // int | The ID of the contact
-$_rest_accounts_contacts_contact_id_accounts = new \ck/plenty-client\Model\RestAccountsPostRequest(); // \ck/plenty-client\Model\RestAccountsPostRequest
+$_rest_accounts_contacts_contact_id_accounts = new \ck\Model\RestAccountsPostRequest(); // \ck\Model\RestAccountsPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsContactIdAccountsPost($contact_id, $_rest_accounts_contacts_contact_id_accounts);
@@ -3773,11 +3773,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_id** | **int**| The ID of the contact | |
-| **_rest_accounts_contacts_contact_id_accounts** | [**\ck/plenty-client\Model\RestAccountsPostRequest**](../Model/RestAccountsPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_contact_id_accounts** | [**\ck\Model\RestAccountsPostRequest**](../Model/RestAccountsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Account**](../Model/Account.md)
+[**\ck\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -3810,10 +3810,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3858,7 +3858,7 @@ void (empty response body)
 ## `restAccountsContactsContactIdAddressesAddressIdPut()`
 
 ```php
-restAccountsContactsContactIdAddressesAddressIdPut($contact_id, $address_id, $is_primary, $type_id): \ck/plenty-client\Model\Address
+restAccountsContactsContactIdAddressesAddressIdPut($contact_id, $address_id, $is_primary, $type_id): \ck\Model\Address
 ```
 
 Update address of the contact
@@ -3873,10 +3873,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3906,7 +3906,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Address**](../Model/Address.md)
+[**\ck\Model\Address**](../Model/Address.md)
 
 ### Authorization
 
@@ -3924,7 +3924,7 @@ try {
 ## `restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPut()`
 
 ```php
-restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPut($contact_id, $address_id, $address_type_id): \ck/plenty-client\Model\AddressContactRelation
+restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdPrimaryPut($contact_id, $address_id, $address_type_id): \ck\Model\AddressContactRelation
 ```
 
 Set contact address per address type as primary address
@@ -3939,10 +3939,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3970,7 +3970,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressContactRelation**](../Model/AddressContactRelation.md)
+[**\ck\Model\AddressContactRelation**](../Model/AddressContactRelation.md)
 
 ### Authorization
 
@@ -3988,7 +3988,7 @@ try {
 ## `restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPut()`
 
 ```php
-restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPut($contact_id, $address_id, $address_type_id): \ck/plenty-client\Model\AddressContactRelation
+restAccountsContactsContactIdAddressesAddressIdTypesAddressTypeIdResetPrimaryPut($contact_id, $address_id, $address_type_id): \ck\Model\AddressContactRelation
 ```
 
 Reset contact primary address
@@ -4003,10 +4003,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4034,7 +4034,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressContactRelation**](../Model/AddressContactRelation.md)
+[**\ck\Model\AddressContactRelation**](../Model/AddressContactRelation.md)
 
 ### Authorization
 
@@ -4052,7 +4052,7 @@ try {
 ## `restAccountsContactsContactIdAddressesPost()`
 
 ```php
-restAccountsContactsContactIdAddressesPost($contact_id, $is_primary, $type_id, $_rest_accounts_contacts_contact_id_addresses): \ck/plenty-client\Model\Address
+restAccountsContactsContactIdAddressesPost($contact_id, $is_primary, $type_id, $_rest_accounts_contacts_contact_id_addresses): \ck\Model\Address
 ```
 
 Create address for existing contact
@@ -4067,10 +4067,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4079,7 +4079,7 @@ $apiInstance = new ck/plenty-client\Api\AccountApi(
 $contact_id = 56; // int | The ID of the contact
 $is_primary = True; // bool | Sets a contact address per address type as the primary address.
 $type_id = 56; // int | The type ID of the address. Possible values: <ul><li>Invoice address = 1</li><li> Delivery address = 2</li></ul>
-$_rest_accounts_contacts_contact_id_addresses = new \ck/plenty-client\Model\RestAccountsAddressesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesPostRequest
+$_rest_accounts_contacts_contact_id_addresses = new \ck\Model\RestAccountsAddressesPostRequest(); // \ck\Model\RestAccountsAddressesPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsContactIdAddressesPost($contact_id, $is_primary, $type_id, $_rest_accounts_contacts_contact_id_addresses);
@@ -4096,11 +4096,11 @@ try {
 | **contact_id** | **int**| The ID of the contact | |
 | **is_primary** | **bool**| Sets a contact address per address type as the primary address. | [optional] |
 | **type_id** | **int**| The type ID of the address. Possible values: &lt;ul&gt;&lt;li&gt;Invoice address &#x3D; 1&lt;/li&gt;&lt;li&gt; Delivery address &#x3D; 2&lt;/li&gt;&lt;/ul&gt; | [optional] |
-| **_rest_accounts_contacts_contact_id_addresses** | [**\ck/plenty-client\Model\RestAccountsAddressesPostRequest**](../Model/RestAccountsAddressesPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_contact_id_addresses** | [**\ck\Model\RestAccountsAddressesPostRequest**](../Model/RestAccountsAddressesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Address**](../Model/Address.md)
+[**\ck\Model\Address**](../Model/Address.md)
 
 ### Authorization
 
@@ -4133,10 +4133,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4178,7 +4178,7 @@ try {
 ## `restAccountsContactsContactIdBanksGet()`
 
 ```php
-restAccountsContactsContactIdBanksGet($contact_id, $items_per_page): \ck/plenty-client\Model\ContactBank[]
+restAccountsContactsContactIdBanksGet($contact_id, $items_per_page): \ck\Model\ContactBank[]
 ```
 
 List bank accounts
@@ -4193,10 +4193,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4222,7 +4222,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactBank[]**](../Model/ContactBank.md)
+[**\ck\Model\ContactBank[]**](../Model/ContactBank.md)
 
 ### Authorization
 
@@ -4240,7 +4240,7 @@ try {
 ## `restAccountsContactsContactIdContactEventsGet()`
 
 ```php
-restAccountsContactsContactIdContactEventsGet($contact_id, $page, $items_per_page): \ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response
+restAccountsContactsContactIdContactEventsGet($contact_id, $page, $items_per_page): \ck\Model\RestAccountsContactsContactEventsGet200Response
 ```
 
 List contact events by contact ID
@@ -4255,10 +4255,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4286,7 +4286,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsContactEventsGet200Response**](../Model/RestAccountsContactsContactEventsGet200Response.md)
+[**\ck\Model\RestAccountsContactsContactEventsGet200Response**](../Model/RestAccountsContactsContactEventsGet200Response.md)
 
 ### Authorization
 
@@ -4319,10 +4319,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4365,7 +4365,7 @@ void (empty response body)
 ## `restAccountsContactsContactIdGet()`
 
 ```php
-restAccountsContactsContactIdGet($contact_id, $with): \ck/plenty-client\Model\Contact
+restAccountsContactsContactIdGet($contact_id, $with): \ck\Model\Contact
 ```
 
 Get contact
@@ -4380,10 +4380,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4409,7 +4409,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Contact**](../Model/Contact.md)
+[**\ck\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -4442,10 +4442,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4486,7 +4486,7 @@ void (empty response body)
 ## `restAccountsContactsContactIdOptionsGet()`
 
 ```php
-restAccountsContactsContactIdOptionsGet($contact_id, $type_id, $sub_type_id): \ck/plenty-client\Model\ContactOption[]
+restAccountsContactsContactIdOptionsGet($contact_id, $type_id, $sub_type_id): \ck\Model\ContactOption[]
 ```
 
 List contact options
@@ -4501,10 +4501,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4532,7 +4532,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOption[]**](../Model/ContactOption.md)
+[**\ck\Model\ContactOption[]**](../Model/ContactOption.md)
 
 ### Authorization
 
@@ -4550,7 +4550,7 @@ try {
 ## `restAccountsContactsContactIdOptionsPost()`
 
 ```php
-restAccountsContactsContactIdOptionsPost($contact_id): \ck/plenty-client\Model\ContactOption[]
+restAccountsContactsContactIdOptionsPost($contact_id): \ck\Model\ContactOption[]
 ```
 
 Create contact option
@@ -4565,10 +4565,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4592,7 +4592,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOption[]**](../Model/ContactOption.md)
+[**\ck\Model\ContactOption[]**](../Model/ContactOption.md)
 
 ### Authorization
 
@@ -4610,7 +4610,7 @@ try {
 ## `restAccountsContactsContactIdOptionsPut()`
 
 ```php
-restAccountsContactsContactIdOptionsPut($contact_id): \ck/plenty-client\Model\ContactOption[]
+restAccountsContactsContactIdOptionsPut($contact_id): \ck\Model\ContactOption[]
 ```
 
 Update contact option
@@ -4625,10 +4625,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4652,7 +4652,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOption[]**](../Model/ContactOption.md)
+[**\ck\Model\ContactOption[]**](../Model/ContactOption.md)
 
 ### Authorization
 
@@ -4685,10 +4685,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4730,7 +4730,7 @@ try {
 ## `restAccountsContactsContactIdPut()`
 
 ```php
-restAccountsContactsContactIdPut($contact_id, $tag_relationships, $_rest_accounts_contacts_contact_id): \ck/plenty-client\Model\Contact
+restAccountsContactsContactIdPut($contact_id, $tag_relationships, $_rest_accounts_contacts_contact_id): \ck\Model\Contact
 ```
 
 Update contact
@@ -4745,10 +4745,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4756,7 +4756,7 @@ $apiInstance = new ck/plenty-client\Api\AccountApi(
 );
 $contact_id = 56; // int | The ID of the contact
 $tag_relationships = 56; // int | When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain.
-$_rest_accounts_contacts_contact_id = new \ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest(); // \ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest
+$_rest_accounts_contacts_contact_id = new \ck\Model\RestAccountsContactsContactIdPutRequest(); // \ck\Model\RestAccountsContactsContactIdPutRequest
 
 try {
     $result = $apiInstance->restAccountsContactsContactIdPut($contact_id, $tag_relationships, $_rest_accounts_contacts_contact_id);
@@ -4772,11 +4772,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **contact_id** | **int**| The ID of the contact | |
 | **tag_relationships** | **int**| When this parameter is used, the current relations between contacts and tags will be deleted and replaced by the given ones. If the parameter is not used, the current relations remain. | [optional] |
-| **_rest_accounts_contacts_contact_id** | [**\ck/plenty-client\Model\RestAccountsContactsContactIdPutRequest**](../Model/RestAccountsContactsContactIdPutRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_contact_id** | [**\ck\Model\RestAccountsContactsContactIdPutRequest**](../Model/RestAccountsContactsContactIdPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Contact**](../Model/Contact.md)
+[**\ck\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -4794,7 +4794,7 @@ try {
 ## `restAccountsContactsContactIdRelatedDataGet()`
 
 ```php
-restAccountsContactsContactIdRelatedDataGet($contact_id): \ck/plenty-client\Model\Contact
+restAccountsContactsContactIdRelatedDataGet($contact_id): \ck\Model\Contact
 ```
 
 List contact related data
@@ -4809,10 +4809,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4836,7 +4836,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\Contact**](../Model/Contact.md)
+[**\ck\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -4869,10 +4869,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4929,10 +4929,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -4973,7 +4973,7 @@ void (empty response body)
 ## `restAccountsContactsDepartmentsDepartmentIdGet()`
 
 ```php
-restAccountsContactsDepartmentsDepartmentIdGet($department_id): \ck/plenty-client\Model\ContactDepartment
+restAccountsContactsDepartmentsDepartmentIdGet($department_id): \ck\Model\ContactDepartment
 ```
 
 Get contact department
@@ -4988,10 +4988,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5015,7 +5015,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactDepartment**](../Model/ContactDepartment.md)
+[**\ck\Model\ContactDepartment**](../Model/ContactDepartment.md)
 
 ### Authorization
 
@@ -5033,7 +5033,7 @@ try {
 ## `restAccountsContactsDepartmentsDepartmentIdPut()`
 
 ```php
-restAccountsContactsDepartmentsDepartmentIdPut($department_id, $_rest_accounts_contacts_departments_department_id): \ck/plenty-client\Model\ContactDepartment
+restAccountsContactsDepartmentsDepartmentIdPut($department_id, $_rest_accounts_contacts_departments_department_id): \ck\Model\ContactDepartment
 ```
 
 Update contact department
@@ -5048,17 +5048,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $department_id = 56; // int | The ID of the department
-$_rest_accounts_contacts_departments_department_id = new \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest
+$_rest_accounts_contacts_departments_department_id = new \ck\Model\RestAccountsContactsDepartmentsPostRequest(); // \ck\Model\RestAccountsContactsDepartmentsPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsDepartmentsDepartmentIdPut($department_id, $_rest_accounts_contacts_departments_department_id);
@@ -5073,11 +5073,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **department_id** | **int**| The ID of the department | |
-| **_rest_accounts_contacts_departments_department_id** | [**\ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest**](../Model/RestAccountsContactsDepartmentsPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_departments_department_id** | [**\ck\Model\RestAccountsContactsDepartmentsPostRequest**](../Model/RestAccountsContactsDepartmentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactDepartment**](../Model/ContactDepartment.md)
+[**\ck\Model\ContactDepartment**](../Model/ContactDepartment.md)
 
 ### Authorization
 
@@ -5095,7 +5095,7 @@ try {
 ## `restAccountsContactsDepartmentsGet()`
 
 ```php
-restAccountsContactsDepartmentsGet(): \ck/plenty-client\Model\ContactDepartment[]
+restAccountsContactsDepartmentsGet(): \ck\Model\ContactDepartment[]
 ```
 
 List contact departments
@@ -5110,10 +5110,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5134,7 +5134,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactDepartment[]**](../Model/ContactDepartment.md)
+[**\ck\Model\ContactDepartment[]**](../Model/ContactDepartment.md)
 
 ### Authorization
 
@@ -5152,7 +5152,7 @@ This endpoint does not need any parameter.
 ## `restAccountsContactsDepartmentsPost()`
 
 ```php
-restAccountsContactsDepartmentsPost($_rest_accounts_contacts_departments): \ck/plenty-client\Model\ContactDepartment
+restAccountsContactsDepartmentsPost($_rest_accounts_contacts_departments): \ck\Model\ContactDepartment
 ```
 
 Create contact department
@@ -5167,16 +5167,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_contacts_departments = new \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest
+$_rest_accounts_contacts_departments = new \ck\Model\RestAccountsContactsDepartmentsPostRequest(); // \ck\Model\RestAccountsContactsDepartmentsPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsDepartmentsPost($_rest_accounts_contacts_departments);
@@ -5190,11 +5190,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_contacts_departments** | [**\ck/plenty-client\Model\RestAccountsContactsDepartmentsPostRequest**](../Model/RestAccountsContactsDepartmentsPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_departments** | [**\ck\Model\RestAccountsContactsDepartmentsPostRequest**](../Model/RestAccountsContactsDepartmentsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactDepartment**](../Model/ContactDepartment.md)
+[**\ck\Model\ContactDepartment**](../Model/ContactDepartment.md)
 
 ### Authorization
 
@@ -5212,7 +5212,7 @@ try {
 ## `restAccountsContactsGet()`
 
 ```php
-restAccountsContactsGet($full_text, $contact_email, $email, $postal_code, $plenty_id, $external_id, $number, $type_id, $rating, $created_at_before, $created_at_after, $updated_at_before, $updated_at_after, $last_order_at_before, $last_order_at_after, $with, $page, $items_per_page, $newsletter_allowance_after, $newsletter_allowance_before, $newsletter_allowance, $contact_id, $contact_address, $country_id, $user_id, $referrer_id, $name, $name_or_id, $town, $private_phone, $billing_address_id, $delivery_address_id, $tag_ids): \ck/plenty-client\Model\RestAccountsContactsGet200Response
+restAccountsContactsGet($full_text, $contact_email, $email, $postal_code, $plenty_id, $external_id, $number, $type_id, $rating, $created_at_before, $created_at_after, $updated_at_before, $updated_at_after, $last_order_at_before, $last_order_at_after, $with, $page, $items_per_page, $newsletter_allowance_after, $newsletter_allowance_before, $newsletter_allowance, $contact_id, $contact_address, $country_id, $user_id, $referrer_id, $name, $name_or_id, $town, $private_phone, $billing_address_id, $delivery_address_id, $tag_ids): \ck\Model\RestAccountsContactsGet200Response
 ```
 
 List contacts
@@ -5227,10 +5227,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5318,7 +5318,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\RestAccountsContactsGet200Response**](../Model/RestAccountsContactsGet200Response.md)
+[**\ck\Model\RestAccountsContactsGet200Response**](../Model/RestAccountsContactsGet200Response.md)
 
 ### Authorization
 
@@ -5351,10 +5351,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5408,10 +5408,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5459,7 +5459,7 @@ try {
 ## `restAccountsContactsOptionSubTypesGet()`
 
 ```php
-restAccountsContactsOptionSubTypesGet(): \ck/plenty-client\Model\ContactOptionSubType[]
+restAccountsContactsOptionSubTypesGet(): \ck\Model\ContactOptionSubType[]
 ```
 
 List contact option sub-types
@@ -5474,10 +5474,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5498,7 +5498,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOptionSubType[]**](../Model/ContactOptionSubType.md)
+[**\ck\Model\ContactOptionSubType[]**](../Model/ContactOptionSubType.md)
 
 ### Authorization
 
@@ -5531,10 +5531,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5575,7 +5575,7 @@ void (empty response body)
 ## `restAccountsContactsOptionSubTypesOptionSubTypeIdGet()`
 
 ```php
-restAccountsContactsOptionSubTypesOptionSubTypeIdGet($option_sub_type_id): \ck/plenty-client\Model\ContactOptionSubType
+restAccountsContactsOptionSubTypesOptionSubTypeIdGet($option_sub_type_id): \ck\Model\ContactOptionSubType
 ```
 
 Get contact option sub-type
@@ -5590,10 +5590,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5617,7 +5617,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOptionSubType**](../Model/ContactOptionSubType.md)
+[**\ck\Model\ContactOptionSubType**](../Model/ContactOptionSubType.md)
 
 ### Authorization
 
@@ -5635,7 +5635,7 @@ try {
 ## `restAccountsContactsOptionSubTypesOptionSubTypeIdPut()`
 
 ```php
-restAccountsContactsOptionSubTypesOptionSubTypeIdPut($option_sub_type_id, $_rest_accounts_contacts_option_sub_types_option_sub_type_id): \ck/plenty-client\Model\ContactOptionSubType
+restAccountsContactsOptionSubTypesOptionSubTypeIdPut($option_sub_type_id, $_rest_accounts_contacts_option_sub_types_option_sub_type_id): \ck\Model\ContactOptionSubType
 ```
 
 Update contact option sub-type
@@ -5650,17 +5650,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $option_sub_type_id = 56; // int | The ID of the contact option sub-type
-$_rest_accounts_contacts_option_sub_types_option_sub_type_id = new \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest
+$_rest_accounts_contacts_option_sub_types_option_sub_type_id = new \ck\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck\Model\RestAccountsAddressesOptionTypesPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsOptionSubTypesOptionSubTypeIdPut($option_sub_type_id, $_rest_accounts_contacts_option_sub_types_option_sub_type_id);
@@ -5675,11 +5675,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **option_sub_type_id** | **int**| The ID of the contact option sub-type | |
-| **_rest_accounts_contacts_option_sub_types_option_sub_type_id** | [**\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_option_sub_types_option_sub_type_id** | [**\ck\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOptionSubType**](../Model/ContactOptionSubType.md)
+[**\ck\Model\ContactOptionSubType**](../Model/ContactOptionSubType.md)
 
 ### Authorization
 
@@ -5697,7 +5697,7 @@ try {
 ## `restAccountsContactsOptionSubTypesPost()`
 
 ```php
-restAccountsContactsOptionSubTypesPost($_rest_accounts_contacts_option_sub_types): \ck/plenty-client\Model\ContactOptionSubType
+restAccountsContactsOptionSubTypesPost($_rest_accounts_contacts_option_sub_types): \ck\Model\ContactOptionSubType
 ```
 
 Create contact option sub-type
@@ -5712,16 +5712,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_contacts_option_sub_types = new \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest
+$_rest_accounts_contacts_option_sub_types = new \ck\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck\Model\RestAccountsAddressesOptionTypesPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsOptionSubTypesPost($_rest_accounts_contacts_option_sub_types);
@@ -5735,11 +5735,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_contacts_option_sub_types** | [**\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_option_sub_types** | [**\ck\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOptionSubType**](../Model/ContactOptionSubType.md)
+[**\ck\Model\ContactOptionSubType**](../Model/ContactOptionSubType.md)
 
 ### Authorization
 
@@ -5757,7 +5757,7 @@ try {
 ## `restAccountsContactsOptionTypesGet()`
 
 ```php
-restAccountsContactsOptionTypesGet($with): \ck/plenty-client\Model\ContactOptionType[]
+restAccountsContactsOptionTypesGet($with): \ck\Model\ContactOptionType[]
 ```
 
 List contact option types
@@ -5772,10 +5772,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5799,7 +5799,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOptionType[]**](../Model/ContactOptionType.md)
+[**\ck\Model\ContactOptionType[]**](../Model/ContactOptionType.md)
 
 ### Authorization
 
@@ -5832,10 +5832,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5876,7 +5876,7 @@ void (empty response body)
 ## `restAccountsContactsOptionTypesOptionTypeIdGet()`
 
 ```php
-restAccountsContactsOptionTypesOptionTypeIdGet($option_type_id): \ck/plenty-client\Model\ContactOptionType
+restAccountsContactsOptionTypesOptionTypeIdGet($option_type_id): \ck\Model\ContactOptionType
 ```
 
 Get contact option type
@@ -5891,10 +5891,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -5918,7 +5918,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOptionType**](../Model/ContactOptionType.md)
+[**\ck\Model\ContactOptionType**](../Model/ContactOptionType.md)
 
 ### Authorization
 
@@ -5936,7 +5936,7 @@ try {
 ## `restAccountsContactsOptionTypesOptionTypeIdPut()`
 
 ```php
-restAccountsContactsOptionTypesOptionTypeIdPut($option_type_id, $_rest_accounts_contacts_option_types_option_type_id): \ck/plenty-client\Model\ContactOptionType
+restAccountsContactsOptionTypesOptionTypeIdPut($option_type_id, $_rest_accounts_contacts_option_types_option_type_id): \ck\Model\ContactOptionType
 ```
 
 Update contact option type
@@ -5951,17 +5951,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $option_type_id = 56; // int | The ID of the contact option type
-$_rest_accounts_contacts_option_types_option_type_id = new \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest
+$_rest_accounts_contacts_option_types_option_type_id = new \ck\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck\Model\RestAccountsAddressesOptionTypesPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsOptionTypesOptionTypeIdPut($option_type_id, $_rest_accounts_contacts_option_types_option_type_id);
@@ -5976,11 +5976,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **option_type_id** | **int**| The ID of the contact option type | |
-| **_rest_accounts_contacts_option_types_option_type_id** | [**\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_option_types_option_type_id** | [**\ck\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOptionType**](../Model/ContactOptionType.md)
+[**\ck\Model\ContactOptionType**](../Model/ContactOptionType.md)
 
 ### Authorization
 
@@ -5998,7 +5998,7 @@ try {
 ## `restAccountsContactsOptionTypesPost()`
 
 ```php
-restAccountsContactsOptionTypesPost($_rest_accounts_contacts_option_types): \ck/plenty-client\Model\ContactOptionType
+restAccountsContactsOptionTypesPost($_rest_accounts_contacts_option_types): \ck\Model\ContactOptionType
 ```
 
 Create contact option type
@@ -6013,16 +6013,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_contacts_option_types = new \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest
+$_rest_accounts_contacts_option_types = new \ck\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck\Model\RestAccountsAddressesOptionTypesPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsOptionTypesPost($_rest_accounts_contacts_option_types);
@@ -6036,11 +6036,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_contacts_option_types** | [**\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_option_types** | [**\ck\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOptionType**](../Model/ContactOptionType.md)
+[**\ck\Model\ContactOptionType**](../Model/ContactOptionType.md)
 
 ### Authorization
 
@@ -6073,10 +6073,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6117,7 +6117,7 @@ void (empty response body)
 ## `restAccountsContactsOptionsOptionIdGet()`
 
 ```php
-restAccountsContactsOptionsOptionIdGet($option_id): \ck/plenty-client\Model\ContactOption
+restAccountsContactsOptionsOptionIdGet($option_id): \ck\Model\ContactOption
 ```
 
 Get contact option
@@ -6132,10 +6132,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6159,7 +6159,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOption**](../Model/ContactOption.md)
+[**\ck\Model\ContactOption**](../Model/ContactOption.md)
 
 ### Authorization
 
@@ -6177,7 +6177,7 @@ try {
 ## `restAccountsContactsOptionsOptionIdPut()`
 
 ```php
-restAccountsContactsOptionsOptionIdPut($option_id): \ck/plenty-client\Model\ContactOption
+restAccountsContactsOptionsOptionIdPut($option_id): \ck\Model\ContactOption
 ```
 
 Update contact option
@@ -6192,10 +6192,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6219,7 +6219,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactOption**](../Model/ContactOption.md)
+[**\ck\Model\ContactOption**](../Model/ContactOption.md)
 
 ### Authorization
 
@@ -6237,7 +6237,7 @@ try {
 ## `restAccountsContactsPositionsGet()`
 
 ```php
-restAccountsContactsPositionsGet(): \ck/plenty-client\Model\ContactPosition[]
+restAccountsContactsPositionsGet(): \ck\Model\ContactPosition[]
 ```
 
 List contact positions
@@ -6252,10 +6252,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6276,7 +6276,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactPosition[]**](../Model/ContactPosition.md)
+[**\ck\Model\ContactPosition[]**](../Model/ContactPosition.md)
 
 ### Authorization
 
@@ -6309,10 +6309,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6353,7 +6353,7 @@ void (empty response body)
 ## `restAccountsContactsPositionsPositionIdGet()`
 
 ```php
-restAccountsContactsPositionsPositionIdGet($position_id): \ck/plenty-client\Model\ContactPosition
+restAccountsContactsPositionsPositionIdGet($position_id): \ck\Model\ContactPosition
 ```
 
 Get contact position
@@ -6368,10 +6368,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6395,7 +6395,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactPosition**](../Model/ContactPosition.md)
+[**\ck\Model\ContactPosition**](../Model/ContactPosition.md)
 
 ### Authorization
 
@@ -6413,7 +6413,7 @@ try {
 ## `restAccountsContactsPositionsPositionIdPut()`
 
 ```php
-restAccountsContactsPositionsPositionIdPut($position_id, $_rest_accounts_contacts_positions_position_id): \ck/plenty-client\Model\ContactPosition
+restAccountsContactsPositionsPositionIdPut($position_id, $_rest_accounts_contacts_positions_position_id): \ck\Model\ContactPosition
 ```
 
 Update contact position
@@ -6428,17 +6428,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $position_id = 56; // int | The ID of the position
-$_rest_accounts_contacts_positions_position_id = new \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest
+$_rest_accounts_contacts_positions_position_id = new \ck\Model\RestAccountsContactsPositionsPostRequest(); // \ck\Model\RestAccountsContactsPositionsPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsPositionsPositionIdPut($position_id, $_rest_accounts_contacts_positions_position_id);
@@ -6453,11 +6453,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **position_id** | **int**| The ID of the position | |
-| **_rest_accounts_contacts_positions_position_id** | [**\ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest**](../Model/RestAccountsContactsPositionsPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_positions_position_id** | [**\ck\Model\RestAccountsContactsPositionsPostRequest**](../Model/RestAccountsContactsPositionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactPosition**](../Model/ContactPosition.md)
+[**\ck\Model\ContactPosition**](../Model/ContactPosition.md)
 
 ### Authorization
 
@@ -6475,7 +6475,7 @@ try {
 ## `restAccountsContactsPositionsPost()`
 
 ```php
-restAccountsContactsPositionsPost($_rest_accounts_contacts_positions): \ck/plenty-client\Model\ContactPosition
+restAccountsContactsPositionsPost($_rest_accounts_contacts_positions): \ck\Model\ContactPosition
 ```
 
 Create contact position
@@ -6490,16 +6490,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_contacts_positions = new \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest
+$_rest_accounts_contacts_positions = new \ck\Model\RestAccountsContactsPositionsPostRequest(); // \ck\Model\RestAccountsContactsPositionsPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsPositionsPost($_rest_accounts_contacts_positions);
@@ -6513,11 +6513,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_contacts_positions** | [**\ck/plenty-client\Model\RestAccountsContactsPositionsPostRequest**](../Model/RestAccountsContactsPositionsPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_positions** | [**\ck\Model\RestAccountsContactsPositionsPostRequest**](../Model/RestAccountsContactsPositionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactPosition**](../Model/ContactPosition.md)
+[**\ck\Model\ContactPosition**](../Model/ContactPosition.md)
 
 ### Authorization
 
@@ -6535,7 +6535,7 @@ try {
 ## `restAccountsContactsPost()`
 
 ```php
-restAccountsContactsPost($_rest_accounts_contacts): \ck/plenty-client\Model\Contact
+restAccountsContactsPost($_rest_accounts_contacts): \ck\Model\Contact
 ```
 
 Create contact
@@ -6550,16 +6550,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_contacts = new \ck/plenty-client\Model\RestAccountsContactsPostRequest(); // \ck/plenty-client\Model\RestAccountsContactsPostRequest
+$_rest_accounts_contacts = new \ck\Model\RestAccountsContactsPostRequest(); // \ck\Model\RestAccountsContactsPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsPost($_rest_accounts_contacts);
@@ -6573,11 +6573,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_contacts** | [**\ck/plenty-client\Model\RestAccountsContactsPostRequest**](../Model/RestAccountsContactsPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts** | [**\ck\Model\RestAccountsContactsPostRequest**](../Model/RestAccountsContactsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Contact**](../Model/Contact.md)
+[**\ck\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -6595,7 +6595,7 @@ try {
 ## `restAccountsContactsTypesGet()`
 
 ```php
-restAccountsContactsTypesGet(): \ck/plenty-client\Model\ContactType[]
+restAccountsContactsTypesGet(): \ck\Model\ContactType[]
 ```
 
 List contact types
@@ -6610,10 +6610,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6634,7 +6634,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactType[]**](../Model/ContactType.md)
+[**\ck\Model\ContactType[]**](../Model/ContactType.md)
 
 ### Authorization
 
@@ -6652,7 +6652,7 @@ This endpoint does not need any parameter.
 ## `restAccountsContactsTypesPost()`
 
 ```php
-restAccountsContactsTypesPost($_rest_accounts_contacts_types): \ck/plenty-client\Model\ContactType
+restAccountsContactsTypesPost($_rest_accounts_contacts_types): \ck\Model\ContactType
 ```
 
 Create contact type
@@ -6667,16 +6667,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts_contacts_types = new \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest
+$_rest_accounts_contacts_types = new \ck\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck\Model\RestAccountsAddressesOptionTypesPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsTypesPost($_rest_accounts_contacts_types);
@@ -6690,11 +6690,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts_contacts_types** | [**\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_types** | [**\ck\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactType**](../Model/ContactType.md)
+[**\ck\Model\ContactType**](../Model/ContactType.md)
 
 ### Authorization
 
@@ -6727,10 +6727,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6771,7 +6771,7 @@ void (empty response body)
 ## `restAccountsContactsTypesTypeIdGet()`
 
 ```php
-restAccountsContactsTypesTypeIdGet($type_id): \ck/plenty-client\Model\ContactType
+restAccountsContactsTypesTypeIdGet($type_id): \ck\Model\ContactType
 ```
 
 Get contact type
@@ -6786,10 +6786,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6813,7 +6813,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactType**](../Model/ContactType.md)
+[**\ck\Model\ContactType**](../Model/ContactType.md)
 
 ### Authorization
 
@@ -6831,7 +6831,7 @@ try {
 ## `restAccountsContactsTypesTypeIdPut()`
 
 ```php
-restAccountsContactsTypesTypeIdPut($type_id, $_rest_accounts_contacts_types_type_id): \ck/plenty-client\Model\ContactType
+restAccountsContactsTypesTypeIdPut($type_id, $_rest_accounts_contacts_types_type_id): \ck\Model\ContactType
 ```
 
 Update contact type
@@ -6846,17 +6846,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $type_id = 56; // int | The ID of the contact type
-$_rest_accounts_contacts_types_type_id = new \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest
+$_rest_accounts_contacts_types_type_id = new \ck\Model\RestAccountsAddressesOptionTypesPostRequest(); // \ck\Model\RestAccountsAddressesOptionTypesPostRequest
 
 try {
     $result = $apiInstance->restAccountsContactsTypesTypeIdPut($type_id, $_rest_accounts_contacts_types_type_id);
@@ -6871,11 +6871,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **type_id** | **int**| The ID of the contact type | |
-| **_rest_accounts_contacts_types_type_id** | [**\ck/plenty-client\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
+| **_rest_accounts_contacts_types_type_id** | [**\ck\Model\RestAccountsAddressesOptionTypesPostRequest**](../Model/RestAccountsAddressesOptionTypesPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\ContactType**](../Model/ContactType.md)
+[**\ck\Model\ContactType**](../Model/ContactType.md)
 
 ### Authorization
 
@@ -6908,10 +6908,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -6957,7 +6957,7 @@ try {
 ## `restAccountsPost()`
 
 ```php
-restAccountsPost($_rest_accounts): \ck/plenty-client\Model\Account
+restAccountsPost($_rest_accounts): \ck\Model\Account
 ```
 
 Create account
@@ -6972,16 +6972,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$_rest_accounts = new \ck/plenty-client\Model\RestAccountsPostRequest(); // \ck/plenty-client\Model\RestAccountsPostRequest
+$_rest_accounts = new \ck\Model\RestAccountsPostRequest(); // \ck\Model\RestAccountsPostRequest
 
 try {
     $result = $apiInstance->restAccountsPost($_rest_accounts);
@@ -6995,11 +6995,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_rest_accounts** | [**\ck/plenty-client\Model\RestAccountsPostRequest**](../Model/RestAccountsPostRequest.md)|  | [optional] |
+| **_rest_accounts** | [**\ck\Model\RestAccountsPostRequest**](../Model/RestAccountsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\Account**](../Model/Account.md)
+[**\ck\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -7017,7 +7017,7 @@ try {
 ## `restOrdersAddressesPost()`
 
 ```php
-restOrdersAddressesPost(): \ck/plenty-client\Model\AddressOrderRelation
+restOrdersAddressesPost(): \ck\Model\AddressOrderRelation
 ```
 
 Create address for existing order
@@ -7032,10 +7032,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7056,7 +7056,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressOrderRelation**](../Model/AddressOrderRelation.md)
+[**\ck\Model\AddressOrderRelation**](../Model/AddressOrderRelation.md)
 
 ### Authorization
 
@@ -7074,7 +7074,7 @@ This endpoint does not need any parameter.
 ## `restStockmanagementWarehousesAddressesPost()`
 
 ```php
-restStockmanagementWarehousesAddressesPost(): \ck/plenty-client\Model\AddressWarehouseRelation
+restStockmanagementWarehousesAddressesPost(): \ck\Model\AddressWarehouseRelation
 ```
 
 Create address for existing warehouse
@@ -7089,10 +7089,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -7113,7 +7113,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\ck/plenty-client\Model\AddressWarehouseRelation**](../Model/AddressWarehouseRelation.md)
+[**\ck\Model\AddressWarehouseRelation**](../Model/AddressWarehouseRelation.md)
 
 ### Authorization
 

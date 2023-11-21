@@ -3,7 +3,7 @@
  * WebstoreApi
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Api;
+namespace ck\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use ck/plenty-client\ApiException;
-use ck/plenty-client\Configuration;
-use ck/plenty-client\HeaderSelector;
-use ck/plenty-client\ObjectSerializer;
+use ck\ApiException;
+use ck\Configuration;
+use ck\HeaderSelector;
+use ck\ObjectSerializer;
 
 /**
  * WebstoreApi Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,7 +137,7 @@ class WebstoreApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\Webstore[]
+     * @return \ck\Model\Webstore[]
      */
     public function restWebstoresGet(
         string $contentType = self::contentTypes['restWebstoresGet'][0]
@@ -156,7 +156,7 @@ class WebstoreApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\Webstore[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\Webstore[], HTTP status code, HTTP response headers (array of strings)
      */
     public function restWebstoresGetWithHttpInfo(
         string $contentType = self::contentTypes['restWebstoresGet'][0]
@@ -201,23 +201,23 @@ class WebstoreApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\Webstore[]' === '\SplFileObject') {
+                    if ('\ck\Model\Webstore[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\Webstore[]' !== 'string') {
+                        if ('\ck\Model\Webstore[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\Webstore[]', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\Webstore[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\Webstore[]';
+            $returnType = '\ck\Model\Webstore[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -238,7 +238,7 @@ class WebstoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\Webstore[]',
+                        '\ck\Model\Webstore[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -284,7 +284,7 @@ class WebstoreApi
         string $contentType = self::contentTypes['restWebstoresGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\Webstore[]';
+        $returnType = '\ck\Model\Webstore[]';
         $request = $this->restWebstoresGetRequest($contentType);
 
         return $this->client
@@ -415,12 +415,12 @@ class WebstoreApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \ck/plenty-client\Model\PluginSet
+     * @return \ck\Model\PluginSet
      */
     public function restWebstoresWebstoreIdPluginSetGet(
         int $webstore_id,
         string $contentType = self::contentTypes['restWebstoresWebstoreIdPluginSetGet'][0]
-    ): \ck/plenty-client\Model\PluginSet
+    ): \ck\Model\PluginSet
     {
         list($response) = $this->restWebstoresWebstoreIdPluginSetGetWithHttpInfo($webstore_id, $contentType);
         return $response;
@@ -436,7 +436,7 @@ class WebstoreApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \ck/plenty-client\Model\PluginSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ck\Model\PluginSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function restWebstoresWebstoreIdPluginSetGetWithHttpInfo(
         int $webstore_id,
@@ -482,23 +482,23 @@ class WebstoreApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\ck/plenty-client\Model\PluginSet' === '\SplFileObject') {
+                    if ('\ck\Model\PluginSet' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\ck/plenty-client\Model\PluginSet' !== 'string') {
+                        if ('\ck\Model\PluginSet' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\ck/plenty-client\Model\PluginSet', []),
+                        ObjectSerializer::deserialize($content, '\ck\Model\PluginSet', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\ck/plenty-client\Model\PluginSet';
+            $returnType = '\ck\Model\PluginSet';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -519,7 +519,7 @@ class WebstoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\ck/plenty-client\Model\PluginSet',
+                        '\ck\Model\PluginSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -569,7 +569,7 @@ class WebstoreApi
         string $contentType = self::contentTypes['restWebstoresWebstoreIdPluginSetGet'][0]
     ): PromiseInterface
     {
-        $returnType = '\ck/plenty-client\Model\PluginSet';
+        $returnType = '\ck\Model\PluginSet';
         $request = $this->restWebstoresWebstoreIdPluginSetGetRequest($webstore_id, $contentType);
 
         return $this->client

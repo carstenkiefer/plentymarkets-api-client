@@ -1,4 +1,4 @@
-# ck/plenty-client\LegalInformationApi
+# ck\LegalInformationApi
 
 All URIs are relative to https://example.com, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://example.com, except if the operation defines an
 ## `restLegalinformationPlentyIdLangTypeGet()`
 
 ```php
-restLegalinformationPlentyIdLangTypeGet($plenty_id, $lang, $type): \ck/plenty-client\Model\LegalInformation
+restLegalinformationPlentyIdLangTypeGet($plenty_id, $lang, $type): \ck\Model\LegalInformation
 ```
 
 Get legal information of an online store
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LegalInformationApi(
+$apiInstance = new ck\Api\LegalInformationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\ck/plenty-client\Model\LegalInformation**](../Model/LegalInformation.md)
+[**\ck\Model\LegalInformation**](../Model/LegalInformation.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `restLegalinformationPlentyIdLangTypePut()`
 
 ```php
-restLegalinformationPlentyIdLangTypePut($plenty_id, $lang, $type, $_rest_legalinformation_plenty_id_lang_type): \ck/plenty-client\Model\LegalInformation
+restLegalinformationPlentyIdLangTypePut($plenty_id, $lang, $type, $_rest_legalinformation_plenty_id_lang_type): \ck\Model\LegalInformation
 ```
 
 Save legal information for an online store
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: oAuth2
-$config = ck/plenty-client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = ck\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new ck/plenty-client\Api\LegalInformationApi(
+$apiInstance = new ck\Api\LegalInformationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -102,7 +102,7 @@ $apiInstance = new ck/plenty-client\Api\LegalInformationApi(
 $plenty_id = 56; // int | The plenty ID of the online store
 $lang = 'lang_example'; // string | The language of the legal information text. The language must be specified as ISO 639-1 code, e.g. en for English
 $type = 56; // int
-$_rest_legalinformation_plenty_id_lang_type = new \ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest(); // \ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest
+$_rest_legalinformation_plenty_id_lang_type = new \ck\Model\RestLegalinformationPlentyIdLangTypePutRequest(); // \ck\Model\RestLegalinformationPlentyIdLangTypePutRequest
 
 try {
     $result = $apiInstance->restLegalinformationPlentyIdLangTypePut($plenty_id, $lang, $type, $_rest_legalinformation_plenty_id_lang_type);
@@ -119,11 +119,11 @@ try {
 | **plenty_id** | **int**| The plenty ID of the online store | |
 | **lang** | **string**| The language of the legal information text. The language must be specified as ISO 639-1 code, e.g. en for English | |
 | **type** | **int**|  | |
-| **_rest_legalinformation_plenty_id_lang_type** | [**\ck/plenty-client\Model\RestLegalinformationPlentyIdLangTypePutRequest**](../Model/RestLegalinformationPlentyIdLangTypePutRequest.md)|  | [optional] |
+| **_rest_legalinformation_plenty_id_lang_type** | [**\ck\Model\RestLegalinformationPlentyIdLangTypePutRequest**](../Model/RestLegalinformationPlentyIdLangTypePutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\ck/plenty-client\Model\LegalInformation**](../Model/LegalInformation.md)
+[**\ck\Model\LegalInformation**](../Model/LegalInformation.md)
 
 ### Authorization
 

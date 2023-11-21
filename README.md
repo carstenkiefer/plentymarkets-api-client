@@ -50,12 +50,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new ck/plenty-client\Api\AccountApi(
+$apiInstance = new ck\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$_rest_account_login = new \ck/plenty-client\Model\RestAccountLoginPostRequest(); // \ck/plenty-client\Model\RestAccountLoginPostRequest
+$_rest_account_login = new \ck\Model\RestAccountLoginPostRequest(); // \ck\Model\RestAccountLoginPostRequest
 
 try {
     $result = $apiInstance->restAccountLoginPost($_rest_account_login);

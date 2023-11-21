@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace ck/plenty-client\Model;
+namespace ck\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use ck/plenty-client\ObjectSerializer;
+use ck\ObjectSerializer;
 
 /**
  * RestTicketsPostRequest Class Doc Comment
  *
- * @package  ck/plenty-client
+ * @package  ck
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -73,7 +73,7 @@ class RestTicketsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
         'order_id' => 'int',
         'has_documents' => 'int',
         'resubmission_at' => 'string',
-        'owners' => '\ck/plenty-client\Model\TicketOwner[]',
+        'owners' => '\ck\Model\TicketOwner[]',
         'user_id' => 'int',
         'role_id' => 'int'
     ];
@@ -838,7 +838,7 @@ class RestTicketsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets owners
      *
-     * @return \ck/plenty-client\Model\TicketOwner[]
+     * @return \ck\Model\TicketOwner[]
      */
     public function getOwners(): array
     {
@@ -848,7 +848,7 @@ class RestTicketsPostRequest implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets owners
      *
-     * @param \ck/plenty-client\Model\TicketOwner[] $owners owners
+     * @param \ck\Model\TicketOwner[] $owners owners
      *
      * @return $this
      */

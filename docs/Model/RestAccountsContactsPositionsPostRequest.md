@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**names** | [**\ck/plenty-client\Model\ContactPositionName[]**](ContactPositionName.md) |  |
+**names** | [**\ck\Model\ContactPositionName[]**](ContactPositionName.md) |  |
 **name** | **string** | The name |
 **lang** | **string** | The language |
 
